@@ -6,15 +6,15 @@ var oTable;
 $(document).ready(function() {
     oTable = $('#cursos').dataTable( {
 	         "aaData": aCursos,
-			"bLengthChange": false,
+			 "bLengthChange": false,
 			  "aoColumns": [
 				  { "sTitle": "Comienzo", "sWidth": "6%" },
 				  { "sTitle": "Descripcion", "sWidth": "82%" },
-				 /* { "sTitle": "Lugar", "sWidth": "24%" }, */
 				  { "sTitle": "Registro", "sClass": "right", "sWidth": "12%" }
 			  ],
 			"aaSorting": [],
 			"bPaginate": false,
+			"sScrollY": "200px",
 			"oLanguage": 	{
 				"sProcessing":   "Procesando...",
 				"sLengthMenu":   "Mostrar _MENU_ registros",

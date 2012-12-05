@@ -8,3 +8,7 @@ end
 get '/' do
 	erb :index
 end
+
+get '/e-books' do
+  erb :ebooks
+end
