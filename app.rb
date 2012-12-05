@@ -6,9 +6,11 @@ end
 
 
 get '/' do
+  @active_tab_index = "active"
 	erb :index
 end
 
 get '/e-books' do
+  @active_tab_ebooks = "active"
   erb :ebooks
 end
