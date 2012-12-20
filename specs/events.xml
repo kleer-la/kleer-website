@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events type="array">
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
+    <date type="date">2013-01-09</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2012-12-26</eb-end-date>
+    <eb-price type="decimal">750.0</eb-price>
+    <event-type-id type="integer">13</event-type-id>
+    <id type="integer">44</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">890.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
+      <description>una descripción.</description>
+      <duration type="integer">8</duration>
+      <goal>un objetivo.</goal>
+      <id type="integer">13</id>
+      <name>Workshop de Retrospectivas</name>
+      <program>el programa</program>
+      <recipients>los destinatarios.</recipients>
+      <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">100</capacity>
+    <city>Webinar</city>
+    <country-id type="integer">245</country-id>
+    <created-at type="datetime">2012-12-07T19:43:42Z</created-at>
+    <date type="date">2013-01-16</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-01-06</eb-end-date>
+    <eb-price type="decimal" nil="true"/>
+    <event-type-id type="integer">15</event-type-id>
+    <id type="integer">48</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">480.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Webinar</place>
+    <registration-link>https://eventioz.com.ar/webinar-com-efectiva-16-ene/registrations/new</registration-link>
+    <trainer-id type="integer">10</trainer-id>
+    <updated-at type="datetime">2012-12-07T19:44:00Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-11-28T19:53:51Z</created-at>
+      <id type="integer">245</id>
+      <iso-code>OL</iso-code>
+      <name>-- OnLine --</name>
+      <updated-at type="datetime">2012-11-28T19:53:51Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-12-07T19:27:19Z</created-at>
+      <description>Los participantes de este curso práctico obtendrán:
+
+• Mayor efectividad en su comunicación con colegas, 
+equipos, clientes y usuarios
+• Mayor impacto y visibilidad al presentar resultados, 
+impedimentos, requerimientos y necesidades
+
+El curso se basa ejercicios y dinámicas con técnicas para una comunicación efectiva en distintas circunstancias del entorno de trabajo. Incluye presentaciones y comunicación escrita (reportes, correo electrónico y documentos). Los asistentes alcanzan experiencia real trabajando con las prácticas de una comunicación efectiva.
+</description>
+      <duration type="integer">8</duration>
+      <goal>Lograr una comunicación con mayor precisión, impacto y seguridad, ya sea basada en escritos o presentaciones</goal>
+      <id type="integer">15</id>
+      <name>Comunicación Efectiva en Proyectos de Software</name>
+      <program>• Creando una comunicación efectiva en proyectos de software
+• Definir el objetivo
+• Conocer a la audiencia y sus expectativas
+• Crear y ajustar el contenido
+• Escribiendo con efectividad
+• Planificar
+• Escribir
+• Revisar y ajustar
+• Práctica de comunicación informativa (incluyendo malas noticias), seguimiento, minutas de reuniones con accionables, comunicación persuasiva, pedidos, definición de objetivos claros y requerimientos
+• Presentando con efectividad
+• Crear contenido vibrante
+• Presentar el contenido con impacto verbal, visual y vocal
+• Práctica de creación de presentaciones efectivas para informar, comunicar planes y objetivos
+</program>
+      <recipients>Gerentes de Proyectos, Product Managers, Equipos de desarrollo, Scrum Masters, Analistas Funcionales y Developers de experiencia de usuario, Líderes Técnicos, Gerentes de Area.</recipients>
+      <updated-at type="datetime">2012-12-07T19:27:19Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Contamos con nuevas formas de trabajo que nos permiten ser mucho más efectivos e innovadores. 
+Mi trabajo es ayudar a personas y organizaciones a cumplir estos objetivos con altos niveles de satisfacción.
+
+Agile Coach &amp; Trainer 
+M.B.A Intl Business, Lic. en Sistemas
+CSM y Especialista en Innovación
+</bio>
+      <created-at type="datetime">2012-08-23T20:43:00Z</created-at>
+      <id type="integer">10</id>
+      <name>Ricardo Colusso</name>
+      <updated-at type="datetime">2012-08-23T20:43:00Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">12</capacity>
+    <city>Webinar</city>
+    <country-id type="integer">245</country-id>
+    <created-at type="datetime">2012-12-14T18:52:34Z</created-at>
+    <date type="date">2013-01-23</date>
+    <draft type="boolean">true</draft>
+    <eb-end-date type="date">2013-01-13</eb-end-date>
+    <eb-price type="decimal" nil="true"/>
+    <event-type-id type="integer">17</event-type-id>
+    <id type="integer">58</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">480.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Webinar</place>
+    <registration-link>https://eventioz.com.ar/web-tdd1-201301</registration-link>
+    <trainer-id type="integer">11</trainer-id>
+    <updated-at type="datetime">2012-12-14T18:52:34Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-11-28T19:53:51Z</created-at>
+      <id type="integer">245</id>
+      <iso-code>OL</iso-code>
+      <name>-- OnLine --</name>
+      <updated-at type="datetime">2012-11-28T19:53:51Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-12-14T18:43:56Z</created-at>
+      <description>Test-Driven Development es una práctica de diseño central en Extreme Programming (XP) que se ha popularizado incluso como herramienta autónoma, y es cada vez más aceptada por su positiva incidencia en la calidad del producto, tanto desde la flexibilidad como desde la mantenibilidad a largo plazo. 
+
+Se basa en la utilización de pruebas unitarias escritas a partir de las historias de usuario, a nivel muy fino de granularidad, seguidas del código productivo a implementarse, en ciclos iterativos con frecuente refactorización.
+
+El webinar se desarrollará con ejemplos en Ruby, pero se compartirán otros ejemplos pre-grabados en otros lenguajes como Java, C# y Python.
+</description>
+      <duration type="integer">4</duration>
+      <goal>Introducir a los asistentes a este enfoque de diseño de software a través de la exposición de los conceptos y principios fundamentales y de la práctica mediante ejercicios, en conjunto, guiados por el entrenador.</goal>
+      <id type="integer">17</id>
+      <name>Webinar de TDD Intermedio</name>
+      <program>* Origen de Test-Driven Development
+* Ciclo Red-Green-Refactor
+* Historias de Usuario
+* Unit Tests
+* Arrange - Act - Assert
+* Code Katas
+</program>
+      <recipients>Desarrolladores, líderes de desarrollo y arquitectos de software.</recipients>
+      <updated-at type="datetime">2012-12-14T18:43:56Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
+Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
+
+Agile Coach &amp; Trainer 
+</bio>
+      <created-at type="datetime">2012-08-23T20:43:31Z</created-at>
+      <id type="integer">11</id>
+      <name>Martín Salías</name>
+      <updated-at type="datetime">2012-08-23T20:43:31Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">20</capacity>
+    <city>Lobos, Pcia. Bs. As.</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-07T00:52:41Z</created-at>
+    <date type="date">2013-01-24</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-01-09</eb-end-date>
+    <eb-price type="decimal">3500.0</eb-price>
+    <event-type-id type="integer">14</event-type-id>
+    <id type="integer">45</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">4990.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Amani Casa de Campo</place>
+    <registration-link>https://eventioz.com.ar/csm-verano-23-24-y-25-ene/registrations/new</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-12-07T00:52:53Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-12-07T00:50:16Z</created-at>
+      <description>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.
+
+La edición de Verano de este curso incluye un trabajo especialmente enfocado en la generación de equipo, confianza, comunicación y auto-organización que se realiza al aire libre en una finca en la ciudad de Lobos, Pcia. de Buenos Aires.</description>
+      <duration type="integer">36</duration>
+      <goal>Interactivo, Práctico y Participativo
+
+Scrum es un marco de trabajo en equipo para la construcción de productos innovadores y la ejecución exitosa de proyectos complejos.
+
+Conocer Scrum es fácil, pero llevarlo a la práctica exitosamente es difícil. Muchos equipos que adoptan Scrum por motus propio adquieren solo una porción de los beneficios que podrían adquirir. La razón más habitual es la importancia que se le da a la técnica por sobre los valores y principios, perdiendo así mucha de la esencia de Scrum.
+
+La clave para ser exitosos en la adopción de Scrum es aprenderlo, experimentarlo y desafiarlo junto a un experto en Scrum, acreditado como CST (Certified Scrum Trainer) por la Scrum Alliance.
+
+Mediante este taller 100% práctico lograrás una inmediata comprensión de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas.  En la edición de verano de este curso, tendrás desafíos adicionales en contacto con la naturaleza que deberán resolver junto al resto del equipo. Luego podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro.
+
+Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</goal>
+      <id type="integer">14</id>
+      <name>Certified ScrumMaster (CSM) de Verano!</name>
+      <program>Introducción a Scrum
+- Principios de Scrum
+- Roles y Responsabilidades
+-- ScrumMaster, Product Owner, Equipo de Desarrollo
+- Actividades
+- Elementos
+
+¿Qué hay detrás de Scrum? (Edición de Verano)
+- Actividades Outdor en contacto con la naturaleza en las que experimentarás:
+-- Armado de equipos
+-- Confianza
+-- Comunicación
+-- Colaboración
+-- Auto-Organización
+
+Simulación End-to-End de Scrum
+- Planificación de Sprint
+- Ejecución y Revisión del Sprint
+- Retrospectiva del Sprint
+-- Prácticas complementarias
+- Identificación y Construcción de la Visión
+- Uso de Historias de Usuario
+- Estimación Relativa y Participativa
+- Refinamiento Continuo del Alcance
+
+Discusión de casos y Errores comunes
+
+Patrones de Adopción de Scrum</program>
+      <recipients>Todos aquellos que participen en proyectos y estén buscando:
+
+- Adaptación en contextos cambiantes
+- Reducir los tiempos y eliminar retrabajos
+- Aumentar la calidad del producto
+- Mejorar la productividad a un ritmo sostenible
+- Minimizar los riegos en contextos inestables
+- Disminuir la ocurrencia de errores evitables
+- Garantizar la satisfacción del cliente
+- Obtener una nueva visión para la gestión de proyectos y equipos</recipients>
+      <updated-at type="datetime">2012-12-07T00:50:16Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">30</capacity>
+    <city>Lima</city>
+    <country-id type="integer">171</country-id>
+    <created-at type="datetime">2012-12-07T02:07:18Z</created-at>
+    <date type="date">2013-01-31</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-01-21</eb-end-date>
+    <eb-price type="decimal" nil="true"/>
+    <event-type-id type="integer">7</event-type-id>
+    <id type="integer">47</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">822.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Casa de la Moneda</place>
+    <registration-link>http://www.openedgetech.com/calendario</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-12-07T02:07:26Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:41Z</created-at>
+      <id type="integer">171</id>
+      <iso-code>PE</iso-code>
+      <name>Peru</name>
+      <updated-at type="datetime">2012-04-26T11:14:41Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T11:14:53Z</created-at>
+      <description>¿Por qué CSM?
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+
+¿Qué valor me aporta?
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro.
+
+¿Por qué realizar el CSM?
+Porque es un curso 100% participativo en donde estarás simulando la ejecución de un proyecto Scrum y vivirás experiencias que te darán las respuestas, claves y trucos para que luego apliques Scrum correctamente en tu día a día.
+
+¿Qué voy a hacer?
+Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">16</duration>
+      <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
+      <id type="integer">7</id>
+      <name>Certified ScrumMaster (CSM)</name>
+      <program>- Introducción a Scrum: Principios, Roles, Actividades, Elementos
+- Simulación End-to-End de Scrum y prácticas complementarias
+- Discusión de casos y escenarios particulares</program>
+      <recipients>Todos aquellos que participen en proyectos y estén buscando: 
+- Adaptación en contextos cambiantes
+- Reducir los tiempos y eliminar retrabajos
+- Aumentar la calidad del producto
+- Mejorar la productividad a un ritmo sostenible 
+- Minimizar los riegos en contextos inestables
+- Disminuir la ocurrencia de errores evitables
+- Garantizar la satisfacción del cliente
+- Obtener una nueva visión para la gestión de proyectos y equipos.
+</recipients>
+      <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-08T10:41:29Z</created-at>
+    <date type="date">2013-02-07</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-01-24</eb-end-date>
+    <eb-price type="decimal">3482.0</eb-price>
+    <event-type-id type="integer">10</event-type-id>
+    <id type="integer">49</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">3990.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/cspo-7-y-8-feb/registrations/new</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-12-08T10:41:42Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-21T15:40:13Z</created-at>
+      <description>Interactivo, Práctico y Participativo
+Scrum es un marco de trabajo en equipo para la construcción de productos innovadores y la ejecución exitosa de proyectos complejos.
+
+Conocer Scrum es fácil, pero llevarlo a la práctica exitosamente es difícil. Si bien este curso no profundiza en detalle sobre las actividades y elementos de Scrum (como sí lo hace el curso de Certified ScrumMaster) comprenderás cómo influye el rol del Product Owner en la creación de un producto exitoso e innovador. Mediante este curso aprenderás a gestionar a Stakeholders, conocerás sobre ROI, refinamiento del alcance, escritura efectiva de requerimeintos ágiles, etc.
+
+La clave para ser exitosos en la creación de productos con Scrum es aprenderlo, experimentarlo y desafiarlo junto a un experto en Scrum, acreditado como CST (Certified Scrum Trainer) por la Scrum Alliance.
+
+Mediante este taller 100% práctico lograrás una inmediata comprensión práctica de técnicas y herramientas ágiles para utilizar junto a equipos Scrum.  Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender la gestión ágil del alcance de los productos y proyectos.
+</description>
+      <duration type="integer">16</duration>
+      <goal>La certificación CSPO es una certificación oficial de la Scrum Alliance. El propósito del curso para CSPO es dar a todos los interesados en la utilización de Scrum, las nociones básicas necesarias para conocer Scrum pero poner especial énfasis en la responsabilidad del Product Owner o cliente de un Equipo Scrum .</goal>
+      <id type="integer">10</id>
+      <name>Certified Product Owner (CSPO)</name>
+      <program>Introducción a Scrum
+- Principios de Scrum
+- Actividades
+- Elementos
+Roles y Responsabilidades
+- ScrumMaster (a alto nivel)
+- Product Owner (en detalle)
+- Equipo de Desarrollo (a alto nivel)
+La Visión del Producto
+- Características y Cualidades esperadas
+- Técnicas para la confección de una Visión
+- Relación entre Visión y Roadmap del Producto
+Estimación
+- Los diferentes niveles de estimación en Scrum
+- Exactitud vs Precisión
+- Estimación Relativa
+- Estimación vs. Compromiso
+Alcance del Producto/Proyecto (Product Backlog)
+- Qué es y qué no es el Product Backlog
+- Refinamiento del Alcance y Planificación Continua
+- Priorización del Alcance
+- Visual Story Mapping
+Release Management (Gestión de Entregas)
+- El objetivo del Release Management
+- Características del Release Management Ágil
+- El efecto de la Deuda Técnica
+- Métricas de Release
+Construcción Evolutiva e Iterativa - Sprints
+</program>
+      <recipients>Todos aquellos que interactúen con clientes, participen en proyectos de construcción de productos y estén buscando: 
+- Adaptación en contextos cambiantes 
+- Reducir los tiempos y eliminar retrabajos 
+- Aumentar la calidad del producto 
+- Minimizar los riegos en contextos inestables 
+- Garantizar la satisfacción del cliente 
+- Obtener una nueva visión para la gestión de productos
+</recipients>
+      <updated-at type="datetime">2012-12-08T10:28:35Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-11T19:25:03Z</created-at>
+    <date type="date">2013-02-19</date>
+    <draft type="boolean">true</draft>
+    <eb-end-date type="date">2013-02-09</eb-end-date>
+    <eb-price type="decimal">300.0</eb-price>
+    <event-type-id type="integer">16</event-type-id>
+    <id type="integer">55</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">390.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Tucumán 373 1er piso</place>
+    <registration-link>https://eventioz.com.ar/events/taller-de-angularjs/registrations/new</registration-link>
+    <trainer-id type="integer">16</trainer-id>
+    <updated-at type="datetime">2012-12-12T02:19:29Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-12-11T19:13:46Z</created-at>
+      <description>Se presentarán las ideas de AngularJS y se harán prácticas sobre los conceptos fundamentales utilizando las herramientas y metodologías recomendadas por sus creadores (Google).
+El curso permitirá iniciarse en AngularJS, y puede servir como punto de partida para incorporarlo a proyectos o para evaluarlo con respecto a otros frameworks.</description>
+      <duration type="integer">8</duration>
+      <goal>Single-page webapps nos dan más ventajas con menos complejidad.
+Reducen considerablemente los HITs al webserver de manera tan notable que en algunos casos se puede prescindir por completo de un webserver.
+Al tener toda la aplicación disponible client-side, el usuario puede percibir respuestas que no estén sujetas a tiempos de red o latencias de la conexión, mejorando así la usabilidad.
+Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que plantea el patrón MVC, ya que todos suceden en client-side pudiendo dejar tan solo el repositorio de datos en server-side. Esto facilita enormemente la implementación de escalamientos horizontales o la utilización de servicios y Cloud Computing.</goal>
+      <id type="integer">16</id>
+      <name>Taller con AngularJS</name>
+      <program>En este curso trataremos de aprender sobre AngularJS y aplicarlo. 
+&lt;div class="list check grey"&gt;&lt;ul&gt;&lt;li&gt;Repasaremos juntos el uso de JavaScript, TDD y MVC, y las herramientas para desarrollar, como Chrome extension.&lt;/li&gt;&lt;li&gt; Desarrollo de una aplicación sólo client-side, con conceptos de JS y AngularJS&lt;/li&gt;&lt;ul&gt;&lt;li&gt;MVC&lt;/li&gt;&lt;li&gt;Data binding&lt;/li&gt;&lt;li&gt;Pipe filters&lt;/li&gt;&lt;li&gt;Directives&lt;/li&gt;&lt;li&gt;Modules&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Pruebas usando AngularJS: Builtin IoC, Jasmine y Testacular&lt;/li&gt;&lt;li&gt;Agregar persistencia a la aplicación&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+</program>
+      <recipients>Para web developers que:
+&lt;div class="list check grey"&gt;
+&lt;ul&gt;&lt;li&gt;Cada vez más, hacen su programación en client-side.&lt;/li&gt;&lt;li&gt;Para los que no han encontrado una manera de desacoplar la lógica de la aplicación de la manipulación de DOM.&lt;/li&gt;&lt;li&gt;Para los que no han encontrado una manera sencilla de probar aplicaciones JavaScript&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Conocimientos requeridos&lt;/strong&gt;: JavaScript, HTML, CSS.&lt;/li&gt;&lt;li&gt;Conocimientos deseables: MVC, TDD (ATDD, BDD), experiencia con otros frameworks (Backbone.js, KO, JQuery), IoC (DI)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</recipients>
+      <updated-at type="datetime">2012-12-11T19:34:17Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio></bio>
+      <created-at type="datetime">2012-12-11T19:14:18Z</created-at>
+      <id type="integer">16</id>
+      <name>Ignacio Raguet</name>
+      <updated-at type="datetime">2012-12-11T19:14:18Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">12</capacity>
+    <city>Webinar</city>
+    <country-id type="integer">245</country-id>
+    <created-at type="datetime">2012-12-14T19:04:00Z</created-at>
+    <date type="date">2013-02-20</date>
+    <draft type="boolean">true</draft>
+    <eb-end-date type="date">2013-02-10</eb-end-date>
+    <eb-price type="decimal" nil="true"/>
+    <event-type-id type="integer">18</event-type-id>
+    <id type="integer">59</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">480.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Webinar</place>
+    <registration-link>https://eventioz.com.ar/web-tdd2-201302</registration-link>
+    <trainer-id type="integer">11</trainer-id>
+    <updated-at type="datetime">2012-12-14T19:04:00Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-11-28T19:53:51Z</created-at>
+      <id type="integer">245</id>
+      <iso-code>OL</iso-code>
+      <name>-- OnLine --</name>
+      <updated-at type="datetime">2012-11-28T19:53:51Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-12-14T18:59:45Z</created-at>
+      <description>Este webinar está basado en una serie de Code Katas (ejercicios prácticos de programación) que presentan problemas usuales en los que aparece la necesidad de aplicar técnicas como mock objects e inyección de dependencias para poder avanzar con código fácilmente testeable y poder controlar el contexto de las pruebas. 
+
+También se hará una breve introducción a temas relacionados como versionado e integración contínua, que se mostrará en un ambiente pre-configurado.
+
+Los ejemplos durante el taller se harán principalmente en Ruby, pero se compartirán videos pre-grabados de ejercicios similares en otros lenguajes como C#, Java y Python.
+</description>
+      <duration type="integer">4</duration>
+      <goal>Profundizará en técnicas complementarias al ciclo básico de TDD, destinadas sobre todo mantener las pruebas a nivel realmente unitario, sin requerir dependencias entre componentes, introduciendo prácticas complementarias que maximizan el valor de TDD, tales como una buena estrategia de versionado e integración continua.</goal>
+      <id type="integer">18</id>
+      <name>Webinar de TDD Avanzado</name>
+      <program>* Repaso de TDD
+* Code Katas
+* Inversión de control
+* Inyección de dependencias
+* Mocks y stubs
+* Versionado
+* El build de 10 minutos
+* Build Server
+</program>
+      <recipients>Desarrolladores, líderes de desarrollo y arquitectos de software.</recipients>
+      <updated-at type="datetime">2012-12-14T18:59:45Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
+Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
+
+Agile Coach &amp; Trainer 
+</bio>
+      <created-at type="datetime">2012-08-23T20:43:31Z</created-at>
+      <id type="integer">11</id>
+      <name>Martín Salías</name>
+      <updated-at type="datetime">2012-08-23T20:43:31Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">30</capacity>
+    <city>Bogota</city>
+    <country-id type="integer">46</country-id>
+    <created-at type="datetime">2012-12-07T02:02:45Z</created-at>
+    <date type="date">2013-02-21</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-02-07</eb-end-date>
+    <eb-price type="decimal">850.0</eb-price>
+    <event-type-id type="integer">7</event-type-id>
+    <id type="integer">46</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">962.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Cámara de Comercio de Bogotá Sede Chapinero</place>
+    <registration-link>mailto:entrenamos.colombia@kleer.la</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-12-07T02:02:53Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">46</id>
+      <iso-code>CO</iso-code>
+      <name>Colombia</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T11:14:53Z</created-at>
+      <description>¿Por qué CSM?
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+
+¿Qué valor me aporta?
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro.
+
+¿Por qué realizar el CSM?
+Porque es un curso 100% participativo en donde estarás simulando la ejecución de un proyecto Scrum y vivirás experiencias que te darán las respuestas, claves y trucos para que luego apliques Scrum correctamente en tu día a día.
+
+¿Qué voy a hacer?
+Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">16</duration>
+      <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
+      <id type="integer">7</id>
+      <name>Certified ScrumMaster (CSM)</name>
+      <program>- Introducción a Scrum: Principios, Roles, Actividades, Elementos
+- Simulación End-to-End de Scrum y prácticas complementarias
+- Discusión de casos y escenarios particulares</program>
+      <recipients>Todos aquellos que participen en proyectos y estén buscando: 
+- Adaptación en contextos cambiantes
+- Reducir los tiempos y eliminar retrabajos
+- Aumentar la calidad del producto
+- Mejorar la productividad a un ritmo sostenible 
+- Minimizar los riegos en contextos inestables
+- Disminuir la ocurrencia de errores evitables
+- Garantizar la satisfacción del cliente
+- Obtener una nueva visión para la gestión de proyectos y equipos.
+</recipients>
+      <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">30</capacity>
+    <city>Cochabamba</city>
+    <country-id type="integer">25</country-id>
+    <created-at type="datetime">2012-12-11T19:18:42Z</created-at>
+    <date type="date">2013-03-07</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-02-08</eb-end-date>
+    <eb-price type="decimal">410.0</eb-price>
+    <event-type-id type="integer">7</event-type-id>
+    <id type="integer">54</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">530.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Centro de convenciones "Casa Campestre" - Av. Blanco Galindo Km.10 zona Piñami Av. Meneces</place>
+    <registration-link>https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dEF0Qmp2dUphN1pqRGtldFVLeGV6RXc6MA#gid=0</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-12-12T18:57:54Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">25</id>
+      <iso-code>BO</iso-code>
+      <name>Bolivia</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T11:14:53Z</created-at>
+      <description>¿Por qué CSM?
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+
+¿Qué valor me aporta?
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro.
+
+¿Por qué realizar el CSM?
+Porque es un curso 100% participativo en donde estarás simulando la ejecución de un proyecto Scrum y vivirás experiencias que te darán las respuestas, claves y trucos para que luego apliques Scrum correctamente en tu día a día.
+
+¿Qué voy a hacer?
+Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">16</duration>
+      <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
+      <id type="integer">7</id>
+      <name>Certified ScrumMaster (CSM)</name>
+      <program>- Introducción a Scrum: Principios, Roles, Actividades, Elementos
+- Simulación End-to-End de Scrum y prácticas complementarias
+- Discusión de casos y escenarios particulares</program>
+      <recipients>Todos aquellos que participen en proyectos y estén buscando: 
+- Adaptación en contextos cambiantes
+- Reducir los tiempos y eliminar retrabajos
+- Aumentar la calidad del producto
+- Mejorar la productividad a un ritmo sostenible 
+- Minimizar los riegos en contextos inestables
+- Disminuir la ocurrencia de errores evitables
+- Garantizar la satisfacción del cliente
+- Obtener una nueva visión para la gestión de proyectos y equipos.
+</recipients>
+      <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-11T12:13:49Z</created-at>
+    <date type="date">2013-03-18</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-03-01</eb-end-date>
+    <eb-price type="decimal">750.0</eb-price>
+    <event-type-id type="integer">4</event-type-id>
+    <id type="integer">50</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">890.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/intro-a-scrum-marzo-2013/registrations/new</registration-link>
+    <trainer-id type="integer">5</trainer-id>
+    <updated-at type="datetime">2012-12-11T12:32:09Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T10:59:01Z</created-at>
+      <description>La tendencia de la industria de IT y desarrollo de sistemas a nivel mundial con respecto a la utilización de metodologías ágiles es claramente incremental; estas nuevas formas de administrar un proyecto son consideradas como la “Nueva Gestión de Proyectos” no solo para el desarrollo de software sino también para las áreas de diseño gráfico y de identidad, debido a su manejo de requerimientos cambiantes, poco definidos y complejos, en entornos de negocios altamente volátiles.
+Este evento de un día completo proveerá a los asistentes un entendimiento claro sobre los principios fundamentales de las metodologías ágiles y de Scrum por medio de ejercicios reales, aplicando la teoría en casos prácticos. Los participantes obtendrán experiencia práctica trabajando con las herramientas de Scrum y sus actividades, como el backlog, sprint planning, demos y retrospectivas.</description>
+      <duration type="integer">8</duration>
+      <goal>Que los participantes comprendan las nuevas tendencias en la gestión de proyectos, conozcan los principios fundamentales y valores de Scrum y obtengan experiencia práctica trabajando con los elementos y prácticas de Scrum.</goal>
+      <id type="integer">4</id>
+      <name>Introducción a Scrum (Día 1 - CSD Track)</name>
+      <program>- Introducción a Agile
+- Introducción a Scrum
+- Roles de Scrum
+- Elementos de Scrum
+- Ceremonias de Scrum
+- Simulación de Scrum</program>
+      <recipients>Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario, Gerentes de proyectos, Líderes Técnicos y Gerentes de desarrollo.</recipients>
+      <updated-at type="datetime">2012-09-06T10:59:01Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+Agile Coach &amp; Trainer 
+Ing. en Informática, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+      <id type="integer">5</id>
+      <name>Pablo Tortorella</name>
+      <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-11T12:25:36Z</created-at>
+    <date type="date">2013-03-18</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-03-01</eb-end-date>
+    <eb-price type="decimal">3375.0</eb-price>
+    <event-type-id type="integer">3</event-type-id>
+    <id type="integer">53</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">4000.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/csd-marzo-2013/registrations/new</registration-link>
+    <trainer-id type="integer">5</trainer-id>
+    <updated-at type="datetime">2012-12-11T12:32:04Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T10:48:35Z</created-at>
+      <description>&lt;h4&gt;¿Por qué CSD?&lt;/h4&gt;
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+&lt;h4&gt;¿Qué valor me aporta?&lt;/h4&gt;
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro. Certified Scrum Developer (CSD)
+&lt;h4&gt;¿Por qué realizar el CSD?&lt;/h4&gt;
+Porque solo experimentando las prácticas comprobadas y viviendo lo que significa ser ágil comprenderás cómo actuar en tu día a día a la hora de gestionar un proyecto o desarrollar software de manera ágil.
+&lt;h4&gt;¿Qué voy a hacer?&lt;/h4&gt;
+Identificarás requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales,  experimentarás la comunicación mediante Integración Continua, TDD, ATDD y las últimas técnicas de desarrollo. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">40</duration>
+      <goal>La certificación CSD es una certificación oficial de la Scrum Alliance. El propósito del programa CSD es dar a los miembros del equipo Scrum las habilidades ingenieriles ágiles que necesitan para crear software entregable.</goal>
+      <id type="integer">3</id>
+      <name>Certified Scrum Developer (CSD Track Completo)</name>
+      <program>&lt;ul&gt;
+&lt;li&gt;Día 1: Introducción a Scrum&lt;/li&gt;
+&lt;li&gt;Día 2: Análisis, Estimación y Planificación con Scrum&lt;/li&gt;
+&lt;li&gt;Día 3 al 5: Desarrollo Ágil de Software en Scrum&lt;/li&gt;
+&lt;/ul&gt;</program>
+      <recipients>Todos aquellos que participen en proyectos de desarrollo y estén buscando: 
+&lt;ul&gt;
+&lt;li&gt;Adaptación en contextos cambiantes&lt;/li&gt;
+&lt;li&gt;Reducir los tiempos de desarrollo&lt;/li&gt;
+&lt;li&gt;Aumentar la calidad del producto&lt;/li&gt;
+&lt;li&gt;Disminuir la cantidad de bugs en producción&lt;/li&gt;
+&lt;li&gt;Mejorar la productividad a un ritmo sostenible&lt;/li&gt;
+&lt;li&gt;Minimizar los riegos en contextos inestables&lt;/li&gt;
+&lt;li&gt;Disminuir la ocurrencia de errores evitables&lt;/li&gt;
+&lt;li&gt;Garantizar la satisfacción del cliente&lt;/li&gt;
+&lt;li&gt;Obtener una nueva visión para la gestión de proyectos y equipos.&lt;/li&gt;
+&lt;ul&gt;
+</recipients>
+      <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+Agile Coach &amp; Trainer 
+Ing. en Informática, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+      <id type="integer">5</id>
+      <name>Pablo Tortorella</name>
+      <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-11T12:17:33Z</created-at>
+    <date type="date">2013-03-19</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-03-01</eb-end-date>
+    <eb-price type="decimal">750.0</eb-price>
+    <event-type-id type="integer">5</event-type-id>
+    <id type="integer">51</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">890.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/analisis-estim-y-plan-con-scrum-marzo-2013/registrations/new</registration-link>
+    <trainer-id type="integer">5</trainer-id>
+    <updated-at type="datetime">2012-12-11T12:32:14Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T11:02:03Z</created-at>
+      <description>En este curso de un día los participantes aprenderán prácticas que realmente funcionan a la hora de la identificación y estimación de user stories, identificación de velocity y armado de un release plan.
+Este curso enseña nuevas habilidades que los participantes pueden utilizar en la creación de planes ágiles. Los participantes saldrán con una sólida comprensión, y experiencia en relación con la planificación de releases e iteraciones ágiles. Se presentarán los enfoques para la estimación por puntos de historia , se presentarán cuatro técnicas de estimación, incluyendo la popular técnica de Planning Poker. Estas técnicas han demostrado aumentar la precisión de estimación y planificación, aumentando las posibilidades de finalización a tiempo de cualquier proyecto.</description>
+      <duration type="integer">8</duration>
+      <goal>Que los participantes comprendan cómo identificar user stories y cómo dividir casos complejos en historias simples, las ventajas de la estimación por story points (estimación relativa), formas efectivas de identificar la velocity de los equipos y cómo conformar un release plan.</goal>
+      <id type="integer">5</id>
+      <name>Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</name>
+      <program>- Visión de Producto
+- Desarrollo Evolutivo
+- Estructura de una buena Historia de Usuario
+- Mapeo visual de Historias de Usuario
+- Identificación de Historias de Usuario
+- Priorización del Product Backlog
+- Estimación Relativa
+- Creación de un Release Plan</program>
+      <recipients>Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario, Gerentes de proyectos, Líderes Técnicos y Gerentes de desarrollo.</recipients>
+      <updated-at type="datetime">2012-09-06T11:02:03Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+Agile Coach &amp; Trainer 
+Ing. en Informática, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+      <id type="integer">5</id>
+      <name>Pablo Tortorella</name>
+      <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-12-11T12:21:34Z</created-at>
+    <date type="date">2013-03-20</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-03-01</eb-end-date>
+    <eb-price type="decimal">2250.0</eb-price>
+    <event-type-id type="integer">6</event-type-id>
+    <id type="integer">52</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">2670.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/desarrollo-agil-marzo-2013/registrations/new</registration-link>
+    <trainer-id type="integer">5</trainer-id>
+    <updated-at type="datetime">2012-12-11T12:32:20Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T11:04:02Z</created-at>
+      <description>El taller de Desarrollo Ágil es una sesión intensiva de tres días que enseña a los asistentes a trabajar en un modelo auto-organizado e interdisciplinario para construir un producto completamente funcional, utilizando las prácticas ágiles más modernas de ingeniería de desarrollo de software.
+El curso proporciona una experiencia de primera mano con respecto a los beneficios de utilizar Scrum y las prácticas de ingeniería para abordar los retos encontrados en el desarrollo ágil de software.</description>
+      <duration type="integer">24</duration>
+      <goal>Que los participantes comprendan las prácticas de ingeniería de desarrollo ágil de software, conozcan e implementen las herramientas necesarias, pongan en práctica las técnicas ágiles de desarrollo de software y logren funcionar como equipos auto-organizados y multidisciplinarios.</goal>
+      <id type="integer">6</id>
+      <name>Desarrollo Ágil de Software (Día 3 - CSD Track)</name>
+      <program>- Introducción al Desarrollo de Software Ágil
+- Técnica de Test Driven Development (TDD)
+- Técnica de Aceptance Test Driven Development (ATDD)
+- Visual Management y Métricas
+- Presentación de un Producto Real
+- Análisis Ágil
+- Creación del Plan de Liberación
+- Sprint 1
+- Sprint 2
+- Cierre del curso</program>
+      <recipients>Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario, Gerentes de proyectos, Líderes Técnicos y Gerentes de desarrollo.</recipients>
+      <updated-at type="datetime">2012-09-06T11:04:02Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+Agile Coach &amp; Trainer 
+Ing. en Informática, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+      <id type="integer">5</id>
+      <name>Pablo Tortorella</name>
+      <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">20</capacity>
+    <city>Santa Cruz de la Sierra</city>
+    <country-id type="integer">25</country-id>
+    <created-at type="datetime">2012-12-11T19:37:12Z</created-at>
+    <date type="date">2013-03-25</date>
+    <draft type="boolean">true</draft>
+    <eb-end-date type="date">2013-03-01</eb-end-date>
+    <eb-price type="decimal">675.0</eb-price>
+    <event-type-id type="integer">3</event-type-id>
+    <id type="integer">56</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">760.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>TBD</place>
+    <registration-link>https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFk5ZUtrWlE5SUw2elJyNjQ3ZHR2bUE6MA#gid=0</registration-link>
+    <trainer-id type="integer">6</trainer-id>
+    <updated-at type="datetime">2012-12-11T19:37:12Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">25</id>
+      <iso-code>BO</iso-code>
+      <name>Bolivia</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T10:48:35Z</created-at>
+      <description>&lt;h4&gt;¿Por qué CSD?&lt;/h4&gt;
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+&lt;h4&gt;¿Qué valor me aporta?&lt;/h4&gt;
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro. Certified Scrum Developer (CSD)
+&lt;h4&gt;¿Por qué realizar el CSD?&lt;/h4&gt;
+Porque solo experimentando las prácticas comprobadas y viviendo lo que significa ser ágil comprenderás cómo actuar en tu día a día a la hora de gestionar un proyecto o desarrollar software de manera ágil.
+&lt;h4&gt;¿Qué voy a hacer?&lt;/h4&gt;
+Identificarás requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales,  experimentarás la comunicación mediante Integración Continua, TDD, ATDD y las últimas técnicas de desarrollo. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">40</duration>
+      <goal>La certificación CSD es una certificación oficial de la Scrum Alliance. El propósito del programa CSD es dar a los miembros del equipo Scrum las habilidades ingenieriles ágiles que necesitan para crear software entregable.</goal>
+      <id type="integer">3</id>
+      <name>Certified Scrum Developer (CSD Track Completo)</name>
+      <program>&lt;ul&gt;
+&lt;li&gt;Día 1: Introducción a Scrum&lt;/li&gt;
+&lt;li&gt;Día 2: Análisis, Estimación y Planificación con Scrum&lt;/li&gt;
+&lt;li&gt;Día 3 al 5: Desarrollo Ágil de Software en Scrum&lt;/li&gt;
+&lt;/ul&gt;</program>
+      <recipients>Todos aquellos que participen en proyectos de desarrollo y estén buscando: 
+&lt;ul&gt;
+&lt;li&gt;Adaptación en contextos cambiantes&lt;/li&gt;
+&lt;li&gt;Reducir los tiempos de desarrollo&lt;/li&gt;
+&lt;li&gt;Aumentar la calidad del producto&lt;/li&gt;
+&lt;li&gt;Disminuir la cantidad de bugs en producción&lt;/li&gt;
+&lt;li&gt;Mejorar la productividad a un ritmo sostenible&lt;/li&gt;
+&lt;li&gt;Minimizar los riegos en contextos inestables&lt;/li&gt;
+&lt;li&gt;Disminuir la ocurrencia de errores evitables&lt;/li&gt;
+&lt;li&gt;Garantizar la satisfacción del cliente&lt;/li&gt;
+&lt;li&gt;Obtener una nueva visión para la gestión de proyectos y equipos.&lt;/li&gt;
+&lt;ul&gt;
+</recipients>
+      <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua. 
+Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
+
+Agile Coach &amp; Trainer 
+Ing. Electrónica, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:41:23Z</created-at>
+      <id type="integer">6</id>
+      <name>Carlos Peix</name>
+      <updated-at type="datetime">2012-08-23T20:41:23Z</updated-at>
+    </trainer>
+  </event>
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Cochabamba</city>
+    <country-id type="integer">25</country-id>
+    <created-at type="datetime">2012-12-11T20:12:04Z</created-at>
+    <date type="date">2013-04-01</date>
+    <draft type="boolean">true</draft>
+    <eb-end-date type="date">2013-03-08</eb-end-date>
+    <eb-price type="decimal">675.0</eb-price>
+    <event-type-id type="integer">3</event-type-id>
+    <id type="integer">57</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">760.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Centro de convenciones "Casa Campestre" - Av. Blanco Galindo Km.10 zona Piñami Av. Meneces</place>
+    <registration-link>https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFdfYlJhQzlVWG9uWk5yODRGVDcxVGc6MA#gid=0</registration-link>
+    <trainer-id type="integer">6</trainer-id>
+    <updated-at type="datetime">2012-12-11T20:12:04Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">25</id>
+      <iso-code>BO</iso-code>
+      <name>Bolivia</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-09-06T10:48:35Z</created-at>
+      <description>&lt;h4&gt;¿Por qué CSD?&lt;/h4&gt;
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+&lt;h4&gt;¿Qué valor me aporta?&lt;/h4&gt;
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro. Certified Scrum Developer (CSD)
+&lt;h4&gt;¿Por qué realizar el CSD?&lt;/h4&gt;
+Porque solo experimentando las prácticas comprobadas y viviendo lo que significa ser ágil comprenderás cómo actuar en tu día a día a la hora de gestionar un proyecto o desarrollar software de manera ágil.
+&lt;h4&gt;¿Qué voy a hacer?&lt;/h4&gt;
+Identificarás requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales,  experimentarás la comunicación mediante Integración Continua, TDD, ATDD y las últimas técnicas de desarrollo. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">40</duration>
+      <goal>La certificación CSD es una certificación oficial de la Scrum Alliance. El propósito del programa CSD es dar a los miembros del equipo Scrum las habilidades ingenieriles ágiles que necesitan para crear software entregable.</goal>
+      <id type="integer">3</id>
+      <name>Certified Scrum Developer (CSD Track Completo)</name>
+      <program>&lt;ul&gt;
+&lt;li&gt;Día 1: Introducción a Scrum&lt;/li&gt;
+&lt;li&gt;Día 2: Análisis, Estimación y Planificación con Scrum&lt;/li&gt;
+&lt;li&gt;Día 3 al 5: Desarrollo Ágil de Software en Scrum&lt;/li&gt;
+&lt;/ul&gt;</program>
+      <recipients>Todos aquellos que participen en proyectos de desarrollo y estén buscando: 
+&lt;ul&gt;
+&lt;li&gt;Adaptación en contextos cambiantes&lt;/li&gt;
+&lt;li&gt;Reducir los tiempos de desarrollo&lt;/li&gt;
+&lt;li&gt;Aumentar la calidad del producto&lt;/li&gt;
+&lt;li&gt;Disminuir la cantidad de bugs en producción&lt;/li&gt;
+&lt;li&gt;Mejorar la productividad a un ritmo sostenible&lt;/li&gt;
+&lt;li&gt;Minimizar los riegos en contextos inestables&lt;/li&gt;
+&lt;li&gt;Disminuir la ocurrencia de errores evitables&lt;/li&gt;
+&lt;li&gt;Garantizar la satisfacción del cliente&lt;/li&gt;
+&lt;li&gt;Obtener una nueva visión para la gestión de proyectos y equipos.&lt;/li&gt;
+&lt;ul&gt;
+</recipients>
+      <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua. 
+Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
+
+Agile Coach &amp; Trainer 
+Ing. Electrónica, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:41:23Z</created-at>
+      <id type="integer">6</id>
+      <name>Carlos Peix</name>
+      <updated-at type="datetime">2012-08-23T20:41:23Z</updated-at>
+    </trainer>
+  </event>
+</events>

@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 gem 'thin'
+gem 'libxml-ruby'
 
 group :development do
   gem 'foreman'
