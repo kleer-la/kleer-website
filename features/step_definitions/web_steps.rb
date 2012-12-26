@@ -1,4 +1,6 @@
 # encoding: utf-8
+require File.join(File.dirname(__FILE__),'../../lib/keventer_reader')
+
 Given /^I open the web app$/ do
 	visit '/'
 end
@@ -20,7 +22,7 @@ When /^I press "(.*)"$/ do |name|
 end
 
 Given /^theres only one event$/ do
-  @@keventer_reader.load_events( File.join(File.dirname(__FILE__),'../../specs/just_one_event.xml'), Date.parse("2012-12-20") , true )
+  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_one_event.xml'), Date.parse("2012-12-20") )
 end
 
 When /^I visit the home page$/ do

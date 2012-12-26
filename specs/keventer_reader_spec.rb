@@ -4,34 +4,22 @@ require 'date'
 
 describe KeventerReader do
   
-  before(:each) do
-    @kevr = KeventerReader.new()
-  end
-  
   it "Should Be Able to Load an Xml File for Events" do
-    @kevr.load_events( File.join(File.dirname(__FILE__),'../specs/events.xml') ).should == true   
+    @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+    @kevr.events.count.should == 16   
   end
   
   it "Should Be Able to Load an Xml URI for Events" do
-    @kevr.load_events( "http://keventer-test.herokuapp.com/api/events.xml" ).should == true
-  end
-  
-  it "Should should not Load a file before one hour after last load" do
-    @kevr.load_events( File.join(File.dirname(__FILE__),'../specs/events.xml') ).should == true 
-    @kevr.load_events( File.join(File.dirname(__FILE__),'../specs/events.xml') ).should == false
-  end
-  
-  it "Should should not Load a file before one hour after last load unless it's specified so" do
-    @kevr.load_events( File.join(File.dirname(__FILE__),'../specs/events.xml') ).should == true 
-    @kevr.load_events( File.join(File.dirname(__FILE__),'../specs/events.xml'), Date.today , true ).should == true
+    @kevr = KeventerReader.new( "http://keventer-test.herokuapp.com/api/events.xml" )
+    @kevr.events.count.should >= 0
   end
   
   context "When loading the teasting XML source with 16 events" do
-  
-    before(:each) do
-        @kevr.load_events( File.join(File.dirname(__FILE__),'../specs/events.xml'), Date.parse("2012-12-20") )
-    end
     
+    before(:each) do
+      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'), Date.parse("2012-12-20") )
+    end
+   
     it "Should allow access to an events array with all events" do
       @kevr.events.count.should == 16   
     end

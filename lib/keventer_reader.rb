@@ -5,41 +5,43 @@ require File.join(File.dirname(__FILE__),'/keventer_event_type')
 
 class KeventerReader
   
-  attr_reader :events, :events_for_two_months
-  
-  def initialize
+  def initialize( xml_path, starting_on = Date.today )
     @events = Array.new
     @events_for_two_months = Array.new
-    @last_load_datetime = nil
+    @xml_path = xml_path
+    @starting_on = starting_on
   end
   
-  def load_events( path, todays_date = Date.today, override_cache = false )
-    execution_date = DateTime.now
-    if override_cache || @last_load_datetime.nil? || (execution_date > @last_load_datetime+1)
-      @last_load_datetime = execution_date
-      
-      parser =  LibXML::XML::Parser.file( path )
-      doc = parser.parse
-    
-      loaded_events = doc.find('/events/event')
-    
-      loaded_events.each do |loaded_event|      
-        event = create_event(loaded_event)
-      
-        @events << event
-
-        if event.date <= (todays_date >> 2)
-          @events_for_two_months << event
-        end
-      end
-    
-      return (@events.count >= 0)
-    else
-      return false
-    end
+  def events
+    load_events
+    @events
+  end
+  
+  def events_for_two_months
+    load_events( @starting_on )
+    @events_for_two_months
   end
   
   private
+  
+  def load_events( starting_on = Date.today  )
+    parser =  LibXML::XML::Parser.file( @xml_path )
+    doc = parser.parse
+    
+    loaded_events = doc.find('/events/event')
+    
+    loaded_events.each do |loaded_event|      
+      event = create_event(loaded_event)
+      
+      @events << event
+
+      if event.date <= (starting_on >> 2)
+        @events_for_two_months << event
+      end
+    end
+  
+    (@events.count >= 0)
+  end
 
   def to_boolean(string)
     return true if string== true || string =~ (/(true|t|yes|y|1)$/i)
