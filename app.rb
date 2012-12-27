@@ -16,6 +16,12 @@ get '/' do
 	erb :index
 end
 
+get '/entrenamos' do
+	@active_tab_entrenamos = "active"
+	@dt_events_array =  DTHelper::to_dt_event_array(@@keventer_reader.events)
+	erb :entrenamos
+end
+
 get '/e-books' do
 	@active_tab_ebooks = "active"
 	erb :ebooks

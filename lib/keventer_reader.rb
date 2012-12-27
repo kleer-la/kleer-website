@@ -6,8 +6,6 @@ require File.join(File.dirname(__FILE__),'/keventer_event_type')
 class KeventerReader
   
   def initialize( xml_path, starting_on = Date.today )
-    @events = Array.new
-    @events_for_two_months = Array.new
     @xml_path = xml_path
     @starting_on = starting_on
   end
@@ -25,6 +23,8 @@ class KeventerReader
   private
   
   def load_events( starting_on = Date.today  )
+    @events = Array.new
+    @events_for_two_months = Array.new
     parser =  LibXML::XML::Parser.file( @xml_path )
     doc = parser.parse
     

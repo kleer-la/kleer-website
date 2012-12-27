@@ -25,12 +25,26 @@ Given /^theres only one event$/ do
   @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_one_event.xml'), Date.parse("2012-12-20") )
 end
 
+Given /^theres only one event for the following two months$/ do
+  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'), Date.parse("2012-12-20") )
+end
+
 When /^I visit the home page$/ do
   visit '/'
 end
 
 Then /^I should see the dt_table string$/ do
   text = "\\[\\[\\'09-Jan\\',\\' <a href=\\\"http://www.kleer.la/entrenamos/evento/44\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\"  class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
+  last_response.body.should =~ /#{text}/m
+end
+
+When /^I visit the entrenamos page$/ do
+  visit '/entrenamos'
+end
+
+Then /^I should see the dt_table string for all of the events$/ do
+  text = "\\[\\[\\'09-Jan\\',\\' <a href=\\\"http://www.kleer.la/entrenamos/evento/44\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\"  class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],"
+  text += "\\[\\'09-Jul\\',\\' <a href=\\\"http://www.kleer.la/entrenamos/evento/44\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\"  class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
   last_response.body.should =~ /#{text}/m
 end
 

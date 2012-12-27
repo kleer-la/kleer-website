@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events type="array">
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
+    <date type="date">2013-01-09</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2012-12-26</eb-end-date>
+    <eb-price type="decimal">750.0</eb-price>
+    <event-type-id type="integer">13</event-type-id>
+    <id type="integer">44</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">890.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
+      <description>una descripción.</description>
+      <duration type="integer">8</duration>
+      <goal>un objetivo.</goal>
+      <id type="integer">13</id>
+      <name>Workshop de Retrospectivas</name>
+      <program>el programa</program>
+      <recipients>los destinatarios.</recipients>
+      <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+<event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
+    <date type="date">2013-07-09</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2012-12-26</eb-end-date>
+    <eb-price type="decimal">750.0</eb-price>
+    <event-type-id type="integer">13</event-type-id>
+    <id type="integer">44</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">890.0</list-price>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
+      <description>una descripción.</description>
+      <duration type="integer">8</duration>
+      <goal>un objetivo.</goal>
+      <id type="integer">13</id>
+      <name>Workshop de Retrospectivas</name>
+      <program>el programa</program>
+      <recipients>los destinatarios.</recipients>
+      <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </event>
+</events>
