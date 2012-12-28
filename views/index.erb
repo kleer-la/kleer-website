@@ -8,19 +8,38 @@
 	<div class="span4">  
 		<img src="/img/k-seal-azul.png">
 	</div>
-	<div class="span7" style="background-color:rgba(255,255,255,0.7);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1>Próximos cursos</h1>
+	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<h1>Cursos en los próx. 2 meses</h1>
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
-		<script type="text/javascript" src="/js/complete.min.js"/></script>
+		<script type="text/javascript" src="/js/jquery.js"/></script>
 		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" src="/js/dt_cursos_home.js"></script>
 		
 		<script type="text/javascript">
 		<!--
 		var aCursos = <%=@dt_events_array%>
+		
+		$('body').on('hidden', '.modal', function () {
+		  $(this).removeData('modal');
+		});
 		-->
 		</script>
-	</div>  
+		<p align="right"><a href="/entrenamos" class="btn btn-large btn-primary">Ver Calendario Completo >></a></p>
+	</div>
+	
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h4 id="myModalLabel">Detalles de Curso</h4>
+	  </div>
+	  <div class="modal-body">
+	    <p>One fine body…</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	    <!-- button class="btn btn-primary">Save changes</button -->
+	  </div>
+	</div>
 	
 	<div class="row"><div class="span1">&nbsp;</div></div>
 	
@@ -30,8 +49,8 @@
 			<p align="center"><img src="/img/sa-rep-seal.png"></p>
 		</div -->
 		
-		<div class="span10 offset1" style="background-color:rgba(255,255,255,0.7);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-			<h1>Contacto</h1>
+		<div class="span10 offset1" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+			<h4>Contacto</h4>
 			<ul class="thumbnails">
 				<li class="span2">
 					<div class="thumbnail">

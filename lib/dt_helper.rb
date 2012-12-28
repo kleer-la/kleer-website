@@ -1,11 +1,11 @@
 # encoding: utf-8
 class DTHelper
   
-  def self.to_dt_event_array(events)
+  def self.to_dt_event_array(events, remote = true)
     result = "["
     
     events.each do |event|
-      result += DTHelper::event_result(event)
+      result += DTHelper::event_result(event, remote)
     end
     
     result += "];"
@@ -13,11 +13,15 @@ class DTHelper
     result
   end
   
-  def self.event_result(event)
+  def self.event_result(event, remote = true)
     result = "["
     
-    result += "'"+event.date.strftime("%d-%b")+"',"
-    result += "' <a href=\"http://www.kleer.la/entrenamos/evento/"+event.id.to_s+"\">"+event.event_type.name+"</a><br/>"
+    result += "'<span class=\"label label-info\">"+event.date.strftime("%d<br><span class=\"lead\">%b</span>")+"</span>',"
+    result += "' <a data-toggle=\"modal\" data-target=\"#myModal\" href=\"/entrenamos/evento/"+event.id.to_s
+    if remote 
+      result += "/remote"
+    end
+    result += "\">"+event.event_type.name+"</a><br/>"
     result += "<img src=\"/img/flags/"+event.country_code.downcase+".png\"/> "+event.city+"',"
     
     if event.is_sold_out

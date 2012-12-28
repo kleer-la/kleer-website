@@ -62,7 +62,7 @@ CSC, PMP, PMI-ACP</bio>
     <eb-end-date type="date">2012-12-26</eb-end-date>
     <eb-price type="decimal">750.0</eb-price>
     <event-type-id type="integer">13</event-type-id>
-    <id type="integer">44</id>
+    <id type="integer">45</id>
     <is-sold-out type="boolean">false</is-sold-out>
     <list-price type="decimal">890.0</list-price>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>

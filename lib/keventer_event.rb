@@ -12,4 +12,8 @@ class KeventerEvent
     @registration_link = ""
     @id = 0
   end
+  
+  def to_s
+    @id
+  end
 end

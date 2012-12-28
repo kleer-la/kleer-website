@@ -28,6 +28,14 @@ describe KeventerReader do
       @kevr.events_for_two_months.count.should == 8
     end
     
+    it "should be able to fetch a certain event" do
+      @kevr.event(44).event_type.name.should == "Workshop de Retrospectivas"
+    end
+    
+    it "should be able to fetch a certain event if the parameter is a string" do
+      @kevr.event("44").event_type.name.should == "Workshop de Retrospectivas"
+    end
+    
     context "when examining the first event" do
       
       before(:each) do

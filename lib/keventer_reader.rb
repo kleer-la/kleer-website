@@ -15,12 +15,35 @@ class KeventerReader
     @events
   end
   
+  def event(event_id)
+    load_event(event_id)
+  end
+  
   def events_for_two_months
     load_events( @starting_on )
     @events_for_two_months
   end
   
   private
+  
+  def load_event( event_id )
+    if @events.nil?
+      load_events
+    end
+    
+    event_id = event_id.to_i
+    
+    returning_event = nil
+    
+    @events.each do |event|
+      if event.id == event_id
+        returning_event = event
+      end
+    end
+    
+    returning_event
+    
+  end
   
   def load_events( starting_on = Date.today  )
     @events = Array.new
@@ -30,7 +53,7 @@ class KeventerReader
     
     loaded_events = doc.find('/events/event')
     
-    loaded_events.each do |loaded_event|      
+    loaded_events.each do |loaded_event|   
       event = create_event(loaded_event)
       
       @events << event

@@ -26,3 +26,8 @@ get '/e-books' do
 	@active_tab_ebooks = "active"
 	erb :ebooks
 end
+
+get '/entrenamos/evento/:event_id/remote' do
+  @event = @@keventer_reader.event( params[:event_id] )
+  erb :event_remote, :layout => :layout_empty
+end
