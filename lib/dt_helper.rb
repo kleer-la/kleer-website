@@ -34,11 +34,11 @@ class DTHelper
   end
   
   def self.event_sold_out_link
-    "'<a href=\"javascript:void();\" target=\"_blank\"  class=\"btn btn-danger\">Completo</a>'"
+    "'<a href=\"javascript:void();\" target=\"_blank\"  class=\"btn btn-danger\"><i class=\"icon-ban-circle icon-white\"></i> Completo</a>'"
   end
   
   def self.event_link(event)
-    "'<a href=\""+event.registration_link+"\" target=\"_blank\"  class=\"btn btn-success\">Registrarme!</a>'"
+    "'<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\"><i class=\"icon-pencil icon-white\"></i> Registrarme!</a>'"
   end
   
 end
