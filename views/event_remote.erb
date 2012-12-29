@@ -1,5 +1,23 @@
-<h3><%=@event.event_type.name%></h3>
-<p><%=@event.event_type.description%></p>
-<h5>Objetivos</h5><p><%=@event.event_type.goal%></p>
-<h5>Destinado A</h5><p><%=@event.event_type.recipients%></p>
-<h5>Programa</h5><p><%=@event.event_type.program%></p>
+<div class="row">
+	<div class="span1">
+		<span class="label label-info"><%=@event.date.strftime("%d")%><br><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>
+	</div>
+	<div class="span3">
+		<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.city%>, <%=@event.country%><br/>
+		<i class="icon-user"></i>&nbsp;<%=@event.trainer_name%>
+	</div>	
+</div>
+<div class="row">
+	<div class="span5">
+		<h3><%=@event.event_type.name%></h3>
+		<p><%=@event.event_type.description%></p>
+		<h5>Objetivos</h5><p><%=@event.event_type.goal%></p>
+		<h5>Destinado A</h5><p><%=@event.event_type.recipients%></p>
+		<h5>Programa</h5><p><%=@event.event_type.program%></p>
+		<%if @event.is_sold_out%>
+			<a href="javascript:void();" target="_blank"  class="btn btn-danger">Completo</a>
+		<%else%>
+			<a href="<%=@event.registration_link%>" target="_blank" class="btn btn-success">Registrarme!</a>
+		<%end%>
+	</div>
+</div>

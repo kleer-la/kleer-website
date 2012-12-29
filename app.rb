@@ -1,5 +1,6 @@
 require 'rubygems' if RUBY_VERSION < '1.9'
 require 'sinatra'
+require 'sinatra/r18n'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
@@ -8,6 +9,10 @@ KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   @@keventer_reader = KeventerReader.new( KEVENTER_EVENTS_URI )
+end
+
+before do
+  session[:locale] = 'es'
 end
 
 get '/' do

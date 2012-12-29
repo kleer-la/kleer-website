@@ -78,6 +78,10 @@ describe KeventerReader do
         @first_event.event_type.program.should == "el programa"
       end
       
+      it "Should have 'Raul Gorgonzola' as trainer" do
+        @first_event.trainer_name.should == "Raul Gorgonzola"
+      end
+      
     end
   
   end

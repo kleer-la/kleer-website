@@ -53,5 +53,10 @@ describe KeventerEvent do
       @kevent.event_type.should == an_event_type
   end
   
+  it "should have a trainer name" do
+      @kevent.trainer_name = "Raul Gorgonzola"
+      @kevent.trainer_name.should == "Raul Gorgonzola"
+  end
+  
   
 end

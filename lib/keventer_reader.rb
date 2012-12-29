@@ -84,6 +84,7 @@ class KeventerReader
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
+    event.trainer_name = xml_keventer_event.find_first('trainer/name').content
     
     event_type.name  = xml_keventer_event.find_first('event-type/name').content
     event_type.description  = xml_keventer_event.find_first('event-type/description').content
