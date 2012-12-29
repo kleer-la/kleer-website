@@ -52,5 +52,15 @@ When /^I visit the plain event page$/ do
   visit '/entrenamos/evento/44/remote'
 end
 
+Then /^I should be on Entrenamos page$/ do
+  current_url.should == "/entrenamos"
+end
+
+Then /^I should see a link to "(.*?)" with text "(.*?)"$/ do |url, text|
+  response_body.should have_selector("a[href='#{ url }']") do |element|
+      element.should contain(text)
+    end
+end
+
 
 
