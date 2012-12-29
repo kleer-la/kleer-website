@@ -19,3 +19,17 @@ Feature: Home Page
 		Given I visit the home page
 		When I click on "Ver Calendario 2013"
 		Then I should be on Entrenamos page
+
+	Scenario: Calendario 2013 accesible desde la home page
+		Given I visit the home page
+		When I click on "Ver Calendario 2013"
+		Then I should be on Entrenamos page		
+
+	Scenario: Datos de contacto
+		Given I visit the home page
+		Then I should see "Argentina"
+		And I should see "Brasil"
+		And I should see "Bolivia"
+		And I should see "Colombia"
+		And I should see "Perú"
+		And I should see "¿Otro país?"
