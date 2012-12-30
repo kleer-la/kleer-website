@@ -66,5 +66,9 @@ Then /^I should see an image pointing to "(.*?)"$/ do |url|
   response_body.should have_selector("img[src='#{ url }']")
 end
 
+When /^I visit the event page$/ do
+  visit '/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires'
+end
+
 
 

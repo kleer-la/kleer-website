@@ -32,6 +32,13 @@ get '/e-books' do
 	erb :ebooks
 end
 
+get '/entrenamos/evento/:event_id_with_name' do
+  event_id_with_name = params[:event_id_with_name]
+  event_id = event_id_with_name.split('-')[0]
+  @event = @@keventer_reader.event( event_id )
+  erb :event
+end
+
 get '/entrenamos/evento/:event_id/remote' do
   @event = @@keventer_reader.event( params[:event_id] )
   erb :event_remote, :layout => :layout_empty

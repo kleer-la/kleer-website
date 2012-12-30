@@ -18,12 +18,7 @@ Feature: Home Page
 	Scenario: Calendario 2013 accesible desde la home page
 		Given I visit the home page
 		When I click on "Ver Calendario 2013"
-		Then I should be on Entrenamos page
-
-	Scenario: Calendario 2013 accesible desde la home page
-		Given I visit the home page
-		When I click on "Ver Calendario 2013"
-		Then I should be on Entrenamos page		
+		Then I should be on Entrenamos page	
 
 	Scenario: Datos de contacto
 		Given I visit the home page
