@@ -54,5 +54,10 @@ end
 
 get '/entrenamos/evento/:event_id/remote' do
   @event = @@keventer_reader.event( params[:event_id] )
+  
+  @markdown_renderer = Redcarpet::Markdown.new(
+                            Redcarpet::Render::HTML.new(:hard_wrap => true), 
+                            :autolink => true )
+  
   erb :event_remote, :layout => :layout_empty
 end
