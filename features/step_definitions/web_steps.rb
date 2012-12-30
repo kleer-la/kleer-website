@@ -70,5 +70,12 @@ When /^I visit the event page$/ do
   visit '/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires'
 end
 
+Then /^I should see the SnapEngage plugin$/ do
+  response_body.should have_selector("script[type='text\/javascript']") do |element|
+      element.should contain( "SnapABug.setLocale(\"es\")" )
+      element.should contain( "SnapABug.addButton(\"ab0964bc-0c2b-4b9b-8f59-b3e3cdb81b04\",\"0\",\"55%\")" )
+    end
+end
+
 
 

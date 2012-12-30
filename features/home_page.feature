@@ -31,4 +31,4 @@ Feature: Home Page
 
 	Scenario: Integracion con SnapEngage
 		Given I visit the home page
-		Then I should see "SnapABug.addButton"
+		Then I should see the SnapEngage plugin
