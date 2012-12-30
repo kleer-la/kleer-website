@@ -8,9 +8,9 @@ $(document).ready(function() {
 	         "aaData": aCursos,
 			 "bLengthChange": false,
 			  "aoColumns": [
-				  { "sTitle": "Inicia", "sWidth": "5%" },
-				  { "sTitle": "Descripcion", "sWidth": "70%" },
-				  { "sTitle": "", "sClass": "right", "sWidth": "25%" }
+				  { "sWidth": "5%" },
+				  { "sWidth": "70%" },
+				  { "sClass": "right", "sWidth": "25%" }
 			  ],
 			"aaSorting": [],
 			"bPaginate": false,
