@@ -4,6 +4,7 @@ gem 'sinatra'
 gem 'thin'
 gem 'libxml-ruby'
 gem 'sinatra-r18n'
+gem 'redcarpet'
 
 group :development do
   gem 'foreman'

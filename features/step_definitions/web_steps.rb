@@ -87,5 +87,22 @@ Given /^I visit the publicamos page$/ do
   visit "/e-books"
 end
 
+Then /^I should see a tweet button$/ do
+  response_body.should have_selector("script") do |element|
+    element.should contain( "//platform.twitter.com/widgets.js" )
+    element.should contain( "twitter-wjs" )
+  end
+  response_body.should have_selector("a[href='https://twitter.com/share']") do |element|
+    element.should contain("Tweet")
+  end
+end
+
+Then /^I should see a facebook like button$/ do
+  response_body.should have_selector("script") do |element|
+    element.should contain( "//connect.facebook.net/es_LA/all.js" )
+  end
+  response_body.should have_selector("div[class='fb-like']")
+end
+
 
 

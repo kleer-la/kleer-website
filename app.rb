@@ -1,6 +1,7 @@
 require 'rubygems' if RUBY_VERSION < '1.9'
 require 'sinatra'
 require 'sinatra/r18n'
+require 'redcarpet'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
@@ -36,11 +37,18 @@ get '/e-books' do
 end
 
 get '/entrenamos/evento/:event_id_with_name' do
+  
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
   @event = @@keventer_reader.event( event_id, true )
+  
   @page_title = @event.event_type.name
   @page_title += " - " + @event.city
+  
+  @markdown_renderer = Redcarpet::Markdown.new(
+                            Redcarpet::Render::HTML.new(:hard_wrap => true), 
+                            :autolink => true )
+  
   erb :event
 end
 

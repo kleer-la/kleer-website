@@ -4,6 +4,16 @@
 	}
 </style>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=104053446339772";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 <div class="row">
 	<div class="span4">  
 		<img src="/img/k-seal-azul.png">
@@ -12,16 +22,15 @@
 	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 		<div class="row">
 			<div class="span1">
-				<span class="label label-info"><%=@event.date.strftime("%d")%><br><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>
+				<span class="label label-info"><%=@event.date.strftime("%d")%><br/><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span><br/>
+				&nbsp;<br/>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-via="kleer_la">Tweet</a></br>
+				<div class="fb-like" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true"></div>
 			</div>
 			<div class="span5">
 				<h3><%=@event.event_type.name%></h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span6">
 				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.city%>, <%=@event.country%>&nbsp;
-			</div>	
+			</div>
 		</div>
 	</div>
 	
@@ -43,23 +52,23 @@
 		
 		<div class="tab-content">
 		  <div class="tab-pane active" id="description">
-		  	<%=@event.event_type.description%>
+		  	<%=@markdown_renderer.render( @event.event_type.description )%>
 		    <br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="goal">
-		  	<%=@event.event_type.goal%>
+		  	<%=@markdown_renderer.render( @event.event_type.goal )%>
 		    <br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="recipients">
-		  	<%=@event.event_type.recipients%>
+		  	<%=@markdown_renderer.render( @event.event_type.recipients )%>
 			<br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="program">
-		  	<%=@event.event_type.program%>
+		  	<%=@markdown_renderer.render( @event.event_type.program )%>
 			<br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="trainer">
-			<%=@event.trainer_bio%>
+			<%=@markdown_renderer.render( @event.trainer_bio )%>
 			<br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="registration">
