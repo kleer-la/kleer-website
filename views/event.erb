@@ -1,23 +1,79 @@
+<style>
+	body {
+		background: url(/img/bgfull-k-retro.jpg) no-repeat center center fixed; 
+	}
+</style>
+
 <div class="row">
-	<div class="span1">
-		<span class="label label-info"><%=@event.date.strftime("%d")%><br><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>
+	<div class="span4">  
+		<img src="/img/k-seal-azul.png">
 	</div>
-	<div class="span3">
-		<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.city%>, <%=@event.country%><br/>
-		<i class="icon-user"></i>&nbsp;<%=@event.trainer_name%>
-	</div>	
-</div>
-<div class="row">
-	<div class="span5">
-		<h3><%=@event.event_type.name%></h3>
-		<p><%=@event.event_type.description%></p>
-		<h5>Objetivos</h5><p><%=@event.event_type.goal%></p>
-		<h5>Destinado A</h5><p><%=@event.event_type.recipients%></p>
-		<h5>Programa</h5><p><%=@event.event_type.program%></p>
-		<%if @event.is_sold_out%>
-			<a href="javascript:void();" target="_blank"  class="btn btn-danger">Completo</a>
-		<%else%>
-			<a href="<%=@event.registration_link%>" target="_blank" class="btn btn-success">Registrarme!</a>
-		<%end%>
+	
+	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<div class="row">
+			<div class="span1">
+				<span class="label label-info"><%=@event.date.strftime("%d")%><br><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>
+			</div>
+			<div class="span5">
+				<h3><%=@event.event_type.name%></h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6">
+				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.city%>, <%=@event.country%>&nbsp;
+			</div>	
+		</div>
+	</div>
+	
+	<div class="span7">&nbsp;</div>
+	
+	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<ul class="nav nav-tabs" id="myTab">
+		  <li class="active"><a href="#description" data-toggle="tab">Descripción</a></li>
+		  <li><a href="#goal" data-toggle="tab">Objetivos</a></li>
+		  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
+		  <li><a href="#program" data-toggle="tab">Programa</a></li>
+		  <li><a href="#trainer" data-toggle="tab"><i class="icon-user"></i>&nbsp;<%=@event.trainer_name%></a></li>
+		  <li><%if @event.is_sold_out%>
+				<a href="#registration" data-toggle="tab"><span class="label label-important">Completo</span></a>
+			<%else%>
+				<a href="<%=@event.registration_link%>" target="_blank"><span class="label label-success">Registrarme!</span></a>
+			<%end%></li>
+		</ul>
+		
+		<div class="tab-content">
+		  <div class="tab-pane active" id="description">
+		  	<%=@event.event_type.description%>
+		    <br/>&nbsp;
+		  </div>
+		  <div class="tab-pane" id="goal">
+		  	<%=@event.event_type.goal%>
+		    <br/>&nbsp;
+		  </div>
+		  <div class="tab-pane" id="recipients">
+		  	<%=@event.event_type.recipients%>
+			<br/>&nbsp;
+		  </div>
+		  <div class="tab-pane" id="program">
+		  	<%=@event.event_type.program%>
+			<br/>&nbsp;
+		  </div>
+		  <div class="tab-pane" id="trainer">
+			<%=@event.trainer_bio%>
+			<br/>&nbsp;
+		  </div>
+		  <div class="tab-pane" id="registration">
+			<%if @event.is_sold_out%>
+				<div class="alert alert-error"><strong>Ouch!</strong> El cupo para este evento se encuentra completo.</div>
+				Puedes contactarnos a <a href="mailto:entrenamos@kleer.la">entrenamos@kleer.la</a> para conocer nuevas fechas.
+			<%else%>
+				<!-- iframe para registro TBD -->
+			<%end%>
+			<br/>&nbsp;
+		  </div>
+		</div>
+		
+		<script type="text/javascript" src="/js/jquery.js"/></script>
+		
 	</div>
 </div>

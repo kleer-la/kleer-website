@@ -20,9 +20,13 @@ class DTHelper
     result = "["
     
     result += "'<span class=\"label label-info\">"+event.date.strftime("%d")+"<br><span class=\"lead\">"+MONTHS_ES[event.date.strftime("%b")]+"</span></span>',"
-    result += "' <a data-toggle=\"modal\" data-target=\"#myModal\" href=\"/entrenamos/evento/"+event.id.to_s
+    result += "' <a "
     if remote 
+      result += "data-toggle=\"modal\" data-target=\"#myModal\" "
+      result += "href=\"/entrenamos/evento/"+event.id.to_s
       result += "/remote"
+    else
+      result += "href=\"/entrenamos/evento/"+event.uri_path
     end
     result += "\">"+event.event_type.name+"</a><br/>"
     result += "<img src=\"/img/flags/"+event.country_code.downcase+".png\"/> "+event.city+"',"
@@ -37,7 +41,7 @@ class DTHelper
   end
   
   def self.event_sold_out_link
-    "'<a href=\"javascript:void();\" target=\"_blank\"  class=\"btn btn-danger\">Completo</a>'"
+    "'<a href=\"javascript:void();\" target=\"_blank\" class=\"btn btn-danger\">Completo</a>'"
   end
   
   def self.event_link(event)

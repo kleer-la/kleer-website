@@ -13,6 +13,7 @@ end
 
 before do
   session[:locale] = 'es'
+  @page_title = "Kleer - Agile Coaching & Training"
 end
 
 get '/' do
@@ -23,19 +24,23 @@ end
 
 get '/entrenamos' do
 	@active_tab_entrenamos = "active"
-	@dt_events_array =  DTHelper::to_dt_event_array(@@keventer_reader.events)
+	@page_title += " | Entrenamos"
+	@dt_events_array =  DTHelper::to_dt_event_array(@@keventer_reader.events, false)
 	erb :entrenamos
 end
 
 get '/e-books' do
 	@active_tab_ebooks = "active"
+	@page_title += " | Publicamos"
 	erb :ebooks
 end
 
 get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  @event = @@keventer_reader.event( event_id )
+  @event = @@keventer_reader.event( event_id, true )
+  @page_title = @event.event_type.name
+  @page_title += " - " + @event.city
   erb :event
 end
 

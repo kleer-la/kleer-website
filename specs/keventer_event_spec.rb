@@ -58,5 +58,18 @@ describe KeventerEvent do
       @kevent.trainer_name.should == "Raul Gorgonzola"
   end
   
+  it "should have a trainer bio" do
+      @kevent.trainer_bio = "hg jgjhagsdjhagsdkjahgsfkjahgsj ja sfkjahs fkjahsfg "
+      @kevent.trainer_bio.should == "hg jgjhagsdjhagsdkjahgsfkjahgsj ja sfkjahs fkjahsfg "
+  end
+  
+  it "should form the uri path automatically" do
+    @kevent.id = 44
+    an_event_type = KeventerEventType.new
+    an_event_type.name = "Workshop de Retrospectivas"
+    @kevent.event_type = an_event_type
+    @kevent.city = "Buenos Aires"
+    @kevent.uri_path.should == "44-workshop-de-retrospectivas-buenos-aires"
+  end
   
 end

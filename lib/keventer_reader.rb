@@ -15,8 +15,8 @@ class KeventerReader
     @events
   end
   
-  def event(event_id)
-    load_event(event_id)
+  def event(event_id, force_read = false)
+    load_event(event_id, force_read)
   end
   
   def events_for_two_months
@@ -26,8 +26,8 @@ class KeventerReader
   
   private
   
-  def load_event( event_id )
-    if @events.nil?
+  def load_event( event_id, force_read = false )
+    if @events.nil? || force_read
       load_events
     end
     
@@ -85,6 +85,7 @@ class KeventerReader
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
     event.trainer_name = xml_keventer_event.find_first('trainer/name').content
+    event.trainer_bio = xml_keventer_event.find_first('trainer/bio').content
     
     event_type.name  = xml_keventer_event.find_first('event-type/name').content
     event_type.description  = xml_keventer_event.find_first('event-type/description').content

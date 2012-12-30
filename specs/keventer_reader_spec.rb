@@ -82,6 +82,10 @@ describe KeventerReader do
         @first_event.trainer_name.should == "Raul Gorgonzola"
       end
       
+      it "Should have 'Raul Gorgonzola' as trainer" do
+        @first_event.trainer_bio.should == "Agile Coach"
+      end
+      
     end
   
   end
