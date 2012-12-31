@@ -23,7 +23,7 @@ class DTHelper
     result += "' <a "
     if remote 
       result += "data-toggle=\"modal\" data-target=\"#myModal\" "
-      result += "href=\"/entrenamos/evento/"+event.id.to_s
+      result += "href=\"/entrenamos/evento/"+event.uri_path
       result += "/remote"
     else
       result += "href=\"/entrenamos/evento/"+event.uri_path

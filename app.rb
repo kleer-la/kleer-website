@@ -9,7 +9,7 @@ KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
-  @@keventer_reader = KeventerReader.new( KEVENTER_EVENTS_URI )
+  @@keventer_reader = KeventerReader.new(KEVENTER_EVENTS_URI)
 end
 
 before do
@@ -17,12 +17,12 @@ before do
   @page_title = "Kleer - Agile Coaching & Training"
   @markdown_renderer = Redcarpet::Markdown.new(
                             Redcarpet::Render::HTML.new(:hard_wrap => true), 
-                            :autolink => true )
+                            :autolink => true)
 end
 
 get '/' do
 	@active_tab_index = "active"
-	@dt_events_array =  DTHelper::to_dt_event_array(@@keventer_reader.events_for_two_months)
+	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.events_for_two_months)
 
 	erb :index
 end
@@ -30,7 +30,7 @@ end
 get '/entrenamos' do
 	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
-	@dt_events_array =  DTHelper::to_dt_event_array(@@keventer_reader.events, false)
+	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.events, false)
 
 	erb :entrenamos
 end
@@ -45,15 +45,17 @@ end
 get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  @event = @@keventer_reader.event( event_id, true )
+  @event = @@keventer_reader.event(event_id, true)
   
   @page_title = "Kleer - " + @event.friendly_title
   
   erb :event
 end
 
-get '/entrenamos/evento/:event_id/remote' do
-  @event = @@keventer_reader.event( params[:event_id] )
+get '/entrenamos/evento/:event_id_with_name/remote' do
+  event_id_with_name = params[:event_id_with_name]
+  event_id = event_id_with_name.split('-')[0]
+  @event = @@keventer_reader.event(event_id, true)
 
   erb :event_remote, :layout => :layout_empty
 end
