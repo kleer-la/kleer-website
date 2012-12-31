@@ -42,7 +42,7 @@ get '/entrenamos/evento/:event_id_with_name' do
   event_id = event_id_with_name.split('-')[0]
   @event = @@keventer_reader.event( event_id, true )
   
-  @page_title = @event.event_type.name
+  @page_title = "Kleer - " + @event.event_type.name
   @page_title += " - " + @event.city
   
   @markdown_renderer = Redcarpet::Markdown.new(
