@@ -32,3 +32,7 @@ Feature: Home Page
 	Scenario: Integracion con SnapEngage
 		Given I visit the home page
 		Then I should see the SnapEngage plugin
+
+	Scenario: Subscripcion a newsletter
+		Given I visit the home page
+		Then I should see the Subscribe to newsletter option

@@ -104,5 +104,8 @@ Then /^I should see a facebook like button$/ do
   response_body.should have_selector("div[class='fb-like']")
 end
 
-
-
+Then /^I should see the Subscribe to newsletter option$/ do
+  response_body.should have_selector("a[href='http://eepurl.com/tu9Xr']") do |element|
+    element.should contain("Suscríbete a nuestra newsletter")
+  end
+end
