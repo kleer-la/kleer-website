@@ -4,7 +4,7 @@ require File.join(File.dirname(__FILE__),'/keventer_event')
 require File.join(File.dirname(__FILE__),'/keventer_event_type')
 
 class KeventerReader
-  
+
   def initialize(xml_path)
     @xml_path = xml_path
   end
@@ -32,6 +32,10 @@ class KeventerReader
   private
   
   def load_remote_events(force_read = false)
+    if remote_events_still_valid(force_read)
+      return @@events_dont_use_directly
+    end
+    
     parser =  LibXML::XML::Parser.file(@xml_path)
     doc = parser.parse
     loaded_events = doc.find('/events/event')
@@ -41,14 +45,10 @@ class KeventerReader
       events << create_event(loaded_event)
     end
 
-    events
+    @@events_dont_use_directly = events
   end
 
   def load_remote_event(event_id, force_read = false)
-    #if @events.nil? || force_read
-    #  load_events
-    #end
-    
     event_id = event_id.to_i
 
     load_remote_events(force_read).each do |event|
@@ -89,5 +89,11 @@ class KeventerReader
     
     event
   end
+  
+  def remote_events_still_valid(force_read)
+    !(@@events_dont_use_directly.nil? || force_read)
+  end
+
+  @@events_dont_use_directly = nil
   
 end
