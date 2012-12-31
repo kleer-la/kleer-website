@@ -25,6 +25,10 @@ class KeventerEvent
     uri_path_to_return
   end
   
+  def friendly_title
+    @event_type.name + " - " + @city
+  end
+  
   def to_s
     @id
   end
