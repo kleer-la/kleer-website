@@ -22,11 +22,11 @@ When /^I press "(.*)"$/ do |name|
 end
 
 Given /^theres only one event$/ do
-  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_one_event.xml'), Date.parse("2012-12-20") )
+  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_one_event.xml'))
 end
 
 Given /^theres only one event for the following two months$/ do
-  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'), Date.parse("2012-12-20") )
+  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'))
 end
 
 When /^I visit the home page$/ do
@@ -72,14 +72,14 @@ end
 
 Then /^I should see the SnapEngage plugin$/ do
   response_body.should have_selector("script[type='text\/javascript']") do |element|
-      element.should contain( "SnapABug.setLocale(\"es\")" )
-      element.should contain( "SnapABug.addButton(\"ab0964bc-0c2b-4b9b-8f59-b3e3cdb81b04\",\"0\",\"55%\")" )
+      element.should contain("SnapABug.setLocale(\"es\")")
+      element.should contain("SnapABug.addButton(\"ab0964bc-0c2b-4b9b-8f59-b3e3cdb81b04\",\"0\",\"55%\")")
     end
 end
 
 Then /^the page title should be "(.*?)"$/ do |title_text|
   response_body.should have_selector("title") do |element|
-      element.should contain( title_text )
+      element.should contain(title_text)
     end
 end
 
@@ -89,8 +89,8 @@ end
 
 Then /^I should see a tweet button$/ do
   response_body.should have_selector("script") do |element|
-    element.should contain( "//platform.twitter.com/widgets.js" )
-    element.should contain( "twitter-wjs" )
+    element.should contain("//platform.twitter.com/widgets.js")
+    element.should contain("twitter-wjs")
   end
   response_body.should have_selector("a[href='https://twitter.com/share']") do |element|
     element.should contain("Tweet")
@@ -99,7 +99,7 @@ end
 
 Then /^I should see a facebook like button$/ do
   response_body.should have_selector("script") do |element|
-    element.should contain( "//connect.facebook.net/es_LA/all.js" )
+    element.should contain("//connect.facebook.net/es_LA/all.js")
   end
   response_body.should have_selector("div[class='fb-like']")
 end

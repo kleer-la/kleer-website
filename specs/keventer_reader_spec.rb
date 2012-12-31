@@ -17,7 +17,7 @@ describe KeventerReader do
   context "When loading the teasting XML source with 16 events" do
     
     before(:each) do
-      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'), Date.parse("2012-12-20") )
+      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
     end
    
     it "Should allow access to an events array with all events" do
@@ -25,7 +25,8 @@ describe KeventerReader do
     end
     
     it "Should allow access to an events array for the next two motns" do
-      @kevr.events_for_two_months.count.should == 8
+      from = Date.parse("2012-12-20")
+      @kevr.events_for_two_months(from).count.should == 8
     end
     
     it "should be able to fetch a certain event" do

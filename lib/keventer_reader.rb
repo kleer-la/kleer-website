@@ -5,65 +5,57 @@ require File.join(File.dirname(__FILE__),'/keventer_event_type')
 
 class KeventerReader
   
-  def initialize( xml_path, starting_on = Date.today )
+  def initialize(xml_path)
     @xml_path = xml_path
-    @starting_on = starting_on
   end
   
   def events
-    load_events
-    @events
+    load_remote_events()
+  end
+  
+  def events_for_two_months(from = Date.today)
+    events_for_two_months = Array.new
+
+    load_remote_events().each do |event|
+      if event.date <= (from >> 2)
+        events_for_two_months << event
+      end
+    end
+
+    events_for_two_months
   end
   
   def event(event_id, force_read = false)
-    load_event(event_id, force_read)
-  end
-  
-  def events_for_two_months
-    load_events( @starting_on )
-    @events_for_two_months
+    load_remote_event(event_id, force_read)
   end
   
   private
   
-  def load_event( event_id, force_read = false )
-    if @events.nil? || force_read
-      load_events
-    end
-    
-    event_id = event_id.to_i
-    
-    returning_event = nil
-    
-    @events.each do |event|
-      if event.id == event_id
-        returning_event = event
-      end
-    end
-    
-    returning_event
-    
-  end
-  
-  def load_events( starting_on = Date.today  )
-    @events = Array.new
-    @events_for_two_months = Array.new
-    parser =  LibXML::XML::Parser.file( @xml_path )
+  def load_remote_events(force_read = false)
+    parser =  LibXML::XML::Parser.file(@xml_path)
     doc = parser.parse
-    
     loaded_events = doc.find('/events/event')
     
-    loaded_events.each do |loaded_event|   
-      event = create_event(loaded_event)
-      
-      @events << event
+    events = Array.new
+    loaded_events.each do |loaded_event|
+      events << create_event(loaded_event)
+    end
 
-      if event.date <= (starting_on >> 2)
-        @events_for_two_months << event
+    events
+  end
+
+  def load_remote_event(event_id, force_read = false)
+    #if @events.nil? || force_read
+    #  load_events
+    #end
+    
+    event_id = event_id.to_i
+
+    load_remote_events(force_read).each do |event|
+      if event.id == event_id
+        return  event
       end
     end
-  
-    (@events.count >= 0)
   end
 
   def to_boolean(string)
