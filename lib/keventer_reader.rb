@@ -25,6 +25,18 @@ class KeventerReader
     events_for_two_months
   end
   
+  def events_for_two_months_by_country(country_iso_code = "all", from = Date.today)
+    events_for_two_months = Array.new
+
+    load_remote_events().each do |event|
+      if event.date <= (from >> 2) and (event.country_code.downcase == country_iso_code or country_iso_code == "all")
+        events_for_two_months << event
+      end
+    end
+
+    events_for_two_months
+  end
+  
   def event(event_id, force_read = false)
     load_remote_event(event_id, force_read)
   end
