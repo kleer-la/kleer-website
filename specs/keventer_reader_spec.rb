@@ -90,5 +90,8 @@ describe KeventerReader do
     end
   
   end
+
+  context "Extracting countries information out of events lists" do
+  end
   
 end

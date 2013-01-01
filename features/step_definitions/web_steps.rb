@@ -109,3 +109,13 @@ Then /^I should see the Subscribe to newsletter option$/ do
     element.should contain("Suscríbete a nuestra newsletter")
   end
 end
+
+Then /^I should see all countries highlited$/ do
+  response_body.should have_selector("ul[class='nav']") do |element|
+    element.should have_selector("li[class='active']") do |element|
+      element.should have_selector("a") do |element|
+        element.should contain("Todos")
+      end
+    end
+  end
+end
