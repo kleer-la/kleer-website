@@ -113,3 +113,10 @@ Then /^I should see the Subscribe to newsletter option$/ do
     element.should contain("Suscríbete a nuestra newsletter")
   end
 end
+
+Then /^the titles should use Dosis webfont$/ do
+  response_body.should have_selector("link[href='http://fonts.googleapis.com/css?family=Dosis:600']")
+  response_body.should have_selector("style") do |element|
+    element.should contain("h1, h2, h3, h4, h5, h6 {font-family: 'Dosis'; font-weight: 600;}")
+  end
+end
