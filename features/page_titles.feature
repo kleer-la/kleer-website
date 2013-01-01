@@ -12,6 +12,10 @@ Feature: Page Titles
 		Given I visit the publicamos page
 		Then the page title should be "Kleer - Agile Coaching & Training | Publicamos"
 	
+	Scenario: Acompañamos Title
+		Given I visit the acompañamos page
+		Then the page title should be "Kleer - Agile Coaching & Training | Acompañamos"	
+	
 	Scenario: Detalle de Evento
 		Given theres only one event
 		When I visit the event page

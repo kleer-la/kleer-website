@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'rubygems' if RUBY_VERSION < '1.9'
 require 'sinatra'
 require 'sinatra/r18n'
@@ -40,6 +41,13 @@ get '/e-books' do
 	@page_title += " | Publicamos"
 
 	erb :ebooks
+end
+
+get '/acompanamos' do
+  @active_tab_acompanamos = "active"
+	@page_title += " | Acompañamos"
+
+	erb :acompanamos
 end
 
 get '/entrenamos/evento/:event_id_with_name' do

@@ -87,6 +87,10 @@ Given /^I visit the publicamos page$/ do
   visit "/e-books"
 end
 
+Given /^I visit the acompañamos page$/ do
+  visit "/acompanamos"
+end
+
 Then /^I should see a tweet button$/ do
   response_body.should have_selector("script") do |element|
     element.should contain("//platform.twitter.com/widgets.js")
