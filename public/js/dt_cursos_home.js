@@ -5,8 +5,10 @@ var sImageUrl = "http://qa.kleer.la/wp-content/uploads/2011/03/";
 var oTable;
 $(document).ready(function() {
 	oTable = $('#cursos').dataTable( {
-		"aaData": aCursos,
+		/*"aaData": aCursos,*/
 		"bLengthChange": false,
+		/*"bProcessing": true, lo anule porque ocupa mucho lugar encima de la tabla*/
+		"sAjaxSource": '/entrenamos/eventos/country/all',
 		"aoColumns": [
 			{ "sWidth": "5%" },
 			{ "sWidth": "75%" },
