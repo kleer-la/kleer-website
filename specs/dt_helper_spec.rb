@@ -14,14 +14,17 @@ describe DTHelper do
     an_event.date = Date.parse("2012-12-04")
     an_event.id = 14
     an_event.event_type.name = "Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)"
+    an_event.country = "Argentina"
     an_event.country_code = "AR"
     an_event.city = "Buenos Aires"
     an_event.is_sold_out = true
   
     some_events << an_event
     
-    DTHelper::to_dt_event_array(some_events).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a data-toggle=\"modal\" data-target=\"#myModal\" href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires/remote\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires','<a href=\"javascript:void();\" target=\"_blank\" class=\"btn btn-danger\">Completo</a>'],];"
-    DTHelper::to_dt_event_array(some_events, false).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires','<a href=\"javascript:void();\" target=\"_blank\" class=\"btn btn-danger\">Completo</a>'],];"
+    DTHelper::to_dt_event_array(some_events).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a data-toggle=\"modal\" data-target=\"#myModal\" href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires/remote\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires, Argentina','<a href=\"javascript:void();\" target=\"_blank\" class=\"btn btn-danger\">Completo</a>'],]"
+    DTHelper::to_dt_event_array(some_events, false).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires, Argentina','<a href=\"javascript:void();\" target=\"_blank\" class=\"btn btn-danger\">Completo</a>'],]"
+    DTHelper::to_dt_event_array_json(some_events).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a data-toggle=\\\"modal\\\" data-target=\\\"#myModal\\\" href=\\\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires/remote\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"javascript:void();\\\" target=\\\"_blank\\\" class=\\\"btn btn-danger\\\">Completo</a>\"]]}"
+    DTHelper::to_dt_event_array_json(some_events, false).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a href=\\\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"javascript:void();\\\" target=\\\"_blank\\\" class=\\\"btn btn-danger\\\">Completo</a>\"]]}"
   
   end
   
@@ -33,6 +36,7 @@ describe DTHelper do
     an_event.date = Date.parse("2012-12-04")
     an_event.id = 14
     an_event.event_type.name = "Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)"
+    an_event.country= "Argentina"
     an_event.country_code = "AR"
     an_event.city = "Buenos Aires"
     an_event.is_sold_out = false
@@ -40,8 +44,10 @@ describe DTHelper do
   
     some_events << an_event
     
-    DTHelper::to_dt_event_array(some_events).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a data-toggle=\"modal\" data-target=\"#myModal\" href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires/remote\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires','<a href=\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\" target=\"_blank\" class=\"btn btn-success\">Registrarme!</a>'],];"
-    DTHelper::to_dt_event_array(some_events, false).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires','<a href=\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\" target=\"_blank\" class=\"btn btn-success\">Registrarme!</a>'],];"
+    DTHelper::to_dt_event_array(some_events).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a data-toggle=\"modal\" data-target=\"#myModal\" href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires/remote\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires, Argentina','<a href=\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\" target=\"_blank\" class=\"btn btn-success\">Registrarme!</a>'],]"
+    DTHelper::to_dt_event_array(some_events, false).should == "[['<span class=\"label label-info\">04<br><span class=\"lead\">Dic</span></span>',' <a href=\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\"/img/flags/ar.png\"/> Buenos Aires, Argentina','<a href=\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\" target=\"_blank\" class=\"btn btn-success\">Registrarme!</a>'],]"
+    DTHelper::to_dt_event_array_json(some_events).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a data-toggle=\\\"modal\\\" data-target=\\\"#myModal\\\" href=\\\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires/remote\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"]]}"
+    DTHelper::to_dt_event_array_json(some_events, false).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a href=\\\"/entrenamos/evento/14-análisis,-estimación-y-planificación-con-scrum-(día-2---csd-track)-buenos-aires\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"]]}"
   
   end
   

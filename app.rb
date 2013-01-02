@@ -3,6 +3,7 @@ require 'rubygems' if RUBY_VERSION < '1.9'
 require 'sinatra'
 require 'sinatra/r18n'
 require 'redcarpet'
+require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
@@ -24,6 +25,7 @@ end
 get '/' do
 	@active_tab_index = "active"
 	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.coming_events)
+  @unique_countries = @@keventer_reader.countries_of_coming_events
 
 	erb :index
 end
@@ -55,6 +57,7 @@ get '/entrenamos/evento/:event_id_with_name' do
   event_id = event_id_with_name.split('-')[0]
   @event = @@keventer_reader.event(event_id, true)
   
+  @active_tab_entrenamos = "active"
   @page_title = "Kleer - " + @event.friendly_title
   
   erb :event
@@ -66,4 +69,10 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   @event = @@keventer_reader.event(event_id, true)
 
   erb :event_remote, :layout => :layout_empty
+end
+
+get '/entrenamos/eventos/country/:country_iso_code' do
+  content_type :json
+  country_iso_code = params[:country_iso_code]
+  DTHelper::to_dt_event_array_json(@@keventer_reader.events_for_two_months_by_country(country_iso_code))
 end

@@ -38,13 +38,13 @@ When /^I visit the entrenamos page$/ do
 end
 
 Then /^I should see the dt_table string$/ do
-  text = "\\[\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\\',\\' <a data-toggle=\\\"modal\\\" data-target=\\\"#myModal\\\" href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires/remote\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
+  text = "\\[\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\\',\\' <a data-toggle=\\\"modal\\\" data-target=\\\"#myModal\\\" href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires/remote\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires, Argentina\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
   last_response.body.should =~ /#{text}/m
 end
 
 Then /^I should see the dt_table string for all of the events$/ do
-  text = "\\[\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\\',\\' <a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],"
-  text += "\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Jul</span></span>\\',\\' <a href=\\\"/entrenamos/evento/45-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
+  text = "\\[\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\\',\\' <a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires, Argentina\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],"
+  text += "\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Jul</span></span>\\',\\' <a href=\\\"/entrenamos/evento/45-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires, Argentina\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
   last_response.body.should =~ /#{text}/m
 end
 
@@ -118,5 +118,15 @@ Then /^the titles should use Dosis webfont$/ do
   response_body.should have_selector("link[href='http://fonts.googleapis.com/css?family=Dosis:600']")
   response_body.should have_selector("style") do |element|
     element.should contain("h1, h2, h3, h4, h5, h6 {font-family: 'Dosis'; font-weight: 600;}")
+  end
+end
+
+Then /^I should see all countries highlited$/ do
+  response_body.should have_selector("ul[id='course-country-filter']") do |element|
+    element.should have_selector("li[class='active']") do |element|
+      element.should have_selector("a") do |element|
+        element.should contain("Todos")
+      end
+    end
   end
 end

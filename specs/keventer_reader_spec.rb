@@ -90,5 +90,47 @@ describe KeventerReader do
     end
   
   end
+
+  context "When loading the teasting XML source filtering by country" do
+    before(:each) do
+      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
+    end
+
+    it "Filtering for all countries should return 8 events" do
+      from = Date.parse("2012-12-20")
+      @kevr.events_for_two_months_by_country("all", from).count.should == 8
+    end
+    
+    it "Filtering for Argentina should return 4 events" do
+      from = Date.parse("2012-12-20")
+      @kevr.events_for_two_months_by_country("ar", from).count.should == 4
+    end
+    
+    it "Filtering for Mexico should return no events" do
+      from = Date.parse("2012-12-20")
+      @kevr.events_for_two_months_by_country("mx", from).count.should == 0
+    end
+    
+  end
+
+  context "Extracting countries out of events lists" do
+    before(:each) do
+      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
+    end
+
+    it "Should return 4 countries" do
+      @kevr.countries_of_coming_events().count.should == 4
+    end
+   
+    it "First country should be Argentina" do
+      @kevr.countries_of_coming_events()[0].iso_code.should == "ar"
+      @kevr.countries_of_coming_events()[0].name.should == "Argentina"
+    end
+
+    #it "Last country should be On line" do
+    #  @kevr.countries_of_coming_events()[3].iso_code.should == "ol"
+    #  @kevr.countries_of_coming_events()[3].name.should == "On line"
+    #end
+  end
   
 end

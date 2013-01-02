@@ -2,6 +2,7 @@ require 'libxml'
 require 'date'
 require File.join(File.dirname(__FILE__),'/keventer_event')
 require File.join(File.dirname(__FILE__),'/keventer_event_type')
+require File.join(File.dirname(__FILE__),'/country')
 
 class KeventerReader
 
@@ -25,10 +26,39 @@ class KeventerReader
     events_for_two_months
   end
   
+  def events_for_two_months_by_country(country_iso_code = "all", from = Date.today)
+    events_for_two_months = Array.new
+
+    load_remote_events().each do |event|
+      if event.date <= (from >> 2) and (event.country_code.downcase == country_iso_code or country_iso_code == "all")
+        events_for_two_months << event
+      end
+    end
+
+    events_for_two_months
+  end
+  
   def event(event_id, force_read = false)
     load_remote_event(event_id, force_read)
   end
   
+  def countries_of_coming_events()
+    unique_countries = Array.new
+
+    coming_events().each do |event|
+      if event.country == "-- OnLine --"
+        country = Country.new(event.country_code.downcase, "Online")
+      else
+        country = Country.new(event.country_code.downcase, event.country)
+      end
+      if !unique_countries.include?(country)
+        unique_countries << country
+      end
+    end
+
+    unique_countries.sort
+  end
+
   private
   
   def load_remote_events(force_read = false)
