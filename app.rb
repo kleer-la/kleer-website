@@ -24,6 +24,7 @@ end
 get '/' do
 	@active_tab_index = "active"
 	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.events_for_two_months)
+  @unique_countries = @@keventer_reader.countries_of_comming_events
 
 	erb :index
 end
@@ -65,5 +66,5 @@ end
 get '/entrenamos/eventos/country/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
-  "{ \"aaData\": " + DTHelper::to_dt_event_array_json(@@keventer_reader.events_for_two_months_by_country(country_iso_code)).to_json + "}"
+  DTHelper::to_dt_event_array_json(@@keventer_reader.events_for_two_months_by_country(country_iso_code))
 end

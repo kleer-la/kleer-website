@@ -1,4 +1,6 @@
 # encoding: utf-8
+require 'json'
+
 class DTHelper
   
   MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
@@ -47,7 +49,7 @@ class DTHelper
       result << DTHelper::event_result_json(event, remote)
     end
     
-    result
+    "{ \"aaData\": " + result.to_json + "}"
   end
   
   def self.event_result_json(event, remote = true)

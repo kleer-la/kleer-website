@@ -111,7 +111,7 @@ Then /^I should see the Subscribe to newsletter option$/ do
 end
 
 Then /^I should see all countries highlited$/ do
-  response_body.should have_selector("ul[class='nav']") do |element|
+  response_body.should have_selector("ul[id='course-country-filter']") do |element|
     element.should have_selector("li[class='active']") do |element|
       element.should have_selector("a") do |element|
         element.should contain("Todos")

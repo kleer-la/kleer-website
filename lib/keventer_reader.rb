@@ -2,6 +2,7 @@ require 'libxml'
 require 'date'
 require File.join(File.dirname(__FILE__),'/keventer_event')
 require File.join(File.dirname(__FILE__),'/keventer_event_type')
+require File.join(File.dirname(__FILE__),'/country')
 
 class KeventerReader
 
@@ -41,6 +42,23 @@ class KeventerReader
     load_remote_event(event_id, force_read)
   end
   
+  def countries_of_comming_events()
+    unique_countries = Array.new
+
+    events_for_two_months().each do |event|
+      if event.country == "-- OnLine --"
+        country = Country.new(event.country_code.downcase, "Online")
+      else
+        country = Country.new(event.country_code.downcase, event.country)
+      end
+      if !unique_countries.include?(country)
+        unique_countries << country
+      end
+    end
+
+    unique_countries.sort
+  end
+
   private
   
   def load_remote_events(force_read = false)
