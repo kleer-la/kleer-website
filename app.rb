@@ -24,8 +24,6 @@ end
 
 get '/' do
 	@active_tab_index = "active"
-	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.coming_events)
-  @unique_countries = @@keventer_reader.countries_of_coming_events
 
 	erb :index
 end
@@ -33,7 +31,7 @@ end
 get '/entrenamos' do
 	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
-	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.events, false)
+  @unique_countries = @@keventer_reader.unique_countries()
 
 	erb :entrenamos
 end
@@ -71,8 +69,13 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   erb :event_remote, :layout => :layout_empty
 end
 
+get '/entrenamos/eventos/coming' do
+  content_type :json
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_events(), true)
+end
+
 get '/entrenamos/eventos/country/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
-  DTHelper::to_dt_event_array_json(@@keventer_reader.events_for_two_months_by_country(country_iso_code))
+  DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false)
 end

@@ -14,38 +14,38 @@ class KeventerReader
     load_remote_events()
   end
   
-  def coming_events(from = Date.today, months=2)
-    events_for_two_months = Array.new
+  def coming_events(from = Date.today, months = 2)
+    coming_events = Array.new
 
     load_remote_events().each do |event|
       if event.date <= (from >> months)
-        events_for_two_months << event
+        coming_events << event
       end
     end
 
-    events_for_two_months
+    coming_events
   end
   
-  def events_for_two_months_by_country(country_iso_code = "all", from = Date.today)
-    events_for_two_months = Array.new
+  def events_by_country(country_iso_code = "all", from = Date.today)
+    events_by_country = Array.new
 
     load_remote_events().each do |event|
-      if event.date <= (from >> 2) and (event.country_code.downcase == country_iso_code or country_iso_code == "all")
-        events_for_two_months << event
+      if (event.country_code.downcase == country_iso_code or country_iso_code == "all")
+        events_by_country << event
       end
     end
 
-    events_for_two_months
+    events_by_country
   end
   
   def event(event_id, force_read = false)
     load_remote_event(event_id, force_read)
   end
   
-  def countries_of_coming_events()
+  def unique_countries()
     unique_countries = Array.new
 
-    coming_events().each do |event|
+    events().each do |event|
       if event.country == "-- OnLine --"
         country = Country.new(event.country_code.downcase, "Online")
       else
