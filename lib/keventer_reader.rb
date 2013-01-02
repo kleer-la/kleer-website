@@ -13,11 +13,11 @@ class KeventerReader
     load_remote_events()
   end
   
-  def events_for_two_months(from = Date.today)
+  def coming_events(from = Date.today, months=2)
     events_for_two_months = Array.new
 
     load_remote_events().each do |event|
-      if event.date <= (from >> 2)
+      if event.date <= (from >> months)
         events_for_two_months << event
       end
     end
