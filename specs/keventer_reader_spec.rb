@@ -24,9 +24,9 @@ describe KeventerReader do
       @kevr.events.count.should == 16   
     end
     
-    it "Should allow access to an events array for the next two motns" do
+    it "Should allow access to an events array for the next two months" do
       from = Date.parse("2012-12-20")
-      @kevr.events_for_two_months(from).count.should == 8
+      @kevr.coming_events(from).count.should == 8
     end
     
     it "should be able to fetch a certain event" do

@@ -23,7 +23,7 @@ end
 
 get '/' do
 	@active_tab_index = "active"
-	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.events_for_two_months)
+	@dt_events_array = DTHelper::to_dt_event_array(@@keventer_reader.coming_events)
 
 	erb :index
 end
