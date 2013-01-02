@@ -19,3 +19,9 @@ doc/
 
 .DS_Store
 webrat.log
+
+public/.DS_Store
+
+public/img/.DS_Store
+
+public/img/.DS_Store
