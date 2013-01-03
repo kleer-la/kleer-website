@@ -39,6 +39,9 @@ not_found do
   elsif !request.path.index("/entrenamos/estimacion-y-planificacion-con-scrum").nil?
       flash.now[:error] = get_404_error_text_for_course("Análisis, Estimación y Planificación con Scrum")
       erb :error404_to_calendar
+  elsif !request.path.index("/comunidad/yoseki").nil?
+      flash.now[:error] = get_404_error_text_for_community_event("Yoseki Coding Dojo")
+      erb :error404_to_community
   else
     erb :error404
   end
@@ -131,4 +134,8 @@ private
 
 def get_404_error_text_for_course(course_name) 
   "Hemos movido la información sobre el curso '<strong>#{course_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho curso"
+end
+
+def get_404_error_text_for_community_event(event_name) 
+  "Hemos movido la información sobre el evento comunitario '<strong>#{event_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho evento"
 end

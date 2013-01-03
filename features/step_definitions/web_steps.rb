@@ -200,3 +200,11 @@ Then /^I should see the json string for all of the community events$/ do
   text = '\"aaData\": \[\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]\]'
   last_response.body.should =~ /#{text}/m
 end
+
+Given /^I visit the former Yoseki Page$/ do
+  visit "/comunidad/yoseki"
+end
+
+Given /^I visit the former Yoseki spanish Page$/ do
+  visit "/es/comunidad/yoseki"
+end
