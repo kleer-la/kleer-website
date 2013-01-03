@@ -89,12 +89,12 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   erb :event_remote, :layout => :layout_empty
 end
 
-get '/entrenamos/eventos/coming' do
+get '/entrenamos/eventos/proximos' do
   content_type :json
   DTHelper::to_dt_event_array_json(@@keventer_reader.coming_events(), true)
 end
 
-get '/entrenamos/eventos/country/:country_iso_code' do
+get '/entrenamos/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
   DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false)

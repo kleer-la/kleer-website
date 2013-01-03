@@ -7,7 +7,7 @@ $(document).ready(function() {
 	oTable = $('#cursos').dataTable( {
 		"bLengthChange": false,
 		/*"bProcessing": true, lo anule porque ocupa mucho lugar encima de la tabla*/
-		"sAjaxSource": '/entrenamos/eventos/coming',
+		"sAjaxSource": '/entrenamos/eventos/proximos',
 		"aoColumns": [
 			{ "sWidth": "5%" },
 			{ "sWidth": "75%" },

@@ -14,20 +14,20 @@
 			<div class="navbar-inner">
 				<span class="brand">País</span>
 				<ul id="course-country-filter" class="nav">
-					<li class="active"><a href="/entrenamos/eventos/country/all">Todos</a></li>
+					<li class="active"><a href="/entrenamos/eventos/pais/todos">Todos</a></li>
 <% @unique_countries.each do |country| %>
-			<li><a href="/entrenamos/eventos/country/<%= country.iso_code %>"><img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
+			<li><a href="/entrenamos/eventos/pais/<%= country.iso_code %>"><img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
 <% end %>
-					<li><a href="/entrenamos/eventos/country/other">¿Otro?</a></li>
+					<li><a href="/entrenamos/eventos/pais/otro">¿Otro?</a></li>
 				</ul>
 			</div>
 		</div-->
 		<ul id="course-country-filter" class="nav nav-pills">
-			<li class="active"><a href="/entrenamos/eventos/country/all">Todos</a></li>
+			<li class="active"><a href="/entrenamos/eventos/pais/todos">Todos</a></li>
 <% @unique_countries.each do |country| %>
-			<li><a href="/entrenamos/eventos/country/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
+			<li><a href="/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
 <% end %>
-			<li><a href="/entrenamos/eventos/country/other">¿Otro?</a></li>
+			<li><a href="/entrenamos/eventos/pais/otro">¿Otro?</a></li>
 		</ul>
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
 		<script type="text/javascript" src="/js/jquery.js"/></script>

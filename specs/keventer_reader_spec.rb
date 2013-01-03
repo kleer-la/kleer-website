@@ -98,7 +98,7 @@ describe KeventerReader do
 
     it "Filtering for all countries should return 16 events" do
       from = Date.parse("2012-12-20")
-      @kevr.events_by_country("all", from).count.should == 16
+      @kevr.events_by_country("todos", from).count.should == 16
     end
     
     it "Filtering for Argentina should return 8 events" do

@@ -26,11 +26,11 @@ class KeventerReader
     coming_events
   end
   
-  def events_by_country(country_iso_code = "all", from = Date.today)
+  def events_by_country(country_iso_code, from = Date.today)
     events_by_country = Array.new
 
     load_remote_events().each do |event|
-      if (event.country_code.downcase == country_iso_code or country_iso_code == "all")
+      if (event.country_code.downcase == country_iso_code or country_iso_code == "todos")
         events_by_country << event
       end
     end
