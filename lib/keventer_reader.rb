@@ -65,7 +65,7 @@ class KeventerReader
 
   private
   
-  def load_remote_events(force_read = false)
+  def load_remote_events(force_read = true)
     if remote_events_still_valid(force_read)
       return @events_dont_use_directly
     end
