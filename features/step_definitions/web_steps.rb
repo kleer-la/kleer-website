@@ -158,3 +158,7 @@ end
 Given /^I visit the former Estimación y Planificación con Scrum spanish Page$/ do
   visit "/es/entrenamos/estimacion-y-planificacion-con-scrum"
 end
+
+Given /^I visit an invalid Page$/ do
+  visit "/bazzzzingaaaa"
+end
