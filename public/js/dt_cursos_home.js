@@ -21,7 +21,7 @@ $(document).ready(function() {
 		"oLanguage": {
 			"sProcessing":   "Procesando...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
-			"sZeroRecords":  "<div class=\"alert alert-error\"><strong>Uhgh!</strong> No se encontraron cursos que cumplan con ese criterio...</div>",
+			"sZeroRecords":  "<div class=\"alert alert-warning\">No tenemos cursos en los próximos dos meses pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>",
 			"sInfo":         "",
 			"sInfoEmpty":    "",
 			"sInfoFiltered": "",

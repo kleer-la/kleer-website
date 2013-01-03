@@ -18,7 +18,7 @@ $(document).ready(function() {
 		"oLanguage": {
 			"sProcessing":   "Procesando...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
-			"sZeroRecords":  "<div class=\"alert alert-error\"><strong>Uhgh!</strong> No se encontraron cursos que cumplan con ese criterio...</div>",
+			"sZeroRecords":  "<div class=\"alert alert-warning\">No tenemos cursos que cumplan con ese criterio pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>",
 			"sInfo":         "<div class=\"alert alert-info\">Mostrando desde _START_ hasta _END_ de _TOTAL_ registros</div>",
 			"sInfoEmpty":    "",
 			"sInfoFiltered": "<div class=\"alert alert-info\">(filtrado de _MAX_ registros en total)</div>",
