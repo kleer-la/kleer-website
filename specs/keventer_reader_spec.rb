@@ -127,9 +127,14 @@ describe KeventerReader do
       @kevr.unique_countries()[0].name.should == "Argentina"
     end
 
+    it "Second country should be Bolivia" do
+      @kevr.unique_countries()[1].iso_code.should == "bo"
+      @kevr.unique_countries()[1].name.should == "Bolivia"
+    end
+
     it "Last country should be On line" do
-      @kevr.unique_countries()[3].iso_code.should == "ol"
-      @kevr.unique_countries()[3].name.should == "On line"
+      @kevr.unique_countries()[4].iso_code.should == "ol"
+      @kevr.unique_countries()[4].name.should == "Online"
     end
   end
   

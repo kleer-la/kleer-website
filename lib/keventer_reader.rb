@@ -43,20 +43,22 @@ class KeventerReader
   end
   
   def unique_countries()
-    unique_countries = Array.new
+    countries = Array.new
+    online_country = nil
 
-    events().each do |event|
-      if event.country == "-- OnLine --"
-        country = Country.new(event.country_code.downcase, "Online")
+    load_remote_events().each do |event|
+      if event.country_code.downcase == "ol"
+        online_country = Country.new("ol", "Online")
       else
         country = Country.new(event.country_code.downcase, event.country)
-      end
-      if !unique_countries.include?(country)
-        unique_countries << country
+        countries << country unless countries.include?(country)
       end
     end
 
-    unique_countries.sort
+    countries.sort! { |x, y| x.name <=> y.name }
+
+    # Despues de que esta ordenado agrego Online al final
+    countries << online_country unless online_country.nil?
   end
 
   private
