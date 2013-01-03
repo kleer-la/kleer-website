@@ -2970,6 +2970,10 @@
 			
 			if ( oSettings.oScroll.bAutoCss )
 			{
+				// =================
+				// Carlos Peix: Patch para que no aparezca thead cuando hay scroll
+				nScrollHead.style.display = "none";
+				// =================
 				nScrollHead.style.overflow = "hidden";
 				nScrollHead.style.position = "relative";
 				nScrollFoot.style.overflow = "hidden";
