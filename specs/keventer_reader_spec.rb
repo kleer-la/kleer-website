@@ -91,24 +91,24 @@ describe KeventerReader do
   
   end
 
-  context "When loading the teasting XML source filtering by country" do
+  context "When loading the testing XML source filtering by country" do
     before(:each) do
       @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
     end
 
-    it "Filtering for all countries should return 8 events" do
+    it "Filtering for all countries should return 16 events" do
       from = Date.parse("2012-12-20")
-      @kevr.events_for_two_months_by_country("all", from).count.should == 8
+      @kevr.events_by_country("all", from).count.should == 16
     end
     
-    it "Filtering for Argentina should return 4 events" do
+    it "Filtering for Argentina should return 8 events" do
       from = Date.parse("2012-12-20")
-      @kevr.events_for_two_months_by_country("ar", from).count.should == 4
+      @kevr.events_by_country("ar", from).count.should == 8
     end
     
     it "Filtering for Mexico should return no events" do
       from = Date.parse("2012-12-20")
-      @kevr.events_for_two_months_by_country("mx", from).count.should == 0
+      @kevr.events_by_country("mx", from).count.should == 0
     end
     
   end
@@ -119,18 +119,23 @@ describe KeventerReader do
     end
 
     it "Should return 4 countries" do
-      @kevr.countries_of_coming_events().count.should == 4
+      @kevr.unique_countries().count.should == 5
     end
    
     it "First country should be Argentina" do
-      @kevr.countries_of_coming_events()[0].iso_code.should == "ar"
-      @kevr.countries_of_coming_events()[0].name.should == "Argentina"
+      @kevr.unique_countries()[0].iso_code.should == "ar"
+      @kevr.unique_countries()[0].name.should == "Argentina"
     end
 
-    #it "Last country should be On line" do
-    #  @kevr.countries_of_coming_events()[3].iso_code.should == "ol"
-    #  @kevr.countries_of_coming_events()[3].name.should == "On line"
-    #end
+    it "Second country should be Bolivia" do
+      @kevr.unique_countries()[1].iso_code.should == "bo"
+      @kevr.unique_countries()[1].name.should == "Bolivia"
+    end
+
+    it "Last country should be On line" do
+      @kevr.unique_countries()[4].iso_code.should == "ol"
+      @kevr.unique_countries()[4].name.should == "Online"
+    end
   end
   
 end

@@ -7,13 +7,6 @@ class Country
   end
 
   def ==(other_country)
-    @name == other_country.name
-  end
-
-  # FIXME: Online debe quedar en ultimo lugar
-  def <=>(other_country)
-	return -1 if ((@name < other_country.name) or (other_country.name == "Online"))
-	return  0 if (@name == other_country.name)
-	return  1 if ((@name > other_country.name) or (@name == "Online"))
+    @iso_code == other_country.iso_code
   end
 end
