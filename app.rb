@@ -26,9 +26,15 @@ before do
 end
 
 not_found do
-  if request.path == "/entrenamos/introduccion-a-scrum"
-    flash.now[:error] = "La información sobre el curso de '<strong>Introducción a Scrum</strong>' fue movida. Por favor, verifica nuestro calendario para ver los detalles de dicho curso"
+  if !request.path.index("/entrenamos/introduccion-a-scrum").nil?
+    flash.now[:error] = get_404_error_text_for_course("Introducción a Scrum")
     erb :error404_to_calendar
+  elsif !request.path.index("/entrenamos/desarrollo-agil-de-software").nil?
+      flash.now[:error] = get_404_error_text_for_course("Desarrollo Ágil de Software")
+      erb :error404_to_calendar
+  elsif !request.path.index("/entrenamos/estimacion-y-planificacion-con-scrum").nil?
+      flash.now[:error] = get_404_error_text_for_course("Análisis, Estimación y Planificación con Scrum")
+      erb :error404_to_calendar
   else
     erb :error404
   end
@@ -41,9 +47,7 @@ get '/' do
 end
 
 get '/entrenamos' do
-  puts "flash.next[:error].nil?:" + flash.next[:error].nil?.to_s
-  
-	@active_tab_entrenamos = "active"
+ 	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
   @unique_countries = @@keventer_reader.unique_countries()
 
@@ -92,4 +96,10 @@ get '/entrenamos/eventos/country/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
   DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false)
+end
+
+private
+
+def get_404_error_text_for_course(course_name) 
+  "Hemos movido la información sobre el curso '<strong>#{course_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho curso"
 end

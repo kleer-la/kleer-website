@@ -131,10 +131,30 @@ Then /^I should see all countries highlited$/ do
   end
 end
 
-Then /^It should return (\d+) error$/ do |arg1|
-  last_response.status.should == 404
+Then /^I should get a (\d+) error$/ do |error_code|
+  last_response.status.should == error_code.to_i
 end
 
 Given /^I visit the former Introducción a Scrum Page$/ do
   visit "/entrenamos/introduccion-a-scrum"
+end
+
+Given /^I visit the former Introducción a Scrum spanish Page$/ do
+  visit "/es/entrenamos/introduccion-a-scrum"
+end
+
+Given /^I visit the former Desarrollo Agil Page$/ do
+  visit "/entrenamos/desarrollo-agil-de-software"
+end
+
+Given /^I visit the former Desarrollo Agil spanish Page$/ do
+  visit "/es/entrenamos/desarrollo-agil-de-software"
+end
+
+Given /^I visit the former Estimación y Planificación con Scrum Page$/ do
+  visit "/entrenamos/estimacion-y-planificacion-con-scrum"
+end
+
+Given /^I visit the former Estimación y Planificación con Scrum spanish Page$/ do
+  visit "/es/entrenamos/estimacion-y-planificacion-con-scrum"
 end
