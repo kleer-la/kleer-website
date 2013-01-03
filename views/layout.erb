@@ -75,6 +75,14 @@
 	</div>
 
 	<div class="container">
+		<% if flash.now[:error] %>
+		<div class="row">
+			<div class="alert alert-error">
+			  <h4>Error!</h4>
+			  <%=flash.now[:error]%>
+			</div>
+		</div>
+		<% end %>
 
 		<%= yield %>
 

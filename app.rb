@@ -2,6 +2,7 @@
 require 'rubygems' if RUBY_VERSION < '1.9'
 require 'sinatra'
 require 'sinatra/r18n'
+require 'sinatra/flash'
 require 'redcarpet'
 require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
@@ -11,15 +12,26 @@ KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
+  enable :sessions
   @@keventer_reader = KeventerReader.new(KEVENTER_EVENTS_URI)
 end
 
 before do
   session[:locale] = 'es'
   @page_title = "Kleer - Agile Coaching & Training"
+  flash.sweep 
   @markdown_renderer = Redcarpet::Markdown.new(
                             Redcarpet::Render::HTML.new(:hard_wrap => true), 
                             :autolink => true)
+end
+
+not_found do
+  if request.path == "/entrenamos/introduccion-a-scrum"
+    flash.now[:error] = "La información sobre el curso de '<strong>Introducción a Scrum</strong>' fue movida. Por favor, verifica nuestro calendario para ver los detalles de dicho curso"
+    erb :error404_to_calendar
+  else
+    erb :error404
+  end
 end
 
 get '/' do
@@ -29,6 +41,8 @@ get '/' do
 end
 
 get '/entrenamos' do
+  puts "flash.next[:error].nil?:" + flash.next[:error].nil?.to_s
+  
 	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
   @unique_countries = @@keventer_reader.unique_countries()

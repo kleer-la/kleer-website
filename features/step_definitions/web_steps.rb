@@ -130,3 +130,11 @@ Then /^I should see all countries highlited$/ do
     end
   end
 end
+
+Then /^It should return (\d+) error$/ do |arg1|
+  last_response.status.should == 404
+end
+
+Given /^I visit the former Introducción a Scrum Page$/ do
+  visit "/entrenamos/introduccion-a-scrum"
+end
