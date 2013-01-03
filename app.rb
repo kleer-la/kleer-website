@@ -9,11 +9,13 @@ require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
 KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
+KEVENTER_COMUNITY_EVENTS_URI = "http://keventer.herokuapp.com/api/community_events.xml"
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   enable :sessions
   @@keventer_reader = KeventerReader.new(KEVENTER_EVENTS_URI)
+  @@keventer_reader_community = KeventerReader.new(KEVENTER_COMUNITY_EVENTS_URI)
 end
 
 before do
@@ -52,8 +54,14 @@ get '/entrenamos' do
  	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
   @unique_countries = @@keventer_reader.unique_countries()
-
 	erb :entrenamos
+end
+
+get '/comunidad' do
+ 	@active_tab_comunidad = "active"
+	@page_title += " | Comunidad"
+	@unique_countries = @@keventer_reader_community.unique_countries()
+	erb :comunidad
 end
 
 get '/e-books' do
@@ -85,19 +93,38 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
   @event = @@keventer_reader.event(event_id, false)
-
+  puts @event.trainer_name
   erb :event_remote, :layout => :layout_empty
+end
+
+get '/comunidad/evento/:event_id_with_name' do
+  event_id_with_name = params[:event_id_with_name]
+  event_id = event_id_with_name.split('-')[0]
+  @event = @@keventer_reader_community.event(event_id, true)
+  
+  puts @event
+  
+  @active_tab_comunidad = "active"
+  @page_title = "Kleer - " + @event.friendly_title
+  
+  erb :event
 end
 
 get '/entrenamos/eventos/proximos' do
   content_type :json
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_events(), true)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_events(), true, "entrenamos")
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
-  DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false, "entrenamos")
+end
+
+get '/comunidad/eventos/pais/:country_iso_code' do
+  content_type :json
+  country_iso_code = params[:country_iso_code]
+  DTHelper::to_dt_event_array_json(@@keventer_reader_community.events_by_country(country_iso_code), false, "comunidad")
 end
 
 private

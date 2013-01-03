@@ -59,13 +59,15 @@ class KeventerReader
 
     # Despues de que esta ordenado agrego Online al final
     countries << online_country unless online_country.nil?
+    
+    countries
   end
 
   private
   
   def load_remote_events(force_read = false)
     if remote_events_still_valid(force_read)
-      return @@events_dont_use_directly
+      return @events_dont_use_directly
     end
     
     parser =  LibXML::XML::Parser.file(@xml_path)
@@ -77,7 +79,7 @@ class KeventerReader
       events << create_event(loaded_event)
     end
 
-    @@events_dont_use_directly = events
+    @events_dont_use_directly = events
   end
 
   def load_remote_event(event_id, force_read = false)
@@ -123,9 +125,9 @@ class KeventerReader
   end
   
   def remote_events_still_valid(force_read)
-    !(@@events_dont_use_directly.nil? || force_read)
+    !(@events_dont_use_directly.nil? || force_read)
   end
 
-  @@events_dont_use_directly = nil
+  @events_dont_use_directly = nil
   
 end

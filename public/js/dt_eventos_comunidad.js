@@ -7,7 +7,7 @@ $(document).ready(function() {
 	oTable = $('#cursos').dataTable( {
 		"bLengthChange": false,
 		/*"bProcessing": true, lo anule porque ocupa mucho lugar encima de la tabla*/
-		"sAjaxSource": '/entrenamos/eventos/pais/todos',
+		"sAjaxSource": '/comunidad/eventos/pais/todos',
 		"aoColumns": [
 			{ "sWidth": "5%" },
 			{ "sWidth": "75%" },
@@ -18,7 +18,7 @@ $(document).ready(function() {
 		"oLanguage": {
 			"sProcessing":   "Procesando...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
-			"sZeroRecords":  "<div class=\"alert alert-warning\">No tenemos cursos que cumplan con ese criterio pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>",
+			"sZeroRecords":  "<div class=\"alert alert-warning\">No hay eventos que cumplan con ese criterio pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>",
 			"sInfo":         "<div class=\"alert alert-info\">Mostrando desde _START_ hasta _END_ de _TOTAL_ registros</div>",
 			"sInfoEmpty":    "",
 			"sInfoFiltered": "<div class=\"alert alert-info\">(filtrado de _MAX_ registros en total)</div>",

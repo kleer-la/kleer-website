@@ -6,26 +6,26 @@ class DTHelper
   MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
                 "Jul" => "Jul", "Aug" => "Ago", "Sep" => "Sep", "Oct" => "Oct", "Nov" => "Nov", "Dec" => "Dic"}
   
-  def self.to_dt_event_array_json(events, remote = true)
+  def self.to_dt_event_array_json(events, remote = true, event_details_path = "entrenamos")
     result = Array.new
     
     events.each do |event|
-      result << DTHelper::event_result_json(event, remote)
+      result << DTHelper::event_result_json(event, remote, event_details_path)
     end
     
     "{ \"aaData\": " + result.to_json + "}"
   end
   
-  def self.event_result_json(event, remote = true)
+  def self.event_result_json(event, remote = true, event_details_path = "entrenamos")
     result = Array.new
     
     result << "<span class=\"label label-info\">" + event.date.strftime("%d") + "<br><span class=\"lead\">" + MONTHS_ES[event.date.strftime("%b")] + "</span></span>"
     line = "<a "
     if remote 
       line += "data-toggle=\"modal\" data-target=\"#myModal\" "
-      line += "href=\"/entrenamos/evento/" + event.uri_path + "/remote"
+      line += "href=\"/"+event_details_path+"/evento/" + event.uri_path + "/remote"
     else
-      line += "href=\"/entrenamos/evento/" + event.uri_path
+      line += "href=\"/"+event_details_path+"/evento/" + event.uri_path
     end
     line += "\">" + event.event_type.name + "</a><br/>"
     line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country

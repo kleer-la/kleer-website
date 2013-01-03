@@ -29,6 +29,10 @@ Given /^theres only one event for the following two months$/ do
   @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'))
 end
 
+Given /^there are two events$/ do
+  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'))
+end
+
 When /^I visit the home page$/ do
   visit '/'
 end
@@ -45,6 +49,11 @@ end
 Then /^I should see the dt_table string for all of the events$/ do
   text = "\\[\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\\',\\' <a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires, Argentina\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],"
   text += "\\[\\'<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Jul</span></span>\\',\\' <a href=\\\"/entrenamos/evento/45-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar\.png\\\"/> Buenos Aires, Argentina\\',\\'<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\\'\\],\\];"
+  last_response.body.should =~ /#{text}/m
+end
+
+Then /^I should see the json string for all of the events$/ do
+  text = '\"aaData\": \[\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Jul</span></span>\",\"<a href=\\\"/entrenamos/evento/45-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]\]'
   last_response.body.should =~ /#{text}/m
 end
 
@@ -70,6 +79,10 @@ When /^I visit the event page$/ do
   visit '/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires'
 end
 
+When /^I visit the community event page$/ do
+  visit '/comunidad/evento/60-yoseki-coding-dojo-buenos-aires'
+end
+
 Then /^I should see the SnapEngage plugin$/ do
   response_body.should have_selector("script[type='text\/javascript']") do |element|
       element.should contain("SnapABug.setLocale(\"es\")")
@@ -89,6 +102,14 @@ end
 
 Given /^I visit the acompañamos page$/ do
   visit "/acompanamos"
+end
+
+Given /^I visit the comunidad page$/ do
+  visit "/comunidad"
+end
+
+When /^I visit the entrenamos ajax page$/ do
+  visit "/entrenamos/eventos/pais/todos"
 end
 
 Then /^I should see a tweet button$/ do
@@ -122,7 +143,7 @@ Then /^the titles should use Dosis webfont$/ do
 end
 
 Then /^I should see all countries highlited$/ do
-  response_body.should have_selector("ul[id='course-country-filter']") do |element|
+  response_body.should have_selector("ul[id='country-filter']") do |element|
     element.should have_selector("li[class='active']") do |element|
       element.should have_selector("a") do |element|
         element.should contain("Todos")
@@ -161,4 +182,21 @@ end
 
 Given /^I visit an invalid Page$/ do
   visit "/bazzzzingaaaa"
+end
+
+Given /^there are community events$/ do
+  @@keventer_reader_community = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/community_events.xml'))
+end
+
+When /^I visit the community ajax page$/ do
+  visit "/comunidad/eventos/pais/todos"
+end
+
+Given /^I visit the community page$/ do
+  visit "/comunidad"
+end
+
+Then /^I should see the json string for all of the community events$/ do
+  text = '\"aaData\": \[\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]\]'
+  last_response.body.should =~ /#{text}/m
 end

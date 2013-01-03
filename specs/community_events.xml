@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events type="array">
+  <event>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2013-01-03T15:22:10Z</created-at>
+    <date type="date">2013-02-06</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date">2013-01-27</eb-end-date>
+    <eb-price type="decimal" nil="true"/>
+    <event-type-id type="integer">19</event-type-id>
+    <id type="integer">60</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">0.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+    <registration-link>mailto:dojo@kleer.la</registration-link>
+    <trainer-id type="integer">5</trainer-id>
+    <updated-at type="datetime">2013-01-03T15:22:20Z</updated-at>
+    <visibility-type>co</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    <event-type>
+      <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
+      <description>Es una reunión donde un grupo de desarrolladores trabajan en un desafío de programación.</description>
+      <duration type="integer">2</duration>
+      <goal>Yoseki es un Coding Dojo mensual, libre y gratuito organizado por Kleer.</goal>
+      <id type="integer">19</id>
+      <name>Yoseki Coding Dojo</name>
+      <program>- Presentación de Dojo y Kata
+- Presentación del problema a resolver
+- Sesión de Coding Dojo</program>
+      <recipients>- Desarrolladores
+- Arquitectos
+- Testers
+- Líderes Técnicos</recipients>
+      <updated-at type="datetime">2013-01-03T15:21:13Z</updated-at>
+    </event-type>
+    <trainer>
+      <bio>&gt; Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+**Pablo Tortorella**
+Agile Coach &amp; Trainer 
+Ing. en Informática, CSM, CSD
+</bio>
+      <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+      <id type="integer">5</id>
+      <name>Ruperto Comunitario</name>
+      <updated-at type="datetime">2012-12-30T12:34:40Z</updated-at>
+    </trainer>
+  </event>
+</events>
