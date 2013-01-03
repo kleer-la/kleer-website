@@ -62,4 +62,12 @@ Feature: Backward Compatibility for 404 URIs
 		And I should see "Hemos movido la información sobre el evento comunitario "
 		And I should see "Yoseki Coding Dojo"
 		And I should see "Por favor, verifica nuestro calendario para ver los detalles de dicho evento"
-		And I should see a link to "/comunidad" with text "Ver Calendario de Eventos Comunitarios >>"				
+		And I should see a link to "/comunidad" with text "Ver Calendario de Eventos Comunitarios >>"	
+		
+    Scenario: Todo lo español se redirecciona (1)
+		Given I visit the former entrenamos spanish Page
+		Then I should be redirected to entrenamos Page
+		
+    Scenario: Todo lo español se redirecciona (2)
+		Given I visit the former comunidad spanish Page
+		Then I should be redirected to comunidad Page		

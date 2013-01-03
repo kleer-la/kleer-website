@@ -53,6 +53,10 @@ get '/' do
 	erb :index
 end
 
+get '/es/:path' do
+  redirect "/" + params[:path]
+end
+
 get '/entrenamos' do
  	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"

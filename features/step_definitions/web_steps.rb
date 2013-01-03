@@ -208,3 +208,22 @@ end
 Given /^I visit the former Yoseki spanish Page$/ do
   visit "/es/comunidad/yoseki"
 end
+
+Given /^I visit the former entrenamos spanish Page$/ do
+  visit "/es/entrenamos"
+end
+
+Then /^I should be redirected to entrenamos Page$/ do
+  last_response.redirection?.should == true
+  last_response.location.gsub("http://example.org","").should == "/entrenamos"
+end
+
+Given /^I visit the former comunidad spanish Page$/ do
+  visit "/es/comunidad"
+end
+
+Then /^I should be redirected to comunidad Page$/ do
+  last_response.redirection?.should == true
+  last_response.location.gsub("http://example.org","").should == "/comunidad"
+end
+
