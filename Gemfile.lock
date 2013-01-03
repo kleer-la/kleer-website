@@ -24,7 +24,7 @@ GEM
       rubyzip
     heroku-api (0.3.7)
       excon (~> 0.16.10)
-    json (1.7.5)
+    json (1.7.6)
     launchy (2.1.2)
       addressable (~> 2.3)
     libxml-ruby (2.4.0)
