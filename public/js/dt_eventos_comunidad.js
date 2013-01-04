@@ -14,7 +14,9 @@ $(document).ready(function() {
 			{ "sClass": "right", "sWidth": "20%" }
 		],
 		"aaSorting": [],
+		"bSort": false,
 		"bPaginate": false,
+		"bFilter": false,
 		"oLanguage": {
 			"sProcessing":   "Procesando...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
