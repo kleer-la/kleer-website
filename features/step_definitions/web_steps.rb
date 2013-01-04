@@ -227,3 +227,7 @@ Then /^I should be redirected to comunidad Page$/ do
   last_response.location.gsub("http://example.org","").should == "/comunidad"
 end
 
+When /^I visit a non existing event page$/ do
+  visit '/entrenamos/evento/1-un-evento-inexistente'
+end
+

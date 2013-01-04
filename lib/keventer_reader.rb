@@ -92,13 +92,17 @@ class KeventerReader
   end
 
   def load_remote_event(event_id, force_read = false)
+    event = nil
+    
     event_id = event_id.to_i
 
-    load_remote_events(force_read).each do |event|
-      if event.id == event_id
-        return  event
+    load_remote_events(force_read).each do |event_found|
+      if event_found.id == event_id
+        event = event_found
       end
     end
+    
+    event
   end
 
   def to_boolean(string)
