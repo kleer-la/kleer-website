@@ -101,14 +101,14 @@ describe KeventerReader do
       @kevr.events_by_country("todos", from).count.should == 16
     end
     
-    it "Filtering for Argentina should return 8 events" do
+    it "Filtering for Argentina should return 8 events plus 3 Webinars" do
       from = Date.parse("2012-12-20")
-      @kevr.events_by_country("ar", from).count.should == 8
+      @kevr.events_by_country("ar", from).count.should == 8+3
     end
     
-    it "Filtering for Mexico should return no events" do
+    it "Filtering for Mexico should return no events and  3 Webinars" do
       from = Date.parse("2012-12-20")
-      @kevr.events_by_country("mx", from).count.should == 0
+      @kevr.events_by_country("mx", from).count.should == 0+3
     end
     
   end
@@ -118,23 +118,20 @@ describe KeventerReader do
       @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
     end
 
-    it "Should return 4 countries" do
+    it "Should return 5 countries" do
       @kevr.unique_countries().count.should == 5
     end
    
     it "First country should be Argentina" do
       @kevr.unique_countries()[0].iso_code.should == "ar"
-      @kevr.unique_countries()[0].name.should == "Argentina"
     end
 
     it "Second country should be Bolivia" do
       @kevr.unique_countries()[1].iso_code.should == "bo"
-      @kevr.unique_countries()[1].name.should == "Bolivia"
     end
 
-    it "Last country should be On line" do
+    it "Last country should be Online" do
       @kevr.unique_countries()[4].iso_code.should == "ol"
-      @kevr.unique_countries()[4].name.should == "Online"
     end
   end
   

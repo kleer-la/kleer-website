@@ -29,8 +29,17 @@ class KeventerReader
   def events_by_country(country_iso_code, from = Date.today)
     events_by_country = Array.new
 
+    # FIXME
+    # esto es feo, tenemos que resolver de otra manera la situacion
+    # en la cual el usuario no encuentra cursos.
+    if country_iso_code == "otro"
+      return events_by_country
+    end
+
     load_remote_events().each do |event|
-      if (event.country_code.downcase == country_iso_code or country_iso_code == "todos")
+      if (country_iso_code == "todos" or 
+          event.country_code.downcase == "ol" or
+          event.country_code.downcase == country_iso_code)
         events_by_country << event
       end
     end
