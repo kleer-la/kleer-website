@@ -24,7 +24,7 @@ Feature: Event Details
 		And I should see "09"
 		And I should see "Ene"
 		
-	Scenario: Detalle de Evento
+	Scenario: Detalle de Evento Comunitario
 		Given there are community events
 		When I visit the community event page
 		Then I should see "Yoseki Coding Dojo"
@@ -35,3 +35,10 @@ Feature: Event Details
 		And I should see "Ruperto Comunitario"
 		And I should see "06"
 		And I should see "Feb"
+		
+	Scenario: Detalle de Evento Inexistante
+		Given theres only one event
+		When I visit a non existing event page
+		Then I should see "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado."
+		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
+		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"

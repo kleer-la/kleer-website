@@ -90,17 +90,20 @@ get '/entrenamos/evento/:event_id_with_name' do
   event_id = event_id_with_name.split('-')[0]
   @event = @@keventer_reader.event(event_id, true)
   
-  @active_tab_entrenamos = "active"
-  @page_title = "Kleer - " + @event.friendly_title
-  
-  erb :event
+  if @event.nil?
+    flash.now[:error] = get_course_not_found_error()
+    erb :error404_to_calendar
+  else
+    @active_tab_entrenamos = "active"
+    @page_title = "Kleer - " + @event.friendly_title
+    erb :event
+  end
 end
 
 get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
   @event = @@keventer_reader.event(event_id, false)
-  puts @event.trainer_name
   erb :event_remote, :layout => :layout_empty
 end
 
@@ -142,4 +145,8 @@ end
 
 def get_404_error_text_for_community_event(event_name) 
   "Hemos movido la información sobre el evento comunitario '<strong>#{event_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho evento"
+end
+
+def get_course_not_found_error
+  "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado.<br/>Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
 end

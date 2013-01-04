@@ -33,6 +33,10 @@ describe KeventerReader do
       @kevr.event(44).event_type.name.should == "Workshop de Retrospectivas"
     end
     
+    it "should return NIL when fetching a non existing event" do
+      @kevr.event(1).nil?.should == true
+    end
+    
     it "should be able to fetch a certain event if the parameter is a string" do
       @kevr.event("44").event_type.name.should == "Workshop de Retrospectivas"
     end
