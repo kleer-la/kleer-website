@@ -199,12 +199,30 @@ When /^I visit the community ajax page$/ do
   visit "/comunidad/eventos/pais/todos"
 end
 
+When /^I visit the community ajax page for Argentina$/ do
+  visit "/comunidad/eventos/pais/ar"
+end
+
+When /^I visit the community ajax page for an invalid country$/ do
+  visit "/comunidad/eventos/pais/invalido"
+end
+
 Given /^I visit the community page$/ do
   visit "/comunidad"
 end
 
 Then /^I should see the json string for all of the community events$/ do
-  text = '\"aaData\": \[\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]\]'
+  text = '\"aaData\": \[' +
+            '\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+            '\[\"<span class=\\\"label label-info\\\">14<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/comunidad/evento/61-yoseki-coding-dojo-lima\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/pe.png\\\"/> Lima, Peru\",\"<a href=\\\"mailto:hiroshi.hiromoto@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]' +
+         '\]'
+  last_response.body.should =~ /#{text}/m
+end
+
+Then /^I should see the json string for the Argentina community events$/ do
+  text = '\"aaData\": \[' +
+            '\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]' +
+         '\]'
   last_response.body.should =~ /#{text}/m
 end
 

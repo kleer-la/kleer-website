@@ -8,8 +8,7 @@ require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
-#KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
-KEVENTER_EVENTS_URI = "specs/just_two_events.xml"
+KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
 KEVENTER_COMUNITY_EVENTS_URI = "http://keventer.herokuapp.com/api/community_events.xml"
 
 configure do
@@ -50,7 +49,6 @@ end
 
 get '/' do
 	@active_tab_index = "active"
-
 	erb :index
 end
 
@@ -75,14 +73,12 @@ end
 get '/e-books' do
 	@active_tab_ebooks = "active"
 	@page_title += " | Publicamos"
-
 	erb :ebooks
 end
 
 get '/acompanamos' do
   @active_tab_acompanamos = "active"
 	@page_title += " | Acompañamos"
-
 	erb :acompanamos
 end
 
