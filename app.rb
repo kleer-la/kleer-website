@@ -104,9 +104,19 @@ end
 
 get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
+  #event_id_with_name = "4r8-comunicación-efectiva-en-proyectos-de-software-webinar"
+
   event_id = event_id_with_name.split('-')[0]
-  @event = @@keventer_reader.event(event_id, false)
-  erb :event_remote, :layout => :layout_empty
+  if is_valid_event_id(event_id)
+    @event = @@keventer_reader.event(event_id, false)
+  end
+
+  if @event.nil?
+    flash.now[:error] = get_course_not_found_error()
+    erb :error404_to_calendar, :layout => :layout_empty
+  else
+    erb :event_remote, :layout => :layout_empty
+  end
 end
 
 get '/comunidad/evento/:event_id_with_name' do

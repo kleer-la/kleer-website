@@ -42,3 +42,10 @@ Feature: Event Details
 		Then I should see "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado."
 		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
 		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"
+
+	Scenario: Detalle popup de Evento Inexistante
+		Given theres only one event
+		When I visit a non existing popup event page
+		Then I should see "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado."
+		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
+		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"
