@@ -51,45 +51,66 @@ CSC, PMP, PMI-ACP</bio>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
   </event>
-<event>
+  <event>
     <cancelled type="boolean">false</cancelled>
-    <capacity type="integer">16</capacity>
-    <city>Buenos Aires</city>
-    <country-id type="integer">9</country-id>
-    <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
-    <date type="date">2013-07-09</date>
+    <capacity type="integer">30</capacity>
+    <city>Lima</city>
+    <country-id type="integer">171</country-id>
+    <created-at type="datetime">2012-12-07T02:07:18Z</created-at>
+    <date type="date">2013-01-31</date>
     <draft type="boolean">false</draft>
-    <eb-end-date type="date">2012-12-26</eb-end-date>
-    <eb-price type="decimal">750.0</eb-price>
-    <event-type-id type="integer">13</event-type-id>
-    <id type="integer">45</id>
+    <eb-end-date type="date">2013-01-21</eb-end-date>
+    <eb-price type="decimal" nil="true"/>
+    <event-type-id type="integer">7</event-type-id>
+    <id type="integer">47</id>
     <is-sold-out type="boolean">false</is-sold-out>
-    <list-price type="decimal">890.0</list-price>
-    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
-    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
-    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
-    <place>Kleer, Tucumán 373 1er Piso</place>
-    <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
+    <list-price type="decimal">822.0</list-price>
+    <list-price-2-pax-discount type="integer" nil="true"/>
+    <list-price-3plus-pax-discount type="integer" nil="true"/>
+    <list-price-plus-tax type="boolean">false</list-price-plus-tax>
+    <place>Casa de la Moneda</place>
+    <registration-link>http://www.openedgetech.com/calendario</registration-link>
     <trainer-id type="integer">4</trainer-id>
-    <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
+    <updated-at type="datetime">2012-12-07T02:07:26Z</updated-at>
     <visibility-type>pu</visibility-type>
     <country>
-      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
-      <id type="integer">9</id>
-      <iso-code>AR</iso-code>
-      <name>Argentina</name>
-      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+      <created-at type="datetime">2012-04-26T11:14:41Z</created-at>
+      <id type="integer">171</id>
+      <iso-code>PE</iso-code>
+      <name>Peru</name>
+      <updated-at type="datetime">2012-04-26T11:14:41Z</updated-at>
     </country>
     <event-type>
-      <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
-      <description>una descripción.</description>
-      <duration type="integer">8</duration>
-      <goal>un objetivo.</goal>
-      <id type="integer">13</id>
-      <name>Workshop de Retrospectivas</name>
-      <program>el programa</program>
-      <recipients>los destinatarios.</recipients>
-      <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+      <created-at type="datetime">2012-09-06T11:14:53Z</created-at>
+      <description>¿Por qué CSM?
+Para lograr una inmediata comprensión práctica de los valores y principios de Scrum y aplicarlos en situaciones reales mediante ejercicios, técnicas y herramientas concretas. 
+
+¿Qué valor me aporta?
+Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender Scrum por dentro.
+
+¿Por qué realizar el CSM?
+Porque es un curso 100% participativo en donde estarás simulando la ejecución de un proyecto Scrum y vivirás experiencias que te darán las respuestas, claves y trucos para que luego apliques Scrum correctamente en tu día a día.
+
+¿Qué voy a hacer?
+Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+      <duration type="integer">16</duration>
+      <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
+      <id type="integer">7</id>
+      <name>Certified ScrumMaster (CSM)</name>
+      <program>- Introducción a Scrum: Principios, Roles, Actividades, Elementos
+- Simulación End-to-End de Scrum y prácticas complementarias
+- Discusión de casos y escenarios particulares</program>
+      <recipients>Todos aquellos que participen en proyectos y estén buscando: 
+- Adaptación en contextos cambiantes
+- Reducir los tiempos y eliminar retrabajos
+- Aumentar la calidad del producto
+- Mejorar la productividad a un ritmo sostenible 
+- Minimizar los riegos en contextos inestables
+- Disminuir la ocurrencia de errores evitables
+- Garantizar la satisfacción del cliente
+- Obtener una nueva visión para la gestión de proyectos y equipos.
+</recipients>
+      <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
     </event-type>
     <trainer>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
@@ -98,7 +119,7 @@ Agile Coach &amp; Trainer
 CSC, PMP, PMI-ACP</bio>
       <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
       <id type="integer">4</id>
-      <name>Raul Gorgonzola</name>
+      <name>Martín Alaimo</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
   </event>

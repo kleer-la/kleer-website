@@ -8,7 +8,8 @@ require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
-KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
+#KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
+KEVENTER_EVENTS_URI = "specs/just_two_events.xml"
 KEVENTER_COMUNITY_EVENTS_URI = "http://keventer.herokuapp.com/api/community_events.xml"
 
 configure do
@@ -143,12 +144,18 @@ end
 get '/entrenamos/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
+  if (!is_valid_country_iso_code(country_iso_code))
+    country_iso_code = "todos"
+  end
   DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false, "entrenamos")
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
+  if (!is_valid_country_iso_code(country_iso_code))
+    country_iso_code = "todos"
+  end
   DTHelper::to_dt_event_array_json(@@keventer_reader_community.events_by_country(country_iso_code), false, "comunidad")
 end
 
@@ -172,4 +179,14 @@ end
 
 def is_valid_event_id(event_id_to_test)
   !(event_id_to_test.match(/^[0-9]+$/).nil?)
+end
+
+def is_valid_country_iso_code(country_iso_code_to_test)
+  unique_countries = @@keventer_reader_community.unique_countries()
+  unique_countries.each { |country|
+    if (country.iso_code == country_iso_code_to_test)
+      return true
+    end
+  }
+  return false
 end
