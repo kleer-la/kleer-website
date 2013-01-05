@@ -96,7 +96,7 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
 end
 
 Given /^I visit the publicamos page$/ do
-  visit "/e-books"
+  visit "/publicamos"
 end
 
 Given /^I visit the acompañamos page$/ do

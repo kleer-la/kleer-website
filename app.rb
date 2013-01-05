@@ -27,33 +27,9 @@ before do
                             :autolink => true)
 end
 
-not_found do
-  @page_title = "404 - No encontrado"
-  
-  if !request.path.index("/entrenamos/introduccion-a-scrum").nil?
-    flash.now[:error] = get_404_error_text_for_course("Introducción a Scrum")
-    erb :error404_to_calendar
-  elsif !request.path.index("/entrenamos/desarrollo-agil-de-software").nil?
-      flash.now[:error] = get_404_error_text_for_course("Desarrollo Ágil de Software")
-      erb :error404_to_calendar
-  elsif !request.path.index("/entrenamos/estimacion-y-planificacion-con-scrum").nil?
-      flash.now[:error] = get_404_error_text_for_course("Análisis, Estimación y Planificación con Scrum")
-      erb :error404_to_calendar
-  elsif !request.path.index("/comunidad/yoseki").nil?
-      flash.now[:error] = get_404_error_text_for_community_event("Yoseki Coding Dojo")
-      erb :error404_to_community
-  else
-    erb :error404
-  end
-end
-
 get '/' do
 	@active_tab_index = "active"
 	erb :index
-end
-
-get '/es/:path' do
-  redirect "/" + params[:path]
 end
 
 get '/entrenamos' do
@@ -63,23 +39,31 @@ get '/entrenamos' do
 	erb :entrenamos
 end
 
-get '/comunidad' do
- 	@active_tab_comunidad = "active"
-	@page_title += " | Comunidad"
-	@unique_countries = @@keventer_reader_community.unique_countries()
-	erb :comunidad
-end
-
-get '/e-books' do
-	@active_tab_ebooks = "active"
-	@page_title += " | Publicamos"
-	erb :ebooks
-end
-
 get '/acompanamos' do
   @active_tab_acompanamos = "active"
 	@page_title += " | Acompañamos"
 	erb :acompanamos
+end
+
+get '/comunidad' do
+  @active_tab_comunidad = "active"
+  @page_title += " | Comunidad"
+  @unique_countries = @@keventer_reader_community.unique_countries()
+  erb :comunidad
+end
+
+get '/e-books' do
+  # Si nadie se opone a un permanent redirect, borrar estas lineas comentadas
+  #@active_tab_publicamos = "active"
+  #@page_title += " | Publicamos"
+  #erb :ebooks
+  redirect "/publicamos", 301 # permanent redirect
+end
+
+get '/publicamos' do
+  @active_tab_publicamos = "active"
+  @page_title += " | Publicamos"
+  erb :ebooks
 end
 
 get '/entrenamos/evento/:event_id_with_name' do
@@ -132,6 +116,8 @@ get '/comunidad/evento/:event_id_with_name' do
   end
 end
 
+# JSON ==================== 
+
 get '/entrenamos/eventos/proximos' do
   content_type :json
   DTHelper::to_dt_event_array_json(@@keventer_reader.coming_events(), true, "entrenamos")
@@ -153,6 +139,32 @@ get '/comunidad/eventos/pais/:country_iso_code' do
     country_iso_code = "todos"
   end
   DTHelper::to_dt_event_array_json(@@keventer_reader_community.events_by_country(country_iso_code), false, "comunidad")
+end
+
+# LEGACY ==================== 
+
+get '/es/:path' do
+  redirect "/" + params[:path]
+end
+
+not_found do
+  @page_title = "404 - No encontrado"
+  
+  if !request.path.index("/entrenamos/introduccion-a-scrum").nil?
+    flash.now[:error] = get_404_error_text_for_course("Introducción a Scrum")
+    erb :error404_to_calendar
+  elsif !request.path.index("/entrenamos/desarrollo-agil-de-software").nil?
+      flash.now[:error] = get_404_error_text_for_course("Desarrollo Ágil de Software")
+      erb :error404_to_calendar
+  elsif !request.path.index("/entrenamos/estimacion-y-planificacion-con-scrum").nil?
+      flash.now[:error] = get_404_error_text_for_course("Análisis, Estimación y Planificación con Scrum")
+      erb :error404_to_calendar
+  elsif !request.path.index("/comunidad/yoseki").nil?
+      flash.now[:error] = get_404_error_text_for_community_event("Yoseki Coding Dojo")
+      erb :error404_to_community
+  else
+    erb :error404
+  end
 end
 
 private
