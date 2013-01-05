@@ -104,7 +104,6 @@ end
 
 get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
-  #event_id_with_name = "4r8-comunicación-efectiva-en-proyectos-de-software-webinar"
 
   event_id = event_id_with_name.split('-')[0]
   if is_valid_event_id(event_id)
@@ -112,8 +111,8 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   end
 
   if @event.nil?
-    flash.now[:error] = get_course_not_found_error()
-    erb :error404_to_calendar, :layout => :layout_empty
+    @error = get_course_not_found_error()
+    erb :error404_remote_to_calendar, :layout => :layout_empty
   else
     erb :event_remote, :layout => :layout_empty
   end
@@ -122,14 +121,18 @@ end
 get '/comunidad/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  @event = @@keventer_reader_community.event(event_id, true)
-  
-  puts @event
-  
-  @active_tab_comunidad = "active"
-  @page_title = "Kleer - " + @event.friendly_title
-  
-  erb :event
+  if is_valid_event_id(event_id)
+    @event = @@keventer_reader_community.event(event_id, true)
+  end
+
+  if @event.nil?
+    flash.now[:error] = get_course_not_found_error()
+    erb :error404_to_community
+  else
+    @active_tab_comunidad = "active"
+    @page_title = "Kleer - " + @event.friendly_title
+    erb :event
+  end
 end
 
 get '/entrenamos/eventos/proximos' do

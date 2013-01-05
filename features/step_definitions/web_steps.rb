@@ -231,3 +231,10 @@ When /^I visit a non existing event page$/ do
   visit '/entrenamos/evento/1-un-evento-inexistente'
 end
 
+When /^I visit a non existing community event page$/ do
+  visit '/comunidad/evento/1-un-evento-inexistente'
+end
+
+When /^I visit a non existing popup event page$/ do
+  visit '/entrenamos/evento/1-un-evento-inexistente/remote'
+end
