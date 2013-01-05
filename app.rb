@@ -88,7 +88,9 @@ end
 get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  @event = @@keventer_reader.event(event_id, true)
+  if is_valid_event_id(event_id)
+    @event = @@keventer_reader.event(event_id, true)
+  end
   
   if @event.nil?
     flash.now[:error] = get_course_not_found_error()
@@ -149,4 +151,8 @@ end
 
 def get_course_not_found_error
   "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado.<br/>Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
+end
+
+def is_valid_event_id(event_id_to_test)
+  !(event_id_to_test.match(/^[0-9]+$/).nil?)
 end
