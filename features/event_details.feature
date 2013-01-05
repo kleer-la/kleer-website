@@ -46,8 +46,8 @@ Feature: Event Details
 	Scenario: Detalle de Evento Comunitario Inexistante
 		Given there are community events
 		When I visit a non existing community event page
-		Then I should see "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado."
-		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
+		Then I should see "El evento comunitario que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado."
+		And I should see "Te invitamos a visitar nuestro calendario para ver los eventos vigentes y probables nuevas fechas para el evento que estás buscando."
 		And I should see a link to "/comunidad" with text "Ver Calendario de Eventos Comunitarios >>"
 
 	Scenario: Detalle popup de Evento Inexistante

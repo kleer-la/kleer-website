@@ -126,7 +126,7 @@ get '/comunidad/evento/:event_id_with_name' do
   end
 
   if @event.nil?
-    flash.now[:error] = get_course_not_found_error()
+    flash.now[:error] = get_community_event_not_found_error()
     erb :error404_to_community
   else
     @active_tab_comunidad = "active"
@@ -164,6 +164,10 @@ end
 
 def get_course_not_found_error
   "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado.<br/>Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
+end
+
+def get_community_event_not_found_error
+  "El evento comunitario que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado.<br/>Te invitamos a visitar nuestro calendario para ver los eventos vigentes y probables nuevas fechas para el evento que estás buscando."
 end
 
 def is_valid_event_id(event_id_to_test)
