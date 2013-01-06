@@ -19,6 +19,9 @@ configure do
 end
 
 before do
+  if request.host == "kleer.la"
+    redirect "http://www." + request.host + request.path
+  end
   session[:locale] = 'es'
   @page_title = "Kleer - Agile Coaching & Training"
   flash.sweep 
