@@ -6,7 +6,6 @@ var oTable;
 $(document).ready(function() {
 	oTable = $('#cursos').dataTable( {
 		"bLengthChange": false,
-		/*"bProcessing": true, lo anule porque ocupa mucho lugar encima de la tabla*/
 		"sAjaxSource": '/entrenamos/eventos/proximos',
 		"aoColumns": [
 			{ "sWidth": "5%" },
@@ -21,7 +20,7 @@ $(document).ready(function() {
 		"oLanguage": {
 			"sProcessing":   "Procesando...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
-			"sZeroRecords":  "<div class=\"alert alert-warning\">No tenemos cursos en los próximos dos meses pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>",
+			"sZeroRecords":  "<div class=\"alert alert-warning center\">Cargando...</div>",
 			"sInfo":         "",
 			"sInfoEmpty":    "",
 			"sInfoFiltered": "",
