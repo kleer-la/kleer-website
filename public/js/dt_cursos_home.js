@@ -18,7 +18,6 @@ $(document).ready(function() {
 		"bFilter": false,
 		"sScrollY": "220px",
 		"oLanguage": {
-			"sProcessing":   "Procesando...",
 			"sLengthMenu":   "Mostrar _MENU_ registros",
 			"sZeroRecords":  "<div class=\"alert alert-warning center\">Cargando...</div>",
 			"sInfo":         "",
@@ -26,6 +25,9 @@ $(document).ready(function() {
 			"sInfoFiltered": "",
 			"sInfoPostFix":  "",
 			"sUrl":          ""
+		},
+		"fnInitComplete": function(oSettings, json) {
+			oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\">No tenemos cursos en los próximos dos meses pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>";
 		}
 	});
 });

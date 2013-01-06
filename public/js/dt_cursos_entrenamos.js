@@ -6,7 +6,6 @@ var oTable;
 $(document).ready(function() {
 	oTable = $('#cursos').dataTable( {
 		"bLengthChange": false,
-		/*"bProcessing": true, lo anule porque ocupa mucho lugar encima de la tabla*/
 		"sAjaxSource": '/entrenamos/eventos/pais/todos',
 		"aoColumns": [
 			{ "sWidth": "5%" },
@@ -14,23 +13,19 @@ $(document).ready(function() {
 			{ "sClass": "right", "sWidth": "20%" }
 		],
 		"aaSorting": [],
+		"bSort": false,
 		"bPaginate": false,
 		"oLanguage": {
-			"sProcessing":   "Procesando...",
-			"sLengthMenu":   "Mostrar _MENU_ registros",
-			"sZeroRecords":  "<div class=\"alert alert-warning\">No tenemos cursos que cumplan con ese criterio pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>",
+			"sZeroRecords":  "<div class=\"alert alert-warning\">Cargando...</div>",
 			"sInfo":         "<div class=\"alert alert-info\">Mostrando desde _START_ hasta _END_ de _TOTAL_ registros</div>",
 			"sInfoEmpty":    "",
 			"sInfoFiltered": "<div class=\"alert alert-info\">(filtrado de _MAX_ registros en total)</div>",
 			"sInfoPostFix":  "",
 			"sSearch":       "Buscar:",
-			"sUrl":          "",
-			"oPaginate": {
-				"sFirst":    "Primero",
-				"sPrevious": "Anterior",
-				"sNext":     "Siguiente",
-				"sLast":     "Último"
-			}
+			"sUrl":          ""
+		},
+		"fnInitComplete": function(oSettings, json) {
+			oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\">No tenemos cursos que cumplan con ese criterio pero nos gustaría que nos contactes a <a href=\"mailto:hola@kleer.la\">hola@kleer.la</a> con tu inquietud.</div>";
 		}
 	});
 
