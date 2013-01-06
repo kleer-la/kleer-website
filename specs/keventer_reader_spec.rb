@@ -101,18 +101,31 @@ describe KeventerReader do
     end
 
     it "Filtering for all countries should return 16 events" do
-      from = Date.parse("2012-12-20")
-      @kevr.events_by_country("todos", from).count.should == 16
+      @kevr.events_by_country("todos").count.should == 16
     end
     
     it "Filtering for Argentina should return 8 events plus 3 Webinars" do
-      from = Date.parse("2012-12-20")
-      @kevr.events_by_country("ar", from).count.should == 8+3
+      @kevr.events_by_country("ar").count.should == 8+3
     end
     
-    it "Filtering for Mexico should return no events and  3 Webinars" do
-      from = Date.parse("2012-12-20")
-      @kevr.events_by_country("mx", from).count.should == 0+3
+    it "Filtering for Mexico should return no events and 3 Webinars" do
+      @kevr.events_by_country("mx").count.should == 0+3
+    end
+    
+    it "Filtering for Bolivia should return 3 events and 3 Webinars" do
+      @kevr.events_by_country("bo").count.should == 3+3
+    end
+    
+    it "Filtering for Colombia should return 1 event and 3 Webinars" do
+      @kevr.events_by_country("co").count.should == 1+3
+    end
+    
+    it "Filtering for Peru should return 1 event and 3 Webinars" do
+      @kevr.events_by_country("pe").count.should == 1+3
+    end
+    
+    it "Filtering for Otro should return no events" do
+      @kevr.events_by_country("otro").count.should == 0
     end
     
   end

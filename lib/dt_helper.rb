@@ -23,9 +23,9 @@ class DTHelper
     line = "<a "
     if remote 
       line += "data-toggle=\"modal\" data-target=\"#myModal\" "
-      line += "href=\"/"+event_details_path+"/evento/" + event.uri_path + "/remote"
+      line += "href=\"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path) + "/remote"
     else
-      line += "href=\"/"+event_details_path+"/evento/" + event.uri_path
+      line += "href=\"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
     end
     line += "\">" + event.event_type.name + "</a><br/>"
     line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country
@@ -42,6 +42,20 @@ class DTHelper
 
   private
   
+  def self.url_sanitize(data)
+    sanitized = data;
+    sanitized = sanitized.gsub('á', 'a')
+    sanitized = sanitized.gsub('é', 'e')
+    sanitized = sanitized.gsub('í', 'i')
+    sanitized = sanitized.gsub('ó', 'o')
+    sanitized = sanitized.gsub('ú', 'u')
+    sanitized = sanitized.gsub('Á', 'A')
+    sanitized = sanitized.gsub('E', 'E')
+    sanitized = sanitized.gsub('Í', 'I')
+    sanitized = sanitized.gsub('Ó', 'O')
+    sanitized = sanitized.gsub('Ú', 'U')
+  end
+
   def self.event_sold_out_link
     "<a href=\"javascript:void();\" target=\"_blank\" class=\"btn btn-danger\">Completo</a>"
   end

@@ -53,10 +53,6 @@ get '/comunidad' do
 end
 
 get '/e-books' do
-  # Si nadie se opone a un permanent redirect, borrar estas lineas comentadas
-  #@active_tab_publicamos = "active"
-  #@page_title += " | Publicamos"
-  #erb :ebooks
   redirect "/publicamos", 301 # permanent redirect
 end
 
@@ -126,7 +122,7 @@ end
 get '/entrenamos/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
-  if (!is_valid_country_iso_code(country_iso_code))
+  if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
   DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false, "entrenamos")
@@ -135,7 +131,7 @@ end
 get '/comunidad/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
-  if (!is_valid_country_iso_code(country_iso_code))
+  if (!is_valid_country_iso_code(country_iso_code, "comunidad"))
     country_iso_code = "todos"
   end
   DTHelper::to_dt_event_array_json(@@keventer_reader_community.events_by_country(country_iso_code), false, "comunidad")
@@ -189,12 +185,19 @@ def is_valid_event_id(event_id_to_test)
   !(event_id_to_test.match(/^[0-9]+$/).nil?)
 end
 
-def is_valid_country_iso_code(country_iso_code_to_test)
-  unique_countries = @@keventer_reader_community.unique_countries()
+def is_valid_country_iso_code(country_iso_code_to_test, event_type)
+  return true if (country_iso_code_to_test == "otro" or country_iso_code_to_test == "todos")
+
+  if event_type == "entrenamos"
+    unique_countries = @@keventer_reader.unique_countries()
+  else
+    unique_countries = @@keventer_reader_community.unique_countries()
+  end
   unique_countries.each { |country|
     if (country.iso_code == country_iso_code_to_test)
       return true
     end
   }
+
   return false
 end

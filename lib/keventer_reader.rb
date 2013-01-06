@@ -26,7 +26,7 @@ class KeventerReader
     coming_events
   end
   
-  def events_by_country(country_iso_code, from = Date.today)
+  def events_by_country(country_iso_code)
     events_by_country = Array.new
 
     # FIXME

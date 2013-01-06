@@ -33,6 +33,10 @@ Given /^there are two events$/ do
   @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'))
 end
 
+Given /^there are many events$/ do
+  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/events.xml'))
+end
+
 When /^I visit the home page$/ do
   visit '/'
 end
@@ -53,6 +57,41 @@ Then /^I should see the json string for the Argentina events$/ do
   text = '\"aaData\": \[' +
             '\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]' +
           '\]'
+  last_response.body.should =~ /#{text}/m
+end
+
+Then /^I should see the json string for the Bolivia events$/ do
+  # text = '\"aaData\": \[' +
+  #          '\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">16<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/48-comunicacion-efectiva-en-proyectos-de-software-webinar\\\">Comunicacion Efectiva en Proyectos de Software</a><br/><img src=\\\"/img/flags/ol.png\\\"/> Webinar, -- OnLine --\",\"<a href=\\\"https://eventioz.com.ar/webinar-com-efectiva-16-ene/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">23<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/58-webinar-de-tdd-intermedio-webinar\\\">Webinar de TDD Intermedio</a><br/><img src=\\\"/img/flags/ol.png\\\"/> Webinar, -- OnLine --\",\"<a href=\\\"https://eventioz.com.ar/web-tdd1-201301\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">24<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/45-certified-scrummaster-\(csm\)-de-verano!-lobos,-pcia.-bs.-as.\\\">Certified ScrumMaster \(CSM\) de Verano!</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Lobos, Pcia. Bs. As., Argentina\",\"<a href=\\\"https://eventioz.com.ar/csm-verano-23-24-y-25-ene/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">31<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/47-certified-scrummaster-\(csm\)-lima\\\">Certified ScrumMaster \(CSM\)</a><br/><img src=\\\"/img/flags/pe.png\\\"/> Lima, Peru\",\"<a href=\\\"http://www.openedgetech.com/calendario\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">07<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/entrenamos/evento/49-certified-product-owner-\(cspo\)-buenos-aires\\\">Certified Product Owner \(CSPO\)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/cspo-7-y-8-feb/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">19<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/entrenamos/evento/55-taller-con-angularjs-buenos-aires\\\">Taller con AngularJS</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/events/taller-de-angularjs/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">20<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/entrenamos/evento/59-webinar-de-tdd-avanzado-webinar\\\">Webinar de TDD Avanzado</a><br/><img src=\\\"/img/flags/ol.png\\\"/> Webinar, -- OnLine --\",\"<a href=\\\"https://eventioz.com.ar/web-tdd2-201302\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">21<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/entrenamos/evento/46-certified-scrummaster-\(csm\)-bogota\\\">Certified ScrumMaster \(CSM\)</a><br/><img src=\\\"/img/flags/co.png\\\"/> Bogota, Colombia\",\"<a href=\\\"mailto:entrenamos.colombia@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">07<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/54-certified-scrummaster-\(csm\)-cochabamba\\\">Certified ScrumMaster \(CSM\)</a><br/><img src=\\\"/img/flags/bo.png\\\"/> Cochabamba, Bolivia\",\"<a href=\\\"https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dEF0Qmp2dUphN1pqRGtldFVLeGV6RXc6MA#gid=0\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">18<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/50-introduccion-a-scrum-\(dia-1---csd-track\)-buenos-aires\\\">Introduccion a Scrum \(Dia 1 - CSD Track\)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/intro-a-scrum-marzo-2013/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">18<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/53-certified-scrum-developer-\(csd-track-completo\)-buenos-aires\\\">Certified Scrum Developer \(CSD Track Completo\)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/csd-marzo-2013/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">19<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/51-analisis,-estimacion-y-planificacion-con-scrum-\(dia-2---csd-track\)-buenos-aires\\\">Analisis, Estimacion y Planificacion con Scrum \(Dia 2 - CSD Track\)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/analisis-estim-y-plan-con-scrum-marzo-2013/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">20<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/52-desarrollo-Agil-de-software-\(dia-3---csd-track\)-buenos-aires\\\">Desarrollo Agil de Software \(Dia 3 - CSD Track\)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/desarrollo-agil-marzo-2013/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">25<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/56-certified-scrum-developer-\(csd-track-completo\)-santa-cruz-de-la-sierra\\\">Certified Scrum Developer \(CSD Track Completo\)</a><br/><img src=\\\"/img/flags/bo.png\\\"/> Santa Cruz de la Sierra, Bolivia\",\"<a href=\\\"https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFk5ZUtrWlE5SUw2elJyNjQ3ZHR2bUE6MA#gid=0\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+  #          '\[\"<span class=\\\"label label-info\\\">01<br><span class=\\\"lead\\\">Abr</span></span>\",\"<a href=\\\"/entrenamos/evento/57-certified-scrum-developer-\(csd-track-completo\)-cochabamba\\\">Certified Scrum Developer \(CSD Track Completo\)</a><br/><img src=\\\"/img/flags/bo.png\\\"/> Cochabamba, Bolivia\",\"<a href=\\\"https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFdfYlJhQzlVWG9uWk5yODRGVDcxVGc6MA#gid=0\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]' +
+  #        '\]'
+  text = '\"aaData\": \[' +
+           '\[\"<span class=\\\"label label-info\\\">16<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/48-comunicacion-efectiva-en-proyectos-de-software-webinar\\\">Comunicacion Efectiva en Proyectos de Software</a><br/><img src=\\\"/img/flags/ol.png\\\"/> Webinar, -- OnLine --\",\"<a href=\\\"https://eventioz.com.ar/webinar-com-efectiva-16-ene/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+           '\[\"<span class=\\\"label label-info\\\">23<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/58-webinar-de-tdd-intermedio-webinar\\\">Webinar de TDD Intermedio</a><br/><img src=\\\"/img/flags/ol.png\\\"/> Webinar, -- OnLine --\",\"<a href=\\\"https://eventioz.com.ar/web-tdd1-201301\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+           '\[\"<span class=\\\"label label-info\\\">20<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/entrenamos/evento/59-webinar-de-tdd-avanzado-webinar\\\">Webinar de TDD Avanzado</a><br/><img src=\\\"/img/flags/ol.png\\\"/> Webinar, -- OnLine --\",\"<a href=\\\"https://eventioz.com.ar/web-tdd2-201302\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+           '\[\"<span class=\\\"label label-info\\\">07<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/54-certified-scrummaster-\(csm\)-cochabamba\\\">Certified ScrumMaster \(CSM\)</a><br/><img src=\\\"/img/flags/bo.png\\\"/> Cochabamba, Bolivia\",\"<a href=\\\"https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dEF0Qmp2dUphN1pqRGtldFVLeGV6RXc6MA#gid=0\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+           '\[\"<span class=\\\"label label-info\\\">25<br><span class=\\\"lead\\\">Mar</span></span>\",\"<a href=\\\"/entrenamos/evento/56-certified-scrum-developer-\(csd-track-completo\)-santa-cruz-de-la-sierra\\\">Certified Scrum Developer \(CSD Track Completo\)</a><br/><img src=\\\"/img/flags/bo.png\\\"/> Santa Cruz de la Sierra, Bolivia\",\"<a href=\\\"https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFk5ZUtrWlE5SUw2elJyNjQ3ZHR2bUE6MA#gid=0\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
+           '\[\"<span class=\\\"label label-info\\\">01<br><span class=\\\"lead\\\">Abr</span></span>\",\"<a href=\\\"/entrenamos/evento/57-certified-scrum-developer-\(csd-track-completo\)-cochabamba\\\">Certified Scrum Developer \(CSD Track Completo\)</a><br/><img src=\\\"/img/flags/bo.png\\\"/> Cochabamba, Bolivia\",\"<a href=\\\"https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFdfYlJhQzlVWG9uWk5yODRGVDcxVGc6MA#gid=0\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\]' +
+         '\]'
+  last_response.body.should =~ /#{text}/m
+end
+
+Then /^I should see the json string with no events$/ do
+  text = '\"aaData\": \[\]'
   last_response.body.should =~ /#{text}/m
 end
 
@@ -115,8 +154,16 @@ When /^I visit the entrenamos ajax page for Argentina$/ do
   visit "/entrenamos/eventos/pais/ar"
 end
 
+When /^I visit the entrenamos ajax page for Bolivia$/ do
+  visit "/entrenamos/eventos/pais/bo"
+end
+
 When /^I visit the entrenamos ajax page for an invalid country$/ do
   visit "/entrenamos/eventos/pais/invalido"
+end
+
+When /^I visit the entrenamos ajax page for other country$/ do
+  visit "/comunidad/eventos/pais/otro"
 end
 
 Then /^I should see a tweet button$/ do
