@@ -21,13 +21,14 @@ end
 before do
   if request.host == "kleer.la"
     redirect "http://www." + request.host + request.path
+  else
+    session[:locale] = 'es'
+    @page_title = "Kleer - Agile Coaching & Training"
+    flash.sweep 
+    @markdown_renderer = Redcarpet::Markdown.new(
+                              Redcarpet::Render::HTML.new(:hard_wrap => true), 
+                              :autolink => true)
   end
-  session[:locale] = 'es'
-  @page_title = "Kleer - Agile Coaching & Training"
-  flash.sweep 
-  @markdown_renderer = Redcarpet::Markdown.new(
-                            Redcarpet::Render::HTML.new(:hard_wrap => true), 
-                            :autolink => true)
 end
 
 get '/' do
