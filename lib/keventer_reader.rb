@@ -46,6 +46,28 @@ class KeventerReader
   def unique_countries_for_community_events
     unique_countries( @connector.community_events_xml_url )
   end
+  
+  def kleerers
+    parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
+    doc = parser.parse
+    loaded_kleerers = doc.find('/trainers/trainer')
+    
+    kleerers = Array.new
+    
+    loaded_kleerers.each do |loaded_kleerer|
+      kleerer = Professional.new
+      
+      kleerer.name = loaded_kleerer.find_first('name').content
+      kleerer.bio = loaded_kleerer.find_first('bio').content
+      kleerer.linkedin_url = loaded_kleerer.find_first('linkedin-url').content
+      kleerer.gravatar_picture_url = loaded_kleerer.find_first('gravatar-picture-url').content
+      kleerer.twitter_username = loaded_kleerer.find_first('twitter-username').content
+      
+      kleerers << kleerer
+    end
+    
+    kleerers
+  end
 
   private
   

@@ -20,6 +20,10 @@ Feature: Page Titles
 	Scenario: Comunidad Title
 		Given I visit the comunidad page
 		Then the page title should be "Kleer - Agile Coaching & Training | Comunidad"		
+
+	Scenario: Somos Title
+		Given I visit the somos page
+		Then the page title should be "Kleer - Agile Coaching & Training | Somos"
 	
 	Scenario: Detalle de Evento
 		Given theres only one event

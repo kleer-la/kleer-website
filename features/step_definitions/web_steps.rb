@@ -5,6 +5,7 @@ def stub_connector( test_file = "just_one_event.xml")
   connector = double("KeventerConnector")
   connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/#{test_file}") )
   connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/community_events.xml") )
+  connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/kleerers.xml") )
   
   @@keventer_reader.connector = connector
 end
@@ -154,6 +155,11 @@ end
 Given /^I visit the comunidad page$/ do
   stub_connector
   visit "/comunidad"
+end
+
+Given /^I visit the somos page$/ do
+  stub_connector
+  visit "/somos"
 end
 
 Given /^I visit the community page$/ do

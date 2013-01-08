@@ -1,0 +1,44 @@
+<style>
+	body {
+		background: url(/img/fondos/fondo-10.jpg) no-repeat center center fixed; 
+	}
+</style>
+<script type="text/javascript" src="/js/jquery.js"/></script>
+
+<div class="row">
+	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<h1>Somos</h1>
+		<p class="lead">Acompañamiento de organizaciones, equipos y profesionales</p>
+		
+		<% @kleerers.each do |kleerer| %>
+		
+			<div class="row">
+				<div class="span1"> 
+					<img src="<%=kleerer.gravatar_picture_url%>" class="img-circle">
+					<br/>&nbsp;
+					<br/><a href="<%=kleerer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
+					<a href="https://twitter.com/<%=kleerer.twitter_username.gsub("@","")%>" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a>
+				</div>
+				<div class="span7">
+					
+					<div class="row">
+						<div class="span3">
+							<h2><%=kleerer.name%></h2>
+						</div>
+						<div class="span4">
+							
+						</div>
+					</div>
+					<div class="row">
+						<p><%=@markdown_renderer.render( kleerer.bio )%></p>
+					</div>
+				</div>
+			</div>
+		
+		<% end %>
+		
+	</div>	
+	<div class="span3">  
+		<img src="/img/logos/logo-04.png">
+	</div>
+</div>

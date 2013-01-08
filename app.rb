@@ -112,6 +112,13 @@ get '/comunidad/evento/:event_id_with_name' do
   end
 end
 
+get '/somos' do
+ 	@active_tab_somos = "active"
+	@page_title += " | Somos"
+	@kleerers = @@keventer_reader.kleerers
+	erb :somos
+end
+
 # JSON ==================== 
 
 get '/entrenamos/eventos/proximos' do

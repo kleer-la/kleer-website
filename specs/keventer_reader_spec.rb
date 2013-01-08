@@ -185,7 +185,10 @@ describe KeventerReader do
       @kevr = KeventerReader.new( @connector )
     end
 
-   
+    it "should return 9 kleerers" do
+      @kevr.kleerers.count.should == 9
+    end
+
   end  
   
 end
