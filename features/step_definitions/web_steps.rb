@@ -1,6 +1,14 @@
 # encoding: utf-8
 require File.join(File.dirname(__FILE__),'../../lib/keventer_reader')
 
+def stub_connector( test_file = "just_one_event.xml")
+  connector = double("KeventerConnector")
+  connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/#{test_file}") )
+  connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/community_events.xml") )
+  
+  @@keventer_reader.connector = connector
+end
+
 Given /^I open the web app$/ do
 	visit '/'
 end
@@ -22,19 +30,19 @@ When /^I press "(.*)"$/ do |name|
 end
 
 Given /^theres only one event$/ do
-  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_one_event.xml'))
+  stub_connector
 end
 
 Given /^theres only one event for the following two months$/ do
-  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'))
+  stub_connector( "just_two_events.xml")
 end
 
 Given /^there are two events$/ do
-  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/just_two_events.xml'))
+  stub_connector( "just_two_events.xml")
 end
 
 Given /^there are many events$/ do
-  @@keventer_reader = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/events.xml'))
+  stub_connector( "events.xml")
 end
 
 When /^I visit the home page$/ do
@@ -42,6 +50,7 @@ When /^I visit the home page$/ do
 end
 
 When /^I visit the entrenamos page$/ do
+  stub_connector
   visit '/entrenamos'
 end
 
@@ -143,6 +152,11 @@ Given /^I visit the acompañamos page$/ do
 end
 
 Given /^I visit the comunidad page$/ do
+  stub_connector
+  visit "/comunidad"
+end
+
+Given /^I visit the community page$/ do
   visit "/comunidad"
 end
 
@@ -239,7 +253,7 @@ Given /^I visit an invalid Page$/ do
 end
 
 Given /^there are community events$/ do
-  @@keventer_reader_community = KeventerReader.new( File.join(File.dirname(__FILE__),'../../specs/community_events.xml'))
+  stub_connector( "events.xml")
 end
 
 When /^I visit the community ajax page$/ do
@@ -252,10 +266,6 @@ end
 
 When /^I visit the community ajax page for an invalid country$/ do
   visit "/comunidad/eventos/pais/invalido"
-end
-
-Given /^I visit the community page$/ do
-  visit "/comunidad"
 end
 
 Then /^I should see the json string for all of the community events$/ do

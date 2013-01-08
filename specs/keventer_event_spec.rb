@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__),'../lib/keventer_event')
+require File.join(File.dirname(__FILE__),'../lib/professional')
 
 describe KeventerEvent do
   
@@ -52,15 +53,31 @@ describe KeventerEvent do
       @kevent.event_type = an_event_type
       @kevent.event_type.should == an_event_type
   end
+
+  context "If the trainer is Raul Gorgonzola" do
+    
+    before(:each) do
+      @trainer = Professional.new
+      @trainer.name = "Raul Gorgonzola"
+      @trainer.bio = "hg jgjhagsdjhagsdkjahgsfkjahgsj ja sfkjahs fkjahsfg"
   
-  it "should have a trainer name" do
-      @kevent.trainer_name = "Raul Gorgonzola"
-      @kevent.trainer_name.should == "Raul Gorgonzola"
-  end
+      @kevent.trainer = @trainer
+    end
+
+    it "should have a trainer" do
+        @kevent.trainer.should == @trainer
+    end
   
-  it "should have a trainer bio" do
-      @kevent.trainer_bio = "hg jgjhagsdjhagsdkjahgsfkjahgsj ja sfkjahs fkjahsfg "
-      @kevent.trainer_bio.should == "hg jgjhagsdjhagsdkjahgsfkjahgsj ja sfkjahs fkjahsfg "
+    it "should have a deprecated trainer name backward compatible" do
+        @kevent.should_receive(:warn).with("[DEPRECATION] 'trainer_name' is deprecated.  Please use 'trainer.name' instead.")
+        @kevent.trainer_name.should == @trainer.name
+    end
+  
+    it "should have a trainer bio backward compatible" do
+        @kevent.should_receive(:warn).with("[DEPRECATION] 'trainer_bio' is deprecated.  Please use 'trainer.bio' instead.")
+        @kevent.trainer_bio.should ==@trainer.bio
+    end
+  
   end
   
   it "should form the uri path automatically" do

@@ -4,6 +4,7 @@ require File.join(File.dirname(__FILE__), *%w[.. .. app])
 Sinatra::Application.app_file = File.join(File.dirname(__FILE__), *%w[.. .. app.rb])
 
 require 'rspec/expectations'
+require 'cucumber/rspec/doubles'
 require 'rack/test'
 require 'webrat'
 

@@ -5,19 +5,29 @@ require 'date'
 describe KeventerReader do
   
   it "Should Be Able to Load an Xml File for Events" do
-    @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+    @connector = double("KeventerConnector")
+    @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+    
+    @kevr = KeventerReader.new( @connector )
     @kevr.events.count.should == 16   
   end
   
   it "Should Be Able to Load an Xml URI for Events" do
-    @kevr = KeventerReader.new( "http://keventer-test.herokuapp.com/api/events.xml" )
+    @connector = double("KeventerConnector")
+    @connector.stub(:events_xml_url).and_return( "http://keventer-test.herokuapp.com/api/events.xml" )
+    
+    @kevr = KeventerReader.new( @connector )
     @kevr.events.count.should >= 0
   end
   
   context "When loading the teasting XML source with 16 events" do
     
     before(:each) do
-      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
+      @connector = double("KeventerConnector")
+      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+      @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/community_events.xml') )
+
+      @kevr = KeventerReader.new( @connector )
     end
    
     it "Should allow access to an events array with all events" do
@@ -26,7 +36,7 @@ describe KeventerReader do
     
     it "Should allow access to an events array for the next two months" do
       from = Date.parse("2012-12-20")
-      @kevr.coming_events(from).count.should == 8
+      @kevr.coming_commercial_events(from).count.should == 8
     end
     
     it "should be able to fetch a certain event" do
@@ -39,6 +49,10 @@ describe KeventerReader do
     
     it "should be able to fetch a certain event if the parameter is a string" do
       @kevr.event("44").event_type.name.should == "Workshop de Retrospectivas"
+    end
+    
+    it "should be able to fetch a certain community event" do
+      @kevr.event(60).event_type.name.should == "Yoseki Coding Dojo"
     end
     
     context "when examining the first event" do
@@ -96,60 +110,82 @@ describe KeventerReader do
   end
 
   context "When loading the testing XML source filtering by country" do
-    before(:each) do
-      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
+    before(:each) do  
+      @connector = double("KeventerConnector")
+      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+
+      @kevr = KeventerReader.new( @connector )
     end
 
     it "Filtering for all countries should return 16 events" do
-      @kevr.events_by_country("todos").count.should == 16
+      @kevr.commercial_events_by_country("todos").count.should == 16
     end
     
     it "Filtering for Argentina should return 8 events plus 3 Webinars" do
-      @kevr.events_by_country("ar").count.should == 8+3
+      @kevr.commercial_events_by_country("ar").count.should == 8+3
     end
     
     it "Filtering for Mexico should return no events and 3 Webinars" do
-      @kevr.events_by_country("mx").count.should == 0+3
+      @kevr.commercial_events_by_country("mx").count.should == 0+3
     end
     
     it "Filtering for Bolivia should return 3 events and 3 Webinars" do
-      @kevr.events_by_country("bo").count.should == 3+3
+      @kevr.commercial_events_by_country("bo").count.should == 3+3
     end
     
     it "Filtering for Colombia should return 1 event and 3 Webinars" do
-      @kevr.events_by_country("co").count.should == 1+3
+      @kevr.commercial_events_by_country("co").count.should == 1+3
     end
     
     it "Filtering for Peru should return 1 event and 3 Webinars" do
-      @kevr.events_by_country("pe").count.should == 1+3
+      @kevr.commercial_events_by_country("pe").count.should == 1+3
     end
     
     it "Filtering for Otro should return no events" do
-      @kevr.events_by_country("otro").count.should == 0
+      @kevr.commercial_events_by_country("otro").count.should == 0
     end
     
   end
 
   context "Extracting countries out of events lists" do
     before(:each) do
-      @kevr = KeventerReader.new( File.join(File.dirname(__FILE__),'../specs/events.xml'))
+      @connector = double("KeventerConnector")
+      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+      @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/community_events.xml') )
+
+      @kevr = KeventerReader.new( @connector )
     end
 
-    it "Should return 5 countries" do
-      @kevr.unique_countries().count.should == 5
+    it "Should return 5 countries for commercial events" do
+      @kevr.unique_countries_for_commercial_events().count.should == 5
+    end
+    
+    it "Should return 2 countries for community events" do
+      @kevr.unique_countries_for_community_events().count.should == 2
     end
    
     it "First country should be Argentina" do
-      @kevr.unique_countries()[0].iso_code.should == "ar"
+      @kevr.unique_countries_for_commercial_events()[0].iso_code.should == "ar"
     end
 
     it "Second country should be Bolivia" do
-      @kevr.unique_countries()[1].iso_code.should == "bo"
+      @kevr.unique_countries_for_commercial_events()[1].iso_code.should == "bo"
     end
 
     it "Last country should be Online" do
-      @kevr.unique_countries()[4].iso_code.should == "ol"
+      @kevr.unique_countries_for_commercial_events()[4].iso_code.should == "ol"
     end
   end
+  
+  context "Extracting kleerers" do
+    before(:each) do
+      @connector = double("KeventerConnector")
+      @connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/kleerers.xml') )
+
+      @kevr = KeventerReader.new( @connector )
+    end
+
+   
+  end  
   
 end

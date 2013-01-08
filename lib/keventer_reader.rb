@@ -3,21 +3,56 @@ require 'date'
 require File.join(File.dirname(__FILE__),'/keventer_event')
 require File.join(File.dirname(__FILE__),'/keventer_event_type')
 require File.join(File.dirname(__FILE__),'/country')
+require File.join(File.dirname(__FILE__),'/keventer_connector')
+require File.join(File.dirname(__FILE__),'/professional')
 
 class KeventerReader
+  
+  attr_accessor :connector
 
-  def initialize(xml_path)
-    @xml_path = xml_path
+  def initialize( connector = nil )
+    if connector.nil?
+      @connector = KeventerConnector.new
+    else
+      @connector = connector 
+    end
+    @events_hash_dont_use_directly = Hash.new
   end
   
   def events
     load_remote_events()
   end
   
-  def coming_events(from = Date.today, months = 2)
+  def coming_commercial_events(from = Date.today, months = 2)
+    coming_events(@connector.events_xml_url, from , months )
+  end
+  
+  def commercial_events_by_country(country_iso_code)
+    events_by_country( @connector.events_xml_url, country_iso_code )
+  end
+  
+  def community_events_by_country(country_iso_code)
+    events_by_country( @connector.community_events_xml_url, country_iso_code )
+  end
+  
+  def event(event_id, force_read = false)
+    load_remote_event(event_id, force_read)
+  end
+  
+  def unique_countries_for_commercial_events
+    unique_countries( @connector.events_xml_url )
+  end
+
+  def unique_countries_for_community_events
+    unique_countries( @connector.community_events_xml_url )
+  end
+
+  private
+  
+  def coming_events(event_type_xml_url, from = Date.today, months = 2)
     coming_events = Array.new
 
-    load_remote_events().each do |event|
+    load_remote_events( event_type_xml_url ).each do |event|
       if event.date <= (from >> months)
         coming_events << event
       end
@@ -26,7 +61,7 @@ class KeventerReader
     coming_events
   end
   
-  def events_by_country(country_iso_code)
+  def events_by_country(event_type_xml_url, country_iso_code)
     events_by_country = Array.new
 
     # FIXME
@@ -36,7 +71,7 @@ class KeventerReader
       return events_by_country
     end
 
-    load_remote_events().each do |event|
+    load_remote_events( event_type_xml_url ).each do |event|
       if (country_iso_code == "todos" or 
           event.country_code.downcase == "ol" or
           event.country_code.downcase == country_iso_code)
@@ -47,15 +82,11 @@ class KeventerReader
     events_by_country
   end
   
-  def event(event_id, force_read = false)
-    load_remote_event(event_id, force_read)
-  end
-  
-  def unique_countries()
+  def unique_countries( event_type_xml_url )
     countries = Array.new
     online_country = nil
 
-    load_remote_events().each do |event|
+    load_remote_events( event_type_xml_url ).each do |event|
       if event.country_code.downcase == "ol"
         online_country = Country.new("ol", "Online")
       else
@@ -71,15 +102,14 @@ class KeventerReader
     
     countries
   end
-
-  private
   
-  def load_remote_events(force_read = true)
-    if remote_events_still_valid(force_read)
-      return @events_dont_use_directly
+  def load_remote_events(event_type_xml_url = @connector.events_xml_url, force_read = true)
+    
+    if remote_events_still_valid(event_type_xml_url, force_read)
+      return @events_hash_dont_use_directly[event_type_xml_url]
     end
     
-    parser =  LibXML::XML::Parser.file(@xml_path)
+    parser =  LibXML::XML::Parser.file( event_type_xml_url )
     doc = parser.parse
     loaded_events = doc.find('/events/event')
     
@@ -88,7 +118,7 @@ class KeventerReader
       events << create_event(loaded_event)
     end
 
-    @events_dont_use_directly = events
+    @events_hash_dont_use_directly[event_type_xml_url] = events
   end
 
   def load_remote_event(event_id, force_read = false)
@@ -96,10 +126,20 @@ class KeventerReader
     
     event_id = event_id.to_i
 
-    load_remote_events(force_read).each do |event_found|
+    load_remote_events(@connector.events_xml_url, force_read).each do |event_found|
       if event_found.id == event_id
         event = event_found
       end
+    end
+    
+    if event.nil?
+      
+      load_remote_events(@connector.community_events_xml_url, force_read).each do |event_found|
+        if event_found.id == event_id
+          event = event_found
+        end
+      end
+      
     end
     
     event
@@ -123,8 +163,12 @@ class KeventerReader
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
-    event.trainer_name = xml_keventer_event.find_first('trainer/name').content
-    event.trainer_bio = xml_keventer_event.find_first('trainer/bio').content
+    
+    trainer = Professional.new
+    
+    trainer.name = xml_keventer_event.find_first('trainer/name').content
+    trainer.bio = xml_keventer_event.find_first('trainer/bio').content
+    event.trainer = trainer
     
     event_type.name  = xml_keventer_event.find_first('event-type/name').content
     event_type.description  = xml_keventer_event.find_first('event-type/description').content
@@ -137,10 +181,8 @@ class KeventerReader
     event
   end
   
-  def remote_events_still_valid(force_read)
-    !(@events_dont_use_directly.nil? || force_read)
+  def remote_events_still_valid(event_type_xml_url, force_read)
+    !(@events_hash_dont_use_directly[event_type_xml_url].nil? || force_read)
   end
 
-  @events_dont_use_directly = nil
-  
 end

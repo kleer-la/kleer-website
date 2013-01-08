@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trainers type="array">
+  <trainer>
+    <bio>&gt; Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+**Martín Alaimo**
+Agile Coach &amp; Trainer - Professional Coach
+CSC, CST, PMP, PMI-ACP
+http://www.martinalaimo.com/</bio>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+    <gravatar-email>malaimo@gmail.com</gravatar-email>
+    <id type="integer">4</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/malaimo</linkedin-url>
+    <name>Martín Alaimo</name>
+    <twitter-username>@martinalaimo</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:05:21Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/e92b3ae0ce91e1baf19a7bc62ac03297</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>&gt; Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua. Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
+
+**Carlos Peix**
+Agile Coach &amp; Trainer 
+Ing. Electrónica, CSM, CSD
+</bio>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:41:23Z</created-at>
+    <gravatar-email>carlos.peix@gmail.com</gravatar-email>
+    <id type="integer">6</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/carlospeix</linkedin-url>
+    <name>Carlos Peix</name>
+    <twitter-username>@carlospeix</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:07:29Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/5abd10347c5500bfab0dd7358b9db5fa</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>&gt; Me apasiona el aprendizaje y la mejora, la calidad y los resultados. 
+&gt; Busco compartirlo con personas, equipos, organizaciones y comunidades. 
+&gt; Mis focos son el desarrollo de software y el testing.
+
+**Juan Gabardini**
+Agile Coach &amp; Trainer
+</bio>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:41:48Z</created-at>
+    <gravatar-email>jgabardini@computer.org</gravatar-email>
+    <id type="integer">7</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/jgabardini</linkedin-url>
+    <name>Juan Gabardini</name>
+    <twitter-username>@jgabardini</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:08:10Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/72c191f31437b3250822b38d5f57705b</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>&gt; Contamos con nuevas formas de trabajo que nos permiten ser mucho más efectivos e innovadores. 
+&gt; Mi trabajo es ayudar a personas y organizaciones a cumplir estos objetivos con altos niveles de satisfacción.
+
+**Ricardo Colusso**
+Agile Coach &amp; Trainer 
+M.B.A Intl Business, Lic. en Sistemas
+CSM y Especialista en Innovación
+</bio>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:43:00Z</created-at>
+    <gravatar-email>rcolusso@gmail.com</gravatar-email>
+    <id type="integer">10</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/ricardocolusso</linkedin-url>
+    <name>Ricardo Colusso</name>
+    <twitter-username>rcolusso</twitter-username>
+    <updated-at type="datetime">2013-01-08T11:59:11Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/5f5a3b1647f7de6d12d2666c1a3ac208</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>&gt; Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
+&gt; Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
+
+**Martín Salías**
+Agile Coach &amp; Trainer 
+</bio>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:43:31Z</created-at>
+    <gravatar-email>martin@salias.com.ar</gravatar-email>
+    <id type="integer">11</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/msalias</linkedin-url>
+    <name>Martín Salías</name>
+    <twitter-username>@MartinSalias</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:00:19Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/d30d818ef612cb5f4de1b8514a8b1996</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>&gt; Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+**Pablo Tortorella**
+Agile Coach &amp; Trainer 
+Ing. en Informática, CSM, CSD
+</bio>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+    <gravatar-email>pablotortorella@gmail.com</gravatar-email>
+    <id type="integer">5</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/pablotortorella</linkedin-url>
+    <name>Pablo Tortorella</name>
+    <twitter-username>@pablitux</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:06:14Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>&gt; Mi pasión es el desarrollo de software. Mi motivación es estimular el mejoramiento profesional de las personas.
+
+**Israel Antezana**
+Agile Coach &amp; Trainer
+</bio>
+    <country-id type="integer">25</country-id>
+    <created-at type="datetime">2012-08-23T20:42:37Z</created-at>
+    <gravatar-email>israelantezana@gmail.com</gravatar-email>
+    <id type="integer">9</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/israelantezanar</linkedin-url>
+    <name>Israel Antezana</name>
+    <twitter-username>@israelantezanar</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:09:20Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/8f90ff5fd8ecf9d6fe54953d856bba45</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">25</id>
+      <iso-code>BO</iso-code>
+      <name>Bolivia</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio>Creo firmemente que la mejora continua es la llave para tener equipos productivos y felices, y que ésta se lleva a cabo mediante la introspección y acciones concretas.
+
+Mi compromiso es ayudar a las personas y organizaciones a llevarla a cabo.
+
+**Hiroshi Hiromoto**
+Agile Coach &amp; Trainer</bio>
+    <country-id type="integer">171</country-id>
+    <created-at type="datetime">2013-01-03T18:19:15Z</created-at>
+    <gravatar-email>hiromoto.hiroshi@gmail.com</gravatar-email>
+    <id type="integer">17</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/hhiroshi</linkedin-url>
+    <name>Hiroshi Hiromoto</name>
+    <twitter-username>@hhiroshi</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:01:55Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/3a39c4fe86b368b3d7499ab28997541d</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:41Z</created-at>
+      <id type="integer">171</id>
+      <iso-code>PE</iso-code>
+      <name>Peru</name>
+      <updated-at type="datetime">2012-04-26T11:14:41Z</updated-at>
+    </country>
+  </trainer>
+  <trainer>
+    <bio></bio>
+    <country-id type="integer">171</country-id>
+    <created-at type="datetime">2012-09-07T21:00:12Z</created-at>
+    <gravatar-email>kenneth@tektonlabs.com</gravatar-email>
+    <id type="integer">13</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/kenneth3k</linkedin-url>
+    <name>Kenneth López</name>
+    <twitter-username>@bigbang2k</twitter-username>
+    <updated-at type="datetime">2013-01-08T12:04:49Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/d817f471c887ac5eb1784b0238c7c53f</gravatar-picture-url>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:41Z</created-at>
+      <id type="integer">171</id>
+      <iso-code>PE</iso-code>
+      <name>Peru</name>
+      <updated-at type="datetime">2012-04-26T11:14:41Z</updated-at>
+    </country>
+  </trainer>
+</trainers>

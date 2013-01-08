@@ -8,14 +8,10 @@ require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 
-KEVENTER_EVENTS_URI = "http://keventer.herokuapp.com/api/events.xml"
-KEVENTER_COMUNITY_EVENTS_URI = "http://keventer.herokuapp.com/api/community_events.xml"
-
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
   enable :sessions
-  @@keventer_reader = KeventerReader.new(KEVENTER_EVENTS_URI)
-  @@keventer_reader_community = KeventerReader.new(KEVENTER_COMUNITY_EVENTS_URI)
+  @@keventer_reader = KeventerReader.new
 end
 
 before do
@@ -39,7 +35,7 @@ end
 get '/entrenamos' do
  	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
-  @unique_countries = @@keventer_reader.unique_countries()
+  @unique_countries = @@keventer_reader.unique_countries_for_commercial_events()
 	erb :entrenamos
 end
 
@@ -52,7 +48,7 @@ end
 get '/comunidad' do
   @active_tab_comunidad = "active"
   @page_title += " | Comunidad"
-  @unique_countries = @@keventer_reader_community.unique_countries()
+  @unique_countries = @@keventer_reader.unique_countries_for_community_events()
   erb :comunidad
 end
 
@@ -103,7 +99,7 @@ get '/comunidad/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
   if is_valid_event_id(event_id)
-    @event = @@keventer_reader_community.event(event_id, true)
+    @event = @@keventer_reader.event(event_id, true)
   end
 
   if @event.nil?
@@ -120,7 +116,7 @@ end
 
 get '/entrenamos/eventos/proximos' do
   content_type :json
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_events(), true, "entrenamos")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos")
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
@@ -129,7 +125,7 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.events_by_country(country_iso_code), false, "entrenamos")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos")
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
@@ -138,7 +134,7 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "comunidad"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader_community.events_by_country(country_iso_code), false, "comunidad")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad")
 end
 
 # LEGACY ==================== 
@@ -193,9 +189,9 @@ def is_valid_country_iso_code(country_iso_code_to_test, event_type)
   return true if (country_iso_code_to_test == "otro" or country_iso_code_to_test == "todos")
 
   if event_type == "entrenamos"
-    unique_countries = @@keventer_reader.unique_countries()
+    unique_countries = @@keventer_reader.unique_countries_for_commercial_events()
   else
-    unique_countries = @@keventer_reader_community.unique_countries()
+    unique_countries = @@keventer_reader.unique_countries_for_community_events()
   end
   unique_countries.each { |country|
     if (country.iso_code == country_iso_code_to_test)

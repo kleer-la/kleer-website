@@ -42,7 +42,7 @@
 		  <li><a href="#goal" data-toggle="tab">Objetivos</a></li>
 		  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
 		  <li><a href="#program" data-toggle="tab">Programa</a></li>
-		  <li><a href="#trainer" data-toggle="tab"><i class="icon-user"></i>&nbsp;<%=@event.trainer_name%></a></li>
+		  <li><a href="#trainer" data-toggle="tab"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a></li>
 		  <li><%if @event.is_sold_out%>
 				<a href="#registration" data-toggle="tab"><span class="label label-important">Completo</span></a>
 			<%else%>
@@ -68,7 +68,7 @@
 			<br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="trainer">
-			<%=@markdown_renderer.render( @event.trainer_bio )%>
+			<%=@markdown_renderer.render( @event.trainer.bio )%>
 			<br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="registration">

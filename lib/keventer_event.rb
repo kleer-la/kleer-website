@@ -1,5 +1,5 @@
 class KeventerEvent
-    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, :is_sold_out, :id, :trainer_name, :trainer_bio, :uri_path
+    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, :is_sold_out, :id, :uri_path, :trainer
   
   def initialize
     @capacity = 0
@@ -11,8 +11,7 @@ class KeventerEvent
     @is_sold_out = false
     @registration_link = ""
     @id = 0
-    @trainer_name = ""
-    @trainer_bio
+    @trainer = nil
     @uri_path
   end
   
@@ -32,4 +31,15 @@ class KeventerEvent
   def to_s
     @id
   end
+  
+  def trainer_name
+    warn "[DEPRECATION] 'trainer_name' is deprecated.  Please use 'trainer.name' instead."
+    @trainer.name
+  end
+  
+  def trainer_bio
+    warn "[DEPRECATION] 'trainer_bio' is deprecated.  Please use 'trainer.bio' instead."
+    @trainer.bio
+  end
+  
 end
