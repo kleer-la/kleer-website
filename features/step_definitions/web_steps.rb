@@ -226,6 +226,26 @@ Then /^I should see all countries highlited$/ do
   end
 end
 
+Then /^I should see a linkedin link for a Kleerer with LinkedIn$/ do
+  response_body.should have_selector("a[href='http://www.linkedin.com/in/jgabardini']") do |element|
+    element.should have_selector("img[src='/img/icons/linkedin.png']")
+  end
+end
+
+Then /^I should not see an empty linkedin for a Kleerer without LinkedIn$/ do
+  response_body.should_not have_selector("a[href='']")
+end
+
+Then /^I should see a Twitter box for a Kleerer with Twiiter$/ do
+  response_body.should have_selector("div[id='jgabardini_twitter_container']") do |element|
+    element.should contain("@jgabardini")
+  end
+end
+
+Then /^I should not see a Twitter box for a Kleerer without twiiter$/ do
+  response_body.should_not have_selector("div[id='_twitter_container']")
+end
+
 Then /^I should get a (\d+) error$/ do |error_code|
   last_response.status.should == error_code.to_i
 end

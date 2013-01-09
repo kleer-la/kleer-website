@@ -90,7 +90,7 @@ CSM y Especialista en Innovación
     <gravatar-email>rcolusso@gmail.com</gravatar-email>
     <id type="integer">10</id>
     <is-kleerer type="boolean">true</is-kleerer>
-    <linkedin-url>http://www.linkedin.com/in/ricardocolusso</linkedin-url>
+    <linkedin-url></linkedin-url>
     <name>Ricardo Colusso</name>
     <twitter-username>rcolusso</twitter-username>
     <updated-at type="datetime">2013-01-08T11:59:11Z</updated-at>
@@ -142,7 +142,7 @@ Ing. en Informática, CSM, CSD
     <is-kleerer type="boolean">true</is-kleerer>
     <linkedin-url>http://www.linkedin.com/in/pablotortorella</linkedin-url>
     <name>Pablo Tortorella</name>
-    <twitter-username>@pablitux</twitter-username>
+    <twitter-username></twitter-username>
     <updated-at type="datetime">2013-01-08T12:06:14Z</updated-at>
     <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
     <country>
