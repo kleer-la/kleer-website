@@ -246,6 +246,16 @@ Then /^I should not see a Twitter box for a Kleerer without twiiter$/ do
   response_body.should_not have_selector("div[id='_twitter_container']")
 end
 
+Then /^I should not see the Kleer Twitter Box$/ do
+    response_body.should_not have_selector("div[id='kleer_la_twitter_container']")
+end
+
+Then /^I should see the Kleer Twitter Box$/ do
+  response_body.should have_selector("div[id='kleer_la_twitter_container']") do |element|
+    element.should contain("@kleer_la")
+  end
+end
+
 Then /^I should get a (\d+) error$/ do |error_code|
   last_response.status.should == error_code.to_i
 end

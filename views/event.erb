@@ -3,6 +3,7 @@
 		background: url(/img/fondos/fondo-10.jpg) no-repeat center center fixed; 
 	}
 </style>
+<script type="text/javascript" src="/js/jquery.js"/></script>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -15,8 +16,9 @@
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 <div class="row">
-	<div class="span4">  
+	<div class="span4" style="text-align:center;">  
 		<img src="/img/logos/logo-01.png">
+		<%= erb :twitter_box, :layout => false %>
 	</div>
 	
 	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
@@ -81,8 +83,6 @@
 			<br/>&nbsp;
 		  </div>
 		</div>
-		
-		<script type="text/javascript" src="/js/jquery.js"/></script>
 		
 	</div>
 </div>

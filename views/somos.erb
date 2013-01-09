@@ -4,16 +4,6 @@
 	}
 </style>
 <script type="text/javascript" src="/js/jquery.js"/></script>
-<script>
-function processTweet(tweet) {
-	tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
-        return '<a href="'+url+'">'+url+'</a>';
-    }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
-        return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
-    });
-	return tweet;
-}
-</script>
 
 <div class="row">
 	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
@@ -57,8 +47,9 @@ function processTweet(tweet) {
 		<% end %>
 		
 	</div>	
-	<div class="span3">  
+	<div class="span3" style="text-align:center;">  
 		<img src="/img/logos/logo-02.png">
+		<%= erb :twitter_box, :layout => false %>
 	</div>
 </div>
 
