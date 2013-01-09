@@ -4,6 +4,16 @@
 	}
 </style>
 <script type="text/javascript" src="/js/jquery.js"/></script>
+<script>
+function processTweet(tweet) {
+	tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
+        return '<a href="'+url+'">'+url+'</a>';
+    }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
+        return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+    });
+	return tweet;
+}
+</script>
 
 <div class="row">
 	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
@@ -17,16 +27,27 @@
 					<img src="<%=kleerer.gravatar_picture_url%>" class="img-circle">
 					<br/>&nbsp;
 					<br/><a href="<%=kleerer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
-					<a href="https://twitter.com/<%=kleerer.twitter_username.gsub("@","")%>" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a>
 				</div>
 				<div class="span7">
-					
 					<div class="row">
 						<div class="span3">
 							<h2><%=kleerer.name%></h2>
 						</div>
 						<div class="span4">
-							
+							<div class="popover right" style="display:inline-block;position:relative;">
+								<div class="arrow"></div>
+							    <h3 class="popover-title"><a href="https://twitter.com/<%=kleerer.twitter_username.gsub("@","")%>" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a> <%=kleerer.twitter_username%></h3>
+							    <div class="popover-content" id="<%=kleerer.twitter_username.gsub("@","")%>_last_tweet">
+							    	cargando...
+							    </div>
+							</div>
+							<script>
+							function show_<%=kleerer.twitter_username.gsub("@","")%>_tweet(data) {
+								tweet = processTweet(data[0].text);
+								$("#<%=kleerer.twitter_username.gsub("@","")%>_last_tweet").html(tweet);
+							}
+							</script>
+							<script type="text/javascript" src="https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=<%=kleerer.twitter_username.gsub("@","")%>&count=1&callback=show_<%=kleerer.twitter_username.gsub("@","")%>_tweet"></script>
 						</div>
 					</div>
 					<div class="row">
@@ -34,6 +55,7 @@
 					</div>
 				</div>
 			</div>
+			<hr/>
 		
 		<% end %>
 		
