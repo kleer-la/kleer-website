@@ -1,0 +1,87 @@
+<script type="text/javascript" src="/js/jquery.js"/></script>
+<style>
+	body {
+		background: url(/img/fondos/fondo-06.jpg) no-repeat center center fixed; 
+	}
+</style>
+<div class="row">
+	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<h2>Objetivo</h2>
+		<p>El objetivo de este documento es clarificar el procedimiento de facturación y pago de los servicios prestados por Kleer S.R.L. en Latinoamérica.</p>
+		<h2>Facturación</h2>
+		<p>Kleer emitirá una factura de exportación de tipo "E", tal como lo requiere la legislación impositiva Argentina para exportación de servicios, la cual estará expresada en dólares estadounidenses. Enviaremos a nuestros clientes la factura en papel o una copia digitalizada.</p>
+		<h2>Datos de empresas y ordenantes</h2>
+		<p>Es un requerimiento de la autoridad cambiara argentina que los datos del ordenante de órdenes de pago Swift coincidan exactamente con la empresa a la cual emitimos la factura, caso contrario, no es posible acreditar el dinero en nuestra cuenta bancaria.</p>
+
+		<p>Por favor, verifique que los datos (nombre de la empresa, dirección, CUIT, RUT, NIT, CIF, etc.) informados al banco con que realizará la transferencia se encuentren actualizados y coincidan con los que nos proporcionan para la emisión de la factura.</p>
+		<h2>Instrucciones para el pago</h2>
+		<p>Kleer solo puede recibir pagos internacionales mediante órdenes de pago bancarias Swift nominadas en dólares estadounidenses. Debido a normativa cambiaria vigente, no podemos recibir pagos en efectivo, ya sea en Argentina o en el país del servicio.</p>
+
+		<p>Los “campos” que observarán a continuación conforman en parte un mensaje Swift (Sistema Internacional de Mensajes con Clave de Autenticación), y estos son los mínimos necesarios que debe tener quien transfiere fondos, para evitar demoras o pérdidas:</p>
+		<ul>
+			<li>Campo 50: completado con los datos de la empresa utilizados en la factura</li>
+			<li>Campo 56
+				<ul>
+					<li>ABA 021001088</li>
+					<li>MRMDUS33 (SWIFT CODE)</li>
+					<li>HSBC BANK USA</li>
+					<li>NEW YORK USA</li>
+				</ul>
+			</li>
+			<li> Campo 57:
+				<ul>
+					<li>000048534</li>
+					<li>BACOARBA (SWIFT CODE)</li>
+					<li>HSBC BANK ARGENTINA</li>
+					<li>BUENOS AIRES</li>
+				</ul>
+			</li>
+			<li>Campo 74: dejarlo en blanco</li>
+			<li>Campo 59: colocar los datos de nuestra empresa, detallados a continuación
+				<ul>
+					<li>Denominacion de la cuenta: <strong>3003507851</strong></li>
+					<li>Nombre del beneficiario: <strong>KLEER S.R.L.</strong></li>
+				</ul>
+			</li>
+		</ul>
+		<p>Dirección de banco ordenante (algunos bancos requieren esta información):</p>
+		<ul>
+			<li>Calle y número: <strong>Florida 40</strong></li>
+			<li>Código postal: <strong>1005</strong></li>
+			<li>Localidad: <strong>Ciudad Autónoma de Buenos Aires</strong></li>
+			<li>País: <strong>Argentina</strong></li>
+		</ul>
+		<p>Si su banco le solicita información adicional, por favor verifique otros datos indicados más abajo.</p>
+		<h2>Monto de la orden de pago</h2>
+		<p>El monto de la orden de pago recibida en nuestro banco debe ser exactamente el indicado en la factura (salvo el caso de retenciones de impuesto a la renta, detallado más abajo). Cada cliente debiera prever el monto adicional para las comisiones de su banco.</p>
+
+		<p>En caso de que se hayan pactado pagos parciales, las suma de todos los pagos debe ser igual al total de la factura.</p>
+
+		<p>Ciertos países imponen impuestos adicionales por pago a empresas extranjeras (el caso de Ecuador, por ejemplo). Kleer no puede absorver esos cargos puesto que no puede deducirlos de sus propias declaraciones impositivas.</p>
+
+		<p>No correponden retenciones por otros impuestos (como al valor agregado) ya que estos impuestos son internos de cada país y no aplican a contrataciones internacionales.<p>
+		<h2>Impuesto a la renta</h2>
+		<p><span style="background-color: #ffff00;">Si debe realizar una retención de impuesto a la renta, por favor consúltenos con antelación.</span></p>
+
+		<p>Kleer acepta retenciones del impuesto a la renta siempre y cuando sean acordadas y se nos envíe el correspondiente certificado de retención válido según la normativa local de cada país. No aceptamos documentos informales o simplemente notificaciones puesto que no podremos presentarlos en nuestra declaración impositiva.</p>
+
+		<p>Los porcentajes de retención de impuesto a la renta oscilan entre el 10% y el 25% del valor del pago. Si tiene dudas sobre el cálculo de retención, por favor consulte con su estudio contable sobre el asunto.</p>
+
+		<p><span style="background-color: #ffff00;">Es posible que cambios simples en la redacción del texto de la factura (o el contrato) permitan aplicar diferentes alícuotas de retención. En ese caso, por favor consúltenos para que confeccionemos la factura de manera que el porcentaje de retención sea el menor posible.</span></p>
+		<h2>Datos adicionales <span style="background-color: #ffff00;">(solo en caso de que sean necesarios)</span></h2>
+		<p>Algunos clientes nos han solicitado algunos datos adicionales, los detallamos a continuacion para referencia:</p>
+		<ul>
+			<li>    NOMBRE DEL BANCO BENEFICIARIO / PAGADOR (Sin traducción): <strong>HSBC Bank Argentina</strong></li>
+			<li>    CIUDAD Y PAIS DEL BANCO: <strong>Buenos Aires, Argentina</strong></li>
+			<li>    CODIGO BIC DEL BANCO (CODIGO SWIFT): <strong>BACOARBA</strong></li>
+			<li>    ABA, FEDWIRE, O ROUTING NUMBER (Banco en USA) ó No. IBAN (Banco de Europa): <strong>No hay</strong></li>
+			<li>    CUENTA DEL BCO. BENEFICIARIO EN EL BCO. INTERMEDIARIO: <strong>000048534</strong></li>
+			<li>    BANCO INTERMEDIARIO O CORRESPONSAL DEL BANCO BENEFICIARIO: <strong>HSBC Bank USA</strong></li>
+			<li>    CODIGO SWIFT: <strong>MRMDUS33</strong></li>
+		</ul>
+	</div>	
+	<div class="span3" style="text-align:center;">  
+		<img src="/img/logos/logo-04.png">
+		<%= erb :twitter_box, :layout => false %>
+	</div>
+</div>

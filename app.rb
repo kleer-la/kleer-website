@@ -144,7 +144,17 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad")
 end
 
+# STATIC FILES ============== 
+
+get '/preguntas-frecuentes/facturacion-pagos-internacionales' do
+  erb :facturacion_pagos_internacionales
+end
+
 # LEGACY ==================== 
+
+get '/preguntas-frecuentes/facturacion-pagos-internacionales' do
+  erb :index
+end
 
 get '/es/:path' do
   redirect "/" + params[:path]

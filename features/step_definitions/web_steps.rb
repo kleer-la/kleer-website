@@ -284,6 +284,10 @@ Given /^I visit the former Estimación y Planificación con Scrum spanish Page$/
   visit "/es/entrenamos/estimacion-y-planificacion-con-scrum"
 end
 
+Given /^I visit the itnernational payment page$/ do
+  visit "/preguntas-frecuentes/facturacion-pagos-internacionales"
+end
+
 Given /^I visit an invalid Page$/ do
   visit "/bazzzzingaaaa"
 end
