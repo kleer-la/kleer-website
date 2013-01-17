@@ -150,11 +150,11 @@ get '/preguntas-frecuentes/facturacion-pagos-internacionales' do
   erb :facturacion_pagos_internacionales
 end
 
-# LEGACY ==================== 
-
-get '/preguntas-frecuentes/facturacion-pagos-internacionales' do
-  erb :index
+get '/preguntas-frecuentes/certified-scrum-master' do
+  erb :certified_scrum_master
 end
+
+# LEGACY ==================== 
 
 get '/es/:path' do
   redirect "/" + params[:path]

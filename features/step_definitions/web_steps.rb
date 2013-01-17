@@ -288,6 +288,10 @@ Given /^I visit the itnernational payment page$/ do
   visit "/preguntas-frecuentes/facturacion-pagos-internacionales"
 end
 
+Given /^I visit the CSM QnA page$/ do
+  visit "/preguntas-frecuentes/certified-scrum-master"
+end
+
 Given /^I visit an invalid Page$/ do
   visit "/bazzzzingaaaa"
 end
