@@ -154,6 +154,10 @@ get '/preguntas-frecuentes/certified-scrum-master' do
   erb :certified_scrum_master
 end
 
+get '/preguntas-frecuentes/certified-scrum-developer' do
+  erb :certified_scrum_developer
+end
+
 # LEGACY ==================== 
 
 get '/es/:path' do

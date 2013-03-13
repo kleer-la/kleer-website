@@ -292,6 +292,10 @@ Given /^I visit the CSM QnA page$/ do
   visit "/preguntas-frecuentes/certified-scrum-master"
 end
 
+Given /^I visit the CSD QnA page$/ do
+  visit "/preguntas-frecuentes/certified-scrum-developer"
+end
+
 Given /^I visit an invalid Page$/ do
   visit "/bazzzzingaaaa"
 end
