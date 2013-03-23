@@ -21,6 +21,7 @@ Feature: Home Page
 		And I should see "Brasil"
 		And I should see "Bolivia"
 		And I should see "Colombia"
+		And I should see "Perú"
 		And I should see "¿Otro país?"
 
 	Scenario: Integracion con SnapEngage
