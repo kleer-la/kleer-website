@@ -1,3 +1,27 @@
+<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
+
+<script type="text/javascript">
+<!--
+
+$('body').on('hidden', '#myModalRegistration', function () {
+  $(this).removeData('modal');
+});
+
+-->
+</script>
+<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Registro a Curso</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
 <div class="row">
 	<div class="span1">
 		<span class="label label-info"><%=@event.date.strftime("%d")%><br><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>
@@ -7,6 +31,7 @@
 		<i class="icon-user"></i>&nbsp;<%=@event.trainer_name%>
 	</div>	
 </div>
+
 <div class="row">
 	<div class="span5">
 		<h3><%=@event.event_type.name%></h3>
@@ -16,8 +41,10 @@
 		<h5>Programa</h5><p><%=@markdown_renderer.render( @event.event_type.program )%></p>
 		<%if @event.is_sold_out%>
 			<a href="javascript:void();" target="_blank"  class="btn btn-danger">Completo</a>
-		<%else%>
+		<%elsif @event.registration_link != "" %>
 			<a href="<%=@event.registration_link%>" target="_blank" class="btn btn-success">Registrarme!</a>
+		<%else %>
+			<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration" class="btn btn-success">Registrarme!</a>
 		<%end%>
 	</div>
 </div>
