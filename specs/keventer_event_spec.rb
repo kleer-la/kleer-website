@@ -12,6 +12,12 @@ describe KeventerEvent do
     @kevent.id.should == 10
   end
   
+  it "should have a keventer connector" do
+    kc = KeventerConnector.new
+    @kevent.keventer_connector = kc
+    @kevent.keventer_connector.should == kc
+  end  
+  
   it "should have a capacity" do
     @kevent.capacity = 10
     @kevent.capacity.should == 10

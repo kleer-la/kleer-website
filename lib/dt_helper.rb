@@ -61,7 +61,11 @@ class DTHelper
   end
   
   def self.event_link(event)
-    "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\">Registrarme!</a>"
+    if event.registration_link != ""
+      "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\">Registrarme!</a>"
+    else
+      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-success\">Registrarme!</a>"
+    end
   end
   
 end

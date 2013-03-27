@@ -200,6 +200,8 @@ class KeventerReader
     
     event.event_type = event_type
     
+    event.keventer_connector = @connector
+    
     event
   end
   

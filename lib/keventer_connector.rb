@@ -1,6 +1,7 @@
 class KeventerConnector
   
-  API_ROOT = "http://keventer.herokuapp.com/api"
+  KEVENTER_URL = "http://keventer.herokuapp.com"
+  API_ROOT = KEVENTER_URL + "/api"
   API_EVENTS_PATH = "/events.xml"
   API_COMMUNITY_EVENTS_PATH = "/community_events.xml"
   API_KLEERERS_PATH = "/kleerers.xml"
@@ -15,6 +16,10 @@ class KeventerConnector
   
   def kleerers_xml_url
     API_ROOT + API_KLEERERS_PATH
+  end
+  
+  def keventer_url
+    KEVENTER_URL
   end
   
 end

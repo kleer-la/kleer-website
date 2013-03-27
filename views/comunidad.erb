@@ -10,6 +10,20 @@
 		<img src="/img/logos/logo-02.png">
 		<%= erb :twitter_box, :layout => false %>
 	</div>
+	
+	<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h4 id="myModalLabel">Registro a Curso</h4>
+	  </div>
+	  <div class="modal-body">
+	    <p>Cargando...</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+	  </div>
+	</div>
+	
 	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 		<h1>Eventos Comunitarios</h1>
 		<ul id="country-filter" class="nav nav-pills">
@@ -22,5 +36,13 @@
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
 		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" src="/js/dt_eventos_comunidad.js"></script>
+		<script type="text/javascript">
+		<!--
+		$('body').on('hidden', '#myModalRegistration', function () {
+		  $(this).removeData('modal');
+		});
+		
+		-->
+		</script>
 	</div>  
 </div>

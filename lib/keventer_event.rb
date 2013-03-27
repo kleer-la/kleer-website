@@ -1,5 +1,6 @@
 class KeventerEvent
-    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, :is_sold_out, :id, :uri_path, :trainer
+    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, 
+                  :is_sold_out, :id, :uri_path, :trainer, :keventer_connector
   
   def initialize
     @capacity = 0
@@ -13,6 +14,7 @@ class KeventerEvent
     @id = 0
     @trainer = nil
     @uri_path
+    @keventer_connector = nil
   end
   
   def uri_path
