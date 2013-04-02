@@ -44,6 +44,7 @@
 - Testers
 - Líderes Técnicos</recipients>
       <updated-at type="datetime">2013-01-03T15:21:13Z</updated-at>
+	<faq nil="true"/>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -112,6 +113,9 @@ Ing. en Informática, CSM, CSD
 - Testers
 - Líderes Técnicos</recipients>
       <updated-at type="datetime">2013-01-03T15:21:13Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>

@@ -36,5 +36,10 @@ describe KeventerEventType do
     @keventype.recipients.should == "sdkjfhskjfhskdjf"
   end
   
+  it "should have some FAQs" do
+    @keventype.faqs = "sdkjfhskjfhskdjf"
+    @keventype.faqs.should == "sdkjfhskjfhskdjf"
+  end  
+  
   
 end

@@ -39,6 +39,7 @@
       <program>el programa</program>
       <recipients>los destinatarios.</recipients>
       <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+	<faq nil="true"/>
     </event-type>
     <trainer>
 	  	<linkedin-url>http://www.linkedin.com/in/pablotortorella</linkedin-url>
@@ -121,6 +122,9 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 - Obtener una nueva visión para la gestión de proyectos y equipos.
 </recipients>
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.

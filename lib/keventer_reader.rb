@@ -202,6 +202,7 @@ class KeventerReader
     event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
     event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content
     event_type.program  = xml_keventer_event.find_first('event-type/program').content
+    event_type.faqs  = xml_keventer_event.find_first('event-type/faq').content
     
     event.event_type = event_type
     

@@ -39,6 +39,9 @@
       <program>el programa</program>
       <recipients>los destinatarios.</recipients>
       <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+	  <faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
       <bio>Agile Coach</bio>
@@ -118,6 +121,9 @@ El curso se basa ejercicios y dinámicas con técnicas para una comunicación ef
 </program>
       <recipients>Gerentes de Proyectos, Product Managers, Equipos de desarrollo, Scrum Masters, Analistas Funcionales y Developers de experiencia de usuario, Líderes Técnicos, Gerentes de Area.</recipients>
       <updated-at type="datetime">2012-12-07T19:27:19Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -193,6 +199,9 @@ El webinar se desarrollará con ejemplos en Ruby, pero se compartirán otros eje
 </program>
       <recipients>Desarrolladores, líderes de desarrollo y arquitectos de software.</recipients>
       <updated-at type="datetime">2012-12-14T18:43:56Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -303,6 +312,9 @@ Patrones de Adopción de Scrum</program>
 - Garantizar la satisfacción del cliente
 - Obtener una nueva visión para la gestión de proyectos y equipos</recipients>
       <updated-at type="datetime">2012-12-07T00:50:16Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -385,6 +397,9 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 - Obtener una nueva visión para la gestión de proyectos y equipos.
 </recipients>
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -489,6 +504,9 @@ Construcción Evolutiva e Iterativa - Sprints
 - Obtener una nueva visión para la gestión de productos
 </recipients>
       <updated-at type="datetime">2012-12-08T10:28:35Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -558,6 +576,9 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
 &lt;div class="list check grey"&gt;
 &lt;ul&gt;&lt;li&gt;Cada vez más, hacen su programación en client-side.&lt;/li&gt;&lt;li&gt;Para los que no han encontrado una manera de desacoplar la lógica de la aplicación de la manipulación de DOM.&lt;/li&gt;&lt;li&gt;Para los que no han encontrado una manera sencilla de probar aplicaciones JavaScript&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Conocimientos requeridos&lt;/strong&gt;: JavaScript, HTML, CSS.&lt;/li&gt;&lt;li&gt;Conocimientos deseables: MVC, TDD (ATDD, BDD), experiencia con otros frameworks (Backbone.js, KO, JQuery), IoC (DI)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</recipients>
       <updated-at type="datetime">2012-12-11T19:34:17Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -629,6 +650,9 @@ Los ejemplos durante el taller se harán principalmente en Ruby, pero se compart
 </program>
       <recipients>Desarrolladores, líderes de desarrollo y arquitectos de software.</recipients>
       <updated-at type="datetime">2012-12-14T18:59:45Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -712,6 +736,9 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 - Obtener una nueva visión para la gestión de proyectos y equipos.
 </recipients>
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -794,6 +821,9 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 - Obtener una nueva visión para la gestión de proyectos y equipos.
 </recipients>
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -861,7 +891,10 @@ Este evento de un día completo proveerá a los asistentes un entendimiento clar
 - Simulación de Scrum</program>
       <recipients>Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario, Gerentes de proyectos, Líderes Técnicos y Gerentes de desarrollo.</recipients>
       <updated-at type="datetime">2012-09-06T10:59:01Z</updated-at>
-    </event-type>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>    
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -946,7 +979,10 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
 &lt;ul&gt;
 </recipients>
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
-    </event-type>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>    
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -1016,7 +1052,10 @@ Este curso enseña nuevas habilidades que los participantes pueden utilizar en l
 - Creación de un Release Plan</program>
       <recipients>Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario, Gerentes de proyectos, Líderes Técnicos y Gerentes de desarrollo.</recipients>
       <updated-at type="datetime">2012-09-06T11:02:03Z</updated-at>
-    </event-type>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>    
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -1088,7 +1127,10 @@ El curso proporciona una experiencia de primera mano con respecto a los benefici
 - Cierre del curso</program>
       <recipients>Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario, Gerentes de proyectos, Líderes Técnicos y Gerentes de desarrollo.</recipients>
       <updated-at type="datetime">2012-09-06T11:04:02Z</updated-at>
-    </event-type>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>    
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -1173,7 +1215,10 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
 &lt;ul&gt;
 </recipients>
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
-    </event-type>
+	<faq>
+	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+	</faq>    
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -1259,7 +1304,8 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
 &lt;ul&gt;
 </recipients>
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
-    </event-type>
+	<faq nil="true"/>  
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>

@@ -101,6 +101,9 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 		  <li><a href="#goal" data-toggle="tab">Objetivos</a></li>
 		  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
 		  <li><a href="#program" data-toggle="tab">Programa</a></li>
+		  <% if @event.event_type.faqs != "" %>
+		  	<li><a href="#faqs" data-toggle="tab">Preguntas Frecuentes</a></li>
+		  <% end %>
 		</ul>
 		
 		<div class="tab-content">
@@ -118,6 +121,10 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 		  </div>
 		  <div class="tab-pane" id="program">
 		  	<%=@markdown_renderer.render( @event.event_type.program )%>
+			<br/>&nbsp;
+		  </div>
+		  <div class="tab-pane" id="faqs">
+		  	<%=@markdown_renderer.render( @event.event_type.faqs )%>
 			<br/>&nbsp;
 		  </div>
 		</div>
