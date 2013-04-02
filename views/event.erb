@@ -71,11 +71,24 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 				<a href="https://twitter.com/share" class="twitter-share-button" data-via="kleer_la">Tweet</a></br>
 				<div class="fb-like" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true"></div>
 			</div>
-			<div class="span5">
+			<div class="span6">
 				<h3><%=@event.event_type.name%></h3>
 				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/>  <%=@event.place%><br/><%=@event.city%>, <%=@event.country%><br/><br/>
-				Facilitador:<br/>
-				<a  data-toggle="modal" data-target="#myModalFacilitator" href="/entrenamos/evento/<%=@event.id%>/entrenador/remote"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a>&nbsp;
+				<div class="row">
+					<div class="span4">
+						Facilitador:<br/>
+						<a  data-toggle="modal" data-target="#myModalFacilitator" href="/entrenamos/evento/<%=@event.id%>/entrenador/remote"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a>&nbsp;
+					</div>
+					<div class="span2">
+						<%if @event.is_sold_out%>
+								<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="btn btn-danger">Completo</span></a>
+							  <%elsif @event.registration_link != "" %>
+								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success">Registrarme!</span></a>
+							  <%else %>
+								<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="btn btn-success">Registrarme!</span></a>
+							  <%end%>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -88,14 +101,6 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 		  <li><a href="#goal" data-toggle="tab">Objetivos</a></li>
 		  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
 		  <li><a href="#program" data-toggle="tab">Programa</a></li>
-		  <li><%if @event.is_sold_out%>
-				<a href="#registration" data-toggle="tab"><span class="label label-important">Completo</span></a>
-			  <%elsif @event.registration_link != "" %>
-				<a href="<%=@event.registration_link%>" target="_blank"><span class="label label-success">Registrarme!</span></a>
-			  <%else %>
-				<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="label label-success">Registrarme!</span></a>
-			  <%end%>
-			</li>
 		</ul>
 		
 		<div class="tab-content">
@@ -113,15 +118,6 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 		  </div>
 		  <div class="tab-pane" id="program">
 		  	<%=@markdown_renderer.render( @event.event_type.program )%>
-			<br/>&nbsp;
-		  </div>
-		  <div class="tab-pane" id="registration">
-			<%if @event.is_sold_out%>
-				<div class="alert alert-error"><strong>Ouch!</strong> El cupo para este evento se encuentra completo.</div>
-				Puedes contactarnos a <a href="mailto:entrenamos@kleer.la">entrenamos@kleer.la</a> para conocer nuevas fechas.
-			<%else%>
-				<!-- iframe para registro TBD -->
-			<%end%>
 			<br/>&nbsp;
 		  </div>
 		</div>
