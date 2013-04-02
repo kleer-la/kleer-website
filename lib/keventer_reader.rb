@@ -184,6 +184,11 @@ class KeventerReader
     event.place = xml_keventer_event.find_first('place').content
     event.registration_link = xml_keventer_event.find_first('registration-link').content
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
+    if xml_keventer_event.find_first('sepyme-enabled').content == ""
+      event.sepyme_enabled = false
+    else
+      event.sepyme_enabled = to_boolean( xml_keventer_event.find_first('sepyme-enabled').content )
+    end
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
     

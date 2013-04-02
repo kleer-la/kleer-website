@@ -1,6 +1,6 @@
 class KeventerEvent
     attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, 
-                  :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place
+                  :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place, :sepyme_enabled
   
   def initialize
     @capacity = 0
@@ -11,6 +11,7 @@ class KeventerEvent
     @event_type = nil
     @date = nil
     @is_sold_out = false
+    @sepyme_enabled = false
     @registration_link = ""
     @id = 0
     @trainer = nil

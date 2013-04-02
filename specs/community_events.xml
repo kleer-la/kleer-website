@@ -13,6 +13,7 @@
     <event-type-id type="integer">19</event-type-id>
     <id type="integer">60</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
@@ -82,6 +83,7 @@ Ing. en Informática, CSM, CSD
     <event-type-id type="integer">19</event-type-id>
     <id type="integer">61</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>

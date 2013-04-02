@@ -3,16 +3,35 @@
 <script type="text/javascript">
 <!--
 
-$('body').on('hidden', '#myModalRegistration', function () {
+$('body').on('hidden', '#myModalRegistrationInside', function () {
   $(this).removeData('modal');
+});
+
+$('body').on('hidden', '#myModalSepymeInside', function () {
+  $(this).removeData('modal');
+  $('#myModalSepymeInside iframe').removeAttr('src');
 });
 
 -->
 </script>
-<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+<div id="myModalRegistrationInside" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h4 id="myModalLabel">Registro a Curso</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
+<div id="myModalSepymeInside" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Ahorrá hasta el 90%!</h4>
   </div>
   <div class="modal-body">
     <p>Cargando...</p>
@@ -44,7 +63,10 @@ $('body').on('hidden', '#myModalRegistration', function () {
 		<%elsif @event.registration_link != "" %>
 			<a href="<%=@event.registration_link%>" target="_blank" class="btn btn-success">Registrarme!</a>
 		<%else %>
-			<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration" class="btn btn-success">Registrarme!</a>
+			<a data-toggle="modal" data-target="#myModalRegistrationInside" href="/entrenamos/evento/<%=@event.id%>/registration" class="btn btn-success">Registrarme!</a>
+		<%end%>
+		<%if @event.sepyme_enabled%>
+			&nbsp;<a data-toggle="modal" data-target="#myModalSepymeInside" href="/sepyme/remote"><span class="btn btn-info">Ahorrá hasta el 90%!</span></a>&nbsp;
 		<%end%>
 	</div>
 </div>

@@ -13,6 +13,7 @@
     <event-type-id type="integer">13</event-type-id>
     <id type="integer">44</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>

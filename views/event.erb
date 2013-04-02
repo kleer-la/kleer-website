@@ -18,6 +18,11 @@ $('body').on('hidden', '#myModalFacilitator', function () {
   $(this).removeData('modal');
 });
 
+$('body').on('hidden', '#myModalSepyme', function () {
+  $(this).removeData('modal');
+  $('#myModalSepyme iframe').removeAttr('src');
+});
+
 -->
 </script>
 
@@ -44,6 +49,16 @@ $('body').on('hidden', '#myModalFacilitator', function () {
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
+<div id="myModalSepyme" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Ahorrá hasta el 90%!</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
   </div>
 </div>
 
@@ -75,18 +90,27 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 				<h3><%=@event.event_type.name%></h3>
 				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/>  <%=@event.place%><br/><%=@event.city%>, <%=@event.country%><br/><br/>
 				<div class="row">
-					<div class="span4">
+					<div class="span2">
 						Facilitador:<br/>
 						<a  data-toggle="modal" data-target="#myModalFacilitator" href="/entrenamos/evento/<%=@event.id%>/entrenador/remote"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a>&nbsp;
 					</div>
-					<div class="span2">
+					<div class="span4" align="right">
 						<%if @event.is_sold_out%>
 								<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="btn btn-danger">Completo</span></a>
-							  <%elsif @event.registration_link != "" %>
+					    <%else%>
+					    	
+							<%if @event.registration_link != "" %>
 								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success">Registrarme!</span></a>
-							  <%else %>
+							<%else %>
 								<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="btn btn-success">Registrarme!</span></a>
-							  <%end%>
+								&nbsp;
+							<%end%>
+							
+							<%if @event.sepyme_enabled%>
+								<a data-toggle="modal" data-target="#myModalSepyme" href="/sepyme/remote"><span class="btn btn-info">Ahorrá hasta el 90%!</span></a>&nbsp;
+							<%end%>
+							
+						<%end%>
 					</div>
 				</div>
 			</div>
@@ -104,6 +128,7 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 		  <% if @event.event_type.faqs != "" %>
 		  	<li><a href="#faqs" data-toggle="tab">Preguntas Frecuentes</a></li>
 		  <% end %>
+		  <!-- li><a href="#details" data-toggle="tab">Detalles</a></li -->
 		</ul>
 		
 		<div class="tab-content">
@@ -127,6 +152,9 @@ $('body').on('hidden', '#myModalFacilitator', function () {
 		  	<%=@markdown_renderer.render( @event.event_type.faqs )%>
 			<br/>&nbsp;
 		  </div>
+		  <!--div class="tab-pane" id="details">
+			<br/>&nbsp;
+		  </div -->
 		</div>
 		
 	</div>

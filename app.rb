@@ -196,6 +196,10 @@ get '/sepyme' do
   erb :sepyme
 end
 
+get '/sepyme/remote' do
+  erb :sepyme_remote, :layout => :layout_empty
+end
+
 # LEGACY ==================== 
 
 get '/es/:path' do
