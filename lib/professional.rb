@@ -1,6 +1,6 @@
 class Professional
   
-  attr_accessor :name, :bio, :linkedin_url, :gravatar_picture_url, :twitter_username
+  attr_accessor :name, :bio, :linkedin_url, :gravatar_picture_url, :twitter_username, :id
   
   def initialize
     @name = ""
@@ -8,6 +8,7 @@ class Professional
     @linkedin_url = ""
     @gravatar_picture_url = ""
     @twitter_username = ""
+    @id = ""
   end
   
 end

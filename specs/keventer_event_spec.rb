@@ -39,6 +39,11 @@ describe KeventerEvent do
     @kevent.is_sold_out.should == false
   end
   
+  it "should have a place" do
+    @kevent.place = "Kleer, Tucuman 373 1er Piso"
+    @kevent.place.should == "Kleer, Tucuman 373 1er Piso"
+  end
+  
   it "should have a city" do
     @kevent.city = "Buenos Aires"
     @kevent.city.should == "Buenos Aires"

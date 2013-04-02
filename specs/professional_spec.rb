@@ -8,6 +8,11 @@ describe Professional do
   before(:each) do
     @professional = Professional.new
   end
+
+  it "should have an id" do
+    @professional.id = 12
+    @professional.id.should == 12
+  end
   
   it "should have a name" do
     @professional.name = "Juan"

@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="span1"> 
+		<img src="<%=@event.trainer.gravatar_picture_url%>" class="img-circle">
+		<br/><br/>
+		<% if @event.trainer.linkedin_url != "" %>
+		&nbsp;<a href="<%=@event.trainer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
+		<% end %>
+		<% if @event.trainer.twitter_username != "" %>
+		&nbsp;<a href="https://twitter.com/<%=@event.trainer.twitter_username.gsub("@","")%>" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a>
+		<% end %>
+	</div>
+	<div class="span4">
+		<div class="row">
+			<div class="span3">
+				<h2><%=@event.trainer.name%></h2>
+			</div>
+		</div>
+		<div class="row">
+			<p><%=@markdown_renderer.render( @event.trainer.bio )%></p>
+		</div>
+	</div>
+</div>

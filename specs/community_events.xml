@@ -46,6 +46,16 @@
       <updated-at type="datetime">2013-01-03T15:21:13Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>&gt; Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
 
 **Pablo Tortorella**
@@ -104,6 +114,16 @@ Ing. en Informática, CSM, CSD
       <updated-at type="datetime">2013-01-03T15:21:13Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Creo firmemente que la mejora continua es la llave para tener equipos productivos y felices, y que ésta se lleva a cabo mediante la introspección y acciones concretas.
 
 Mi compromiso es ayudar a las personas y organizaciones a llevarla a cabo.

@@ -181,6 +181,7 @@ class KeventerReader
     event.date = Date.parse( xml_keventer_event.find_first('date').content )
     event.capacity = xml_keventer_event.find_first('capacity').content.to_i
     event.city = xml_keventer_event.find_first('city').content
+    event.place = xml_keventer_event.find_first('place').content
     event.registration_link = xml_keventer_event.find_first('registration-link').content
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
     event.country = xml_keventer_event.find_first('country/name').content
@@ -190,6 +191,10 @@ class KeventerReader
     
     trainer.name = xml_keventer_event.find_first('trainer/name').content
     trainer.bio = xml_keventer_event.find_first('trainer/bio').content
+    trainer.id = xml_keventer_event.find_first('trainer/id').content
+    trainer.linkedin_url = xml_keventer_event.find_first('trainer/linkedin-url').content
+    trainer.gravatar_picture_url = xml_keventer_event.find_first('trainer/gravatar-picture-url').content
+    trainer.twitter_username = xml_keventer_event.find_first('trainer/twitter-username').content
     event.trainer = trainer
     
     event_type.name  = xml_keventer_event.find_first('event-type/name').content

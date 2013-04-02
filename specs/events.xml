@@ -46,6 +46,16 @@
       <id type="integer">4</id>
       <name>Raul Gorgonzola</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+      <linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+	  <twitter-username>@gorgonzo</twitter-username>
+	  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+	  <country>
+        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+        <id type="integer">9</id>
+        <iso-code>AR</iso-code>
+        <name>Argentina</name>
+        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+      </country>
     </trainer>
   </event>
   <event>
@@ -110,6 +120,16 @@ El curso se basa ejercicios y dinámicas con técnicas para una comunicación ef
       <updated-at type="datetime">2012-12-07T19:27:19Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>  
       <bio>Contamos con nuevas formas de trabajo que nos permiten ser mucho más efectivos e innovadores. 
 Mi trabajo es ayudar a personas y organizaciones a cumplir estos objetivos con altos niveles de satisfacción.
 
@@ -175,6 +195,16 @@ El webinar se desarrollará con ejemplos en Ruby, pero se compartirán otros eje
       <updated-at type="datetime">2012-12-14T18:43:56Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
 Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
 
@@ -275,6 +305,16 @@ Patrones de Adopción de Scrum</program>
       <updated-at type="datetime">2012-12-07T00:50:16Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 Agile Coach &amp; Trainer 
@@ -347,6 +387,16 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 Agile Coach &amp; Trainer 
@@ -441,6 +491,16 @@ Construcción Evolutiva e Iterativa - Sprints
       <updated-at type="datetime">2012-12-08T10:28:35Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 Agile Coach &amp; Trainer 
@@ -500,6 +560,16 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
       <updated-at type="datetime">2012-12-11T19:34:17Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio></bio>
       <created-at type="datetime">2012-12-11T19:14:18Z</created-at>
       <id type="integer">16</id>
@@ -561,6 +631,16 @@ Los ejemplos durante el taller se harán principalmente en Ruby, pero se compart
       <updated-at type="datetime">2012-12-14T18:59:45Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
 Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
 
@@ -634,6 +714,16 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 Agile Coach &amp; Trainer 
@@ -706,6 +796,16 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
       <updated-at type="datetime">2012-10-17T11:04:54Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 Agile Coach &amp; Trainer 
@@ -763,6 +863,16 @@ Este evento de un día completo proveerá a los asistentes un entendimiento clar
       <updated-at type="datetime">2012-09-06T10:59:01Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
 
 Agile Coach &amp; Trainer 
@@ -838,6 +948,16 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
 
 Agile Coach &amp; Trainer 
@@ -898,6 +1018,16 @@ Este curso enseña nuevas habilidades que los participantes pueden utilizar en l
       <updated-at type="datetime">2012-09-06T11:02:03Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
 
 Agile Coach &amp; Trainer 
@@ -960,6 +1090,16 @@ El curso proporciona una experiencia de primera mano con respecto a los benefici
       <updated-at type="datetime">2012-09-06T11:04:02Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
 
 Agile Coach &amp; Trainer 
@@ -1035,6 +1175,16 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua. 
 Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
 
@@ -1111,6 +1261,16 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
     </event-type>
     <trainer>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
       <bio>Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua. 
 Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
 

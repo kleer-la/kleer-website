@@ -5,6 +5,7 @@ Feature: Event Details
 		When I visit the plain event page
 		Then I should see "Workshop de Retrospectivas"
 		And I should see "una descripción."
+		And I should see "Kleer, Tucumán 373 1er Piso"
 		And I should see "Buenos Aires"
 		And I should see "Argentina"
 		And I should see an image pointing to "/img/flags/ar.png"
@@ -17,6 +18,7 @@ Feature: Event Details
 		When I visit the event page
 		Then I should see "Workshop de Retrospectivas"
 		And I should see "una descripción."
+		And I should see "Kleer, Tucumán 373 1er Piso"
 		And I should see "Buenos Aires"
 		And I should see "Argentina"
 		And I should see an image pointing to "/img/flags/ar.png"
@@ -29,6 +31,7 @@ Feature: Event Details
 		When I visit the community event page
 		Then I should see "Yoseki Coding Dojo"
 		And I should see "Es una reunión donde un grupo de desarrolladores trabajan en un desafío de programación."
+		And I should see "Kleer, Tucumán 373 1er Piso"
 		And I should see "Buenos Aires"
 		And I should see "Argentina"
 		And I should see an image pointing to "/img/flags/ar.png"

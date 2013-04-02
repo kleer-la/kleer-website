@@ -14,12 +14,30 @@ $('body').on('hidden', '#myModalRegistration', function () {
   $(this).removeData('modal');
 });
 
+$('body').on('hidden', '#myModalFacilitator', function () {
+  $(this).removeData('modal');
+});
+
 -->
 </script>
+
 <div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h4 id="myModalLabel">Registro a Curso</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
+<div id="myModalFacilitator" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Facilitador</h4>
   </div>
   <div class="modal-body">
     <p>Cargando...</p>
@@ -55,7 +73,9 @@ $('body').on('hidden', '#myModalRegistration', function () {
 			</div>
 			<div class="span5">
 				<h3><%=@event.event_type.name%></h3>
-				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.city%>, <%=@event.country%>&nbsp;
+				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/>  <%=@event.place%><br/><%=@event.city%>, <%=@event.country%><br/><br/>
+				Facilitador:<br/>
+				<a  data-toggle="modal" data-target="#myModalFacilitator" href="/entrenamos/evento/<%=@event.id%>/entrenador/remote"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a>&nbsp;
 			</div>
 		</div>
 	</div>
@@ -68,7 +88,6 @@ $('body').on('hidden', '#myModalRegistration', function () {
 		  <li><a href="#goal" data-toggle="tab">Objetivos</a></li>
 		  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
 		  <li><a href="#program" data-toggle="tab">Programa</a></li>
-		  <li><a href="#trainer" data-toggle="tab"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a></li>
 		  <li><%if @event.is_sold_out%>
 				<a href="#registration" data-toggle="tab"><span class="label label-important">Completo</span></a>
 			  <%elsif @event.registration_link != "" %>
@@ -94,10 +113,6 @@ $('body').on('hidden', '#myModalRegistration', function () {
 		  </div>
 		  <div class="tab-pane" id="program">
 		  	<%=@markdown_renderer.render( @event.event_type.program )%>
-			<br/>&nbsp;
-		  </div>
-		  <div class="tab-pane" id="trainer">
-			<%=@markdown_renderer.render( @event.trainer.bio )%>
 			<br/>&nbsp;
 		  </div>
 		  <div class="tab-pane" id="registration">

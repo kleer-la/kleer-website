@@ -27,7 +27,7 @@ $('body').on('hidden', '#myModalRegistration', function () {
 		<span class="label label-info"><%=@event.date.strftime("%d")%><br><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>
 	</div>
 	<div class="span3">
-		<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.city%>, <%=@event.country%><br/>
+		<img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.place%><br/><%=@event.city%>, <%=@event.country%><br/>
 		<i class="icon-user"></i>&nbsp;<%=@event.trainer_name%>
 	</div>	
 </div>

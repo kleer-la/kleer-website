@@ -79,6 +79,22 @@ get '/entrenamos/evento/:event_id_with_name' do
   end
 end
 
+get '/entrenamos/evento/:event_id_with_name/entrenador/remote' do
+  event_id_with_name = params[:event_id_with_name]
+
+  event_id = event_id_with_name.split('-')[0]
+  if is_valid_event_id(event_id)
+    @event = @@keventer_reader.event(event_id, false)
+  end
+
+  if @event.nil?
+    @error = get_course_not_found_error()
+    erb :error404_remote_to_calendar, :layout => :layout_empty
+  else
+    erb :trainer_remote, :layout => :layout_empty
+  end
+end
+
 get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
 
@@ -174,6 +190,10 @@ end
 
 get '/preguntas-frecuentes/certified-scrum-developer' do
   erb :certified_scrum_developer
+end
+
+get '/sepyme' do
+  erb :sepyme
 end
 
 # LEGACY ==================== 
