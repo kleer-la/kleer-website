@@ -29,6 +29,11 @@ describe KeventerEvent do
     @kevent.date.should == a_date
   end
   
+  it "should have a human date" do
+    @kevent.human_date = "18-19 Abr"
+    @kevent.human_date.should == "18-19 Abr"
+  end  
+  
   it "should have a registration_link" do
     @kevent.registration_link = "http://kleer.la"
     @kevent.registration_link.should == "http://kleer.la"
