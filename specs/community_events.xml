@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events type="array">
   <event>
+	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
+	<end-time type="datetime">2000-01-01T18:00:00Z</end-time>
     <cancelled type="boolean">false</cancelled>
     <capacity type="integer">16</capacity>
     <city>Buenos Aires</city>
@@ -71,6 +73,8 @@ Ing. en Informática, CSM, CSD
     </trainer>
   </event>
   <event>
+	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
+	<end-time type="datetime">2000-01-01T18:00:00Z</end-time>
     <cancelled type="boolean">false</cancelled>
     <capacity type="integer">20</capacity>
     <city>Lima</city>

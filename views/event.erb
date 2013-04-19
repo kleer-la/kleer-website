@@ -88,7 +88,8 @@ $('body').on('hidden', '#myModalSepyme', function () {
 			</div>
 			<div class="span6">
 				<h3><%=@event.event_type.name%></h3>
-				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/>  <%=@event.place%><br/><%=@event.city%>, <%=@event.country%><br/><br/>
+				<img src="/img/flags/<%=@event.country_code.downcase%>.png"/>  <%=@event.place%><br/><%=@event.city%>, <%=@event.country%><br/>
+				<%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs<br/><br/>
 				<div class="row">
 					<div class="span2">
 						Facilitador:<br/>

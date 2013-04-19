@@ -29,6 +29,18 @@ describe KeventerEvent do
     @kevent.date.should == a_date
   end
   
+  it "should have a start time" do
+    a_time = Time.new
+    @kevent.start_time = a_time
+    @kevent.start_time.should == a_time
+  end
+  
+  it "should have an end time" do
+    a_time = Time.new
+    @kevent.end_time = a_time
+    @kevent.end_time.should == a_time
+  end
+  
   it "should have a human date" do
     @kevent.human_date = "18-19 Abr"
     @kevent.human_date.should == "18-19 Abr"
