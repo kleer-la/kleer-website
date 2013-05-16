@@ -32,6 +32,12 @@ get '/' do
 	erb :index
 end
 
+
+get '/blog' do
+  @active_tab_blog = "active"
+  erb :blog
+end
+
 get '/entrenamos' do
  	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
