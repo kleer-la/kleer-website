@@ -191,4 +191,18 @@ describe KeventerReader do
 
   end  
   
+  context "Extracting Categories" do
+    before(:each) do
+      @connector = double("KeventerConnector")
+      @connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/categories.xml') )
+
+      @kevr = KeventerReader.new( @connector )
+    end
+
+    it "should return 3 categories" do
+      @kevr.categories.count.should == 3
+    end
+
+  end
+  
 end

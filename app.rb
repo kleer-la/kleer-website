@@ -29,6 +29,7 @@ end
 
 get '/' do
 	@active_tab_index = "active"
+	@categories = @@keventer_reader.categories
 	erb :index
 end
 

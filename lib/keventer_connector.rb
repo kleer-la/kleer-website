@@ -5,6 +5,7 @@ class KeventerConnector
   API_EVENTS_PATH = "/events.xml"
   API_COMMUNITY_EVENTS_PATH = "/community_events.xml"
   API_KLEERERS_PATH = "/kleerers.xml"
+  API_CATEGORIES_PATH = "/categories.xml"
   
   def events_xml_url
       API_ROOT + API_EVENTS_PATH
@@ -16,6 +17,10 @@ class KeventerConnector
   
   def kleerers_xml_url
     API_ROOT + API_KLEERERS_PATH
+  end
+  
+  def categories_xml_url
+    API_ROOT + API_CATEGORIES_PATH
   end
   
   def keventer_url

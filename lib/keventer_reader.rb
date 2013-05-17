@@ -5,6 +5,7 @@ require File.join(File.dirname(__FILE__),'/keventer_event_type')
 require File.join(File.dirname(__FILE__),'/country')
 require File.join(File.dirname(__FILE__),'/keventer_connector')
 require File.join(File.dirname(__FILE__),'/professional')
+require File.join(File.dirname(__FILE__),'/category')
 
 class KeventerReader
   
@@ -67,6 +68,30 @@ class KeventerReader
     end
     
     kleerers
+  end
+  
+  def categories
+    parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
+    doc = parser.parse
+    loaded_categories = doc.find('/categories/category')
+    
+    categories = Array.new
+    
+    loaded_categories.each do |loaded_category|
+      category = Category.new
+      
+      category.name = loaded_category.find_first('name').content
+      category.codename = loaded_category.find_first('codename').content
+      category.tagline = loaded_category.find_first('tagline').content
+      category.description = loaded_category.find_first('description').content
+      category.order = loaded_category.find_first('order').content.to_i
+      
+      categories << category
+    end
+    
+    categories.sort!{|p1,p2| p1.order <=> p2.order}
+    
+    categories
   end
 
   private

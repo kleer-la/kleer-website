@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categories type="array">
+  <category>
+    <codename>high-performance</codename>
+    <created-at type="datetime">2013-04-19T17:36:06Z</created-at>
+    <description>una descripción...</description>
+    <id type="integer">2</id>
+    <name>High Performance</name>
+    <order type="integer">1</order>
+    <tagline>Personas, Equipos y Organizaciones Eficientes</tagline>
+    <updated-at type="datetime">2013-04-20T23:23:40Z</updated-at>
+    <visible type="boolean">true</visible>
+  </category>
+  <category>
+    <codename>productos-robustos</codename>
+    <created-at type="datetime">2013-04-19T17:39:54Z</created-at>
+    <description>--- bla - bla bla bla...</description>
+    <id type="integer">4</id>
+    <name>Productos Robustos</name>
+    <order type="integer">3</order>
+    <tagline>Calidad de mis Productos, Escalabilidad</tagline>
+    <updated-at type="datetime">2013-04-20T23:23:49Z</updated-at>
+    <visible type="boolean">true</visible>
+  </category>
+  <category>
+    <codename>clientes-satisfechos</codename>
+    <created-at type="datetime">2013-04-19T17:38:17Z</created-at>
+    <description>una descripción de esto...</description>
+    <id type="integer">3</id>
+    <name>Clientes Muy Satisfechos</name>
+    <order type="integer">2</order>
+    <tagline>Productos Innovadores, Creatividad, Foco en el Cliente</tagline>
+    <updated-at type="datetime">2013-04-20T23:23:57Z</updated-at>
+    <visible type="boolean">true</visible>
+  </category>
+</categories>
