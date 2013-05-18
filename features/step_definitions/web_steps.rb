@@ -6,6 +6,7 @@ def stub_connector( test_file = "just_one_event.xml")
   connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/#{test_file}") )
   connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/community_events.xml") )
   connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/kleerers.xml") )
+  connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../specs/categories.xml") )
   
   @@keventer_reader.connector = connector
 end
@@ -47,6 +48,7 @@ Given /^there are many events$/ do
 end
 
 When /^I visit the home page$/ do
+  stub_connector
   visit '/'
 end
 
