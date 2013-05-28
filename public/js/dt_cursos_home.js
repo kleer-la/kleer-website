@@ -16,7 +16,7 @@ $(document).ready(function() {
 		"bSort": false,
 		"bPaginate": false,
 		"bFilter": false,
-		"sScrollY": "220px",
+		"sScrollY": "500px",
 		"oLanguage": {
 			"sLengthMenu":   "Mostrar _MENU_ registros",
 			"sZeroRecords":  "<div class=\"alert alert-warning center\">Cargando...</div>",
