@@ -146,6 +146,18 @@
 			    .carousel-caption .btn {
 			      margin-top: 10px;
 			    }
+			
+				.carousel-indicators.middle {
+				    left: 0;
+				    right: 0;
+				    top: auto;
+				    bottom: 15px;
+				    text-align: center;
+				}
+				    .carousel-indicators.middle li {
+				        float: none;
+				        display: inline-block;
+				    }
 			<%end%>
 		
 		
@@ -186,11 +198,6 @@
 	<!-- Carousel
 	    ================================================== -->
 	    <div id="myCarousel" class="carousel slide">
-		  	<ol class="carousel-indicators">
-			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			    <li data-target="#myCarousel" data-slide-to="1"></li>
-			    <li data-target="#myCarousel" data-slide-to="2"></li>
-			  </ol>
 	      <div class="carousel-inner">
 	        <div class="item active">
 	          <img src="/img/slider/slide-01.jpg" alt="">
@@ -225,6 +232,11 @@
 	      </div>
 	      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 	      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			<ol class="carousel-indicators middle">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+			  </ol>
 	    </div><!-- /.carousel -->
 	<%end%>
 
