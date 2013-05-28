@@ -6,11 +6,17 @@ class DTHelper
   MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
                 "Jul" => "Jul", "Aug" => "Ago", "Sep" => "Sep", "Oct" => "Oct", "Nov" => "Nov", "Dec" => "Dic"}
   
-  def self.to_dt_event_array_json(events, remote = true, event_details_path = "entrenamos")
+  def self.to_dt_event_array_json(events, remote = true, event_details_path = "entrenamos", amount = nil)
     result = Array.new
+    
+    printed = 0
     
     events.each do |event|
       result << DTHelper::event_result_json(event, remote, event_details_path)
+      printed += 1
+      if !amount.nil? && printed==amount
+        break
+      end
     end
     
     "{ \"aaData\": " + result.to_json + "}"

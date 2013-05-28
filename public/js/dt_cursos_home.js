@@ -6,7 +6,7 @@ var oTable;
 $(document).ready(function() {
 	oTable = $('#cursos').dataTable( {
 		"bLengthChange": false,
-		"sAjaxSource": '/entrenamos/eventos/proximos',
+		"sAjaxSource": '/entrenamos/eventos/proximos/8',
 		"aoColumns": [
 			{ "sWidth": "5%" },
 			{ "sWidth": "75%" },
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		"bSort": false,
 		"bPaginate": false,
 		"bFilter": false,
-		"sScrollY": "500px",
+		/* "sScrollY": "500px", */
 		"oLanguage": {
 			"sLengthMenu":   "Mostrar _MENU_ registros",
 			"sZeroRecords":  "<div class=\"alert alert-warning center\">Cargando...</div>",

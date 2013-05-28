@@ -161,6 +161,15 @@ get '/entrenamos/eventos/proximos' do
   DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos")
 end
 
+get '/entrenamos/eventos/proximos/:amount' do
+  content_type :json
+  amount = params[:amount]
+  if !amount.nil?
+    amount = amount.to_i
+  end
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", amount)
+end
+
 get '/entrenamos/eventos/pais/:country_iso_code' do
   content_type :json
   country_iso_code = params[:country_iso_code]
