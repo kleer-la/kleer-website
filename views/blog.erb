@@ -1,0 +1,34 @@
+<style>
+	body {
+		background: url(/img/fondos/fondo-02.jpg) no-repeat center center fixed; 
+	}
+</style>
+
+<div class="row">
+	<div class="span4">  
+		<img src="/img/logos/logo-03.png">
+	</div>
+	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<h1>Blog</h1>
+
+        <div id="blog-container"></div>
+
+
+	</div>
+
+	<div class="row"><div class="span1">&nbsp;</div></div>
+	
+	<div class="row">
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/jquery.js"/></script>
+<script type="text/javascript" src="/js/jquery.zrssfeed.min.js"/></script>
+<script type="text/javascript"/>
+$(document).ready(function () {
+$('#blog-container').rssfeed('http://pipes.yahoo.com/pipes/pipe.run?_id=b64e1e5195db560b9456853e55f62668&_render=rss', {header:false, dateformat:'date',limit:5, snippet:false, linktarget:'_blank'});
+});
+
+</script>
