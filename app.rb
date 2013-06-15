@@ -7,6 +7,7 @@ require 'redcarpet'
 require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
+require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
@@ -81,6 +82,7 @@ get '/entrenamos/evento/:event_id_with_name' do
     erb :error404_to_calendar
   else
     @active_tab_entrenamos = "active"
+    @twitter_card = create_twitter_card( @event )    
     @page_title = "Kleer - " + @event.friendly_title
     erb :event
   end
@@ -148,6 +150,7 @@ get '/comunidad/evento/:event_id_with_name' do
     erb :error404_to_community
   else
     @active_tab_comunidad = "active"
+    @twitter_card = create_twitter_card( @event )
     @page_title = "Kleer - " + @event.friendly_title
     erb :event
   end
@@ -243,6 +246,16 @@ not_found do
 end
 
 private
+
+def create_twitter_card( event )
+  card = TwitterCard.new
+  card.title = event.friendly_title
+  card.description = event.event_type.description
+  card.image_url = "http://media.kleer.la/logos/K_social.jpg"
+  card.site = "@kleer_la"
+  card.creator = event.trainer.twitter_username
+  card
+end
 
 def get_404_error_text_for_course(course_name) 
   "Hemos movido la información sobre el curso '<strong>#{course_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho curso"
