@@ -39,10 +39,6 @@ Given /^theres only one event for the following two months$/ do
   stub_connector( "just_two_events.xml")
 end
 
-Given /^there are some categories$/ do
-  stub_connector
-end
-
 Given /^there are two events$/ do
   stub_connector( "just_two_events.xml")
 end
@@ -158,6 +154,11 @@ Given /^I visit the acompañamos page$/ do
   visit "/acompanamos"
 end
 
+Given /^I visit the "(.*?)" categoria page$/ do |codename|
+  stub_connector
+  visit "/categoria/" + codename
+end
+
 Given /^I visit the comunidad page$/ do
   stub_connector
   visit "/comunidad"
@@ -169,6 +170,7 @@ Given /^I visit the somos page$/ do
 end
 
 Given /^I visit the community page$/ do
+  stub_connector
   visit "/comunidad"
 end
 
@@ -190,10 +192,6 @@ end
 
 When /^I visit the entrenamos ajax page for other country$/ do
   visit "/comunidad/eventos/pais/otro"
-end
-
-When /^I visit the "(.*?)" category page$/ do |categoria_codename|
-  visit "/categoria/#{categoria_codename}"
 end
 
 Then /^I should see a tweet button$/ do

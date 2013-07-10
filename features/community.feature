@@ -1,3 +1,4 @@
+# encoding: utf-8
 Feature: Sección Comunitaria
 
 	Scenario: Country options in entrenamos page

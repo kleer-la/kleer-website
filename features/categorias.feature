@@ -1,8 +1,7 @@
-Feature: Categorías (Áreas)
+Feature: Cat
 
-	Scenario: Landing de Categoría (URL)
-		Given there are some categories
-		When I visit the "high-performance" category page
+	Scenario: Home Page Title
+		Given I visit the "high-performance" categoria page
 		Then I should see "High Performance"
 		And I should see "Personas, Equipos y Organizaciones Eficientes"
 		And I should see "una descripción..."
