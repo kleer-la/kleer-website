@@ -2,35 +2,56 @@
 <categories type="array">
   <category>
     <codename>high-performance</codename>
-    <created-at type="datetime">2013-04-19T17:36:06Z</created-at>
+    <created-at type="datetime">2013-07-10T20:51:35Z</created-at>
     <description>una descripción...</description>
-    <id type="integer">2</id>
+    <id type="integer">1</id>
     <name>High Performance</name>
     <order type="integer">1</order>
     <tagline>Personas, Equipos y Organizaciones Eficientes</tagline>
-    <updated-at type="datetime">2013-04-20T23:23:40Z</updated-at>
+    <updated-at type="datetime">2013-07-10T20:51:35Z</updated-at>
     <visible type="boolean">true</visible>
+    <event-types type="array">
+      <event-type>
+        <created-at type="datetime">2013-07-10T20:48:22Z</created-at>
+        <description>Una descripción</description>
+        <duration type="integer">8</duration>
+        <faq></faq>
+        <goal>Un objetivo</goal>
+        <id type="integer">1</id>
+        <include-in-catalog type="boolean">true</include-in-catalog>
+        <materials></materials>
+        <name>Tipo de Evento de Prueba</name>
+        <program>El programa</program>
+        <recipients>Un destinatario</recipients>
+        <updated-at type="datetime">2013-07-10T20:54:21Z</updated-at>
+      </event-type>
+    </event-types>
   </category>
   <category>
     <codename>productos-robustos</codename>
-    <created-at type="datetime">2013-04-19T17:39:54Z</created-at>
+    <created-at type="datetime">2013-07-10T20:52:23Z</created-at>
     <description>--- bla - bla bla bla...</description>
-    <id type="integer">4</id>
+    <id type="integer">2</id>
     <name>Productos Robustos</name>
-    <order type="integer">3</order>
-    <tagline>Calidad de mis Productos, Escalabilidad</tagline>
-    <updated-at type="datetime">2013-04-20T23:23:49Z</updated-at>
-    <visible type="boolean">true</visible>
-  </category>
-  <category>
-    <codename>clientes-satisfechos</codename>
-    <created-at type="datetime">2013-04-19T17:38:17Z</created-at>
-    <description>una descripción de esto...</description>
-    <id type="integer">3</id>
-    <name>Clientes Muy Satisfechos</name>
     <order type="integer">2</order>
-    <tagline>Productos Innovadores, Creatividad, Foco en el Cliente</tagline>
-    <updated-at type="datetime">2013-04-20T23:23:57Z</updated-at>
+    <tagline>Calidad de mis Productos, Escalabilidad</tagline>
+    <updated-at type="datetime">2013-07-10T20:52:23Z</updated-at>
     <visible type="boolean">true</visible>
+    <event-types type="array">
+      <event-type>
+        <created-at type="datetime">2013-07-10T20:53:56Z</created-at>
+        <description>esta es la descripción</description>
+        <duration type="integer">1</duration>
+        <faq>¿más preguntas?</faq>
+        <goal>acá va el objetivo</goal>
+        <id type="integer">2</id>
+        <include-in-catalog type="boolean">true</include-in-catalog>
+        <materials></materials>
+        <name>Taller de TDD</name>
+        <program>este el programa</program>
+        <recipients>esto es a quien está destinado</recipients>
+        <updated-at type="datetime">2013-07-10T20:53:56Z</updated-at>
+      </event-type>
+    </event-types>
   </category>
 </categories>

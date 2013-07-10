@@ -199,8 +199,8 @@ describe KeventerReader do
       @kevr = KeventerReader.new( @connector )
     end
 
-    it "should return 3 categories" do
-      @kevr.categories.count.should == 3
+    it "should return 2 categories" do
+      @kevr.categories.count.should == 2
     end
 
     it "should return the category 'high-performance' by id" do
