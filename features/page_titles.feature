@@ -29,3 +29,8 @@ Feature: Page Titles
 		Given theres only one event
 		When I visit the event page
 		Then the page title should be "Workshop de Retrospectivas - Buenos Aires"
+		
+	Scenario: Página de Categoría
+		Given there are some categories
+		When I visit the "high-performance" category page
+		Then the page title should be "Kleer - Agile Coaching & Training | High Performance"

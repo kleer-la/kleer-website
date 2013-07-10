@@ -70,6 +70,12 @@ get '/publicamos' do
   erb :ebooks
 end
 
+get '/categoria/:category_codename' do
+  @page_title += " | High Performance"
+  
+  erb :category
+end
+
 get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
