@@ -71,9 +71,15 @@ get '/publicamos' do
 end
 
 get '/categoria/:category_codename' do
-  @page_title += " | High Performance"
-  
-  erb :category
+  @category = @@keventer_reader.category(params[:category_codename])
+
+  if @category.nil?
+    status 404
+  else
+    @page_title += " | " + @category.name
+
+    erb :category
+  end
 end
 
 get '/entrenamos/evento/:event_id_with_name' do

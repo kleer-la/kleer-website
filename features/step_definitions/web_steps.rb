@@ -159,6 +159,12 @@ Given /^I visit the "(.*?)" categoria page$/ do |codename|
   visit "/categoria/" + codename
 end
 
+# TODO: por que da problema de secuencia si usamos el paso genérico!!
+Given /^I visit the unknown categoria page$/ do
+  stub_connector
+  visit "/categoria/pepe"
+end
+
 Given /^I visit the comunidad page$/ do
   stub_connector
   visit "/comunidad"
