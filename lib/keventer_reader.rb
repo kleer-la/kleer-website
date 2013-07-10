@@ -70,6 +70,11 @@ class KeventerReader
     kleerers
   end
   
+  def category(code_name)
+    all = categories
+    all.select { |category| category.codename == code_name }.first
+  end
+  
   def categories
     parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
     doc = parser.parse

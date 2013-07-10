@@ -203,6 +203,22 @@ describe KeventerReader do
       @kevr.categories.count.should == 3
     end
 
+    it "should return the category 'high-performance' by id" do
+      @kevr.category("high-performance").name.should == "High Performance"
+    end
+
+    it "should return nil for an unknown category" do
+      @kevr.category("chiste-bueno-peix").should == nil
+    end
+
+    it "should get tagline for the category 'high-performance'" do
+      @kevr.category("high-performance").tagline.should == "Personas, Equipos y Organizaciones Eficientes"
+    end
+
+    it "should get the descriptionfor the category 'high-performance'" do
+      @kevr.category("high-performance").description.should == "una descripción..."
+    end
+
   end
   
 end
