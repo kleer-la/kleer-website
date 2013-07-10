@@ -146,13 +146,17 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
     end
 end
 
+Given /^I visit the "(.*?)" page$/ do |page|
+  visit "/" + page
+end
+
 Given /^I visit the publicamos page$/ do
   visit "/publicamos"
 end
 
-Given /^I visit the acompañamos page$/ do
-  visit "/acompanamos"
-end
+# Given /^I visit the acompañamos page$/ do
+#   visit "/acompanamos"
+# end
 
 Given /^I visit the "(.*?)" categoria page$/ do |codename|
   stub_connector

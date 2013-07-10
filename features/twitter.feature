@@ -13,7 +13,7 @@ Feature: Page Titles
 		Then I should see the Kleer Twitter Box
 	
 	Scenario: Acompañamos Twitter
-		Given I visit the acompañamos page
+		Given I visit the "acompanamos" page
 		Then I should see the Kleer Twitter Box
 		
 	Scenario: Comunidad Twitter
