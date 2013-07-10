@@ -6,7 +6,7 @@ describe KeventerReader do
   
   it "Should Be Able to Load an Xml File for Events" do
     @connector = double("KeventerConnector")
-    @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+    @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
     
     @kevr = KeventerReader.new( @connector )
     @kevr.events.count.should == 16   
@@ -24,8 +24,8 @@ describe KeventerReader do
     
     before(:each) do
       @connector = double("KeventerConnector")
-      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
-      @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/community_events.xml') )
+      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
+      @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/community_events.xml') )
 
       @kevr = KeventerReader.new( @connector )
     end
@@ -112,7 +112,7 @@ describe KeventerReader do
   context "When loading the testing XML source filtering by country" do
     before(:each) do  
       @connector = double("KeventerConnector")
-      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
+      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
 
       @kevr = KeventerReader.new( @connector )
     end
@@ -150,8 +150,8 @@ describe KeventerReader do
   context "Extracting countries out of events lists" do
     before(:each) do
       @connector = double("KeventerConnector")
-      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/events.xml') )
-      @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/community_events.xml') )
+      @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
+      @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/community_events.xml') )
 
       @kevr = KeventerReader.new( @connector )
     end
@@ -180,7 +180,7 @@ describe KeventerReader do
   context "Extracting kleerers" do
     before(:each) do
       @connector = double("KeventerConnector")
-      @connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/kleerers.xml') )
+      @connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/kleerers.xml') )
 
       @kevr = KeventerReader.new( @connector )
     end
@@ -194,7 +194,7 @@ describe KeventerReader do
   context "Extracting Categories" do
     before(:each) do
       @connector = double("KeventerConnector")
-      @connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),'../specs/categories.xml') )
+      @connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/categories.xml') )
 
       @kevr = KeventerReader.new( @connector )
     end
