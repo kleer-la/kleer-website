@@ -9,7 +9,7 @@ Feature: Page Titles
 		Then I should see the Kleer Twitter Box
 		
 	Scenario: Publicamos Twitter
-		Given I visit the publicamos page
+		Given I visit the "publicamos" page
 		Then I should see the Kleer Twitter Box
 	
 	Scenario: Acompañamos Twitter

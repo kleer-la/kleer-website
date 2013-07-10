@@ -10,7 +10,7 @@ Feature: Page Titles
 		Then the page title should be "Kleer - Agile Coaching & Training | Entrenamos"
 		
 	Scenario: Entrenamos Title
-		Given I visit the publicamos page
+		Given I visit the "publicamos" page
 		Then the page title should be "Kleer - Agile Coaching & Training | Publicamos"
 	
 	Scenario: Acompañamos Title
