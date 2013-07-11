@@ -52,11 +52,6 @@ When /^I visit the home page$/ do
   visit '/'
 end
 
-When /^I visit the entrenamos page$/ do
-  stub_connector
-  visit '/entrenamos'
-end
-
 Then /^I should see the json string for all of the events$/ do
   text = '\"aaData\": \[' +
             '\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
@@ -155,11 +150,6 @@ Given /^I visit the "(.*?)" categoria page$/ do |codename|
   stub_connector
   visit "/categoria/" + codename
 end
-
-# Given /^I visit the community page$/ do
-#   stub_connector
-#   visit "/comunidad"
-# end
 
 When /^I visit the entrenamos ajax page$/ do
   visit "/entrenamos/eventos/pais/todos"
