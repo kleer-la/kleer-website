@@ -224,6 +224,10 @@ describe KeventerReader do
       @high_performance.event_types.count.should == 1
     end
 
+    it "should get Tipo de Evento de Prueba for the category 'high-performance'" do
+      @high_performance.event_types[0].name.should == "Tipo de Evento de Prueba"
+      @high_performance.event_types[0].description.should == "Una descripción"
+    end
 
   end
   
