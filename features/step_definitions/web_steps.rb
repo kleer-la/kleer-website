@@ -151,24 +151,8 @@ Given /^I visit the "(.*?)" categoria page$/ do |codename|
   visit "/categoria/" + codename
 end
 
-When /^I visit the entrenamos ajax page$/ do
-  visit "/entrenamos/eventos/pais/todos"
-end
-
-When /^I visit the entrenamos ajax page for Argentina$/ do
-  visit "/entrenamos/eventos/pais/ar"
-end
-
-When /^I visit the entrenamos ajax page for Bolivia$/ do
-  visit "/entrenamos/eventos/pais/bo"
-end
-
-When /^I visit the entrenamos ajax page for an invalid country$/ do
-  visit "/entrenamos/eventos/pais/invalido"
-end
-
-When /^I visit the entrenamos ajax page for other country$/ do
-  visit "/comunidad/eventos/pais/otro"
+When /^I visit the "(.*?)" ajax page (for [^()]+ )?\((.*?)\)$/ do |page, dummy, filter|
+  visit "/" + page + "/eventos/pais/" +  filter
 end
 
 Then /^I should see a tweet button$/ do
