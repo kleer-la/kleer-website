@@ -147,6 +147,7 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
 end
 
 Given /^I visit the "(.*?)" page$/ do |page|
+    stub_connector
   visit "/" + page
 end
 
@@ -155,20 +156,10 @@ Given /^I visit the "(.*?)" categoria page$/ do |codename|
   visit "/categoria/" + codename
 end
 
-Given /^I visit the comunidad page$/ do
-  stub_connector
-  visit "/comunidad"
-end
-
-Given /^I visit the somos page$/ do
-  stub_connector
-  visit "/somos"
-end
-
-Given /^I visit the community page$/ do
-  stub_connector
-  visit "/comunidad"
-end
+# Given /^I visit the community page$/ do
+#   stub_connector
+#   visit "/comunidad"
+# end
 
 When /^I visit the entrenamos ajax page$/ do
   visit "/entrenamos/eventos/pais/todos"

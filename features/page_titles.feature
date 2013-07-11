@@ -1,4 +1,5 @@
 # encoding: utf-8
+
 Feature: Page Titles
 
 	Scenario: Home Page Title
@@ -18,11 +19,11 @@ Feature: Page Titles
 		Then the page title should be "Kleer - Agile Coaching & Training | Acompañamos"	
 		
 	Scenario: Comunidad Title
-		Given I visit the comunidad page
-		Then the page title should be "Kleer - Agile Coaching & Training | Comunidad"		
+		Given I visit the "comunidad" page
+		Then the page title should be "Kleer - Agile Coaching & Training | Comunidad"	
 
 	Scenario: Somos Title
-		Given I visit the somos page
+		Given I visit the "somos" page
 		Then the page title should be "Kleer - Agile Coaching & Training | Somos"
 	
 	Scenario: Detalle de Evento

@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 Feature: Page Titles
 
 	Scenario: Home Page Twitter
@@ -17,11 +19,11 @@ Feature: Page Titles
 		Then I should see the Kleer Twitter Box
 		
 	Scenario: Comunidad Twitter
-		Given I visit the comunidad page
+		Given I visit the "comunidad" page
 		Then I should see the Kleer Twitter Box		
 
 	Scenario: Somos Twitter
-		Given I visit the somos page
+		Given I visit the "somos" page
 		Then I should see the Kleer Twitter Box
 	
 	Scenario: Detalle de Evento Twitter
