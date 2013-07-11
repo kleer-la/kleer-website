@@ -98,11 +98,11 @@ describe KeventerReader do
       end
       
       it "Should have 'Raul Gorgonzola' as trainer" do
-        @first_event.trainer_name.should == "Raul Gorgonzola"
+        @first_event.trainer.name.should == "Raul Gorgonzola"
       end
       
       it "Should have 'Raul Gorgonzola' as trainer" do
-        @first_event.trainer_bio.should == "Agile Coach"
+        @first_event.trainer.bio.should == "Agile Coach"
       end
       
     end
@@ -205,7 +205,7 @@ describe KeventerReader do
     end
 
     it "should return the category 'high-performance' by id" do
-      @high_performance .name.should == "High Performance"
+      @high_performance.name.should == "High Performance"
     end
 
     it "should return nil for an unknown category" do
@@ -213,7 +213,7 @@ describe KeventerReader do
     end
 
     it "should get tagline for the category 'high-performance'" do
-      @high_performance .tagline.should == "Personas, Equipos y Organizaciones Eficientes"
+      @high_performance.tagline.should == "Personas, Equipos y Organizaciones Eficientes"
     end
 
     it "should get the description for the category 'high-performance'" do
