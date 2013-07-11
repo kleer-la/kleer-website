@@ -197,6 +197,7 @@ describe KeventerReader do
       @connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/categories.xml') )
 
       @kevr = KeventerReader.new( @connector )
+      @high_performance = @kevr.category("high-performance")
     end
 
     it "should return 2 categories" do
@@ -204,7 +205,7 @@ describe KeventerReader do
     end
 
     it "should return the category 'high-performance' by id" do
-      @kevr.category("high-performance").name.should == "High Performance"
+      @high_performance .name.should == "High Performance"
     end
 
     it "should return nil for an unknown category" do
@@ -212,11 +213,11 @@ describe KeventerReader do
     end
 
     it "should get tagline for the category 'high-performance'" do
-      @kevr.category("high-performance").tagline.should == "Personas, Equipos y Organizaciones Eficientes"
+      @high_performance .tagline.should == "Personas, Equipos y Organizaciones Eficientes"
     end
 
-    it "should get the descriptionfor the category 'high-performance'" do
-      @kevr.category("high-performance").description.should == "una descripción..."
+    it "should get the description for the category 'high-performance'" do
+      @high_performance.description.should == "una descripción..."
     end
 
   end
