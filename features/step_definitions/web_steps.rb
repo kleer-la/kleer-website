@@ -150,8 +150,10 @@ Given /^I visit the "(.*?)" categoria page$/ do |codename|
   stub_connector
   visit "/categoria/" + codename
 end
-
-When /^I visit the "(.*?)" ajax page (for [^()]+ )?\((.*?)\)$/ do |page, dummy, filter|
+# I visit the "xxx" ajax page (todos)
+# I visit the "xxx" ajax page for Blabla (ba)
+# I visit the "xxx" ajax page not very valid (otro)
+When /^I visit the "(.*?)" ajax page ([^()]+)?\((.*?)\)$/ do |page, dummy, filter|
   visit "/" + page + "/eventos/pais/" +  filter
 end
 
@@ -271,18 +273,6 @@ end
 
 Given /^there are community events$/ do
   stub_connector( "events.xml")
-end
-
-When /^I visit the community ajax page$/ do
-  visit "/comunidad/eventos/pais/todos"
-end
-
-When /^I visit the community ajax page for Argentina$/ do
-  visit "/comunidad/eventos/pais/ar"
-end
-
-When /^I visit the community ajax page for an invalid country$/ do
-  visit "/comunidad/eventos/pais/invalido"
 end
 
 Then /^I should see the json string for all of the community events$/ do
