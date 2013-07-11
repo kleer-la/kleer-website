@@ -6,6 +6,7 @@ require File.join(File.dirname(__FILE__),'/country')
 require File.join(File.dirname(__FILE__),'/keventer_connector')
 require File.join(File.dirname(__FILE__),'/professional')
 require File.join(File.dirname(__FILE__),'/category')
+require File.join(File.dirname(__FILE__),'/event_type')
 
 class KeventerReader
   
@@ -90,13 +91,27 @@ class KeventerReader
       category.tagline = loaded_category.find_first('tagline').content
       category.description = loaded_category.find_first('description').content
       category.order = loaded_category.find_first('order').content.to_i
-      
+      category.event_types = load_event_types loaded_category
+
       categories << category
     end
     
     categories.sort!{|p1,p2| p1.order <=> p2.order}
     
     categories
+  end
+
+  private
+  def load_event_types event_types_xml_node
+    # TODO: construir el array de event_types
+    event_types = Array.new
+    if !event_types_xml_node.nil?
+      event_types_xml_node.find('event-types/event-type ').each do |event_type_node|
+        event_type = EventType.new
+        event_types << event_type
+      end
+    end
+    event_types
   end
 
   private

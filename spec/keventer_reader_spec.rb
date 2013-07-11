@@ -220,6 +220,11 @@ describe KeventerReader do
       @high_performance.description.should == "una descripción..."
     end
 
+    it "should get one event type for the category 'high-performance'" do
+      @high_performance.event_types.count.should == 1
+    end
+
+
   end
   
 end
