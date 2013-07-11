@@ -10,6 +10,13 @@
 		<h1><%= @category.name %></h1>
 		<p class="lead"><%= @category.tagline %></p>
 	</div>	
+	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+		<ul>
+			<% @event_types.each do |event_type| %>
+			<li><%= event_type.name%></li>
+			<% end %>
+		</ul>
+	</div>
 	<div class="span3" style="text-align:center;">  
 		<img src="/img/logos/logo-04.png">
 		<%= erb :twitter_box, :layout => false %>

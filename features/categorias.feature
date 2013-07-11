@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-Feature: Cat
+Feature: Categories
 
 	Scenario: Category Landing Page
 		Given I visit the "high-performance" categoria page
@@ -12,3 +12,7 @@ Feature: Cat
 		Then I should get a 404 error
 		And the page title should be "404 - No encontrado"
 		And I should see "404 - No encontrado"
+
+	Scenario: Event type list in Category Landing Page
+		Given I visit the "high-performance" categoria page
+		Then I should see "Tipo de Evento de Prueba"
