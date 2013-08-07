@@ -110,41 +110,48 @@ $('body').on('hidden', '#myModalSepyme', function () {
 		</div>
 		<div class="row-fluid">
 			<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-				<ul class="nav nav-tabs" id="myTab">
-				  <li class="active"><a href="#description" data-toggle="tab">Descripción</a></li>
-				  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
-				  <li><a href="#program" data-toggle="tab">Programa</a></li>
-				  <% if @event.event_type.faqs != "" %>
-				  	<li><a href="#faqs" data-toggle="tab">FAQs</a></li>
-				  <% end %>
-				  <!-- li><a href="#details" data-toggle="tab">Detalles</a></li -->
-				</ul>
+				<div class="row-fluid">
+					<div class="span8">
+						<ul class="nav nav-tabs" id="myTab">
+						  <li class="active"><a href="#description" data-toggle="tab">Descripción</a></li>
+						  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
+						  <li><a href="#program" data-toggle="tab">Programa</a></li>
+						  <% if @event.event_type.faqs != "" %>
+						  	<li><a href="#faqs" data-toggle="tab">FAQs</a></li>
+						  <% end %>
+						  <!-- li><a href="#details" data-toggle="tab">Detalles</a></li -->
+						</ul>
 
-				<div class="tab-content">
-				  <div class="tab-pane active" id="description">
-					<% if !@event.event_type.elevator_pitch.nil? %>
-					  <%=@markdown_renderer.render( @event.event_type.elevator_pitch )%>
-					<% end %>
-				  	<%=@markdown_renderer.render( @event.event_type.description )%>
-				    <br/>&nbsp;
-				  </div>
-				  <div class="tab-pane" id="recipients">
-				  	<%=@markdown_renderer.render( @event.event_type.recipients )%>
-					<br/>&nbsp;
-				  </div>
-				  <div class="tab-pane" id="program">
-				  	<%=@markdown_renderer.render( @event.event_type.program )%>
-					<br/>&nbsp;
-				  </div>
-				  <div class="tab-pane" id="faqs">
-				  	<%=@markdown_renderer.render( @event.event_type.faqs )%>
-					<br/>&nbsp;
-				  </div>
-				  <!--div class="tab-pane" id="details">
-					<br/>&nbsp;
-				  </div -->
+						<div class="tab-content">
+						  <div class="tab-pane active" id="description">
+							<% if !@event.event_type.elevator_pitch.nil? %>
+							  <%=@markdown_renderer.render( @event.event_type.elevator_pitch )%>
+							<% end %>
+						  	<%=@markdown_renderer.render( @event.event_type.description )%>
+						    <br/>&nbsp;
+						  </div>
+						  <div class="tab-pane" id="recipients">
+						  	<%=@markdown_renderer.render( @event.event_type.recipients )%>
+							<br/>&nbsp;
+						  </div>
+						  <div class="tab-pane" id="program">
+						  	<%=@markdown_renderer.render( @event.event_type.program )%>
+							<br/>&nbsp;
+						  </div>
+						  <div class="tab-pane" id="faqs">
+						  	<%=@markdown_renderer.render( @event.event_type.faqs )%>
+							<br/>&nbsp;
+						  </div>
+						  <!--div class="tab-pane" id="details">
+							<br/>&nbsp;
+						  </div -->
+						</div>
+					</div>
+					<div class="span4">
+						<h3>Registrate!</h3>
+						<iframe src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="500" border="0" scrolling="no" seamless></iframe>
+					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -168,15 +175,18 @@ $('body').on('hidden', '#myModalSepyme', function () {
 			</div>
 		</div>	
 		&nbsp;
-		<div class="row-fluid">
+		<!-- div class="row-fluid">
 			<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 				<h3>Compartir</h3>
-				<br/>&nbsp;<br/><a href="https://twitter.com/share" class="twitter-share-button" data-via="kleer_la">Tweet</a><br/>
-				<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div><br/>
-				<div class="g-plusone" data-size="medium"></div>
+				<span class='st_email_hcount' displayText='Email' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span>
+				<span class='st_facebook_hcount' displayText='Facebook' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span><br/><br/>
+				<span class='st_twitter_hcount' displayText='Tweet' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span>
+				<span class='st_linkedin_hcount' displayText='LinkedIn' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span><br/><br/>
+				<span class='st_pinterest_hcount' displayText='Pinterest' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span>
+				<span class='st_googleplus_hcount' displayText='G +' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span><br/><br/>
 			</div>
 			
-		</div>
+		</div -->
 		&nbsp;
 		<div class="row-fluid">
 			<div class="span12">
@@ -188,21 +198,6 @@ $('body').on('hidden', '#myModalSepyme', function () {
 </div>
 
 <!-- social scripts -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=104053446339772";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<script type="text/javascript">
-  window.___gcfg = {lang: 'es-419'};
-
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
+<!-- script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "dcd6ccd6-45d9-4bb1-9b6f-b9742b986b08", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script -->
