@@ -21,6 +21,7 @@
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>

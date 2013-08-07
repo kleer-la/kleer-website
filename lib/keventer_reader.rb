@@ -231,6 +231,7 @@ class KeventerReader
     event.capacity = xml_keventer_event.find_first('capacity').content.to_i
     event.city = xml_keventer_event.find_first('city').content
     event.place = xml_keventer_event.find_first('place').content
+    event.address = xml_keventer_event.find_first('address').content
     event.registration_link = xml_keventer_event.find_first('registration-link').content
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
     if xml_keventer_event.find_first('sepyme-enabled').content == ""

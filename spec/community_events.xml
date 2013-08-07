@@ -21,6 +21,7 @@
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>mailto:dojo@kleer.la</registration-link>
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2013-01-03T15:22:20Z</updated-at>
@@ -96,6 +97,7 @@ Ing. en Informática, CSM, CSD
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Open Edge - Kleer</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>mailto:hiroshi.hiromoto@kleer.la</registration-link>
     <trainer-id type="integer">17</trainer-id>
     <updated-at type="datetime">2013-01-04T15:00:02Z</updated-at>

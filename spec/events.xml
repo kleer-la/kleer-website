@@ -21,6 +21,7 @@
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
@@ -88,6 +89,7 @@
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Webinar</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/webinar-com-efectiva-16-ene/registrations/new</registration-link>
     <trainer-id type="integer">10</trainer-id>
     <updated-at type="datetime">2012-12-07T19:44:00Z</updated-at>
@@ -182,6 +184,7 @@ CSM y Especialista en Innovación
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Webinar</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/web-tdd1-201301</registration-link>
     <trainer-id type="integer">11</trainer-id>
     <updated-at type="datetime">2012-12-14T18:52:34Z</updated-at>
@@ -264,6 +267,7 @@ Agile Coach &amp; Trainer
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Amani Casa de Campo</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/csm-verano-23-24-y-25-ene/registrations/new</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-12-07T00:52:53Z</updated-at>
@@ -382,6 +386,7 @@ CSC, PMP, PMI-ACP</bio>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Casa de la Moneda</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>http://www.openedgetech.com/calendario</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-12-07T02:07:26Z</updated-at>
@@ -473,6 +478,7 @@ CSC, PMP, PMI-ACP</bio>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/cspo-7-y-8-feb/registrations/new</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-12-08T10:41:42Z</updated-at>
@@ -586,6 +592,7 @@ CSC, PMP, PMI-ACP</bio>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Tucumán 373 1er piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/events/taller-de-angularjs/registrations/new</registration-link>
     <trainer-id type="integer">16</trainer-id>
     <updated-at type="datetime">2012-12-12T02:19:29Z</updated-at>
@@ -661,6 +668,7 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Webinar</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/web-tdd2-201302</registration-link>
     <trainer-id type="integer">11</trainer-id>
     <updated-at type="datetime">2012-12-14T19:04:00Z</updated-at>
@@ -745,6 +753,7 @@ Agile Coach &amp; Trainer
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Cámara de Comercio de Bogotá Sede Chapinero</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>mailto:entrenamos.colombia@kleer.la</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-12-07T02:02:53Z</updated-at>
@@ -836,6 +845,7 @@ CSC, PMP, PMI-ACP</bio>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Centro de convenciones "Casa Campestre" - Av. Blanco Galindo Km.10 zona Piñami Av. Meneces</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dEF0Qmp2dUphN1pqRGtldFVLeGV6RXc6MA#gid=0</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-12-12T18:57:54Z</updated-at>
@@ -927,6 +937,7 @@ CSC, PMP, PMI-ACP</bio>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/intro-a-scrum-marzo-2013/registrations/new</registration-link>
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2012-12-11T12:32:09Z</updated-at>
@@ -1004,6 +1015,7 @@ Ing. en Informática, CSM, CSD
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/csd-marzo-2013/registrations/new</registration-link>
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2012-12-11T12:32:04Z</updated-at>
@@ -1098,6 +1110,7 @@ Ing. en Informática, CSM, CSD
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/analisis-estim-y-plan-con-scrum-marzo-2013/registrations/new</registration-link>
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2012-12-11T12:32:14Z</updated-at>
@@ -1177,6 +1190,7 @@ Ing. en Informática, CSM, CSD
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/desarrollo-agil-marzo-2013/registrations/new</registration-link>
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2012-12-11T12:32:20Z</updated-at>
@@ -1258,6 +1272,7 @@ Ing. en Informática, CSM, CSD
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>TBD</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFk5ZUtrWlE5SUw2elJyNjQ3ZHR2bUE6MA#gid=0</registration-link>
     <trainer-id type="integer">6</trainer-id>
     <updated-at type="datetime">2012-12-11T19:37:12Z</updated-at>
@@ -1353,6 +1368,7 @@ Ing. Electrónica, CSM, CSD
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Centro de convenciones "Casa Campestre" - Av. Blanco Galindo Km.10 zona Piñami Av. Meneces</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://docs.google.com/a/kleer.la/spreadsheet/viewform?formkey=dFdfYlJhQzlVWG9uWk5yODRGVDcxVGc6MA#gid=0</registration-link>
     <trainer-id type="integer">6</trainer-id>
     <updated-at type="datetime">2012-12-11T20:12:04Z</updated-at>

@@ -51,6 +51,11 @@ describe KeventerEvent do
     @kevent.registration_link.should == "http://kleer.la"
   end
   
+  it "should have an address" do
+    @kevent.address = "http://kleer.la"
+    @kevent.address.should == "http://kleer.la"
+  end
+  
   it "should have a sold-out flag" do
     @kevent.is_sold_out = false
     @kevent.is_sold_out.should == false
