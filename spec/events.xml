@@ -35,6 +35,9 @@
     <event-type>
       <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
       <description>una descripción.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>un objetivo.</goal>
       <id type="integer">13</id>
@@ -107,6 +110,9 @@ impedimentos, requerimientos y necesidades
 
 El curso se basa ejercicios y dinámicas con técnicas para una comunicación efectiva en distintas circunstancias del entorno de trabajo. Incluye presentaciones y comunicación escrita (reportes, correo electrónico y documentos). Los asistentes alcanzan experiencia real trabajando con las prácticas de una comunicación efectiva.
 </description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>Lograr una comunicación con mayor precisión, impacto y seguridad, ya sea basada en escritos o presentaciones</goal>
       <id type="integer">15</id>
@@ -195,6 +201,9 @@ Se basa en la utilización de pruebas unitarias escritas a partir de las histori
 
 El webinar se desarrollará con ejemplos en Ruby, pero se compartirán otros ejemplos pre-grabados en otros lenguajes como Java, C# y Python.
 </description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">4</duration>
       <goal>Introducir a los asistentes a este enfoque de diseño de software a través de la exposición de los conceptos y principios fundamentales y de la práctica mediante ejercicios, en conjunto, guiados por el entrenador.</goal>
       <id type="integer">17</id>
@@ -271,6 +280,9 @@ Agile Coach &amp; Trainer
       <description>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.
 
 La edición de Verano de este curso incluye un trabajo especialmente enfocado en la generación de equipo, confianza, comunicación y auto-organización que se realiza al aire libre en una finca en la ciudad de Lobos, Pcia. de Buenos Aires.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">36</duration>
       <goal>Interactivo, Práctico y Participativo
 
@@ -394,6 +406,9 @@ Porque es un curso 100% participativo en donde estarás simulando la ejecución 
 
 ¿Qué voy a hacer?
 Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">16</duration>
       <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
       <id type="integer">7</id>
@@ -480,6 +495,9 @@ La clave para ser exitosos en la creación de productos con Scrum es aprenderlo,
 
 Mediante este taller 100% práctico lograrás una inmediata comprensión práctica de técnicas y herramientas ágiles para utilizar junto a equipos Scrum.  Podrás trasladar lo aprendido a la ejecución de proyectos complejos en contextos de alta incertidumbre y requisitos cambiantes. El aprendizaje mediante  una experiencia completa  y vivencial te permitirá comprender la gestión ágil del alcance de los productos y proyectos.
 </description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">16</duration>
       <goal>La certificación CSPO es una certificación oficial de la Scrum Alliance. El propósito del curso para CSPO es dar a todos los interesados en la utilización de Scrum, las nociones básicas necesarias para conocer Scrum pero poner especial énfasis en la responsabilidad del Product Owner o cliente de un Equipo Scrum .</goal>
       <id type="integer">10</id>
@@ -583,6 +601,9 @@ CSC, PMP, PMI-ACP</bio>
       <created-at type="datetime">2012-12-11T19:13:46Z</created-at>
       <description>Se presentarán las ideas de AngularJS y se harán prácticas sobre los conceptos fundamentales utilizando las herramientas y metodologías recomendadas por sus creadores (Google).
 El curso permitirá iniciarse en AngularJS, y puede servir como punto de partida para incorporarlo a proyectos o para evaluarlo con respecto a otros frameworks.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>Single-page webapps nos dan más ventajas con menos complejidad.
 Reducen considerablemente los HITs al webserver de manera tan notable que en algunos casos se puede prescindir por completo de un webserver.
@@ -659,6 +680,9 @@ También se hará una breve introducción a temas relacionados como versionado e
 
 Los ejemplos durante el taller se harán principalmente en Ruby, pero se compartirán videos pre-grabados de ejercicios similares en otros lenguajes como C#, Java y Python.
 </description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">4</duration>
       <goal>Profundizará en técnicas complementarias al ciclo básico de TDD, destinadas sobre todo mantener las pruebas a nivel realmente unitario, sin requerir dependencias entre componentes, introduciendo prácticas complementarias que maximizan el valor de TDD, tales como una buena estrategia de versionado e integración continua.</goal>
       <id type="integer">18</id>
@@ -745,6 +769,9 @@ Porque es un curso 100% participativo en donde estarás simulando la ejecución 
 
 ¿Qué voy a hacer?
 Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">16</duration>
       <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
       <id type="integer">7</id>
@@ -833,6 +860,9 @@ Porque es un curso 100% participativo en donde estarás simulando la ejecución 
 
 ¿Qué voy a hacer?
 Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">16</duration>
       <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
       <id type="integer">7</id>
@@ -912,6 +942,9 @@ CSC, PMP, PMI-ACP</bio>
       <created-at type="datetime">2012-09-06T10:59:01Z</created-at>
       <description>La tendencia de la industria de IT y desarrollo de sistemas a nivel mundial con respecto a la utilización de metodologías ágiles es claramente incremental; estas nuevas formas de administrar un proyecto son consideradas como la “Nueva Gestión de Proyectos” no solo para el desarrollo de software sino también para las áreas de diseño gráfico y de identidad, debido a su manejo de requerimientos cambiantes, poco definidos y complejos, en entornos de negocios altamente volátiles.
 Este evento de un día completo proveerá a los asistentes un entendimiento claro sobre los principios fundamentales de las metodologías ágiles y de Scrum por medio de ejercicios reales, aplicando la teoría en casos prácticos. Los participantes obtendrán experiencia práctica trabajando con las herramientas de Scrum y sus actividades, como el backlog, sprint planning, demos y retrospectivas.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>Que los participantes comprendan las nuevas tendencias en la gestión de proyectos, conozcan los principios fundamentales y valores de Scrum y obtengan experiencia práctica trabajando con los elementos y prácticas de Scrum.</goal>
       <id type="integer">4</id>
@@ -992,6 +1025,9 @@ Podrás trasladar lo aprendido a la ejecución de proyectos complejos en context
 Porque solo experimentando las prácticas comprobadas y viviendo lo que significa ser ágil comprenderás cómo actuar en tu día a día a la hora de gestionar un proyecto o desarrollar software de manera ágil.
 &lt;h4&gt;¿Qué voy a hacer?&lt;/h4&gt;
 Identificarás requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales,  experimentarás la comunicación mediante Integración Continua, TDD, ATDD y las últimas técnicas de desarrollo. Trabajarás en un equipo 100% Scrum.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">40</duration>
       <goal>La certificación CSD es una certificación oficial de la Scrum Alliance. El propósito del programa CSD es dar a los miembros del equipo Scrum las habilidades ingenieriles ágiles que necesitan para crear software entregable.</goal>
       <id type="integer">3</id>
@@ -1077,6 +1113,9 @@ Ing. en Informática, CSM, CSD
       <created-at type="datetime">2012-09-06T11:02:03Z</created-at>
       <description>En este curso de un día los participantes aprenderán prácticas que realmente funcionan a la hora de la identificación y estimación de user stories, identificación de velocity y armado de un release plan.
 Este curso enseña nuevas habilidades que los participantes pueden utilizar en la creación de planes ágiles. Los participantes saldrán con una sólida comprensión, y experiencia en relación con la planificación de releases e iteraciones ágiles. Se presentarán los enfoques para la estimación por puntos de historia , se presentarán cuatro técnicas de estimación, incluyendo la popular técnica de Planning Poker. Estas técnicas han demostrado aumentar la precisión de estimación y planificación, aumentando las posibilidades de finalización a tiempo de cualquier proyecto.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>Que los participantes comprendan cómo identificar user stories y cómo dividir casos complejos en historias simples, las ventajas de la estimación por story points (estimación relativa), formas efectivas de identificar la velocity de los equipos y cómo conformar un release plan.</goal>
       <id type="integer">5</id>
@@ -1153,6 +1192,9 @@ Ing. en Informática, CSM, CSD
       <created-at type="datetime">2012-09-06T11:04:02Z</created-at>
       <description>El taller de Desarrollo Ágil es una sesión intensiva de tres días que enseña a los asistentes a trabajar en un modelo auto-organizado e interdisciplinario para construir un producto completamente funcional, utilizando las prácticas ágiles más modernas de ingeniería de desarrollo de software.
 El curso proporciona una experiencia de primera mano con respecto a los beneficios de utilizar Scrum y las prácticas de ingeniería para abordar los retos encontrados en el desarrollo ágil de software.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">24</duration>
       <goal>Que los participantes comprendan las prácticas de ingeniería de desarrollo ágil de software, conozcan e implementen las herramientas necesarias, pongan en práctica las técnicas ágiles de desarrollo de software y logren funcionar como equipos auto-organizados y multidisciplinarios.</goal>
       <id type="integer">6</id>
@@ -1237,6 +1279,9 @@ Podrás trasladar lo aprendido a la ejecución de proyectos complejos en context
 Porque solo experimentando las prácticas comprobadas y viviendo lo que significa ser ágil comprenderás cómo actuar en tu día a día a la hora de gestionar un proyecto o desarrollar software de manera ágil.
 &lt;h4&gt;¿Qué voy a hacer?&lt;/h4&gt;
 Identificarás requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales,  experimentarás la comunicación mediante Integración Continua, TDD, ATDD y las últimas técnicas de desarrollo. Trabajarás en un equipo 100% Scrum.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">40</duration>
       <goal>La certificación CSD es una certificación oficial de la Scrum Alliance. El propósito del programa CSD es dar a los miembros del equipo Scrum las habilidades ingenieriles ágiles que necesitan para crear software entregable.</goal>
       <id type="integer">3</id>
@@ -1329,6 +1374,9 @@ Podrás trasladar lo aprendido a la ejecución de proyectos complejos en context
 Porque solo experimentando las prácticas comprobadas y viviendo lo que significa ser ágil comprenderás cómo actuar en tu día a día a la hora de gestionar un proyecto o desarrollar software de manera ágil.
 &lt;h4&gt;¿Qué voy a hacer?&lt;/h4&gt;
 Identificarás requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales,  experimentarás la comunicación mediante Integración Continua, TDD, ATDD y las últimas técnicas de desarrollo. Trabajarás en un equipo 100% Scrum.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">40</duration>
       <goal>La certificación CSD es una certificación oficial de la Scrum Alliance. El propósito del programa CSD es dar a los miembros del equipo Scrum las habilidades ingenieriles ágiles que necesitan para crear software entregable.</goal>
       <id type="integer">3</id>

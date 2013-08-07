@@ -35,6 +35,9 @@
     <event-type>
       <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
       <description>Es una reunión donde un grupo de desarrolladores trabajan en un desafío de programación.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">2</duration>
       <goal>Yoseki es un Coding Dojo mensual, libre y gratuito organizado por Kleer.</goal>
       <id type="integer">19</id>
@@ -107,6 +110,9 @@ Ing. en Informática, CSM, CSD
     <event-type>
       <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
       <description>Es una reunión donde un grupo de desarrolladores trabajan en un desafío de programación.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">2</duration>
       <goal>Yoseki es un Coding Dojo mensual, libre y gratuito organizado por Kleer.</goal>
       <id type="integer">19</id>

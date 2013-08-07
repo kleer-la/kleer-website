@@ -35,6 +35,9 @@
     <event-type>
       <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
       <description>una descripción.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>un objetivo.</goal>
       <id type="integer">13</id>

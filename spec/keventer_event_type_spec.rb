@@ -21,6 +21,21 @@ describe KeventerEventType do
     @keventype.description.should == "Argentina"
   end
   
+  it "should have a elevator_pitch" do
+    @keventype.elevator_pitch = "Argentina"
+    @keventype.elevator_pitch.should == "Argentina"
+  end
+  
+  it "should have a learnings" do
+    @keventype.learnings = "Argentina"
+    @keventype.learnings.should == "Argentina"
+  end
+  
+  it "should have a takeaways" do
+    @keventype.takeaways = "Argentina"
+    @keventype.takeaways.should == "Argentina"
+  end
+  
   it "should have a program" do
     @keventype.program = "ar"
     @keventype.program.should == "ar"

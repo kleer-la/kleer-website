@@ -252,6 +252,9 @@ class KeventerReader
     event.trainer = trainer
     
     event_type.name  = xml_keventer_event.find_first('event-type/name').content
+    event_type.elevator_pitch  = xml_keventer_event.find_first('event-type/elevator-pitch').content
+    event_type.learnings  = xml_keventer_event.find_first('event-type/learnings').content
+    event_type.takeaways  = xml_keventer_event.find_first('event-type/takeaways').content
     event_type.description  = xml_keventer_event.find_first('event-type/description').content
     event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
     event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content
