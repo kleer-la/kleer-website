@@ -17,6 +17,7 @@
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -85,6 +86,7 @@
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">480.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
@@ -180,6 +182,7 @@ CSM y Especialista en Innovación
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">480.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
@@ -263,6 +266,7 @@ Agile Coach &amp; Trainer
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">4990.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -382,6 +386,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">822.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
@@ -474,6 +479,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">3990.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -588,6 +594,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">390.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -664,6 +671,7 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">480.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
@@ -749,6 +757,7 @@ Agile Coach &amp; Trainer
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">962.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
@@ -841,6 +850,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">530.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -933,6 +943,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -1011,6 +1022,7 @@ Ing. en Informática, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">4000.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -1106,6 +1118,7 @@ Ing. en Informática, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -1186,6 +1199,7 @@ Ing. en Informática, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">2670.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -1268,6 +1282,7 @@ Ing. en Informática, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">760.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -1364,6 +1379,7 @@ Ing. Electrónica, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">760.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>

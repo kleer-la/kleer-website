@@ -17,6 +17,7 @@
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
@@ -93,6 +94,7 @@ Ing. en Informática, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>

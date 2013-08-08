@@ -17,6 +17,7 @@
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
@@ -86,6 +87,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">822.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>

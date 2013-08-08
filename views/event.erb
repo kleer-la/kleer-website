@@ -70,7 +70,7 @@ $('body').on('hidden', '#myModalSepyme', function () {
 				<div class="row-fluid">
 					<div class="span12">
 						<h2><span class="label label-info"><%=@event.date.strftime("%d")%><br/><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>&nbsp;<%=@event.event_type.name%></h2>
-						<%=@event.place%>, <%=@event.address%>, <%=@event.city%>, <%=@event.country%>
+						<i class="icon-map-marker"></i> <%=@event.place%>, <%=@event.address%>, <%=@event.city%>, <img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.country%>
 						<br/>&nbsp;
 					</div>
 				</div>
@@ -83,21 +83,10 @@ $('body').on('hidden', '#myModalSepyme', function () {
 								<br/>&nbsp;
 							</div>
 							<div class="span8" align="right">
-								<%if @event.is_sold_out%>
-										<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="btn btn-danger">Completo</span></a>
-							    <%else%>
-					    	
-									<%if @event.registration_link != "" %>
-										<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success">Registrarme!</span></a>
-									<%else %>
-										<a data-toggle="modal" data-target="#myModalRegistration" href="/entrenamos/evento/<%=@event.id%>/registration"><span class="btn btn-success">Registrarme!</span></a>
-										&nbsp;
-									<%end%>
-							
+							  <%if !@event.is_sold_out%>
 									<%if @event.sepyme_enabled%>
 										<a data-toggle="modal" data-target="#myModalSepyme" href="/sepyme/remote"><span class="btn btn-info">Ahorrá hasta el 90%!</span></a>&nbsp;
 									<%end%>
-							
 								<%end%>
 							</div>
 						</div>
@@ -127,8 +116,27 @@ $('body').on('hidden', '#myModalSepyme', function () {
 							<% if !@event.event_type.elevator_pitch.nil? %>
 							  <%=@markdown_renderer.render( @event.event_type.elevator_pitch )%>
 							<% end %>
+							
+							<% if @event.discount > 0.0 %>
+								<p style="color: #4b4e53; padding: 12px; border-radius: 12px; background: #6dfac6;"><strong>Asegura tu vacante antes del <%=@event.eb_end_date.strftime("%d")%> de <%=@event.eb_end_date.strftime("%b")%> para obtener un descuento de <%=@event.currency_iso_code%> <%=sprintf("%05.2f", @event.discount)%>!</strong> Tambi&eacute;n hay descuentos disponibles por cantidad de personas.</p>
+							<% end %>
+							
 						  	<%=@markdown_renderer.render( @event.event_type.description )%>
-						    <br/>&nbsp;
+						    
+							<% if !@event.event_type.learnings.nil? && @event.event_type.learnings != "" %>
+							    <div style="margin: 2em 0; background: #f9fb89; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
+									<h3>¿Qué voy a aprender?</h3>
+							    	<%=@markdown_renderer.render( @event.event_type.learnings )%>
+							    </div>
+							<% end %>
+						    
+							<% if !@event.event_type.takeaways.nil? && @event.event_type.takeaways != "" %>
+							    <div style="margin: 2em 0; background: #dd8fc1; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
+									<h3>¿Qué voy a obtener?</h3>
+							    	<%=@markdown_renderer.render( @event.event_type.takeaways )%>
+							    </div>
+							<% end %>
+							
 						  </div>
 						  <div class="tab-pane" id="recipients">
 						  	<%=@markdown_renderer.render( @event.event_type.recipients )%>
@@ -148,8 +156,20 @@ $('body').on('hidden', '#myModalSepyme', function () {
 						</div>
 					</div>
 					<div class="span4">
-						<h3>Registrate!</h3>
-						<iframe src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="500" border="0" scrolling="no" seamless></iframe>
+						<% if @event.eb_price == 0.0 %>
+							<h4>Evento Gratuito</h4>
+						<% end %>
+						<h3>¿Querés Participar?</h3>
+						<%if @event.is_sold_out%>
+							<div class="alert alert-error"><strong>Ouch!</strong> El cupo para este evento se encuentra completo.</div>
+							Puedes contactarnos a <a href="mailto:entrenamos@kleer.la?subject=Nuevas Fechas: <%=@event.friendly_title%>">entrenamos@kleer.la</a> para conocer nuevas fechas.
+						<%else%>
+							<%if @event.registration_link != "" %>
+								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success">Registrarme!</span></a>
+							<%else %>
+								<iframe src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="290" border="0" scrolling="no" seamless></iframe>
+							<%end%>
+						<% end %>
 					</div>
 				</div>
 			</div>

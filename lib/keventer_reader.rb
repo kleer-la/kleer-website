@@ -241,6 +241,12 @@ class KeventerReader
     end
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
+    event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
+    event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
+    if event.eb_price > 0.0  
+      event.eb_end_date = xml_keventer_event.find_first('eb-end-date').content.nil? ? nil : Date.parse( xml_keventer_event.find_first('eb-end-date').content )
+    end
+    event.currency_iso_code = xml_keventer_event.find_first('currency-iso-code').content
     
     trainer = Professional.new
     
