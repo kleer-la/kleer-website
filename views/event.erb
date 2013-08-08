@@ -117,7 +117,7 @@ $('body').on('hidden', '#myModalSepyme', function () {
 							  <%=@markdown_renderer.render( @event.event_type.elevator_pitch )%>
 							<% end %>
 							
-							<% if @event.discount > 0.0 %>
+							<% if @event.discount > 0.0 && @event.eb_end_date > Date.today %>
 								<p style="color: #4b4e53; padding: 12px; border-radius: 12px; background: #6dfac6;"><strong>Asegura tu vacante antes del <%=@event.eb_end_date.strftime("%d")%> de <%=@event.eb_end_date.strftime("%b")%> para obtener un descuento de <%=@event.currency_iso_code%> <%=sprintf("%05.2f", @event.discount)%>!</strong> Tambi&eacute;n hay descuentos disponibles por cantidad de personas.</p>
 							<% end %>
 							
