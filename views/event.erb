@@ -70,7 +70,11 @@ $('body').on('hidden', '#myModalSepyme', function () {
 				<div class="row-fluid">
 					<div class="span12">
 						<h2><span class="label label-info"><%=@event.date.strftime("%d")%><br/><span class="lead"><%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%></span></span>&nbsp;<%=@event.event_type.name%></h2>
-						<i class="icon-map-marker"></i> <%=@event.place%>, <%=@event.address%>, <%=@event.city%>, <img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.country%>
+							<% if @event.is_webinar %>
+								<i class="icon-globe"></i>&nbsp;<%=@event.city%>, <%=@event.country%>. <%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs <%=@event.place%>
+							<% else %>
+								<i class="icon-map-marker"></i><%=@event.place%>, <%=@event.address%>, <%=@event.city%>, <img src="/img/flags/<%=@event.country_code.downcase%>.png"/> <%=@event.country%>. <%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs
+							<% end %>
 						<br/>&nbsp;
 					</div>
 				</div>
@@ -187,11 +191,18 @@ $('body').on('hidden', '#myModalSepyme', function () {
 		<div class="row-fluid">	
 			<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 				<h3>Lugar</h3>
-				<a href="https://maps.google.com/maps?q=<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>" target="_blank">
-					<img src="https://maps.google.com/maps/api/staticmap?language=es&center=<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>&markers=size:mid|color:red|<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>&zoom=15&size=190x190&maptype=roadmap&sensor=false"><br/>
-				</a>
-				<br/><%=@event.place%><br/><%=@event.address%><br/><%=@event.city%>, <%=@event.country%><br/>
-				<%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs<br/><br/>
+				<% if @event.is_webinar %>
+					<img src="https://maps.google.com/maps/api/staticmap?language=es&zoom=0.5&size=190x190&maptype=satellite&sensor=false">
+					<br/><%=@event.place%><br/>
+					<%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs<br/>
+					<%=@event.country%><br/><br/>
+				<% else %>
+					<a href="https://maps.google.com/maps?q=<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>" target="_blank">
+						<img src="https://maps.google.com/maps/api/staticmap?language=es&center=<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>&markers=size:mid|color:red|<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>&zoom=15&size=190x190&maptype=roadmap&sensor=false"><br/>
+					</a>
+					<br/><%=@event.place%><br/><%=@event.address%><br/><%=@event.city%>, <%=@event.country%><br/>
+					<%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs<br/><br/>
+				<% end %>
 			</div>
 		</div>	
 		&nbsp;

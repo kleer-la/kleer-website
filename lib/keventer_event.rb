@@ -1,7 +1,8 @@
 class KeventerEvent
     attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, 
                   :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place, :sepyme_enabled,
-                  :human_date, :start_time, :end_time, :address, :list_price, :eb_price, :eb_end_date, :currency_iso_code
+                  :human_date, :start_time, :end_time, :address, :list_price, :eb_price, :eb_end_date, 
+                  :currency_iso_code, :is_webinar
   
   def initialize
     @capacity = 0
@@ -26,6 +27,7 @@ class KeventerEvent
     @eb_price = 0.0
     @eb_end_date = nil
     @currency_iso_code = ""
+    @is_webinar = false
   end
   
   def discount

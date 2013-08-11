@@ -15,6 +15,7 @@
     <event-type-id type="integer">13</event-type-id>
     <id type="integer">44</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
 	<currency-iso-code>ARS</currency-iso-code>
