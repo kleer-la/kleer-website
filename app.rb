@@ -8,6 +8,7 @@ require 'json'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
+require File.join(File.dirname(__FILE__),'/lib/event_type')
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
@@ -33,7 +34,6 @@ get '/' do
 	@categories = @@keventer_reader.categories
 	erb :index
 end
-
 
 get '/blog' do
   @active_tab_blog = "active"
@@ -77,6 +77,7 @@ get '/categoria/:category_codename' do
     status 404
   else
     @page_title += " | " + @category.name
+    @event_types = @category.event_types
 
     erb :category
   end
@@ -262,7 +263,7 @@ private
 def create_twitter_card( event )
   card = TwitterCard.new
   card.title = event.friendly_title
-  card.description = event.event_type.description
+  card.description = event.event_type.elevator_pitch
   card.image_url = "http://media.kleer.la/logos/K_social.jpg"
   card.site = "@kleer_la"
   card.creator = event.trainer.twitter_username

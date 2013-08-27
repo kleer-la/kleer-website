@@ -15,12 +15,15 @@
     <event-type-id type="integer">19</event-type-id>
     <id type="integer">60</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>mailto:dojo@kleer.la</registration-link>
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2013-01-03T15:22:20Z</updated-at>
@@ -35,6 +38,9 @@
     <event-type>
       <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
       <description>Es una reunión donde un grupo de desarrolladores trabajan en un desafío de programación.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">2</duration>
       <goal>Yoseki es un Coding Dojo mensual, libre y gratuito organizado por Kleer.</goal>
       <id type="integer">19</id>
@@ -87,12 +93,15 @@ Ing. en Informática, CSM, CSD
     <event-type-id type="integer">19</event-type-id>
     <id type="integer">61</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Open Edge - Kleer</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>mailto:hiroshi.hiromoto@kleer.la</registration-link>
     <trainer-id type="integer">17</trainer-id>
     <updated-at type="datetime">2013-01-04T15:00:02Z</updated-at>
@@ -107,6 +116,9 @@ Ing. en Informática, CSM, CSD
     <event-type>
       <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
       <description>Es una reunión donde un grupo de desarrolladores trabajan en un desafío de programación.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">2</duration>
       <goal>Yoseki es un Coding Dojo mensual, libre y gratuito organizado por Kleer.</goal>
       <id type="integer">19</id>

@@ -52,11 +52,6 @@ When /^I visit the home page$/ do
   visit '/'
 end
 
-When /^I visit the entrenamos page$/ do
-  stub_connector
-  visit '/entrenamos'
-end
-
 Then /^I should see the json string for all of the events$/ do
   text = '\"aaData\": \[' +
             '\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">Registrarme!</a>\"\],' +
@@ -146,58 +141,20 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
     end
 end
 
-Given /^I visit the publicamos page$/ do
-  visit "/publicamos"
-end
-
-Given /^I visit the acompañamos page$/ do
-  visit "/acompanamos"
+Given /^I visit the "(.*?)" page$/ do |page|
+    stub_connector
+  visit "/" + page
 end
 
 Given /^I visit the "(.*?)" categoria page$/ do |codename|
   stub_connector
   visit "/categoria/" + codename
 end
-
-# TODO: por que da problema de secuencia si usamos el paso genérico!!
-Given /^I visit the unknown categoria page$/ do
-  stub_connector
-  visit "/categoria/pepe"
-end
-
-Given /^I visit the comunidad page$/ do
-  stub_connector
-  visit "/comunidad"
-end
-
-Given /^I visit the somos page$/ do
-  stub_connector
-  visit "/somos"
-end
-
-Given /^I visit the community page$/ do
-  stub_connector
-  visit "/comunidad"
-end
-
-When /^I visit the entrenamos ajax page$/ do
-  visit "/entrenamos/eventos/pais/todos"
-end
-
-When /^I visit the entrenamos ajax page for Argentina$/ do
-  visit "/entrenamos/eventos/pais/ar"
-end
-
-When /^I visit the entrenamos ajax page for Bolivia$/ do
-  visit "/entrenamos/eventos/pais/bo"
-end
-
-When /^I visit the entrenamos ajax page for an invalid country$/ do
-  visit "/entrenamos/eventos/pais/invalido"
-end
-
-When /^I visit the entrenamos ajax page for other country$/ do
-  visit "/comunidad/eventos/pais/otro"
+# I visit the "xxx" ajax page (todos)
+# I visit the "xxx" ajax page for Blabla (ba)
+# I visit the "xxx" ajax page not very valid (otro)
+When /^I visit the "(.*?)" ajax page ([^()]+)?\((.*?)\)$/ do |page, dummy, filter|
+  visit "/" + page + "/eventos/pais/" +  filter
 end
 
 Then /^I should see a tweet button$/ do
@@ -316,18 +273,6 @@ end
 
 Given /^there are community events$/ do
   stub_connector( "events.xml")
-end
-
-When /^I visit the community ajax page$/ do
-  visit "/comunidad/eventos/pais/todos"
-end
-
-When /^I visit the community ajax page for Argentina$/ do
-  visit "/comunidad/eventos/pais/ar"
-end
-
-When /^I visit the community ajax page for an invalid country$/ do
-  visit "/comunidad/eventos/pais/invalido"
 end
 
 Then /^I should see the json string for all of the community events$/ do
