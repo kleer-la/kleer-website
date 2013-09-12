@@ -9,6 +9,7 @@ require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/event_type')
+require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
@@ -174,6 +175,11 @@ get '/somos' do
 	@page_title += " | Somos"
 	@kleerers = @@keventer_reader.kleerers
 	erb :somos
+end
+
+get '/last-tweet/:screen_name' do
+  reader = TwitterReader.new
+  return reader.last_tweet(params[:screen_name]).text
 end
 
 # JSON ==================== 

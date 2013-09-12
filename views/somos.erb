@@ -27,13 +27,7 @@
 						</div>
 						<div class="span4">
 							<% if kleerer.twitter_username != "" %>
-							<div class="popover right" style="display:inline-block;position:relative;" id="<%=kleerer.twitter_username.gsub("@","")%>_twitter_container">
-								<div class="arrow"></div>
-							    <h3 class="popover-title"><a href="https://twitter.com/<%=kleerer.twitter_username.gsub("@","")%>" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a> <%=kleerer.twitter_username%></h3>
-							    <div class="popover-content" id="<%=kleerer.twitter_username.gsub("@","")%>_last_tweet">
-							    	Buscando último tweet...
-							    </div>
-							</div>
+							<%= erb :twitter_box, :layout => false, :locals => {:screen_name => kleerer.twitter_username.gsub("@",""), :pop_over => 'right'} %>
 							<% end %>
 						</div>
 					</div>
@@ -52,16 +46,3 @@
 		<%= erb :twitter_box, :layout => false %>
 	</div>
 </div>
-
-<% @kleerers.each do |kleerer| %>
-	<% if kleerer.twitter_username != "" %>
-	<script>
-	function show_<%=kleerer.twitter_username.gsub("@","")%>_tweet(data) {
-		tweet = processTweet(data[0].text);
-		$("#<%=kleerer.twitter_username.gsub("@","")%>_last_tweet").html(tweet);
-	}
-	</script>
-	<script type="text/javascript" src="https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=<%=kleerer.twitter_username.gsub("@","")%>&count=1&callback=show_<%=kleerer.twitter_username.gsub("@","")%>_tweet"></script>
-	<% end %>
-<% end %>
-	

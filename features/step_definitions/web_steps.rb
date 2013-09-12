@@ -132,13 +132,13 @@ Then /^I should see the SnapEngage plugin$/ do
   response_body.should have_selector("script[type='text\/javascript']") do |element|
       element.should contain("SnapABug.setLocale(\"es\")")
       element.should contain("SnapABug.addButton(\"ab0964bc-0c2b-4b9b-8f59-b3e3cdb81b04\",\"0\",\"55%\")")
-    end
+  end
 end
 
 Then /^the page title should be "(.*?)"$/ do |title_text|
   response_body.should have_selector("title") do |element|
       element.should contain(title_text)
-    end
+  end
 end
 
 Given /^I visit the "(.*?)" page$/ do |page|
@@ -165,6 +165,14 @@ Then /^I should see a tweet button$/ do
   response_body.should have_selector("a[href='https://twitter.com/share']") do |element|
     element.should contain("Tweet")
   end
+end
+
+Given(/^I visit the last tweet url for "(.*?)"$/) do |screen_name|
+  visit "/last-tweet/#{screen_name}"
+end
+
+Then(/^I should see a tweet "(.*?)"$/) do |tweet|
+  response_body.should be == tweet
 end
 
 Then /^I should see a facebook like button$/ do
