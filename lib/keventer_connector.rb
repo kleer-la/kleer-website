@@ -23,6 +23,10 @@ class KeventerConnector
     API_ROOT + API_CATEGORIES_PATH
   end
   
+  def event_type_url(event_type_id)
+    "/event_type/#{event_type_id}.xml"
+  end
+  
   def keventer_url
     KEVENTER_URL
   end

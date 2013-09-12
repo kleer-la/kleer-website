@@ -41,6 +41,10 @@ class KeventerReader
     load_remote_event(event_id, force_read)
   end
   
+  def event_type(event_type_id, force_read = false)
+    load_remote_event_type(event_type_id, force_read)
+  end
+  
   def unique_countries_for_commercial_events
     unique_countries( @connector.events_xml_url )
   end
@@ -214,6 +218,17 @@ class KeventerReader
     
     event
   end
+
+  def load_remote_event_type(event_type_id, force_read = false)
+    event_type_id = event_type_id.to_i
+
+    parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id) )
+    doc = parser.parse
+    loaded_event_type = doc.find('/event_type')
+    
+    create_event_type(loaded_event_type)
+  end
+
 
   def to_boolean(string)
     return true if string== true || string =~ (/(true|t|yes|y|1)$/i)

@@ -11,6 +11,16 @@ describe KeventerReader do
     @kevr = KeventerReader.new( @connector )
     @kevr.events.count.should == 16   
   end
+
+
+  it "Should Be Able to Load an Xml File for an Event Type" do
+    @connector = double("KeventerConnector")
+    @connector.stub(:event_type_url).and_return( File.join(File.dirname(__FILE__),'../spec/event_type_4.xml') )
+    
+    @kevr = KeventerReader.new( @connector )
+    @kevr.event_type(4).id.should == 4   
+  end
+  
   
   it "Should Be Able to Load an Xml URI for Events" do
     @connector = double("KeventerConnector")
