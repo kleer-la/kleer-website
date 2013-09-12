@@ -2,9 +2,10 @@
 
 class EventType
   
-  attr_accessor :name, :description
+  attr_accessor :id, :name, :description
   
   def initialize
+    @id = ""
     @name = ""
     @description = ""
 

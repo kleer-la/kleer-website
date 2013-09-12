@@ -108,6 +108,7 @@ class KeventerReader
     if !event_types_xml_node.nil?
       event_types_xml_node.find('event-types/event-type ').each do |event_type_node|
         event_type = EventType.new
+        event_type.id = event_type_node.find_first('id').content
         event_type.name = event_type_node.find_first('name').content
         event_type.description = event_type_node.find_first('description').content
         event_types << event_type
