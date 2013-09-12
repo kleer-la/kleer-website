@@ -20,3 +20,7 @@ Feature: Categories
 	Scenario: Link to event type detail in Category Landing Page
 		Given I visit the "high-performance" categoria page
 		Then I should have a link to the "Tipo de Evento de Prueba" page
+
+	Scenario: Event type datails Page
+		Given I visit an event type page
+		Then I should see "hola mundo"

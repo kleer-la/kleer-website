@@ -356,3 +356,7 @@ Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
       element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
   end
 end
+
+Given(/^I visit an event type page$/) do
+  visit '/cursos/1-x'
+end
