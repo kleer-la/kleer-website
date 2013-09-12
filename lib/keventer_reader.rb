@@ -224,7 +224,7 @@ class KeventerReader
 
     parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id) )
     doc = parser.parse
-    loaded_event_type = doc.find('/event_type')
+    loaded_event_type = doc.find('/')
     
     create_event_type(loaded_event_type)
   end
@@ -290,6 +290,24 @@ class KeventerReader
     event.keventer_connector = @connector
     
     event
+  end
+
+  def create_event_type(xml_keventer_event)
+    event_type = KeventerEventType.new    
+    
+    # event_type.name  = xml_keventer_event.find_first('event-type/name').content
+    # event_type.elevator_pitch  = xml_keventer_event.find_first('event-type/elevator-pitch').content
+    # event_type.learnings  = xml_keventer_event.find_first('event-type/learnings').content
+    # event_type.takeaways  = xml_keventer_event.find_first('event-type/takeaways').content
+    # event_type.description  = xml_keventer_event.find_first('event-type/description').content
+    # event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
+    # event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content
+    # event_type.program  = xml_keventer_event.find_first('event-type/program').content
+    # event_type.faqs  = xml_keventer_event.find_first('event-type/faq').content
+
+    event_type.id = 4
+        
+    event_type
   end
   
   def remote_events_still_valid(event_type_xml_url, force_read)

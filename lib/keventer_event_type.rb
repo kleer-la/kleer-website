@@ -1,7 +1,8 @@
 class KeventerEventType
-  attr_accessor :name, :goal, :description, :recipients, :program, :duration, :faqs, :elevator_pitch, :learnings, :takeaways
+  attr_accessor :id, :name, :goal, :description, :recipients, :program, :duration, :faqs, :elevator_pitch, :learnings, :takeaways
   
   def initialize
+    @id = nil
     @name = ""
     @goal = ""
     @description = ""
