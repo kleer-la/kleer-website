@@ -13,7 +13,7 @@
 	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 		<ul>
 			<% @event_types.each do |event_type| %>
-			<li><%= event_type.name%></li>
+			<li><a href="/cursos/<%= event_type.id%>-<%= ERB::Util::url_encode(event_type.name)%>"><%= event_type.name%></a></li>
 			<% end %>
 		</ul>
 	</div>

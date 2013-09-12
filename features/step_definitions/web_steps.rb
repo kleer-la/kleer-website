@@ -335,3 +335,10 @@ end
 When /^I visit a non existing popup event page$/ do
   visit '/entrenamos/evento/1-un-evento-inexistente/remote'
 end
+
+Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
+  puts "a[text()='#{event_type_name}']"
+  response_body.should have_selector("a[text()='#{event_type_name}']") do |element|
+      element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
+  end
+end
