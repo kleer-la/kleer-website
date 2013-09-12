@@ -51,6 +51,11 @@ describe KeventerEvent do
     @kevent.registration_link.should == "http://kleer.la"
   end
   
+  it "should have an address" do
+    @kevent.address = "http://kleer.la"
+    @kevent.address.should == "http://kleer.la"
+  end
+  
   it "should have a sold-out flag" do
     @kevent.is_sold_out = false
     @kevent.is_sold_out.should == false
@@ -85,6 +90,45 @@ describe KeventerEvent do
       an_event_type = KeventerEventType.new
       @kevent.event_type = an_event_type
       @kevent.event_type.should == an_event_type
+  end
+  
+  it "should have a list_price" do
+    @kevent.list_price = 12.0
+    @kevent.list_price.should == 12.0
+  end
+  
+  it "should have a eb_price" do
+    @kevent.eb_price = 12.0
+    @kevent.eb_price.should == 12.0
+  end
+  
+  it "should have a discount" do
+    @kevent.list_price = 12.0
+    @kevent.eb_price = 10.5
+    @kevent.discount.should == 1.5
+  end
+  
+  it "should have a discount" do
+    @kevent.list_price = 12.0
+    @kevent.eb_price = 0.0
+    @kevent.discount.should == 0.0
+  end
+  
+  it "should have a discount" do
+    @kevent.list_price = 12.0
+    @kevent.eb_price = nil
+    @kevent.discount.should == 0.0
+  end
+  
+  it "should have a eb_end_date" do
+    a_date = Date.new
+    @kevent.eb_end_date = a_date
+    @kevent.eb_end_date.should == a_date
+  end
+  
+  it "should have a currency_iso_code" do
+    @kevent.currency_iso_code = "ARS"
+    @kevent.currency_iso_code.should == "ARS"
   end
 
   context "If the trainer is Raul Gorgonzola" do

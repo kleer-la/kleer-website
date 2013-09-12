@@ -269,7 +269,7 @@ private
 def create_twitter_card( event )
   card = TwitterCard.new
   card.title = event.friendly_title
-  card.description = event.event_type.description
+  card.description = event.event_type.elevator_pitch
   card.image_url = "http://media.kleer.la/logos/K_social.jpg"
   card.site = "@kleer_la"
   card.creator = event.trainer.twitter_username

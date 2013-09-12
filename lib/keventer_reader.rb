@@ -231,8 +231,10 @@ class KeventerReader
     event.capacity = xml_keventer_event.find_first('capacity').content.to_i
     event.city = xml_keventer_event.find_first('city').content
     event.place = xml_keventer_event.find_first('place').content
+    event.address = xml_keventer_event.find_first('address').content
     event.registration_link = xml_keventer_event.find_first('registration-link').content
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
+    event.is_webinar = to_boolean( xml_keventer_event.find_first('is-webinar').content )
     if xml_keventer_event.find_first('sepyme-enabled').content == ""
       event.sepyme_enabled = false
     else
@@ -240,6 +242,12 @@ class KeventerReader
     end
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
+    event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
+    event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
+    if event.eb_price > 0.0  
+      event.eb_end_date = xml_keventer_event.find_first('eb-end-date').content.nil? ? nil : Date.parse( xml_keventer_event.find_first('eb-end-date').content )
+    end
+    event.currency_iso_code = xml_keventer_event.find_first('currency-iso-code').content
     
     trainer = Professional.new
     
@@ -252,6 +260,9 @@ class KeventerReader
     event.trainer = trainer
     
     event_type.name  = xml_keventer_event.find_first('event-type/name').content
+    event_type.elevator_pitch  = xml_keventer_event.find_first('event-type/elevator-pitch').content
+    event_type.learnings  = xml_keventer_event.find_first('event-type/learnings').content
+    event_type.takeaways  = xml_keventer_event.find_first('event-type/takeaways').content
     event_type.description  = xml_keventer_event.find_first('event-type/description').content
     event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
     event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content

@@ -15,12 +15,15 @@
     <event-type-id type="integer">13</event-type-id>
     <id type="integer">44</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
     <list-price-plus-tax type="boolean">true</list-price-plus-tax>
     <place>Kleer, Tucumán 373 1er Piso</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
@@ -35,6 +38,9 @@
     <event-type>
       <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
       <description>una descripción.</description>
+	  <elevator-pitch>un elevator pitch</elevator-pitch>
+	  <takeaways>pepe</takeaways>
+	  <learnings>pipollo</learnings>
       <duration type="integer">8</duration>
       <goal>un objetivo.</goal>
       <id type="integer">13</id>
@@ -80,12 +86,15 @@ CSC, PMP, PMI-ACP</bio>
     <event-type-id type="integer">7</event-type-id>
     <id type="integer">47</id>
     <is-sold-out type="boolean">false</is-sold-out>
+	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">822.0</list-price>
+	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
     <list-price-plus-tax type="boolean">false</list-price-plus-tax>
     <place>Casa de la Moneda</place>
+	<address>Tucuman 373 Piso 1</address>
     <registration-link>http://www.openedgetech.com/calendario</registration-link>
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-12-07T02:07:26Z</updated-at>
@@ -110,6 +119,9 @@ Porque es un curso 100% participativo en donde estarás simulando la ejecución 
 
 ¿Qué voy a hacer?
 Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certificados como tales por la Scrum Alliance. Identificarás una visión, requerimientos, estimarás, planificarás, priorizarás, gestionarás expectativas,  realizarás entregas incrementales. Trabajarás en un equipo 100% Scrum.</description>
+  <elevator-pitch>un elevator pitch</elevator-pitch>
+  <takeaways>pepe</takeaways>
+  <learnings>pipollo</learnings>
       <duration type="integer">16</duration>
       <goal>La certificación CSM es una certificación oficial de la Scrum Alliance. El propósito del curso para CSM es dar a todos los interesados en la utilización de Scrum, no solo las nociones básicas necesarias para adoptar Scrum sino también un amplio espectro de buenas prácticas (probadas en la vida real por los entrenadores) para la iniciación de un proyecto Scrum desde el momento de la necesidad de negocio.</goal>
       <id type="integer">7</id>
