@@ -31,10 +31,6 @@ Feature: Twitter box
 		When I visit the event page
 		Then I should see the Kleer Twitter Box
 
-	Scenario: Ultimo tweet de kleer_la
-		Given I visit the last tweet url for "kleer_la"
-		Then I should see a tweet
-	
 	Scenario: Ultimo tweet para una cuenta invalida
-		Given I visit the last tweet url for "esta_cuenta_no_existe"
-		Then I should see a tweet
+		Given I visit the last tweet url for "kleer_la"
+		Then I should see a tweet "Test tweet message"

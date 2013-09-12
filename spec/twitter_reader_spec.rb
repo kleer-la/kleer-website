@@ -9,7 +9,7 @@ describe TwitterReader do
   end
 
   it 'should return a tweet for the kleer_la account' do
-    @reader.last_tweet('kleer_la').user_id.should == '241157875'
+    @reader.last_tweet('kleer_la').user_id.should == '111111111'
   end
   
 end

@@ -177,9 +177,9 @@ get '/somos' do
 	erb :somos
 end
 
-get '/last-tweet' do
+get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
-  return reader.last_tweet('kleer_la').text
+  return reader.last_tweet(params[:screen_name]).text
 end
 
 # JSON ==================== 

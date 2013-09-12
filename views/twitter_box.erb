@@ -1,23 +1,34 @@
-<div class="popover bottom" style="display:inline-block;position:relative" id="kleer_la_twitter_container">
-	<div class="arrow"></div>
-    <h3 class="popover-title"><a href="https://twitter.com/kleer_la" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a> @kleer_la</h3>
-    <div class="popover-content" id="kleer_la_last_tweet">
-    	Buscando último tweet...
+<%
+pop_over = pop_over||'bottom'
+screen_name = screen_name||'kleer_la'
+%>
+<div class="popover <%=pop_over%>" style="display:inline-block;position:relative" id="<%=screen_name%>_twitter_container">
+    <div class="arrow"></div>
+    <h3 class="popover-title">
+        <a href="https://twitter.com/<%=screen_name%>" target="_blank"><img src="/img/icons/twitter.png" height="24" width="24"></a> @<%=screen_name%>
+    </h3>
+    <div class="popover-content" id="<%=screen_name%>_last_tweet">
+        Buscando último tweet...
     </div>
 </div>
 <script>
-function processTweet(tweet) {
-	tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
-        return '<a href="'+url+'">'+url+'</a>';
-    }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
-        return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
-    });
-	return tweet;
-}
+$(document).ready(function() {
+    getTweet('/last-tweet/<%=screen_name%>', '#<%=screen_name%>_last_tweet');
 
-function show_kleer_la_tweet(data) {
-	tweet = processTweet(data[0].text);
-	$("#kleer_la_last_tweet").html(tweet);
-}
+    function getTweet(url, id) {
+        jQuery.get(url, function(data) {
+            tweet = processTweet(data);
+            $(id).html(tweet);
+        });
+    }
+
+    function processTweet(tweet) {
+        tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
+            return '<a href="'+url+'">'+url+'</a>';
+        }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
+            return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+        });
+        return tweet;
+    }
+});
 </script>
-<script type="text/javascript" src="https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name=kleer_la&count=1&callback=show_kleer_la_tweet"></script>

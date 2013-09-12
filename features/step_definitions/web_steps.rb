@@ -168,11 +168,11 @@ Then /^I should see a tweet button$/ do
 end
 
 Given(/^I visit the last tweet url for "(.*?)"$/) do |screen_name|
-  visit "/last-tweet?screen_name=#{screen_name}/"
+  visit "/last-tweet/#{screen_name}"
 end
 
-Then(/^I should see a tweet$/) do
-  response_body.should_not be_empty
+Then(/^I should see a tweet "(.*?)"$/) do |tweet|
+  response_body.should be == tweet
 end
 
 Then /^I should see a facebook like button$/ do

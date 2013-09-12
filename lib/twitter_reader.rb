@@ -5,17 +5,24 @@ require File.join(File.dirname(__FILE__),'../lib/tweet')
 
 class TwitterReader
 	def initialize
-		# Search for configuration in the usual keys storage
+		# If your are a kleerer, grab the keys from the usual (safe) key storage.
 		@access_token = ENV['TWITTER_ACCESS_TOKEN']
 		@access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
 		@consumer_key = ENV['TWITTER_CONSUMER_KEY']
 		@consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
+
+		@modo_test = false
+
 		if @access_token.nil? or @access_token_secret.nil? or 
 			@consumer_key.nil? or @consumer_secret.nil?
-			raise 'Twitter API secrets incorrectly configured.'
+			@modo_test = true
 		end
 	end
 	def last_tweet(screen_name)
+
+		if @modo_test
+			return Tweet.new('111111111', 'Test tweet message')
+		end
 
 		token = prepare_access_token(@access_token, @access_token_secret)
 
@@ -25,7 +32,9 @@ class TwitterReader
 
 		tweets = JSON.parse(response.body)
 
-		#puts tweets[0]["user"]
+		if tweets[0].nil?
+			return Tweet.new('', 'Invalid twitter account')
+		end
 
 		return Tweet.new(tweets[0]['user']['id_str'], tweets[0]['text'])
 	end
