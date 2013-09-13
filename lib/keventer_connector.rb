@@ -24,7 +24,7 @@ class KeventerConnector
   end
   
   def event_type_url(event_type_id)
-    "/event_type/#{event_type_id}.xml"
+    API_ROOT + "/event_types/#{event_type_id}.xml"
   end
   
   def keventer_url
