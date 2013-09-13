@@ -224,11 +224,9 @@ class KeventerReader
 
     parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id) )
     doc = parser.parse
-    loaded_event_type = doc.find('/')
     
-    create_event_type(loaded_event_type)
+    create_event_type(doc)
   end
-
 
   def to_boolean(string)
     return true if string== true || string =~ (/(true|t|yes|y|1)$/i)
@@ -238,7 +236,6 @@ class KeventerReader
   
   def create_event(xml_keventer_event)
     event = KeventerEvent.new
-    event_type = KeventerEventType.new
     
     event.id = xml_keventer_event.find_first('id').content.to_i
     event.date = Date.parse( xml_keventer_event.find_first('date').content )
@@ -274,42 +271,30 @@ class KeventerReader
     trainer.gravatar_picture_url = xml_keventer_event.find_first('trainer/gravatar-picture-url').content
     trainer.twitter_username = xml_keventer_event.find_first('trainer/twitter-username').content
     event.trainer = trainer
-    
-    event_type.name  = xml_keventer_event.find_first('event-type/name').content
-    event_type.elevator_pitch  = xml_keventer_event.find_first('event-type/elevator-pitch').content
-    event_type.learnings  = xml_keventer_event.find_first('event-type/learnings').content
-    event_type.takeaways  = xml_keventer_event.find_first('event-type/takeaways').content
-    event_type.description  = xml_keventer_event.find_first('event-type/description').content
-    event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
-    event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content
-    event_type.program  = xml_keventer_event.find_first('event-type/program').content
-    event_type.faqs  = xml_keventer_event.find_first('event-type/faq').content
-    
-    event.event_type = event_type
+
+    event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
     
     event.keventer_connector = @connector
     
     event
   end
-
-  def create_event_type(xml_keventer_event)
-    event_type = KeventerEventType.new    
-    
-    # event_type.name  = xml_keventer_event.find_first('event-type/name').content
-    # event_type.elevator_pitch  = xml_keventer_event.find_first('event-type/elevator-pitch').content
-    # event_type.learnings  = xml_keventer_event.find_first('event-type/learnings').content
-    # event_type.takeaways  = xml_keventer_event.find_first('event-type/takeaways').content
-    # event_type.description  = xml_keventer_event.find_first('event-type/description').content
-    # event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
-    # event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content
-    # event_type.program  = xml_keventer_event.find_first('event-type/program').content
-    # event_type.faqs  = xml_keventer_event.find_first('event-type/faq').content
-
-    event_type.id = 4
-        
-    event_type
-  end
   
+  def create_event_type(xml_keventer_event)
+    event_type = KeventerEventType.new
+    event_type.id  = xml_keventer_event.find_first('id').content.to_i
+    event_type.name  = xml_keventer_event.find_first('name').content
+    event_type.elevator_pitch  = xml_keventer_event.find_first('elevator-pitch').content
+    event_type.learnings  = xml_keventer_event.find_first('learnings').content
+    event_type.takeaways  = xml_keventer_event.find_first('takeaways').content
+    event_type.description  = xml_keventer_event.find_first('description').content
+    event_type.goal  = xml_keventer_event.find_first('goal').content
+    event_type.recipients  = xml_keventer_event.find_first('recipients').content
+    event_type.program  = xml_keventer_event.find_first('program').content
+    event_type.faqs  = xml_keventer_event.find_first('faq').content
+
+    event_type
+  end    
+
   def remote_events_still_valid(event_type_xml_url, force_read)
     !(@events_hash_dont_use_directly[event_type_xml_url].nil? || force_read)
   end
