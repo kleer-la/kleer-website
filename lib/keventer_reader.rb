@@ -122,7 +122,6 @@ class KeventerReader
   end
 
   private
-  
   def coming_events(event_type_xml_url, from = Date.today, months = 2)
     coming_events = Array.new
 
@@ -222,10 +221,15 @@ class KeventerReader
   def load_remote_event_type(event_type_id, force_read = false)
     event_type_id = event_type_id.to_i
 
-    parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id) )
-    doc = parser.parse
+    puts @connector.event_type_url(event_type_id)
     
-    create_event_type(doc)
+    begin
+      parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id) )
+      doc = parser.parse
+      create_event_type(doc)
+    rescue Exception => e
+      puts e.backtrace.inspect
+    end
   end
 
   def to_boolean(string)

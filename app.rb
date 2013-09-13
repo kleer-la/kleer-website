@@ -144,7 +144,7 @@ end
 get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, true)
   end
   
@@ -162,9 +162,9 @@ end
 get '/cursos/:event_type_id_with_name' do
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
-  #if is_valid_event_id(event_id)
-  #  @event = @@keventer_reader.event(1, true)
-  #end
+  if is_valid_id(event_type_id)
+    @event = @@keventer_reader.event_type(event_type_id, true)
+  end
   
   #if @event.nil?
   #  flash.now[:error] = get_course_not_found_error()
@@ -182,7 +182,7 @@ get '/entrenamos/evento/:event_id_with_name/entrenador/remote' do
   event_id_with_name = params[:event_id_with_name]
 
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, false)
   end
 
@@ -198,7 +198,7 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
 
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, false)
   end
 
@@ -214,7 +214,7 @@ get '/entrenamos/evento/:event_id_with_name/registration' do
   event_id_with_name = params[:event_id_with_name]
 
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, false)
   end
 
@@ -231,7 +231,7 @@ end
 get '/comunidad/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, true)
   end
 
@@ -364,7 +364,7 @@ def get_community_event_not_found_error
   "El evento comunitario que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado.<br/>Te invitamos a visitar nuestro calendario para ver los eventos vigentes y probables nuevas fechas para el evento que estás buscando."
 end
 
-def is_valid_event_id(event_id_to_test)
+def is_valid_id(event_id_to_test)
   !(event_id_to_test.match(/^[0-9]+$/).nil?)
 end
 
