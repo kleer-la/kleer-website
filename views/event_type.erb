@@ -1,10 +1,156 @@
 <style>
-	body {
-		background: url(/img/fondos/fondo-10.jpg) no-repeat center center fixed; 
-	}
+    body {
+        background: url(/img/fondos/fondo-10.jpg) no-repeat center center fixed; 
+    }
 </style>
 <script type="text/javascript" src="/js/jquery.js"/></script>
 
 <script type="text/javascript" src="/js/jquery.dataTables.js"></script>
 
-hola mundo
+<script type="text/javascript">
+<!--
+
+$('body').on('hidden', '#myModalRegistration', function () {
+  $(this).removeData('modal');
+});
+
+$('body').on('hidden', '#myModalFacilitator', function () {
+  $(this).removeData('modal');
+});
+
+$('body').on('hidden', '#myModalSepyme', function () {
+  $(this).removeData('modal');
+  $('#myModalSepyme iframe').removeAttr('src');
+});
+
+-->
+</script>
+
+<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Registro a Curso</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
+<div id="myModalFacilitator" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Facilitador</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+  </div>
+</div>
+
+<div id="myModalSepyme" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 id="myModalLabel">Ahorrá hasta el 90%!</h4>
+  </div>
+  <div class="modal-body">
+    <p>Cargando...</p>
+  </div>
+</div>
+<%=@markdown_renderer.render( @event_type.name   )%>
+<div class="row-fluid">    
+    <div class="span9"> 
+        <div class="row-fluid">
+            <div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+                <div class="row-fluid">
+                    <div class="span12">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">&nbsp;</div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+                <div class="row-fluid">
+                    <div class="span8">
+                        <ul class="nav nav-tabs" id="myTab">
+                          <li class="active"><a href="#description" data-toggle="tab">Descripción</a></li>
+                          <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
+                          <li><a href="#program" data-toggle="tab">Programa</a></li>
+                          <% if @event_type.faqs != "" %>
+                            <li><a href="#faqs" data-toggle="tab">FAQs</a></li>
+                          <% end %>
+                          <!-- li><a href="#details" data-toggle="tab">Detalles</a></li -->
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="description">
+                            <% if !@event_type.elevator_pitch.nil? %>
+                              <%=@markdown_renderer.render( @event_type.elevator_pitch )%>
+                            <% end %>                            
+                            <%=@markdown_renderer.render( @event_type.description )%>
+                            
+                            <% if !@event_type.learnings.nil? && @event_type.learnings != "" %>
+                                <div style="margin: 2em 0; background: #f9fb89; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
+                                    <h3>¿Qué voy a aprender?</h3>
+                                    <%=@markdown_renderer.render( @event_type.learnings )%>
+                                </div>
+                            <% end %>
+                            
+                            <% if !@event_type.takeaways.nil? && @event_type.takeaways != "" %>
+                                <div style="margin: 2em 0; background: #dd8fc1; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
+                                    <h3>¿Qué voy a obtener?</h3>
+                                    <%=@markdown_renderer.render( @event_type.takeaways )%>
+                                </div>
+                            <% end %>
+                            
+                          </div>
+                          <div class="tab-pane" id="recipients">
+                            <%=@markdown_renderer.render( @event_type.recipients )%>
+                            <br/>&nbsp;
+                          </div>
+                          <div class="tab-pane" id="program">
+                            <%=@markdown_renderer.render( @event_type.program )%>
+                            <br/>&nbsp;
+                          </div>
+                          <div class="tab-pane" id="faqs">
+                            <%=@markdown_renderer.render( @event_type.faqs )%>
+                            <br/>&nbsp;
+                          </div>
+                          <!--div class="tab-pane" id="details">
+                            <br/>&nbsp;
+                          </div -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="span3" style="text-align:center;">  
+        <div class="row-fluid">
+            <div class="span12">
+                <img src="/img/logos/logo-01.png">
+                <%= erb :twitter_box, :layout => false %>
+            </div>
+        </div>
+        &nbsp;
+        <div class="row-fluid">
+            <div class="span12">
+                <%#erb :facebook_box, :layout => false, :locals => { :height => 400, :width => 100, :span => "span3" } %>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- social scripts -->
+<!-- script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "dcd6ccd6-45d9-4bb1-9b6f-b9742b986b08", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script -->

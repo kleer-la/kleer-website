@@ -106,19 +106,18 @@ get '/cursos/:event_type_id_with_name' do
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
   if is_valid_id(event_type_id)
-    @event = @@keventer_reader.event_type(event_type_id, true)
+    @event_type = @@keventer_reader.event_type(event_type_id, true)
   end
   
-  #if @event.nil?
-  #  flash.now[:error] = get_course_not_found_error()
-  #  erb :error404_to_calendar
-  #else
-  #  @active_tab_entrenamos = "active"
-  #  @twitter_card = create_twitter_card( @event )    
-  #  @page_title = "Kleer - " + @event.friendly_title
-  #  erb :event
-  #end
-  erb :event_type
+  if @event_type.nil?
+    flash.now[:error] = get_course_not_found_error()
+    erb :error404_to_calendar
+  else
+   # @active_tab_entrenamos = "active"
+   # @twitter_card = create_twitter_card( @event )    
+    @page_title = "Kleer - " + @event_type.name
+    erb :event_type
+  end
 end
 
 get '/entrenamos/evento/:event_id_with_name/entrenador/remote' do
