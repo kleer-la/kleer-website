@@ -22,5 +22,5 @@ Feature: Categories
 		Then I should have a link to the "Tipo de Evento de Prueba" page
 
 	Scenario: Event type details Page
-		Given I visit an event type page
-		Then I should see "Tipo de Evento de Prueba"
+		Given I visit an event type detail page
+		Then I should see "Kleer"
