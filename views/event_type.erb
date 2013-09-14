@@ -61,13 +61,13 @@ $('body').on('hidden', '#myModalSepyme', function () {
     <p>Cargando...</p>
   </div>
 </div>
-<%=@markdown_renderer.render( @event_type.name   )%>
 <div class="row-fluid">    
     <div class="span9"> 
         <div class="row-fluid">
             <div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
                 <div class="row-fluid">
                     <div class="span12">
+                        <h2><%=@event_type.name%></h2>
                     </div>
                 </div>
             </div>
