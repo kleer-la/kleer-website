@@ -335,3 +335,7 @@ end
 When /^I visit a non existing popup event page$/ do
   visit '/entrenamos/evento/1-un-evento-inexistente/remote'
 end
+
+Given(/^I visit "(.*?)"$/) do |page_url|
+  visit page_url
+end

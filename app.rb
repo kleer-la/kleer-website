@@ -71,6 +71,28 @@ get '/publicamos' do
   erb :ebooks
 end
 
+get '/posters/:poster_code' do
+  @poster_code = params[:poster_code]
+
+  case @poster_code
+  when "scrum"
+    @video_url_code = "IWUG29VPhUA"
+    @poster_name = "Scrum"
+  when "xp"
+    @video_url_code = "4nN6Gh79Yg8"
+    @poster_name = "Extreme Programming"
+  when "manifesto"
+    @video_url_code = "V5LaKpjcgKQ"
+    @poster_name = "Principios Ágiles"
+  end
+  
+  @pdf_download_url = "http://media.kleer.la/posters/#{@poster_code}.pdf"
+  @image_url = "/img/posters/#{@poster_code}.jpg"
+  
+  erb :poster
+  
+end
+
 get '/categoria/:category_codename' do
   @category = @@keventer_reader.category(params[:category_codename])
 
