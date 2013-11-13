@@ -71,6 +71,12 @@ get '/publicamos' do
   erb :ebooks
 end
 
+get '/publicamos/scrum' do
+  @active_tab_publicamos = "active"
+  @page_title += " | Publicamos | Proyectos Ágiles con Scrum"
+  erb :ebook_scrum
+end
+
 get '/posters/:poster_code' do
   @poster_code = params[:poster_code]
 
