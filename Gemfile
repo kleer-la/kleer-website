@@ -13,6 +13,7 @@ gem 'redcarpet'
 gem 'sinatra-flash'
 gem 'oauth'
 gem 'json'
+gem 'i18n'
 
 group :development do
   gem 'foreman'

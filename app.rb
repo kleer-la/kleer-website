@@ -5,6 +5,8 @@ require 'sinatra/r18n'
 require 'sinatra/flash'
 require 'redcarpet'
 require 'json'
+require 'i18n'
+
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
