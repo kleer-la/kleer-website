@@ -13,8 +13,18 @@ require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/event_type')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 
+helpers do
+  def t(*args)
+    I18n.locale = session[:locale]
+    I18n.t(*args)
+  end
+end
+
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
+  
+  I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'locales', '*.yml').to_s]
+  
   enable :sessions
   @@keventer_reader = KeventerReader.new
 end
@@ -23,13 +33,24 @@ before do
   if request.host == "kleer.la"
     redirect "http://www." + request.host + request.path
   else
-    session[:locale] = 'es'
     @page_title = "Kleer - Agile Coaching & Training"
     flash.sweep 
     @markdown_renderer = Redcarpet::Markdown.new(
                               Redcarpet::Render::HTML.new(:hard_wrap => true), 
                               :autolink => true)
   end
+end
+
+before '/:locale/*' do
+  locale = params[:locale]
+  
+  if locale == "es" || locale == "en"
+    session[:locale] = locale
+    request.path_info = '/' + params[:splat ][0]
+  else
+    session[:locale] = 'es'
+  end
+  
 end
 
 get '/' do
@@ -269,10 +290,6 @@ get '/sepyme/remote' do
 end
 
 # LEGACY ==================== 
-
-get '/es/:path' do
-  redirect "/" + params[:path]
-end
 
 not_found do
   @page_title = "404 - No encontrado"
