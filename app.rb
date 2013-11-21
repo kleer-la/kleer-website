@@ -14,9 +14,8 @@ require File.join(File.dirname(__FILE__),'/lib/event_type')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 
 helpers do
-  def t(*args)
-    I18n.locale = session[:locale]
-    I18n.t(*args)
+  def t( key )
+    I18n.t key, :locale => session[:locale]
   end
 end
 
@@ -30,6 +29,8 @@ configure do
 end
 
 before do
+  session[:locale] = 'es'
+  
   if request.host == "kleer.la"
     redirect "http://www." + request.host + request.path
   else
