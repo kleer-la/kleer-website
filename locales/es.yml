@@ -1,4 +1,13 @@
 es:
+    general:
+        kleer:
+            vision: 
+                text: "Creemos que hay otras formas de relacionarnos para conseguir resultados fantásticos que nos hagan sentir orgullosos."
+                reference: "Nuestra Visión"
+        buttons:
+            see_more: "Ver más"
+        links:
+            see_more: "ver más..."
     menu:
         home: "Inicio"
         training: "Entrenamos"
@@ -7,5 +16,65 @@ es:
         publishing: "Publicamos"
         we_are: "Somos"
         blog: "Blog"
-            
-            
+    home:
+        slider:
+            teams:
+                title: "Equipos asombrosos."
+                caption: "A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu equipo logrará resultados nunca antes vistos."
+            clients:
+                title: "Clientes felices."
+                caption: "Innovación, comunicación, colaboración y participación. Las claves para que tus clientes se sientan orgullosos de vos."
+            products:
+                title: "Productos tecnológicos de calidad."
+                caption: "Integración continua, Test Driven Development, Pair Programming, Refactoring y Código Límpio."
+        sections:
+            coaching:
+                title: "Consultoría"
+                text: "Ofrecemos un servicio de acompañamiento, coaching y mentoring integral para aplicar los métodos ágiles de organización de equipos en áreas de innovación como marketing, dirección organizacional, diseño de productos y servicios, y desarrollo de software."
+            training:
+                title: "Capacitación"
+                text: "Brindamos cursos, talleres y entrenamientos mediante las técnicas más novedosas y efectivas para garantizar el aprendizaje duradero en adultos.<br/>&nbsp;<br/>&nbsp;"
+            community:
+                title: "Comunidad"
+                text: "Impulsamos las Metodologías Ágiles en Latinoamérica desde el 2008. Enterate de todos los eventos comunitarios que organizamos y promocionamos en la región.<br/>&nbsp;<br/>&nbsp;"
+            publishing:
+                title: "Contenidos"
+                text: "Publicamos contenidos y conocimientos periódicamente. Encontrá e-Books, blog-posts, artículos y videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
+        calendar:
+            title: "Próximos 8 cursos"
+            register: "Registrarme!"
+            private_course_info: "Información de Cursos In-Company"
+            current_year_calendar: "Ver Calendario 2013/2014"
+    contact:
+        title: "Contacto"
+        newsletter_subscription: "Suscríbete a nuestra newsletter"
+        locations:
+            argentina:
+                name: "Argentina"
+                address1: "Tucumán 373 1er Piso"
+                address2: "1049 CABA"
+                phone: "+54 11.5236.0314"
+            brasil:
+                name: "Brasil"
+                address1: "Alameda Jaú, 310 113-A"
+                address2: "São Paulo"
+                phone: "+55 11.3284.5878"   
+            bolivia:
+                name: "Bolivia"
+                address1: "1ro de Mayo No. 542"
+                address2: "Qllo., Cochabamba"
+                phone: "+59 1.4.4321690"     
+            colombia:
+                name: "Colombia"
+                address1: "Calle 77 #16-38 of 302"
+                address2: "Bogotá"
+                phone: "+57 1.6255143"    
+            peru:
+                name: "Perú"
+                address1: "Federico Villareal 128"
+                address2: "Lima"
+                phone: "+51 996-352-739"
+            other:
+                title: "¿Otro país?"
+                contact_us: "Escribenos a"
+                contact_email: "hola@kleer.la"

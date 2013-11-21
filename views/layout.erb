@@ -212,8 +212,8 @@
 	          <img src="/img/slider/slide-01.jpg" alt="">
 	          <div class="container">
 	            <div class="carousel-caption">
-	              <h1>Equipos asombrosos.</h1>
-	              <p class="lead">A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu equipo logrará resultados nunca antes vistos.</p>
+	              <h1><%=t("home.slider.teams.title")%></h1>
+	              <p class="lead"><%=t("home.slider.teams.caption")%></p>
 	              <!-- a class="btn btn-large btn-primary" href="#">Conocer más</a -->
 	            </div>
 	          </div>
@@ -222,9 +222,9 @@
 	          <img src="/img/slider/slide-02.jpg" alt="">
 	          <div class="container">
 	            <div class="carousel-caption">
-	              <h1>Clientes felices.</h1>
-	              <p class="lead">Innovación, comunicación, colaboración y participación. Las claves para que tus clientes se sientan orgullosos de vos.</p>
-	              <!-- a class="btn btn-large btn-primary" href="#">Conocer más</a -->
+	              <h1><%=t("home.slider.clients.title")%></h1>
+	              <p class="lead"><%=t("home.slider.clients.caption")%></p>
+		          <!-- a class="btn btn-large btn-primary" href="#">Conocer más</a -->
 	            </div>
 	          </div>
 	        </div>
@@ -232,9 +232,9 @@
 	          <img src="/img/slider/slide-03.jpg" alt="">
 	          <div class="container">
 	            <div class="carousel-caption">
-	              <h1>Productos tecnológicos de calidad.</h1>
-	              <p class="lead">Integración continua, Test Driven Development, Pair Programming, Refactoring y Código Límpio.</p>
-	              <!-- a class="btn btn-large btn-primary" href="#">Conocer más</a -->
+	              <h1><%=t("home.slider.products.title")%></h1>
+	              <p class="lead"><%=t("home.slider.products.caption")%></p>
+				  <!-- a class="btn btn-large btn-primary" href="#">Conocer más</a -->
 	            </div>
 	          </div>
 	        </div>
@@ -299,51 +299,51 @@
 	<div id="footer">
 	      <div class="container" style="color:rgba(255,255,255,0.9)">
 				<p>
-					<h2 style="display:inline">Contacto</h2>&nbsp;
-					(<a href="http://eepurl.com/tu9Xr" target="_blank">Suscríbete a nuestra newsletter</a>)
+					<h2 style="display:inline"><%=t("contact.title")%></h2>&nbsp;
+					(<a href="http://eepurl.com/tu9Xr" target="_blank"><%=t("contact.newsletter_subscription")%></a>)
 				</p>
 			<div style="color:rgba(255,255,255,0.9);padding:5px;" class="row-fluid">
 				<ul class="thumbnails">
 					<li class="span2">
 						<div class="thumbnail">
 							<img src="/img/contact/baires.jpg" alt="">
-							<h4>Argentina</h4>
-							<p>Tucumán 373 1er Piso<br/>1049 CABA<br/>+54 11.5236.0314</p>
+							<h4><%=t("contact.locations.argentina.name")%></h4>
+							<p><%=t("contact.locations.argentina.address1")%><br/><%=t("contact.locations.argentina.address2")%><br/><%=t("contact.locations.argentina.phone")%></p>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
 							<img src="/img/contact/brasil.jpg" alt="">
-							<h4>Brasil</h4>
-							<p>Alameda Jaú, 310 113-A<br/>São Paulo<br/>+55 11.3284.5878</p>
+							<h4><%=t("contact.locations.brasil.name")%></h4>
+							<p><%=t("contact.locations.brasil.address1")%><br/><%=t("contact.locations.brasil.address2")%><br/><%=t("contact.locations.brasil.phone")%></p>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
 							<img src="/img/contact/bolivia.jpg" alt="">
-							<h4>Bolivia</h4>
-							<p>1ro de Mayo No. 542</br>Qllo., Cochabamba<br/>+59 1.4.4321690</p>
+							<h4><%=t("contact.locations.bolivia.name")%></h4>
+							<p><%=t("contact.locations.bolivia.address1")%><br/><%=t("contact.locations.bolivia.address2")%><br/><%=t("contact.locations.bolivia.phone")%></p>
 						</div>
 					</li>
 					<li class="span2">
 						<div class="thumbnail">
 							<img src="/img/contact/colombia.jpg" alt="">
-							<h4>Colombia</h4>
-							<p>Calle 77 #16-38 of 302<br/>Bogotá</br>+57 1.6255143</p>
+							<h4><%=t("contact.locations.colombia.name")%></h4>
+							<p><%=t("contact.locations.colombia.address1")%><br/><%=t("contact.locations.colombia.address2")%><br/><%=t("contact.locations.colombia.phone")%></p>
 						</div>
 					</li>
 					<li class="span2">
 							<div class="thumbnail">
 								<img src="/img/contact/peru.jpg" alt="">
-								<h4>Perú</h4>
-								<p>Federico Villareal 128<br/>Lima<br/>+51 996-352-739</p>
+								<h4><%=t("contact.locations.peru.name")%></h4>
+								<p><%=t("contact.locations.peru.address1")%><br/><%=t("contact.locations.peru.address2")%><br/><%=t("contact.locations.peru.phone")%></p>
 								</div>
 						</li>
 					<li class="span2">
 						<div class="thumbnail">
 							<img src="/img/contact/all-the-world.jpg" alt="">
-							<h4>¿Otro país?</h4>
-							<p>Escribenos a <a href="mailto:hola@kleer.la">hola@kleer.la</a>
+							<h4><%=t("contact.locations.other.title")%></h4>
+							<p><%=t("contact.locations.other.contact_us")%> <a href="mailto:<%=t("contact.locations.other.contact_email")%>"><%=t("contact.locations.other.contact_email")%></a>
 								<br/>&nbsp;</p>
 						</div>
 					</li>
