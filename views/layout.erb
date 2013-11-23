@@ -264,13 +264,13 @@
 	            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 	            <div class="nav-collapse collapse">
 	              	<ul class="nav">
-						<li class="<%=@active_tab_index%>"><a href="/"><%=t("menu.home")%></a></li>
-						<li class="<%=@active_tab_entrenamos%>"><a href="/entrenamos"><%=t("menu.training")%></a></li>
-						<li class="<%=@active_tab_acompanamos%>"><a href="/acompanamos"><%=t("menu.coaching")%></a></li>
-						<li class="<%=@active_tab_comunidad%>"><a href="/comunidad"><%=t("menu.community")%></a></li>
-						<li class="<%=@active_tab_publicamos%>"><a href="/publicamos"><%=t("menu.publishing")%></a></li>
-						<li class="<%=@active_tab_somos%>"><a href="/somos"><%=t("menu.we_are")%></a></li>
-                        <li class="<%=@active_tab_blog%>"><a href="/blog"><%=t("menu.blog")%></a></li>
+						<li class="<%=@active_tab_index%>"><a href="/<%=session[:locale]%>/"><%=t("menu.home")%></a></li>
+						<li class="<%=@active_tab_entrenamos%>"><a href="/<%=session[:locale]%>/entrenamos"><%=t("menu.training")%></a></li>
+						<li class="<%=@active_tab_acompanamos%>"><a href="/<%=session[:locale]%>/acompanamos"><%=t("menu.coaching")%></a></li>
+						<li class="<%=@active_tab_comunidad%>"><a href="/<%=session[:locale]%>/comunidad"><%=t("menu.community")%></a></li>
+						<li class="<%=@active_tab_publicamos%>"><a href="/<%=session[:locale]%>/publicamos"><%=t("menu.publishing")%></a></li>
+						<li class="<%=@active_tab_somos%>"><a href="/<%=session[:locale]%>/somos"><%=t("menu.we_are")%></a></li>
+                        <li class="<%=@active_tab_blog%>"><a href="/<%=session[:locale]%>/blog"><%=t("menu.blog")%></a></li>
 					</ul>
 	            </div><!--/.nav-collapse -->
 	          </div><!-- /.navbar-inner -->

@@ -6,8 +6,17 @@ en:
                 reference: "Our Vision"
         buttons:
             see_more: "see more"
-        links:
-            see_more: "see more..."
+            register: "Register Now!"
+            close: "Close"
+        texts:
+            loading: "loading..."
+    dt_grid:
+        see_more: "see more..."
+        loading: "loading..."
+        showing: "Showing from _START_ to _END_ of _TOTAL_ records"
+        filter: "(filtering from a total of _MAX_ records)"
+        search: "Search"
+        no_courses_found: "No courses found. We would like you to contact us at <a href=\\\"mailto:hello@kleer.us\\\">hello@kleer.us</a> with your questions."
     menu:
         home: "Home"
         training: "Training"
@@ -26,14 +35,14 @@ en:
                 caption: "Innovation, communication, collaboration and participation. keys for your customers to be proud of you."
             products:
                 title: " High quality technology products."
-                caption: "Continuous Integration , Test Driven Development , Pair Programming, Refactoring and Clean Code."
+                caption: "Continuous Integration, Test Driven Development, Pair Programming, Refactoring and Clean Code."
         sections:
             coaching:
                 title: "Coaching"
                 text: "We offer an accompaniament service, comprehensive coaching and mentoring to implement agile methods of organizing teams in innovation areas such as marketing, organizational management, product and service design, software development. .."
             training:
                 title: "Training"
-                text: "We offer courses , workshops and training using the latest techniques to ensure effective and durable learning.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
+                text: "We offer courses, workshops and training using the latest techniques to ensure effective and durable learning.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
             community:
                 title: "Community"
                 text: "We encourage Agile Methodologies in Latin America since 2008. Find out all community events organized and promoted in the region<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
@@ -42,9 +51,21 @@ en:
                 text: "We publish contents and share knowledge regularly. Find out e-Books, blog-posts, articles and videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
         calendar:
             title: "8 upcoming courses"
-            register: "Register!"
             private_course_info: "In-Company courses information"
             current_year_calendar: "See 2013/2014 calendar"
+    popups:
+        course:
+            registration:
+                title: "Course Registration"
+            details:
+                title: "Course Details"
+        event:
+            registration:
+                title: "Event Registration"
+    training:
+        title: "Public Courses"
+    community:
+        title: "Community Events"
     contact:
         title: "Contact"
         newsletter_subscription: "Subscribe to our newsletter"

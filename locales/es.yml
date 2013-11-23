@@ -6,8 +6,15 @@ es:
                 reference: "Nuestra Visión"
         buttons:
             see_more: "Ver más"
-        links:
-            see_more: "ver más..."
+            register: "Registrarme!"
+            close: "Cerrar"
+    dt_grid:
+        see_more: "ver más..."
+        loading: "cargando..."
+        showing: "Mostrando desde _START_ hasta _END_ de _TOTAL_ registros"
+        filter: "(filtrado de _MAX_ registros en total)"
+        search: "Buscar"
+        no_courses_found: "No se encontraron cursos, pero nos gustaría que nos contactes a <a href=\\\"mailto:hola@kleer.la\\\">hola@kleer.la</a> con tu inquietud."
     menu:
         home: "Inicio"
         training: "Entrenamos"
@@ -42,9 +49,21 @@ es:
                 text: "Publicamos contenidos y conocimientos periódicamente. Encontrá e-Books, blog-posts, artículos y videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
         calendar:
             title: "Próximos 8 cursos"
-            register: "Registrarme!"
             private_course_info: "Información de Cursos In-Company"
             current_year_calendar: "Ver Calendario 2013/2014"
+    popups:
+        course:
+            registration:
+                title: "Registro a Curso"
+            details:
+                title: "Detalles de Curso"
+        event:
+            registration:
+                title: "Registro a Evento"
+    training:
+        title: "Cursos Abiertos"
+    community:
+        title: "Eventos Comunitarios"
     contact:
         title: "Contacto"
         newsletter_subscription: "Suscríbete a nuestra newsletter"

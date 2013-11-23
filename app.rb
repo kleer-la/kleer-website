@@ -51,7 +51,6 @@ before '/:locale/*' do
   else
     session[:locale] = 'es'
   end
-  
 end
 
 get '/' do
@@ -247,7 +246,7 @@ get '/entrenamos/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", amount)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount)
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
@@ -256,7 +255,7 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
@@ -265,7 +264,7 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "comunidad"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad", I18n, session[:locale])
 end
 
 # STATIC FILES ============== 
