@@ -7,7 +7,10 @@ es:
         buttons:
             see_more: "Ver más"
             register: "Registrarme!"
+            complete: "Completo"
             close: "Cerrar"
+        texts:
+            loading: "cargando..."
     dt_grid:
         see_more: "ver más..."
         loading: "cargando..."

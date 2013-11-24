@@ -7,6 +7,7 @@ en:
         buttons:
             see_more: "see more"
             register: "Register Now!"
+            complete: "Complete"
             close: "Close"
         texts:
             loading: "loading..."

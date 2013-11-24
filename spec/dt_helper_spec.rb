@@ -3,8 +3,13 @@ require File.join(File.dirname(__FILE__),'../lib/dt_helper')
 require File.join(File.dirname(__FILE__),'../lib/keventer_event')
 require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
 require 'date'
+require 'i18n'
 
 describe DTHelper do
+  
+  before(:each) do
+    I18n.load_path += Dir[File.join(File.dirname(__FILE__), '../locales', '*.yml').to_s]
+  end
   
   it "should return a certain string for a sold out event" do
     some_events = Array.new
