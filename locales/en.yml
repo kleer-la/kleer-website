@@ -1,0 +1,159 @@
+en:
+    general:
+        kleer:
+            vision: 
+                text: "We believe there are other ways of human interaction to achieve fantastic results that make us proud"
+                reference: "Our Vision"
+        buttons:
+            see_more: "see more"
+            register: "Register Now!"
+            complete: "Complete"
+            close: "Close"
+        texts:
+            loading: "loading..."
+    dt_grid:
+        see_more: "see more..."
+        loading: "loading..."
+        showing: "Showing from _START_ to _END_ of _TOTAL_ records"
+        filter: "(filtering from a total of _MAX_ records)"
+        search: "Search"
+        no_courses_found: "No courses found. We would like you to contact us at <a href=\\\"mailto:hello@kleer.us\\\">hello@kleer.us</a> with your questions."
+    menu:
+        home: "Home"
+        training: "Training"
+        coaching: "Coaching"
+        community: "Community"
+        publishing: "Publications"
+        we_are: "We Are"
+        blog: "Blog"
+    home:
+        slider:
+            teams:
+                title: "Amazing teams."
+                caption: "Through effective learning, trust, commitment, visibility and flexibility your team will achieve results never seen before."
+            clients:
+                title: "Happy clients."
+                caption: "Innovation, communication, collaboration and participation. keys for your customers to be proud of you."
+            products:
+                title: " High quality technology products."
+                caption: "Continuous Integration, Test Driven Development, Pair Programming, Refactoring and Clean Code."
+        sections:
+            coaching:
+                title: "Coaching"
+                text: "We offer coaching and mentoring services for agile methods adoption for organizing teams in innovation areas such as marketing, organizational management, product and service design, software development. .."
+            training:
+                title: "Training"
+                text: "We offer courses, workshops and training using the latest techniques to ensure effective and durable learning.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
+            community:
+                title: "Community"
+                text: "We encourage Agile Methodologies in Latin America since 2008. Find out all community events organized and promoted in the region<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
+            publishing:
+                title: "Contents"
+                text: "We publish contents and share knowledge regularly. Find out e-Books, blog-posts, articles and videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
+        calendar:
+            title: "8 upcoming courses"
+            private_course_info: "In-Company courses information"
+            current_year_calendar: "See 2013/2014 calendar"
+    popups:
+        course:
+            registration:
+                title: "Course Registration"
+            details:
+                title: "Course Details"
+        event:
+            registration:
+                title: "Event Registration"
+    training:
+        title: "Public Courses"
+    community:
+        title: "Community Events"
+    coaching:
+       title: "Coaching"
+       subtitle: "We help organizations, teams and practitioners"
+       text: "<p>We offer coaching services in implementing Agile Methodologies and implementing agile development techniques with valuable results.</p><p>This is a process carried out in situ and with the assistance of an expert in Agile Methodologies, who has the task of transmitting actively practices and tools necessary to transform into Agile a team or organization. The implementation occurs while the people involved are performing their daily duties.</p><p>One advantage of adopting our Agile Coaching is that the successful implementation of Agile methodologies is achieved in less time than it would take to do it without the assistance of an expert. Additionally, the business is not neglected as we works directly on the projects, roles and objectives of the teams and other stakeholders involved in the implementation (managers, development managers, etc.). This includes identifying problems, understanding their causes and developing the skills necessary for the team to be able to solve them successfully.</p><p>There are two kinds of situations: those in which never before had and agile environment been created and and others in which Agile already exists and you want to experience a greater level of depth. Kleer's service responds effectively to both, with the additional feature that models the process of implementation according to the specific needs of the team or organization.</p><p>In the case where necessary, support is preceded by customised training, ensuring a level of knowledge that enables greater effectiveness during deployment.</p>"
+       tabs:
+           benefits:
+               title: "Coaching benefits"
+               text: "<ul><li>Raise the team's level of flexibility to respond to new situations </li><li> Improved product quality as a result of the implementation of Agile techniques</li><li> Reducing development costs saves time and avoids rework</li><li> The occurrence of preventable errors reduces greatly</li></ul>"
+           characteristics:
+               title: "Service Features"
+               text: "<ul><li>Business is not neglected. The team is not out of its tasks since the transfer of knowledge occurs while the team is performing its tasks.</li><li> No hypothesis. Problems or impediments are detected and dealt with in concrete cases.</li><li> It is an investment. The increased quality prevents rework cycles and therefore generates time and cost savings</li></ul>"
+           contact:
+               title: "Request for quotation"
+               text: "<p>Contact us<a href='mailto:hello@kleer.la'>hello@kleer.la</a> for a quotation.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
+    publishing:
+       title: "We publish"
+       books:
+           scrum:
+               title: "Agiles Projects with Scrum"
+               text: "Scrum is a framework that allows us to find emerging practices in complex domains such as the management of innovation projects. It is not a complete process, much less a methodology. Instead of providing a complete and detailed description of how the project tasks should be performed, it generates a relational and iterative context, of inspection and constant adaptation where those involved are to create their own process."
+               next: " You can download this e-book in PDF format with just a tweet!"
+               subtitle: " Flexibility, learning, innovation and collaboration in complex contexts"
+               learnings: "<p> Through this book you will learn:</p> <ul><li>The factors that led to agile methodologies</li><li> The values ​​and principles of the Agile Manifesto </li><li> Complexity contexts where Scrum is more efficient</li><li>Scrum values and principles</li><li>Scrum Team Roles</li><li> Responsibilities and expectations of each role</li><li>Scrum workflow elements and activities</li><li>Agile analysis and evolutionary development techniques</li><li>How to communicate needs (User Stories)</li><li>Agile estimations</li><li>Medium and long term planning</li><li> Budgeting agile projects</li></ul>&nbsp;"
+               video:
+                   title: "View the 4-minute video describing Scrum"
+                   download: "Download the PDF poster from<a href='http://media.kleer.la/posters/scrum.pdf'>here</a>"
+               download:
+                   pdf: "Free PDF"
+           retrospectives:
+               title: "Retrospectives techniques"
+               text: "Retrospectives are meetings where teams identify areas for improvement and design actions to do so. They may occur at the end of each iteration (sprint), after each new version or anytime a need for improvement is detected. The following is a summary of techniques that can be used.<br/>&nbsp;<br/>You can download this e-book in PDF format with just a tweet!"
+           mas_productivos:
+               title: "More Productive"
+               text: " Individuals and interactions over processes and tools. Considering Scrum as a simple working process extremely limits the opportunities we have to reaching a high performance. Scrum is all about human interactions in complex domains. In this book we analize these human interactions from the Coaching standpoint. You will get to know how to implement Scrum and Coaching to...<br/>You can download this e-book in PDF format with just a tweet!"
+    we_are:
+       title: "We are"
+       subtitle: "We help organizations, teams and practitioners"
+    event:
+       facilitator: "Facilitator"
+       save90percent: "Up to 90% savings!"
+       free: "Free event"
+       wanna_join: "Wanna join?"
+       location: "Venue"
+       time: "%{starts} to %{ends}hs"
+       tabs:
+           description: "Description"
+           target: "Targeted at"
+           program: "Program"
+           faqs: "FAQs"
+       details:
+           sections:
+               learnings: "What will I learn?"
+               takeaways: "What will I get?"
+           early_bird: "<strong>Secure your vacant before %{month} %{day}  for a %{currency} %{amount} discount!</strong>.<br/> There are also group discounts available. Ask for them!"
+       is_full:
+           title: "<strong>Ouch!</strong> Sorry! This course is full."
+           text: "You can contact us at <a href=\"mailto:training@kleer.us?subject=New dates for: %{title}\">training@kleer.us</a> to request new edition dates."
+    contact:
+        title: "Contact"
+        newsletter_subscription: "Subscribe to our newsletter"
+        locations:
+            argentina:
+                name: "Argentina"
+                address1: "Tucumán 373 1er Piso"
+                address2: "1049 Buenos Aires"
+                phone: "+54 11.5236.0314"
+            brasil:
+                name: "Brazil"
+                address1: "Alameda Jaú, 310 113-A"
+                address2: "São Paulo"
+                phone: "+55 11.3284.5878"   
+            bolivia:
+                name: "Bolivia"
+                address1: "1ro de Mayo No. 542"
+                address2: "Qllo., Cochabamba"
+                phone: "+59 1.4.4321690"     
+            colombia:
+                name: "Colombia"
+                address1: "Calle 77 #16-38 of 302"
+                address2: "Bogotá"
+                phone: "+57 1.6255143"    
+            peru:
+                name: "Peru"
+                address1: "Federico Villareal 128"
+                address2: "Lima"
+                phone: "+51 996-352-739"
+            other:
+                title: "Other countries?"
+                contact_us: "Contact us at"
+                contact_email: "hello@kleer.la"

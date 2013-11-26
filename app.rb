@@ -5,28 +5,55 @@ require 'sinatra/r18n'
 require 'sinatra/flash'
 require 'redcarpet'
 require 'json'
+require 'i18n'
+
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/event_type')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 
+helpers do
+  def t(key, ops = Hash.new)
+    ops.merge!(:locale => session[:locale])
+    I18n.t key, ops
+  end
+end
+
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
+  
+  I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'locales', '*.yml').to_s]
+  
   enable :sessions
   @@keventer_reader = KeventerReader.new
 end
 
 before do
-  if request.host == "kleer.la"
+  session[:locale] = 'es'
+  
+  if request.host == "kleer.la" || request.host == "kleer.us" || request.host == "kleer.es" || request.host == "kleer.com.ar"
     redirect "http://www." + request.host + request.path
   else
-    session[:locale] = 'es'
     @page_title = "Kleer - Agile Coaching & Training"
     flash.sweep 
     @markdown_renderer = Redcarpet::Markdown.new(
                               Redcarpet::Render::HTML.new(:hard_wrap => true), 
                               :autolink => true)
+  end
+end
+
+before '/:locale/*' do
+  locale = params[:locale]
+  
+  if locale == "es" || locale == "en"
+    session[:locale] = locale
+    request.path_info = '/' + params[:splat ][0]
+  elsif request.host.include?( "kleer.us" )
+    session[:locale] = "en"
+    request.path_info = '/' + params[:splat ][0]
+  else
+    session[:locale] = 'es'
   end
 end
 
@@ -223,7 +250,7 @@ get '/entrenamos/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", amount)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount)
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
@@ -232,7 +259,7 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
@@ -241,7 +268,7 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "comunidad"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad", I18n, session[:locale])
 end
 
 # STATIC FILES ============== 
@@ -267,10 +294,6 @@ get '/sepyme/remote' do
 end
 
 # LEGACY ==================== 
-
-get '/es/:path' do
-  redirect "/" + params[:path]
-end
 
 not_found do
   @page_title = "404 - No encontrado"
