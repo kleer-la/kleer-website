@@ -29,36 +29,36 @@ $('body').on('hidden', '#myModalSepyme', function () {
 <div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="myModalLabel">Registro a Curso</h4>
+    <h4 id="myModalLabel"><%=t("popups.course.registration.title")%></h4>
   </div>
   <div class="modal-body">
-    <p>Cargando...</p>
+    <p><%=t("general.texts.loading")%></p>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
   </div>
 </div>
 
 <div id="myModalFacilitator" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="myModalLabel">Facilitador</h4>
+    <h4 id="myModalLabel"><%=t("event.facilitator")%></h4>
   </div>
   <div class="modal-body">
-    <p>Cargando...</p>
+    <p><%=t("general.texts.loading")%></p>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
   </div>
 </div>
 
 <div id="myModalSepyme" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="myModalLabel">Ahorrá hasta el 90%!</h4>
+    <h4 id="myModalLabel"><%=t("event.save90percent")%></h4>
   </div>
   <div class="modal-body">
-    <p>Cargando...</p>
+    <p><%=t("general.texts.loading")%></p>
   </div>
 </div>
 
@@ -82,14 +82,14 @@ $('body').on('hidden', '#myModalSepyme', function () {
 					<div class="span12">
 						<div class="row-fluid">
 							<div class="span4">
-								Facilitador:<br/>
+								<%=t("event.facilitator")%>:<br/>
 								<a  data-toggle="modal" data-target="#myModalFacilitator" href="/entrenamos/evento/<%=@event.id%>/entrenador/remote"><i class="icon-user"></i>&nbsp;<%=@event.trainer.name%></a>&nbsp;
 								<br/>&nbsp;
 							</div>
 							<div class="span8" align="right">
 							  <%if !@event.is_sold_out%>
 									<%if @event.sepyme_enabled%>
-										<a data-toggle="modal" data-target="#myModalSepyme" href="/sepyme/remote"><span class="btn btn-info">Ahorrá hasta el 90%!</span></a>&nbsp;
+										<a data-toggle="modal" data-target="#myModalSepyme" href="/sepyme/remote"><span class="btn btn-info"><%=t("event.save90percent")%></span></a>&nbsp;
 									<%end%>
 								<%end%>
 							</div>
@@ -106,15 +106,14 @@ $('body').on('hidden', '#myModalSepyme', function () {
 				<div class="row-fluid">
 					<div class="span8">
 						<ul class="nav nav-tabs" id="myTab">
-						  <li class="active"><a href="#description" data-toggle="tab">Descripción</a></li>
-						  <li><a href="#recipients" data-toggle="tab">Destinado A</a></li>
-						  <li><a href="#program" data-toggle="tab">Programa</a></li>
+						  <li class="active"><a href="#description" data-toggle="tab"><%=t("event.tabs.description")%></a></li>
+						  <li><a href="#recipients" data-toggle="tab"><%=t("event.tabs.target")%></a></li>
+						  <li><a href="#program" data-toggle="tab"><%=t("event.tabs.program")%></a></li>
 						  <% if @event.event_type.faqs != "" %>
-						  	<li><a href="#faqs" data-toggle="tab">FAQs</a></li>
+						  	<li><a href="#faqs" data-toggle="tab"><%=t("event.tabs.faqs")%></a></li>
 						  <% end %>
 						  <!-- li><a href="#details" data-toggle="tab">Detalles</a></li -->
 						</ul>
-
 						<div class="tab-content">
 						  <div class="tab-pane active" id="description">
 							<% if !@event.event_type.elevator_pitch.nil? %>
@@ -122,21 +121,27 @@ $('body').on('hidden', '#myModalSepyme', function () {
 							<% end %>
 							
 							<% if @event.discount > 0.0 && @event.eb_end_date > Date.today %>
-								<p style="color: #4b4e53; padding: 12px; border-radius: 12px; background: #6dfac6;"><strong>Asegura tu vacante antes del <%=@event.eb_end_date.strftime("%d")%> de <%=@event.eb_end_date.strftime("%b")%> para obtener un descuento de <%=@event.currency_iso_code%> <%=sprintf("%05.2f", @event.discount)%>!</strong> Tambi&eacute;n hay descuentos disponibles por cantidad de personas.</p>
+								<p style="color: #4b4e53; padding: 12px; border-radius: 12px; background: #6dfac6;">
+									<%=t("event.details.early_bird", 
+										:day => @event.eb_end_date.strftime("%d"),
+										:month => @event.eb_end_date.strftime("%b"),
+										:currency => @event.currency_iso_code,
+										:amount => sprintf("%05.2f", @event.discount) )%>
+								</p>
 							<% end %>
 							
 						  	<%=@markdown_renderer.render( @event.event_type.description )%>
 						    
 							<% if !@event.event_type.learnings.nil? && @event.event_type.learnings != "" %>
 							    <div style="margin: 2em 0; background: #f9fb89; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
-									<h3>¿Qué voy a aprender?</h3>
+									<h3><%=t("event.details.sections.learnings")%></h3>
 							    	<%=@markdown_renderer.render( @event.event_type.learnings )%>
 							    </div>
 							<% end %>
 						    
 							<% if !@event.event_type.takeaways.nil? && @event.event_type.takeaways != "" %>
 							    <div style="margin: 2em 0; background: #dd8fc1; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
-									<h3>¿Qué voy a obtener?</h3>
+									<h3><%=t("event.details.sections.takeaways")%></h3>
 							    	<%=@markdown_renderer.render( @event.event_type.takeaways )%>
 							    </div>
 							<% end %>
@@ -161,15 +166,15 @@ $('body').on('hidden', '#myModalSepyme', function () {
 					</div>
 					<div class="span4">
 						<% if @event.eb_price == 0.0 %>
-							<h4>Evento Gratuito</h4>
+							<h4><%=t("event.free")%></h4>
 						<% end %>
-						<h3>¿Querés Participar?</h3>
+						<h3><%=t("event.wanna_join")%></h3>
 						<%if @event.is_sold_out%>
-							<div class="alert alert-error"><strong>Ouch!</strong> El cupo para este evento se encuentra completo.</div>
-							Puedes contactarnos a <a href="mailto:entrenamos@kleer.la?subject=Nuevas Fechas: <%=@event.friendly_title%>">entrenamos@kleer.la</a> para conocer nuevas fechas.
+							<div class="alert alert-error"><%=t("event.is_full.title")%></div>
+							<%=t("event.is_full.text", :title => @event.friendly_title )%>
 						<%else%>
 							<%if @event.registration_link != "" %>
-								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success">Registrarme!</span></a>
+								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success"><%=t("general.buttons.register")%></span></a>
 							<%else %>
 								<iframe src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="290" border="0" scrolling="no" seamless></iframe>
 							<%end%>
@@ -190,18 +195,18 @@ $('body').on('hidden', '#myModalSepyme', function () {
 		&nbsp;
 		<div class="row-fluid">	
 			<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-				<h3>Lugar</h3>
+				<h3><%=t("event.location")%></h3>
 				<% if @event.is_webinar %>
 					<img src="https://maps.google.com/maps/api/staticmap?language=es&zoom=0.5&size=190x190&maptype=satellite&sensor=false">
 					<br/><%=@event.place%><br/>
-					<%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs<br/>
+					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%>
 					<%=@event.country%><br/><br/>
 				<% else %>
 					<a href="https://maps.google.com/maps?q=<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>" target="_blank">
 						<img src="https://maps.google.com/maps/api/staticmap?language=es&center=<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>&markers=size:mid|color:red|<%=URI::encode(@event.address)%>,+<%=URI::encode(@event.city)%>,+<%=URI::encode(@event.country)%>&zoom=15&size=190x190&maptype=roadmap&sensor=false"><br/>
 					</a>
 					<br/><%=@event.place%><br/><%=@event.address%><br/><%=@event.city%>, <%=@event.country%><br/>
-					<%=@event.start_time.strftime("%k:%M")%> a <%=@event.end_time.strftime("%k:%M")%>hs<br/><br/>
+					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%><br/><br/>
 				<% end %>
 			</div>
 		</div>	

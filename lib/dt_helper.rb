@@ -30,9 +30,9 @@ class DTHelper
     line = "<a "
     if remote 
       line += "data-toggle=\"modal\" data-target=\"#myModal\" "
-      line += "href=\"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path) + "/remote"
+      line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path) + "/remote"
     else
-      line += "href=\"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
+      line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
     end
     line += "\">" + event.event_type.name + "</a><br/>"
     line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country
@@ -71,7 +71,7 @@ class DTHelper
     if event.registration_link != ""
       "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\">#{i18n.t("general.buttons.register", :locale => locale)}</a>"
     else
-      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-success\">#{i18n.t("general.buttons.register", :locale => locale)}</a>"
+      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/"+locale+"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-success\">#{i18n.t("general.buttons.register", :locale => locale)}</a>"
     end
   end
   

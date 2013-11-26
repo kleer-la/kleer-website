@@ -14,8 +14,9 @@ require File.join(File.dirname(__FILE__),'/lib/event_type')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 
 helpers do
-  def t( key )
-    I18n.t key, :locale => session[:locale]
+  def t(key, ops = Hash.new)
+    ops.merge!(:locale => session[:locale])
+    I18n.t key, ops
   end
 end
 

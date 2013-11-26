@@ -7,25 +7,24 @@
 
 <div class="row-fluid">
 	<div class="span9" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1>Publicaciones</h1>
+		<h1><%=t("publishing.title")%></h1>
 		&nbsp;
 		<div class="row-fluid">
 			<div class="span4">
-				<a href="/publicamos/scrum"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
+				<a href="/<%=session[:locale]%>/publicamos/scrum"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
 
 				<div class="well well-small">
-					<h4>Proyectos Ágiles con Scrum</h4>
-					<p>Scrum es un marco de trabajo que nos permite encontrar prácticas emergentes en dominios complejos, como la gestión de proyectos de innovación. No es un proceso completo, y mucho menos, una metodología. En lugar de proporcionar una descripción completa y detallada de cómo deben realizarse las tareas de un proyecto, genera un contexto relacional e iterativo, de inspección y adaptación constante para que los involucrados vayan creando su propio proceso.</p>
-					<p><a href="/publicamos/scrum">Puedes bajar este e-book en formato PDF con solo un tweet!</a></p>
+					<h4><%=t("publishing.books.scrum.title")%></h4>
+					<p><%=t("publishing.books.scrum.text")%></p>
+					<p><a href="/<%=session[:locale]%>/publicamos/scrum"><%=t("publishing.books.scrum.next")%></a></p>
 				</div>
 			</div>
 			<div class="span4">
 				<p align="center"><img src="/img/ebooks/retrospectivas.png" class="img-rounded"></p>
 
 				<div class="well well-small">
-					<h4>Técnicas para la realización de retrospectivas</h4>
-					<p>Las retrospectivas son reuniones en los que los equipos identifican áreas de mejora e idean acciones para mejorar. Pueden usarse al final de cada iteración (sprint), luego de cada nueva versión o en cualquier momento que se detecte una necesidad de mejora. Este documento tiene un resumen de técnicas que pueden utilizarse.</p>
-					<p>Puedes bajar este e-book con solo un tweet!</p>
+					<h4><%=t("publishing.books.retrospectives.title")%></h4>
+					<p><%=t("publishing.books.retrospectives.text")%></p>
 					<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=d999f0797cb600c38e17891503cb3b05" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
 				</div>
 			</div>
@@ -35,9 +34,8 @@
 				<p align="center"><img src="/img/ebooks/mas-productivos-288.jpg" class="img-rounded"></p>
 
 				<div class="well well-small">
-					<h4>Más Productivos</h4>
-					<p>Personas e interacciones por sobre procesos y herramientas. Ver a Scrum como un simple proceso de trabajo lmita extremádamente las posibilidades que tenemos de alcanzar un alto desempeño. Scrum se trata sobre relaciones humanas en la complejidad. En este libro analizamos esas relaciones humanas de la mano del Coachig. Veremos cómo se somplementa Scrum y Coaching para ...</p>
-					<p>Puedes bajar este e-book con solo un tweet!</p>
+					<h4><%=t("publishing.books.mas_productivos.title")%></h4>
+					<p><%=t("publishing.books.mas_productivos.text")%></p>
 					<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=2ccb0d9176df8747d9c0a87511e90c00" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
 				</div>
 			</div>
