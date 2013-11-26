@@ -30,7 +30,11 @@ configure do
 end
 
 before do
-  session[:locale] = 'es'
+  if request.host.include?( "kleer.us" )
+    session[:locale] = 'en'
+  else
+    session[:locale] = 'es'
+  end
   
   if request.host == "kleer.la" || request.host == "kleer.us" || request.host == "kleer.es" || request.host == "kleer.com.ar"
     redirect "http://www." + request.host + request.path
@@ -45,16 +49,14 @@ end
 
 before '/:locale/*' do
   locale = params[:locale]
-  
+    
   if locale == "es" || locale == "en"
     session[:locale] = locale
-    request.path_info = '/' + params[:splat ][0]
-  elsif request.host.include?( "kleer.us" )
-    session[:locale] = "en"
     request.path_info = '/' + params[:splat ][0]
   else
     session[:locale] = 'es'
   end
+  
 end
 
 get '/' do
