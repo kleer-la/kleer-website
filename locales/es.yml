@@ -94,7 +94,7 @@ es:
                     title: "Mirá el video de 4 minutos y medio que describe Scrum"
                     download: "Baja el PDF con el poster desde <a href='http://media.kleer.la/posters/scrum.pdf'>aquí</a>"
                 download:
-                    pdf: "PDF Gratuido"
+                    pdf: "PDF Gratuito"
             retrospectives:
                 title: "Técnicas para la realización de retrospectivas"
                 text: "Las retrospectivas son reuniones en los que los equipos identifican áreas de mejora e idean acciones para mejorar. Pueden usarse al final de cada iteración (sprint), luego de cada nueva versión o en cualquier momento que se detecte una necesidad de mejora. Este documento tiene un resumen de técnicas que pueden utilizarse.<br/>&nbsp;<br/>Puedes bajar este e-book con solo un tweet!"

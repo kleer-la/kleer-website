@@ -32,7 +32,7 @@ end
 before do
   session[:locale] = 'es'
   
-  if request.host == "kleer.la"
+  if request.host == "kleer.la" || request.host == "kleer.us" || request.host == "kleer.es" || request.host == "kleer.com.ar"
     redirect "http://www." + request.host + request.path
   else
     @page_title = "Kleer - Agile Coaching & Training"
@@ -48,6 +48,9 @@ before '/:locale/*' do
   
   if locale == "es" || locale == "en"
     session[:locale] = locale
+    request.path_info = '/' + params[:splat ][0]
+  elsif request.host.include?( "kleer.us" )
+    session[:locale] = "en"
     request.path_info = '/' + params[:splat ][0]
   else
     session[:locale] = 'es'
