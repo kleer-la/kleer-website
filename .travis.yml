@@ -10,5 +10,5 @@ deploy:
   api_key:
     secure: PTHuvDIoxv7sBB8XKgAyVn6EKPC4j8u+9BwHIEtuLtLt1AwF9utw4uE+anJULO6RtPFXfDbKolkfDflDg1ikD2mTB9RYYaMwlFPRFeWUoz1dGmJ5RvE9EISsal3KzYuEkSswkKpX0jIonmwa7Q/aqkm2S16OmAq0RlJVFF/DjG4=
   app:
-  	master: kleer
-  	develop: kleer-test
+    master: kleer
+    develop: kleer-test
