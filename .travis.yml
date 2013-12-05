@@ -1,7 +1,14 @@
 language: ruby
 rvm: 1.9.3
 before_script:
-  - "sh -e /etc/init.d/xvfb start"
+- sh -e /etc/init.d/xvfb start
 script:
-  - bundle exec rspec
-  - bundle exec cucumber
+- bundle exec rspec
+- bundle exec cucumber
+deploy:
+  provider: heroku
+  api_key:
+    secure: PTHuvDIoxv7sBB8XKgAyVn6EKPC4j8u+9BwHIEtuLtLt1AwF9utw4uE+anJULO6RtPFXfDbKolkfDflDg1ikD2mTB9RYYaMwlFPRFeWUoz1dGmJ5RvE9EISsal3KzYuEkSswkKpX0jIonmwa7Q/aqkm2S16OmAq0RlJVFF/DjG4=
+  app:
+  	master: kleer
+  	develop: kleer-test
