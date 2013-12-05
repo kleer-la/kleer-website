@@ -115,6 +115,7 @@ class KeventerReader
         event_type.id = event_type_node.find_first('id').content
         event_type.name = event_type_node.find_first('name').content
         event_type.description = event_type_node.find_first('description').content
+        event_type.elevator_pitch = event_type_node.find_first('elevator-pitch').content
         event_types << event_type
       end
     end
@@ -295,6 +296,7 @@ class KeventerReader
     event_type.recipients  = xml_keventer_event.find_first('recipients').content
     event_type.program  = xml_keventer_event.find_first('program').content
     event_type.faqs  = xml_keventer_event.find_first('faq').content
+    event_type.elevator_pitch = xml_keventer_event.find_first('elevator-pitch').content
 
     event_type
   end    

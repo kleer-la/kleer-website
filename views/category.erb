@@ -6,16 +6,47 @@
 </style>
 
 <div class="row">
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1><%= @category.name %></h1>
-		<p class="lead"><%= @category.tagline %></p>
-	</div>	
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<ul>
-			<% @event_types.each do |event_type| %>
-			<li><a href="/cursos/<%= event_type.id%>-<%= ERB::Util::url_encode(event_type.name)%>"><%= event_type.name%></a></li>
-			<% end %>
-		</ul>
+	<div class="span9">
+		
+		<div style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+			<h1><%= @category.name %></h1>
+			<p class="lead"><i><%= @category.tagline %></i></p>
+			<p><%= @category.description %></p>
+		</div>
+		<br/>&nbsp;<br/>
+		<div style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+			<h3><%=t("category.training")%></h3>
+
+			<div class="panel-group" id="accordion">
+				
+				<% @event_types.each do |event_type| %>
+				
+			  		<div class="panel panel-default">
+					    <div class="panel-heading">
+					      <h4 class="panel-title">
+					        <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
+					          <%= event_type.name %>
+					        </a>
+					      </h4>
+					    </div>
+					    <div id="collapse<%= event_type.id %>" class="panel-collapse collapse">
+					      <div class="panel-body">
+							<% if event_type.elevator_pitch != "" %>
+					        	<%= event_type.elevator_pitch %>
+							<% else %>
+								<%=t("category.missing_elevator_pitch")%>
+							<% end %>
+							<br/>
+							<a href="/<%=session[:locale]%>/cursos/<%= event_type.uri_path%>"><%=t("category.see_more")%></a>
+					      </div>
+					    </div>
+					  </div>
+					
+				<% end %>
+			</div>
+			
+		</div>
+		
 	</div>
 	<div class="span3" style="text-align:center;">  
 		<img src="/img/logos/logo-04.png">
