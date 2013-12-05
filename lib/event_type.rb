@@ -2,13 +2,14 @@
 
 class EventType
   
-  attr_accessor :id, :name, :description, :elevator_pitch
+  attr_accessor :id, :name, :description, :elevator_pitch, :include_in_catalog
   
   def initialize
     @id = ""
     @name = ""
     @description = ""
     @elevator_pitch = ""
+    @include_in_catalog = false
 
       #   <created-at type="datetime">2013-07-10T20:48:22Z</created-at>
       #   <duration type="integer">8</duration>

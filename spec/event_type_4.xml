@@ -37,7 +37,7 @@ Se requiere un 75% de las respuestas correctas.
 ####¿Que pasa si no apruebo el examen al final del entrenamiento?
 Tienes una oportunidad más que podrás coordinar con tu instructor después del entrenamiento.</faq>
   <goal>
-
+ss
 </goal>
   <id type="integer">4</id>
   <include-in-catalog type="boolean">false</include-in-catalog>

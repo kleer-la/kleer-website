@@ -116,7 +116,10 @@ class KeventerReader
         event_type.name = event_type_node.find_first('name').content
         event_type.description = event_type_node.find_first('description').content
         event_type.elevator_pitch = event_type_node.find_first('elevator-pitch').content
-        event_types << event_type
+        event_type.include_in_catalog = to_boolean( event_type_node.find_first('include-in-catalog').content )
+        if event_type.include_in_catalog
+          event_types << event_type
+        end
       end
     end
     event_types
@@ -235,7 +238,7 @@ class KeventerReader
 
   def to_boolean(string)
     return true if string== true || string =~ (/(true|t|yes|y|1)$/i)
-    return false if string== false || string.nil? || string =~ (/(false|f|no|n|0)$/i)
+    return false if string== false || string.nil? || string =~ (/(false|f|no|n||0)$/i)
     raise ArgumentError.new("invalid value for Boolean: \"#{string}\"")
   end
   
@@ -297,6 +300,7 @@ class KeventerReader
     event_type.program  = xml_keventer_event.find_first('program').content
     event_type.faqs  = xml_keventer_event.find_first('faq').content
     event_type.elevator_pitch = xml_keventer_event.find_first('elevator-pitch').content
+    event_type.include_in_catalog = to_boolean( xml_keventer_event.find_first('include-in-catalog').content )
 
     event_type
   end    
