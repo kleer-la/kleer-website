@@ -354,3 +354,10 @@ end
 Given(/^I visit an event type detail page$/) do
   visit '/cursos/1-xxx'
 end
+
+Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
+  response_body.should have_selector("a[text()='#{event_type_name}']") do |element|
+      element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
+  end
+end
+

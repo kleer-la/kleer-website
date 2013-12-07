@@ -162,6 +162,7 @@ end
 get '/cursos/:event_type_id_with_name' do
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
+
   if is_valid_id(event_type_id)
     @event_type = @@keventer_reader.event_type(event_type_id, true)
   end
