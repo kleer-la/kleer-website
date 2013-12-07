@@ -16,3 +16,7 @@ Feature: Categories
 	Scenario: Event type list in Category Landing Page
 		Given I visit the "high-performance" categoria page
 		Then I should see "Tipo de Evento de Prueba"
+
+	Scenario: Event type details Page
+		Given I visit an event type detail page
+		Then I should see "Kleer"

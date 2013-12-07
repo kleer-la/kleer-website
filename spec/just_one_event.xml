@@ -48,6 +48,7 @@
       <program>el programa</program>
       <recipients>los destinatarios.</recipients>
       <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+	  <include-in-catalog type="boolean">false</include-in-catalog>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>

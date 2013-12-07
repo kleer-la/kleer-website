@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event-type>
+  <created-at type="datetime">2012-09-06T10:59:01Z</created-at>
+  <description>####Descripción del Curso
+&lt;img src="http://media.kleer.la/sa-csd/me-m1.jpg" alt="" align="right" /&gt;
+La tendencia de la industria de IT y desarrollo de sistemas a nivel mundial con respecto a la utilización de metodologías ágiles es claramente incremental; estas nuevas formas de administrar un proyecto son consideradas como la "Nueva Gestión de Proyectos" no solo para el desarrollo de software sino también para las áreas de diseño gráfico y de identidad, debido a su manejo de requerimientos cambiantes, poco definidos y complejos, en entornos de negocios altamente volátiles.
+&lt;img src="http://media.kleer.la/sa-csd/bg-m1.jpg" alt="" align="center" /&gt;
+
+Al finalizar exitosamente el taller, tendrás el acreditado el curso Introductorio a Scrum requerido para la certificación Certified Scrum Developer (CSD) de la Scrum Alliance.
+
+####Professional Development Units (PDUs) y PMI-ACP
+Este curso brinda 8 PDUs a quien ya es PMP. Este curso también acredita 8 de las 21 horas de entrenamiento en Agile Project Management necesarios de para la certificación PMI-ACP.</description>
+  <duration type="integer">8</duration>
+  <elevator-pitch>Este taller práctico de un día provee a los asistentes un entendimiento claro sobre los principios fundamentales de las metodologías ágiles y de Scrum por medio de ejercicios reales.
+Los participantes obtendrán experiencia práctica trabajando con las herramientas de Scrum y sus actividades, como el backlog, sprint planning, demos y retrospectivas..</elevator-pitch>
+  <faq>####¿Cómo se obtiene la certificación como Scrum Developer?
+La certificación CSD de Scrum Alliance se obtiene:
+Tomando los 3 módulos de este entrenamiento. Si eres CSM sólo debes tomar el módulo 3, pero te recomendamos también el módulo 2.
+Aprobando el examen de aptitud, que se presenta al completar el módulo 3.
+Cancelando la suma de USD $150, directamente a Scrum Alliance, para garantizar la membresía y certificación por 2 años.
+
+####¿Cómo puedo comparar ésta con las demás certificaciones de Scrum Alliance?
+En este sitio puedes acceder a la lista de programas que ofrece Scrum Alliance y hacerte una idea global del proceso de aprendizaje de Scrum.
+
+####¿Si ya soy Certified Scrum Master necesito tomar los 3 Módulos?
+Si ya eres Scrum Master solo requieres tomar el módulo 3, pero te recomendamos también el módulo 2: Estimación y planeación.
+
+####¿Si tomo el módulo 1 y el módulo 2 puedo optar por la certificación CSM?
+No. para obtener la certificación CSM, debes tomar el entrenamiento Certified Scrum Master.
+
+####¿El costo del entrenamiento incluye la certificación ante la Scrum Alliance?
+No, la inscripción en Scrum Alliance se hace posterior al entrenamiento y una vez hayas aprobado el examen.
+
+####¿Cuál es el puntaje mínimo para aprobar el examen?
+Se requiere un 75% de las respuestas correctas.
+
+####¿Que pasa si no apruebo el examen al final del entrenamiento?
+Tienes una oportunidad más que podrás coordinar con tu instructor después del entrenamiento.</faq>
+  <goal>
+ss
+</goal>
+  <id type="integer">4</id>
+  <include-in-catalog type="boolean">false</include-in-catalog>
+  <learnings>Al participar del taller aprenderás:
+
+- Nuevas tendencias en el desarrollo de software
+- Principios fundamentales y valores de Scrum
+- Experiencia práctica trabajando con los elementos y prácticas de Scrum</learnings>
+  <materials></materials>
+  <name>Introducción a Scrum (Módulo 1 - CSD Track)</name>
+  <program>- Introducción a Agile
+- Introducción a Scrum
+- Roles de Scrum
+- Elementos de Scrum
+- Ceremonias de Scrum
+- Simulación de Scrum</program>
+  <recipients>- Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario
+- Gerentes de proyectos
+- Líderes Técnicos
+- Gerentes de desarrollo.</recipients>
+  <takeaways>Al participar del taller obtendrás:
+
+- Experiencia de primera mano en el framework Scrum
+- Material impreso de referencia para utilizar durante y luego del curso
+- Coffee breaks y almuerzo (opcional, dependiendo de la sede)</takeaways>
+  <updated-at type="datetime">2013-08-09T13:37:40Z</updated-at>
+</event-type>
