@@ -51,6 +51,7 @@
 	  <faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
       <bio>Agile Coach</bio>
@@ -142,6 +143,7 @@ El curso se basa ejercicios y dinámicas con técnicas para una comunicación ef
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -229,6 +231,7 @@ El webinar se desarrollará con ejemplos en Ruby, pero se compartirán otros eje
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -351,6 +354,7 @@ Patrones de Adopción de Scrum</program>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -445,6 +449,7 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -561,6 +566,7 @@ Construcción Evolutiva e Iterativa - Sprints
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -642,6 +648,7 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -725,6 +732,7 @@ Los ejemplos durante el taller se harán principalmente en Ruby, pero se compart
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -820,6 +828,7 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -914,6 +923,7 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -992,7 +1002,8 @@ Este evento de un día completo proveerá a los asistentes un entendimiento clar
       <updated-at type="datetime">2012-09-06T10:59:01Z</updated-at>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
-	</faq>    
+	</faq>   
+	<include-in-catalog type="boolean">false</include-in-catalog> 
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1089,7 +1100,8 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
-	</faq>    
+	</faq>   
+	<include-in-catalog type="boolean">false</include-in-catalog> 
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1171,7 +1183,8 @@ Este curso enseña nuevas habilidades que los participantes pueden utilizar en l
       <updated-at type="datetime">2012-09-06T11:02:03Z</updated-at>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
-	</faq>    
+	</faq>   
+	<include-in-catalog type="boolean">false</include-in-catalog> 
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1255,7 +1268,8 @@ El curso proporciona una experiencia de primera mano con respecto a los benefici
       <updated-at type="datetime">2012-09-06T11:04:02Z</updated-at>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
-	</faq>    
+	</faq>   
+	<include-in-catalog type="boolean">false</include-in-catalog> 
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1352,7 +1366,8 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
-	</faq>    
+	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1449,6 +1464,7 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
 </recipients>
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
 	<faq nil="true"/>  
+	<include-in-catalog type="boolean">false</include-in-catalog>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>

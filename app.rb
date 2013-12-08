@@ -5,29 +5,58 @@ require 'sinatra/r18n'
 require 'sinatra/flash'
 require 'redcarpet'
 require 'json'
+require 'i18n'
+
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/event_type')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 
+helpers do
+  def t(key, ops = Hash.new)
+    ops.merge!(:locale => session[:locale])
+    I18n.t key, ops
+  end
+end
+
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
+  
+  I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'locales', '*.yml').to_s]
+  
   enable :sessions
   @@keventer_reader = KeventerReader.new
 end
 
 before do
-  if request.host == "kleer.la"
-    redirect "http://www." + request.host + request.path
+  if request.host.include?( "kleer.us" )
+    session[:locale] = 'en'
   else
     session[:locale] = 'es'
+  end
+  
+  if request.host == "kleer.la" || request.host == "kleer.us" || request.host == "kleer.es" || request.host == "kleer.com.ar"
+    redirect "http://www." + request.host + request.path
+  else
     @page_title = "Kleer - Agile Coaching & Training"
     flash.sweep 
     @markdown_renderer = Redcarpet::Markdown.new(
                               Redcarpet::Render::HTML.new(:hard_wrap => true), 
                               :autolink => true)
   end
+end
+
+before '/:locale/*' do
+  locale = params[:locale]
+    
+  if locale == "es" || locale == "en"
+    session[:locale] = locale
+    request.path_info = '/' + params[:splat ][0]
+  else
+    session[:locale] = 'es'
+  end
+  
 end
 
 get '/' do
@@ -71,6 +100,12 @@ get '/publicamos' do
   erb :ebooks
 end
 
+get '/publicamos/scrum' do
+  @active_tab_publicamos = "active"
+  @page_title += " | Publicamos | Proyectos Ágiles con Scrum"
+  erb :ebook_scrum
+end
+
 get '/posters/:poster_code' do
   @poster_code = params[:poster_code]
 
@@ -109,7 +144,7 @@ end
 get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, true)
   end
   
@@ -124,11 +159,30 @@ get '/entrenamos/evento/:event_id_with_name' do
   end
 end
 
+get '/cursos/:event_type_id_with_name' do
+  event_type_id_with_name = params[:event_type_id_with_name]
+  event_type_id = event_type_id_with_name.split('-')[0]
+
+  if is_valid_id(event_type_id)
+    @event_type = @@keventer_reader.event_type(event_type_id, true)
+  end
+  
+  if @event_type.nil?
+    flash.now[:error] = get_course_not_found_error()
+    erb :error404_to_calendar
+  else
+   # @active_tab_entrenamos = "active"
+   # @twitter_card = create_twitter_card( @event )    
+    @page_title = "Kleer - " + @event_type.name
+    erb :event_type
+  end
+end
+
 get '/entrenamos/evento/:event_id_with_name/entrenador/remote' do
   event_id_with_name = params[:event_id_with_name]
 
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, false)
   end
 
@@ -144,7 +198,7 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
   event_id_with_name = params[:event_id_with_name]
 
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, false)
   end
 
@@ -160,7 +214,7 @@ get '/entrenamos/evento/:event_id_with_name/registration' do
   event_id_with_name = params[:event_id_with_name]
 
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, false)
   end
 
@@ -177,7 +231,7 @@ end
 get '/comunidad/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
-  if is_valid_event_id(event_id)
+  if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, true)
   end
 
@@ -217,7 +271,7 @@ get '/entrenamos/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", amount)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount)
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
@@ -226,7 +280,7 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
@@ -235,7 +289,7 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "comunidad"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad")
+  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad", I18n, session[:locale])
 end
 
 # STATIC FILES ============== 
@@ -261,10 +315,6 @@ get '/sepyme/remote' do
 end
 
 # LEGACY ==================== 
-
-get '/es/:path' do
-  redirect "/" + params[:path]
-end
 
 not_found do
   @page_title = "404 - No encontrado"
@@ -314,7 +364,7 @@ def get_community_event_not_found_error
   "El evento comunitario que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado.<br/>Te invitamos a visitar nuestro calendario para ver los eventos vigentes y probables nuevas fechas para el evento que estás buscando."
 end
 
-def is_valid_event_id(event_id_to_test)
+def is_valid_id(event_id_to_test)
   !(event_id_to_test.match(/^[0-9]+$/).nil?)
 end
 

@@ -1,4 +1,8 @@
-
+<style>
+	body {
+		background: url(/img/fondos/fondo-02.jpg) no-repeat center center fixed; 
+	}
+</style>
 
 	<!-- Marketing messaging and featurettes
 	    ================================================== -->
@@ -10,27 +14,27 @@
 	      <div class="row-fluid">
 		<div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
 	          <img class="img-circle" src="/img/uen/consultoria.png">
-	          <h2>Consultoría</h2>
-	          <p>Ofrecemos un servicio de acompañamiento, coaching y mentoring integral para aplicar los métodos ágiles de organización de equipos en áreas de innovación como marketing, dirección organizacional, diseño de productos y servicios, y desarrollo de software.</p>
-	          <p><a class="btn btn-primary" href="/acompanamos">Ver más</a></p>
+	          <h2><%=t("home.sections.coaching.title")%></h2>
+	          <p><%=t("home.sections.coaching.text")%></p>
+	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/acompanamos"><%=t("general.buttons.see_more")%></a></p>
 	        </div><!-- /.span4 -->
 	        <div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
 	          <img class="img-circle" src="/img/uen/capacitacion.jpg">
-	          <h2>Capacitación</h2>
-	          <p>Brindamos cursos, talleres y entrenamientos mediante las técnicas más novedosas y efectivas para garantizar el aprendizaje duradero en adultos.<br/>&nbsp;<br/>&nbsp;</p>
-	          <p><a class="btn btn-primary" href="/entrenamos">Ver más</a></p>
+	          <h2><%=t("home.sections.training.title")%></h2>
+	          <p><%=t("home.sections.training.text")%></p>
+	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/entrenamos"><%=t("general.buttons.see_more")%></a></p>
 	        </div><!-- /.span4 -->
 			<div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
 	          <img class="img-circle" src="/img/uen/comunidad.jpg">
-	          <h2>Comunidad</h2>
-	          <p>Impulsamos las Metodologías Ágiles en Latinoamérica desde el 2008. Enterate de todos los eventos comunitarios que organizamos y promocionamos en la región.<br/>&nbsp;<br/>&nbsp;</p>
-	          <p><a class="btn btn-primary" href="/comunidad">Ver más</a></p>
+	          <h2><%=t("home.sections.community.title")%></h2>
+	          <p><%=t("home.sections.community.text")%></p>
+	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/comunidad"><%=t("general.buttons.see_more")%></a></p>
 	        </div><!-- /.span4 -->
 			<div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
 	          <img class="img-circle" src="/img/uen/contenidos.jpg">
-	          <h2>Contenidos</h2>
-	          <p>Publicamos contenidos y conocimientos periódicamente. Encontrá e-Books, blog-posts, artículos y videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>
-	          <p><a class="btn btn-primary" href="/publicamos">Ver más</a></p>
+	          <h2><%=t("home.sections.publishing.title")%></h2>
+	          <p><%=t("home.sections.publishing.text")%></p>
+	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/publicamos"><%=t("general.buttons.see_more")%></a></p>
 	        </div><!-- /.span4 -->
 	      </div><!-- /.row -->
 	 </div><!-- /.container -->
@@ -40,8 +44,8 @@
 <div class="row-fluid">
 	<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;font-size:150%;">
 		<blockquote class="pull-right">
-			<p><i>Creemos que hay otras formas de <strong>relacionarnos</strong> para conseguir <strong>resultados</strong> fantásticos que nos hagan sentir <strong>orgullosos</strong>.</i></p>
-			<small>Nuestra Visión</small>
+			<p><i><%=t("general.kleer.vision.text")%></i></p>
+			<small><%=t("general.kleer.vision.reference")%></small>
 			</blockquote>
 		</div>
 </div>
@@ -50,12 +54,46 @@
 
 <div class="row-fluid">
 	<div class="span8" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;">
-		<h1>Próximos 8 cursos</h1>
-		<p><a href="/entrenamos">&nbsp;ver más...</a></p>
+		<h1><%=t("home.calendar.title")%></h1>
+		<p><a href="/<%=session[:locale]%>/entrenamos">&nbsp;<%=t("dt_grid.see_more")%></a></p>
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
 		<script type="text/javascript" src="/js/jquery.js"/></script>
 		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
-		<script type="text/javascript" src="/js/dt_cursos_home.js"></script>
+		<script type="text/javascript">
+		var anOpen = [];
+		var sImageUrl = "http://qa.kleer.la/wp-content/uploads/2011/03/";
+		//sImageUrl = "./DataTables-1.9.1/media/images/";
+
+		var oTable;
+		$(document).ready(function() {
+			oTable = $('#cursos').dataTable( {
+				"bLengthChange": false,
+				"sAjaxSource": '/<%=session[:locale]%>/entrenamos/eventos/proximos/8',
+				"aoColumns": [
+					{ "sWidth": "5%" },
+					{ "sWidth": "75%" },
+					{ "sClass": "right", "sWidth": "20%" }
+				],
+				"aaSorting": [],
+				"bSort": false,
+				"bPaginate": false,
+				"bFilter": false,
+				/* "sScrollY": "500px", */
+				"oLanguage": {
+					"sLengthMenu":   "Mostrar _MENU_ registros",
+					"sZeroRecords":  "<div class=\"alert alert-warning center\"><%=t("dt_grid.loading")%></div>",
+					"sInfo":         "",
+					"sInfoEmpty":    "",
+					"sInfoFiltered": "",
+					"sInfoPostFix":  "",
+					"sUrl":          ""
+				},
+				"fnInitComplete": function(oSettings, json) {
+					oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
+				}
+			});
+		});
+		</script>
 		
 		<script type="text/javascript">
 		<!--
@@ -69,11 +107,11 @@
 		
 		-->
 		</script>
-		<p><a href="/entrenamos">&nbsp;ver más...</a></p>
-		<p align="right"><a href="http://media.kleer.la/kleer-entrenamos-2013.pdf" class="btn btn-info"><i class="icon-download icon-white"></i>&nbsp;Información de Cursos In-Company</a>&nbsp;<a href="/entrenamos" class="btn btn-primary"><i class="icon-calendar icon-white"></i>&nbsp;Ver Calendario 2013</a></p>
+		<p><a href="/entrenamos">&nbsp;<%=t("dt_grid.see_more")%></a></p>
+		<p align="right"><a href="http://media.kleer.la/kleer-entrenamos-2013.pdf" class="btn btn-info"><i class="icon-download icon-white"></i>&nbsp;<%=t("home.calendar.private_course_info")%></a>&nbsp;<a href="/entrenamos" class="btn btn-primary"><i class="icon-calendar icon-white"></i>&nbsp;<%=t("home.calendar.current_year_calendar")%></a></p>
 	</div>
 	<div class="span4">  
-			<img src="/img/logos/logo-agiles2013.png">
+			<img src="/img/logos/logo-03.png">
 			<%= erb :twitter_box, :layout => false %>
 		</div>
 </div><!-- /.row -->
@@ -87,26 +125,26 @@
 	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel">Detalles de Curso</h4>
+	    <h4 id="myModalLabel"><%=t("popups.course.details.title")%></h4>
 	  </div>
 	  <div class="modal-body">
-	    <p>Cargando...</p>
+	    <p><%=t("general.texts.loading")%></p>
 	  </div>
 	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
 	  </div>
 	</div>
 	
 	<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel">Registro a Curso</h4>
+	    <h4 id="myModalLabel"><%=t("popups.course.registration.title")%></h4>
 	  </div>
 	  <div class="modal-body">
-	    <p>Cargando...</p>
+	    <p><%=t("general.texts.loading")%></p>
 	  </div>
 	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
 	  </div>
 	</div>
 

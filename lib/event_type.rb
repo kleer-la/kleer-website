@@ -2,11 +2,14 @@
 
 class EventType
   
-  attr_accessor :name, :description
+  attr_accessor :id, :name, :description, :elevator_pitch, :include_in_catalog
   
   def initialize
+    @id = ""
     @name = ""
     @description = ""
+    @elevator_pitch = ""
+    @include_in_catalog = false
 
       #   <created-at type="datetime">2013-07-10T20:48:22Z</created-at>
       #   <duration type="integer">8</duration>
@@ -19,6 +22,10 @@ class EventType
       #   <recipients>Un destinatario</recipients>
       #   <updated-at type="datetime">2013-07-10T20:54:21Z</updated-at>
       # </event-type>
+  end
+  
+  def uri_path
+    @id.to_s + "-" + @name.downcase.gsub(/ /, "-")
   end
   
 end

@@ -1,37 +1,139 @@
-
+<style>
+	body {
+		background: url(/img/fondos/fondo-04.jpg) no-repeat center center fixed; 
+	}
+</style>
 <script type="text/javascript" src="/js/jquery.js"/></script>
 
 <div class="row">
 	<div class="span4" style="text-align:center;">  
-		<img src="/img/logos/logo-agiles2013.png">
+		<img src="/img/logos/logo-02.png">
 		<%= erb :twitter_box, :layout => false %>
 	</div>
 	
 	<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-header">
 	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel">Registro a Curso</h4>
+	    <h4 id="myModalLabel"><%=t("popups.course.registration.title")%></h4>
 	  </div>
 	  <div class="modal-body">
-	    <p>Cargando...</p>
+	    <p><%=t("general.texts.loading")%></p>
 	  </div>
 	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
 	  </div>
 	</div>
 	
 	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1>Nuestros cursos</h1>
+		<h1><%=t("training.title")%></h1>
 		<ul id="country-filter" class="nav nav-pills">
-			<li class="active"><a href="/entrenamos/eventos/pais/todos">Todos</a></li>
+			<li class="active"><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos">Todos</a></li>
     <% @unique_countries.each do |country| %>
-			<li><a href="/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
+			<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
     <% end %>
-			<li><a href="/entrenamos/eventos/pais/otro">¿Otro?</a></li>
+			<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/otro">¿Otro?</a></li>
 		</ul>
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
 		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
-		<script type="text/javascript" src="/js/dt_cursos_entrenamos.js"></script>
+		<script type="text/javascript">
+		var anOpen = [];
+		var sImageUrl = "http://qa.kleer.la/wp-content/uploads/2011/03/";
+		//sImageUrl = "./DataTables-1.9.1/media/images/";
+
+		var oTable;
+		$(document).ready(function() {
+			oTable = $('#cursos').dataTable( {
+				"bLengthChange": false,
+				"sAjaxSource": '/<%=session[:locale]%>/entrenamos/eventos/pais/todos',
+				"aoColumns": [
+					{ "sWidth": "5%" },
+					{ "sWidth": "75%" },
+					{ "sClass": "right", "sWidth": "20%" }
+				],
+				"aaSorting": [],
+				"bSort": false,
+				"bPaginate": false,
+				"oLanguage": {
+					"sZeroRecords":  "<div class=\"alert alert-warning\"><%=t("dt_grid.loading")%></div>",
+					"sInfo":         "<div class=\"alert alert-info\"><%=t("dt_grid.showing")%></div>",
+					"sInfoEmpty":    "",
+					"sInfoFiltered": "<div class=\"alert alert-info\"><%=t("dt_grid.filter")%></div>",
+					"sInfoPostFix":  "",
+					"sSearch":       "<%=t("dt_grid.search")%>:",
+					"sUrl":          ""
+				},
+				"fnInitComplete": function(oSettings, json) {
+					oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
+				}
+			});
+
+			// Cuelgo los handlers de los clicks
+			$("ul#country-filter > li > a").on("click", function(event) {
+				event.preventDefault();
+
+				var newSource = $(this).attr("href");
+				oTable.fnReloadAjax(newSource);
+
+				var containerUl = $(this).parent().parent();
+				containerUl.children("li").removeClass("active");
+
+				var clickedLi = $(this).parent();
+				clickedLi.addClass("active");
+			});
+		});
+
+		$.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
+		{
+		    if ( typeof sNewSource != 'undefined' && sNewSource != null ) {
+		        oSettings.sAjaxSource = sNewSource;
+		    }
+
+		    // Server-side processing should just call fnDraw
+		    if ( oSettings.oFeatures.bServerSide ) {
+		        this.fnDraw();
+		        return;
+		    }
+
+		    this.oApi._fnProcessingDisplay( oSettings, true );
+		    var that = this;
+		    var iStart = oSettings._iDisplayStart;
+		    var aData = [];
+
+		    this.oApi._fnServerParams( oSettings, aData );
+
+		    oSettings.fnServerData.call( oSettings.oInstance, oSettings.sAjaxSource, aData, function(json) {
+		        /* Clear the old information from the table */
+		        that.oApi._fnClearTable( oSettings );
+
+		        /* Got the data - add it to the table */
+		        var aData =  (oSettings.sAjaxDataProp !== "") ?
+		            that.oApi._fnGetObjectDataFn( oSettings.sAjaxDataProp )( json ) : json;
+
+		        for ( var i=0 ; i<aData.length ; i++ )
+		        {
+		            that.oApi._fnAddData( oSettings, aData[i] );
+		        }
+
+		        oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
+
+		        if ( typeof bStandingRedraw != 'undefined' && bStandingRedraw === true ) {
+		            oSettings._iDisplayStart = iStart;
+		            that.fnDraw( false );
+		        }
+		        else {
+		            that.fnDraw();
+		        }
+
+		        that.oApi._fnProcessingDisplay( oSettings, false );
+
+		        /* Callback user function - for event handlers etc */
+		        if ( typeof fnCallback == 'function' && fnCallback != null ) {
+		            fnCallback( oSettings );
+		        }
+		    }, oSettings );
+		};
+		
+		</script>
 		<script type="text/javascript">
 		<!--
 		$('body').on('hidden', '#myModalRegistration', function () {

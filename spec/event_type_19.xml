@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<event-type>
+  <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
+  <description>#### Descripción del Encuentro
+
+&lt;img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-frc1/998584_10151810205002079_965660471_n.jpg" alt="" align="right" /&gt;
+El Dojo es, en la tradición japonesa, el lugar destinado a la enseñanza y el perfeccionamiento en las artes marciales y la meditación. Yoseki es donde se localizan los auxiliares del maestro y aquellos estudiantes avanzados. Es adonde todo aprendiz quiere llegar.
+La iniciativa del Coding Dojo se está difundiendo rápidamente en muchas ciudades del mundo. Su filosofía se trata de aprender, aprender y aprender.
+
+**¿Por qué?**
+Porque la mejor forma de perfeccionarnos es mediante la práctica sostenida. Por la misma razón, los músicos ensayan su técnica una y otra vez. Leer libros puede ayudar a poner nuestras ideas en orden, pero solo la experiencia del propio andar es la que nos permitirá dominar la técnica.
+De la misma forma funciona con el desarrollo de software, como Ron Jeffries comenta en un artículo suyo: *“Lo que genera cambios en la gente es lo que hacen, no lo que leen. ¿Cuántos libros de dietas he leído? ¿acaso estoy más delgado?, ¿cuántos libros de auto-organización? ni siquiera puedo encontrarlos.”*
+
+En lo posible trae tu notebook con algún entorno instalado de tu lenguaje favorito incluyendo un framework de pruebas unitarias. Ej: Eclipse (Java + JUnit) o Visual Studio (C# + NUnit) o Ruby + RSpec.</description>
+  <duration type="integer">2</duration>
+  <elevator-pitch>Yoseki es un Coding Dojo mensual, libre y gratuito organizado por Kleer.
+Se trata de una reunión donde un grupo de desarrolladores trabajan en un desafío de programación.La idea es divertirse y participar en una práctica con el fin de mejorar nuestras habilidades.</elevator-pitch>
+  <faq></faq>
+  <goal></goal>
+  <id type="integer">19</id>
+  <include-in-catalog type="boolean">false</include-in-catalog>
+  <learnings></learnings>
+  <materials></materials>
+  <name>Yoseki Coding Dojo</name>
+  <program>- Presentación de Dojo y Kata
+- Presentación del problema a resolver
+- Sesión de Coding Dojo</program>
+  <recipients>- Desarrolladores
+- Arquitectos
+- Testers
+- Líderes Técnicos</recipients>
+  <takeaways></takeaways>
+  <updated-at type="datetime">2013-08-08T18:44:34Z</updated-at>
+</event-type>
