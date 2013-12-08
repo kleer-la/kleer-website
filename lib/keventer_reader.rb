@@ -42,7 +42,11 @@ class KeventerReader
   end
   
   def event_type(event_type_id, force_read = false)
-    load_remote_event_type(event_type_id, force_read)
+    event_type = load_remote_event_type(event_type_id, force_read)
+    if !event_type.nil?
+      event_type.public_editions = load_remote_event_type_editions(event_type_id, force_read)
+    end
+    event_type
   end
   
   def unique_countries_for_commercial_events
@@ -232,6 +236,21 @@ class KeventerReader
     rescue Exception
       nil
     end
+  end
+  
+  def load_remote_event_type_editions(event_type_id, force_read)
+    all_events = load_remote_events( @connector.events_xml_url , force_read)
+    
+    public_editions = Array.new
+    
+    all_events.each do |event|
+     if event.event_type.id == event_type_id.to_i
+        public_editions << event
+      end
+    end
+    
+    public_editions
+    
   end
 
   def to_boolean(string)

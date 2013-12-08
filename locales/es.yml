@@ -106,6 +106,8 @@ es:
         subtitle: "Acompañamiento de organizaciones, equipos y profesionales"
     event:
         course: "Curso"
+        public_editions: "Ediciones públicas"
+        other_trainings: "Otros entrenamientos de la categoría"
         facilitator: "Facilitador"
         save90percent: "Ahorrá hasta el 90%!"
         free: "Evento Gratuito"

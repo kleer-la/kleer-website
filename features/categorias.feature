@@ -18,5 +18,6 @@ Feature: Categories
 		Then I should see "Tipo de Evento de Prueba"
 
 	Scenario: Event type details Page
-		Given I visit an event type detail page
+		Given theres an event type
+		When I visit an event type detail page
 		Then I should see "Kleer"

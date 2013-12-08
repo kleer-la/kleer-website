@@ -106,6 +106,8 @@ en:
        subtitle: "We help organizations, teams and practitioners"
     event:
        course: "Course"
+       public_editions: "Public editions"
+       other_trainings: "Other trainings from this category"       
        facilitator: "Facilitator"
        save90percent: "Up to 90% savings!"
        free: "Free event"

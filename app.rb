@@ -18,6 +18,21 @@ helpers do
     ops.merge!(:locale => session[:locale])
     I18n.t key, ops
   end
+  
+  def url_sanitize(data)
+    sanitized = data;
+    sanitized = sanitized.gsub('á', 'a')
+    sanitized = sanitized.gsub('é', 'e')
+    sanitized = sanitized.gsub('í', 'i')
+    sanitized = sanitized.gsub('ó', 'o')
+    sanitized = sanitized.gsub('ú', 'u')
+    sanitized = sanitized.gsub('Á', 'A')
+    sanitized = sanitized.gsub('E', 'E')
+    sanitized = sanitized.gsub('Í', 'I')
+    sanitized = sanitized.gsub('Ó', 'O')
+    sanitized = sanitized.gsub('Ú', 'U')
+  end
+  
 end
 
 configure do
@@ -159,10 +174,12 @@ get '/entrenamos/evento/:event_id_with_name' do
   end
 end
 
-get '/cursos/:event_type_id_with_name' do
+get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
 
+  @category = @@keventer_reader.category(params[:category_codename])
+  
   if is_valid_id(event_type_id)
     @event_type = @@keventer_reader.event_type(event_type_id, true)
   end
