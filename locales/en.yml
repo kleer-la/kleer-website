@@ -105,6 +105,7 @@ en:
        title: "We are"
        subtitle: "We help organizations, teams and practitioners"
     event:
+       course: "Course"
        facilitator: "Facilitator"
        save90percent: "Up to 90% savings!"
        free: "Free event"

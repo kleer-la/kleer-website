@@ -105,6 +105,7 @@ es:
         title: "Somos"
         subtitle: "Acompañamiento de organizaciones, equipos y profesionales"
     event:
+        course: "Curso"
         facilitator: "Facilitador"
         save90percent: "Ahorrá hasta el 90%!"
         free: "Evento Gratuito"
