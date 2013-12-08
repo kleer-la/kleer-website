@@ -15,6 +15,7 @@ describe KeventerReader do
 
   it "Should Be Able to Load an Xml File for an Event Type" do
     @connector = double("KeventerConnector")
+    @connector.stub(:events_xml_url).and_return( "http://keventer-test.herokuapp.com/api/events.xml" )
     @connector.stub(:event_type_url).and_return( File.join(File.dirname(__FILE__),'../spec/event_type_4.xml') )
     
     @kevr = KeventerReader.new( @connector )

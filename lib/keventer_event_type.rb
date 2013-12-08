@@ -1,5 +1,5 @@
 class KeventerEventType
-  attr_accessor :id, :name, :goal, :description, :recipients, :program, :duration, :faqs, :elevator_pitch, :learnings, :takeaways, :elevator_pitch, :include_in_catalog
+  attr_accessor :id, :name, :goal, :description, :recipients, :program, :duration, :faqs, :elevator_pitch, :learnings, :takeaways, :elevator_pitch, :include_in_catalog, :public_editions
   
   def initialize
     @id = nil
@@ -14,6 +14,7 @@ class KeventerEventType
     @learnings = ""
     @takeaways = ""
     @include_in_catalog = false
+    @public_editions = Array.new
   end
   
   def uri_path
