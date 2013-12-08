@@ -1,4 +1,5 @@
-# encoding: utf-8
+#encoding: utf-8
+
 require File.join(File.dirname(__FILE__),'../../lib/keventer_reader')
 
 def stub_connector( test_file = "just_one_event.xml")
@@ -346,6 +347,17 @@ When /^I visit a non existing popup event page$/ do
   visit '/entrenamos/evento/1-un-evento-inexistente/remote'
 end
 
-Given(/^I visit "(.*?)"$/) do |page_url|
-  visit page_url
+#Given(/^I visit "(.*?)"$/) do |page_url|
+# visit page_url
+#end
+
+Given(/^I visit an event type detail page$/) do
+  visit '/cursos/1-xxx'
 end
+
+Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
+  response_body.should have_selector("a[text()='#{event_type_name}']") do |element|
+      element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
+  end
+end
+

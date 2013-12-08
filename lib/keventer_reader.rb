@@ -41,6 +41,10 @@ class KeventerReader
     load_remote_event(event_id, force_read)
   end
   
+  def event_type(event_type_id, force_read = false)
+    load_remote_event_type(event_type_id, force_read)
+  end
+  
   def unique_countries_for_commercial_events
     unique_countries( @connector.events_xml_url )
   end
@@ -108,16 +112,20 @@ class KeventerReader
     if !event_types_xml_node.nil?
       event_types_xml_node.find('event-types/event-type ').each do |event_type_node|
         event_type = EventType.new
+        event_type.id = event_type_node.find_first('id').content
         event_type.name = event_type_node.find_first('name').content
         event_type.description = event_type_node.find_first('description').content
-        event_types << event_type
+        event_type.elevator_pitch = event_type_node.find_first('elevator-pitch').content
+        event_type.include_in_catalog = to_boolean( event_type_node.find_first('include-in-catalog').content )
+        if event_type.include_in_catalog
+          event_types << event_type
+        end
       end
     end
     event_types
   end
 
   private
-  
   def coming_events(event_type_xml_url, from = Date.today, months = 2)
     coming_events = Array.new
 
@@ -214,15 +222,26 @@ class KeventerReader
     event
   end
 
+  def load_remote_event_type(event_type_id, force_read = false)
+    event_type_id = event_type_id.to_i
+
+    begin
+      parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id))
+      doc = parser.parse
+      create_event_type(doc)
+    rescue Exception
+      nil
+    end
+  end
+
   def to_boolean(string)
     return true if string== true || string =~ (/(true|t|yes|y|1)$/i)
-    return false if string== false || string.nil? || string =~ (/(false|f|no|n|0)$/i)
+    return false if string== false || string.nil? || string =~ (/(false|f|no|n||0)$/i)
     raise ArgumentError.new("invalid value for Boolean: \"#{string}\"")
   end
   
   def create_event(xml_keventer_event)
     event = KeventerEvent.new
-    event_type = KeventerEventType.new
     
     event.id = xml_keventer_event.find_first('id').content.to_i
     event.date = Date.parse( xml_keventer_event.find_first('date').content )
@@ -258,24 +277,32 @@ class KeventerReader
     trainer.gravatar_picture_url = xml_keventer_event.find_first('trainer/gravatar-picture-url').content
     trainer.twitter_username = xml_keventer_event.find_first('trainer/twitter-username').content
     event.trainer = trainer
-    
-    event_type.name  = xml_keventer_event.find_first('event-type/name').content
-    event_type.elevator_pitch  = xml_keventer_event.find_first('event-type/elevator-pitch').content
-    event_type.learnings  = xml_keventer_event.find_first('event-type/learnings').content
-    event_type.takeaways  = xml_keventer_event.find_first('event-type/takeaways').content
-    event_type.description  = xml_keventer_event.find_first('event-type/description').content
-    event_type.goal  = xml_keventer_event.find_first('event-type/goal').content
-    event_type.recipients  = xml_keventer_event.find_first('event-type/recipients').content
-    event_type.program  = xml_keventer_event.find_first('event-type/program').content
-    event_type.faqs  = xml_keventer_event.find_first('event-type/faq').content
-    
-    event.event_type = event_type
+
+    event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
     
     event.keventer_connector = @connector
     
     event
   end
   
+  def create_event_type(xml_keventer_event)
+    event_type = KeventerEventType.new
+    event_type.id  = xml_keventer_event.find_first('id').content.to_i
+    event_type.name  = xml_keventer_event.find_first('name').content
+    event_type.elevator_pitch  = xml_keventer_event.find_first('elevator-pitch').content
+    event_type.learnings  = xml_keventer_event.find_first('learnings').content
+    event_type.takeaways  = xml_keventer_event.find_first('takeaways').content
+    event_type.description  = xml_keventer_event.find_first('description').content
+    event_type.goal  = xml_keventer_event.find_first('goal').content
+    event_type.recipients  = xml_keventer_event.find_first('recipients').content
+    event_type.program  = xml_keventer_event.find_first('program').content
+    event_type.faqs  = xml_keventer_event.find_first('faq').content
+    event_type.elevator_pitch = xml_keventer_event.find_first('elevator-pitch').content
+    event_type.include_in_catalog = to_boolean( xml_keventer_event.find_first('include-in-catalog').content )
+
+    event_type
+  end    
+
   def remote_events_still_valid(event_type_xml_url, force_read)
     !(@events_hash_dont_use_directly[event_type_xml_url].nil? || force_read)
   end

@@ -23,6 +23,7 @@
         <name>Tipo de Evento de Prueba</name>
         <program>El programa</program>
         <recipients>Un destinatario</recipients>
+		<elevator-pitch>Un elevator</elevator-pitch>
         <updated-at type="datetime">2013-07-10T20:54:21Z</updated-at>
       </event-type>
     </event-types>
@@ -51,6 +52,7 @@
         <program>este el programa</program>
         <recipients>esto es a quien está destinado</recipients>
         <updated-at type="datetime">2013-07-10T20:53:56Z</updated-at>
+        <elevator-pitch>Un elevator</elevator-pitch>
       </event-type>
     </event-types>
   </category>

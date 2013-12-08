@@ -48,6 +48,7 @@
       <program>el programa</program>
       <recipients>los destinatarios.</recipients>
       <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+      <include-in-catalog type="boolean">false</include-in-catalog>
 	<faq nil="true"/>
     </event-type>
     <trainer>
@@ -143,6 +144,7 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
+	<include-in-catalog type="boolean">false</include-in-catalog>
     </event-type>
     <trainer>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.

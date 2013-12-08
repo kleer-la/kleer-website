@@ -124,6 +124,10 @@ es:
         is_full:
             title: "<strong>Ouch!</strong> El cupo para este evento se encuentra completo."
             text: "Puedes contactarnos a <a href=\"mailto:entrenamos@kleer.la?subject=Nuevas Fechas: %{title}\">entrenamos@kleer.la</a> para conocer nuevas fechas."
+    category:
+        training: "Entrenamientos Privados"
+        see_more: "ver más..."
+        missing_elevator_pitch: "Por favor, completar el elevator pitch del tipo de evento."
     contact:
         title: "Contacto"
         newsletter_subscription: "Suscríbete a nuestra newsletter"

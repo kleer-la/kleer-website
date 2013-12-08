@@ -19,4 +19,8 @@ describe KeventerConnector do
     @kconn.kleerers_xml_url.should == "http://keventer.herokuapp.com/api/kleerers.xml"
   end
 
+  it "should be able to return the event type xml path" do
+    @kconn.event_type_url(1).should == "http://keventer.herokuapp.com/api/event_types/1.xml"
+  end
+
 end

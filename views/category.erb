@@ -6,16 +6,45 @@
 </style>
 
 <div class="row">
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1><%= @category.name %></h1>
-		<p class="lead"><%= @category.tagline %></p>
-	</div>	
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<ul>
-			<% @event_types.each do |event_type| %>
-			<li><%= event_type.name%></li>
-			<% end %>
-		</ul>
+	<div class="span9">
+		
+		<div style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+			<h1><%= @category.name %></h1>
+			<p class="lead"><i><%= @category.tagline %></i></p>
+			<p><%= @category.description %></p>
+		</div>
+		<br/>&nbsp;<br/>
+		<div style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+			<h3><%=t("category.training")%></h3>
+
+			<div class="accordion" id="accordion">
+				
+				<% @event_types.each do |event_type| %>
+				
+			  		<div class="accordion-group">
+					    <div class="accordion-heading">
+					        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
+					          <%= event_type.name %>
+					        </a>
+					    </div>
+					    <div id="collapse<%= event_type.id %>" class="accordion-body collapse">
+					      <div class="accordion-inner">
+							<% if event_type.elevator_pitch != "" %>
+					        	<%= event_type.elevator_pitch %>
+							<% else %>
+								<%=t("category.missing_elevator_pitch")%>
+							<% end %>
+							<br/>
+							<a href="/<%=session[:locale]%>/cursos/<%= event_type.uri_path%>"><%=t("category.see_more")%> >></a>
+					      </div>
+					    </div>
+					  </div>
+					
+				<% end %>
+			</div>
+			
+		</div>
+		
 	</div>
 	<div class="span3" style="text-align:center;">  
 		<img src="/img/logos/logo-04.png">
