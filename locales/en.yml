@@ -28,9 +28,9 @@ en:
         blog: "Blog"
     home:
         slider:
-            teams:
-                title: "Amazing teams."
-                caption: "Through effective learning, trust, commitment, visibility and flexibility your team will achieve results never seen before."
+            organizations:
+                title: "Amazing organizations."
+                caption: "Through effective learning, trust, commitment, visibility and flexibility your organization, department or team will achieve results never seen before."
             clients:
                 title: "Happy clients."
                 caption: "Innovation, communication, collaboration and participation. keys for your customers to be proud of you."
