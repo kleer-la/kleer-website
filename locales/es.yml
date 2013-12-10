@@ -28,9 +28,9 @@ es:
         blog: "Blog"
     home:
         slider:
-            teams:
-                title: "Equipos asombrosos."
-                caption: "A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu equipo logrará resultados nunca antes vistos."
+            organizations:
+                title: "Organizaciones asombrosas."
+                caption: "A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu organización, área, departamento o equipo logrará resultados nunca antes vistos."
             clients:
                 title: "Clientes felices."
                 caption: "Innovación, comunicación, colaboración y participación. Las claves para que tus clientes se sientan orgullosos de vos."
