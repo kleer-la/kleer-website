@@ -25,7 +25,7 @@ en:
         what_we_do:
             root: "What we can do"
             products: "for your Products"
-            organizations: "for your Organization"
+            organization: "for your Organization"
             clients: "for your Clients"
         community: "Community"
         publishing: "Publications"

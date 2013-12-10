@@ -25,7 +25,7 @@ es:
         what_we_do: 
             root: "Lo que podemos hacer"
             products: "por tus Productos"
-            organizations: "por tu Organización"
+            organization: "por tu Organización"
             clients: "por tus Clientes"
         community: "Comunidad"
         publishing: "Publicamos"
