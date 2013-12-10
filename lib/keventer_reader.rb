@@ -6,8 +6,6 @@ require File.join(File.dirname(__FILE__),'/country')
 require File.join(File.dirname(__FILE__),'/keventer_connector')
 require File.join(File.dirname(__FILE__),'/professional')
 require File.join(File.dirname(__FILE__),'/category')
-require File.join(File.dirname(__FILE__),'/event_type')
-
 class KeventerReader
   
   attr_accessor :connector
@@ -99,6 +97,7 @@ class KeventerReader
       category.tagline = loaded_category.find_first('tagline').content
       category.description = loaded_category.find_first('description').content
       category.order = loaded_category.find_first('order').content.to_i
+      
       category.event_types = load_event_types loaded_category
 
       categories << category
@@ -111,16 +110,13 @@ class KeventerReader
 
   private
   def load_event_types event_types_xml_node
-    # TODO: construir el array de event_types
+
     event_types = Array.new
     if !event_types_xml_node.nil?
       event_types_xml_node.find('event-types/event-type ').each do |event_type_node|
-        event_type = EventType.new
-        event_type.id = event_type_node.find_first('id').content
-        event_type.name = event_type_node.find_first('name').content
-        event_type.description = event_type_node.find_first('description').content
-        event_type.elevator_pitch = event_type_node.find_first('elevator-pitch').content
-        event_type.include_in_catalog = to_boolean( event_type_node.find_first('include-in-catalog').content )
+        
+        event_type = create_event_type( event_type_node )
+        
         if event_type.include_in_catalog
           event_types << event_type
         end
@@ -305,6 +301,7 @@ class KeventerReader
   end
   
   def create_event_type(xml_keventer_event)
+    
     event_type = KeventerEventType.new
     event_type.id  = xml_keventer_event.find_first('id').content.to_i
     event_type.name  = xml_keventer_event.find_first('name').content

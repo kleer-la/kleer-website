@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+		<style>
+			h1, h2, h3, h4, h5, h6 {font-family: 'Dosis'; font-weight: 600;}
+			body {
+		        margin: 0;
+		        padding: 0;
+		        background-color: #FFFFFF;
+		        font: 12pt "Tahoma";
+		    }
+		    * {
+		        box-sizing: border-box;
+		        -moz-box-sizing: border-box;
+		    }
+		    .page {
+		        width: 21cm;
+		        min-height: 29.7cm;
+		        padding: 2cm;
+		        margin: 1cm auto;
+		        border: 1px #DDDDDD solid;
+		        border-radius: 5px;
+		        background: white;
+		        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		    }
+		    .subpage {
+		        padding: 1cm;
+		        border: 5px #DDDDDD solid;
+		        height: 237mm;
+		        outline: 2cm #FFFFFF solid;
+		    }
+    
+		    @page {
+		        size: A4;
+		        margin: 0;
+		    }
+		    @media print {
+		        .page {
+		            margin: 0;
+		            border: initial;
+		            border-radius: initial;
+		            width: initial;
+		            min-height: initial;
+		            box-shadow: initial;
+		            background: initial;
+		            page-break-after: always;
+		        }
+		    }
+		</style>
+	</head>
+	<body>
+		<%= yield %>
+		<script>
+			window.print();
+		</script>
+	</body>
+</html>

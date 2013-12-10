@@ -25,6 +25,8 @@
         <recipients>Un destinatario</recipients>
 		<elevator-pitch>Un elevator</elevator-pitch>
         <updated-at type="datetime">2013-07-10T20:54:21Z</updated-at>
+	  <learnings></learnings>
+	  <takeaways></takeaways>
       </event-type>
     </event-types>
   </category>
@@ -53,6 +55,8 @@
         <recipients>esto es a quien está destinado</recipients>
         <updated-at type="datetime">2013-07-10T20:53:56Z</updated-at>
         <elevator-pitch>Un elevator</elevator-pitch>
+	  <learnings></learnings>
+	  <takeaways></takeaways>
       </event-type>
     </event-types>
   </category>

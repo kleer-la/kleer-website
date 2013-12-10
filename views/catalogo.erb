@@ -1,0 +1,66 @@
+<style>
+	.cover {
+		background-color: #80e2ff;
+		font-family: "";
+		vertical-align: middle;
+	}
+	.back-cover {
+		background-color: #80e2ff;
+	}
+	.kleeros {
+		text-align: center;
+	}
+	.event_type {
+		font-size: 10pt;
+	}
+	.event_type h2 {
+		border-bottom: solid 1px #CCCCCC;
+	}
+</style>
+
+<div class="book">
+    <div class="page">
+        <div class="subpage cover">
+			<img src="/img/logos/logo-kleer.png"/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<h1>Catálogo de Entrenamientos</h1>
+			<p><a href="http://kleer.la/catalogo">kleer.la/catalogo</a></p>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<sup><em><%=@printed%></em></sup>
+		</div>    
+    </div>
+
+	<div class="page">
+        <div class="subpage">
+			<% @event_types.each_with_index do |event_type, index| %>
+				<div class="event_type">
+					<h2><%=event_type.name%></h2>
+					<p><%=event_type.elevator_pitch%></p>
+				</div>
+				<% if (index+1)%4==0 && index<@event_types.size-1 %>
+						</div>    
+			    	</div>
+					<div class="page">
+				        <div class="subpage">
+				<% end %>
+				
+			<% end %>
+		</div>    
+    </div>
+
+    <div class="page">
+        <div class="subpage back-cover">
+			<br/><br/><br/><br/><br/>
+			<div class="kleeros">
+				<img src="/img/kleeros/duo.png"/>
+			</div>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			<a href="http://kleer.la">kleer.la</a><br/>
+			<a href="mailto:hola@kleer.la">hola@kleer.la</a><br/>
+			<a href="http://facebook.com/kleer.la">facebook/kleer.la</a><br/>
+			<a href="https://twitter.com/kleer_la">@kleer_la</a><br/>
+		</div>    
+    </div>
+
+</div>
