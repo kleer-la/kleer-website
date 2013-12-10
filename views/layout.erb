@@ -267,13 +267,13 @@
 						<li class="<%=@active_tab_index%>"><a href="/<%=session[:locale]%>/"><%=t("menu.home")%></a></li>
 						<li class="dropdown <%=@active_tab_acompanamos%>">
 						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						      Lo que podemos hacer
+						      <%=t("menu.what_we_do.root")%>
 						      <b class="caret"></b>
 						    </a>
 						    <ul class="dropdown-menu">
-						      	<li><a href="/<%=session[:locale]%>/categoria/organizaciones">por tu Organización</a></li>
-								<li><a href="/<%=session[:locale]%>/categoria/productos">por tus Productos</a></li>
-								<li><a href="/<%=session[:locale]%>/categoria/clientes">por tus Clientes</a></li>
+						      	<li><a href="/<%=session[:locale]%>/categoria/organizaciones"><%=t("menu.what_we_do.organization")%></a></li>
+								<li><a href="/<%=session[:locale]%>/categoria/productos"><%=t("menu.what_we_do.products")%></a></li>
+								<li><a href="/<%=session[:locale]%>/categoria/clientes"><%=t("menu.what_we_do.clients")%></a></li>
 						    </ul>
 						  </li>
 						<li class="<%=@active_tab_entrenamos%>"><a href="/<%=session[:locale]%>/entrenamos"><%=t("menu.training")%></a></li>

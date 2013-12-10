@@ -22,6 +22,11 @@ en:
         home: "Home"
         training: "Training"
         coaching: "Coaching"
+        what_we_do:
+            root: "What we can do"
+            products: "for your Products"
+            organizations: "for your Organization"
+            clients: "for your Clients"
         community: "Community"
         publishing: "Publications"
         we_are: "We Are"
