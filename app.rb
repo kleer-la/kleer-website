@@ -11,6 +11,7 @@ require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
+require File.join(File.dirname(__FILE__),'/lib/pdf_catalog')
 
 helpers do
   def t(key, ops = Hash.new)
@@ -175,13 +176,9 @@ get '/entrenamos/evento/:event_id_with_name' do
 end
 
 get '/catalogo' do
-  today = DateTime.now
-  @printed = "Impreso el #{today.strftime("%d")} de #{DTHelper::MONTHS_ES[today.strftime("%b")]} de #{today.strftime("%Y")} a las #{today.strftime("%I")}:#{today.strftime("%M")}#{today.strftime("%P")}"
- 
-  @category = @@keventer_reader.category("organizaciones")
-  @event_types = @category.event_types
-  
-  erb :catalogo, :layout => :layout_printable
+  pdf_catalog 
+
+  redirect '/'
 end
 
 get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
