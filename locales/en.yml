@@ -20,17 +20,24 @@ en:
         no_courses_found: "No courses found. We would like you to contact us at <a href=\\\"mailto:hello@kleer.us\\\">hello@kleer.us</a> with your questions."
     menu:
         home: "Home"
-        training: "Training"
+        we_do_it_for: "We do it for you to:"
+        training: "Learn"
         coaching: "Coaching"
-        community: "Community"
-        publishing: "Publications"
-        we_are: "We Are"
+        achieve:
+            root: "Achieve"
+            products: "Quality Products"
+            organization: "an Amazing Organization"
+            clients: "Happy Clients"
+        community: "Participate"
+        publishing: "Read"
+        we_are: "Know us"
+        tv: "Watch"
         blog: "Blog"
     home:
         slider:
-            teams:
-                title: "Amazing teams."
-                caption: "Through effective learning, trust, commitment, visibility and flexibility your team will achieve results never seen before."
+            organizations:
+                title: "Amazing organizations."
+                caption: "Through effective learning, trust, commitment, visibility and flexibility your organization, department or team will achieve results never seen before."
             clients:
                 title: "Happy clients."
                 caption: "Innovation, communication, collaboration and participation. keys for your customers to be proud of you."

@@ -145,6 +145,7 @@ end
 
 get '/categoria/:category_codename' do
   @category = @@keventer_reader.category(params[:category_codename])
+  @active_tab_acompanamos = "active"
 
   if @category.nil?
     status 404
