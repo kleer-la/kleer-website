@@ -25,11 +25,12 @@ es:
         coaching: "Acompañamos"
         achieve: 
             root: "Logres"
-            products: "Productos de calidad"
-            organization: "una Organización asombroza"
-            clients: "Clientes felices"
+            products: "Productos de Calidad"
+            organization: "una Organización Asombrosa"
+            clients: "Clientes Felices"
         community: "Participes"
         publishing: "Leas"
+        tv: "Veas"
         we_are: "Nos Conozcas"
         blog: "Blog"
     home:
