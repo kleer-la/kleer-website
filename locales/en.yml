@@ -20,16 +20,17 @@ en:
         no_courses_found: "No courses found. We would like you to contact us at <a href=\\\"mailto:hello@kleer.us\\\">hello@kleer.us</a> with your questions."
     menu:
         home: "Home"
-        training: "Training"
+        we_do_it_for: "We do it for you to:"
+        training: "Learn"
         coaching: "Coaching"
-        what_we_do:
-            root: "What we can do"
-            products: "for your Products"
-            organization: "for your Organization"
-            clients: "for your Clients"
-        community: "Community"
-        publishing: "Publications"
-        we_are: "We Are"
+        achieve:
+            root: "Achieve"
+            products: "Quality Products"
+            organization: "an Amazing Organization"
+            clients: "Happy Clients"
+        community: "Participate"
+        publishing: "Read"
+        we_are: "Know us"
         blog: "Blog"
     home:
         slider:
