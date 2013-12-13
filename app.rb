@@ -178,7 +178,9 @@ end
 get '/catalogo' do
   pdf_catalog 
 
-  redirect '/'
+  # Mientras testeo
+  "Listo a las #{Time.now.hour}:#{Time.now.min}"
+  # redirect '/'
 end
 
 get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
