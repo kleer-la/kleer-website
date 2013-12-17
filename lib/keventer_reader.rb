@@ -305,6 +305,7 @@ class KeventerReader
     event_type = KeventerEventType.new
     event_type.id  = xml_keventer_event.find_first('id').content.to_i
     event_type.name  = xml_keventer_event.find_first('name').content
+    event_type.duration = xml_keventer_event.find_first('duration').content.to_i
     event_type.elevator_pitch  = xml_keventer_event.find_first('elevator-pitch').content
     event_type.learnings  = xml_keventer_event.find_first('learnings').content
     event_type.takeaways  = xml_keventer_event.find_first('takeaways').content

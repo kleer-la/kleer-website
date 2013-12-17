@@ -4,26 +4,22 @@ require "prawn"
 require "prawn/measurement_extensions"
 
 def cover
+    @pdf.font "res/Dosis-Regular.ttf"
+    
     @pdf.fill_color = "80e2ff"
     @pdf.fill_rectangle [0.mm, 287.mm], 200.mm, 287.mm
     @pdf.fill_color = "000000"
 
-    # Logo y Título
-    @pdf.bounding_box [20.mm,250.mm], :width => 150.mm, :height => 100.mm do
+    @pdf.bounding_box [15.mm,250.mm], :width => 150.mm, :height => 100.mm do
 
       @pdf.image "res/Logo_Kleer_GrisBlanco.png", :width => 60.mm
 
-      @pdf.font( "res/Dosis-Regular.ttf", :size => 36 ) do
-        @pdf.text "\n\nCATALOGO DE\nENTRENAMIENTO"
-      end
+      @pdf.text "\n\nCATALOGO DE\nENTRENAMIENTO", :size => 36
     end
 
-    # Pie de imprenta
-    @pdf.bounding_box [20.mm,15.mm], :width => 150.mm, :height => 15.mm do
+    @pdf.bounding_box [15.mm,15.mm], :width => 150.mm, :height => 15.mm do
 
-      @pdf.font( "res/Dosis-Regular.ttf", :size => 12 ) do
-        @pdf.text created_on
-      end
+      @pdf.text created_on, :size => 12
     end
 
     @pdf.start_new_page
