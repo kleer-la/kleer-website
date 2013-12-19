@@ -22,6 +22,7 @@ doc/
 webrat.log
 
 public/.DS_Store
+public/*.pdf
 
 public/img/.DS_Store
 
