@@ -111,6 +111,8 @@ es:
     we_are:
         title: "Somos"
         subtitle: "En Kleer creemos que hay otras formas de relacionarnos para conseguir resultados fantásticos que nos hagan sentir orgullosos. <br/>Colaboramos con personas para lograr Organizaciones asombrosas, Clientes felices y Productos tecnológicos de calidad. <br/>¿Y cómo colaboramos? Entrenando, acompañando la ejecución, generando videos y libros, participando de las comunidades de práctica."
+        subtitle: "Ayudamos organizaciones, equipos y profesionales"
+        description: "En Kleer creemos que hay otras formas de relacionarnos para conseguir resultados fantásticos que nos hagan sentir orgullosos. <br/>Colaboramos con personas para lograr Organizaciones asombrosas, Clientes felices y Productos tecnológicos de calidad. <br/>¿Y cómo colaboramos? Entrenando, acompañando la ejecución, generando videos y libros, participando de las comunidades de práctica."
     event:
         course: "Curso"
         public_editions: "Ediciones públicas"
