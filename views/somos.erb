@@ -9,21 +9,23 @@
 	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 		<h1><%=t("we_are.title")%></h1>
 		<p class="lead"><%=t("we_are.subtitle")%></p>
-		
+		<p><%=t("we_are.description")%></p><br/>
+		<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+		  <div class="carousel-inner">
 		<% @kleerers.each do |kleerer| %>
-		
+			<div class="item">
 			<div class="row">
 				<div class="span1"> 
 					<img src="<%=kleerer.gravatar_picture_url%>" class="img-circle">
-					<br/>&nbsp;
-					<% if kleerer.linkedin_url != "" %>
-					<br/><a href="<%=kleerer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
-					<% end %>
 				</div>
 				<div class="span7">
 					<div class="row">
 						<div class="span3">
-							<h2><%=kleerer.name%></h2>
+							<h2><%=kleerer.name%>&nbsp;
+								<% if kleerer.linkedin_url != "" %>
+								<a href="<%=kleerer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
+								<% end %>
+							</h2>
 						</div>
 						<div class="span4">
 							<% if kleerer.twitter_username != "" %>
@@ -32,17 +34,31 @@
 						</div>
 					</div>
 					<div class="row">
-						<p><%=@markdown_renderer.render( kleerer.bio )%></p>
+						<div class="span6">
+							<p><%=@markdown_renderer.render( kleerer.bio )%></p>
+						</div>
 					</div>
-				</div>
+				</div>				
 			</div>
-			<hr/>
+			</div>
 		
 		<% end %>
-		
+		  </div><!-- /.carousel-inner -->
+		  <!--  Next and Previous controls below
+		        href values must reference the id for this carousel -->
+		    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+		    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+		</div><!-- /.carousel -->
+
 	</div>	
 	<div class="span3" style="text-align:center;">  
 		<img src="/img/logos/logo-02.png">
 		<%= erb :twitter_box, :layout => false %>
 	</div>
 </div>
+<script>
+  $(document).ready(function(){
+  	$('.item').eq(Math.floor((Math.random() * $('.item').length))).addClass("active");
+    $('.carousel').carousel();
+  });
+</script>
