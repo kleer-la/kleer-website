@@ -165,7 +165,7 @@ $('body').on('hidden', '#myModalSepyme', function () {
 						</div>
 					</div>
 					<div class="span4">
-						<% if @event.eb_price == 0.0 %>
+						<% if @event.list_price == 0.0  %>
 							<h4><%=t("event.free")%></h4>
 						<% end %>
 						<h3><%=t("event.wanna_join")%></h3>
