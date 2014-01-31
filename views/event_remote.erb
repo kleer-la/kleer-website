@@ -69,5 +69,6 @@ $('body').on('hidden', '#myModalSepymeInside', function () {
 		<%if @event.sepyme_enabled%>
 			&nbsp;<a data-toggle="modal" data-target="#myModalSepymeInside" href="/sepyme/remote"><span class="btn btn-info">Ahorrá hasta el 90%!</span></a>&nbsp;
 		<%end%>
+        <p><%=@event.specific-conditions%></p>
 	</div>
 </div>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events type="array">
   <event>
+  <specific-conditions>Incluye magia shamanica Alaimica</specific-conditions>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
 	<end-time type="datetime">2000-01-01T18:00:00Z</end-time>
     <cancelled type="boolean">false</cancelled>
