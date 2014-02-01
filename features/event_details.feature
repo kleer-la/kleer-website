@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Feature: Event Details
 
 	Scenario: Evento Plano para Popup
@@ -61,7 +63,7 @@ Feature: Event Details
 		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"
 
 
-Scenario: Condiciones especiales del evento
+	Scenario: Condiciones especiales del evento
 		Given theres only one event
-		When I visit the plain event page
-		Then I should see "Incluye magia shamanica Alaimica"
+		When I visit the event page
+		Then I should see "Unas condiciones propias del evento"

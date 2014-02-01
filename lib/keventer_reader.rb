@@ -271,6 +271,7 @@ class KeventerReader
     event.place = xml_keventer_event.find_first('place').content
     event.address = xml_keventer_event.find_first('address').content
     event.registration_link = xml_keventer_event.find_first('registration-link').content
+    event.specific_conditions = xml_keventer_event.find_first('specific-conditions').content
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
     event.is_webinar = to_boolean( xml_keventer_event.find_first('is-webinar').content )
     if xml_keventer_event.find_first('sepyme-enabled').content == ""

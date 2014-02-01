@@ -15,6 +15,7 @@
     <event-type-id type="integer">13</event-type-id>
     <id type="integer">44</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
@@ -86,6 +87,7 @@
     <event-type-id type="integer">15</event-type-id>
     <id type="integer">48</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">480.0</list-price>
@@ -184,6 +186,7 @@ CSM y Especialista en Innovación
     <event-type-id type="integer">17</event-type-id>
     <id type="integer">58</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">480.0</list-price>
@@ -270,6 +273,7 @@ Agile Coach &amp; Trainer
     <event-type-id type="integer">14</event-type-id>
     <id type="integer">45</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">4990.0</list-price>
@@ -392,6 +396,7 @@ CSC, PMP, PMI-ACP</bio>
     <event-type-id type="integer">7</event-type-id>
     <id type="integer">47</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">822.0</list-price>
@@ -487,6 +492,7 @@ CSC, PMP, PMI-ACP</bio>
     <event-type-id type="integer">10</event-type-id>
     <id type="integer">49</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">3990.0</list-price>
@@ -604,6 +610,7 @@ CSC, PMP, PMI-ACP</bio>
     <event-type-id type="integer">16</event-type-id>
     <id type="integer">55</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">390.0</list-price>
@@ -683,6 +690,7 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
     <event-type-id type="integer">18</event-type-id>
     <id type="integer">59</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">480.0</list-price>
@@ -771,6 +779,7 @@ Agile Coach &amp; Trainer
     <event-type-id type="integer">7</event-type-id>
     <id type="integer">46</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">962.0</list-price>
@@ -866,6 +875,7 @@ CSC, PMP, PMI-ACP</bio>
     <event-type-id type="integer">7</event-type-id>
     <id type="integer">54</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">530.0</list-price>
@@ -961,6 +971,7 @@ CSC, PMP, PMI-ACP</bio>
     <event-type-id type="integer">4</event-type-id>
     <id type="integer">50</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
@@ -1042,6 +1053,7 @@ Ing. en Informática, CSM, CSD
     <event-type-id type="integer">3</event-type-id>
     <id type="integer">53</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">4000.0</list-price>
@@ -1140,6 +1152,7 @@ Ing. en Informática, CSM, CSD
     <event-type-id type="integer">5</event-type-id>
     <id type="integer">51</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
@@ -1223,6 +1236,7 @@ Ing. en Informática, CSM, CSD
     <event-type-id type="integer">6</event-type-id>
     <id type="integer">52</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">2670.0</list-price>
@@ -1308,6 +1322,7 @@ Ing. en Informática, CSM, CSD
     <event-type-id type="integer">3</event-type-id>
     <id type="integer">56</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">760.0</list-price>
@@ -1407,6 +1422,7 @@ Ing. Electrónica, CSM, CSD
     <event-type-id type="integer">3</event-type-id>
     <id type="integer">57</id>
     <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">760.0</list-price>
