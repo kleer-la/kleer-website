@@ -179,6 +179,9 @@ $('body').on('hidden', '#myModalSepyme', function () {
 								<iframe src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="290" border="0" scrolling="no" seamless></iframe>
 							<%end%>
 						<% end %>
+						<% if @event.specific_conditions != "" %>
+							<%=@markdown_renderer.render( @event.specific_conditions )%>
+						<% end %>
 					</div>
 				</div>
 			</div>

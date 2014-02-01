@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Feature: Event Details
 
 	Scenario: Evento Plano para Popup
@@ -59,3 +61,9 @@ Feature: Event Details
 		Then I should see "El curso que estás buscando no fue encontrado. Es probable que ya haya ocurrido o haya sido cancelado."
 		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
 		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"
+
+
+	Scenario: Condiciones especiales del evento
+		Given theres only one event
+		When I visit the event page
+		Then I should see "Unas condiciones propias del evento"

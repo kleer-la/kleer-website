@@ -131,6 +131,11 @@ describe KeventerEvent do
     @kevent.currency_iso_code.should == "ARS"
   end
 
+  it "should have specific_conditions" do
+    @kevent.specific_conditions = "Condiciones Especiales de Evento"
+    @kevent.specific_conditions.should == "Condiciones Especiales de Evento"
+  end
+
   context "If the trainer is Raul Gorgonzola" do
     
     before(:each) do
