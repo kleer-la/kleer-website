@@ -10,8 +10,8 @@ require 'i18n'
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
-require File.join(File.dirname(__FILE__),'/lib/event_type')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
+require File.join(File.dirname(__FILE__),'/lib/pdf_catalog')
 
 helpers do
   def t(key, ops = Hash.new)
@@ -173,6 +173,11 @@ get '/entrenamos/evento/:event_id_with_name' do
     @page_title = "Kleer - " + @event.friendly_title
     erb :event
   end
+end
+
+get '/catalogo' do
+  pdf_catalog 
+  redirect '/'
 end
 
 get '/categoria/:category_codename/cursos/:event_type_id_with_name' do

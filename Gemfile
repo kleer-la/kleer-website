@@ -14,6 +14,7 @@ gem 'sinatra-flash'
 gem 'oauth'
 gem 'json'
 gem 'i18n'
+gem 'prawn'
 
 group :development do
   gem 'foreman'
