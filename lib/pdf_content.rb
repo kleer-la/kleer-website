@@ -22,12 +22,10 @@ def content( category )
 
     @event_types.each_with_index do |event_type, index|
 
-      # Duración desactivada hasta que unifiquemos criterios
-      #
-      # @pdf.text cuanto_dura(event_type.duration), 
-      #   :size => 10, :align => :right
-      # @pdf.move_up 5.mm
-      @pdf.text event_type.name, :size => 12
+      @pdf.text "<link href='#{full_uri(event_type)}'>#{event_type.name}</link>",
+        :size => 12,
+        :inline_format => true
+
       @pdf.text event_type.elevator_pitch, :size => 10
 
       @pdf.move_down 4.mm
@@ -37,9 +35,6 @@ def content( category )
   @pdf.start_new_page
 end
 
-def cuanto_dura(numero)
-  return "" if numero.zero?
-  return "1 día" if numero == 1
-  return "#{numero} días" if numero < 6
-  "#{numero} horas"
+def full_uri( workshop )
+  "http://www.kleer.la/es/categoria/#{@category.codename}/cursos/#{url_sanitize(workshop.uri_path)}"
 end
