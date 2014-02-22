@@ -94,7 +94,7 @@ es:
             scrum:
                 title: "Proyectos Ágiles con Scrum"
                 text: "Scrum es un marco de trabajo que nos permite encontrar prácticas emergentes en dominios complejos, como la gestión de proyectos de innovación. No es un proceso completo, y mucho menos, una metodología. En lugar de proporcionar una descripción completa y detallada de cómo deben realizarse las tareas de un proyecto, genera un contexto relacional e iterativo, de inspección y adaptación constante para que los involucrados vayan creando su propio proceso."
-                next: "Puedes bajar este e-book en formato PDF con solo un tweet!"
+                next: "Obtener libro >>"
                 subtitle: "Flexibilidad, aprendizaje, innovación y colaboración en contextos complejos"
                 learnings: "<p>Mediante este libro conocerás:</p> <ul><li>Los factores que dieron origen a las metodologías ágiles</li><li>Los valores y principios del Manifiesto Ágil</li><li>Los contextos de complejidad donde Scrum es más eficiente</li><li>Los principios y valores de Scrum</li><li>Roles del Equipo Scrum</li><li>Responsabilidades y expectativas de cada rol</li><li>Elementos y actividades del flujo de trabajo de Scrum</li><li>Técnicas de análisis ágil y desarrollo evolutivo</li><li>Técnicas de comunicación de necesidades (Historias de Usuario)</li><li>Estimaciones ágiles</li><li>Planificación del mediano y largo plazo</li> <li>Presupuestación de proyectos ágiles</li></ul>&nbsp;"
                 video:
@@ -106,8 +106,13 @@ es:
                 title: "Técnicas para la realización de retrospectivas"
                 text: "Las retrospectivas son reuniones en los que los equipos identifican áreas de mejora e idean acciones para mejorar. Pueden usarse al final de cada iteración (sprint), luego de cada nueva versión o en cualquier momento que se detecte una necesidad de mejora. Este documento tiene un resumen de técnicas que pueden utilizarse.<br/>&nbsp;<br/>Puedes bajar este e-book con solo un tweet!"
             mas_productivos:
-                title: "Más Productivos"
-                text: "Personas e interacciones por sobre procesos y herramientas. Ver a Scrum como un simple proceso de trabajo lmita extremádamente las posibilidades que tenemos de alcanzar un alto desempeño. Scrum se trata sobre relaciones humanas en la complejidad. En este libro analizamos esas relaciones humanas de la mano del Coaching. Veremos cómo se complementa Scrum y Coaching para ...<br/>Puedes bajar este e-book con solo un tweet!"
+                title: "Equipos más productivos"
+                text: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa. Las organizaciones y los equipos de trabajo están integrados por personas, y las personas tienen comportamientos, emociones, deseos, y su propia historia. Si en lugar de minimizar estos factores, los abrazamos y los incluimos en la gestión, pronto comenzaremos a presenciar increíbles mejoras."
+                long_text: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa. Las organizaciones y los equipos de trabajo están integrados por personas, y las personas tienen comportamientos, emociones, deseos, y su propia historia. Si en lugar de minimizar estos factores, los abrazamos y los incluimos en la gestión, pronto comenzaremos a presenciar increíbles mejoras.<br/><br/>La productividad no solo se refiere a cuánto se produce, sino a qué tan efectivas son las propias relaciones personales en el contexto profesional. La fórmula es muy sencilla: <strong>R=R (Resultados = Relaciones)</strong>. Esto quiere decir que  la manera más efectiva de mejorar los resultados es mejorando las relaciones que existen entre los miembros y no solamente atendiendo los procesos y las tareas que ellos realizan.<br/><br/>Pero en este camino no faltan los desafíos. Para facilitarlo, me propuse tomar lo mejor de dos mundos, el Coaching y Scrum, y combinarlos en una novedosa forma de ver los equipos de trabajo para exponer su alma. Quien se sumerja en esta lectura, encontrará experiencias, propuestas novedosas, recomendaciones útiles y la descripción de un completo marco de trabajo relacional.<br/><br/>Este es un momento clave en la historia del mundo del trabajo. Y muchas empresas ya están dando el gran salto.<br/><br/><strong>¿Estás dispuesto a conocer esta nueva forma de trabajar y relacionarnos?</strong>"
+                subtitle: "Personas e interacciones por sobre procesos y herramientas."
+                next: "Obtener libro >>"
+                download:
+                    pdf: "PDF/Kindle/ePub: 50% OFF!"
     we_are:
         title: "Somos"
         subtitle: "Asistimos a organizaciones, equipos y profesionales"

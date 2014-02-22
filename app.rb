@@ -121,6 +121,12 @@ get '/publicamos/scrum' do
   erb :ebook_scrum
 end
 
+get '/publicamos/mas-productivos' do
+  @active_tab_publicamos = "active"
+  @page_title += " | Publicamos | Equipos más productivos"
+  erb :ebook_masproductivos
+end
+
 get '/posters/:poster_code' do
   @poster_code = params[:poster_code]
 
