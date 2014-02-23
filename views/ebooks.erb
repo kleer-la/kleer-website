@@ -9,7 +9,20 @@
 	<div class="span9" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 		<h1><%=t("publishing.title")%></h1>
 		&nbsp;
+		
 		<div class="row-fluid">
+			
+			<div class="span4">
+				<a id="MasProductivos"></a>
+				<a href="/<%=session[:locale]%>/publicamos/mas-productivos"><p align="center"><img src="/img/ebooks/mas-productivos-288.jpg" class="img-rounded"></p></a>
+
+				<div class="well well-small">
+					<h4><%=t("publishing.books.mas_productivos.title")%></h4>
+					<p><%=t("publishing.books.mas_productivos.text")%></p>
+					<p><a href="/<%=session[:locale]%>/publicamos/mas-productivos"><%=t("publishing.books.mas_productivos.next")%></a></p>
+				</div>
+			</div>
+			
 			<div class="span4">
 				<a href="/<%=session[:locale]%>/publicamos/scrum"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
 
@@ -26,17 +39,6 @@
 					<h4><%=t("publishing.books.retrospectives.title")%></h4>
 					<p><%=t("publishing.books.retrospectives.text")%></p>
 					<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=d999f0797cb600c38e17891503cb3b05" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
-				</div>
-			</div>
-			
-			<div class="span4">
-				<a id="MasProductivos"></a>
-				<a href="/<%=session[:locale]%>/publicamos/mas-productivos"><p align="center"><img src="/img/ebooks/mas-productivos-288.jpg" class="img-rounded"></p></a>
-
-				<div class="well well-small">
-					<h4><%=t("publishing.books.mas_productivos.title")%></h4>
-					<p><%=t("publishing.books.mas_productivos.text")%></p>
-					<p><a href="/<%=session[:locale]%>/publicamos/mas-productivos"><%=t("publishing.books.mas_productivos.next")%></a></p>
 				</div>
 			</div>
 			

@@ -118,13 +118,13 @@ end
 get '/publicamos/scrum' do
   @active_tab_publicamos = "active"
   @page_title += " | Publicamos | Proyectos Ágiles con Scrum"
-  erb :ebook_scrum
+  erb :ebook_scrum_plain, :layout => :layout_ebook_landing
 end
 
 get '/publicamos/mas-productivos' do
   @active_tab_publicamos = "active"
   @page_title += " | Publicamos | Equipos más productivos"
-  erb :ebook_masproductivos
+  erb :ebook_masproductivos_plain, :layout => :layout_ebook_landing
 end
 
 get '/posters/:poster_code' do
