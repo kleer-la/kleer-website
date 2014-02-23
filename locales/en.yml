@@ -90,12 +90,25 @@ en:
                text: "<p>Contact us<a href='mailto:hello@kleer.la'>hello@kleer.la</a> for a quotation.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
     publishing:
        title: "We publish"
+       others:
+           title: "Other publications"
+       buy:
+           paperback: "Paperback"
+           paperback_and_kindle: "Paperback + Kindle"
+           amazon_matchbook: "If you buy a new print edition of this book, you can buy the Kindle edition for FREE. Print edition must be purchased at Amazon."
+           kindle: "Kindle"
+           pdf-epub: "PDF/ePub"
+           pdf: "PDF"
        books:
            scrum:
                title: "Agiles Projects with Scrum"
+               title1: "Agiles Projects with"
+               title2: "#Scrum"
+               subtitle: "Flexibility, learning, innovation and collaboration in complex contexts"
+               subtitle1: "Flexibility, learning, innovation"
+               subtitle2: "and collaboration in complex contexts"
                text: "Scrum is a framework that allows us to find emerging practices in complex domains such as the management of innovation projects. It is not a complete process, much less a methodology. Instead of providing a complete and detailed description of how the project tasks should be performed, it generates a relational and iterative context, of inspection and constant adaptation where those involved are to create their own process."
                next: " You can download this e-book in PDF format with just a tweet!"
-               subtitle: " Flexibility, learning, innovation and collaboration in complex contexts"
                learnings: "<p> Through this book you will learn:</p> <ul><li>The factors that led to agile methodologies</li><li> The values ​​and principles of the Agile Manifesto </li><li> Complexity contexts where Scrum is more efficient</li><li>Scrum values and principles</li><li>Scrum Team Roles</li><li> Responsibilities and expectations of each role</li><li>Scrum workflow elements and activities</li><li>Agile analysis and evolutionary development techniques</li><li>How to communicate needs (User Stories)</li><li>Agile estimations</li><li>Medium and long term planning</li><li> Budgeting agile projects</li></ul>&nbsp;"
                video:
                    title: "View the 4-minute video describing Scrum"
@@ -107,9 +120,13 @@ en:
                text: "Retrospectives are meetings where teams identify areas for improvement and design actions to do so. They may occur at the end of each iteration (sprint), after each new version or anytime a need for improvement is detected. The following is a summary of techniques that can be used.<br/>&nbsp;<br/>You can download this e-book in PDF format with just a tweet!"
            mas_productivos:
                title: "Higher performing teams"
+               title1: "Higher"
+               title2: "#PerformingTeams"
                text: "The traditional management model is being replaced by more participatory, collaborative and humane ways of doing business. Organizations and teams are composed of people, and people have behaviours, emotions, desires, and their own history. If, instead of minimising these factors, we embrace them and included them in management, we’ll soon begin to witness dramatic improvements."
                long_text: "The traditional management model is being replaced by more participatory, collaborative and humane ways of doing business. Organizations and teams are composed of people, and people have behaviours, emotions, desires, and their own history. If, instead of minimising these factors, we embrace them and included them in management, we’ll soon begin to witness dramatic improvements.<br/><br/> Performance is not just about how much is produced, but how effective are the personal relationships in the new professional context. The formula is simple: <strong>R = R (Result = Relationships)</strong>. This means that the most effective way to improve outcomes is to improve relations between the members of a team and not just taking care of the processes and the tasks they perform.<br/><br/>But in this trip there will be a lot of challenges. To facilitate it, I decided to take the best of both worlds, Scrum and Coaching, and combine them in a novel way to make the teams to expose their spirit. by getting immersed in this reading, you will find experiences, innovative proposals, recommendations and useful description of a complete framework for knowledge workers.<br/><br/>This is a key moment in the history of the world of work. And many companies are already taking the big leap. <br/><br/><strong>Are you willing to learn this new way of working and relating?</strong>"
-               subtitle: "Individuals and interactions over processes and tools."
+               subtitle: "Individuals and interactions over processes and tools"
+               subtitle1: "Individuals and interactions"
+               subtitle2: "over processes and tools"
                next: "Get the book >>"
                download:
                    pdf: "PDF/Kindle/ePub: 50% OFF!"

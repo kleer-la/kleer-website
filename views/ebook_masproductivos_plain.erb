@@ -1,0 +1,171 @@
+<style>
+.bg {
+	position:absolute;
+	width:100%;
+	height:800px;
+	z-index:-100;
+	background-color:#000000;
+}
+
+.bg > div {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+}
+
+.bg-normal {
+	z-index:10;
+	background-image:url(/img/ebooks/mas-productivos-bg.jpg);
+}
+
+.story-cover-arrow {
+	content: '';
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	bottom: -100px;
+	left: 50%;
+	margin-left: -8px;
+	border: 2px solid rgba(255,255,255,0.75);
+	background: rgba(0,0,0,0);
+	border-left: 0;
+	border-top: 0;
+	outline: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	/* cursor: pointer; */
+	bottom: 100px;
+}
+
+.headh1 {
+	font-size: 900%;
+}
+
+.headh2 {
+	font-size: 400%;font-weight: 200;
+}
+
+</style>
+<script type="text/javascript" src="/js/jquery.js"/></script>
+
+<div class="bg">
+  <div class="bg-normal"></div>
+</div>
+
+<div class="row-fluid" style="height: 400px;">
+	<div>
+		&nbsp;
+	</div>
+	<div class="span2 offset9">
+		<a href="/<%=session[:locale]%>/"><img src="/img/logos/logo-kleer-blanco.png"/></a>
+	</div>
+</div>
+
+<div class="row-fluid" style="height: 400px;">
+	<div class="span2 offset1">
+		<img src="/img/ebooks/mas-productivos.jpg" class="img-rounded">
+	</div> 
+	<div class="span8" style="text-align:center;color:#FFFFFF;text-shadow: 1px 1px 5px #000;">
+ 			<h2 class="headh2"><%=t("publishing.books.mas_productivos.title1")%></h2>
+			<br/><br/>
+			<h1 class="headh1"><%=t("publishing.books.mas_productivos.title2")%></h1>
+			<span class="story-cover-arrow"></span>
+	</div>
+</div>
+
+<div class="row-fluid" style="background-color:#ee2a24;color:#ffffff;text-align:center;">
+	<h1>&nbsp;</h1>
+	<h2 class="headh2"><%=t("publishing.books.mas_productivos.subtitle1")%></h2>
+	<h2 class="headh2"><%=t("publishing.books.mas_productivos.subtitle2")%></h2>
+	<h1>&nbsp;</h1>
+</div>
+
+&nbsp;
+
+<div class="row-fluid">
+	<div class="span3 offset2" style="text-align:center;">
+		<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas/dp/9874515872" target="_blank"><%=t("publishing.buy.paperback_and_kindle")%></a> <em>(*)</em>
+		<br/>USD 11.95<br/>
+			<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas/dp/9874515872" target="_blank"><img class="img-square" src="/img/ebooks/amazon.png"></a><br/><br/>
+			<img src="/img/ebooks/matchbook.png"><br/>
+			<em>(*) <%=t("publishing.buy.amazon_matchbook")%></em>
+	</div>
+	<div class="span3" style="text-align:center;">
+		<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas-ebook/dp/B00IKUCZDC" target="_blank"><%=t("publishing.buy.kindle")%></a>
+		<br/>USD 9.95<br/>
+			<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas-ebook/dp/B00IKUCZDC" target="_blank"><img class="img-square" src="/img/ebooks/amazonkindle.png"></a>
+	</div>
+	<div class="span3" style="text-align:center;">
+		<%=t("publishing.buy.pdf")%><br/>Tweet + USD 4.95<br/>
+			<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=c008b0c3-e434-4bc8-a6a8-de07a96e85b8" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
+	</div>
+</div>
+
+&nbsp;
+
+<div class="row-fluid" style="background-color: #e1e1e0;">
+	&nbsp;
+	<div class="span8 offset2" style="text-align: center;font-size: 150%; font-family: 'Dosis'; font-weight: 200;">
+		<h3 style="font-weight: 200;"><%=t("publishing.books.mas_productivos.long_text")%></h3>
+	</div>
+	&nbsp;
+</div>
+
+&nbsp;
+
+<div class="row-fluid">
+	<div class="span3 offset2" style="text-align:center;">
+		<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas/dp/9874515872" target="_blank"><%=t("publishing.buy.paperback_and_kindle")%></a> <em>(*)</em>
+		<br/>USD 11.95<br/>
+			<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas/dp/9874515872" target="_blank"><img class="img-square" src="/img/ebooks/amazon.png"></a><br/><br/>
+			<img src="/img/ebooks/matchbook.png"><br/>
+			<em>(*) <%=t("publishing.buy.amazon_matchbook")%></em>
+	</div>
+	<div class="span3" style="text-align:center;">
+		<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas-ebook/dp/B00IKUCZDC" target="_blank"><%=t("publishing.buy.kindle")%></a>
+		<br/>USD 9.95<br/>
+			<a href="http://www.amazon.com/Equipos-M%C3%A1s-Productivos-interacciones-herramientas-ebook/dp/B00IKUCZDC" target="_blank"><img class="img-square" src="/img/ebooks/amazonkindle.png"></a>
+	</div>
+	<div class="span3" style="text-align:center;">
+		<%=t("publishing.buy.pdf")%><br/>Tweet + USD 4.95<br/>
+			<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=c008b0c3-e434-4bc8-a6a8-de07a96e85b8" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
+	</div>
+</div>
+
+&nbsp;
+
+<div class="row-fluid" style="background-color: #3f1950;">
+	<div class="span6 offset3">
+		<h1 style="color: #ffffff;"><%=t("publishing.others.title")%></h1>
+		&nbsp;
+		<div class="row-fluid">
+			<div class="span6">
+				<a href="/<%=session[:locale]%>/publicamos/scrum"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
+
+				<div class="well well-small">
+					<h4><%=t("publishing.books.scrum.title")%></h4>
+					<p><%=t("publishing.books.scrum.text")%></p>
+					<p><a href="/<%=session[:locale]%>/publicamos/scrum"><%=t("publishing.books.scrum.next")%></a></p>
+				</div>
+			</div>
+			<div class="span6">
+				<p align="center"><img src="/img/ebooks/retrospectivas.png" class="img-rounded"></p>
+
+				<div class="well well-small">
+					<h4><%=t("publishing.books.retrospectives.title")%></h4>
+					<p><%=t("publishing.books.retrospectives.text")%></p>
+					<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=d999f0797cb600c38e17891503cb3b05" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
+				</div>
+			</div>
+			
+		</div>		
+	</div>
