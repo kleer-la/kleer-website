@@ -90,9 +90,22 @@ es:
                 text: "<p>Puedes contactarnos a <a href='mailto:hola@kleer.la'>hola@kleer.la</a> para solicitarnos una  cotización.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
     publishing: 
         title: "Publicamos"
+        others:
+            title: "Otras publicaciones"
+        buy:
+            paperback: "Impreso"
+            paperback_and_kindle: "Impreso + Kindle"
+            amazon_matchbook: "Si compras la edición impresa de este libro, puedes obtener la edición de Kindle de forma gratuita. La edición impresa debe ser comprada en Amazon."
+            kindle: "Kindle"
+            pdf-epub: "PDF/ePub"
+            pdf: "PDF"
         books:
             scrum:
                 title: "Proyectos Ágiles con Scrum"
+                title1: "Proyectos Ágiles con "
+                title2: "#Scrum"
+                subtitle1: "Flexibilidad, aprendizaje, innovación"
+                subtitle2: "y colaboración en contextos complejos"
                 text: "Scrum es un marco de trabajo que nos permite encontrar prácticas emergentes en dominios complejos, como la gestión de proyectos de innovación. No es un proceso completo, y mucho menos, una metodología. En lugar de proporcionar una descripción completa y detallada de cómo deben realizarse las tareas de un proyecto, genera un contexto relacional e iterativo, de inspección y adaptación constante para que los involucrados vayan creando su propio proceso."
                 next: "Obtener libro >>"
                 subtitle: "Flexibilidad, aprendizaje, innovación y colaboración en contextos complejos"
@@ -107,9 +120,13 @@ es:
                 text: "Las retrospectivas son reuniones en los que los equipos identifican áreas de mejora e idean acciones para mejorar. Pueden usarse al final de cada iteración (sprint), luego de cada nueva versión o en cualquier momento que se detecte una necesidad de mejora. Este documento tiene un resumen de técnicas que pueden utilizarse.<br/>&nbsp;<br/>Puedes bajar este e-book con solo un tweet!"
             mas_productivos:
                 title: "Equipos más productivos"
+                title1: "Equipos"
+                title2: "#MásProductivos"
                 text: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa. Las organizaciones y los equipos de trabajo están integrados por personas, y las personas tienen comportamientos, emociones, deseos, y su propia historia. Si en lugar de minimizar estos factores, los abrazamos y los incluimos en la gestión, pronto comenzaremos a presenciar increíbles mejoras."
                 long_text: "El modelo de gestión tradicional está siendo reemplazado por formas más participativas, más colaborativas y más humanas de hacer empresa. Las organizaciones y los equipos de trabajo están integrados por personas, y las personas tienen comportamientos, emociones, deseos, y su propia historia. Si en lugar de minimizar estos factores, los abrazamos y los incluimos en la gestión, pronto comenzaremos a presenciar increíbles mejoras.<br/><br/>La productividad no solo se refiere a cuánto se produce, sino a qué tan efectivas son las propias relaciones personales en el contexto profesional. La fórmula es muy sencilla: <strong>R=R (Resultados = Relaciones)</strong>. Esto quiere decir que  la manera más efectiva de mejorar los resultados es mejorando las relaciones que existen entre los miembros y no solamente atendiendo los procesos y las tareas que ellos realizan.<br/><br/>Pero en este camino no faltan los desafíos. Para facilitarlo, me propuse tomar lo mejor de dos mundos, el Coaching y Scrum, y combinarlos en una novedosa forma de ver los equipos de trabajo para exponer su alma. Quien se sumerja en esta lectura, encontrará experiencias, propuestas novedosas, recomendaciones útiles y la descripción de un completo marco de trabajo relacional.<br/><br/>Este es un momento clave en la historia del mundo del trabajo. Y muchas empresas ya están dando el gran salto.<br/><br/><strong>¿Estás dispuesto a conocer esta nueva forma de trabajar y relacionarnos?</strong>"
-                subtitle: "Personas e interacciones por sobre procesos y herramientas."
+                subtitle: "Personas e interacciones por sobre procesos y herramientas"
+                subtitle1: "Personas e interacciones"
+                subtitle2: "por sobre procesos y herramientas"
                 next: "Obtener libro >>"
                 download:
                     pdf: "PDF/Kindle/ePub: 50% OFF!"
