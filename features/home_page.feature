@@ -1,20 +1,10 @@
 # encoding: utf-8
 Feature: Home Page
 
-#	Scenario: Próximos eventos
-#		Given theres only one event for the following two months
-#		When I visit the home page
-#		Then I should see "Próximos cursos (2 meses)"
-		
 	Scenario: Currícula accesible desde la home page
 		Given I visit the home page
-		Then I should see a link to "http://media.kleer.la/kleer-entrenamos-2013.pdf" with text "Información de Cursos In-Company"
+		Then I should see a link to "http://media.kleer.la/kleer-entrenamos-2014.pdf" with text "Información de Cursos In-Company"
 		
-#	Scenario: Calendario 2013 accesible desde la home page
-#		Given I visit the home page
-#		When I click on "Ver calendario 2013"
-#		Then I should be on Entrenamos page	
-
 	Scenario: Datos de contacto
 		Given I visit the home page
 		Then I should see "Argentina"
