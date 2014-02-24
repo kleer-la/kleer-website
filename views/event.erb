@@ -159,9 +159,6 @@ $('body').on('hidden', '#myModalSepyme', function () {
 						  	<%=@markdown_renderer.render( @event.event_type.faqs )%>
 							<br/>&nbsp;
 						  </div>
-						  <!--div class="tab-pane" id="details">
-							<br/>&nbsp;
-						  </div -->
 						</div>
 					</div>
 					<div class="span4">
@@ -176,7 +173,7 @@ $('body').on('hidden', '#myModalSepyme', function () {
 							<%if @event.registration_link != "" %>
 								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success"><%=t("general.buttons.register")%></span></a>
 							<%else %>
-								<iframe src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="290" border="0" scrolling="no" seamless></iframe>
+								<iframe id="registration" src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="340" border="0" scrolling="no" seamless></iframe>
 							<%end%>
 						<% end %>
 						<% if @event.specific_conditions != "" %>
@@ -214,18 +211,6 @@ $('body').on('hidden', '#myModalSepyme', function () {
 			</div>
 		</div>	
 		&nbsp;
-		<!-- div class="row-fluid">
-			<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-				<h3>Compartir</h3>
-				<span class='st_email_hcount' displayText='Email' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span>
-				<span class='st_facebook_hcount' displayText='Facebook' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span><br/><br/>
-				<span class='st_twitter_hcount' displayText='Tweet' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span>
-				<span class='st_linkedin_hcount' displayText='LinkedIn' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span><br/><br/>
-				<span class='st_pinterest_hcount' displayText='Pinterest' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span>
-				<span class='st_googleplus_hcount' displayText='G +' st_title='<%=@event.friendly_title%>' st_url='http://kleer.la/<%=@event.uri_path%>'></span><br/><br/>
-			</div>
-			
-		</div -->
 		&nbsp;
 		<div class="row-fluid">
 			<div class="span12">
