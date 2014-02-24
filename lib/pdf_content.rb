@@ -22,6 +22,7 @@ def content( category )
 
     @event_types.each_with_index do |event_type, index|
 
+      # Group automatically handles keeping different text areas on the same page
       @pdf.group do
         @pdf.text "<link href='#{full_uri(event_type)}'>#{event_type.name}</link>",
           :size => 12,
