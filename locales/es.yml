@@ -60,7 +60,7 @@ es:
         calendar:
             title: "Próximos 8 cursos"
             private_course_info: "Información de Cursos In-Company"
-            current_year_calendar: "Ver Calendario 2013/2014"
+            current_year_calendar: "Ver Calendario 2014"
     popups:
         course:
             registration:
