@@ -22,13 +22,15 @@ def content( category )
 
     @event_types.each_with_index do |event_type, index|
 
-      @pdf.text "<link href='#{full_uri(event_type)}'>#{event_type.name}</link>",
-        :size => 12,
-        :inline_format => true
+      @pdf.group do
+        @pdf.text "<link href='#{full_uri(event_type)}'>#{event_type.name}</link>",
+          :size => 12,
+          :inline_format => true
 
-      @pdf.text event_type.elevator_pitch, :size => 10
+        @pdf.text event_type.elevator_pitch, :size => 10
 
-      @pdf.move_down 4.mm
+        @pdf.move_down 4.mm
+      end
     end
   end
 
