@@ -121,6 +121,10 @@ get '/publicamos/scrum' do
   erb :ebook_scrum_plain, :layout => :layout_ebook_landing
 end
 
+get '/mas-productivos' do
+  redirect "/publicamos/mas-productivos", 301 # permanent redirect
+end
+
 get '/publicamos/mas-productivos' do
   @active_tab_publicamos = "active"
   @page_title += " | Publicamos | Equipos más productivos"
