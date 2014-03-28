@@ -130,6 +130,24 @@ en:
                next: "Get the book >>"
                download:
                    pdf: "PDF/Kindle/ePub: 50% OFF!"
+           lenguajes_web:
+               title: "Introducción a los lenguajes de la Web"
+               text: "Este libro está pensado como parte del material de soporte para 
+               un curso más amplio sobre desarrollo ágil de software. Queremos que los 
+               lectores logren un conocimiento general, aunque breve, de lo que implica 
+               el desarrollo de una aplicación web. Los temas principales del libro son 
+               el protocolo HTTP, lo básico de HTML, cómo darle formato con CSS, y 
+               algunos detalles adicionales."
+           agil_ilustrado:
+               title: "Libro Ágil Ilustrado"
+               text: "El objetivo de este libro es difundir -de forma gráfica- métodos y 
+               prácticas ágiles. En cuanto al contenido, considero que el paradigma ágil 
+               -con foco en las relaciones interpersonales-, como forma de organización 
+               del trabajo y -arriesgando más- como filosofía de vida, puede generar 
+               ambientes profesionales y personales más interesantes, sanos, productivos 
+               y alegres, en comparación a otros paradigmas tradicionales. En cuanto a la 
+               forma, elijo comunicar a través de ilustraciones porque 'una imagen vale 
+               más que mil palabras' y porque -sencillamente- me gusta dibujar, lo disfruto."
     we_are:
        title: "We are"
        subtitle: "We help organizations, teams and practitioners"
