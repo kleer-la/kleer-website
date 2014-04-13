@@ -159,7 +159,7 @@ en:
        facilitator: "Facilitator"
        save90percent: "Up to 90% savings!"
        free: "Free event"
-       wanna_join: "Wanna join?"
+       wanna_join: "More information?"
        location: "Venue"
        time: "%{starts} to %{ends}hs"
        tabs:
