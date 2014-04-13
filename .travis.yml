@@ -8,7 +8,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: xpyfONK9cpCxQp+sI3UuiSKOBRr2+A12CoWzTOgTnXHerFKxiNvL95ZeXRI1B8otT/MjV5AolGxp0/i5glsd+d4uGrYRw0wwJWnB/I+j0QhECDFVM5WKHI4TKnsroOWgf865DavL1InWC8ZWHUsrllGtddH2dyr3knMSefKSZuM=
+    secure: in69Til7y0K6l9zEO5V/F43CcqaZnV7vaQNxj5Za6fmo+fvknA9Dwg38gedeYbS9u81LZqT/PFDSVM/Lvs0MGFy9VF8Uzj5iN+o/52pucvs3Gb4aJ2tX/ERoepYaPGmTi3dnDDxTaro6exBt5EAV+IzmoZvGiMWuLWmlS1vuMbE=
   app:
     master: kleer
     develop: kleer-test
