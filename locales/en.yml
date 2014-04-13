@@ -6,7 +6,7 @@ en:
                 reference: "Our Vision"
         buttons:
             see_more: "see more"
-            register: "Register Now!"
+            register: "I'm interested!"
             complete: "Complete"
             close: "Close"
         texts:
@@ -159,7 +159,7 @@ en:
        facilitator: "Facilitator"
        save90percent: "Up to 90% savings!"
        free: "Free event"
-       wanna_join: "Wanna join?"
+       wanna_join: "More information?"
        location: "Venue"
        time: "%{starts} to %{ends}hs"
        tabs:
