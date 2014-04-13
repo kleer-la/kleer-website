@@ -1,7 +1,7 @@
 Feature: Static pages - Frequently asked questions
 
 	Scenario: International payments page
-		Given I visit the itnernational payment page
+		Given I visit the international payment page
 		Then I should see "Facturación"
 		And I should see "Datos de empresas y ordenantes"
 		And I should see "Instrucciones para el pago"
@@ -24,3 +24,10 @@ Feature: Static pages - Frequently asked questions
 		And I should see "¿El costo del entrenamiento incluye la certificación ante la Scrum Alliance?"
 		And I should see "¿Cuál es el puntaje mínimo para aprobar el examen?"
 		And I should see "¿Que pasa si no apruebo el examen al final del entrenamiento?"
+
+	Scenario: Argentinian payments page
+		Given I visit the argentinian payment page
+		Then I should see "Facturación"
+		And I should see "personas físicas"
+		And I should see "CUIT"
+
