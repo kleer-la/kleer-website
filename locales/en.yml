@@ -64,9 +64,9 @@ en:
     popups:
         course:
             registration:
-                title: "Course Registration"
+                title: "More information"
             details:
-                title: "Course Details"
+                title: "Course detail"
         event:
             registration:
                 title: "Event Registration"
