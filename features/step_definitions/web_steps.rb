@@ -274,8 +274,12 @@ Given /^I visit the former Estimación y Planificación con Scrum spanish Page$/
   visit "/es/entrenamos/estimacion-y-planificacion-con-scrum"
 end
 
-Given /^I visit the itnernational payment page$/ do
+Given /^I visit the international payment page$/ do
   visit "/preguntas-frecuentes/facturacion-pagos-internacionales"
+end
+
+Given(/^I visit the argentinian payment page$/) do
+  visit "/preguntas-frecuentes/facturacion-pagos-argentina"
 end
 
 Given /^I visit the CSM QnA page$/ do
@@ -356,4 +360,3 @@ Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
       element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
   end
 end
-
