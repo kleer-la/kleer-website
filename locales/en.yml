@@ -6,7 +6,8 @@ en:
                 reference: "Our Vision"
         buttons:
             see_more: "see more"
-            register: "I'm interested!"
+            register: "Register!"
+            i_am_interested: "I'm interested!"
             complete: "Complete"
             close: "Close"
         texts:

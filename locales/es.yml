@@ -6,7 +6,8 @@ es:
                 reference: "Nuestra Visión"
         buttons:
             see_more: "Ver más"
-            register: "¡Me interesa!"
+            register: "¡Registrarme!"
+            i_am_interested: "¡Me interesa!"
             complete: "Completo"
             close: "Cerrar"
         texts:
