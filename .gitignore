@@ -1,4 +1,5 @@
 .idea
+.kate*
 *.gem
 *.rbc
 .bundle
@@ -23,7 +24,4 @@ webrat.log
 
 public/.DS_Store
 public/*.pdf
-
-public/img/.DS_Store
-
 public/img/.DS_Store

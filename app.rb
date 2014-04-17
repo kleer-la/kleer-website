@@ -331,6 +331,10 @@ get '/preguntas-frecuentes/facturacion-pagos-internacionales' do
   erb :facturacion_pagos_internacionales
 end
 
+get '/preguntas-frecuentes/facturacion-pagos-argentina' do
+  erb :facturacion_pagos_argentina
+end
+
 get '/preguntas-frecuentes/certified-scrum-master' do
   erb :certified_scrum_master
 end
