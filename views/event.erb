@@ -170,8 +170,15 @@ $('body').on('hidden', '#myModalSepyme', function () {
 							<div class="alert alert-error"><%=t("event.is_full.title")%></div>
 							<%=t("event.is_full.text", :title => @event.friendly_title )%>
 						<%else%>
+							<%
+							if @event.is_community_event
+								button_text = t("general.buttons.register")
+							else
+								button_text = t("general.buttons.i_am_interested")
+							end
+							%>
 							<%if @event.registration_link != "" %>
-								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success"><%=t("general.buttons.register")%></span></a>
+								<a href="<%=@event.registration_link%>" target="_blank"><span class="btn btn-success"><%=button_text%></span></a>
 							<%else %>
 								<iframe id="registration" src="http://eventos.kleer.la/events/<%=@event.id%>/participants/new?nakedform=1" width="100%" height="340" border="0" scrolling="no" seamless></iframe>
 							<%end%>

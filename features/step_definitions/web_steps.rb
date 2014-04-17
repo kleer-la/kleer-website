@@ -300,15 +300,15 @@ end
 
 Then /^I should see the json string for all of the community events$/ do
   text = '\"aaData\": \[' +
-            '\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/es/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Me interesa!</a>\"\],' +
-            '\[\"<span class=\\\"label label-info\\\">14<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/es/comunidad/evento/61-yoseki-coding-dojo-lima\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/pe.png\\\"/> Lima, Peru\",\"<a href=\\\"mailto:hiroshi.hiromoto@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Me interesa!</a>\"\]' +
+            '\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/es/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Registrarme!</a>\"\],' +
+            '\[\"<span class=\\\"label label-info\\\">14<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/es/comunidad/evento/61-yoseki-coding-dojo-lima\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/pe.png\\\"/> Lima, Peru\",\"<a href=\\\"mailto:hiroshi.hiromoto@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Registrarme!</a>\"\]' +
          '\]'
   last_response.body.should =~ /#{text}/m
 end
 
 Then /^I should see the json string for the Argentina community events$/ do
   text = '\"aaData\": \[' +
-            '\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/es/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Me interesa!</a>\"\]' +
+            '\[\"<span class=\\\"label label-info\\\">06<br><span class=\\\"lead\\\">Feb</span></span>\",\"<a href=\\\"/es/comunidad/evento/60-yoseki-coding-dojo-buenos-aires\\\">Yoseki Coding Dojo</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"mailto:dojo@kleer.la\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Registrarme!</a>\"\]' +
          '\]'
   last_response.body.should =~ /#{text}/m
 end

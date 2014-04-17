@@ -12,7 +12,6 @@ describe KeventerReader do
     @kevr.events.count.should == 16   
   end
 
-
   it "Should Be Able to Load an Xml File for an Event Type" do
     @connector = double("KeventerConnector")
     @connector.stub(:events_xml_url).and_return( "http://keventer-test.herokuapp.com/api/events.xml" )
@@ -21,7 +20,6 @@ describe KeventerReader do
     @kevr = KeventerReader.new( @connector )
     @kevr.event_type(4).id.should == 4   
   end
-  
   
   it "Should Be Able to Load an Xml URI for Events" do
     @connector = double("KeventerConnector")
@@ -64,6 +62,14 @@ describe KeventerReader do
     
     it "should be able to fetch a certain community event" do
       @kevr.event(60).event_type.name.should == "Yoseki Coding Dojo"
+    end
+    
+    it "should be signaled as community event" do
+      @kevr.event(45).is_community_event.should == true
+    end
+    
+    it "should not be signaled as community event" do
+      @kevr.event(44).is_community_event.should == false
     end
     
     context "when examining the first event" do
