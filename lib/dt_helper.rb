@@ -68,10 +68,15 @@ class DTHelper
   end
   
   def self.event_link(event, i18n, locale)
-    if event.registration_link != ""
-      "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\">#{i18n.t("general.buttons.register", :locale => locale)}</a>"
+    if event.is_community_event
+      button_text = i18n.t("general.buttons.register", :locale => locale)
     else
-      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/"+locale+"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-success\">#{i18n.t("general.buttons.register", :locale => locale)}</a>"
+      button_text = i18n.t("general.buttons.i_am_interested", :locale => locale)
+    end
+    if event.registration_link != ""
+      "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\">#{button_text}</a>"
+    else
+      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/"+locale+"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-success\">#{button_text}</a>"
     end
   end
   

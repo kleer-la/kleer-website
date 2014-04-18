@@ -275,6 +275,7 @@ class KeventerReader
     else
       event.sepyme_enabled = to_boolean( xml_keventer_event.find_first('sepyme-enabled').content )
     end
+    event.is_community_event = xml_keventer_event.find_first('visibility-type').content == 'co'
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
     event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
