@@ -206,9 +206,9 @@ en:
                 phone: "+57 304.681.60.47"
             peru:
                 name: "Peru"
-                address1: "Federico Villareal 128"
+                address1: "Av. Juan De Aliaga 107"
                 address2: "Lima"
-                phone: "+51 996-352-739"
+                phone: "entrenamos.pe@kleer.la"
             other:
                 title: "Other countries?"
                 contact_us: "Contact us at"
