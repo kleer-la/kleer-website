@@ -282,6 +282,10 @@ Given(/^I visit the argentinian payment page$/) do
   visit "/preguntas-frecuentes/facturacion-pagos-argentina"
 end
 
+Given(/^I visit the colombian payment page$/) do
+  visit "/preguntas-frecuentes/facturacion-pagos-colombia"
+end
+
 Given /^I visit the CSM QnA page$/ do
   visit "/preguntas-frecuentes/certified-scrum-master"
 end
