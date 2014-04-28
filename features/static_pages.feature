@@ -31,3 +31,8 @@ Feature: Static pages - Frequently asked questions
 		And I should see "personas físicas"
 		And I should see "CUIT"
 
+	Scenario: Colombian payments page
+		Given I visit the colombian payment page
+		Then I should see "Agile Spin "
+		And I should see "Persona Natural"
+		And I should see "NIT"
