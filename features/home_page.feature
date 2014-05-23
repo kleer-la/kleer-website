@@ -8,6 +8,7 @@ Feature: Home Page
 	Scenario: Datos de contacto
 		Given I visit the home page
 		Then I should see "Argentina"
+		And I should see "Lavalle 362"
 		And I should see "Brasil"
 		And I should see "Bolivia"
 		And I should see "Colombia"
