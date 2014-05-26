@@ -13,6 +13,7 @@ en:
         texts:
             loading: "loading..."
     dt_grid:
+        select_all: "All"
         see_more: "see more..."
         loading: "loading..."
         showing: "Showing from _START_ to _END_ of _TOTAL_ records"
