@@ -40,3 +40,8 @@ Feature: i18n
 		And I should see "Watch"		
 		And I should see "Know us"
 		And I should see "Blog"
+		And I should see "See more"
+
+	Scenario: English entrenamos
+		Given I visit the english "entrenamos"
+		Then I should see "All"
