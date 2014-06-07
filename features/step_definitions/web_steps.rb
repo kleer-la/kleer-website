@@ -63,6 +63,12 @@ Given(/^I visit the english home page$/) do
   visit '/en/'
 end
 
+Given(/^I visit the english "(.*?)"$/) do |page|
+  stub_connector
+  visit '/en/'+page
+end
+
+
 Then /^I should see the json string for all of the events$/ do
   text = '\"aaData\": \[' +
             '\[\"<span class=\\\"label label-info\\\">09<br><span class=\\\"lead\\\">Ene</span></span>\",\"<a href=\\\"/es/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires\\\">Workshop de Retrospectivas</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Me interesa!</a>\"\],' +

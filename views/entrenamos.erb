@@ -27,11 +27,10 @@
 	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
 		<h1><%=t("training.title")%></h1>
 		<ul id="country-filter" class="nav nav-pills">
-			<li class="active"><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos">Todos</a></li>
+			<li class="active"><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos"><%=t("dt_grid.select_all")%></a></li>
     <% @unique_countries.each do |country| %>
 			<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
     <% end %>
-			<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/otro">¿Otro?</a></li>
 		</ul>
 		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
 		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>

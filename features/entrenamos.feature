@@ -20,10 +20,10 @@ Feature: Entrenamos
 		When I visit the "entrenamos" ajax page for an invalid country (invalido)
 		Then I should see the json string for all of the events
 
-	Scenario: Codigo de pais otros
-		Given there are two events
-		When I visit the "entrenamos" ajax page for other country (otro)
-		Then I should see the json string with no events
+#	Scenario: Codigo de pais otros
+#		Given there are two events
+#		When I visit the "entrenamos" ajax page for other country (otro)
+#		Then I should see the json string with no events
 
 #	Scenario: Mas eventos, filtrados para Bolivia
 #		Given there are many events
