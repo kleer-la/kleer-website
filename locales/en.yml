@@ -23,16 +23,17 @@ en:
     menu:
         home: "Home"
         we_do_it_for: "We do it for you to:"
-        training: "Learn"
+        training: "Courses"
         coaching: "Coaching"
+        certifications: "Certifications"
         achieve:
             root: "Achieve"
             products: "Quality Products"
             organization: "an Amazing Organization"
             clients: "Happy Clients"
-        community: "Participate"
-        publishing: "Read"
-        we_are: "Know us"
+        community: "Community"
+        publishing: "Publishing"
+        we_are: "We are"
         tv: "Watch"
         blog: "Blog"
     home:

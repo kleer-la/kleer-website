@@ -18,7 +18,8 @@
 
 	<!-- Le styles -->
 	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link href='http://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href="/css/kleer.css" rel="stylesheet">
 	<link href="/css/bootstrap-responsive.css" rel="stylesheet"	>
 	<style>
 		body {
@@ -30,54 +31,7 @@
 			-o-background-size: cover;
 			background-size: cover;  
 		}
-		h1, h2, h3, h4, h5, h6 {font-family: 'Dosis'; font-weight: 600;}
-		
-		/* CUSTOMIZE THE NAVBAR
-		    -------------------------------------------------- */
-
-		    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-		    .navbar-wrapper {
-		      position: absolute;
-		      top: 0;
-		      left: 0;
-		      right: 0;
-		      z-index: 10;
-		      margin-top: 20px;
-		      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-		    }
-		    .navbar-wrapper .navbar {
-
-		    }
-
-		    /* Remove border and change up box shadow for more contrast */
-		    .navbar .navbar-inner {
-		      border: 0;
-		      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-		         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-		              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-		    }
-
-		    /* Downsize the brand/project name a bit */
-		    .navbar .brand {
-		      /* padding: 14px 20px 16px;  Increase vertical padding to match navbar links
-		      font-size: 16px;
-		      font-weight: bold;
-		      text-shadow: 0 -1px 0 rgba(0,0,0,.5); */
-		    }
-
-		    /* Navbar links: increase padding for taller navbar */
-		    .navbar .nav > li > a {
-		      padding: 15px 20px;
-		    }
-		
-		    .navbar-inner {
-			  background-color: #FFF; /* background color will be black for all browsers */
-			}
-
-		    /* Offset the responsive button for proper vertical alignment */
-		    .navbar .btn-navbar {
-		      margin-top: 10px;
-		    }
+		h1, h2, h3, h4, h5, h6 {font-family: 'Roboto';}
 		
 		/* ---------------- FOOTER --------------------- */
 		/* Set the fixed height of the footer here */
@@ -99,75 +53,7 @@
 		        }
 		      }
 		
-		<%if @active_tab_index=="active" %>
-			/* CUSTOMIZE THE CAROUSEL
-			    -------------------------------------------------- */
-
-			    /* Carousel base class */
-			    .carousel {
-			      /* margin-bottom: 60px; */
-			      	-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-				         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-				              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-			    }
-
-			    .carousel .container {
-			      position: relative;
-			      z-index: 9;
-			    }
-
-			    .carousel-control {
-			      /* height: 80px; */
-			      margin-top: 0;
-			      /* font-size: 120px; */
-			      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			      /* background-color: transparent; */
-			      border: 1;
-			      z-index: 10;
-			    }
-
-			    .carousel .item {
-			      height: 400px;
-			    }
-			    .carousel img {
-			      position: absolute;
-			      top: 0;
-			      left: 0;
-			      min-width: 100%;
-			      height: 500px;
-			    }
-
-			    .carousel-caption {
-			      background-color: transparent;
-			      position: static;
-			      max-width: 550px;
-			      padding: 0 20px;
-			      margin-top: 150px;
-				  margin-left: 75px;
-			    }
-			    .carousel-caption h1,
-			    .carousel-caption .lead {
-			      margin: 0;
-			      line-height: 1.25;
-			      color: #fff;
-			      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-			    }
-			    .carousel-caption .btn {
-			      margin-top: 10px;
-			    }
-			
-				.carousel-indicators.middle {
-				    left: 0;
-				    right: 0;
-				    top: auto;
-				    bottom: 15px;
-				    text-align: center;
-				}
-				    .carousel-indicators.middle li {
-				        float: none;
-				        display: inline-block;
-				    }
-			<%end%>
+		
 		
 		
 	</style>
@@ -202,52 +88,6 @@
 </head>
 
 <body>
-	
-	<%if @active_tab_index=="active" %>
-	<!-- Carousel
-	    ================================================== -->
-	    <div id="myCarousel" class="carousel slide">
-	      <div class="carousel-inner">
-	        <div class="item active">
-	          <img src="/img/slider/slide-01.jpg" alt="">
-	          <div class="container">
-	            <div class="carousel-caption">
-	              <h1><%=t("home.slider.organizations.title")%></h1>
-	              <p class="lead"><%=t("home.slider.organizations.caption")%></p>
-	              <a class="btn btn-large btn-primary" href="/<%=session[:locale]%>/categoria/organizaciones"><%=t("general.buttons.see_more")%></a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="item">
-	          <img src="/img/slider/slide-02.jpg" alt="">
-	          <div class="container">
-	            <div class="carousel-caption">
-	              <h1><%=t("home.slider.clients.title")%></h1>
-	              <p class="lead"><%=t("home.slider.clients.caption")%></p>
-		          <a class="btn btn-large btn-primary" href="/<%=session[:locale]%>/categoria/clientes"><%=t("general.buttons.see_more")%></a>
-	            </div>
-	          </div>
-	        </div>
-	        <div class="item">
-	          <img src="/img/slider/slide-03.jpg" alt="">
-	          <div class="container">
-	            <div class="carousel-caption">
-	              <h1><%=t("home.slider.products.title")%></h1>
-	              <p class="lead"><%=t("home.slider.products.caption")%></p>
-				  <a class="btn btn-large btn-primary" href="/<%=session[:locale]%>/categoria/productos"><%=t("general.buttons.see_more")%></a>
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-	      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			<ol class="carousel-indicators middle">
-			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-			    <li data-target="#myCarousel" data-slide-to="1"></li>
-			    <li data-target="#myCarousel" data-slide-to="2"></li>
-			  </ol>
-	    </div><!-- /.carousel -->
-	<%end%>
 
 	<div class="navbar-wrapper">
 	      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
@@ -260,28 +100,16 @@
 	              <span class="icon-bar"></span>
 	              <span class="icon-bar"></span>
 	            </button>
-				<a class="brand" href="/<%=session[:locale]%>/"><img src="/img/logos/logo-kleer.png"/></a>
+				<a class="brand" href="/<%=session[:locale]%>/"><img class="nav-logo" src="/img/logos/K-kleer_horizontal_blanco_web-strip.png"/></a>
 	            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
 	            <div class="nav-collapse collapse">
 	              	<ul class="nav">
-						<li><span style="display:block;padding: 15px 20px;"><em><%=t("menu.we_do_it_for")%></em></span></li>
-						<li class="dropdown <%=@active_tab_acompanamos%>">
-						    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						      <%=t("menu.achieve.root")%>
-						      <b class="caret"></b>
-						    </a>
-						    <ul class="dropdown-menu">
-						      	<li><a href="/<%=session[:locale]%>/categoria/organizaciones"><%=t("menu.achieve.organization")%></a></li>
-								<li><a href="/<%=session[:locale]%>/categoria/productos"><%=t("menu.achieve.products")%></a></li>
-								<li><a href="/<%=session[:locale]%>/categoria/clientes"><%=t("menu.achieve.clients")%></a></li>
-						    </ul>
-						  </li>
-						<li class="<%=@active_tab_entrenamos%>"><a href="/<%=session[:locale]%>/entrenamos"><%=t("menu.training")%></a></li>
+	              		<li class="<%=@active_tab_entrenamos%>"><a href="/<%=session[:locale]%>/entrenamos"><%=t("menu.training")%></a></li>
+	              		<li class="<%=@active_tab_certifications%>"><a href="/<%=session[:locale]%>/certificaciones"><%=t("menu.certifications")%></a></li>
+						<li class="<%=@active_tab_acompanamos%>"><a href="/<%=session[:locale]%>/acompanamos"><%=t("menu.coaching")%></a></li>
 						<li class="<%=@active_tab_comunidad%>"><a href="/<%=session[:locale]%>/comunidad"><%=t("menu.community")%></a></li>
 						<li class="<%=@active_tab_publicamos%>"><a href="/<%=session[:locale]%>/publicamos"><%=t("menu.publishing")%></a></li>
-						<li class=""><a href="http://www.kleer.tv" target="_blank"><%=t("menu.tv")%></a></li>
 						<li class="<%=@active_tab_somos%>"><a href="/<%=session[:locale]%>/somos"><%=t("menu.we_are")%></a></li>
-                        <li class="<%=@active_tab_blog%>"><a href="/<%=session[:locale]%>/blog"><%=t("menu.blog")%></a></li>
 					</ul>
 					
 	            </div><!--/.nav-collapse -->

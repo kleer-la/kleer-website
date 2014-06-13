@@ -1,0 +1,56 @@
+/* CUSTOMIZE THE NAVBAR ------------------------------------------------ */
+
+.navbar-wrapper {
+	background-color: #1c1c1c;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	z-index: 10;
+}
+.navbar-wrapper .navbar { }
+
+.navbar {
+	margin-bottom: 0px;
+	overflow: visible;
+}
+
+.navbar .navbar-inner {
+	border: 0;
+	height: 70px;
+}
+
+.navbar-inner {
+	background-color: #1c1c1c;
+	background-image: none;
+}
+
+.navbar .btn-navbar {
+	background-color: #1c1c1c;
+	background-image: none;	
+}
+
+.navbar .btn-navbar {
+	margin-top: 10px;
+}
+
+.nav-logo {
+	height: 40px;
+}
+
+.navbar .nav {
+	float: right;
+	margin-top: 20px;
+}
+
+.navbar .nav > li > a {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	text-shadow: none;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px 7px;
+}
+
+.navbar .nav > li > a:hover {
+	color: #fff;
+}

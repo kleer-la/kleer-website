@@ -23,17 +23,18 @@ es:
     menu:
         home: "Inicio"
         we_do_it_for: "Lo hacemos para que:"
-        training: "Aprendas"
-        coaching: "Acompañamos"
+        training: "Cursos"
+        coaching: "Acompañamiento"
+        certifications: "Certificaciones"
         achieve: 
             root: "Logres"
             products: "Productos de Calidad"
             organization: "una Organización Asombrosa"
             clients: "Clientes Felices"
-        community: "Participes"
-        publishing: "Leas"
+        community: "Comunidad"
+        publishing: "Publicaciones"
         tv: "Veas"
-        we_are: "Nos Conozcas"
+        we_are: "Nosotros"
         blog: "Blog"
     home:
         slider:
