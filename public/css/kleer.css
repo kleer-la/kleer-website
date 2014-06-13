@@ -1,38 +1,7 @@
 body { padding-top: 70px; }
 
-/* CUSTOMIZE THE NAVBAR ------------------------------------------------ */
-
-.navbar-wrapper {
-	background-color: #1c1c1c;
-  	top: 0;
-  	left: 0;
-  	right: 0;
-  	z-index: 10;
-}
-.navbar-wrapper .navbar { }
-
 .navbar {
-	margin-bottom: 0px;
-	overflow: visible;
-}
-
-.navbar .navbar-inner {
-	border: 0;
-	height: 70px;
-}
-
-.navbar-inner {
 	background-color: #1c1c1c;
-	background-image: none;
-}
-
-.navbar .btn-navbar {
-	background-color: #1c1c1c;
-	background-image: none;	
-}
-
-.navbar .btn-navbar {
-	margin-top: 10px;
 }
 
 .nav-logo {
@@ -42,6 +11,7 @@ body { padding-top: 70px; }
 .navbar .nav {
 	float: right;
 	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .navbar .nav > li > a {
@@ -54,11 +24,71 @@ body { padding-top: 70px; }
 }
 
 .navbar .nav > li > a:hover {
+	color: #1c1c1c;
+}
+
+.navbar-toggle {
+	border-color: #fff;
 	color: #fff;
 }
 
 
-.mosaico-azul {
+.fondo-celeste-mosaico {
 	background-image: url('/img/fondos/unidad-celeste.jpg');
 	background-repeat: repeat;
+}
+
+.fondo-amarillo-mosaico {
+	background-image: url('/img/fondos/unidad-amarillo.jpg');
+	background-repeat: repeat;
+}
+
+.fondo-verde-mosaico {
+	background-image: url('/img/fondos/unidad-verde.jpg');
+	background-repeat: repeat;
+}
+
+.fondo-rosa-mosaico {
+	background-image: url('/img/fondos/unidad-rosa.jpg');
+	background-repeat: repeat;
+}
+
+.fondo-blanco-mosaico {
+	background-image: url('/img/fondos/unidad-blanco.jpg');
+	background-repeat: repeat;
+}
+
+.fondo-amarillo {
+	background-color: #fef290;
+}
+
+.fondo-blanco {
+	background-color: #fff;
+}
+
+.fondo-verde {
+	background-color: #56f7cd;
+}
+
+.fondo-rosa {
+	background-color: #ff7bad;
+}
+
+.fondo-celeste {
+	background-color: #88cddc;
+}
+
+.fondo-gris {
+	background-color: #1c1c1c;
+}
+
+.dos-grados {
+	position:relative;
+	top: -40px;
+	left: -20px;
+	width: 110%;
+	overflow: hidden;
+	-ms-transform: rotate(2deg); /* IE 9 */
+    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+    transform: rotate(2deg);
 }
