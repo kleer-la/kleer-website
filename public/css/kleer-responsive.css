@@ -1,0 +1,14 @@
+@media (max-width: 979px) {
+	.navbar-fixed-top {
+			margin-bottom: 0px;
+	}
+
+	.nav-collapse {
+		background-color: #1c1c1c;
+		background-image: none;
+	}
+
+	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+		color: #fff;
+	}
+}

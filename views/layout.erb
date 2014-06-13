@@ -21,6 +21,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 	<link href="/css/kleer.css" rel="stylesheet">
 	<link href="/css/bootstrap-responsive.css" rel="stylesheet"	>
+	<link href="/css/kleer-responsive.css" rel="stylesheet">
 	<style>
 		body {
 			<%if @active_tab_index!="active" %>
@@ -89,7 +90,7 @@
 
 <body>
 
-	<div class="navbar-wrapper">
+	<div class="navbar-wrapper navbar-fixed-top">
 	      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
 	      <div class="container">
 	        <div class="navbar">
@@ -119,10 +120,6 @@
 	      </div> <!-- /.container -->
 	    </div><!-- /.navbar-wrapper -->
 
-	<div class="container">
-		
-		
-		
 		<% if flash.now[:error] %>
 		<div class="row">
 			<div class="alert alert-error">
@@ -131,10 +128,8 @@
 			</div>
 		</div>
 		<% end %>
- 		&nbsp;
 		<%= yield %>
 
-	</div> <!-- /container -->
 	&nbsp;
 	<div id="footer">
 	      <div class="container" style="color:rgba(255,255,255,0.9)">

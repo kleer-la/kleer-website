@@ -1,3 +1,5 @@
+body { padding-top: 70px; }
+
 /* CUSTOMIZE THE NAVBAR ------------------------------------------------ */
 
 .navbar-wrapper {
@@ -53,4 +55,10 @@
 
 .navbar .nav > li > a:hover {
 	color: #fff;
+}
+
+
+.mosaico-azul {
+	background-image: url('/img/fondos/unidad-celeste.jpg');
+	background-repeat: repeat;
 }
