@@ -62,6 +62,13 @@ body { padding-top: 70px; }
 	background-color: #fef290;
 }
 
+.fondo-amarillo-top {
+	position:relative;
+	top:-30px;
+	left:-30px;
+	background-image: url('/img/diagonales/top-amarilla.png');
+}
+
 .fondo-blanco {
 	background-color: #fff;
 }
@@ -82,13 +89,6 @@ body { padding-top: 70px; }
 	background-color: #1c1c1c;
 }
 
-.dos-grados {
-	position:relative;
-	top: -40px;
-	left: -20px;
-	width: 110%;
-	overflow: hidden;
-	-ms-transform: rotate(2deg); /* IE 9 */
-    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
-    transform: rotate(2deg);
+.creemos {
+	padding-top: 50px;
 }

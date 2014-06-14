@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 require 'libxml'
 require 'date'
 require File.join(File.dirname(__FILE__),'/keventer_event')
@@ -83,27 +85,32 @@ class KeventerReader
   end
   
   def categories
-    parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
-    doc = parser.parse
-    loaded_categories = doc.find('/categories/category')
-    
-    categories = Array.new
-    
-    loaded_categories.each do |loaded_category|
-      category = Category.new
+    begin
+      parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
+      doc = parser.parse
+      loaded_categories = doc.find('/categories/category')
       
-      category.name = loaded_category.find_first('name').content
-      category.codename = loaded_category.find_first('codename').content
-      category.tagline = loaded_category.find_first('tagline').content
-      category.description = loaded_category.find_first('description').content
-      category.order = loaded_category.find_first('order').content.to_i
+      categories = Array.new
       
-      category.event_types = load_event_types loaded_category
+      loaded_categories.each do |loaded_category|
+        category = Category.new
+        
+        category.name = loaded_category.find_first('name').content
+        category.codename = loaded_category.find_first('codename').content
+        category.tagline = loaded_category.find_first('tagline').content
+        category.description = loaded_category.find_first('description').content
+        category.order = loaded_category.find_first('order').content.to_i
+        
+        category.event_types = load_event_types loaded_category
 
-      categories << category
+        categories << category
+      end
+      
+      categories.sort!{|p1,p2| p1.order <=> p2.order}
+    rescue => err 
+      puts "Error al cargar las categorías: #{err}"
+      categories = Array.new
     end
-    
-    categories.sort!{|p1,p2| p1.order <=> p2.order}
     
     categories
   end
