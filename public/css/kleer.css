@@ -32,6 +32,10 @@ body { padding-top: 70px; }
 	color: #fff;
 }
 
+#index-creemos {
+	background-image: url('/img/fondos/unidad-celeste.jpg');
+	background-repeat: repeat;
+}
 
 .fondo-celeste-mosaico {
 	background-image: url('/img/fondos/unidad-celeste.jpg');
@@ -65,8 +69,8 @@ body { padding-top: 70px; }
 .fondo-amarillo-top {
 	position:relative;
 	top:-30px;
-	left:-30px;
 	background-image: url('/img/diagonales/top-amarilla.png');
+	margin-bottom: -30px;
 }
 
 .fondo-blanco {
