@@ -1,4 +1,24 @@
-body { padding-top: 70px; }
+body { 
+	padding-top: 70px; 
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
+}
+
+h1 { 
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 36pt;
+	color: #000;
+}
+
+h2 { 
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24pt;
+	color: #000;
+}
 
 .navbar {
 	background-color: #1c1c1c;
@@ -95,4 +115,22 @@ body { padding-top: 70px; }
 
 .creemos {
 	padding-top: 50px;
+}
+
+.agenda {
+	background-image: url('/img/fondos/agenda-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+
+.klabel-date {
+	background-color: #fef290;
+	width: 40px;
+	font-weight: bold;
+	transform:rotate(5deg);
+	-ms-transform:rotate(5deg); /* IE 9 */
+	-webkit-transform:rotate(5deg); /* Opera, Chrome, and Safari */
+	margin-left: 5px;
+	box-shadow:5px 5px #a4a4a4;
 }

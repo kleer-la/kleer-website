@@ -20,13 +20,13 @@ class DTHelper
       end
     end
     
-    "{ \"aaData\": " + result.to_json + "}"
+    "{ \"data\": " + result.to_json + "}"
   end
   
   def self.event_result_json(event, remote = true, event_details_path = "entrenamos", i18n, locale)
     result = Array.new
     
-    result << "<span class=\"label label-info\">" + event.date.strftime("%d") + "<br><span class=\"lead\">" + MONTHS_ES[event.date.strftime("%b")] + "</span></span>"
+    result << "<div class=\"klabel-date\">" + event.date.strftime("%d") + "<br>" + MONTHS_ES[event.date.strftime("%b")] + "</div>"
     line = "<a "
     if remote 
       line += "data-toggle=\"modal\" data-target=\"#myModal\" "
