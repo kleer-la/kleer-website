@@ -9,6 +9,9 @@ require 'rspec/expectations'
 require 'cucumber/rspec/doubles'
 require 'rack/test'
 require 'webrat'
+require 'simplecov'
+
+SimpleCov.start
 
 Webrat.configure do |config|
 	config.mode = :rack

@@ -1,6 +1,30 @@
 # encoding: utf-8
 require File.join(File.dirname(__FILE__),'../lib/keventer_reader')
 require 'date'
+require 'spec_helper'
+
+describe "to_boolean" do
+  it "Should convert string to true" do
+    to_boolean("true").should be true
+    to_boolean("True").should be true
+    to_boolean("t").should be true
+    to_boolean("yes").should be true
+    to_boolean("y").should be true
+    to_boolean("1").should be true
+  end
+  it "Should convert string to false" do
+    to_boolean("false").should be false
+    to_boolean("f").should be false
+    to_boolean("no").should be false
+    to_boolean("n").should be false
+    to_boolean("").should be false
+    to_boolean("0").should be false
+    to_boolean(nil).should be false
+  end
+  it "should raise ArgumentError for arguments that are not boolean" do
+    expect{ to_boolean("pepe") }.to raise_error(ArgumentError)
+  end
+end
 
 describe KeventerReader do
   
@@ -29,7 +53,52 @@ describe KeventerReader do
     @kevr.events.count.should >= 0
   end
   
-  context "When loading the teasting XML source with 16 events" do
+  it "hola" do
+    parser =  LibXML::XML::Parser.string( %Q{<?xml version="1.0" encoding="UTF-8"?>
+  <event>
+  <start-time type="datetime">2000-01-01T09:00:00Z</start-time>
+  <end-time type="datetime">2000-01-01T18:00:00Z</end-time>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">16</capacity>
+    <city>Buenos Aires</city>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
+    <date type="date">2013-01-09</date>
+    <draft type="boolean">false</draft>
+    <eb-end-date type="date" nil="true"/>
+    <eb-price type="decimal">750.0</eb-price>
+    <event-type-id type="integer">13</event-type-id>
+    <id type="integer">44</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <specific-conditions>Unas condiciones propias del evento</specific-conditions>
+  <is-webinar type="boolean">false</is-webinar>
+  <sepyme-enabled type="boolean" nil="true"/>
+    <list-price type="decimal">890.0</list-price>
+  <currency-iso-code>ARS</currency-iso-code>
+    <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
+    <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
+    <list-price-plus-tax type="boolean">true</list-price-plus-tax>
+    <place>Kleer, Tucumán 373 1er Piso</place>
+  <address>Tucuman 373 Piso 1</address>
+    <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
+    <trainer-id type="integer">4</trainer-id>
+    <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
+    <visibility-type>pu</visibility-type>
+    <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+  </event>
+}
+      )
+    ev = event_from_parsed_xml(parser.parse)
+    ev.eb_end_date.should be_nil
+  end
+
+  context "When loading the testing XML source with 16 events" do
     
     before(:each) do
       @connector = double("KeventerConnector")
