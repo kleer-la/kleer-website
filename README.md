@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/kleer-la/kleer-website.png?branch=master)](https://travis-ci.org/kleer-la/kleer-website)
-[![Coverage Status](https://img.shields.io/coveralls/kleer-la/kleer-website.svg)](https://coveralls.io/r/kleer-la/kleer-website?branch=handle_missing_eb_date)
+[![Coverage Status](https://img.shields.io/coveralls/kleer-la/kleer-website.svg)](https://coveralls.io/r/kleer-la/kleer-website?branch=develop)
 
 Website
 =======
