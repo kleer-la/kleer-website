@@ -6,6 +6,53 @@ require File.join(File.dirname(__FILE__),'/country')
 require File.join(File.dirname(__FILE__),'/keventer_connector')
 require File.join(File.dirname(__FILE__),'/professional')
 require File.join(File.dirname(__FILE__),'/category')
+
+def to_boolean(string)
+  return true if string== true || string =~ (/(true|t|yes|y|1)$/i)
+  return false if string== false || string.nil? || string == "" || string =~ (/(false|f|no|n|0)$/i)
+  raise ArgumentError.new("invalid value for Boolean: \"#{string}\"")
+end
+
+def get_from_xml(xml, field)
+  xml.find_first(field).content
+end
+
+def event_from_parsed_xml(xml_keventer_event)
+    event = KeventerEvent.new
+
+    event.id        = get_from_xml(xml_keventer_event,'id').to_i
+    event.date      = Date.parse(get_from_xml(xml_keventer_event,'date'))
+    event.start_time = DateTime.parse(get_from_xml(xml_keventer_event, 'start-time'))
+    event.end_time  = DateTime.parse(get_from_xml(xml_keventer_event, 'end-time'))
+    event.capacity  = get_from_xml(xml_keventer_event, 'capacity').to_i
+    event.city      = get_from_xml(xml_keventer_event, 'city')
+    event.place     = get_from_xml(xml_keventer_event, 'place')
+    event.address   = get_from_xml(xml_keventer_event, 'address')
+    event.registration_link = get_from_xml(xml_keventer_event, 'registration-link')
+    event.specific_conditions = get_from_xml(xml_keventer_event, 'specific-conditions')
+    event.is_sold_out = to_boolean(get_from_xml(xml_keventer_event, 'is-sold-out'))
+    event.is_webinar = to_boolean(get_from_xml(xml_keventer_event, 'is-webinar'))
+    event.sepyme_enabled = to_boolean( get_from_xml(xml_keventer_event,'sepyme-enabled') )
+    event.is_community_event = get_from_xml(xml_keventer_event,'visibility-type') == 'co'
+    event.country = get_from_xml(xml_keventer_event,'country/name')
+    event.country_code = get_from_xml(xml_keventer_event, 'country/iso-code')
+    lp = get_from_xml(xml_keventer_event, 'list-price')
+    event.list_price = lp.nil? ? 0.0 : lp.to_f
+    ebp = get_from_xml(xml_keventer_event, 'eb-price')
+    event.eb_price = ebp.nil? ? 0.0 : ebp.to_f
+    if event.eb_price > 0.0
+      begin
+        ebed = get_from_xml(xml_keventer_event, 'eb-end-date')
+        event.eb_end_date = ebed.nil? ? nil : Date.parse( ebed )
+      rescue
+        event.eb_end_date = nil
+      end
+    end
+    event.currency_iso_code = get_from_xml(xml_keventer_event, 'currency-iso-code')
+  event
+end
+
+
 class KeventerReader
   
   attr_accessor :connector
@@ -248,42 +295,9 @@ class KeventerReader
     public_editions
     
   end
-
-  def to_boolean(string)
-    return true if string== true || string =~ (/(true|t|yes|y|1)$/i)
-    return false if string== false || string.nil? || string =~ (/(false|f|no|n||0)$/i)
-    raise ArgumentError.new("invalid value for Boolean: \"#{string}\"")
-  end
   
   def create_event(xml_keventer_event)
-    event = KeventerEvent.new
-    
-    event.id = xml_keventer_event.find_first('id').content.to_i
-    event.date = Date.parse( xml_keventer_event.find_first('date').content )
-    event.start_time = DateTime.parse( xml_keventer_event.find_first('start-time').content )
-    event.end_time = DateTime.parse( xml_keventer_event.find_first('end-time').content )
-    event.capacity = xml_keventer_event.find_first('capacity').content.to_i
-    event.city = xml_keventer_event.find_first('city').content
-    event.place = xml_keventer_event.find_first('place').content
-    event.address = xml_keventer_event.find_first('address').content
-    event.registration_link = xml_keventer_event.find_first('registration-link').content
-    event.specific_conditions = xml_keventer_event.find_first('specific-conditions').content
-    event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
-    event.is_webinar = to_boolean( xml_keventer_event.find_first('is-webinar').content )
-    if xml_keventer_event.find_first('sepyme-enabled').content == ""
-      event.sepyme_enabled = false
-    else
-      event.sepyme_enabled = to_boolean( xml_keventer_event.find_first('sepyme-enabled').content )
-    end
-    event.is_community_event = xml_keventer_event.find_first('visibility-type').content == 'co'
-    event.country = xml_keventer_event.find_first('country/name').content
-    event.country_code = xml_keventer_event.find_first('country/iso-code').content
-    event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
-    event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
-    if event.eb_price > 0.0  
-      event.eb_end_date = xml_keventer_event.find_first('eb-end-date').content.nil? ? nil : Date.parse( xml_keventer_event.find_first('eb-end-date').content )
-    end
-    event.currency_iso_code = xml_keventer_event.find_first('currency-iso-code').content
+    event = event_from_parsed_xml(xml_keventer_event)
     
     trainer = Professional.new
     
