@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require File.join(File.dirname(__FILE__),'../lib/twitter_reader')
+require 'spec_helper'
 
 describe TwitterReader do
   

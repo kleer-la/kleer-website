@@ -4,6 +4,7 @@ require File.join(File.dirname(__FILE__),'../lib/keventer_event')
 require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
 require 'date'
 require 'i18n'
+require 'spec_helper'
 
 describe DTHelper do
   

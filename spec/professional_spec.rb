@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'libxml'
+require 'spec_helper'
 require File.join(File.dirname(__FILE__),'../lib/professional')
 
 describe Professional do
