@@ -13,6 +13,46 @@ def to_boolean(string)
   raise ArgumentError.new("invalid value for Boolean: \"#{string}\"")
 end
 
+def get_from_xml(xml, field)
+  xml.find_first(field).content
+end
+
+def event_from_parsed_xml(xml_keventer_event)
+    event = KeventerEvent.new
+
+    event.id        = get_from_xml(xml_keventer_event,'id').to_i
+    event.date      = Date.parse(get_from_xml(xml_keventer_event,'date'))
+    event.start_time = DateTime.parse(get_from_xml(xml_keventer_event, 'start-time'))
+    event.end_time  = DateTime.parse(get_from_xml(xml_keventer_event, 'end-time'))
+    event.capacity  = get_from_xml(xml_keventer_event, 'capacity').to_i
+    event.city      = get_from_xml(xml_keventer_event, 'city')
+    event.place     = get_from_xml(xml_keventer_event, 'place')
+    event.address   = get_from_xml(xml_keventer_event, 'address')
+    event.registration_link = get_from_xml(xml_keventer_event, 'registration-link')
+    event.specific_conditions = get_from_xml(xml_keventer_event, 'specific-conditions')
+    event.is_sold_out = to_boolean(get_from_xml(xml_keventer_event, 'is-sold-out'))
+    event.is_webinar = to_boolean(get_from_xml(xml_keventer_event, 'is-webinar'))
+    event.sepyme_enabled = to_boolean( get_from_xml(xml_keventer_event,'sepyme-enabled') )
+    event.is_community_event = get_from_xml(xml_keventer_event,'visibility-type') == 'co'
+    event.country = get_from_xml(xml_keventer_event,'country/name')
+    event.country_code = get_from_xml(xml_keventer_event, 'country/iso-code')
+    lp = get_from_xml(xml_keventer_event, 'list-price')
+    event.list_price = lp.nil? ? 0.0 : lp.to_f
+    ebp = get_from_xml(xml_keventer_event, 'eb-price')
+    event.eb_price = ebp.nil? ? 0.0 : ebp.to_f
+    if event.eb_price > 0.0
+      begin
+        ebed = get_from_xml(xml_keventer_event, 'eb-end-date')
+        event.eb_end_date = ebed.nil? ? nil : Date.parse( ebed )
+      rescue
+        event.eb_end_date = nil
+      end
+    end
+    event.currency_iso_code = get_from_xml(xml_keventer_event, 'currency-iso-code')
+  event
+end
+
+
 class KeventerReader
   
   attr_accessor :connector
@@ -256,43 +296,8 @@ class KeventerReader
     
   end
   
-  def get_from_xml(xml, field)
-    xml.find_first(field).content
-  end
-
   def create_event(xml_keventer_event)
-    event = KeventerEvent.new
-
-    event.id        = get_from_xml(xml_keventer_event,'id').to_i
-    event.date      = Date.parse(get_from_xml(xml_keventer_event,'date'))
-    event.start_time = DateTime.parse(get_from_xml(xml_keventer_event, 'start-time'))
-    event.end_time  = DateTime.parse(get_from_xml(xml_keventer_event, 'end-time'))
-    event.capacity  = get_from_xml(xml_keventer_event, 'capacity').to_i
-    event.city      = get_from_xml(xml_keventer_event, 'city')
-    event.place     = get_from_xml(xml_keventer_event, 'place')
-    event.address   = get_from_xml(xml_keventer_event, 'address')
-    event.registration_link = get_from_xml(xml_keventer_event, 'registration-link')
-    event.specific_conditions = get_from_xml(xml_keventer_event, 'specific-conditions')
-    event.is_sold_out = to_boolean(get_from_xml(xml_keventer_event, 'is-sold-out'))
-    event.is_webinar = to_boolean(get_from_xml(xml_keventer_event, 'is-webinar'))
-    event.sepyme_enabled = to_boolean( get_from_xml(xml_keventer_event,'sepyme-enabled') )
-    event.is_community_event = get_from_xml(xml_keventer_event,'visibility-type') == 'co'
-    event.country = get_from_xml(xml_keventer_event,'country/name')
-    event.country_code = get_from_xml(xml_keventer_event, 'country/iso-code')
-    lp = get_from_xml(xml_keventer_event, 'list-price')
-    event.list_price = lp.nil? ? 0.0 : lp.to_f
-    ebp = get_from_xml(xml_keventer_event, 'eb-price')
-    event.eb_price = ebp.nil? ? 0.0 : ebp.to_f
-    if event.eb_price > 0.0
-      begin
-        ebed = get_from_xml(xml_keventer_event, 'eb-end-date')
-        event.eb_end_date = ebed.nil? ? nil : Date.parse( ebed )
-      rescue
-        puts xml_keventer_event.find_first('eb-end-date').content.nil?
-        puts xml_keventer_event
-      end
-    end
-    event.currency_iso_code = get_from_xml(xml_keventer_event, 'currency-iso-code')
+    event = event_from_parsed_xml(xml_keventer_event)
     
     trainer = Professional.new
     
