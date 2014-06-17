@@ -1,5 +1,8 @@
 #encoding: utf-8
 
+require 'coveralls'
+Coveralls.wear!
+
 # Sinatra
 require File.join(File.dirname(__FILE__), *%w[.. .. app])
 # Force the application name because polyglot breaks the auto-detection logic.
