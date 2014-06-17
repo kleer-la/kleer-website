@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
+require 'spec_helper'
 
 describe KeventerEventType do
   
