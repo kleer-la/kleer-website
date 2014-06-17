@@ -7,13 +7,13 @@ class DTHelper
   MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
                 "Jul" => "Jul", "Aug" => "Ago", "Sep" => "Sep", "Oct" => "Oct", "Nov" => "Nov", "Dec" => "Dic"}
   
-  def self.to_dt_event_array_json(events, remote = true, event_details_path = "entrenamos", i18n = I18n, locale = "es", amount = nil)
+  def self.to_dt_event_array_json(events, remote = true, event_details_path = "entrenamos", i18n = I18n, locale = "es", amount = nil, registration_btn = true)
     result = Array.new
     
     printed = 0
     
     events.each do |event|
-      result << DTHelper::event_result_json(event, remote, event_details_path, i18n, locale)
+      result << DTHelper::event_result_json(event, remote, event_details_path, i18n, locale, registration_btn)
       printed += 1
       if !amount.nil? && printed==amount
         break
@@ -23,7 +23,7 @@ class DTHelper
     "{ \"data\": " + result.to_json + "}"
   end
   
-  def self.event_result_json(event, remote = true, event_details_path = "entrenamos", i18n, locale)
+  def self.event_result_json(event, remote = true, event_details_path = "entrenamos", i18n, locale, registration_btn)
     result = Array.new
     
     result << "<div class=\"klabel-date\">" + event.date.strftime("%d") + "<br>" + MONTHS_ES[event.date.strftime("%b")] + "</div>"
@@ -38,10 +38,12 @@ class DTHelper
     line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country
     result << line
     
-    if event.is_sold_out
-      result << DTHelper::event_sold_out_link(i18n, locale)
-    else
-      result << DTHelper::event_link(event, i18n, locale)
+    if registration_btn
+      if event.is_sold_out
+        result << DTHelper::event_sold_out_link(i18n, locale)
+     else
+        result << DTHelper::event_link(event, i18n, locale)
+      end
     end
     
     result
@@ -74,9 +76,9 @@ class DTHelper
       button_text = i18n.t("general.buttons.i_am_interested", :locale => locale)
     end
     if event.registration_link != ""
-      "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success\">#{button_text}</a>"
+      "<a href=\""+event.registration_link+"\" target=\"_blank\" class=\"btn btn-success btn-kleer\">#{button_text}</a>"
     else
-      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/"+locale+"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-success\">#{button_text}</a>"
+      "<a data-toggle=\"modal\" data-target=\"#myModalRegistration\" href=\"/"+locale+"/entrenamos/evento/"+event.id.to_s+"/registration\" class=\"btn btn-info btn-kleer\">#{button_text}</a>"
     end
   end
   

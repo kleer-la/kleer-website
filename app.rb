@@ -304,7 +304,7 @@ get '/entrenamos/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount, false)
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do

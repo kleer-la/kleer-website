@@ -2,9 +2,9 @@
 
 Feature: Twitter box
 
-	Scenario: Home Page Twitter
-		Given I visit the home page
-		Then I should see the Kleer Twitter Box
+#	Scenario: Home Page Twitter
+#		Given I visit the home page
+#		Then I should see the Kleer Twitter Box
 	
 	Scenario: Entrenamos Twitter
 		Given I visit the "entrenamos" page

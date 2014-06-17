@@ -1,3 +1,7 @@
+.debug {
+	border: solid 1px red;
+}
+
 body { 
 	padding-top: 70px; 
 	font-family: 'Roboto', sans-serif;
@@ -117,6 +121,10 @@ h2 {
 	padding-top: 50px;
 }
 
+.creemos-center {
+	text-align: right;
+}
+
 .agenda {
 	background-image: url('/img/fondos/agenda-bg.png');
 	background-repeat: no-repeat;
@@ -133,4 +141,14 @@ h2 {
 	-webkit-transform:rotate(5deg); /* Opera, Chrome, and Safari */
 	margin-left: 5px;
 	box-shadow:5px 5px #a4a4a4;
+}
+
+.btn-kleer {
+	box-shadow:5px 5px #a4a4a4;	
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+	border-radius: 0px;
+	color: #000;
+	font-weight: bold;
 }
