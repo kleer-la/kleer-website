@@ -1,14 +1,103 @@
-@media (max-width: 979px) {
-	.navbar-fixed-top {
-			margin-bottom: 0px;
+@media (max-width: 1200px) {
+	.slide-home-cursos {
+		height:580px;
+	}
+	.slide-home-comunidad {
+		height:600px;
+	}
+	.img-comunidad-gratuitas {
+		height: 600px;
 	}
 
-	.nav-collapse {
-		background-color: #1c1c1c;
-		background-image: none;
+	.slide-home-newsletter {
+		height:300px;
 	}
 
-	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
-		color: #fff;
+	.suscripcion {
+		background-position: -50px -100px;
 	}
+
+	.suscripcion-inner {
+		font-size: 24pt;
+		margin-left: 40px;
+	}
+}
+
+@media (max-width: 992px) {
+
+	.slide-home-cursos {
+		height:850px;
+	}
+
+	.slide-home-comunidad {
+		height:1150px;
+	}
+
+	.agenda {
+		padding-top: 10px;
+	}
+
+	.img-comunidad-gratuitas {
+		position: absolute;
+		height: 900px;
+		clip: rect(0px,700px,550px,0px);
+	}
+
+	.comunidad {
+		padding-top: 10px;
+		margin-top: 450px;
+	}
+
+	.contactanos {
+		padding-top: 10px;
+	}
+
+	.slide-home-contactanos {
+		height:450px;
+	}
+
+	.slide-home-somos {
+		height:1050px;
+	}
+
+	.img-equipo-kleer {
+		position: absolute;
+		height: 500px;
+		clip: rect(0px,400px,400px,0px);
+	}
+
+	.carousel-somos {
+		margin-top: 350px;
+	}
+
+	.suscripcion {
+		background-position: -80px -100px;
+		background-size: 120% 100%;
+	}
+
+	.suscripcion-inner {
+		padding-left: 50px;
+		text-align: left;
+		font-size: 20pt;
+	}
+
+	.btn-suscription {
+		font-size: 12pt;
+		right: -200px;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.img-comunidad-gratuitas {
+		position: absolute;
+		height: 400px;
+		clip: rect(0px,400px,250px,0px);
+	}
+
+	.comunidad {
+		margin-top: 200px;
+	}
+
 }

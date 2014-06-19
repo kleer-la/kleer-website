@@ -28,6 +28,10 @@ class KeventerReader
   def coming_commercial_events(from = Date.today, months = 2)
     coming_events(@connector.events_xml_url, from , months )
   end
+
+  def coming_community_events(from = Date.today, months = 2)
+    coming_events(@connector.community_events_xml_url, from , months )
+  end
   
   def commercial_events_by_country(country_iso_code)
     events_by_country( @connector.events_xml_url, country_iso_code )
@@ -267,6 +271,7 @@ class KeventerReader
     
     event.id = xml_keventer_event.find_first('id').content.to_i
     event.date = Date.parse( xml_keventer_event.find_first('date').content )
+    event.human_date = xml_keventer_event.find_first('human-date').content
     event.start_time = DateTime.parse( xml_keventer_event.find_first('start-time').content )
     event.end_time = DateTime.parse( xml_keventer_event.find_first('end-time').content )
     event.capacity = xml_keventer_event.find_first('capacity').content.to_i

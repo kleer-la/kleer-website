@@ -105,12 +105,28 @@ h2 {
 	background-color: #56f7cd;
 }
 
+.fondo-verde-top-derecha {
+	position:relative;
+	top:-70px;
+	background-image: url('/img/diagonales/top-verde-derecha.png');
+	margin-bottom: -70px;
+	height: 70px;
+}
+
 .fondo-rosa {
 	background-color: #ff7bad;
 }
 
 .fondo-celeste {
 	background-color: #88cddc;
+}
+
+.fondo-celeste-top-izquierda {
+	position:relative;
+	top:-70px;
+	background-image: url('/img/diagonales/top-celeste-izquierda.png');
+	margin-bottom: -70px;
+	height: 70px;
 }
 
 .fondo-gris {
@@ -130,6 +146,36 @@ h2 {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	text-align: center;
+	font-size: 11pt;
+}
+
+.comunidad {
+	background-image: url('/img/fondos/comunidad-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	font-size: 11pt;
+}
+
+.contactanos {
+	background-image: url('/img/fondos/comunidad-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	padding-right: 40px;
+}
+
+.agenda > table > tr > td {
+	text-align: left;
+}
+
+.dataTable {
+	text-align: left;
+}
+
+.no-hpadding {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .klabel-date {
@@ -141,6 +187,7 @@ h2 {
 	-webkit-transform:rotate(5deg); /* Opera, Chrome, and Safari */
 	margin-left: 5px;
 	box-shadow:5px 5px #a4a4a4;
+	text-align: center;
 }
 
 .btn-kleer {
@@ -150,5 +197,158 @@ h2 {
 	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
 	border-radius: 0px;
 	color: #000;
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+}
+
+.slide-home-cursos {
+	overflow:hidden;
+	height:550px;
+}
+
+.slide-home-comunidad {
+	overflow:hidden;
+	height:650px;
+}
+
+.slide-home-publicaciones {
+	padding-top: 0;
+}
+
+.container-home-publicaciones {
+	padding-top: 0;
+	text-align: center;
+}
+
+.publicaciones-title {
+	margin-top: 0;
+}
+
+.book-description {
+	min-height: 230px;
+}
+
+.slide-home-comunidad-logos-ch {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.img-comunidad-gratuitas {
+	height: 750px;
+}
+
+.slide-home-somos {
+	overflow:hidden;
+	height:650px;
+}
+
+.slide-home-contactanos {
+	overflow:hidden;
+	height:400px;
+}
+
+.slide-home-newsletter {
+	overflow:hidden;
+	height:400px;
+}
+
+.img-equipo-kleer {
+	height: 750px;	
+}
+
+.carousel-somos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #fff;
+	font-size: 11pt;
+	box-shadow: 10px 10px #a44f70;
+	transform:rotate(3deg);
+	-ms-transform:rotate(3deg); /* IE 9 */
+	-webkit-transform:rotate(3deg); /* Opera, Chrome, and Safari */
+}
+
+.carousel-control {
+	color: #1c1c1c;
+	top: 50%;
+	box-shadow:5px 5px #a4a4a4;	
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+	border-radius: 0px;
+	color: #000;
+	font-weight: bold;
+	background-color: #56f7cd;
+	width: 30px;
+	height: 30px;
+}
+
+.carousel-control:hover {
+	color: #000;
+}
+
+.carousel-control.left {
+	background-image: none;
+	margin-left: 10px; 
+}
+
+.carousel-control.right {
+	background-image: none;
+	margin-right: 10px;
+}
+
+.somos-bio > blockquote {
+	font-style: italic;
+	font-size: 11pt;
+}
+
+.suscripcion {
+	height: 700px;
+	background-image: url('/img/vinetas/negra_08_web.png');
+	background-position: -100px -100px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.suscripcion-inner {
+	font-family: 'Chewy', cursive;
+	color: #fff;
+	font-size: 30pt;
+	text-align: center;
+	margin-top: 100px;
+	margin-left: 25px;
+}
+
+.suscription-textbox {
+	color: #88cddc;
+}
+
+.btn-suscription {
+	background-color: #fef290;
+	border-color: #fef290;
+	font-size: 18pt;
+	position: relative;
+	top: -30px;
+	right: -150px;
+}
+
+.contactanos {
+	text-align: center;
+}
+
+.contactanos-side {
+	text-align: center;
+}
+
+.nav-tabs {
+	font-size: 12px;
+}
+
+.contactanos-tab-content {
+	background-color: #dddddd;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	font-weight: bold;
 }

@@ -77,6 +77,7 @@ end
 get '/' do
 	@active_tab_index = "active"
 	@categories = @@keventer_reader.categories
+  @kleerers = @@keventer_reader.kleerers
 	erb :index
 end
 
@@ -314,6 +315,15 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
     country_iso_code = "todos"
   end
   DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
+end
+
+get '/comunidad/eventos/proximos/:amount' do
+  content_type :json
+  amount = params[:amount]
+  if !amount.nil?
+    amount = amount.to_i
+  end
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_community_events(), true, "comunidad", I18n, session[:locale], amount, false)
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
