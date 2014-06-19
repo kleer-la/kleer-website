@@ -90,6 +90,14 @@
 
 @media (max-width: 768px) {
 
+	.navbar {
+		height: 70px; 
+	}
+
+	.navbar-collapse {
+		background-color: #1c1c1c;
+	}
+
 	.img-comunidad-gratuitas {
 		position: absolute;
 		height: 400px;
