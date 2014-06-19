@@ -271,7 +271,7 @@ class KeventerReader
     
     event.id = xml_keventer_event.find_first('id').content.to_i
     event.date = Date.parse( xml_keventer_event.find_first('date').content )
-    event.human_date = xml_keventer_event.find_first('human-date').content
+    # event.human_date = xml_keventer_event.find_first('human-date').content
     event.start_time = DateTime.parse( xml_keventer_event.find_first('start-time').content )
     event.end_time = DateTime.parse( xml_keventer_event.find_first('end-time').content )
     event.capacity = xml_keventer_event.find_first('capacity').content.to_i
