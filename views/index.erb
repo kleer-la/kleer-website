@@ -280,14 +280,39 @@
 			<div class="container suscripcion">
 				<div class="col-md-7 suscripcion-inner">
 					Se el primero en enterarte<br/>de todas las novedades del mundo ágil
-					<form>
 						<input type="text" class="suscription-textbox" placeholder="tu@email.com"/><br/>
-						<input type="button" class="btn btn-warning btn-kleer btn-suscription" value="SUSCRÍBETE"/>
-					</form>
+						<input type="button" class="btn btn-warning btn-kleer btn-suscription" value="SUSCRÍBETE" data-toggle="modal" data-target=".suscription-modal"/>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="modal fade suscription-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header fondo-verde">
+        <button type="button" class="close suscription-modal-title" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h2 class="modal-title" id="myModalLabel">SUSCRIPCIÓN</h2>
+      </div>
+      <div class="modal-body suscripcion-modal-inner fondo-verde-mosaico">
+        <form>
+			<input type="text" name="email" class="suscription-textbox" placeholder="tu@email.com" id="suscriptionModalEmail"/>
+			<br/>
+			<input type="text" name="fname" class="suscription-textbox" placeholder="Nombre"/>
+			<br/>
+			<input type="text" name="lname" class="suscription-textbox" placeholder="Apellido"/>
+			<br/>
+			<input type="text" name="zi" class="suscription-textbox" placeholder="Zona de Influencia"/>
+			<br/>
+		</form>
+      </div>
+      <div class="modal-footer fondo-verde suscripcion-modal-footer">
+        <button type="button" class="btn btn-default btn-kleer" data-dismiss="modal">CANCELAR</button>
+        <button type="button" class="btn btn-warning btn-kleer btn-suscription-popup">SUSCRÍBETE</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container-fluid fondo-verde-top-derecha">&nbsp;</div>
@@ -393,5 +418,11 @@
   	$('.item').eq(Math.floor((Math.random() * $('.item').length))).addClass("active");
     $('.carousel').carousel();
     $('#contactanos-tabs').tab();
+    $('.suscription-textbox').on( 'click', function(){ 
+    	$('.btn-suscription').click() 
+    });
+    $('.suscription-modal').on('shown.bs.modal', function (e) { 
+    	$('#suscriptionModalEmail').focus() 
+    });
   });
 </script>

@@ -322,6 +322,24 @@ h2 {
 	color: #1c1c1c;
 }
 
+.suscription-modal-header {
+	background-color: #1c1c1c;
+}
+
+.suscription-modal-title {
+	color: #fff;
+}
+
+.suscripcion-modal-inner {
+	font-family: 'Chewy', cursive;
+	font-size: 30pt;
+	text-align: center;
+}
+
+.suscripcion-modal-footer {
+	margin-top: 0;
+}
+
 .btn-suscription {
 	background-color: #fef290;
 	border-color: #fef290;
@@ -329,6 +347,12 @@ h2 {
 	position: relative;
 	top: -30px;
 	right: -150px;
+}
+
+.btn-suscription-popup {
+	background-color: #fef290;
+	border-color: #fef290;
+	font-size: 18pt;
 }
 
 .contactanos {
