@@ -62,22 +62,27 @@ class KeventerReader
   end
   
   def kleerers
-    parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
-    doc = parser.parse
-    loaded_kleerers = doc.find('/trainers/trainer')
-    
     kleerers = Array.new
-    
-    loaded_kleerers.each do |loaded_kleerer|
-      kleerer = Professional.new
+
+    begin
+      parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
+      doc = parser.parse
+      loaded_kleerers = doc.find('/trainers/trainer')
       
-      kleerer.name = loaded_kleerer.find_first('name').content
-      kleerer.bio = loaded_kleerer.find_first('bio').content
-      kleerer.linkedin_url = loaded_kleerer.find_first('linkedin-url').content
-      kleerer.gravatar_picture_url = loaded_kleerer.find_first('gravatar-picture-url').content
-      kleerer.twitter_username = loaded_kleerer.find_first('twitter-username').content
-      
-      kleerers << kleerer
+      loaded_kleerers.each do |loaded_kleerer|
+        kleerer = Professional.new
+        
+        kleerer.name = loaded_kleerer.find_first('name').content
+        kleerer.bio = loaded_kleerer.find_first('bio').content
+        kleerer.linkedin_url = loaded_kleerer.find_first('linkedin-url').content
+        kleerer.gravatar_picture_url = loaded_kleerer.find_first('gravatar-picture-url').content
+        kleerer.twitter_username = loaded_kleerer.find_first('twitter-username').content
+        
+        kleerers << kleerer
+      end
+    rescue => err
+      puts "Error al cargar kleerers: #{err}"
+      kleerers = Array.new
     end
     
     kleerers
