@@ -15,6 +15,7 @@ gem 'oauth'
 gem 'json'
 gem 'i18n'
 gem 'prawn'
+gem 'curb'
 
 group :development do
   gem 'foreman'

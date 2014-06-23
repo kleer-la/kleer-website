@@ -12,6 +12,7 @@ require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 require File.join(File.dirname(__FILE__),'/lib/pdf_catalog')
+require File.join(File.dirname(__FILE__),'/lib/crm_connector')
 
 helpers do
   def t(key, ops = Hash.new)
@@ -114,6 +115,17 @@ get '/publicamos' do
   @active_tab_publicamos = "active"
   @page_title += " | Publicamos"
   erb :ebooks
+end
+
+post '/subscribe' do
+  @email = params[:email]
+  @fname = params[:fname]
+  @lname = params[:lname]
+  @influence_zone_tag = params[:influence_zone_tag]
+
+  CrmConnector::subscribe_person( @email, @fname, @lname, @influence_zone_tag )
+
+  erb :subscribe
 end
 
 get '/publicamos/scrum' do

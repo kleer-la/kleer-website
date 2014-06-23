@@ -322,6 +322,16 @@ h2 {
 	color: #1c1c1c;
 }
 
+.suscription-select {
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    font-family: 'Chewy', cursive;
+	font-size: 30pt;
+	color: #1c1c1c;
+	width: 500px
+}
+
 .suscription-modal-header {
 	background-color: #1c1c1c;
 }
