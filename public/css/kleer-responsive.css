@@ -21,6 +21,10 @@
 		font-size: 24pt;
 		margin-left: 40px;
 	}
+
+	.header-generico {
+		padding-top: 100px;
+	}
 }
 
 @media (max-width: 992px) {
@@ -86,6 +90,14 @@
 		right: -200px;
 	}
 
+	.slide-header-generico {
+		height: 200px;
+	}
+
+	.contenedor-main-izq {
+		border-right: none;
+	}
+
 }
 
 @media (max-width: 768px) {
@@ -106,6 +118,14 @@
 
 	.comunidad {
 		margin-top: 200px;
+	}
+
+	.slide-header-generico {
+		height: 170px;
+	}
+
+	.container-header-generico > div > h1 {
+		font-size: 24pt;
 	}
 
 }

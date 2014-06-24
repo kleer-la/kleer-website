@@ -159,7 +159,7 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
 end
 
 Given /^I visit the "(.*?)" page$/ do |page|
-    stub_connector
+  stub_connector
   visit "/" + page
 end
 

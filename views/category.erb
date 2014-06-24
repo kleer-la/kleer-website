@@ -1,37 +1,43 @@
-<script type="text/javascript" src="/js/jquery.js"/></script>
-<style>
-	body {
-		background: url(/img/fondos/fondo-06.jpg) no-repeat center center fixed; 
-	}
-</style>
+<div class="container-fluid fondo-celeste-mosaico slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1><%= @category.name %></h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
+	</div>
+</div>
 
-<div class="row">
-	<div class="span9">
+<div class="container-fluid fondo-amarillo slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 contenedor-main-izq">
 		
-		<div style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-			<h1><%= @category.name %></h1>
 			<p class="lead"><i><%= @category.tagline %></i></p>
 			<p><%= @markdown_renderer.render( @category.description )%></p>
-		</div>
-		<br/>&nbsp;<br/>
-		<div style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
+
 			<h3><%=t("category.training")%></h3>
 			<p>Además del acompañamiento y coaching personalizado, podemos hacer intervenciones más puntuales, realizando en tu organización, alguno de los siguientes entrenamientos privados.</p>
 
-			<div class="accordion" id="accordion">
+			<div class="panel-group" id="accordion">
 				
 				<% @event_types.each do |event_type| %>
 				
 					<% if event_type.elevator_pitch != "" %>
 				
-				  		<div class="accordion-group">
-						    <div class="accordion-heading">
-						        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
-						          <i class="icon-plus"></i>&nbsp;<%= event_type.name %>
-						        </a>
+				  		<div class="panel panel-default">
+						    <div class="panel-heading">
+						    	<h4 class="panel-title">
+							        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
+							          <i class="icon-plus"></i>&nbsp;<%= event_type.name %>
+							        </a>
+							    </h4>
 						    </div>
-						    <div id="collapse<%= event_type.id %>" class="accordion-body collapse">
-						      <div class="accordion-inner">
+						    <div id="collapse<%= event_type.id %>" class="panel-collapse collapse">
+						      <div class="panel-body">
 						        	<%= event_type.elevator_pitch %>
 								<br/>
 								<a href="/<%=session[:locale]%>/categoria/<%=@category.codename%>/cursos/<%= event_type.uri_path%>"><%=t("category.see_more")%> >></a>
@@ -43,12 +49,14 @@
 					
 				<% end %>
 			</div>
-			
+			&nbsp;<br/>
+			&nbsp;<br/>
+			&nbsp;<br/>
+
 		</div>
-		
-	</div>
-	<div class="span3" style="text-align:center;">  
-		<img src="/img/logos/logo-04.png">
-		<%= erb :twitter_box, :layout => false %>
-	</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
 </div>

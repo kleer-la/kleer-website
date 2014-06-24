@@ -51,8 +51,23 @@ h2 {
 	color: #1c1c1c;
 }
 
+.navbar-nav > li.active > a, .navbar-nav > li.active > a:hover, .navbar-nav > li.active > a:focus {
+	background-color: #fff;
+	color: #1c1c1c;
+}
+
 .navbar-toggle {
 	border-color: #fff;
+	color: #fff;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background-color: #1c1c1c;
+}
+
+.dropdown-menu > li > a {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
 	color: #fff;
 }
 
@@ -385,4 +400,77 @@ h2 {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: bold;
+}
+
+.slide-header-generico {
+	overflow:hidden;
+	height: 300px;
+}
+
+.slide-contenedor-generico {
+	margin-bottom: -90px;
+}
+
+.contenedor-generico {
+	position: relative;
+	top: -100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow:5px 5px #a4a4a4;	
+}
+
+.contenedor-main-izq {
+	border-right: solid #000 1px;
+}
+
+.slide-header-cursos {
+	height: 300px;
+}
+
+.paper-agenda-container {
+	position: relative;
+	top: -100px;
+	text-align: center;
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); /* IE 9 */
+	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+}
+
+.paper-agenda-container-comunidad {
+	top: -50px;
+}
+
+.paper-agenda-top {
+	height: 0px;
+}
+
+.paper-agenda-body {
+	background-color: #fff;
+	box-shadow: 10px 10px #a49c5d;
+	padding: 10px;
+}
+
+.paper-agenda-body-comunidad {
+	box-shadow: 10px 10px #56858d;
+}
+
+.paper-agenda-bottom {
+	height: 20px;
+}
+
+.side-cursos {
+	color: #fff;
+}
+
+.side-cursos > h2 {
+	text-align: center;
+	color: #fff;
+}
+
+.side-cursos > a {
+	color: #fff;
+}
+
+.experiencia-kleer > div > h2 {
+	text-align: center;
 }

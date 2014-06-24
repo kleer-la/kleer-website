@@ -60,4 +60,34 @@
       </event-type>
     </event-types>
   </category>
+  <category>
+    <codename>featured-courses</codename>
+    <created-at type="datetime">2013-07-10T20:52:23Z</created-at>
+    <description>--- bla - bla bla bla...</description>
+    <id type="integer">2</id>
+    <name>Productos Robustos</name>
+    <order type="integer">2</order>
+    <tagline>Calidad de mis Productos, Escalabilidad</tagline>
+    <updated-at type="datetime">2013-07-10T20:52:23Z</updated-at>
+    <visible type="boolean">true</visible>
+    <event-types type="array">
+      <event-type>
+        <created-at type="datetime">2013-07-10T20:53:56Z</created-at>
+        <description>esta es la descripción</description>
+        <duration type="integer">1</duration>
+        <faq>¿más preguntas?</faq>
+        <goal>acá va el objetivo</goal>
+        <id type="integer">2</id>
+        <include-in-catalog type="boolean">true</include-in-catalog>
+        <materials></materials>
+        <name>Taller de TDD</name>
+        <program>este el programa</program>
+        <recipients>esto es a quien está destinado</recipients>
+        <updated-at type="datetime">2013-07-10T20:53:56Z</updated-at>
+        <elevator-pitch>Un elevator</elevator-pitch>
+      <learnings></learnings>
+      <takeaways></takeaways>
+      </event-type>
+    </event-types>
+  </category>
 </categories>

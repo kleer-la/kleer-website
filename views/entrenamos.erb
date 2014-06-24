@@ -1,145 +1,161 @@
-<style>
-	body {
-		background: url(/img/fondos/fondo-04.jpg) no-repeat center center fixed; 
-	}
-</style>
-<script type="text/javascript" src="/js/jquery.js"/></script>
-
-<div class="row">
-	<div class="span4" style="text-align:center;">  
-		<img src="/img/logos/logo-02.png">
-		<%= erb :twitter_box, :layout => false %>
+<div class="container-fluid fondo-amarillo slide-header-generico slide-header-cursos">
+	<div class="container">
+		<div class="container-fluid container-header-generico container-header-cursos">
+			<div class="col-md-8">
+				<h1><%=t("training.title")%></h1>
+				ORGANIZAMOS ENTRENAMIENTOS PBLICOS Y PRIVADOS<br/>
+				NUESTRAS CERTIFICACIONES ESTN AVALADAS POR LA SCRUM ALLIANCE.
+			</div>
+			<div class="col-md-4 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/vive-las-met.png" height="400">
+			</div>
+		</div>
 	</div>
-	
-	<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel"><%=t("popups.course.registration.title")%></h4>
-	  </div>
-	  <div class="modal-body">
-	    <p><%=t("general.texts.loading")%></p>
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
-	  </div>
-	</div>
-	
-	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1><%=t("training.title")%></h1>
-		<ul id="country-filter" class="nav nav-pills">
-			<li class="active"><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos"><%=t("dt_grid.select_all")%></a></li>
-    <% @unique_countries.each do |country| %>
-			<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
-    <% end %>
-		</ul>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
-		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
-		<script type="text/javascript">
-		var anOpen = [];
-		var sImageUrl = "http://qa.kleer.la/wp-content/uploads/2011/03/";
-		//sImageUrl = "./DataTables-1.9.1/media/images/";
-
-		var oTable;
-		$(document).ready(function() {
-			oTable = $('#cursos').dataTable( {
-				"bLengthChange": false,
-				"sAjaxSource": '/<%=session[:locale]%>/entrenamos/eventos/pais/todos',
-				"aoColumns": [
-					{ "sWidth": "5%" },
-					{ "sWidth": "75%" },
-					{ "sClass": "right", "sWidth": "20%" }
-				],
-				"aaSorting": [],
-				"bSort": false,
-				"bPaginate": false,
-				"oLanguage": {
-					"sZeroRecords":  "<div class=\"alert alert-warning\"><%=t("dt_grid.loading")%></div>",
-					"sInfo":         "<div class=\"alert alert-info\"><%=t("dt_grid.showing")%></div>",
-					"sInfoEmpty":    "",
-					"sInfoFiltered": "<div class=\"alert alert-info\"><%=t("dt_grid.filter")%></div>",
-					"sInfoPostFix":  "",
-					"sSearch":       "<%=t("dt_grid.search")%>:",
-					"sUrl":          ""
-				},
-				"fnInitComplete": function(oSettings, json) {
-					oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
-				}
-			});
-
-			// Cuelgo los handlers de los clicks
-			$("ul#country-filter > li > a").on("click", function(event) {
-				event.preventDefault();
-
-				var newSource = $(this).attr("href");
-				oTable.fnReloadAjax(newSource);
-
-				var containerUl = $(this).parent().parent();
-				containerUl.children("li").removeClass("active");
-
-				var clickedLi = $(this).parent();
-				clickedLi.addClass("active");
-			});
-		});
-
-		$.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
-		{
-		    if ( typeof sNewSource != 'undefined' && sNewSource != null ) {
-		        oSettings.sAjaxSource = sNewSource;
-		    }
-
-		    // Server-side processing should just call fnDraw
-		    if ( oSettings.oFeatures.bServerSide ) {
-		        this.fnDraw();
-		        return;
-		    }
-
-		    this.oApi._fnProcessingDisplay( oSettings, true );
-		    var that = this;
-		    var iStart = oSettings._iDisplayStart;
-		    var aData = [];
-
-		    this.oApi._fnServerParams( oSettings, aData );
-
-		    oSettings.fnServerData.call( oSettings.oInstance, oSettings.sAjaxSource, aData, function(json) {
-		        /* Clear the old information from the table */
-		        that.oApi._fnClearTable( oSettings );
-
-		        /* Got the data - add it to the table */
-		        var aData =  (oSettings.sAjaxDataProp !== "") ?
-		            that.oApi._fnGetObjectDataFn( oSettings.sAjaxDataProp )( json ) : json;
-
-		        for ( var i=0 ; i<aData.length ; i++ )
-		        {
-		            that.oApi._fnAddData( oSettings, aData[i] );
-		        }
-
-		        oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
-
-		        if ( typeof bStandingRedraw != 'undefined' && bStandingRedraw === true ) {
-		            oSettings._iDisplayStart = iStart;
-		            that.fnDraw( false );
-		        }
-		        else {
-		            that.fnDraw();
-		        }
-
-		        that.oApi._fnProcessingDisplay( oSettings, false );
-
-		        /* Callback user function - for event handlers etc */
-		        if ( typeof fnCallback == 'function' && fnCallback != null ) {
-		            fnCallback( oSettings );
-		        }
-		    }, oSettings );
-		};
-		
-		</script>
-		<script type="text/javascript">
-		<!--
-		$('body').on('hidden', '#myModalRegistration', function () {
-		  $(this).removeData('modal');
-		});
-		
-		-->
-		</script>
-	</div> 
 </div>
+
+<div class="container-fluid fondo-amarillo">
+	<div class="container">
+		<div class="container-fluid">
+			<div class="col-md-8">
+				<div class="paper-agenda-container">
+					<div class="paper-agenda-top"></div>
+					<div class="paper-agenda-body">
+					<h2>Agenda</h2>
+					<ul id="country-filter" class="nav nav-pills">
+						<li class="active"><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos"><%=t("dt_grid.select_all")%></a></li>
+					    <% @unique_countries.each do |country| %>
+							<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
+					    <% end %>
+					</ul>
+						<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos" width="100%">
+							<thead>
+								<tr>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+					<div class="paper-agenda-bottom"></div>
+				</div>
+			</div>
+			<div class="col-md-4 hidden-xs hidden-sm fondo-gris side-cursos">
+				<h2>Facilitamos</h1>
+				<% @featured.event_types.each do |event_type| %>
+					<%=event_type.name%><br/>&nbsp;<br/>
+				<% end %>
+				<a href="http://media.kleer.la/kleer-entrenamos-2014.pdf">VER MÁS</a>
+				<br/>&nbsp;<br/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid fondo-blanco experiencia-kleer">
+	<div class="container">
+		<h2>Esta es la experiencia Kleer</h2>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>Con los profesionales más reconocidos de Latinoamérica</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>100% Vivenciales</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>Aprendizaje que perdura</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>Motivantes</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid fondo-rosa">
+	<div class="container">
+		&nbsp;<br/>
+					NUESTROS CURSOS PUEDEN FACILITARSE EXCLUSIVAMENTE EN TU ORGANIZACIÓN&nbsp;&nbsp;<a href="mailto:entrenamos@kleer.la" class="btn btn-info btn-kleer">SOLICITA<br/>INFORMACIÓN</a>
+		&nbsp;<br/>
+		&nbsp;<br/>
+		&nbsp;<br/>
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+
+	var oTable;
+
+	$(document).ready(function() {
+
+		oTable = $('#cursos').dataTable( {
+			"ajax": '/<%=session[:locale]%>/entrenamos/eventos/pais/todos',
+			"searching": false,
+			"ordering": false,
+			"paging": false,
+			"bLengthChange": false,
+			"aoColumns": [
+				{ "sWidth": "10%" },
+				{ "sWidth": "90%" }
+			],
+			/* "sScrollY": "300px", */
+			"oLanguage": {
+				"sLengthMenu":   "Mostrar _MENU_ registros",
+				"sZeroRecords":  "<div class=\"alert alert-warning center\"><%=t("dt_grid.loading")%></div>",
+				"sInfo":         "",
+				"sInfoEmpty":    "",
+				"sInfoFiltered": "",
+				"sInfoPostFix":  "",
+				"sUrl":          ""
+			},
+			"fnInitComplete": function(oSettings, json) {
+				oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
+			}
+		});
+
+		$("ul#country-filter > li > a").on("click", function(event) {
+			event.preventDefault();
+
+			var newSource = $(this).attr("href");
+			reloadTableAjax(newSource);
+
+			var containerUl = $(this).parent().parent();
+			containerUl.children("li").removeClass("active");
+
+			var clickedLi = $(this).parent();
+			clickedLi.addClass("active");
+		});
+
+	});
+
+	function reloadTableAjax( newSource ) {
+		oTable = $('#cursos').DataTable();
+		oTable.clear().draw();
+		oTable.ajax.url( newSource ).load();
+	}
+		
+</script>

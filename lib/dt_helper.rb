@@ -28,12 +28,7 @@ class DTHelper
     
     result << "<div class=\"klabel-date\">" + event.date.strftime("%d") + "<br>" + MONTHS_ES[event.date.strftime("%b")] + "</div>"
     line = "<a "
-    if remote 
-      line += "data-toggle=\"modal\" data-target=\"#myModal\" "
-      line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path) + "/remote"
-    else
-      line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
-    end
+    line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
     line += "\">" + event.event_type.name + "</a><br/>"
     line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country
     result << line

@@ -91,6 +91,7 @@ get '/entrenamos' do
  	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
   @unique_countries = @@keventer_reader.unique_countries_for_commercial_events()
+  @featured = @@keventer_reader.category('featured-courses')
 	erb :entrenamos
 end
 

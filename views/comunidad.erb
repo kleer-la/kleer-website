@@ -1,147 +1,116 @@
-<style>
-	body {
-		background: url(/img/fondos/fondo-04.jpg) no-repeat center center fixed; 
-	}
-</style>
-<script type="text/javascript" src="/js/jquery.js"/></script>
-
-<div class="row">
-	<div class="span4" style="text-align:center;">  
-		<img src="/img/logos/logo-02.png">
-		<%= erb :twitter_box, :layout => false %>
+<div class="container-fluid fondo-celeste slide-header-generico slide-header-cursos">
+	<div class="container">
+		<div class="container-fluid container-header-generico container-header-cursos">
+			<div class="col-md-8">
+				<h1><%=t("community.title")%></h1>
+				<p>Las comunidades ágiles son grupos de practicantes de métodos ágiles sin ánimo de lucro que están distribuidos por todo el mundo. Estos grupos son organizaciones horizontales en donde no hay un líder visible sino que sus miembros se auto-organizan para realizar diferentes actividades que les permita difundir conocimiento e intercambiar experiencias.</p>
+				<p>Kleer nació gracias a la comunidad, por esto estamos comprometidos con ella proponiendo y organizando eventos que difundan la filosofía ágil.</p>
+			</div>
+			<div class="col-md-4 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/actividades-comunitarias.png" height="400">
+			</div>
+		</div>
 	</div>
-	
-	<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel"><%=t("popups.event.registration.title")%></h4>
-	  </div>
-	  <div class="modal-body">
-	    <p><%=t("general.texts.loading")%></p>
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
-	  </div>
-	</div>
-	
-	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1><%=t("community.title")%></h1>
-		<ul id="country-filter" class="nav nav-pills">
-			<li class="active"><a href="/<%=session[:locale]%>/comunidad/eventos/pais/todos">Todos</a></li>
-    <% @unique_countries.each do |country| %>
-			<li><a href="/<%=session[:locale]%>/comunidad/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
-    <% end %>
-			<li><a href="/<%=session[:locale]%>/comunidad/eventos/pais/otro">¿Otro?</a></li>
-		</ul>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
-		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
-		<script type="text/javascript">
-		var anOpen = [];
-		var sImageUrl = "http://qa.kleer.la/wp-content/uploads/2011/03/";
-		//sImageUrl = "./DataTables-1.9.1/media/images/";
-
-		var oTable;
-		$(document).ready(function() {
-			oTable = $('#cursos').dataTable( {
-				"bLengthChange": false,
-				"sAjaxSource": '/<%=session[:locale]%>/comunidad/eventos/pais/todos',
-				"aoColumns": [
-					{ "sWidth": "5%" },
-					{ "sWidth": "75%" },
-					{ "sClass": "right", "sWidth": "20%" }
-				],
-				"aaSorting": [],
-				"bSort": false,
-				"bPaginate": false,
-				"bFilter": false,
-				"oLanguage": {
-					"sZeroRecords":  "<div class=\"alert alert-warning\"><%=t("dt_grid.loading")%></div>",
-					"sInfo":         "<div class=\"alert alert-info\"><%=t("dt_grid.showing")%></div>",
-					"sInfoEmpty":    "",
-					"sInfoFiltered": "<div class=\"alert alert-info\"><%=t("dt_grid.filter")%></div>",
-					"sInfoPostFix":  "",
-					"sSearch":       "<%=t("dt_grid.search")%>:",
-					"sUrl":          ""
-				},
-				"fnInitComplete": function(oSettings, json) {
-					oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
-				}
-			});
-
-			// Cuelgo los handlers de los clicks
-			$("ul#country-filter > li > a").on("click", function(event) {
-				event.preventDefault();
-
-				var newSource = $(this).attr("href");
-				oTable.fnReloadAjax(newSource);
-
-				var containerUl = $(this).parent().parent();
-				containerUl.children("li").removeClass("active");
-
-				var clickedLi = $(this).parent();
-				clickedLi.addClass("active");
-			});
-		});
-
-		$.fn.dataTableExt.oApi.fnReloadAjax = function ( oSettings, sNewSource, fnCallback, bStandingRedraw )
-		{
-		    if ( typeof sNewSource != 'undefined' && sNewSource != null ) {
-		        oSettings.sAjaxSource = sNewSource;
-		    }
-
-		    // Server-side processing should just call fnDraw
-		    if ( oSettings.oFeatures.bServerSide ) {
-		        this.fnDraw();
-		        return;
-		    }
-
-		    this.oApi._fnProcessingDisplay( oSettings, true );
-		    var that = this;
-		    var iStart = oSettings._iDisplayStart;
-		    var aData = [];
-
-		    this.oApi._fnServerParams( oSettings, aData );
-
-		    oSettings.fnServerData.call( oSettings.oInstance, oSettings.sAjaxSource, aData, function(json) {
-		        /* Clear the old information from the table */
-		        that.oApi._fnClearTable( oSettings );
-
-		        /* Got the data - add it to the table */
-		        var aData =  (oSettings.sAjaxDataProp !== "") ?
-		            that.oApi._fnGetObjectDataFn( oSettings.sAjaxDataProp )( json ) : json;
-
-		        for ( var i=0 ; i<aData.length ; i++ )
-		        {
-		            that.oApi._fnAddData( oSettings, aData[i] );
-		        }
-
-		        oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
-
-		        if ( typeof bStandingRedraw != 'undefined' && bStandingRedraw === true ) {
-		            oSettings._iDisplayStart = iStart;
-		            that.fnDraw( false );
-		        }
-		        else {
-		            that.fnDraw();
-		        }
-
-		        that.oApi._fnProcessingDisplay( oSettings, false );
-
-		        /* Callback user function - for event handlers etc */
-		        if ( typeof fnCallback == 'function' && fnCallback != null ) {
-		            fnCallback( oSettings );
-		        }
-		    }, oSettings );
-		};
-		
-		</script>
-		<script type="text/javascript">
-		<!--
-		$('body').on('hidden', '#myModalRegistration', function () {
-		  $(this).removeData('modal');
-		});
-		
-		-->
-		</script>
-	</div>  
 </div>
+
+<div class="container-fluid fondo-celeste">
+	<div class="container">
+		<div class="container-fluid">
+			<div class="col-md-8">
+				<div class="paper-agenda-container paper-agenda-container-comunidad">
+					<div class="paper-agenda-top"></div>
+					<div class="paper-agenda-body paper-agenda-body-comunidad">
+					<h2>Agenda</h2>
+					<ul id="country-filter" class="nav nav-pills">
+						<li class="active"><a href="/<%=session[:locale]%>/comunidad/eventos/pais/todos"><%=t("dt_grid.select_all")%></a></li>
+					    <% @unique_countries.each do |country| %>
+							<li><a href="/<%=session[:locale]%>/comunidad/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
+					    <% end %>
+					</ul>
+						<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos" width="100%">
+							<thead>
+								<tr>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+					<div class="paper-agenda-bottom"></div>
+				</div>
+			</div>
+			<div class="col-md-4 hidden-xs hidden-sm fondo-gris side-cursos">
+				<h2>Comunidades</h1>
+				<a href="#">Latinoamericana</a><br/>
+				&nbsp;<br/>
+				<a href="#">Argentina</a><br/>
+				<a href="#">Chile</a><br/>
+				<a href="#">Colombia</a><br/>
+				<a href="#">España</a><br/>
+				<a href="#">México</a><br/>
+				<a href="#">Paraguay</a><br/>
+				<a href="#">Perú</a><br/>
+				<a href="#">Uruguay</a><br/>
+				<a href="#">Venezuela</a><br/>
+				&nbsp;
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+
+	var oTable;
+
+	$(document).ready(function() {
+
+		oTable = $('#cursos').dataTable( {
+			"ajax": '/<%=session[:locale]%>/comunidad/eventos/pais/todos',
+			"searching": false,
+			"ordering": false,
+			"paging": false,
+			"bLengthChange": false,
+			"aoColumns": [
+				{ "sWidth": "10%" },
+				{ "sWidth": "90%" }
+			],
+			/* "sScrollY": "300px", */
+			"oLanguage": {
+				"sLengthMenu":   "Mostrar _MENU_ registros",
+				"sZeroRecords":  "<div class=\"alert alert-warning center\"><%=t("dt_grid.loading")%></div>",
+				"sInfo":         "",
+				"sInfoEmpty":    "",
+				"sInfoFiltered": "",
+				"sInfoPostFix":  "",
+				"sUrl":          ""
+			},
+			"fnInitComplete": function(oSettings, json) {
+				oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
+			}
+		});
+
+		$("ul#country-filter > li > a").on("click", function(event) {
+			event.preventDefault();
+
+			var newSource = $(this).attr("href");
+			reloadTableAjax(newSource);
+
+			var containerUl = $(this).parent().parent();
+			containerUl.children("li").removeClass("active");
+
+			var clickedLi = $(this).parent();
+			clickedLi.addClass("active");
+		});
+
+	});
+
+	function reloadTableAjax( newSource ) {
+		oTable = $('#cursos').DataTable();
+		oTable.clear().draw();
+		oTable.ajax.url( newSource ).load();
+	}
+		
+</script>
