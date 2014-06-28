@@ -9,6 +9,7 @@
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2013-01-03T15:22:10Z</created-at>
     <date type="date">2013-02-06</date>
+    <finish-date type="date">2013-02-06</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-01-27</eb-end-date>
     <eb-price type="decimal" nil="true"/>
@@ -56,7 +57,13 @@
       <updated-at type="datetime">2013-01-03T15:21:13Z</updated-at>
 	<faq nil="true"/>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -89,6 +96,7 @@ Ing. en Informática, CSM, CSD
     <country-id type="integer">171</country-id>
     <created-at type="datetime">2013-01-03T18:23:29Z</created-at>
     <date type="date">2013-02-14</date>
+    <finish-date type="date">2013-02-14</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-02-04</eb-end-date>
     <eb-price type="decimal" nil="true"/>
@@ -138,7 +146,13 @@ Ing. en Informática, CSM, CSD
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 		<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>

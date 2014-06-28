@@ -68,6 +68,9 @@ Given(/^I visit the english "(.*?)"$/) do |page|
   visit '/en/'+page
 end
 
+Given(/^I visit "(.*?)"$/) do |page_url|
+  visit page_url
+end
 
 Then /^I should see the json string for all of the events$/ do
   text = '\"aaData\": \[' +
@@ -200,9 +203,7 @@ Then /^I should see a facebook like button$/ do
 end
 
 Then /^I should see the Subscribe to newsletter option$/ do
-  response_body.should have_selector("a[href='http://eepurl.com/tu9Xr']") do |element|
-    element.should contain("Suscríbete a nuestra newsletter")
-  end
+  response_body.should have_selector("input[value='SUSCRÍBETE']")
 end
 
 Then /^the titles should use Roboto webfont$/ do

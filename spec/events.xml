@@ -9,6 +9,7 @@
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
     <date type="date">2013-01-09</date>
+    <finish-date type="date">2013-01-10</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2012-12-26</eb-end-date>
     <eb-price type="decimal">750.0</eb-price>
@@ -53,7 +54,13 @@
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
       <bio>Agile Coach</bio>
       <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
@@ -81,6 +88,7 @@
     <country-id type="integer">245</country-id>
     <created-at type="datetime">2012-12-07T19:43:42Z</created-at>
     <date type="date">2013-01-16</date>
+    <finish-date type="date">2013-01-17</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-01-06</eb-end-date>
     <eb-price type="decimal" nil="true"/>
@@ -146,7 +154,13 @@ El curso se basa ejercicios y dinámicas con técnicas para una comunicación ef
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -180,6 +194,7 @@ CSM y Especialista en Innovación
     <country-id type="integer">245</country-id>
     <created-at type="datetime">2012-12-14T18:52:34Z</created-at>
     <date type="date">2013-01-23</date>
+    <finish-date type="date">2013-01-24</finish-date>
     <draft type="boolean">true</draft>
     <eb-end-date type="date">2013-01-13</eb-end-date>
     <eb-price type="decimal" nil="true"/>
@@ -235,7 +250,13 @@ El webinar se desarrollará con ejemplos en Ruby, pero se compartirán otros eje
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -267,6 +288,7 @@ Agile Coach &amp; Trainer
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-07T00:52:41Z</created-at>
     <date type="date">2013-01-24</date>
+    <finish-date type="date">2013-01-25</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-01-09</eb-end-date>
     <eb-price type="decimal">3500.0</eb-price>
@@ -359,7 +381,13 @@ Patrones de Adopción de Scrum</program>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -390,6 +418,7 @@ CSC, PMP, PMI-ACP</bio>
     <country-id type="integer">171</country-id>
     <created-at type="datetime">2012-12-07T02:07:18Z</created-at>
     <date type="date">2013-01-31</date>
+    <finish-date type="date">2013-02-02</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-01-21</eb-end-date>
     <eb-price type="decimal" nil="true"/>
@@ -455,7 +484,13 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -486,6 +521,7 @@ CSC, PMP, PMI-ACP</bio>
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-08T10:41:29Z</created-at>
     <date type="date">2013-02-07</date>
+    <finish-date type="date">2013-02-08</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-01-24</eb-end-date>
     <eb-price type="decimal">3482.0</eb-price>
@@ -573,7 +609,13 @@ Construcción Evolutiva e Iterativa - Sprints
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -604,6 +646,7 @@ CSC, PMP, PMI-ACP</bio>
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-11T19:25:03Z</created-at>
     <date type="date">2013-02-19</date>
+    <finish-date type="date">2013-02-20</finish-date>
     <draft type="boolean">true</draft>
     <eb-end-date type="date">2013-02-09</eb-end-date>
     <eb-price type="decimal">300.0</eb-price>
@@ -656,7 +699,13 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -684,6 +733,7 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
     <country-id type="integer">245</country-id>
     <created-at type="datetime">2012-12-14T19:04:00Z</created-at>
     <date type="date">2013-02-20</date>
+    <finish-date type="date">2013-02-21</finish-date>
     <draft type="boolean">true</draft>
     <eb-end-date type="date">2013-02-10</eb-end-date>
     <eb-price type="decimal" nil="true"/>
@@ -741,7 +791,13 @@ Los ejemplos durante el taller se harán principalmente en Ruby, pero se compart
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -773,6 +829,7 @@ Agile Coach &amp; Trainer
     <country-id type="integer">46</country-id>
     <created-at type="datetime">2012-12-07T02:02:45Z</created-at>
     <date type="date">2013-02-21</date>
+    <finish-date type="date">2013-02-22</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-02-07</eb-end-date>
     <eb-price type="decimal">850.0</eb-price>
@@ -838,7 +895,13 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -869,6 +932,7 @@ CSC, PMP, PMI-ACP</bio>
     <country-id type="integer">25</country-id>
     <created-at type="datetime">2012-12-11T19:18:42Z</created-at>
     <date type="date">2013-03-07</date>
+    <finish-date type="date">2013-03-09</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-02-08</eb-end-date>
     <eb-price type="decimal">410.0</eb-price>
@@ -934,7 +998,13 @@ Conocerás Scrum y sus principios fundamentales de la mano de entrenadores certi
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
 		  <twitter-username>@gorgonzo</twitter-username>
@@ -965,6 +1035,7 @@ CSC, PMP, PMI-ACP</bio>
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-11T12:13:49Z</created-at>
     <date type="date">2013-03-18</date>
+    <finish-date type="date">2013-03-19</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-03-01</eb-end-date>
     <eb-price type="decimal">750.0</eb-price>
@@ -1015,6 +1086,12 @@ Este evento de un día completo proveerá a los asistentes un entendimiento clar
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>   
 	<include-in-catalog type="boolean">false</include-in-catalog> 
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1047,6 +1124,7 @@ Ing. en Informática, CSM, CSD
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-11T12:25:36Z</created-at>
     <date type="date">2013-03-18</date>
+    <finish-date type="date">2013-03-19</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-03-01</eb-end-date>
     <eb-price type="decimal">3375.0</eb-price>
@@ -1114,6 +1192,12 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>   
 	<include-in-catalog type="boolean">false</include-in-catalog> 
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1146,6 +1230,7 @@ Ing. en Informática, CSM, CSD
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-11T12:17:33Z</created-at>
     <date type="date">2013-03-19</date>
+    <finish-date type="date">2013-03-21</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-03-01</eb-end-date>
     <eb-price type="decimal">750.0</eb-price>
@@ -1198,6 +1283,12 @@ Este curso enseña nuevas habilidades que los participantes pueden utilizar en l
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>   
 	<include-in-catalog type="boolean">false</include-in-catalog> 
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1230,6 +1321,7 @@ Ing. en Informática, CSM, CSD
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-12-11T12:21:34Z</created-at>
     <date type="date">2013-03-20</date>
+    <finish-date type="date">2013-03-22</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2013-03-01</eb-end-date>
     <eb-price type="decimal">2250.0</eb-price>
@@ -1284,6 +1376,12 @@ El curso proporciona una experiencia de primera mano con respecto a los benefici
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>   
 	<include-in-catalog type="boolean">false</include-in-catalog> 
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1316,6 +1414,7 @@ Ing. en Informática, CSM, CSD
     <country-id type="integer">25</country-id>
     <created-at type="datetime">2012-12-11T19:37:12Z</created-at>
     <date type="date">2013-03-25</date>
+    <finish-date type="date">2013-03-26</finish-date>
     <draft type="boolean">true</draft>
     <eb-end-date type="date">2013-03-01</eb-end-date>
     <eb-price type="decimal">675.0</eb-price>
@@ -1383,6 +1482,12 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
 	<include-in-catalog type="boolean">false</include-in-catalog>
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
@@ -1416,6 +1521,7 @@ Ing. Electrónica, CSM, CSD
     <country-id type="integer">25</country-id>
     <created-at type="datetime">2012-12-11T20:12:04Z</created-at>
     <date type="date">2013-04-01</date>
+    <finish-date type="date">2013-04-02</finish-date>
     <draft type="boolean">true</draft>
     <eb-end-date type="date">2013-03-08</eb-end-date>
     <eb-price type="decimal">675.0</eb-price>
@@ -1481,6 +1587,12 @@ Identificarás requerimientos, estimarás, planificarás, priorizarás, gestiona
       <updated-at type="datetime">2012-09-06T11:00:12Z</updated-at>
 	<faq nil="true"/>  
 	<include-in-catalog type="boolean">false</include-in-catalog>
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
 		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>

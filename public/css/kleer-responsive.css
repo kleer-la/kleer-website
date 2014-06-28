@@ -25,6 +25,15 @@
 	.header-generico {
 		padding-top: 100px;
 	}
+
+	.event-facilitator-face {
+		left: -50px;
+	}
+
+	.slide-evento-logistics {
+		max-height: 100px;
+	}
+
 }
 
 @media (max-width: 992px) {
@@ -98,6 +107,17 @@
 		border-right: none;
 	}
 
+	.big-glyphicon {
+		font-size: 24pt;
+	}
+
+	.slide-evento-logistics {
+		max-height: 200px;
+	}
+
+	.slide-header-evento {
+		height: auto;
+	}
 }
 
 @media (max-width: 768px) {
@@ -126,6 +146,10 @@
 
 	.container-header-generico > div > h1 {
 		font-size: 24pt;
+	}
+
+	.slide-evento-logistics {
+		max-height: 400px;
 	}
 
 }

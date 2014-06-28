@@ -179,11 +179,14 @@ es:
         wanna_join: "¿Más información?"
         location: "Lugar"
         time: "%{starts} a %{ends}hr"
+        date: "Fecha"
+        hour: "Hora"
+        important: "Importante"
         tabs:
             description: "Descripción"
             target: "Destinado A"
             program: "Programa"
-            faqs: "FAQs"
+            faqs: "Preguntas Frecuentes"
         details:
             sections:
                 learnings: "¿Qué voy a aprender?"

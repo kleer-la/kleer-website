@@ -1,8 +1,9 @@
 class KeventerEvent
-    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, 
+    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :finish_date, :registration_link, 
                   :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place, :sepyme_enabled,
                   :human_date, :start_time, :end_time, :address, :list_price, :eb_price, :eb_end_date, 
-                  :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event
+                  :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event, 
+                  :time_zone_name, :time_zone
   
   def initialize
     @capacity = 0
@@ -12,6 +13,7 @@ class KeventerEvent
     @country_code = ""
     @event_type = nil
     @date = nil
+    @finish_date = nil
     @start_time = nil
     @end_time = nil
     @is_sold_out = false
@@ -27,7 +29,11 @@ class KeventerEvent
     @eb_price = 0.0
     @eb_end_date = nil
     @currency_iso_code = ""
+
     @is_webinar = false
+    @time_zone_name = ""
+    @time_zone = nil
+
     @specific_conditions = ""
     @is_community_event = false
   end

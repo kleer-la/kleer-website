@@ -25,6 +25,36 @@ describe KeventerEventType do
     @keventype.elevator_pitch = "Argentina"
     @keventype.elevator_pitch.should == "Argentina"
   end
+
+  it "should have an average_rating" do
+    @keventype.average_rating = 1.2
+    @keventype.average_rating.should == 1.2
+  end
+
+  it "should have an net_promoter_score" do
+    @keventype.net_promoter_score = 10
+    @keventype.net_promoter_score.should == 10
+  end
+
+  it "should have an participant_count" do
+    @keventype.participant_count = 1.2
+    @keventype.participant_count.should == 1.2
+  end
+
+  it "should have an promoter_count" do
+    @keventype.promoter_count = 10
+    @keventype.promoter_count.should == 10
+  end
+
+  it "should have an nps_opinions_count" do
+    @keventype.nps_opinions_count = 100
+    @keventype.nps_opinions_count.should == 100
+  end
+
+  it "should have an rating_opinions_count" do
+    @keventype.rating_opinions_count = 32
+    @keventype.rating_opinions_count.should == 32
+  end
   
   it "should have a learnings" do
     @keventype.learnings = "Argentina"

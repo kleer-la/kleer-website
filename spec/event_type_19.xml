@@ -31,4 +31,10 @@ Se trata de una reunión donde un grupo de desarrolladores trabajan en un desaf�
 - Líderes Técnicos</recipients>
   <takeaways></takeaways>
   <updated-at type="datetime">2013-08-08T18:44:34Z</updated-at>
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>

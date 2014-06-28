@@ -16,6 +16,9 @@ gem 'json'
 gem 'i18n'
 gem 'prawn'
 gem 'curb'
+gem 'tzinfo'
+gem 'tzinfo-data'
+
 
 group :development do
   gem 'foreman'

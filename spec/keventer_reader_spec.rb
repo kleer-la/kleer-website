@@ -217,8 +217,8 @@ describe KeventerReader do
       @high_performance = @kevr.category("high-performance")
     end
 
-    it "should return 2 categories" do
-      @kevr.categories.count.should == 2
+    it "should return 3 categories" do
+      @kevr.categories.count.should == 3
     end
 
     it "should return the category 'high-performance' by id" do

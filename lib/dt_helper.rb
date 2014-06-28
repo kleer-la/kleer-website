@@ -26,7 +26,34 @@ class DTHelper
   def self.event_result_json(event, remote = true, event_details_path = "entrenamos", i18n, locale, registration_btn)
     result = Array.new
     
-    result << "<div class=\"klabel-date\">" + event.date.strftime("%d") + "<br>" + MONTHS_ES[event.date.strftime("%b")] + "</div>"
+    #initial_date_line = "<div class=\"klabel-date\">" + event.date.strftime("%d") + "<br>" + MONTHS_ES[event.date.strftime("%b")] + "</div>"
+    #if event.date != event.finish_date && !event.finish_date.nil?
+    #  result << initial_date_line
+    #  result << "<div class=\"klabel-date\">" + event.finish_date.strftime("%d") + "<br>" + MONTHS_ES[event.finish_date.strftime("%b")] + "</div>"
+    #else
+    #  result << " "
+    #  result << initial_date_line
+    #end
+
+    date_line = "<table border=\"0\" align=\"center\" cellpadding=\"2\"><tr>"
+    if event.date != event.finish_date && !event.finish_date.nil?
+      post_it_width = "80px;"
+      date_line += "<td>#{event.date.strftime("%d")}</td>"
+      date_line += "<td rowspan=2>&nbsp;-&nbsp;</td>"
+      date_line += "<td>#{event.finish_date.strftime("%d")}</td>"
+      date_line += "</tr><tr>"
+      date_line += "<td>#{MONTHS_ES[event.date.strftime("%b")]}</td>"
+      date_line += "<td>#{MONTHS_ES[event.finish_date.strftime("%b")]}</td>"
+    else
+      post_it_width = "40px;"
+      date_line += "<td>#{event.date.strftime("%d")}</td>"
+      date_line += "</tr><tr>"
+      date_line += "<td>#{MONTHS_ES[event.date.strftime("%b")]}</td>"
+    end
+    date_line += "</tr></table>"
+
+    result << "<div class=\"klabel-date\" style=\"width:#{post_it_width}\">#{date_line}</div>"
+
     line = "<a "
     line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
     line += "\">" + event.event_type.name + "</a><br/>"

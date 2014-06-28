@@ -27,7 +27,13 @@
         <updated-at type="datetime">2013-07-10T20:54:21Z</updated-at>
 	  <learnings></learnings>
 	  <takeaways></takeaways>
-      </event-type>
+      <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     </event-types>
   </category>
   <category>
@@ -57,7 +63,13 @@
         <elevator-pitch>Un elevator</elevator-pitch>
 	  <learnings></learnings>
 	  <takeaways></takeaways>
-      </event-type>
+      <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     </event-types>
   </category>
   <category>
@@ -87,7 +99,13 @@
         <elevator-pitch>Un elevator</elevator-pitch>
       <learnings></learnings>
       <takeaways></takeaways>
-      </event-type>
+      <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     </event-types>
   </category>
 </categories>

@@ -165,6 +165,9 @@ en:
        wanna_join: "More information?"
        location: "Venue"
        time: "%{starts} to %{ends}hs"
+       date: "Date"
+       important: "Important"
+       hour: "Time"
        tabs:
            description: "Description"
            target: "Who should attend?"

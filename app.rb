@@ -15,6 +15,10 @@ require File.join(File.dirname(__FILE__),'/lib/pdf_catalog')
 require File.join(File.dirname(__FILE__),'/lib/crm_connector')
 
 helpers do
+
+  MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
+                "Jul" => "Jul", "Aug" => "Ago", "Sep" => "Sep", "Oct" => "Oct", "Nov" => "Nov", "Dec" => "Dic"}
+
   def t(key, ops = Hash.new)
     ops.merge!(:locale => session[:locale])
     I18n.t key, ops
@@ -32,6 +36,10 @@ helpers do
     sanitized = sanitized.gsub('Í', 'I')
     sanitized = sanitized.gsub('Ó', 'O')
     sanitized = sanitized.gsub('Ú', 'U')
+  end
+
+  def month_es(month_en)
+    MONTHS_ES[month_en]
   end
   
 end

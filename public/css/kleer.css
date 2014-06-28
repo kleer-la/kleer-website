@@ -193,9 +193,14 @@ h2 {
 	padding-right: 0;
 }
 
+.klabel-date-container {
+	text-align: center;
+}
+
 .klabel-date {
 	background-color: #fef290;
-	width: 40px;
+	text-align: center;
+	height: auto;
 	font-weight: bold;
 	transform:rotate(5deg);
 	-ms-transform:rotate(5deg); /* IE 9 */
@@ -214,6 +219,46 @@ h2 {
 	color: #000;
 	font-weight: bold;
 	font-family: 'Roboto', sans-serif;
+}
+
+.btn-caps {
+	text-transform: uppercase;
+}
+
+.btn-warning {
+	background-color: #fef290;
+	border: none;
+}
+
+.btn-warning:hover {
+	background-color: #fef290;
+}
+
+.btn-success {
+	background-color: #56f7cd;
+	border: none;
+}
+
+.btn-success:hover {
+	background-color: #56f7cd;
+}
+
+.btn-info {
+	background-color: #88cddc;
+	border: none;
+}
+
+.btn-info:hover {
+	background-color: #88cddc;
+}
+
+.btn-danger {
+	background-color: #ff7bad;
+	border: none;
+}
+
+.btn-danger:hover {
+	background-color: #ff7bad;
 }
 
 .slide-home-cursos {
@@ -427,13 +472,94 @@ h2 {
 	height: 300px;
 }
 
+.slide-header-evento {
+	overflow:hidden;
+	height: 380px;
+}
+
+.slide-evento-aprovecha {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.slide-evento-logistics {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 10pt;
+	max-height: 100px;
+}
+
+.slide-evento-gratuito {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.slide-event-type-category-name {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;	
+}
+
+.container-header-evento > div {
+	text-align: center;
+}
+
+.evento-title-container {
+	background-image: url('/img/fondos/evento-title-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-top: 40px;
+	/* width: 500px; */
+	min-height: 300px;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-size: 10pt;
+}
+
+.evento-title-container > h2 {
+	text-transform: none;
+}
+
+.evento-title-container > p {
+	font-size: 10pt;
+}
+
+.evento-nps > h2 {
+	color: #fff;
+	font-weight: normal;
+}
+
+.evento-nps {
+	position: relative;
+	top: -370px;
+	right: -195px;
+	font-size: 15pt;
+}
+
+.evento-nps-explanation {
+	position: relative;
+	top: -150px;
+	font-size: 10pt;
+	color: #000;
+}
+
+.evento-nps-explanation > a {
+	text-decoration: underline;
+	color: #000;
+}
+
 .paper-agenda-container {
 	position: relative;
 	top: -100px;
 	text-align: center;
-	transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); /* IE 9 */
-	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+	/* transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg);
+	-webkit-transform:rotate(-2deg); */
 }
 
 .paper-agenda-container-comunidad {
@@ -460,6 +586,10 @@ h2 {
 
 .side-cursos {
 	color: #fff;
+	transform:rotate(4deg);
+	-ms-transform:rotate(4deg);
+	-webkit-transform:rotate(4deg);
+	z-index: 10;
 }
 
 .side-cursos > h2 {
@@ -473,4 +603,50 @@ h2 {
 
 .experiencia-kleer > div > h2 {
 	text-align: center;
+}
+
+.stars, .stars > div {
+    display: inline-block;
+    background: url('/img/icons/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+    text-align: left;
+}
+
+.stars > div {
+    background-position: 0 0;
+}
+
+.big-glyphicon {
+	font-size: 32pt;
+}
+
+.logistic-indicator {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.event-facilitator-face {
+	position: relative;
+	top: -25px;
+	left: -25px;
+	z-index: 50;
+}
+
+.event-important-column {
+	border-left: 1px solid #000;
+}
+
+.post-it-success {
+	text-align: center;
+}
+
+.post-it-success > h3 {
+	display: inline-block;
+	background-color: #56f7cd;
+	padding: 10px;
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg);
+	-webkit-transform:rotate(-2deg);
+	box-shadow:5px 5px #aeaeae;
 }

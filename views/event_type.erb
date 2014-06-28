@@ -1,201 +1,216 @@
-<style>
-    body {
-        background: url(/img/fondos/fondo-10.jpg) no-repeat center center fixed; 
-    }
-</style>
-<script type="text/javascript" src="/js/jquery.js"/></script>
+<div class="container-fluid fondo-celeste slide-header-evento">
+  <div class="container">
+    <div class="container-fluid container-header-generico container-header-evento">
+      <div class="col-md-7">
+        <div class="evento-title-container">
+          <h2><%= @event_type.name %></h2>
+          <h3><%= @event_type.duration%> hora(s)</h3>
+          <p><%= @event_type.elevator_pitch %></p>
 
-<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
-
-<script type="text/javascript">
-<!--
-
-$('body').on('hidden', '#myModalRegistration', function () {
-  $(this).removeData('modal');
-});
-
-$('body').on('hidden', '#myModalFacilitator', function () {
-  $(this).removeData('modal');
-});
-
-$('body').on('hidden', '#myModalSepyme', function () {
-  $(this).removeData('modal');
-  $('#myModalSepyme iframe').removeAttr('src');
-});
-
--->
-</script>
-
-<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="myModalLabel"><%=t("popups.course.registration.title")%></h4>
-  </div>
-  <div class="modal-body">
-    <p><%=t("general.texts.loading")%></p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
-  </div>
-</div>
-
-<div id="myModalFacilitator" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="myModalLabel"><%=t("event.facilitator")%></h4>
-  </div>
-  <div class="modal-body">
-    <p><%=t("general.texts.loading")%></p>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
-  </div>
-</div>
-
-<div id="myModalSepyme" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h4 id="myModalLabel"><%=t("event.save90percent")%></h4>
-  </div>
-  <div class="modal-body">
-    <p><%=t("general.texts.loading")%></p>
-  </div>
-</div>
-<div class="row-fluid">    
-    <div class="span9"> 
-	
-        <div class="row-fluid">
-            <div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-                <div class="row-fluid">
-                    <div class="span12">
-						<%=t("event.course")%>:
-                        <h2><%=@event_type.name%></h2>
-                    </div>
-                </div>
+          <% if @event_type.rating_opinions_count > 20 && !@event_type.average_rating.nil? %>
+            <p>
+            <div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event_type.average_rating%>/5">
+              <div style="width:<%=@event_type.average_rating.to_f*16%>px;"/></div>
             </div>
+            (<%=@event_type.rating_opinions_count%> opiniones)
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $('#rating').tooltip();
+              });
+            </script>
+            </p>
+          <% end %>
+          <br/>&nbsp;
         </div>
-        <div class="row-fluid">
-            <div class="span12">&nbsp;</div>
-        </div>
-        <div class="row-fluid">
-            <div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-                <div class="row-fluid">
-	
-                    <div class="span8">
-                        <ul class="nav nav-tabs" id="myTab">
-                          <li class="active"><a href="#description" data-toggle="tab"><%=t("event.tabs.description")%></a></li>
-                          <li><a href="#recipients" data-toggle="tab"><%=t("event.tabs.target")%></a></li>
-                          <li><a href="#program" data-toggle="tab"><%=t("event.tabs.program")%></a></li>
-                          <% if @event_type.faqs != "" %>
-                            <li><a href="#faqs" data-toggle="tab"><%=t("event.tabs.faqs")%></a></li>
-                          <% end %>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="description">
-                            <% if !@event_type.elevator_pitch.nil? %>
-                              <%=@markdown_renderer.render( @event_type.elevator_pitch )%>
-                            <% end %>                            
-                            <%=@markdown_renderer.render( @event_type.description )%>
-                            
-                            <% if !@event_type.learnings.nil? && @event_type.learnings != "" %>
-                                <div style="margin: 2em 0; background: #f9fb89; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
-                                    <h3><%=t("event.details.sections.learnings")%></h3>
-                                    <%=@markdown_renderer.render( @event_type.learnings )%>
-                                </div>
-                            <% end %>
-                            
-                            <% if !@event_type.takeaways.nil? && @event_type.takeaways != "" %>
-                                <div style="margin: 2em 0; background: #dd8fc1; border: 1px solid #f0edce; padding: 12px; border-radius: 12px;">
-                                    <h3><%=t("event.details.sections.takeaways")%></h3>
-                                    <%=@markdown_renderer.render( @event_type.takeaways )%>
-                                </div>
-                            <% end %>
-                            
-                          </div>
-                          <div class="tab-pane" id="recipients">
-                            <%=@markdown_renderer.render( @event_type.recipients )%>
-                            <br/>&nbsp;
-                          </div>
-                          <div class="tab-pane" id="program">
-                            <%=@markdown_renderer.render( @event_type.program )%>
-                            <br/>&nbsp;
-                          </div>
-                          <div class="tab-pane" id="faqs">
-                            <%=@markdown_renderer.render( @event_type.faqs )%>
-                            <br/>&nbsp;
-                          </div>
-                        </div>
-                    </div>
-
-					<div class="span4">
-						<% if @event_type.public_editions.size > 0 %>
-							<h3><%=t("event.public_editions")%></h3>
-						
-							<% @event_type.public_editions.each do |public_edition| %>
-								<div class="row-fluid">
-									<div class="span2">
-										<a href="/<%=session[:locale]%>/entrenamos/evento/<%=public_edition.uri_path%>"><span class="label label-info"><%=public_edition.date.strftime("%d")%><br/><span class="lead"><%=public_edition.date.strftime("%b")%></span></span></a>
-									</div>
-									<div class="span10">
-										&nbsp;<i class="icon-map-marker"></i>&nbsp;<a href="/<%=session[:locale]%>/entrenamos/evento/<%=public_edition.uri_path%>"><%=public_edition.place %></a><br/>
-										&nbsp;<img src="/img/flags/<%=public_edition.country_code.downcase%>.png"/> <%=public_edition.city %>, <%=public_edition.country %><br/>&nbsp;
-									</div>
-								</div>
-							<% end %>
-						
-							<hr/>
-						<% end %>
-						
-						<p><%=t("event.other_trainings")%>:</p>
-						<h4><%=@category.name%></h4>
-							
-							<% @category.event_types.each do |category_event_type| %>
-
-								<% if category_event_type.elevator_pitch != "" && category_event_type.id.to_i != @event_type.id %>
-
-							  		<div class="accordion-group">
-									    <div class="accordion-heading">
-									        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= category_event_type.id %>">
-									          <i class="icon-plus"></i>&nbsp;<%= category_event_type.name %>
-									        </a>
-									    </div>
-									    <div id="collapse<%= category_event_type.id %>" class="accordion-body collapse">
-									      <div class="accordion-inner">
-									        	<%= category_event_type.elevator_pitch %>
-											<br/>
-											<a href="/<%=session[:locale]%>/categoria/<%=@category.codename%>/cursos/<%= category_event_type.uri_path%>"><%=t("category.see_more")%> >></a>
-									      </div>
-									    </div>
-									  </div>
-
-								<% end %>
-
-							<% end %>
-					</div>	
-                </div>
-            </div>
-        </div>
+      </div>
+      <div class="col-md-5 hidden-xs hidden-sm">
+        &nbsp;<br/>
+        <% if @event_type.nps_opinions_count > 20 && !@event_type.net_promoter_score.nil? %>
+          <div class="col-md-12">
+            <img src="/img/personajes/nps-eventos.png" height="400">
+          </div>
+          <div class="col-md-5 evento-nps">
+            <h2><%=@event_type.promoter_count%>/<%=@event_type.nps_opinions_count%></h2>
+          </div>
+          <div class="col-md-6 evento-nps-explanation">
+            <a href="http://www.netpromoter.com/why-net-promoter/know/" target="_blank">Net Promoter Score</a>: <strong><%=@event_type.net_promoter_score%></strong></h2>
+          </div>
+        <% else %>
+          <img src="/img/personajes/vive-las-met.png" height="500">
+        <% end %>
+      </div>
     </div>
-    
-    <div class="span3" style="text-align:center;">  
-        <div class="row-fluid">
-            <div class="span12">
-                <img src="/img/logos/logo-01.png">
-                <%= erb :_twitter_box, :layout => false %>
-            </div>
+  </div>
+</div>
+
+<div class="container-fluid fondo-verde slide-event-type-category-name">
+  <div class="container">
+    <%= @event_type.name %> te ayuda a lograr
+    <h2><%=@category.name%></h2>
+  </div>
+</div>
+
+<%
+if @event_type.public_editions.size > 0
+  description_column_width = 8
+else
+  description_column_width = 12
+end
+%>
+
+<div class="container-fluid fondo-blanco">
+  <div class="container">
+    <div class="col-md-<%=description_column_width%>">
+      <h2><%=t("event.tabs.description")%></h2>
+      <%=@markdown_renderer.render( @event_type.description )%>
+    </div>
+    <% if @event_type.public_editions.size > 0 %>
+      <div class="col-md-4">
+        <div class="post-it-success">
+          <h3><%=t("event.public_editions")%></h3>
+            &nbsp;<br/>
+            <% @event_type.public_editions.each do |event| %>
+              &nbsp;
+              <div class="row">
+                <div class="col-md-3">
+                  <%
+                  date_line = "<table border=\"0\" align=\"center\" cellpadding=\"2\"><tr>"
+                  if event.date != event.finish_date && !event.finish_date.nil?
+                    post_it_width = "80px;"
+                    date_line += "<td>#{event.date.strftime("%d")}</td>"
+                    date_line += "<td rowspan=2>&nbsp;-&nbsp;</td>"
+                    date_line += "<td>#{event.finish_date.strftime("%d")}</td>"
+                    date_line += "</tr><tr>"
+                    date_line += "<td>#{month_es(event.date.strftime("%b"))}</td>"
+                    date_line += "<td>#{month_es(event.finish_date.strftime("%b"))}</td>"
+                  else
+                    post_it_width = "40px;"
+                    date_line += "<td>#{event.date.strftime("%d")}</td>"
+                    date_line += "</tr><tr>"
+                    date_line += "<td>#{month_es(event.date.strftime("%b"))}</td>"
+                  end
+                  date_line += "</tr></table>"
+                  %>
+                  <div class="klabel-date" style="width:<%=post_it_width%>"><%=date_line%></div>
+                </div>
+                <div class="col-md-9" style="text-align:left;">
+                  <a href="/<%=session[:locale]%>/<%=event.is_community_event ? "comunidad" : "entrenamos" %>/evento/<%=url_sanitize(event.uri_path)%>">
+                    <%=event.event_type.name%>
+                  </a><br/>
+                  <img src="/img/flags/<%=event.country_code.downcase%>.png"/>
+                  <%=event.city%>, <%=event.country%>
+                </div>
+              </div>
+            <% end %>
         </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container-fluid fondo-celeste">
+  <div class="container">
+    <div class="container-fluid col-md-10 col-md-offset-1">
+      <div class="col-md-4">
+        <img src="/img/personajes/03_03_web.png" class="img-responsive"/>
+      </div>
+      <div class="col-md-4">
+        <% if !@event_type.learnings.nil? && @event_type.learnings != "" %>
+          <h2><%=t("event.details.sections.learnings")%></h2>
+          <%=@markdown_renderer.render( @event_type.learnings )%>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+        <% if !@event_type.takeaways.nil? && @event_type.takeaways != "" %>
+          <h2><%=t("event.details.sections.takeaways")%></h2>
+            <%=@markdown_renderer.render( @event_type.takeaways )%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid fondo-blanco">
+  <div class="container">
+    <div class="container-fluid event-target-column">
+      <div class="col-md-6">
+        <h2><%=t("event.tabs.target")%></h2>
+        <%=@markdown_renderer.render( @event_type.recipients )%>
+      </div>
+      <div class="col-md-6 event-program-column">
+        <h2><%=t("event.tabs.program")%></h2>
+        <%=@markdown_renderer.render( @event_type.program )%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid fondo-amarillo slide-event-type-category-name">
+  <div class="container">
+    <%= @event_type.name %> te ayuda a lograr
+    <h2><%=@category.name%></h2>
+  </div>
+</div>
+
+<% if !@event_type.faqs.nil? && @event_type.faqs.strip != "" %>
+<div class="container-fluid fondo-blanco">
+  <div class="container">
+    <div class="container-fluid col-md-10 col-md-offset-1">
+      <h2><%=t("event.tabs.faqs")%></h2>
+      <%=@markdown_renderer.render( @event_type.faqs )%>
+      <br/>&nbsp;
+      <br/>&nbsp;
+    </div>
+  </div>
+</div>
+<% end %>
+
+<div class="container-fluid fondo-rosa slide-event-type-category-name">
+  <div class="container">
+    <h2><%=t("event.other_trainings")%></h2>
+  </div>
+  <div class="container-fluid col-md-10 col-md-offset-1">
+      <div class="panel-group" id="accordion">
         &nbsp;
-        <div class="row-fluid">
-            <div class="span12">
-                <%#erb :facebook_box, :layout => false, :locals => { :height => 400, :width => 100, :span => "span3" } %>
-            </div>
-        </div>
+        <% @category.event_types.sort_by { |et| et.name}.each do |event_type| %>
+        
+          <% if event_type.elevator_pitch != "" %>
+        
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
+                        <i class="icon-plus"></i>&nbsp;<%= event_type.name %></a>
+                      <% if event_type.rating_opinions_count > 20 && !event_type.average_rating.nil? %>
+                        &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.rating_opinions_count%> opiniones">
+                          <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
+                        </div>
+                        <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('#rating<%= event_type.id %>').tooltip();
+                          });
+                        </script>
+                        </p>
+                      <% end %>
+                  </h4>
+                </div>
+                <div id="collapse<%= event_type.id %>" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      <%= event_type.elevator_pitch %>
+                <br/>
+                <a href="/<%=session[:locale]%>/categoria/<%=@category.codename%>/cursos/<%= event_type.uri_path%>"><%=t("category.see_more")%> >></a>
+                  </div>
+                </div>
+              </div>
+          
+          <% end %>
+          
+        <% end %>
+      </div>
+      &nbsp;<br/>
+      &nbsp;<br/>
+      &nbsp;<br/>
     </div>
-    
 </div>
 
-<!-- social scripts -->
-<!-- script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "dcd6ccd6-45d9-4bb1-9b6f-b9742b986b08", doNotHash: false, doNotCopy: false, hashAddressBar: true});</script -->
+

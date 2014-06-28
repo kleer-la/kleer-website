@@ -9,6 +9,7 @@
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
     <date type="date">2013-01-09</date>
+    <finish-date type="date">2013-01-10</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date">2012-12-26</eb-end-date>
     <eb-price type="decimal">750.0</eb-price>
@@ -53,7 +54,13 @@
 	<faq>
 	**¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
 	</faq>
-    </event-type>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
     <trainer>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
