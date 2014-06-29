@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
   <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
   <description>#### Descripción del Encuentro
 

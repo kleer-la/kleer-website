@@ -7,12 +7,11 @@
           <h3><%= @event_type.duration%> hora(s)</h3>
           <p><%= @event_type.elevator_pitch %></p>
 
-          <% if @event_type.rating_opinions_count > 20 && !@event_type.average_rating.nil? %>
+          <% if @event_type.surveyed_count > 20 && !@event_type.average_rating.nil? %>
             <p>
-            <div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event_type.average_rating%>/5">
+            <div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event_type.average_rating%>/5 basado en <%=@event_type.surveyed_count%> opiniones de asistentes a este tipo de evento">
               <div style="width:<%=@event_type.average_rating.to_f*16%>px;"/></div>
             </div>
-            (<%=@event_type.rating_opinions_count%> opiniones)
             <script type="text/javascript">
             $(document).ready(function(){
                 $('#rating').tooltip();
@@ -25,12 +24,12 @@
       </div>
       <div class="col-md-5 hidden-xs hidden-sm">
         &nbsp;<br/>
-        <% if @event_type.nps_opinions_count > 20 && !@event_type.net_promoter_score.nil? %>
+        <% if @event_type.surveyed_count > 20 && !@event_type.net_promoter_score.nil? %>
           <div class="col-md-12">
             <img src="/img/personajes/nps-eventos.png" height="400">
           </div>
           <div class="col-md-5 evento-nps">
-            <h2><%=@event_type.promoter_count%>/<%=@event_type.nps_opinions_count%></h2>
+            <h2><%=@event_type.promoter_count%>/<%=@event_type.surveyed_count%></h2>
           </div>
           <div class="col-md-6 evento-nps-explanation">
             <a href="http://www.netpromoter.com/why-net-promoter/know/" target="_blank">Net Promoter Score</a>: <strong><%=@event_type.net_promoter_score%></strong></h2>
@@ -181,8 +180,8 @@ end
                   <h4 class="panel-title">
                       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
                         <i class="icon-plus"></i>&nbsp;<%= event_type.name %></a>
-                      <% if event_type.rating_opinions_count > 20 && !event_type.average_rating.nil? %>
-                        &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.rating_opinions_count%> opiniones">
+                      <% if event_type.surveyed_count > 20 && !event_type.average_rating.nil? %>
+                        &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
                           <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
                         </div>
                         <script type="text/javascript">
@@ -190,7 +189,6 @@ end
                             $('#rating<%= event_type.id %>').tooltip();
                           });
                         </script>
-                        </p>
                       <% end %>
                   </h4>
                 </div>

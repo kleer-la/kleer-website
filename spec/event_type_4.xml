@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
   <created-at type="datetime">2012-09-06T10:59:01Z</created-at>
   <description>####Descripción del Curso
 &lt;img src="http://media.kleer.la/sa-csd/me-m1.jpg" alt="" align="right" /&gt;

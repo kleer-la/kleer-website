@@ -325,6 +325,12 @@ class KeventerReader
     trainer.linkedin_url = xml_keventer_event.find_first('trainer/linkedin-url').content
     trainer.gravatar_picture_url = xml_keventer_event.find_first('trainer/gravatar-picture-url').content
     trainer.twitter_username = xml_keventer_event.find_first('trainer/twitter-username').content
+
+    trainer.average_rating = xml_keventer_event.find_first('trainer/average-rating').content.nil? ? nil : xml_keventer_event.find_first('trainer/average-rating').content.to_f.round(2)
+    trainer.net_promoter_score = xml_keventer_event.find_first('trainer/net-promoter-score').content.nil? ? nil : xml_keventer_event.find_first('trainer/net-promoter-score').content.to_i
+    trainer.surveyed_count = xml_keventer_event.find_first('trainer/surveyed-count').content.to_i
+    trainer.promoter_count = xml_keventer_event.find_first('trainer/promoter-count').content.to_i
+    
     event.trainer = trainer
 
     event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
@@ -350,12 +356,11 @@ class KeventerReader
     event_type.faqs  = xml_keventer_event.find_first('faq').content
     event_type.elevator_pitch = xml_keventer_event.find_first('elevator-pitch').content
     event_type.include_in_catalog = to_boolean( xml_keventer_event.find_first('include-in-catalog').content )
+    
     event_type.average_rating = xml_keventer_event.find_first('average-rating').content.nil? ? nil : xml_keventer_event.find_first('average-rating').content.to_f.round(2)
-    event_type.net_promoter_score = xml_keventer_event.find_first('net-promoter-score').content.nil? ? nil : (xml_keventer_event.find_first('net-promoter-score').content.to_f.round(2)*100).to_i
-    event_type.participant_count = xml_keventer_event.find_first('participant-count').content.to_i
+    event_type.net_promoter_score = xml_keventer_event.find_first('net-promoter-score').content.nil? ? nil : xml_keventer_event.find_first('net-promoter-score').content.to_i
+    event_type.surveyed_count = xml_keventer_event.find_first('surveyed-count').content.to_i
     event_type.promoter_count = xml_keventer_event.find_first('promoter-count').content.to_i
-    event_type.nps_opinions_count = xml_keventer_event.find_first('nps-opinions-count').content.to_i
-    event_type.rating_opinions_count = xml_keventer_event.find_first('rating-opinions-count').content.to_i
 
     event_type
   end    

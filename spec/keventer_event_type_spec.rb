@@ -37,23 +37,13 @@ describe KeventerEventType do
   end
 
   it "should have an participant_count" do
-    @keventype.participant_count = 1.2
-    @keventype.participant_count.should == 1.2
+    @keventype.surveyed_count = 1.2
+    @keventype.surveyed_count.should == 1.2
   end
 
   it "should have an promoter_count" do
     @keventype.promoter_count = 10
     @keventype.promoter_count.should == 10
-  end
-
-  it "should have an nps_opinions_count" do
-    @keventype.nps_opinions_count = 100
-    @keventype.nps_opinions_count.should == 100
-  end
-
-  it "should have an rating_opinions_count" do
-    @keventype.rating_opinions_count = 32
-    @keventype.rating_opinions_count.should == 32
   end
   
   it "should have a learnings" do

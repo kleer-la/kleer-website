@@ -12,6 +12,10 @@
     <visible type="boolean">true</visible>
     <event-types type="array">
       <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
         <created-at type="datetime">2013-07-10T20:48:22Z</created-at>
         <description>Una descripción</description>
         <duration type="integer">8</duration>
@@ -48,6 +52,10 @@
     <visible type="boolean">true</visible>
     <event-types type="array">
       <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
         <created-at type="datetime">2013-07-10T20:53:56Z</created-at>
         <description>esta es la descripción</description>
         <duration type="integer">1</duration>
@@ -84,6 +92,10 @@
     <visible type="boolean">true</visible>
     <event-types type="array">
       <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
         <created-at type="datetime">2013-07-10T20:53:56Z</created-at>
         <description>esta es la descripción</description>
         <duration type="integer">1</duration>

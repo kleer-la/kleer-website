@@ -44,6 +44,10 @@
       <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
     </country>
     <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
       <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
       <description>una descripción.</description>
 	  <elevator-pitch>un elevator pitch</elevator-pitch>
@@ -68,6 +72,10 @@
 <rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>
     <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
       <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 Agile Coach &amp; Trainer 
