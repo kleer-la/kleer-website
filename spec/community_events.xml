@@ -20,6 +20,7 @@
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
+    <show-pricing type="boolean">true</show-pricing>
 	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
@@ -30,6 +31,11 @@
     <trainer-id type="integer">5</trainer-id>
     <updated-at type="datetime">2013-01-03T15:22:20Z</updated-at>
     <visibility-type>co</visibility-type>
+    <business-eb-price type="decimal">2399000.0</business-eb-price>
+    <business-price type="decimal">2899000.0</business-price>
+    <couples-eb-price type="decimal">2499000.0</couples-eb-price>
+    <enterprise-11plus-price type="decimal" nil="true"/>
+    <enterprise-6plus-price type="decimal">2269000.0</enterprise-6plus-price>
     <country>
       <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
       <id type="integer">9</id>
@@ -107,6 +113,7 @@ Ing. en Informática, CSM, CSD
 	<is-webinar type="boolean">false</is-webinar>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
+    <show-pricing type="boolean">true</show-pricing>
 	<currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer" nil="true"/>
     <list-price-3plus-pax-discount type="integer" nil="true"/>
@@ -117,6 +124,11 @@ Ing. en Informática, CSM, CSD
     <trainer-id type="integer">17</trainer-id>
     <updated-at type="datetime">2013-01-04T15:00:02Z</updated-at>
     <visibility-type>co</visibility-type>
+    <business-eb-price type="decimal">2399000.0</business-eb-price>
+    <business-price type="decimal">2899000.0</business-price>
+    <couples-eb-price type="decimal">2499000.0</couples-eb-price>
+    <enterprise-11plus-price type="decimal" nil="true"/>
+    <enterprise-6plus-price type="decimal">2269000.0</enterprise-6plus-price>
     <country>
       <created-at type="datetime">2012-04-26T11:14:41Z</created-at>
       <id type="integer">171</id>

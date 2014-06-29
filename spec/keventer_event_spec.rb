@@ -64,7 +64,12 @@ describe KeventerEvent do
   it "should have a sepyme_enabled flag" do
     @kevent.sepyme_enabled = false
     @kevent.sepyme_enabled.should == false
-  end  
+  end
+
+  it "should have a show_pricing flag" do
+    @kevent.show_pricing = false
+    @kevent.show_pricing.should == false
+  end
   
   it "should have a place" do
     @kevent.place = "Kleer, Tucuman 373 1er Piso"
@@ -100,6 +105,31 @@ describe KeventerEvent do
   it "should have a eb_price" do
     @kevent.eb_price = 12.0
     @kevent.eb_price.should == 12.0
+  end
+
+  it "should have a couples_eb_price" do
+    @kevent.couples_eb_price = 12.0
+    @kevent.couples_eb_price.should == 12.0
+  end
+
+  it "should have a business_eb_price" do
+    @kevent.business_eb_price = 12.0
+    @kevent.business_eb_price.should == 12.0
+  end
+
+  it "should have a business_price" do
+    @kevent.business_price = 12.0
+    @kevent.business_price.should == 12.0
+  end
+
+  it "should have a enterprise_6plus_price" do
+    @kevent.enterprise_6plus_price = 12.0
+    @kevent.enterprise_6plus_price.should == 12.0
+  end
+
+  it "should have a enterprise_11plus_price" do
+    @kevent.enterprise_11plus_price = 12.0
+    @kevent.enterprise_11plus_price.should == 12.0
   end
   
   it "should have a discount" do

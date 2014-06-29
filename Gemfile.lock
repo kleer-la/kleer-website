@@ -38,6 +38,8 @@ GEM
     libxml-ruby (2.7.0)
     mime-types (2.0)
     mini_portile (0.5.2)
+    money (6.1.1)
+      i18n (~> 0.6.4)
     multi_json (1.8.2)
     multi_test (0.0.2)
     netrc (0.7.7)
@@ -109,6 +111,7 @@ DEPENDENCIES
   i18n
   json
   libxml-ruby
+  money
   oauth
   prawn
   redcarpet

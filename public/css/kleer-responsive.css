@@ -99,6 +99,10 @@
 		right: -200px;
 	}
 
+	.contenedor-generico {
+		top: -50px;
+	}
+
 	.slide-header-generico {
 		height: 200px;
 	}
@@ -140,6 +144,10 @@
 		margin-top: 200px;
 	}
 
+	.contenedor-generico {
+		top: -50px;
+	}
+
 	.slide-header-generico {
 		height: 170px;
 	}
@@ -150,6 +158,18 @@
 
 	.slide-evento-logistics {
 		max-height: 400px;
+	}
+
+	.evento-title-container > h2, h2 {
+		font-size: 18pt;
+	}
+
+	.evento-title-container > h3, h3 {
+		font-size: 14pt;
+	}
+
+	body {
+		font-size: 10pt;
 	}
 
 }

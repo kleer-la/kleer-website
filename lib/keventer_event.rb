@@ -3,7 +3,9 @@ class KeventerEvent
                   :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place, :sepyme_enabled,
                   :human_date, :start_time, :end_time, :address, :list_price, :eb_price, :eb_end_date, 
                   :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event, 
-                  :time_zone_name, :time_zone
+                  :time_zone_name, :time_zone, :show_pricing,
+                  :couples_eb_price, :business_eb_price, :business_price, 
+                  :enterprise_6plus_price, :enterprise_11plus_price
   
   def initialize
     @capacity = 0
@@ -25,9 +27,16 @@ class KeventerEvent
     @keventer_connector = nil
     @human_date
     @address = ""
+
+    @show_pricing = false
     @list_price = 0.0
     @eb_price = 0.0
     @eb_end_date = nil
+    @couples_eb_price = 0.0
+    @business_eb_price = 0.0
+    @business_price = 0.0
+    @enterprise_6plus_price = 0.0
+    @enterprise_11plus_price = 0.0
     @currency_iso_code = ""
 
     @is_webinar = false

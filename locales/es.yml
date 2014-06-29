@@ -178,9 +178,10 @@ es:
         free: "Evento Gratuito"
         wanna_join: "¿Más información?"
         location: "Lugar"
-        time: "%{starts} a %{ends}hr"
+        time: "%{starts} a %{ends}"
         date: "Fecha"
         hour: "Hora"
+        pricing: "Inversión"
         important: "Importante"
         tabs:
             description: "Descripción"

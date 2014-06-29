@@ -164,10 +164,11 @@ en:
        free: "Free event"
        wanna_join: "More information?"
        location: "Venue"
-       time: "%{starts} to %{ends}hs"
+       time: "%{starts} to %{ends}"
        date: "Date"
        important: "Important"
        hour: "Time"
+       pricing: "Pricing"
        tabs:
            description: "Description"
            target: "Who should attend?"

@@ -490,6 +490,12 @@ h2 {
 	max-height: 100px;
 }
 
+.slide-evento-pricing {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 10pt;
+}
+
 .slide-evento-gratuito {
 	padding-top: 20px;
 	padding-bottom: 20px;

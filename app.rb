@@ -6,6 +6,7 @@ require 'sinatra/flash'
 require 'redcarpet'
 require 'json'
 require 'i18n'
+require 'money'
 
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
@@ -40,6 +41,15 @@ helpers do
 
   def month_es(month_en)
     MONTHS_ES[month_en]
+  end
+
+  def currency_symbol_for( iso_code )
+    currency = Money::Currency.table[iso_code.downcase.to_sym] unless iso_code.nil?
+    if currency.nil?
+      ""
+    else
+      currency[:symbol]
+    end
   end
   
 end

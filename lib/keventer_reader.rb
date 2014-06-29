@@ -291,6 +291,18 @@ class KeventerReader
     event.registration_link = xml_keventer_event.find_first('registration-link').content
     event.specific_conditions = xml_keventer_event.find_first('specific-conditions').content
     event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
+    
+    event.show_pricing = to_boolean( xml_keventer_event.find_first('show-pricing').content )
+    event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
+    event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
+    if event.eb_price > 0.0  
+      event.eb_end_date = xml_keventer_event.find_first('eb-end-date').content.nil? ? nil : Date.parse( xml_keventer_event.find_first('eb-end-date').content )
+    end
+    event.couples_eb_price = xml_keventer_event.find_first('couples-eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('couples-eb-price').content.to_f
+    event.business_eb_price = xml_keventer_event.find_first('business-eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('business-eb-price').content.to_f
+    event.business_price = xml_keventer_event.find_first('business-price').content.nil? ? 0.0 : xml_keventer_event.find_first('business-price').content.to_f
+    event.enterprise_6plus_price = xml_keventer_event.find_first('enterprise-6plus-price').content.nil? ? 0.0 : xml_keventer_event.find_first('enterprise-6plus-price').content.to_f
+    event.enterprise_11plus_price = xml_keventer_event.find_first('enterprise-11plus-price').content.nil? ? 0.0 : xml_keventer_event.find_first('enterprise-11plus-price').content.to_f
 
     event.is_webinar = to_boolean( xml_keventer_event.find_first('is-webinar').content )
     #event.time_zone_name = xml_keventer_event.find_first('time-zone-name').content
@@ -303,11 +315,6 @@ class KeventerReader
     event.is_community_event = xml_keventer_event.find_first('visibility-type').content == 'co'
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
-    event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
-    event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
-    if event.eb_price > 0.0  
-      event.eb_end_date = xml_keventer_event.find_first('eb-end-date').content.nil? ? nil : Date.parse( xml_keventer_event.find_first('eb-end-date').content )
-    end
     event.currency_iso_code = xml_keventer_event.find_first('currency-iso-code').content
     
     trainer = Professional.new

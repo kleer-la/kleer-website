@@ -18,6 +18,7 @@ gem 'prawn'
 gem 'curb'
 gem 'tzinfo'
 gem 'tzinfo-data'
+gem 'money'
 
 
 group :development do
