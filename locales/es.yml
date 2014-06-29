@@ -180,7 +180,7 @@ es:
         location: "Lugar"
         time: "%{starts} a %{ends}"
         date: "Fecha"
-        hour: "Hora"
+        hour: "Horario"
         pricing: "Inversión"
         important: "Importante"
         tabs:
