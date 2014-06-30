@@ -93,6 +93,7 @@ es:
                 text: "<p>Puedes contactarnos a <a href='mailto:hola@kleer.la'>hola@kleer.la</a> para solicitarnos una  cotización.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
     publishing: 
         title: "Publicamos"
+        description: "COMPARTIMOS CONOCIMIENTOS Y EXPERIENCIAS. ¡AYUDANOS A CORRER LA VOZ!"
         others:
             title: "Otras publicaciones"
         buy:
