@@ -1,22 +1,31 @@
-<style>
-	body {
-		background: url(/img/fondos/fondo-08.jpg) no-repeat center center fixed; 
-	}
-</style>
-<script type="text/javascript" src="/js/jquery.js"/></script>
-
-<div class="row">
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1>Sepyme</h1>
-		<p>Si estás en Argentina pensando en capacitarte y formás parte de una pequeña o mediana empresa, podés aprovechar el incentivo que está ofreciendo la Secretaría de la Pequeña y Mediana Empresa (SEPyME) del Ministerio de Industria de la Nación para participar en cursos abiertos o In-Company.</p>
-		<p>En pocos pasos podés presentar online tu proyecto de entrenamiento ante la Secretaría para cualquiera de los cursos abiertos en Kleer y al finalizar la capacitación podrás solicitar a SEPyME un bono fiscal por un monto que va del 70% al 90% de la inversión. <br/>Tenés tiempo hasta el <strong>28 de junio</strong> o hasta que se haya consumido el cupo presupuestario que tiene disponible SEPyME para todo el país.</p>
-		<p>Preparamos este video, que explica el concepto de <strong>Sepyme</strong>. Si necesitás más información, podés escribirnos a <a href="mailto:sepyme@kleer.la">sepyme@kleer.la</a>, con mucho gusto responderemos todas tus dudas.</p>
-		&nbsp;
-		<center><iframe width="600" height="400" src="http://www.youtube.com/embed/GvCRXwOyk3w" frameborder="0" allowfullscreen></iframe></center>
-		&nbsp;
-	</div>	
-	<div class="span3" style="text-align:center;">  
-		<img src="/img/logos/logo-05.png">
-		<%= erb :twitter_box, :layout => false %>
+<div class="container-fluid fondo-amarillo slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1>Sepyme</h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
 	</div>
+</div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 no-hpadding contenedor-main-izq">
+			<p>Si estás en Argentina pensando en capacitarte y formás parte de una pequeña o mediana empresa, podés aprovechar el incentivo que está ofreciendo la Secretaría de la Pequeña y Mediana Empresa (SEPyME) del Ministerio de Industria de la Nación para participar en cursos abiertos o In-Company.</p>
+			<p>En pocos pasos podés presentar online tu proyecto de entrenamiento ante la Secretaría para cualquiera de los cursos abiertos en Kleer y al finalizar la capacitación podrás solicitar a SEPyME un bono fiscal por un monto que va del 70% al 90% de la inversión. <br/>Tenés tiempo hasta el <strong>28 de junio</strong> o hasta que se haya consumido el cupo presupuestario que tiene disponible SEPyME para todo el país.</p>
+			<p>Preparamos este video, que explica el concepto de <strong>Sepyme</strong>. Si necesitás más información, podés escribirnos a <a href="mailto:sepyme@kleer.la">sepyme@kleer.la</a>, con mucho gusto responderemos todas tus dudas.</p>
+			&nbsp;
+			<center><iframe width="600" height="400" src="http://www.youtube.com/embed/GvCRXwOyk3w" frameborder="0" allowfullscreen></iframe></center>
+			&nbsp;
+
+		</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
 </div>

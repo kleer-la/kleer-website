@@ -1,47 +1,57 @@
-<script type="text/javascript" src="/js/jquery.js"/></script>
-<style>
-	body {
-		background: url(/img/fondos/fondo-06.jpg) no-repeat center center fixed; 
-	}
-</style>
-<div class="row">
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h2>Facturación y pagos en Argentina</h2>
-		<p>El objetivo de este documento es clarificar el procedimiento de facturación y pago de los servicios prestados por Kleer S.R.L. realizados y facturados en Argentina.</p>
-		<h3>Facturación a Personas</h3>
-		<p>Para personas físicas, Kleer emitirá una factura de tipo "B". Para ello se requiere: Nombre completo, Dirección y DNI.</p>
-
-		<h3>Facturación a Empresas</h3>
-		<p>Para personas jurídicas Kleer emitirá una factura de tipo "A" . 
-			<br/>Para ello se requiere: Razón Social, CUIT y condición ante IVA.</p>
-
-
-		<h3>Instrucciones para el pago</h3>
-		<p>Kleer solo puede recibir pagos en Argentina por depósito o transferencia bancarias, cheque o tarjeta de crédito.</p>
-		<p>Depósitos y transferencias:</p>
-		<ul>
-			<li>Banco: <strong>HSBC</strong></li>
-			<li>Sucusal: <strong>300 - Casa Central</strong></li>
-			<li>Titular: <strong>Kleer S.R.L.</strong></li>
-			<li>CUIT: <strong>33-71191219-9</strong></li>
-			<li>CBU: <strong>1500054100030035078514</strong></li>
-			<li>Cta.Cte.$: <strong>3003507851</strong></li>
-		</ul>
-		<p>Cheques:</p>
-		<ul>
-			<li>Cruzado</li>
-			<li>A nombre de: <strong>Kleer S.R.L.</strong></li>
-			<li>Con la leyenda: <strong>- NO A LA ORDEN -</strong></li>
-		</ul>
-		<p>Tarjeta de Crédito:</p>
-		<ul>
-			<li>A través de MercadoPago</li>
-			<li>Para realizar el pago, por favor <a href="mailto:&#101;&#110;&#116;&#114;&#101;&#110;&#097;&#109;&#111;&#115;&#046;&#097;&#114;&#064;&#107;&#108;&#101;&#101;&#114;&#046;&#108;&#097;">comunicarse con nosotros</a> indicando el curso y cuantas personas deseas abonar, para que generemos el pago y te pasemos el link correspondiente.</li>
-		</ul>
-
-	</div>	
-	<div class="span3" style="text-align:center;">  
-		<img src="/img/logos/logo-04.png">
-		<%= erb :_twitter_box, :layout => false %>
+<div class="container-fluid fondo-amarillo slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1>Preguntas Frecuentes</h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
 	</div>
+</div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 no-hpadding contenedor-main-izq">
+			<h2>Facturación y pagos en Argentina</h2>
+			<p>El objetivo de este documento es clarificar el procedimiento de facturación y pago de los servicios prestados por Kleer S.R.L. realizados y facturados en Argentina.</p>
+			<h3>Facturación a Personas</h3>
+			<p>Para personas físicas, Kleer emitirá una factura de tipo "B". Para ello se requiere: Nombre completo, Dirección y DNI.</p>
+
+			<h3>Facturación a Empresas</h3>
+			<p>Para personas jurídicas Kleer emitirá una factura de tipo "A" . 
+				<br/>Para ello se requiere: Razón Social, CUIT y condición ante IVA.</p>
+
+
+			<h3>Instrucciones para el pago</h3>
+			<p>Kleer solo puede recibir pagos en Argentina por depósito o transferencia bancarias, cheque o tarjeta de crédito.</p>
+			<p>Depósitos y transferencias:</p>
+			<ul>
+				<li>Banco: <strong>HSBC</strong></li>
+				<li>Sucusal: <strong>300 - Casa Central</strong></li>
+				<li>Titular: <strong>Kleer S.R.L.</strong></li>
+				<li>CUIT: <strong>33-71191219-9</strong></li>
+				<li>CBU: <strong>1500054100030035078514</strong></li>
+				<li>Cta.Cte.$: <strong>3003507851</strong></li>
+			</ul>
+			<p>Cheques:</p>
+			<ul>
+				<li>Cruzado</li>
+				<li>A nombre de: <strong>Kleer S.R.L.</strong></li>
+				<li>Con la leyenda: <strong>- NO A LA ORDEN -</strong></li>
+			</ul>
+			<p>Tarjeta de Crédito:</p>
+			<ul>
+				<li>A través de MercadoPago</li>
+				<li>Para realizar el pago, por favor <a href="mailto:&#101;&#110;&#116;&#114;&#101;&#110;&#097;&#109;&#111;&#115;&#046;&#097;&#114;&#064;&#107;&#108;&#101;&#101;&#114;&#046;&#108;&#097;">comunicarse con nosotros</a> indicando el curso y cuantas personas deseas abonar, para que generemos el pago y te pasemos el link correspondiente.</li>
+			</ul>
+
+		</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
 </div>
