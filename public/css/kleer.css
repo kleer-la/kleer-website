@@ -203,8 +203,8 @@ h2 {
 	height: auto;
 	font-weight: bold;
 	transform:rotate(5deg);
-	-ms-transform:rotate(5deg); /* IE 9 */
-	-webkit-transform:rotate(5deg); /* Opera, Chrome, and Safari */
+	-ms-transform:rotate(5deg);
+	-webkit-transform:rotate(5deg);
 	margin-left: 5px;
 	box-shadow:5px 5px #a4a4a4;
 	text-align: center;
@@ -213,8 +213,8 @@ h2 {
 .btn-kleer {
 	box-shadow:5px 5px #a4a4a4;	
 	transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); /* IE 9 */
-	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+	-ms-transform:rotate(-2deg);
+	-webkit-transform:rotate(-2deg);
 	border-radius: 0px;
 	color: #000;
 	font-weight: bold;
@@ -322,18 +322,18 @@ h2 {
 	background-color: #fff;
 	font-size: 11pt;
 	box-shadow: 10px 10px #a44f70;
-	transform:rotate(3deg);
-	-ms-transform:rotate(3deg); /* IE 9 */
-	-webkit-transform:rotate(3deg); /* Opera, Chrome, and Safari */
+	/* transform:rotate(3deg);
+	-ms-transform:rotate(3deg);
+	-webkit-transform:rotate(3deg); */
 }
 
 .carousel-control {
 	color: #1c1c1c;
 	top: 50%;
 	box-shadow:5px 5px #a4a4a4;	
-	transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); /* IE 9 */
-	-webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
+	/* transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); 
+	-webkit-transform:rotate(-2deg); */
 	border-radius: 0px;
 	color: #000;
 	font-weight: bold;
@@ -592,9 +592,9 @@ h2 {
 
 .side-cursos {
 	color: #fff;
-	transform:rotate(4deg);
+	/* transform:rotate(4deg);
 	-ms-transform:rotate(4deg);
-	-webkit-transform:rotate(4deg);
+	-webkit-transform:rotate(4deg); */
 	z-index: 10;
 }
 
