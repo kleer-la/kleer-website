@@ -57,7 +57,11 @@ class DTHelper
     line = "<a "
     line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
     line += "\">" + event.event_type.name + "</a><br/>"
-    line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country
+    if event.is_online
+      line += "<img src=\"/img/flags/ol.png\"/> Online"
+    else
+      line += "<img src=\"/img/flags/" + event.country_code.downcase + ".png\"/> " + event.city + ", " + event.country
+    end
     result << line
     
     if registration_btn
