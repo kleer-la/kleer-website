@@ -305,7 +305,7 @@ class KeventerReader
     event.enterprise_11plus_price = xml_keventer_event.find_first('enterprise-11plus-price').content.nil? ? 0.0 : xml_keventer_event.find_first('enterprise-11plus-price').content.to_f
 
     event.is_webinar = to_boolean( xml_keventer_event.find_first('is-webinar').content )
-    #event.time_zone_name = xml_keventer_event.find_first('time-zone-name').content
+    event.mode = xml_keventer_event.find_first('mode').content
 
     if xml_keventer_event.find_first('sepyme-enabled').content == ""
       event.sepyme_enabled = false

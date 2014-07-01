@@ -5,7 +5,7 @@ class KeventerEvent
                   :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event, 
                   :time_zone_name, :time_zone, :show_pricing,
                   :couples_eb_price, :business_eb_price, :business_price, 
-                  :enterprise_6plus_price, :enterprise_11plus_price
+                  :enterprise_6plus_price, :enterprise_11plus_price, :mode
   
   def initialize
     @capacity = 0
@@ -45,6 +45,19 @@ class KeventerEvent
 
     @specific_conditions = ""
     @is_community_event = false
+    @mode = ""
+  end
+
+  def is_online
+    self.mode == "ol"
+  end
+
+  def is_classroom
+    self.mode == "cl"
+  end
+
+  def is_blended_learning
+    self.mode == "bl"
   end
   
   def discount

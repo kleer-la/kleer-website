@@ -4,7 +4,15 @@
 			<div class="col-md-7">
 				<div class="evento-title-container">
 					<h2><%= @event.event_type.name %></h2>
-					<h3><%= @event.is_webinar ? "Webinar" : "Presencial" %>, <%= @event.event_type.duration%> horas</h3>
+					<h3>
+					<% if @event.is_online %>
+						Online
+					<% elsif @event.is_classroom %>
+						Presencial
+					<% elsif @event.is_classrooom %>
+						Blended Learning
+					<% end %>
+					, <%= @event.event_type.duration%> horas</h3>
 					<p><%= @event.event_type.elevator_pitch %></p>
 
 					<% if @event.event_type.surveyed_count > 20 && !@event.event_type.average_rating.nil? %>
@@ -117,8 +125,8 @@ end
 				</div>
 				<div class="col-md-9 col-sm-10 no-hpadding">
 					<strong><%=t("event.location")%>:</strong><br/>
-					<% if @event.is_webinar %>
-						<%=@event.place%><br/>
+					<% if @event.is_online %>
+						Online<br/>
 					<% else %>
 						<%=@event.place%><br/>
 						<%=@event.address%><br/>
@@ -149,8 +157,8 @@ end
 				<div class="col-md-9 col-sm-8 no-hpadding">
 					<strong><%=t("event.hour")%>:</strong><br/>
 					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%>
-					<% if @event.is_webinar %>
-						<br/>Zona Horaria: <%=@event.time_zone_name%>
+					<% if @event.is_online %>
+						<br/><%=@event.place%>
 					<% end %>
 				</div>
 			</div>

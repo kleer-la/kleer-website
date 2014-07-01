@@ -90,6 +90,11 @@ describe KeventerEvent do
     @kevent.country_code = "ar"
     @kevent.country_code.should == "ar"
   end
+
+  it "should have a mode" do
+    @kevent.mode = "ar"
+    @kevent.mode.should == "ar"
+  end
   
   it "should have an event type" do
       an_event_type = KeventerEventType.new

@@ -18,6 +18,7 @@
     <is-sold-out type="boolean">false</is-sold-out>
     <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
+  <mode>cl</mode>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
     <show-pricing type="boolean">true</show-pricing>
@@ -112,6 +113,7 @@ CSC, PMP, PMI-ACP</bio>
     <is-sold-out type="boolean">false</is-sold-out>
     <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
+  <mode>cl</mode>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">822.0</list-price>
     <show-pricing type="boolean">true</show-pricing>
