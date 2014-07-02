@@ -484,6 +484,11 @@ h2 {
 	text-align: center;
 }
 
+.evento-description-container img {
+	height: auto;
+	max-width: 100%;
+}
+
 .slide-evento-logistics {
 	padding-top: 10px;
 	padding-bottom: 10px;
