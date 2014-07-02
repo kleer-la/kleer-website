@@ -285,7 +285,8 @@ h2 {
 }
 
 .book-description {
-	min-height: 230px;
+	min-height: 160px;
+	font-size: 10pt;
 }
 
 .slide-home-comunidad-logos-ch {
