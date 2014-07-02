@@ -76,6 +76,8 @@ en:
     training:
         title: "Public Courses"
         description: "WE ORGANIZE BOTH PUBLIC AND PRIVATE COURSES.<br/>OUR CERTIFICATIONS ARE ENDORSED BY THE SCRUM ALLIANCE."
+        incompany: "WE CAN TEACH ALL OUR COURSES IN YOUR ORGANIZATION"
+        more_info: "More Information"
     community:
         title: "Community Events"
     coaching:
@@ -190,6 +192,8 @@ en:
        missing_elevator_pitch: "Please, fill the elevator pitch field for this event type."       
     contact:
         title: "Contact"
+        contact_us: "Contact us"
+        training_email: "training@kleer.us"
         newsletter_subscription: "Subscribe to our newsletter"
         locations:
             argentina:

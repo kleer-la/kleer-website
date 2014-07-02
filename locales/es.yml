@@ -76,6 +76,8 @@ es:
     training:
         title: "Cursos Abiertos"
         description: "ORGANIZAMOS ENTRENAMIENTOS PÚBLICOS Y PRIVADOS.<br/>NUESTRAS CERTIFICACIONES ESTÁN AVALADAS POR LA SCRUM ALLIANCE."
+        incompany: "PODEMOS REALIZAR LOS CURSOS EN TU ORGANIZACIÓN"
+        more_info: "Más Información"
     community:
         title: "Eventos Comunitarios"
     coaching:
@@ -204,6 +206,8 @@ es:
         missing_elevator_pitch: "Por favor, completar el elevator pitch del tipo de evento."
     contact:
         title: "Contacto"
+        contact_us: "Contactanos"
+        training_email: "entrenamos@kleer.la"
         newsletter_subscription: "Suscríbete a nuestra newsletter"
         locations:
             argentina:
