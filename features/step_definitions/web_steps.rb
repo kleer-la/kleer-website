@@ -371,3 +371,11 @@ Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
       element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
   end
 end
+
+Then(/^I should see the Argentinian fiscal data QR$/) do
+  response_body.should have_selector("img[src='http://www.afip.gob.ar/images/f960/DATAWEB.jpg']")
+end
+
+Then(/^I should see the Argentinian fiscal data link$/) do
+  response_body.should have_selector("a[href='http://qr.afip.gob.ar/?qr=5DjfcAnZHIhtGI65mHIRlA,,']")
+end
