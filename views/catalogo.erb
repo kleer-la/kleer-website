@@ -1,66 +1,96 @@
-<style>
-	.cover {
-		background-color: #80e2ff;
-		font-family: "";
-		vertical-align: middle;
-	}
-	.back-cover {
-		background-color: #80e2ff;
-	}
-	.kleeros {
-		text-align: center;
-	}
-	.event_type {
-		font-size: 10pt;
-	}
-	.event_type h2 {
-		border-bottom: solid 1px #CCCCCC;
-	}
-</style>
-
-<div class="book">
-    <div class="page">
-        <div class="subpage cover">
-			<img src="/img/logos/logo-kleer.png"/>
-			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			<h1>Catálogo de Entrenamientos</h1>
-			<p><a href="http://kleer.la/catalogo">kleer.la/catalogo</a></p>
-			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			<sup><em><%=@printed%></em></sup>
-		</div>    
-    </div>
-
-	<div class="page">
-        <div class="subpage">
-			<% @event_types.each_with_index do |event_type, index| %>
-				<div class="event_type">
-					<h2><%=event_type.name%></h2>
-					<p><%=event_type.elevator_pitch%></p>
-				</div>
-				<% if (index+1)%4==0 && index<@event_types.size-1 %>
-						</div>    
-			    	</div>
-					<div class="page">
-				        <div class="subpage">
-				<% end %>
-				
-			<% end %>
-		</div>    
-    </div>
-
-    <div class="page">
-        <div class="subpage back-cover">
-			<br/><br/><br/><br/><br/>
-			<div class="kleeros">
-				<img src="/img/kleeros/duo.png"/>
+<div class="container-fluid fondo-rosa">
+	<div class="container">
+		<div class="container-fluid container-header-generico container-header-cursos">
+			<div class="col-md-12">
+				<h1><%=t("catalog.title")%></h1>
+				<%=t("catalog.description")%>
 			</div>
-			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-			<a href="http://kleer.la">kleer.la</a><br/>
-			<a href="mailto:hola@kleer.la">hola@kleer.la</a><br/>
-			<a href="http://facebook.com/kleer.la">facebook/kleer.la</a><br/>
-			<a href="https://twitter.com/kleer_la">@kleer_la</a><br/>
-		</div>    
-    </div>
+		</div>
+	</div>
+	&nbsp;<br/>
+	<div class="container">
+		<div class="container-fluid">
+			<% @categories.each do |category| %>
+				<div class="col-md-4">
+					<div class="well categoria-<%= category.codename %>">
+						<h2><%= category.name %></h2>
+						<div class="list-group">
+							<% category.event_types.sort_by { |et| et.name}.each do |event_type| %>
+							  <a href="/<%=session[:locale]%>/categoria/<%=category.codename%>/cursos/<%= event_type.uri_path%>" class="list-group-item">
+							    <h3 class="list-group-item-heading"><%=event_type.name%></h3>
+							    <p class="list-group-item-text">
+							    	<%=event_type.duration%> horas.
+							    	<% if event_type.surveyed_count > 20 && !event_type.average_rating.nil? %>
+				                      &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
+				                        <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
+				                      </div>
+				                      <script type="text/javascript">
+				                        $(document).ready(function(){
+				                            $('#rating<%= event_type.id %>').tooltip();
+				                          });
+				                      </script>
+				                    <% end %>
+							    </p>
+							  </a>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
 
+<div class="container-fluid fondo-blanco experiencia-kleer">
+	<div class="container">
+		<h2>Esta es la experiencia Kleer</h2>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>Con los profesionales más reconocidos de Latinoamérica</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>100% Vivenciales</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>Aprendizaje que perdura</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+	    		<h3>Motivantes</h3>
+	    		<p>Lorem ipsum dolor sit amet, ne everti propriae tincidunt quo. Te nec vocibus maiorum. Cu tacimates scriptorem sed, qui doctus consectetuer ut, accusata conceptam delicatissimi ei mea. Tempor salutatus vis eu, nam everti causae sensibus at. Pertinax volutpat urbanitas ex sit, mea mucius verterem te. Vis ut mutat efficiendi.</p>
+
+	    		<p>Ne postea recusabo nam. Labitur epicurei ne sea, et vix vero mentitum posidonium. Ex eam exerci graeci eruditi, id choro libris sanctus qui. Vis ullum eruditi te.</p>
+  			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid fondo-rosa">
+	<div class="container">
+		&nbsp;<br/>
+		<%=t('training.incompany')%>&nbsp;&nbsp;
+		<a href="http://media.kleer.la/kleer-entrenamos-2014.pdf" class="btn btn-info btn-kleer"><%=t('training.more_info')%></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:<%=t('contact.training_email')%>" class="btn btn-info btn-kleer"><%=t('contact.contact_us')%></a>
+		<br/>&nbsp;
+		<br/>&nbsp;
+		<br/>&nbsp;
+		<br/>&nbsp;
+	</div>
 </div>

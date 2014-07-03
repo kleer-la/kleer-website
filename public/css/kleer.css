@@ -662,3 +662,15 @@ h2 {
 	-webkit-transform:rotate(-2deg);
 	box-shadow:5px 5px #aeaeae;
 }
+
+.categoria-organizaciones {
+	background-color: #56f7cd;
+}
+
+.categoria-clientes {
+	background-color: #88cddc;
+}
+
+.categoria-productos {
+	background-color: #fef290;
+}

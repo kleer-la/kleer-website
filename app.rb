@@ -109,14 +109,18 @@ get '/entrenamos' do
  	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
   @unique_countries = @@keventer_reader.unique_countries_for_commercial_events()
-  @featured = @@keventer_reader.category('featured-courses')
 	erb :entrenamos
 end
 
 get '/acompanamos' do
-  @active_tab_acompanamos = "active"
-	@page_title += " | Acompañamos"
-	erb :acompanamos
+  redirect "/coaching", 301 # permanent redirect
+end
+
+get '/coaching' do
+  @active_tab_coaching = "active"
+	@page_title += " | Coaching"
+  @categories = @@keventer_reader.categories
+	erb :coaching
 end
 
 get '/comunidad' do
@@ -218,11 +222,17 @@ get '/entrenamos/evento/:event_id_with_name' do
 end
 
 get '/catalogo' do
-  pdf_catalog 
-  redirect '/'
+  @active_tab_entrenamos = "active"
+  #pdf_catalog 
+  @page_title += " | Catálogo"
+  @categories = @@keventer_reader.categories
+
+  erb :catalogo
 end
 
 get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
+  @active_tab_entrenamos = "active"
+  
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
 
