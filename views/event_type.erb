@@ -29,7 +29,7 @@
             <img src="/img/personajes/nps-eventos.png" height="400">
           </div>
           <div class="col-md-5 evento-nps">
-            <h2><%=@event_type.promoter_count%>/<%=@event_type.surveyed_count%></h2>
+            <h2><%=@event_type.promoter_count%> de <%=@event_type.surveyed_count%></h2>
           </div>
           <div class="col-md-6 evento-nps-explanation">
             <a href="http://www.netpromoter.com/why-net-promoter/know/" target="_blank">Net Promoter Score</a>: <strong><%=@event_type.net_promoter_score%></strong></h2>
@@ -146,14 +146,14 @@ end
   </div>
 </div>
 
+<div class="container-fluid fondo-pano pano-3"></div>
+
 <div class="container-fluid fondo-amarillo slide-event-type-category-name">
   <div class="container">
     <%= @event_type.name %> te ayuda a lograr
     <h2><%=@category.name%></h2>
   </div>
 </div>
-
-<div class="container-fluid fondo-panramica-3"></div>
 
 <% if !@event_type.faqs.nil? && @event_type.faqs.strip != "" %>
 <div class="container-fluid fondo-blanco">
@@ -195,6 +195,6 @@ end
 </div>
 <% end %>
 
-<div class="container-fluid fondo-panramica-2"></div>
+<div class="container-fluid fondo-pano pano-5"></div>
 
 

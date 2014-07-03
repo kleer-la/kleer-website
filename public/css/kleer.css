@@ -148,28 +148,35 @@ h2 {
 	background-color: #1c1c1c;
 }
 
-.fondo-panramica-1 {
+.fondo-pano {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 215px;
+}
+
+.pano-1 {
 	background-image: url('/img/fondos/panoramica-1.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 170px;
 }
 
-.fondo-panramica-2 {
+.pano-2 {
 	background-image: url('/img/fondos/panoramica-2.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 220px;
 }
 
-.fondo-panramica-3 {
+.pano-3 {
 	background-image: url('/img/fondos/panoramica-3.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 150px;
+}
+
+.pano-5 {
+	background-image: url('/img/fondos/panoramica-5.jpg');
+}
+
+.pano-6 {
+	background-image: url('/img/fondos/panoramica-6.jpg');
+}
+
+.pano-9 {
+	background-image: url('/img/fondos/panoramica-9.jpg');
 }
 
 .creemos {
@@ -569,11 +576,13 @@ h2 {
 .evento-nps > h2 {
 	color: #fff;
 	font-weight: normal;
+	font-size: 17pt;
+	text-transform: none;
 }
 
 .evento-nps {
 	position: relative;
-	top: -370px;
+	top: -350px;
 	right: -195px;
 	font-size: 15pt;
 }
@@ -688,6 +697,12 @@ h2 {
 	box-shadow:5px 5px #aeaeae;
 }
 
+.categoria {
+	border-radius: 0px;
+	border: 0;
+	box-shadow: 10px 10px #a44f70;
+}
+
 .categoria-organizaciones {
 	background-color: #56f7cd;
 }
@@ -698,4 +713,13 @@ h2 {
 
 .categoria-productos {
 	background-color: #fef290;
+}
+
+.categoria > .list-group > .list-group-item > .list-group-item-heading {
+	font-size: 12pt;
+	text-transform: uppercase;
+}
+
+.categoria > .list-group > .list-group-item > .list-group-item-text {
+	font-size: 10pt;
 }

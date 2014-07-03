@@ -64,7 +64,7 @@
 							<img src="/img/personajes/nps-eventos.png" height="400">
 						</div>
 						<div class="col-md-5 evento-nps">
-							<h2><%=@event.event_type.promoter_count%>/<%=@event.event_type.surveyed_count%></h2>
+							<h2><%=@event.event_type.promoter_count%> de <%=@event.event_type.surveyed_count%></h2>
 						</div>
 						<div class="col-md-6 evento-nps-explanation">
 							<a href="http://www.netpromoter.com/why-net-promoter/know/" target="_blank">Net Promoter Score</a>: <strong><%=@event.event_type.net_promoter_score%></strong></h2>
@@ -343,8 +343,6 @@ end
 	</div>
 </div>
 
-<div class="container-fluid fondo-panramica-1"></div>
-
 <div class="container-fluid fondo-celeste">
 	<div class="container">
 		<div class="container-fluid col-md-10 col-md-offset-1">
@@ -382,6 +380,10 @@ end
 	</div>
 </div>
 
+<div class="container-fluid fondo-pano pano-6"></div>
+
+<%= erb :_slide_experiencia_kleer, :layout => false %>
+
 <div class="container-fluid fondo-amarillo">
 	<div class="container">
 		<div class="container-fluid col-md-10 col-md-offset-1 slide-evento-aprovecha">
@@ -416,8 +418,6 @@ end
 	</div>
 </div>
 
-<div class="container-fluid fondo-panramica-2"></div>
-
 <% if !@event.event_type.faqs.nil? && @event.event_type.faqs.strip != "" %>
 <div class="container-fluid fondo-blanco">
 	<div class="container">
@@ -431,4 +431,4 @@ end
 </div>
 <% end %>
 
-<div class="container-fluid fondo-panramica-3"></div>
+<div class="container-fluid fondo-pano pano-9"></div>
