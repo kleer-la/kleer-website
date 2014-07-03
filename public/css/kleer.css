@@ -360,6 +360,18 @@ h2 {
 	-webkit-transform:rotate(3deg); */
 }
 
+.carousel-publicamos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #fff;
+	font-size: 11pt;
+	box-shadow: 10px 10px #5a8991;
+}
+
+.carousel-publicamos > .carousel-indicators {
+	bottom: -40px;
+}
+
 .carousel-control {
 	color: #1c1c1c;
 	top: 50%;
