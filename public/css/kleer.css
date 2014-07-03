@@ -179,6 +179,18 @@ h2 {
 	background-image: url('/img/fondos/panoramica-9.jpg');
 }
 
+#panoramica-parallax-1 {
+	background-image: url('/img/fondos/panoramica-parallax-1.jpg');
+
+}
+
+.fondo-parallax {
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	height: 300px;
+}
+
 .creemos {
 	padding-top: 50px;
 }
