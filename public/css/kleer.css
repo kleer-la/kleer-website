@@ -671,6 +671,11 @@ h2 {
 	color: #fff;
 }
 
+.experiencia-kleer {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
 .experiencia-kleer > div > h2 {
 	text-align: center;
 }
@@ -771,4 +776,12 @@ h2 {
 
 .sombra-rosa {
 
+}
+
+. panel-no-border {
+	border: none;
+}
+
+.panel-no-shadow {
+	box-shadow: none;
 }
