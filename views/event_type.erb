@@ -59,7 +59,7 @@ end
 
 <div class="container-fluid fondo-blanco">
   <div class="container">
-    <div class="col-md-<%=description_column_width%>">
+    <div class="col-md-<%=description_column_width%> evento-description-container">
       <h2><%=t("event.tabs.description")%></h2>
       <%=@markdown_renderer.render( @event_type.description )%>
     </div>
@@ -154,61 +154,41 @@ end
 <% if !@event_type.faqs.nil? && @event_type.faqs.strip != "" %>
 <div class="container-fluid fondo-blanco">
   <div class="container">
-    <div class="container-fluid col-md-10 col-md-offset-1">
+    <div class="col-md-8">
       <h2><%=t("event.tabs.faqs")%></h2>
       <%=@markdown_renderer.render( @event_type.faqs )%>
       <br/>&nbsp;
       <br/>&nbsp;
     </div>
+    <div class="col-md-4">
+      &nbsp;
+      <div class="well categoria-<%= @category.codename %>">
+        Otros entrenamientos de esta categoría:<br/>&nbsp;
+        <div class="list-group">
+          <% @category.event_types.sort_by { |et| et.name}.each do |event_type| %>
+            <a href="/<%=session[:locale]%>/categoria/<%=@category.codename%>/cursos/<%= event_type.uri_path%>" class="list-group-item">
+              <h3 class="list-group-item-heading"><%=event_type.name%></h3>
+              <p class="list-group-item-text">
+                <%=event_type.duration%> horas.
+                <% if event_type.surveyed_count > 20 && !event_type.average_rating.nil? %>
+                          &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
+                            <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
+                          </div>
+                          <script type="text/javascript">
+                            $(document).ready(function(){
+                                $('#rating<%= event_type.id %>').tooltip();
+                              });
+                          </script>
+                        <% end %>
+              </p>
+            </a>
+          <% end %>
+        </div>
+      </div>
+      &nbsp;
+    </div>
   </div>
 </div>
 <% end %>
-
-<div class="container-fluid fondo-rosa slide-event-type-category-name">
-  <div class="container">
-    <h2><%=t("event.other_trainings")%></h2>
-  </div>
-  <div class="container-fluid col-md-10 col-md-offset-1">
-      <div class="panel-group" id="accordion">
-        &nbsp;
-        <% @category.event_types.sort_by { |et| et.name}.each do |event_type| %>
-        
-          <% if event_type.elevator_pitch != "" %>
-        
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
-                        <i class="icon-plus"></i>&nbsp;<%= event_type.name %></a>
-                      <% if event_type.surveyed_count > 20 && !event_type.average_rating.nil? %>
-                        &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
-                          <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
-                        </div>
-                        <script type="text/javascript">
-                        $(document).ready(function(){
-                            $('#rating<%= event_type.id %>').tooltip();
-                          });
-                        </script>
-                      <% end %>
-                  </h4>
-                </div>
-                <div id="collapse<%= event_type.id %>" class="panel-collapse collapse">
-                  <div class="panel-body">
-                      <%= event_type.elevator_pitch %>
-                <br/>
-                <a href="/<%=session[:locale]%>/categoria/<%=@category.codename%>/cursos/<%= event_type.uri_path%>"><%=t("category.see_more")%> >></a>
-                  </div>
-                </div>
-              </div>
-          
-          <% end %>
-          
-        <% end %>
-      </div>
-      &nbsp;<br/>
-      &nbsp;<br/>
-      &nbsp;<br/>
-    </div>
-</div>
 
 

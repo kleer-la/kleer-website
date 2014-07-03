@@ -119,22 +119,6 @@ end
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-6 no-hpadding">
-				<div class="col-md-3 col-sm-2 no-hpadding logistic-indicator">
-					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
-				</div>
-				<div class="col-md-9 col-sm-10 no-hpadding">
-					<strong><%=t("event.location")%>:</strong><br/>
-					<% if @event.is_online %>
-						Online<br/>
-					<% else %>
-						<%=@event.place%><br/>
-						<%=@event.address%><br/>
-						<%=@event.city%>, <%=@event.country%>
-					<% end %>
-				</div>
-			</div>
-
 			<div class="col-md-3 col-sm-3 no-hpadding">
 				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-calendar big-glyphicon"></span>
@@ -162,6 +146,23 @@ end
 					<% end %>
 				</div>
 			</div>
+
+			<div class="col-md-3 col-sm-6 no-hpadding">
+				<div class="col-md-3 col-sm-2 no-hpadding logistic-indicator">
+					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
+				</div>
+				<div class="col-md-9 col-sm-10 no-hpadding">
+					<strong><%=t("event.location")%>:</strong><br/>
+					<% if @event.is_online %>
+						Online<br/>
+					<% else %>
+						<%=@event.place%><br/>
+						<%=@event.address%><br/>
+						<%=@event.city%>, <%=@event.country%>
+					<% end %>
+				</div>
+			</div>
+
 		</div>
 		<!-- / small (sm), medium (md) y large (lg) logistics -->
 
@@ -193,23 +194,6 @@ end
 
 			<div class="col-xs-12">
 				<div class="col-xs-2 no-hpadding logistic-indicator">
-					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
-				</div>
-				<div class="col-xs-10 no-hpadding">
-					<strong><%=t("event.location")%>:</strong><br/>
-					<% if @event.is_webinar %>
-						<%=@event.place%><br/>
-					<% else %>
-						<%=@event.place%><br/>
-						<%=@event.address%><br/>
-						<%=@event.city%>, <%=@event.country%>
-					<% end %>
-					<br/>&nbsp;
-				</div>
-			</div>
-
-			<div class="col-xs-12">
-				<div class="col-xs-2 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-calendar big-glyphicon"></span>
 				</div>
 				<div class="col-xs-10 no-hpadding">
@@ -233,6 +217,23 @@ end
 					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%>
 					<% if @event.is_webinar %>
 						<br/>Zona Horaria: <%=@event.time_zone_name%>
+					<% end %>
+					<br/>&nbsp;
+				</div>
+			</div>
+
+			<div class="col-xs-12">
+				<div class="col-xs-2 no-hpadding logistic-indicator">
+					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
+				</div>
+				<div class="col-xs-10 no-hpadding">
+					<strong><%=t("event.location")%>:</strong><br/>
+					<% if @event.is_online %>
+						Online<br/>
+					<% else %>
+						<%=@event.place%><br/>
+						<%=@event.address%><br/>
+						<%=@event.city%>, <%=@event.country%>
 					<% end %>
 					<br/>&nbsp;
 				</div>
@@ -267,18 +268,18 @@ end
 					<strong><%=t("event.pricing")%>:</strong><br/>
 					<% if @event.eb_price > 0 %>
 						Pronto pago:
-						<%= currency_symbol_for( @event.currency_iso_code ) %>
+						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
                     	<%= sprintf("%05.2f", @event.eb_price) %>
                     	hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					<% if @event.couples_eb_price > 0 %>
 						Parejas:
-						<%= currency_symbol_for( @event.currency_iso_code ) %>
+						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
                     	<%= sprintf("%05.2f", @event.couples_eb_price) %>
                     	c/u hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					Full price:
-                    <%= currency_symbol_for( @event.currency_iso_code ) %>
+                    <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
                     <%= sprintf("%05.2f", @event.list_price) %>
                     <% if @event.business_eb_price > 0 %>
                     	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
@@ -299,18 +300,18 @@ end
 					<strong><%=t("event.pricing")%>:</strong><br/>
 					<% if @event.eb_price > 0 %>
 						Pronto pago:
-						<%= currency_symbol_for( @event.currency_iso_code ) %>
+						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
                     	<%= sprintf("%05.2f", @event.eb_price) %>
                     	hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					<% if @event.couples_eb_price > 0 %>
 						Parejas:
-						<%= currency_symbol_for( @event.currency_iso_code ) %>
+						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
                     	<%= sprintf("%05.2f", @event.couples_eb_price) %>
                     	c/u hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					Full price:
-                    <%= currency_symbol_for( @event.currency_iso_code ) %>
+                    <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
                     <%= sprintf("%05.2f", @event.list_price) %>
                     <% if @event.business_eb_price > 0 %>
                     	<br/>&nbsp;
