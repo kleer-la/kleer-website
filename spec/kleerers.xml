@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <trainers type="array">
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
 
 **Martín Alaimo**
@@ -26,6 +30,10 @@ http://www.martinalaimo.com/</bio>
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua. Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
 
 **Carlos Peix**
@@ -51,6 +59,10 @@ Ing. Electrónica, CSM, CSD
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Me apasiona el aprendizaje y la mejora, la calidad y los resultados. 
 &gt; Busco compartirlo con personas, equipos, organizaciones y comunidades. 
 &gt; Mis focos son el desarrollo de software y el testing.
@@ -77,6 +89,10 @@ Agile Coach &amp; Trainer
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Contamos con nuevas formas de trabajo que nos permiten ser mucho más efectivos e innovadores. 
 &gt; Mi trabajo es ayudar a personas y organizaciones a cumplir estos objetivos con altos niveles de satisfacción.
 
@@ -104,6 +120,10 @@ CSM y Especialista en Innovación
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
 &gt; Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
 
@@ -129,6 +149,10 @@ Agile Coach &amp; Trainer
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
 
 **Pablo Tortorella**
@@ -161,6 +185,10 @@ Ing. en Informática, CSM, CSD
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>&gt; Mi pasión es el desarrollo de software. Mi motivación es estimular el mejoramiento profesional de las personas.
 
 **Israel Antezana**
@@ -185,6 +213,10 @@ Agile Coach &amp; Trainer
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio>Creo firmemente que la mejora continua es la llave para tener equipos productivos y felices, y que ésta se lleva a cabo mediante la introspección y acciones concretas.
 
 Mi compromiso es ayudar a las personas y organizaciones a llevarla a cabo.
@@ -210,6 +242,10 @@ Agile Coach &amp; Trainer</bio>
     </country>
   </trainer>
   <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
     <bio></bio>
     <country-id type="integer">171</country-id>
     <created-at type="datetime">2012-09-07T21:00:12Z</created-at>

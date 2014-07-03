@@ -1,160 +1,486 @@
-<style>
+<section id="index-creemos" data-speed="3" data-type="background">
+	<div class="container-fluid" style="overflow:hidden;max-height:300px;">
+		<div class="container">
+			<div class="container-fluid">
+				<div class="col-md-8 creemos">
+					<img src="/img/personajes/karl-creemos.png" height="250" class="img-responsive">
+				</div>
+				<div class="col-md-3 hidden-xs hidden-sm">
+					<img src="/img/personajes/02_03_web.png" height="400">
+				</div>
+				<div class="col-md-1 hidden-xs hidden-sm">
+					<img src="/img/personajes/01_03_web.png" height="200">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-	body {
-		background: url(/img/fondos/fondo-02.jpg) no-repeat center center fixed; 
-	}
+<div class="container-fluid fondo-amarillo-top">&nbsp;<br/>&nbsp;</div>
 
-</style>
-
-	<!-- Marketing messaging and featurettes
-	    ================================================== -->
-	    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-	    <div class="container marketing">
-
-	      <!-- Three columns of text below the carousel -->
-	      <div class="row-fluid">
-		<div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
-	          <img class="img-circle" src="/img/uen/consultoria.png">
-	          <h2><%=t("home.sections.coaching.title")%></h2>
-	          <p><%=t("home.sections.coaching.text")%></p>
-	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/acompanamos"><%=t("general.buttons.see_more")%></a></p>
-	        </div><!-- /.span4 -->
-	        <div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
-	          <img class="img-circle" src="/img/uen/capacitacion.jpg">
-	          <h2><%=t("home.sections.training.title")%></h2>
-	          <p><%=t("home.sections.training.text")%></p>
-	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/entrenamos"><%=t("general.buttons.see_more")%></a></p>
-	        </div><!-- /.span4 -->
-			<div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
-	          <img class="img-circle" src="/img/uen/comunidad.jpg">
-	          <h2><%=t("home.sections.community.title")%></h2>
-	          <p><%=t("home.sections.community.text")%></p>
-	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/comunidad"><%=t("general.buttons.see_more")%></a></p>
-	        </div><!-- /.span4 -->
-			<div class="span3" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;text-align:center;">
-	          <img class="img-circle" src="/img/uen/contenidos.jpg">
-	          <h2><%=t("home.sections.publishing.title")%></h2>
-	          <p><%=t("home.sections.publishing.text")%></p>
-	          <p><a class="btn btn-primary" href="/<%=session[:locale]%>/publicamos"><%=t("general.buttons.see_more")%></a></p>
-	        </div><!-- /.span4 -->
-	      </div><!-- /.row -->
-	 </div><!-- /.container -->
-&nbsp;
-
-<div class="container vision">
-<div class="row-fluid">
-	<div class="span12" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;font-size:150%;">
-		<blockquote class="pull-right">
-			<p><i><%=t("general.kleer.vision.text")%></i></p>
-			<small><%=t("general.kleer.vision.reference")%></small>
-			</blockquote>
+<div class="container-fluid fondo-amarillo slide-home-cursos">
+		<div class="container">
+			<div class="col-md-9 no-hpadding">
+				<div class="container-fluid no-hpadding">
+					<div class="col-md-4">
+						<h1>Cursos</h1>
+						<p>
+							<ul>
+								<li>Con los profesionales más reconocidos de latinoamérica</li>
+								<li>100% vivenciales</li>
+								<li>Dinámicos, divertidos y útiles</li>
+								<li>Certificaciones avaladas por la Scrum Alliance</li>
+							</ul>
+						</p>
+						<p>
+							&nbsp;<br/>
+							<a href="http://www.scrumalliance.org/community/profile/kleer" target="_blank"><img src="/img/sa-rep-logo.png" class="img-responsive"></a>
+						</p>
+					</div>
+					<div class="col-md-8 agenda">
+						<h2>Agenda</h2>
+						<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos" width="100%">
+							<thead>
+								<tr>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+						<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+						<script type="text/javascript">
+						$(document).ready(function() {
+							$('#cursos').dataTable( {
+								"ajax": '/<%=session[:locale]%>/entrenamos/eventos/proximos/5',
+								"searching": false,
+								"ordering": false,
+								"paging": false,
+								"bLengthChange": false,
+								"aoColumns": [
+									{ "sWidth": "15%", sClass: "klabel-date-container" },
+									{ "sWidth": "85%" }
+								],
+								/* "sScrollY": "300px", */
+								"oLanguage": {
+									"sLengthMenu":   "Mostrar _MENU_ registros",
+									"sZeroRecords":  "<div class=\"alert alert-warning center\"><%=t("dt_grid.loading")%></div>",
+									"sInfo":         "",
+									"sInfoEmpty":    "",
+									"sInfoFiltered": "",
+									"sInfoPostFix":  "",
+									"sUrl":          ""
+								},
+								"fnInitComplete": function(oSettings, json) {
+									oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
+								}
+							});
+						});
+						</script>
+						<a href="/<%=session[:locale]%>/entrenamos" class="btn btn-success btn-kleer"><%=t('home.calendar.current_year_calendar')%></a>
+						<br/>&nbsp;
+						<br/>&nbsp;
+					</div>
+				</div>
+				<div class="row-fluid">
+					&nbsp;<br/>
+					<%=t('training.incompany')%>&nbsp;&nbsp;
+					<a href="http://media.kleer.la/kleer-entrenamos-2014.pdf" class="btn btn-info btn-kleer"><%=t('training.more_info')%></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:<%=t('contact.training_email')%>" class="btn btn-info btn-kleer"><%=t('contact.contact_us')%></a>
+					<br/>&nbsp;
+					<br/>&nbsp;
+				</div>
+			</div>
+			<div class="col-md-3 visible-md visible-lg">
+				<img src="/img/personajes/vive-las-met.png" class="img-responsive">
+			</div>
 		</div>
 </div>
-</div>
-&nbsp;
 
-<div class="row-fluid">
-	<div class="span8" style="background-color:rgba(255,255,255,1);padding:5px;-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);box-shadow: 0 2px 10px rgba(0,0,0,.25);-moz-border-radius:3px; border-radius:3px;">
-		<h1><%=t("home.calendar.title")%></h1>
-		<p><a href="/<%=session[:locale]%>/entrenamos">&nbsp;<%=t("dt_grid.see_more")%></a></p>
-		<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos"><thead></thead><tbody></tbody></table>
-		<script type="text/javascript" src="/js/jquery.js"/></script>
-		<script type="text/javascript" src="/js/jquery.dataTables.js"></script>
-		<script type="text/javascript">
-		var anOpen = [];
-		var sImageUrl = "http://qa.kleer.la/wp-content/uploads/2011/03/";
-		//sImageUrl = "./DataTables-1.9.1/media/images/";
+<div class="container-fluid fondo-pano pano-9"></div>
 
-		var oTable;
-		$(document).ready(function() {
-			oTable = $('#cursos').dataTable( {
-				"bLengthChange": false,
-				"sAjaxSource": '/<%=session[:locale]%>/entrenamos/eventos/proximos/8',
-				"aoColumns": [
-					{ "sWidth": "5%" },
-					{ "sWidth": "75%" },
-					{ "sClass": "right", "sWidth": "20%" }
-				],
-				"aaSorting": [],
-				"bSort": false,
-				"bPaginate": false,
-				"bFilter": false,
-				/* "sScrollY": "500px", */
-				"oLanguage": {
-					"sLengthMenu":   "Mostrar _MENU_ registros",
-					"sZeroRecords":  "<div class=\"alert alert-warning center\"><%=t("dt_grid.loading")%></div>",
-					"sInfo":         "",
-					"sInfoEmpty":    "",
-					"sInfoFiltered": "",
-					"sInfoPostFix":  "",
-					"sUrl":          ""
-				},
-				"fnInitComplete": function(oSettings, json) {
-					oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
-				}
-			});
-		});
-		</script>
-		
-		<script type="text/javascript">
-		<!--
-		$('body').on('hidden', '#myModal', function () {
-		  $(this).removeData('modal');
-		});
-		
-		$('body').on('hidden', '#myModalRegistration', function () {
-		  $(this).removeData('modal');
-		});
-		
-		-->
-		</script>
-		<p><a href="/entrenamos">&nbsp;<%=t("dt_grid.see_more")%></a></p>
-		<p align="right"><a href="http://media.kleer.la/kleer-entrenamos-2014.pdf" class="btn btn-info"><i class="icon-download icon-white"></i>&nbsp;<%=t("home.calendar.private_course_info")%></a>&nbsp;<a href="/entrenamos" class="btn btn-primary"><i class="icon-calendar icon-white"></i>&nbsp;<%=t("home.calendar.current_year_calendar")%></a></p>
-	</div>
-	<div class="span4">  
-			<img src="/img/logos/logo-03.png">
-			<%= erb :twitter_box, :layout => false %>
+<div class="container-fluid fondo-verde-top-derecha">&nbsp;</div>
+
+<div class="container-fluid fondo-verde slide-home-comunidad">
+	<div class="container">
+		<div class="col-md-7">
+			<h1>Comunidad</h1>
+			<p>APOYAMOS ACTIVAMENTE LAS COMUNIDADES LATINOAMERICANAS</p>
+			<p>Nacimos de la comunidad y queremos devolver siempre a la comunidad. Compartimos conocimientos, tiempo, experiencias y estados de ánimo con comunidades profesionales, educativas, regionales y de todo tipo.</p>
+			<div class="container-fluid no-hpadding">
+				<div class="col-md-12 no-hpadding">
+					<img src="/img/personajes/actividades-comunitarias.png" class="img-comunidad-gratuitas">
+				</div>
+			</div>
 		</div>
-</div><!-- /.row -->
-&nbsp;
-<div class="row-fluid">
-	<div class="span12">
-		<%= erb :facebook_box, :layout => false, :locals => { :height => 400, :width => 900, :span => "span12" } %>
+		
+		<div class="col-md-5">
+			<div class="container-fluid no-hpadding">
+				<div class="col-md-12 comunidad">
+					<h2>Eventos Comunitarios</h2>
+					<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="comunidad" width="95%">
+						<thead>
+							<tr>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+					<script type="text/javascript">
+					$(document).ready(function() {
+						$('#comunidad').dataTable( {
+							"ajax": '/<%=session[:locale]%>/comunidad/eventos/proximos/5',
+							"searching": false,
+							"ordering": false,
+							"paging": false,
+							"bLengthChange": false,
+							"aoColumns": [
+								{ "sWidth": "15%" },
+								{ "sWidth": "85%" }
+							],
+							/* "sScrollY": "300px", */
+							"oLanguage": {
+								"sLengthMenu":   "Mostrar _MENU_ registros",
+								"sZeroRecords":  "<div class=\"alert alert-warning center\"><%=t("dt_grid.loading")%></div>",
+								"sInfo":         "",
+								"sInfoEmpty":    "",
+								"sInfoFiltered": "",
+								"sInfoPostFix":  "",
+								"sUrl":          ""
+							},
+							"fnInitComplete": function(oSettings, json) {
+								oSettings.oLanguage.sZeroRecords = "<div class=\"alert alert-warning\"><%=t("dt_grid.no_courses_found")%></div>";
+							}
+						});
+					});
+					</script>
+					<a href="/<%=session[:locale]%>/comunidad" class="btn btn-success btn-kleer"><%=t('home.calendar.current_year_calendar')%></a>
+						<br/>&nbsp;
+						<br/>&nbsp;
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-	
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel"><%=t("popups.course.details.title")%></h4>
-	  </div>
-	  <div class="modal-body">
-	    <p><%=t("general.texts.loading")%></p>
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
-	  </div>
+
+<div class="container-fluid fondo-celeste-top-izquierda">&nbsp;</div>
+
+<div class="container-fluid fondo-celeste slide-home-publicaciones">
+	<div class="container container-home-publicaciones">
+		<h1 class="publicaciones-title"><%=t("publishing.title")%></h1>
+		<%=t("publishing.description")%><br/>
+		&nbsp;<br/>
+		<div class="container-fluid">
+			
+			<div class="col-md-4">
+				<a id="MasProductivos"></a>
+				<a href="/<%=session[:locale]%>/publicamos/mas-productivos" title="<%=t("publishing.books.mas_productivos.title")%>"><p align="center"><img src="/img/ebooks/mas-productivos-288.jpg" class="img-rounded"></p></a>
+
+				<div class="well well-small book-description">
+					<p><%=t("publishing.books.mas_productivos.text")%></p>
+					<p><a href="/<%=session[:locale]%>/publicamos/mas-productivos"><%=t("publishing.books.mas_productivos.next")%></a></p>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="/<%=session[:locale]%>/publicamos/scrum" title="<%=t("publishing.books.scrum.title")%>"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
+
+				<div class="well well-small book-description">
+					<p><%=t("publishing.books.scrum.text")%></p>
+					<p><a href="/<%=session[:locale]%>/publicamos/scrum"><%=t("publishing.books.scrum.next")%></a></p>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<p align="center"><img src="/img/ebooks/retrospectivas.png" class="img-rounded"></p>
+
+				<div class="well well-small book-description">
+					<p><%=t("publishing.books.retrospectives.text")%></p>
+					<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=d999f0797cb600c38e17891503cb3b05" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
+				</div>
+			</div>
+		</div>		
+
+		<div class="container-fluid">
+
+			<div class="col-md-4 col-md-offset-2">
+				<p align="center"><img src="/img/ebooks/lenguajes-web.jpg" class="img-rounded"></p>
+
+				<div class="well well-small book-description">
+					<p><%=t("publishing.books.lenguajes_web.text")%></p>
+					<iframe src="http://www.paywithapost.de/dlbutton01.php?id=d3806d13-1b7b-4419-b087-78c22a3a7c7f" name="paytweet_button" scrolling="no" frameborder="no" height="24px" width="145px"></iframe>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<p align="center"><img src="/img/ebooks/agil-ilustrado.jpg" class="img-rounded"></p>
+
+				<div class="well well-small book-description">
+					<p><%=t("publishing.books.agil_ilustrado.text")%></p>
+					<iframe src="http://www.paywithapost.de/dlbutton01.php?id=b896fb12-e807-4ed9-ba8f-d929d8c7957d" name="paytweet_button" scrolling="no" frameborder="no" height="24px" width="145px"></iframe>
+				</div>
+			</div>
+			
+		</div>	
 	</div>
-	
-	<div id="myModalRegistration" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-header">
-	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	    <h4 id="myModalLabel"><%=t("popups.course.registration.title")%></h4>
-	  </div>
-	  <div class="modal-body">
-	    <p><%=t("general.texts.loading")%></p>
-	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t("general.buttons.close")%></button>
-	  </div>
+</div>
+
+<div class="container-fluid fondo-rosa slide-home-somos">
+	<div class="container">
+		<h1>Nosotros</h1>
+		<div class="col-md-4 no-hpadding">
+			<img src="/img/personajes/equipo-kleer.png" class="img-equipo-kleer">
+		</div>
+		<div class="col-md-8 no-hpadding">
+			<div id="this-carousel-id" class="carousel slide carousel-somos"><!-- class of slide for animation -->
+		  		<div class="carousel-inner">
+					<% @kleerers.each do |kleerer| %>
+					<div class="item">
+						<div class="container">
+							<div class="col-md-1"> 
+								<img src="<%=kleerer.gravatar_picture_url%>" class="img-circle">
+							</div>
+							<div class="col-md-7">
+								<div class="container">
+									<div class="col-md-3">
+										<h2><%=kleerer.name%>&nbsp;
+											<% if kleerer.linkedin_url != "" %>
+											<a href="<%=kleerer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
+											<% end %>
+										</h2>
+									</div>
+									<div class="col-md-4">
+										<% if kleerer.twitter_username != "" %>
+										<%= erb :_twitter_box, :layout => false, :locals => {:screen_name => kleerer.twitter_username.gsub("@",""), :pop_over => 'right'} %>
+										<% end %>
+									</div>
+								</div>
+								<div class="container">
+									<div class="col-md-6 somos-bio">
+										<p><%=@markdown_renderer.render( kleerer.bio )%></p>
+									</div>
+								</div>
+							</div>				
+						</div>
+					</div>
+					<% end %>
+		  		</div><!-- /.carousel-inner -->
+		  		<!--  Next and Previous controls below
+		        href values must reference the id for this carousel -->
+		    	<a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+		    	<a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+			</div><!-- /.carousel -->
+		</div>
 	</div>
+</div>
+
+<div class="container-fluid fondo-pano pano-3"></div>
+
+<div class="container-fluid fondo-celeste-mosaico slide-home-newsletter hidden-xs">
+	<div class="container-fluid">
+		<div class="container">
+			<div class="container suscripcion">
+				<div class="col-md-7 suscripcion-inner">
+					Se el primero en enterarte<br/>de todas las novedades del mundo ágil
+						<input type="text" class="suscription-textbox" placeholder="tu@email.com"/><br/>
+						<input type="button" class="btn btn-warning btn-kleer btn-suscription" value="SUSCRÍBETE" data-toggle="modal" data-target=".suscription-modal"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade suscription-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form method="POST" action="/subscribe">
+	      <div class="modal-header fondo-verde">
+	        <button type="button" class="close suscription-modal-title" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h2 class="modal-title" id="myModalLabel">SUSCRIPCIÓN</h2>
+	      </div>
+	      <div class="modal-body suscripcion-modal-inner fondo-verde-mosaico">
+				<input type="text" name="email" class="suscription-textbox" placeholder="tu@email.com" id="suscriptionModalEmail"/>
+				<br/>
+				<input type="text" name="fname" class="suscription-textbox" placeholder="Nombre"/>
+				<br/>
+				<input type="text" name="lname" class="suscription-textbox" placeholder="Apellido"/>
+				<br/>
+				<select id="influence_zone_tag" name="influence_zone_tag" class="suscription-select">
+					<option value="">Tu lugar más próximo ...</option>
+					<option value="ZI-AMS-AR-BUE (Buenos Aires)">Argentina - Buenos Aires</option>
+					<option value="ZI-AMS-AR-BUE (Buenos Aires)">Argentina - Capital Federal</option>
+					<option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Catamarca</option>
+					<option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Chaco</option>
+					<option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Chubut</option>
+					<option value="ZI-AMS-AR-CTR (Centro)">Argentina - Córdoba</option>
+					<option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Corrientes</option>
+					<option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Entre Rios</option>
+					<option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Formosa</option>
+					<option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Jujuy</option>
+					<option value="ZI-AMS-AR-CTR (Centro)">Argentina - La Pampa</option>
+					<option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - La Rioja</option>
+					<option value="ZI-AMS-AR-CUY (Cuyo)">Argentina - Mendoza</option>
+					<option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Misiones</option>
+					<option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Neuquen</option>
+					<option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Salta</option>
+					<option value="ZI-AMS-AR-CUY (Cuyo)">Argentina - San Juan</option>
+					<option value="ZI-AMS-AR-CUY (Cuyo)">Argentina - San Luis</option>
+					<option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Santa Cruz</option>
+					<option value="ZI-AMS-AR-CTR (Centro)">Argentina - Santa Fé</option>
+					<option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Santiago del Estero</option>
+					<option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Tierra del Fuego</option>
+					<option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Tucumán</option>
+					<option value="ZI-AUS (Australia)">Australia</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Beni</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Chuquisaca</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Cochabamba</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - La Paz</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Oruro</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Pando</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Potosí</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Santa Cruz</option>
+					<option value="ZI-AMS-BO (Bolivia)">Bolivia - Tarija</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Acre</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Alagoas</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Amapá</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Amazonas</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Bahia</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Ceará</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Espírito Santo</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Goiás</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Mato Grosso</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Mato Grosso do Sul</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Minas Gerais</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Pará</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Paraíba</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Paraná</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Pernambuco</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Piauí</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Rio de Janeiro</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Rio Grande do Norte</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Rio Grande do Sul</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Rondônia</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Roraima</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Santa Catarina</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - São Paulo</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Sergipe</option>
+					<option value="ZI-AMS-BR (Brasil)">Brasil - Tocantins</option>
+					<option value="ZI-AMN-CA (Canada)">Canada</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Antofagasta</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Arica y Parinacota</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Atacama</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Aysen del General Carlos Ibanez del Campo</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Bio Bio</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Coquimbo</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - La Araucania</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Libertador General Bernardo O Higgins</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Los Lagos</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Los Rios</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Magallanes y la Antartica Chilena</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Maule</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Santiago Metropolitana</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Tarapaca</option>
+					<option value="ZI-AMS-CL (Chile)">Chile - Valparaiso</option>
+					<option value="ZI-AMS-CO-EJE (Eje cafetero)">Colombia - Armenia</option>
+					<option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Barranquilla</option>
+					<option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Bogota</option>
+					<option value="ZI-AMS-CO-SAN (Santander)">Colombia - Bucaramanga</option>
+					<option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Cali</option>
+					<option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Cartagena</option>
+					<option value="ZI-AMS-CO-SAN (Santander)">Colombia - Cúcuta</option>
+					<option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Ibagué</option>
+					<option value="ZI-AMS-CO-EJE (Eje cafetero)">Colombia - Manizales</option>
+					<option value="ZI-AMS-CO-MDE (Medellín)">Colombia - Medellin</option>
+					<option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Monteria</option>
+					<option value="ZI-AMS-CO-BOG (Bogota)">Colombia - N/A</option>
+					<option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Neiva</option>
+					<option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Pasto</option>
+					<option value="ZI-AMS-CO-EJE (Eje cafetero)">Colombia - Pereira</option>
+					<option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Popayan</option>
+					<option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Quibdó</option>
+					<option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Santa Marta</option>
+					<option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Sincelejo</option>
+					<option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Tunja</option>
+					<option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Valledupar</option>
+					<option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Villavicencio</option>
+					<option value="ZI-AMC (America Central y Caribe)">Cuba</option>
+					<option value="ZI-AMC (America Central y Caribe)">República Dominicana</option>
+					<option value="ZI-AMS-EC (Ecuador)">Ecuador</option>
+					<option value="ZI-AMC (America Central y Caribe)">Guatemala</option>
+					<option value="ZI-AMC (America Central y Caribe)">Honduras</option>
+					<option value="ZI-AMN-MX (Mexico)">Mexico</option>
+					<option value="ZI-AMC (America Central y Caribe)">Panama</option>
+					<option value="ZI-AMS-PY (Paraguay)">Paraguay</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Amazonas</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Áncash</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Apurímac</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Arequipa</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Ayacucho</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Cajamarca</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Callao</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Cusco</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Huancavelica</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Huánuco</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Ica</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Junín</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - La Libertad</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Lambayeque</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Lima</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Loreto</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Madre de Dios</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Moquegua</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Pasco</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Piura</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Puno</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - San Martín</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Tacna</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Tumbes</option>
+					<option value="ZI-AMS-PE (Peru)">Peru - Ucayali</option>
+					<option value="ZI-ASI (Asia)">España</option>
+					<option value="ZI-EUR-ES (España)">España - Andalucía</option>
+					<option value="ZI-EUR-ES (España)">España - Aragón</option>
+					<option value="ZI-EUR-ES (España)">España - Canarias</option>
+					<option value="ZI-EUR-ES (España)">España - Cantabria</option>
+					<option value="ZI-EUR-ES (España)">España - Castila-La Mancha</option>
+					<option value="ZI-EUR-ES (España)">España - Castilla y León</option>
+					<option value="ZI-EUR-ES (España)">España - Cataluña</option>
+					<option value="ZI-EUR-ES (España)">España - Ceuta</option>
+					<option value="ZI-EUR-ES (España)">España - Comunidad de Madrid</option>
+					<option value="ZI-EUR-ES (España)">España - Comunidad Foral de Navarra</option>
+					<option value="ZI-EUR-ES (España)">España - Comunidad Valenciana</option>
+					<option value="ZI-EUR-ES (España)">España - Extremadura</option>
+					<option value="ZI-EUR-ES (España)">España - Galicia</option>
+					<option value="ZI-EUR-ES (España)">España - Islas Baleares</option>
+					<option value="ZI-EUR-ES (España)">España - La Rioja</option>
+					<option value="ZI-EUR-ES (España)">España - Melilla</option>
+					<option value="ZI-EUR-ES (España)">España - País Vasco</option>
+					<option value="ZI-EUR-ES (España)">España - Principado de Asturias</option>
+					<option value="ZI-EUR-ES (España)">España - Región de Murcia</option>
+					<option value="ZI-AMN-US (EEUU)">Estados Unidos</option>
+					<option value="ZI-AMS-UY (Uruguay)">Uruguay</option>
+					<option value="ZI-AMS-VE (Venezuela)">Venezuela</option>
+				</select>
+				<br/>
+	      </div>
+	      <div class="modal-footer fondo-verde suscripcion-modal-footer">
+	        <button type="button" class="btn btn-default btn-kleer" data-dismiss="modal">CANCELAR</button>
+	        <input type="submit" value="SUSCRÍBETE" class="btn btn-warning btn-kleer btn-suscription-popup"/>
+	      </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
-    </script>
+  $(document).ready(function(){
+  	$('.item').eq(Math.floor((Math.random() * $('.item').length))).addClass("active");
+    $('.carousel').carousel();
+    $('.suscription-textbox').on( 'click', function(){ 
+    	$('.btn-suscription').click() 
+    });
+    $('.suscription-modal').on('shown.bs.modal', function (e) { 
+    	$('#suscriptionModalEmail').focus() 
+    });
+  });
+</script>

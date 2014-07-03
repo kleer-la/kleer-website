@@ -64,6 +64,7 @@ describe KeventerReader do
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
     <date type="date">2013-01-09</date>
+    <finish-date type="date">2013-01-10</finish-date>
     <draft type="boolean">false</draft>
     <eb-end-date type="date" nil="true"/>
     <eb-price type="decimal">750.0</eb-price>
@@ -72,8 +73,10 @@ describe KeventerReader do
     <is-sold-out type="boolean">false</is-sold-out>
     <specific-conditions>Unas condiciones propias del evento</specific-conditions>
   <is-webinar type="boolean">false</is-webinar>
+  <mode>cl</mode>
   <sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">890.0</list-price>
+    <show-pricing type="boolean">true</show-pricing>
   <currency-iso-code>ARS</currency-iso-code>
     <list-price-2-pax-discount type="integer">10</list-price-2-pax-discount>
     <list-price-3plus-pax-discount type="integer">15</list-price-3plus-pax-discount>
@@ -84,6 +87,11 @@ describe KeventerReader do
     <trainer-id type="integer">4</trainer-id>
     <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
     <visibility-type>pu</visibility-type>
+    <business-eb-price type="decimal">2399000.0</business-eb-price>
+    <business-price type="decimal">2899000.0</business-price>
+    <couples-eb-price type="decimal">2499000.0</couples-eb-price>
+    <enterprise-11plus-price type="decimal" nil="true"/>
+    <enterprise-6plus-price type="decimal">2269000.0</enterprise-6plus-price>
     <country>
       <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
       <id type="integer">9</id>
@@ -91,6 +99,58 @@ describe KeventerReader do
       <name>Argentina</name>
       <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
     </country>
+    <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
+      <created-at type="datetime">2012-11-28T22:43:57Z</created-at>
+      <description>una descripción.</description>
+    <elevator-pitch>un elevator pitch</elevator-pitch>
+    <takeaways>pepe</takeaways>
+    <learnings>pipollo</learnings>
+      <duration type="integer">8</duration>
+      <goal>un objetivo.</goal>
+      <id type="integer">13</id>
+      <name>Workshop de Retrospectivas</name>
+      <program>el programa</program>
+      <recipients>los destinatarios.</recipients>
+      <updated-at type="datetime">2012-11-28T22:43:57Z</updated-at>
+    <include-in-catalog type="boolean">false</include-in-catalog>
+  <faq>
+  **¿Más preguntas?** Visita nuestra sección de [Preguntas Frecuentes](http://www.kleer.la/preguntas-frecuentes/certified-scrum-master).
+  </faq>
+    <average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
+</event-type>
+    <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer 
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Raul Gorgonzola</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    <linkedin-url>http://www.linkedin.com/in/pablotortorella</linkedin-url>
+  <twitter-username>@pablitux</twitter-username>
+  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  <country>
+      <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+      <id type="integer">9</id>
+      <iso-code>AR</iso-code>
+      <name>Argentina</name>
+      <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+    </country>
+    </trainer>
   </event>
 }
       )
@@ -286,8 +346,8 @@ describe KeventerReader do
       @high_performance = @kevr.category("high-performance")
     end
 
-    it "should return 2 categories" do
-      @kevr.categories.count.should == 2
+    it "should return 3 categories" do
+      @kevr.categories.count.should == 3
     end
 
     it "should return the category 'high-performance' by id" do

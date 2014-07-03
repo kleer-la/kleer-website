@@ -1,13 +1,31 @@
-<script type="text/javascript" src="/js/jquery.js"/></script>
-
-<div class="row">
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;text-align:center;">
-		<h1>Poster <%=@poster_name%></h1>
-		<iframe width="640" height="480" src="//www.youtube.com/embed/<%=@video_url_code%>" frameborder="0" allowfullscreen></iframe>
-		<p>Baja el PDF con el poster desde <a href="<%=@pdf_download_url%>">aquí</a></p>
-	</div>	
-	<div class="span3" style="text-align:center;">  
-		<img src="/img/logos/logo-agiles2013.png">
-		<%= erb :twitter_box, :layout => false %>
+<div class="container-fluid fondo-amarillo slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1>Poster <%=@poster_name%></h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
 	</div>
 </div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 contenedor-main-izq">
+			<iframe width="100%" height="480" src="//www.youtube.com/embed/<%=@video_url_code%>" frameborder="0" allowfullscreen></iframe>
+			<p>Baja el PDF con el poster desde <a href="<%=@pdf_download_url%>">aquí</a></p>
+
+			<br/>&nbsp;
+			<br/>&nbsp;
+			<br/>&nbsp;
+		</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
+</div>
+

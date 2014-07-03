@@ -1,5 +1,9 @@
+#encoding: utf-8
+
 require 'libxml'
 require 'date'
+require 'tzinfo'
+
 require File.join(File.dirname(__FILE__),'/keventer_event')
 require File.join(File.dirname(__FILE__),'/keventer_event_type')
 require File.join(File.dirname(__FILE__),'/country')
@@ -19,28 +23,27 @@ end
 
 def event_from_parsed_xml(xml_keventer_event)
     event = KeventerEvent.new
-
-    event.id        = get_from_xml(xml_keventer_event,'id').to_i
-    event.date      = Date.parse(get_from_xml(xml_keventer_event,'date'))
-    event.start_time = DateTime.parse(get_from_xml(xml_keventer_event, 'start-time'))
-    event.end_time  = DateTime.parse(get_from_xml(xml_keventer_event, 'end-time'))
-    event.capacity  = get_from_xml(xml_keventer_event, 'capacity').to_i
-    event.city      = get_from_xml(xml_keventer_event, 'city')
-    event.place     = get_from_xml(xml_keventer_event, 'place')
-    event.address   = get_from_xml(xml_keventer_event, 'address')
-    event.registration_link = get_from_xml(xml_keventer_event, 'registration-link')
-    event.specific_conditions = get_from_xml(xml_keventer_event, 'specific-conditions')
-    event.is_sold_out = to_boolean(get_from_xml(xml_keventer_event, 'is-sold-out'))
-    event.is_webinar = to_boolean(get_from_xml(xml_keventer_event, 'is-webinar'))
-    event.sepyme_enabled = to_boolean( get_from_xml(xml_keventer_event,'sepyme-enabled') )
-    event.is_community_event = get_from_xml(xml_keventer_event,'visibility-type') == 'co'
-    event.country = get_from_xml(xml_keventer_event,'country/name')
-    event.country_code = get_from_xml(xml_keventer_event, 'country/iso-code')
-    lp = get_from_xml(xml_keventer_event, 'list-price')
-    event.list_price = lp.nil? ? 0.0 : lp.to_f
-    ebp = get_from_xml(xml_keventer_event, 'eb-price')
-    event.eb_price = ebp.nil? ? 0.0 : ebp.to_f
-    if event.eb_price > 0.0
+    
+    event.id = xml_keventer_event.find_first('id').content.to_i
+    event.date = Date.parse( xml_keventer_event.find_first('date').content )
+    if !xml_keventer_event.find_first('finish-date').content.nil?
+      event.finish_date = Date.parse( xml_keventer_event.find_first('finish-date').content )
+    end
+    # event.human_date = xml_keventer_event.find_first('human-date').content
+    event.start_time = DateTime.parse( xml_keventer_event.find_first('start-time').content )
+    event.end_time = DateTime.parse( xml_keventer_event.find_first('end-time').content )
+    event.capacity = xml_keventer_event.find_first('capacity').content.to_i
+    event.city = xml_keventer_event.find_first('city').content
+    event.place = xml_keventer_event.find_first('place').content
+    event.address = xml_keventer_event.find_first('address').content
+    event.registration_link = xml_keventer_event.find_first('registration-link').content
+    event.specific_conditions = xml_keventer_event.find_first('specific-conditions').content
+    event.is_sold_out = to_boolean( xml_keventer_event.find_first('is-sold-out').content )
+    
+    event.show_pricing = to_boolean( xml_keventer_event.find_first('show-pricing').content )
+    event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
+    event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
+    if event.eb_price > 0.0  
       begin
         ebed = get_from_xml(xml_keventer_event, 'eb-end-date')
         event.eb_end_date = ebed.nil? ? nil : Date.parse( ebed )
@@ -48,7 +51,25 @@ def event_from_parsed_xml(xml_keventer_event)
         event.eb_end_date = nil
       end
     end
-    event.currency_iso_code = get_from_xml(xml_keventer_event, 'currency-iso-code')
+    event.couples_eb_price = xml_keventer_event.find_first('couples-eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('couples-eb-price').content.to_f
+    event.business_eb_price = xml_keventer_event.find_first('business-eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('business-eb-price').content.to_f
+    event.business_price = xml_keventer_event.find_first('business-price').content.nil? ? 0.0 : xml_keventer_event.find_first('business-price').content.to_f
+    event.enterprise_6plus_price = xml_keventer_event.find_first('enterprise-6plus-price').content.nil? ? 0.0 : xml_keventer_event.find_first('enterprise-6plus-price').content.to_f
+    event.enterprise_11plus_price = xml_keventer_event.find_first('enterprise-11plus-price').content.nil? ? 0.0 : xml_keventer_event.find_first('enterprise-11plus-price').content.to_f
+
+    event.is_webinar = to_boolean( xml_keventer_event.find_first('is-webinar').content )
+    event.mode = xml_keventer_event.find_first('mode').content
+
+    if xml_keventer_event.find_first('sepyme-enabled').content == ""
+      event.sepyme_enabled = false
+    else
+      event.sepyme_enabled = to_boolean( xml_keventer_event.find_first('sepyme-enabled').content )
+    end
+    event.is_community_event = xml_keventer_event.find_first('visibility-type').content == 'co'
+    event.country = xml_keventer_event.find_first('country/name').content
+    event.country_code = xml_keventer_event.find_first('country/iso-code').content
+    event.currency_iso_code = xml_keventer_event.find_first('currency-iso-code').content
+
   event
 end
 
@@ -72,6 +93,10 @@ class KeventerReader
   
   def coming_commercial_events(from = Date.today, months = 2)
     coming_events(@connector.events_xml_url, from , months )
+  end
+
+  def coming_community_events(from = Date.today, months = 2)
+    coming_events(@connector.community_events_xml_url, from , months )
   end
   
   def commercial_events_by_country(country_iso_code)
@@ -103,22 +128,27 @@ class KeventerReader
   end
   
   def kleerers
-    parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
-    doc = parser.parse
-    loaded_kleerers = doc.find('/trainers/trainer')
-    
     kleerers = Array.new
-    
-    loaded_kleerers.each do |loaded_kleerer|
-      kleerer = Professional.new
+
+    begin
+      parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
+      doc = parser.parse
+      loaded_kleerers = doc.find('/trainers/trainer')
       
-      kleerer.name = loaded_kleerer.find_first('name').content
-      kleerer.bio = loaded_kleerer.find_first('bio').content
-      kleerer.linkedin_url = loaded_kleerer.find_first('linkedin-url').content
-      kleerer.gravatar_picture_url = loaded_kleerer.find_first('gravatar-picture-url').content
-      kleerer.twitter_username = loaded_kleerer.find_first('twitter-username').content
-      
-      kleerers << kleerer
+      loaded_kleerers.each do |loaded_kleerer|
+        kleerer = Professional.new
+        
+        kleerer.name = loaded_kleerer.find_first('name').content
+        kleerer.bio = loaded_kleerer.find_first('bio').content
+        kleerer.linkedin_url = loaded_kleerer.find_first('linkedin-url').content
+        kleerer.gravatar_picture_url = loaded_kleerer.find_first('gravatar-picture-url').content
+        kleerer.twitter_username = loaded_kleerer.find_first('twitter-username').content
+        
+        kleerers << kleerer
+      end
+    rescue => err
+      puts "Error al cargar kleerers: #{err}"
+      kleerers = Array.new
     end
     
     kleerers
@@ -130,27 +160,32 @@ class KeventerReader
   end
   
   def categories
-    parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
-    doc = parser.parse
-    loaded_categories = doc.find('/categories/category')
-    
-    categories = Array.new
-    
-    loaded_categories.each do |loaded_category|
-      category = Category.new
+    begin
+      parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
+      doc = parser.parse
+      loaded_categories = doc.find('/categories/category')
       
-      category.name = loaded_category.find_first('name').content
-      category.codename = loaded_category.find_first('codename').content
-      category.tagline = loaded_category.find_first('tagline').content
-      category.description = loaded_category.find_first('description').content
-      category.order = loaded_category.find_first('order').content.to_i
+      categories = Array.new
       
-      category.event_types = load_event_types loaded_category
+      loaded_categories.each do |loaded_category|
+        category = Category.new
+        
+        category.name = loaded_category.find_first('name').content
+        category.codename = loaded_category.find_first('codename').content
+        category.tagline = loaded_category.find_first('tagline').content
+        category.description = loaded_category.find_first('description').content
+        category.order = loaded_category.find_first('order').content.to_i
+        
+        category.event_types = load_event_types loaded_category
 
-      categories << category
+        categories << category
+      end
+      
+      categories.sort!{|p1,p2| p1.order <=> p2.order}
+    rescue => err 
+      puts "Error al cargar las categorías: #{err}"
+      categories = Array.new
     end
-    
-    categories.sort!{|p1,p2| p1.order <=> p2.order}
     
     categories
   end
@@ -297,6 +332,7 @@ class KeventerReader
   end
   
   def create_event(xml_keventer_event)
+
     event = event_from_parsed_xml(xml_keventer_event)
     
     trainer = Professional.new
@@ -307,6 +343,12 @@ class KeventerReader
     trainer.linkedin_url = xml_keventer_event.find_first('trainer/linkedin-url').content
     trainer.gravatar_picture_url = xml_keventer_event.find_first('trainer/gravatar-picture-url').content
     trainer.twitter_username = xml_keventer_event.find_first('trainer/twitter-username').content
+
+    trainer.average_rating = xml_keventer_event.find_first('trainer/average-rating').content.nil? ? nil : xml_keventer_event.find_first('trainer/average-rating').content.to_f.round(2)
+    trainer.net_promoter_score = xml_keventer_event.find_first('trainer/net-promoter-score').content.nil? ? nil : xml_keventer_event.find_first('trainer/net-promoter-score').content.to_i
+    trainer.surveyed_count = xml_keventer_event.find_first('trainer/surveyed-count').content.to_i
+    trainer.promoter_count = xml_keventer_event.find_first('trainer/promoter-count').content.to_i
+    
     event.trainer = trainer
 
     event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
@@ -332,6 +374,11 @@ class KeventerReader
     event_type.faqs  = xml_keventer_event.find_first('faq').content
     event_type.elevator_pitch = xml_keventer_event.find_first('elevator-pitch').content
     event_type.include_in_catalog = to_boolean( xml_keventer_event.find_first('include-in-catalog').content )
+    
+    event_type.average_rating = xml_keventer_event.find_first('average-rating').content.nil? ? nil : xml_keventer_event.find_first('average-rating').content.to_f.round(2)
+    event_type.net_promoter_score = xml_keventer_event.find_first('net-promoter-score').content.nil? ? nil : xml_keventer_event.find_first('net-promoter-score').content.to_i
+    event_type.surveyed_count = xml_keventer_event.find_first('surveyed-count').content.to_i
+    event_type.promoter_count = xml_keventer_event.find_first('promoter-count').content.to_i
 
     event_type
   end    

@@ -23,16 +23,20 @@ en:
     menu:
         home: "Home"
         we_do_it_for: "We do it for you to:"
-        training: "Learn"
+        training: 
+          root: "Courses"
+          calendar: "Calendar"
+          catalog: "Catalog"
         coaching: "Coaching"
+        certifications: "Certifications"
         achieve:
             root: "Achieve"
-            products: "Quality Products"
-            organization: "an Amazing Organization"
-            clients: "Happy Clients"
-        community: "Participate"
-        publishing: "Read"
-        we_are: "Know us"
+            products: "Technical Coaching"
+            organization: "Organizational & Teams Coaching"
+            clients: "Commercial & Clients Coaching"
+        community: "Community"
+        publishing: "Publishing"
+        we_are: "We are"
         tv: "Watch"
         blog: "Blog"
     home:
@@ -74,12 +78,15 @@ en:
                 title: "Event Registration"
     training:
         title: "Public Courses"
+        description: "WE ORGANIZE BOTH PUBLIC AND PRIVATE COURSES.<br/>OUR CERTIFICATIONS ARE ENDORSED BY THE SCRUM ALLIANCE."
+        incompany: "WE CAN TEACH ALL OUR COURSES IN YOUR ORGANIZATION"
+        more_info: "More Information"
     community:
         title: "Community Events"
     coaching:
        title: "Coaching"
-       subtitle: "We help organizations, teams and practitioners"
-       text: "<p>We offer coaching services in implementing Agile Methodologies and implementing agile development techniques with valuable results.</p><p>This is a process carried out in situ and with the assistance of an expert in Agile Methodologies, who has the task of transmitting actively practices and tools necessary to transform into Agile a team or organization. The implementation occurs while the people involved are performing their daily duties.</p><p>One advantage of adopting our Agile Coaching is that the successful implementation of Agile methodologies is achieved in less time than it would take to do it without the assistance of an expert. Additionally, the business is not neglected as we works directly on the projects, roles and objectives of the teams and other stakeholders involved in the implementation (managers, development managers, etc.). This includes identifying problems, understanding their causes and developing the skills necessary for the team to be able to solve them successfully.</p><p>There are two kinds of situations: those in which never before had and agile environment been created and and others in which Agile already exists and you want to experience a greater level of depth. Kleer's service responds effectively to both, with the additional feature that models the process of implementation according to the specific needs of the team or organization.</p><p>In the case where necessary, support is preceded by customised training, ensuring a level of knowledge that enables greater effectiveness during deployment.</p>"
+       subtitle: "We help organizations, teams and practitioners achieve continuous improvement"
+       text: "<p>Our coaching service in organizational transformation is aimed at you achieve one or more of the following results, based on your current needs::</p>"
        tabs:
            benefits:
                title: "Coaching benefits"
@@ -92,6 +99,7 @@ en:
                text: "<p>Contact us<a href='mailto:hello@kleer.la'>hello@kleer.la</a> for a quotation.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
     publishing:
        title: "We publish"
+       description: "WE SHARE KNOWLEDGE AND EXPERIENCES. HELP US SPREAD THE WORD!"
        others:
            title: "Other publications"
        buy:
@@ -163,7 +171,11 @@ en:
        free: "Free event"
        wanna_join: "More information?"
        location: "Venue"
-       time: "%{starts} to %{ends}hs"
+       time: "%{starts} to %{ends}"
+       date: "Date"
+       important: "Important"
+       hour: "Time"
+       pricing: "Pricing"
        tabs:
            description: "Description"
            target: "Who should attend?"
@@ -177,12 +189,14 @@ en:
        is_full:
            title: "<strong>Ouch!</strong> Sorry! This course is full."
            text: "You can contact us at <a href=\"mailto:training@kleer.us?subject=New dates for: %{title}\">training@kleer.us</a> to request new edition dates."
-    category:
-       training: "Private Trainings"
-       see_more: "see more..."
-       missing_elevator_pitch: "Please, fill the elevator pitch field for this event type."       
+    catalog:
+        title: "Private Trainings"
+        description: "WE CAN TEACH ALL OUR COURSES IN YOUR ORGANIZATION.<br/>OUR CERTIFICATIONS ARE ENDORSED BY THE SCRUM ALLIANCE."
+        missing_elevator_pitch: "Please, fill the elevator pitch field for this event type."       
     contact:
         title: "Contact"
+        contact_us: "Contact us"
+        training_email: "training@kleer.us"
         newsletter_subscription: "Subscribe to our newsletter"
         locations:
             argentina:

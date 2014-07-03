@@ -1,40 +1,53 @@
-<script type="text/javascript" src="/js/jquery.js"/></script>
-<style>
-	body {
-		background: url(/img/fondos/fondo-06.jpg) no-repeat center center fixed; 
-	}
-</style>
-<div class="row">
-	<div class="span8" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h2>Preguntas frecuentes sobre la Certificación como ScrumMaster</h2>
-
-		<h3>¿Cómo puedo comparar ésta con las demás certificaciones de Scrum Alliance?</h3>
-		<p>En <a href="http://scrumalliance.org/pages/scrum_certification" target="_blank">scrumalliance.org</a> puedes acceder a la lista de programas que ofrece Scrum Alliance y hacerte una idea global del proceso de aprendizaje de Scrum.</p>
-
-		<h3>¿El costo del entrenamiento incluye la certificación ante la Scrum Alliance?</h3>
-		<p>Si, incluye la certificación. Posterior al entrenamiento, tu instructor (<a href="http://www.scrumalliance.org/pages/certified_scrum_trainer" target="_blank">CST</a>) realizará la inscripción ante Scrum Alliance.</p>
-
-		<h3>¿Cuál es el puntaje mínimo para aprobar el examen?</h3>
-		<p>Se requieren 24 respuestas correctas de 35.</p>
-
-		<h3>¿Dónde puedo encontrar material para prepararme para el examen?</h3>
-		<p><a href="http://www.scrumalliance.org/pages/scrum_student_resources" target="_blank">Aquí</a> puedes encontrar material básico de Scrum, de Scrum Alliance.</p>
-
-		<h3>¿Qué pasa si no apruebo el examen?</h3>
-		<p>Tienes una oportunidad más de presentarlo de manera gratuita. Intentos posteriores tienen un costo de USD 25, los cuales deben ser cancelados directamente a Scrum Alliance.</p>
-
-		<h3>¿Qué sigue después de certificarme como CSM?</h3>
-		<p>Para continuar tu formación en Scrum puedes tomar diferentes caminos:</p>
-		<ul>
-			<li>Si quieres profundizar en conocimiento sobre Scrum, puedes optar por la certificación <a href="http://www.scrumalliance.org/pages/certified_scrum_professional" target="_blank">CSP</a>.</li>
-			<li>Si eres desarrollador, puedes continuar con la certificación <a href="/entrenamos">CSD</a>.</li>
-			<li>Si tu intención es ser Product Owner, puedes tomar la certificación <a href="/entrenamos">CSPO</a>.</li>
-		</ul>
-		<p>Puedes ver el mapa completo de certificaciones <a href="http://scrumalliance.org/pages/scrum_certification" target="_blank">aquí</a>. Tambien puedes ver <a href="/entrenamos">aquí</a> el resto de las opciones que ofrece Kleer.</p>
-
-	</div>	
-	<div class="span3" style="text-align:center;">  
-		<img src="/img/logos/logo-04.png">
-		<%= erb :twitter_box, :layout => false %>
+<div class="container-fluid fondo-amarillo slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1>Preguntas Frecuentes</h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
 	</div>
+</div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 no-hpadding contenedor-main-izq">
+			<h2>Certified ScrumMaster</h2>
+
+			<h3>¿Cómo puedo comparar ésta con las demás certificaciones de Scrum Alliance?</h3>
+			<p>En <a href="http://scrumalliance.org/pages/scrum_certification" target="_blank">scrumalliance.org</a> puedes acceder a la lista de programas que ofrece Scrum Alliance y hacerte una idea global del proceso de aprendizaje de Scrum.</p>
+
+			<h3>¿El costo del entrenamiento incluye la certificación ante la Scrum Alliance?</h3>
+			<p>Si, incluye la certificación. Posterior al entrenamiento, tu instructor (<a href="http://www.scrumalliance.org/pages/certified_scrum_trainer" target="_blank">CST</a>) realizará la inscripción ante Scrum Alliance.</p>
+
+			<h3>¿Cuál es el puntaje mínimo para aprobar el examen?</h3>
+			<p>Se requieren 24 respuestas correctas de 35.</p>
+
+			<h3>¿Dónde puedo encontrar material para prepararme para el examen?</h3>
+			<p><a href="http://www.scrumalliance.org/pages/scrum_student_resources" target="_blank">Aquí</a> puedes encontrar material básico de Scrum, de Scrum Alliance.</p>
+
+			<h3>¿Qué pasa si no apruebo el examen?</h3>
+			<p>Tienes una oportunidad más de presentarlo de manera gratuita. Intentos posteriores tienen un costo de USD 25, los cuales deben ser cancelados directamente a Scrum Alliance.</p>
+
+			<h3>¿Qué sigue después de certificarme como CSM?</h3>
+			<p>Para continuar tu formación en Scrum puedes tomar diferentes caminos:</p>
+			<ul>
+				<li>Si quieres profundizar en conocimiento sobre Scrum, puedes optar por la certificación <a href="http://www.scrumalliance.org/pages/certified_scrum_professional" target="_blank">CSP</a>.</li>
+				<li>Si eres desarrollador, puedes continuar con la certificación <a href="/entrenamos">CSD</a>.</li>
+				<li>Si tu intención es ser Product Owner, puedes tomar la certificación <a href="/entrenamos">CSPO</a>.</li>
+			</ul>
+			<p>Puedes ver el mapa completo de certificaciones <a href="http://scrumalliance.org/pages/scrum_certification" target="_blank">aquí</a>. Tambien puedes ver <a href="/entrenamos">aquí</a> el resto de las opciones que ofrece Kleer.</p>
+
+			<br/>&nbsp;
+			<br/>&nbsp;
+			<br/>&nbsp;
+		</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
 </div>

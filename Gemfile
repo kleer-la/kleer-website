@@ -15,6 +15,11 @@ gem 'oauth'
 gem 'json'
 gem 'i18n'
 gem 'prawn'
+gem 'curb'
+gem 'tzinfo'
+gem 'tzinfo-data'
+gem 'money'
+
 
 group :development do
   gem 'foreman'
