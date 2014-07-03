@@ -148,6 +148,30 @@ h2 {
 	background-color: #1c1c1c;
 }
 
+.fondo-panramica-1 {
+	background-image: url('/img/fondos/panoramica-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 170px;
+}
+
+.fondo-panramica-2 {
+	background-image: url('/img/fondos/panoramica-2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 220px;
+}
+
+.fondo-panramica-3 {
+	background-image: url('/img/fondos/panoramica-3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 150px;
+}
+
 .creemos {
 	padding-top: 50px;
 }
@@ -306,6 +330,7 @@ h2 {
 .slide-home-contactanos {
 	overflow:hidden;
 	height:400px;
+	padding-top: 10px;
 }
 
 .slide-home-newsletter {
