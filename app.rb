@@ -6,14 +6,20 @@ require 'sinatra/flash'
 require 'redcarpet'
 require 'json'
 require 'i18n'
+require 'money'
 
 require File.join(File.dirname(__FILE__),'/lib/keventer_reader')
 require File.join(File.dirname(__FILE__),'/lib/dt_helper')
 require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 require File.join(File.dirname(__FILE__),'/lib/pdf_catalog')
+require File.join(File.dirname(__FILE__),'/lib/crm_connector')
 
 helpers do
+
+  MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
+                "Jul" => "Jul", "Aug" => "Ago", "Sep" => "Sep", "Oct" => "Oct", "Nov" => "Nov", "Dec" => "Dic"}
+
   def t(key, ops = Hash.new)
     ops.merge!(:locale => session[:locale])
     I18n.t key, ops
@@ -32,6 +38,19 @@ helpers do
     sanitized = sanitized.gsub('Ó', 'O')
     sanitized = sanitized.gsub('Ú', 'U')
   end
+
+  def month_es(month_en)
+    MONTHS_ES[month_en]
+  end
+
+  def currency_symbol_for( iso_code )
+    currency = Money::Currency.table[iso_code.downcase.to_sym] unless iso_code.nil?
+    if currency.nil?
+      ""
+    else
+      currency[:symbol]
+    end
+  end
   
 end
 
@@ -45,12 +64,13 @@ configure do
 end
 
 before do
+
   if request.host.include?( "kleer.us" )
     session[:locale] = 'en'
   else
     session[:locale] = 'es'
   end
-  
+ 
   if request.host == "kleer.la" || request.host == "kleer.us" || request.host == "kleer.es" || request.host == "kleer.com.ar"
     redirect "http://www." + request.host + request.path
   else
@@ -70,13 +90,13 @@ before '/:locale/*' do
     request.path_info = '/' + params[:splat ][0]
   else
     session[:locale] = 'es'
-  end
-  
+  end  
 end
 
 get '/' do
 	@active_tab_index = "active"
 	@categories = @@keventer_reader.categories
+  @kleerers = @@keventer_reader.kleerers
 	erb :index
 end
 
@@ -93,9 +113,14 @@ get '/entrenamos' do
 end
 
 get '/acompanamos' do
-  @active_tab_acompanamos = "active"
-	@page_title += " | Acompañamos"
-	erb :acompanamos
+  redirect "/coaching", 301 # permanent redirect
+end
+
+get '/coaching' do
+  @active_tab_coaching = "active"
+	@page_title += " | Coaching"
+  @categories = @@keventer_reader.categories
+	erb :coaching
 end
 
 get '/comunidad' do
@@ -113,6 +138,17 @@ get '/publicamos' do
   @active_tab_publicamos = "active"
   @page_title += " | Publicamos"
   erb :ebooks
+end
+
+post '/subscribe' do
+  @email = params[:email]
+  @fname = params[:fname]
+  @lname = params[:lname]
+  @influence_zone_tag = params[:influence_zone_tag]
+
+  CrmConnector::subscribe_person( @email, @fname, @lname, @influence_zone_tag )
+
+  erb :subscribe
 end
 
 get '/publicamos/scrum' do
@@ -161,7 +197,7 @@ get '/categoria/:category_codename' do
     status 404
   else
     @page_title += " | " + @category.name
-    @event_types = @category.event_types
+    @event_types = @category.event_types.sort_by { |et| et.name}
 
     erb :category
   end
@@ -186,11 +222,17 @@ get '/entrenamos/evento/:event_id_with_name' do
 end
 
 get '/catalogo' do
-  pdf_catalog 
-  redirect '/'
+  @active_tab_entrenamos = "active"
+  #pdf_catalog 
+  @page_title += " | Catálogo"
+  @categories = @@keventer_reader.categories
+
+  erb :catalogo
 end
 
 get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
+  @active_tab_entrenamos = "active"
+  
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
 
@@ -304,7 +346,7 @@ get '/entrenamos/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount)
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount, false)
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
@@ -314,6 +356,15 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
     country_iso_code = "todos"
   end
   DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
+end
+
+get '/comunidad/eventos/proximos/:amount' do
+  content_type :json
+  amount = params[:amount]
+  if !amount.nil?
+    amount = amount.to_i
+  end
+  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_community_events(), true, "comunidad", I18n, session[:locale], amount, false)
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do

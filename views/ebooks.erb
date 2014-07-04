@@ -1,75 +1,84 @@
-<style>
-	body {
-		background: url(/img/fondos/fondo-08.jpg) no-repeat center center fixed; 
-	}
-</style>
-<script type="text/javascript" src="/js/jquery.js"/></script>
-
-<div class="row-fluid">
-	<div class="span9" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1><%=t("publishing.title")%></h1>
-		&nbsp;
-		
-		<div class="row-fluid">
-			
-			<div class="span4">
-				<a id="MasProductivos"></a>
-				<a href="/<%=session[:locale]%>/publicamos/mas-productivos"><p align="center"><img src="/img/ebooks/mas-productivos-288.jpg" class="img-rounded"></p></a>
-
-				<div class="well well-small">
-					<h4><%=t("publishing.books.mas_productivos.title")%></h4>
-					<p><%=t("publishing.books.mas_productivos.text")%></p>
-					<p><a href="/<%=session[:locale]%>/publicamos/mas-productivos"><%=t("publishing.books.mas_productivos.next")%></a></p>
-				</div>
+<div class="container-fluid fondo-amarillo slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1><%=t("publishing.title")%></h1>
 			</div>
-			
-			<div class="span4">
-				<a href="/<%=session[:locale]%>/publicamos/scrum"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
-
-				<div class="well well-small">
-					<h4><%=t("publishing.books.scrum.title")%></h4>
-					<p><%=t("publishing.books.scrum.text")%></p>
-					<p><a href="/<%=session[:locale]%>/publicamos/scrum"><%=t("publishing.books.scrum.next")%></a></p>
-				</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
 			</div>
-
-			<div class="span4">
-				<p align="center"><img src="/img/ebooks/retrospectivas.png" class="img-rounded"></p>
-
-				<div class="well well-small">
-					<h4><%=t("publishing.books.retrospectives.title")%></h4>
-					<p><%=t("publishing.books.retrospectives.text")%></p>
-					<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=d999f0797cb600c38e17891503cb3b05" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
-				</div>
-			</div>
-		</div>		
-
-		<div class="row-fluid">
-
-			<div class="span4">
-				<p align="center"><img src="/img/ebooks/lenguajes-web.jpg" class="img-rounded"></p>
-
-				<div class="well well-small">
-					<h4><%=t("publishing.books.lenguajes_web.title")%></h4>
-					<p><%=t("publishing.books.lenguajes_web.text")%></p>
-					<iframe src="http://www.paywithapost.de/dlbutton01.php?id=d3806d13-1b7b-4419-b087-78c22a3a7c7f" name="paytweet_button" scrolling="no" frameborder="no" height="24px" width="145px"></iframe>
-				</div>
-			</div>
-			
-			<div class="span4">
-				<p align="center"><img src="/img/ebooks/agil-ilustrado.jpg" class="img-rounded"></p>
-
-				<div class="well well-small">
-					<h4><%=t("publishing.books.agil_ilustrado.title")%></h4>
-					<p><%=t("publishing.books.agil_ilustrado.text")%></p>
-					<iframe src="http://www.paywithapost.de/dlbutton01.php?id=b896fb12-e807-4ed9-ba8f-d929d8c7957d" name="paytweet_button" scrolling="no" frameborder="no" height="24px" width="145px"></iframe>
-				</div>
-			</div>
-			
-		</div>		
-	</div>	
-	<div class="span3" style="text-align:center;">  
-		<img src="/img/logos/logo-05.png">
-		<%= erb :twitter_box, :layout => false %>
+		</div>
 	</div>
+</div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 no-hpadding contenedor-main-izq">
+			<%=t("publishing.description")%><br/>
+			&nbsp;<br/>
+			<div class="container-fluid">
+				
+				<div class="col-md-4">
+					<a id="MasProductivos"></a>
+					<a href="/<%=session[:locale]%>/publicamos/mas-productivos"><p align="center"><img src="/img/ebooks/mas-productivos-288-2.jpg" class="img-rounded"></p></a>
+
+					<div class="well well-small book-description">
+						<h4><%=t("publishing.books.mas_productivos.title")%></h4>
+						<p><%=t("publishing.books.mas_productivos.text")%></p>
+						<p><a href="/<%=session[:locale]%>/publicamos/mas-productivos"><%=t("publishing.books.mas_productivos.next")%></a></p>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<a href="/<%=session[:locale]%>/publicamos/scrum"><p align="center"><img src="/img/ebooks/scrum.jpg" class="img-rounded"></a></p>
+
+					<div class="well well-small book-description">
+						<h4><%=t("publishing.books.scrum.title")%></h4>
+						<p><%=t("publishing.books.scrum.text")%></p>
+						<p><a href="/<%=session[:locale]%>/publicamos/scrum"><%=t("publishing.books.scrum.next")%></a></p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<p align="center"><img src="/img/ebooks/retrospectivas.jpg" class="img-rounded"></p>
+
+					<div class="well well-small book-description">
+						<h4><%=t("publishing.books.retrospectives.title")%></h4>
+						<p><%=t("publishing.books.retrospectives.text")%></p>
+						<iframe src="http://www.paywithatweet.com/dlbutton01.php?id=d999f0797cb600c38e17891503cb3b05" name="paytweet_button" scrolling="no" frameborder="no" height = "24px" width = "145px"></iframe>
+					</div>
+				</div>
+			</div>		
+
+			<div class="container-fluid">
+
+				<div class="col-md-4 col-md-offset-2">
+					<p align="center"><img src="/img/ebooks/lenguajes-web.jpg" class="img-rounded"></p>
+
+					<div class="well well-small book-description">
+						<h4><%=t("publishing.books.lenguajes_web.title")%></h4>
+						<p><%=t("publishing.books.lenguajes_web.text")%></p>
+						<iframe src="http://www.paywithapost.de/dlbutton01.php?id=d3806d13-1b7b-4419-b087-78c22a3a7c7f" name="paytweet_button" scrolling="no" frameborder="no" height="24px" width="145px"></iframe>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<p align="center"><img src="/img/ebooks/agil-ilustrado.jpg" class="img-rounded"></p>
+
+					<div class="well well-small book-description">
+						<h4><%=t("publishing.books.agil_ilustrado.title")%></h4>
+						<p><%=t("publishing.books.agil_ilustrado.text")%></p>
+						<iframe src="http://www.paywithapost.de/dlbutton01.php?id=b896fb12-e807-4ed9-ba8f-d929d8c7957d" name="paytweet_button" scrolling="no" frameborder="no" height="24px" width="145px"></iframe>
+					</div>
+				</div>
+				
+			</div>	
+
+		</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
 </div>

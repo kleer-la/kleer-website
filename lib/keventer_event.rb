@@ -1,8 +1,11 @@
 class KeventerEvent
-    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :registration_link, 
+    attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :finish_date, :registration_link, 
                   :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place, :sepyme_enabled,
                   :human_date, :start_time, :end_time, :address, :list_price, :eb_price, :eb_end_date, 
-                  :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event
+                  :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event, 
+                  :time_zone_name, :time_zone, :show_pricing,
+                  :couples_eb_price, :business_eb_price, :business_price, 
+                  :enterprise_6plus_price, :enterprise_11plus_price, :mode
   
   def initialize
     @capacity = 0
@@ -12,6 +15,7 @@ class KeventerEvent
     @country_code = ""
     @event_type = nil
     @date = nil
+    @finish_date = nil
     @start_time = nil
     @end_time = nil
     @is_sold_out = false
@@ -23,13 +27,37 @@ class KeventerEvent
     @keventer_connector = nil
     @human_date
     @address = ""
+
+    @show_pricing = false
     @list_price = 0.0
     @eb_price = 0.0
     @eb_end_date = nil
+    @couples_eb_price = 0.0
+    @business_eb_price = 0.0
+    @business_price = 0.0
+    @enterprise_6plus_price = 0.0
+    @enterprise_11plus_price = 0.0
     @currency_iso_code = ""
+
     @is_webinar = false
+    @time_zone_name = ""
+    @time_zone = nil
+
     @specific_conditions = ""
     @is_community_event = false
+    @mode = ""
+  end
+
+  def is_online
+    self.mode == "ol"
+  end
+
+  def is_classroom
+    self.mode == "cl"
+  end
+
+  def is_blended_learning
+    self.mode == "bl"
   end
   
   def discount

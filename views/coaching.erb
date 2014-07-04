@@ -1,0 +1,37 @@
+<div class="container-fluid fondo-celeste slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1><%=t("coaching.title")%></h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 contenedor-main-izq">
+			<p class="lead"><%=t("coaching.subtitle")%></p>
+			<%=t("coaching.text")%>
+			<% indice_categoria = 1 %>
+			<% @categories.each do |category| %>
+				<div class="well categoria-<%= category.codename %>">
+					<h2><%= "#{indice_categoria}. #{category.name}" %></h2>
+					<p class="lead"><i><%= category.tagline %></i></p>
+				</div>
+				<p><%= @markdown_renderer.render( category.description )%></p>
+				<hr/>
+				<% indice_categoria += 1 %>
+			<% end %>
+
+		</div>
+
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
+</div>

@@ -68,6 +68,9 @@ Given(/^I visit the english "(.*?)"$/) do |page|
   visit '/en/'+page
 end
 
+Given(/^I visit "(.*?)"$/) do |page_url|
+  visit page_url
+end
 
 Then /^I should see the json string for all of the events$/ do
   text = '\"aaData\": \[' +
@@ -159,7 +162,7 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
 end
 
 Given /^I visit the "(.*?)" page$/ do |page|
-    stub_connector
+  stub_connector
   visit "/" + page
 end
 
@@ -200,15 +203,13 @@ Then /^I should see a facebook like button$/ do
 end
 
 Then /^I should see the Subscribe to newsletter option$/ do
-  response_body.should have_selector("a[href='http://eepurl.com/tu9Xr']") do |element|
-    element.should contain("Suscríbete a nuestra newsletter")
-  end
+  response_body.should have_selector("input[value='SUSCRÍBETE']")
 end
 
-Then /^the titles should use Dosis webfont$/ do
-  response_body.should have_selector("link[href='http://fonts.googleapis.com/css?family=Dosis:600']")
+Then /^the titles should use Roboto webfont$/ do
+  response_body.should have_selector("link[href='http://fonts.googleapis.com/css?family=Roboto:400,700']")
   response_body.should have_selector("style") do |element|
-    element.should contain("h1, h2, h3, h4, h5, h6 {font-family: 'Dosis'; font-weight: 600;}")
+    element.should contain("h1, h2, h3, h4, h5, h6 {font-family: 'Roboto';}")
   end
 end
 
@@ -369,4 +370,12 @@ Then(/^I should have a link to the "(.*?)" page$/) do |event_type_name|
   response_body.should have_selector("a[text()='#{event_type_name}']") do |element|
       element[0]["href"].should == "/cursos/1-"+ERB::Util::url_encode(event_type_name)
   end
+end
+
+Then(/^I should see the Argentinian fiscal data QR$/) do
+  response_body.should have_selector("img[src='http://www.afip.gob.ar/images/f960/DATAWEB.jpg']")
+end
+
+Then(/^I should see the Argentinian fiscal data link$/) do
+  response_body.should have_selector("a[href='http://qr.afip.gob.ar/?qr=5DjfcAnZHIhtGI65mHIRlA,,']")
 end

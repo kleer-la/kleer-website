@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <event-type>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
   <created-at type="datetime">2013-01-03T15:21:13Z</created-at>
   <description>#### Descripción del Encuentro
 
@@ -31,4 +35,10 @@ Se trata de una reunión donde un grupo de desarrolladores trabajan en un desaf�
 - Líderes Técnicos</recipients>
   <takeaways></takeaways>
   <updated-at type="datetime">2013-08-08T18:44:34Z</updated-at>
+<average-rating type="float">4.38</average-rating>
+<net-promoter-score type="float">0.96</net-promoter-score>
+<participant-count type="integer">125</participant-count>
+<promoter-count type="integer">47</promoter-count>
+<nps-opinions-count type="integer">2</nps-opinions-count>
+<rating-opinions-count type="integer">2</rating-opinions-count>
 </event-type>

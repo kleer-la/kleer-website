@@ -1,0 +1,175 @@
+@media (max-width: 1200px) {
+	.slide-home-cursos {
+		height:580px;
+	}
+	.slide-home-comunidad {
+		height:600px;
+	}
+	.img-comunidad-gratuitas {
+		height: 600px;
+	}
+
+	.slide-home-newsletter {
+		height:300px;
+	}
+
+	.suscripcion {
+		background-position: -50px -100px;
+	}
+
+	.suscripcion-inner {
+		font-size: 24pt;
+		margin-left: 40px;
+	}
+
+	.header-generico {
+		padding-top: 100px;
+	}
+
+	.event-facilitator-face {
+		left: -50px;
+	}
+
+	.slide-evento-logistics {
+		max-height: 100px;
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	.slide-home-cursos {
+		height:850px;
+	}
+
+	.slide-home-comunidad {
+		height:1150px;
+	}
+
+	.agenda {
+		padding-top: 10px;
+	}
+
+	.img-comunidad-gratuitas {
+		position: absolute;
+		height: 900px;
+		clip: rect(0px,700px,550px,0px);
+	}
+
+	.comunidad {
+		padding-top: 10px;
+		margin-top: 450px;
+	}
+
+	.contactanos {
+		padding-top: 10px;
+	}
+
+	.slide-home-contactanos {
+		height:450px;
+	}
+
+	.slide-home-somos {
+		height:1050px;
+	}
+
+	.img-equipo-kleer {
+		position: absolute;
+		height: 500px;
+		clip: rect(0px,400px,400px,0px);
+	}
+
+	.carousel-somos {
+		margin-top: 350px;
+	}
+
+	.suscripcion {
+		background-position: -80px -100px;
+		background-size: 120% 100%;
+	}
+
+	.suscripcion-inner {
+		padding-left: 50px;
+		text-align: left;
+		font-size: 20pt;
+	}
+
+	.btn-suscription {
+		font-size: 12pt;
+		right: -200px;
+	}
+
+	.contenedor-generico {
+		top: -50px;
+	}
+
+	.slide-header-generico {
+		height: 200px;
+	}
+
+	.contenedor-main-izq {
+		border-right: none;
+	}
+
+	.big-glyphicon {
+		font-size: 24pt;
+	}
+
+	.slide-evento-logistics {
+		max-height: 200px;
+	}
+
+	.slide-header-evento {
+		height: auto;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.navbar {
+		height: 70px; 
+	}
+
+	.navbar-collapse {
+		background-color: #1c1c1c;
+	}
+
+	.img-comunidad-gratuitas {
+		position: absolute;
+		height: 400px;
+		clip: rect(0px,400px,250px,0px);
+	}
+
+	.comunidad {
+		margin-top: 200px;
+	}
+
+	.contenedor-generico {
+		top: -50px;
+	}
+
+	.slide-header-generico {
+		height: 170px;
+	}
+
+	.container-header-generico > div > h1 {
+		font-size: 24pt;
+	}
+
+	.slide-evento-logistics {
+		max-height: 400px;
+	}
+
+	.evento-title-container > h2, h2 {
+		font-size: 18pt;
+	}
+
+	.evento-title-container > h3, h3 {
+		font-size: 14pt;
+	}
+
+	body {
+		font-size: 10pt;
+	}
+
+}

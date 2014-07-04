@@ -23,46 +23,37 @@ es:
     menu:
         home: "Inicio"
         we_do_it_for: "Lo hacemos para que:"
-        training: "Aprendas"
-        coaching: "Acompañamos"
+        training:
+            root: "Cursos"
+            calendar: "Agenda"
+            catalog: "Catálogo"
+        coaching: "Coaching"
+        certifications: "Certificaciones"
         achieve: 
             root: "Logres"
-            products: "Productos de Calidad"
-            organization: "una Organización Asombrosa"
-            clients: "Clientes Felices"
-        community: "Participes"
-        publishing: "Leas"
+            products: "Coaching Técnico"
+            organization: "Coaching Organizacional y de Equipos"
+            clients: "Coaching Comercial y Clientes"
+        community: "Comunidad"
+        publishing: "Publicaciones"
         tv: "Veas"
-        we_are: "Nos Conozcas"
+        we_are: "Nosotros"
         blog: "Blog"
     home:
-        slider:
-            organizations:
-                title: "Organizaciones asombrosas."
-                caption: "A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu organización, área, departamento o equipo logrará resultados nunca antes vistos."
-            clients:
-                title: "Clientes felices."
-                caption: "Innovación, comunicación, colaboración y participación. Las claves para que tus clientes se sientan orgullosos de vos."
-            products:
-                title: "Productos tecnológicos de calidad."
-                caption: "Integración continua, Test Driven Development, Pair Programming, Refactoring y Código Limpio."
-        sections:
-            coaching:
-                title: "Consultoría"
-                text: "Ofrecemos un servicio de acompañamiento, coaching y mentoring integral para aplicar los métodos ágiles de organización de equipos en áreas de innovación como marketing, dirección organizacional, diseño de productos y servicios, y desarrollo de software."
-            training:
-                title: "Capacitación"
-                text: "Brindamos cursos, talleres y entrenamientos mediante las técnicas más novedosas y efectivas para garantizar el aprendizaje duradero en adultos.<br/>&nbsp;<br/>&nbsp;"
-            community:
-                title: "Comunidad"
-                text: "Impulsamos las Metodologías Ágiles en Latinoamérica desde el 2008. Enterate de todos los eventos comunitarios que organizamos y promocionamos en la región.<br/>&nbsp;<br/>&nbsp;"
-            publishing:
-                title: "Contenidos"
-                text: "Publicamos contenidos y conocimientos periódicamente. Encontrá e-Books, blog-posts, artículos y videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
         calendar:
-            title: "Próximos 8 cursos"
-            private_course_info: "Información de Cursos In-Company"
             current_year_calendar: "Ver Calendario 2014"
+            title: "Cursos"
+            characteristics: "<ul>
+                                <li>Con los profesionales más reconocidos de latinoamérica</li>
+                                <li>100% vivenciales</li>
+                                <li>Dinámicos, divertidos y útiles</li>
+                                <li>Certificaciones avaladas por la Scrum Alliance</li>
+                            </ul>"
+        community:
+            title: "Comunidad"
+            subtitle: "APOYAMOS ACTIVAMENTE LAS COMUNIDADES LATINOAMERICANAS"
+            text: "Nacimos de la comunidad y queremos devolver siempre a la comunidad. Compartimos conocimientos, tiempo, experiencias y estados de ánimo con comunidades profesionales, educativas, regionales y de todo tipo."
+            agenda: "Eventos Comunitarios"
     popups:
         course:
             registration:
@@ -74,12 +65,15 @@ es:
                 title: "Registro a Evento"
     training:
         title: "Cursos Abiertos"
+        description: "ORGANIZAMOS ENTRENAMIENTOS PÚBLICOS Y PRIVADOS.<br/>NUESTRAS CERTIFICACIONES ESTÁN AVALADAS POR LA SCRUM ALLIANCE."
+        incompany: "PODEMOS REALIZAR LOS CURSOS EN TU ORGANIZACIÓN"
+        more_info: "Más Información"
     community:
         title: "Eventos Comunitarios"
     coaching:
-        title: "Acompañamos"
-        subtitle: "Acompañamiento de organizaciones, equipos y profesionales"
-        text: "<p>Ofrecemos un servicio de acompañamiento integral en la implementación de Metodologías Ágiles y técnicas ágiles de desarrollo con resultados valiosos.</p><p>Se trata de un proceso llevado a cabo in situ y con la asistencia de un experto en Metodologías Ágiles, quien tiene la misión de transmitir de forma activa las prácticas y herramientas necesarias para transformar en Agile al equipo u organización. La implementación ocurre mientras las personas involucradas se encuentran realizando sus tareas habituales.</p><p>Una de las ventajas de realizar nuestro Agile Coaching es que la implementación exitosa de las Metodologías Ágiles se logra en menor tiempo del que tomaría hacerlo sin el acompañamiento de un experto. Adicionalmente, no se descuida el negocio ya que se  trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p><p>Existen dos tipos de situaciones: aquellas en las que nunca antes se había trabajo en un entorno ágil y otras en que ya existe la experiencia y se desea alcanzar un mayor nivel de profundidad. El servicio de acompañamiento de Kleer responde efectivamente a ambas, con la particularidad adicional de que modela el proceso de implementación según las necesidades específicas del equipo u organización.</p><p>En el caso en que fuera necesario, el acompañamiento es precedido por capacitaciones diseñadas a medida de cada equipo, asegurando un nivel de conocimientos que habilita una mayor efectividad durante  la implementación.</p>"
+        title: "Coaching"
+        subtitle: "Acompañamiento de organizaciones, equipos y profesionales hacia la mejora continua"
+        text: "<p>Nuestro servicio de coaching en transformación organizacional está orientado a que logres uno o varios de los siguientes resultados, según tus necesidades actuales:</p>"
         tabs:
             benefits:
                 title: "Beneficios del Coaching"
@@ -92,6 +86,7 @@ es:
                 text: "<p>Puedes contactarnos a <a href='mailto:hola@kleer.la'>hola@kleer.la</a> para solicitarnos una  cotización.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
     publishing: 
         title: "Publicamos"
+        description: "COMPARTIMOS CONOCIMIENTOS Y EXPERIENCIAS. ¡AYUDANOS A CORRER LA VOZ!"
         others:
             title: "Otras publicaciones"
         buy:
@@ -177,12 +172,16 @@ es:
         free: "Evento Gratuito"
         wanna_join: "¿Más información?"
         location: "Lugar"
-        time: "%{starts} a %{ends}hr"
+        time: "%{starts} a %{ends}"
+        date: "Fecha"
+        hour: "Horario"
+        pricing: "Inversión"
+        important: "Importante"
         tabs:
             description: "Descripción"
             target: "Destinado A"
             program: "Programa"
-            faqs: "FAQs"
+            faqs: "Preguntas Frecuentes"
         details:
             sections:
                 learnings: "¿Qué voy a aprender?"
@@ -191,12 +190,14 @@ es:
         is_full:
             title: "<strong>Ouch!</strong> El cupo para este evento se encuentra completo."
             text: "Puedes contactarnos a <a href=\"mailto:entrenamos@kleer.la?subject=Nuevas Fechas: %{title}\">entrenamos@kleer.la</a> para conocer nuevas fechas."
-    category:
-        training: "Entrenamientos Privados"
-        see_more: "ver más..."
+    catalog:
+        title: "Entrenamientos Privados"
+        description: "PODEMOS REALIZAR LOS CURSOS EN TU ORGANIZACIÓN.<br/>NUESTRAS CERTIFICACIONES ESTÁN AVALADAS POR LA SCRUM ALLIANCE."
         missing_elevator_pitch: "Por favor, completar el elevator pitch del tipo de evento."
     contact:
         title: "Contacto"
+        contact_us: "Contactanos"
+        training_email: "entrenamos@kleer.la"
         newsletter_subscription: "Suscríbete a nuestra newsletter"
         locations:
             argentina:
