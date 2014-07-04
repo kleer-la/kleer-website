@@ -16,7 +16,16 @@
 	<div class="container fondo-blanco contenedor-generico">
 		<div class="col-md-9 contenedor-main-izq">
 			<p class="lead"><%=t("coaching.subtitle")%></p>
-			<%=t("coaching.text")%>
+			<%=t("coaching.text.top")%>
+
+			<h2><%=t("coaching.tabs.benefits.title")%></h2>
+			<%=t("coaching.tabs.benefits.text")%>
+
+			<h2><%=t("coaching.tabs.characteristics.title")%></h2>
+			<%=t("coaching.tabs.characteristics.text")%>
+
+			<%=t("coaching.text.bottom")%>
+
 			<% indice_categoria = 1 %>
 			<% @categories.each do |category| %>
 				<div class="well categoria-<%= category.codename %>">

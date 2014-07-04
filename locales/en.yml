@@ -73,7 +73,9 @@ en:
     coaching:
        title: "Coaching"
        subtitle: "We help organizations, teams and practitioners achieve continuous improvement"
-       text: "<p>Our coaching service in organizational transformation is aimed at you achieve one or more of the following results, based on your current needs::</p>"
+       text:
+        top: "<p>We offer coaching services in implementing Agile Methodologies and implementing agile development techniques with valuable results.</p><p>This is a process carried out in situ and with the assistance of an expert in Agile Methodologies, who has the task of transmitting actively practices and tools necessary to transform into Agile a team or organization. The implementation occurs while the people involved are performing their daily duties.</p><p>One advantage of adopting our Agile Coaching is that the successful implementation of Agile methodologies is achieved in less time than it would take to do it without the assistance of an expert. Additionally, the business is not neglected as we works directly on the projects, roles and objectives of the teams and other stakeholders involved in the implementation (managers, development managers, etc.). This includes identifying problems, understanding their causes and developing the skills necessary for the team to be able to solve them successfully.</p><p>There are two kinds of situations: those in which never before had and agile environment been created and and others in which Agile already exists and you want to experience a greater level of depth. Kleer's service responds effectively to both, with the additional feature that models the process of implementation according to the specific needs of the team or organization.</p><p>In the case where necessary, support is preceded by customised training, ensuring a level of knowledge that enables greater effectiveness during deployment.</p>"
+        bottom: "<p>Our coaching service in organizational transformation is aimed at you achieve one or more of the following results, based on your current needs::</p>"
        tabs:
            benefits:
                title: "Coaching benefits"
