@@ -1,7 +1,4 @@
 <style>
-	body {
-		background: url(/img/fondos/fondo-02.jpg) no-repeat center center fixed; 
-	}
 	.rssBody ul {
 		list-style:none; 
 	}
@@ -11,26 +8,44 @@
 		border-bottom:solid #000;
 		border-bottom-width:1px
 	}
+	.rssRow img {
+		max-width: 100%;
+		height: auto;
+	}
+	.rssRow h1 {
+		font-size: 20pt;
+	}
+	.rssRow a {
+		font-family: 'Roboto';
+	}
 </style>
-
-<div class="row">
-	<div class="span4">  
-		<img src="/img/logos/logo-03.png">
+<div class="container-fluid fondo-amarillo slide-header-generico">
+	<div class="container">
+		<div class="container-fluid container-header-generico">
+			<div class="col-md-7">
+				<h1>Blog</h1>
+			</div>
+			<div class="col-md-5 hidden-xs hidden-sm">
+				&nbsp;<br/>
+				<img src="/img/personajes/your-way-kleerer.png" height="400">
+			</div>
+		</div>
 	</div>
-	<div class="span7" style="background-color:rgba(255,255,255,0.9);padding:5px;-moz-border-radius: 5px; border-radius: 5px;">
-		<h1>Blog</h1>
+</div>
+
+<div class="container-fluid fondo-rosa slide-contenedor-generico">
+	<div class="container fondo-blanco contenedor-generico">
+		<div class="col-md-9 contenedor-main-izq">
 
         <div id="blog-container"></div>
 
 
 	</div>
 
-	<div class="row"><div class="span1">&nbsp;</div></div>
-	
-	<div class="row">
-
-    </div>
-
+		<div class="col-md-3">
+			<%= erb :_twitter_widget, :layout => false %>
+		</div>
+	</div>	
 </div>
 
 <script type="text/javascript" src="/js/jquery.js"/></script>
