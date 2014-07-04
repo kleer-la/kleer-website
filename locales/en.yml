@@ -40,33 +40,20 @@ en:
         tv: "Watch"
         blog: "Blog"
     home:
-        slider:
-            organizations:
-                title: "Amazing organizations."
-                caption: "Through effective learning, trust, commitment, visibility and flexibility your organization, department or team will achieve results never seen before."
-            clients:
-                title: "Happy clients."
-                caption: "Innovation, communication, collaboration and participation. keys for your customers to be proud of you."
-            products:
-                title: " High quality technology products."
-                caption: "Continuous Integration, Test Driven Development, Pair Programming, Refactoring and Clean Code."
-        sections:
-            coaching:
-                title: "Coaching"
-                text: "We offer coaching and mentoring services for agile methods adoption for organizing teams in innovation areas such as marketing, organizational management, product and service design, software development. .."
-            training:
-                title: "Training"
-                text: "We offer courses, workshops and training using the latest techniques to ensure effective and durable learning.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
-            community:
-                title: "Community"
-                text: "We encourage Agile Methodologies in Latin America since 2008. Find out all community events organized and promoted in the region<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
-            publishing:
-                title: "Contents"
-                text: "We publish contents and share knowledge regularly. Find out e-Books, blog-posts, articles and videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
         calendar:
-            title: "8 upcoming courses"
-            private_course_info: "In-Company courses information"
             current_year_calendar: "Our 2014 calendar"
+            title: "Courses"
+            characteristics: "<ul>
+                                <li>With the most recognized professionals in Latin America</li>
+                                <li>100% experiential</li>
+                                <li>Dynamic, fun and useful</li>
+                                <li>Certifications endorsed by the Scrum Alliance</li>
+                            </ul>"
+        community:
+            title: "Community"
+            subtitle: "WE ACTIVELY SUPPORT THE LATIN AMERICAN COMMUNITIES"
+            text: "We were born in the community and we always want to give back to the community. We share knowledge, time, experiences and moods with professional, educational, regional and all kind of communities"
+            agenda: "Community Events"
     popups:
         course:
             registration:

@@ -40,33 +40,20 @@ es:
         we_are: "Nosotros"
         blog: "Blog"
     home:
-        slider:
-            organizations:
-                title: "Organizaciones asombrosas."
-                caption: "A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu organización, área, departamento o equipo logrará resultados nunca antes vistos."
-            clients:
-                title: "Clientes felices."
-                caption: "Innovación, comunicación, colaboración y participación. Las claves para que tus clientes se sientan orgullosos de vos."
-            products:
-                title: "Productos tecnológicos de calidad."
-                caption: "Integración continua, Test Driven Development, Pair Programming, Refactoring y Código Limpio."
-        sections:
-            coaching:
-                title: "Consultoría"
-                text: "Ofrecemos un servicio de acompañamiento, coaching y mentoring integral para aplicar los métodos ágiles de organización de equipos en áreas de innovación como marketing, dirección organizacional, diseño de productos y servicios, y desarrollo de software."
-            training:
-                title: "Capacitación"
-                text: "Brindamos cursos, talleres y entrenamientos mediante las técnicas más novedosas y efectivas para garantizar el aprendizaje duradero en adultos.<br/>&nbsp;<br/>&nbsp;"
-            community:
-                title: "Comunidad"
-                text: "Impulsamos las Metodologías Ágiles en Latinoamérica desde el 2008. Enterate de todos los eventos comunitarios que organizamos y promocionamos en la región.<br/>&nbsp;<br/>&nbsp;"
-            publishing:
-                title: "Contenidos"
-                text: "Publicamos contenidos y conocimientos periódicamente. Encontrá e-Books, blog-posts, artículos y videos.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;"
         calendar:
-            title: "Próximos 8 cursos"
-            private_course_info: "Información de Cursos In-Company"
             current_year_calendar: "Ver Calendario 2014"
+            title: "Cursos"
+            characteristics: "<ul>
+                                <li>Con los profesionales más reconocidos de latinoamérica</li>
+                                <li>100% vivenciales</li>
+                                <li>Dinámicos, divertidos y útiles</li>
+                                <li>Certificaciones avaladas por la Scrum Alliance</li>
+                            </ul>"
+        community:
+            title: "Comunidad"
+            subtitle: "APOYAMOS ACTIVAMENTE LAS COMUNIDADES LATINOAMERICANAS"
+            text: "Nacimos de la comunidad y queremos devolver siempre a la comunidad. Compartimos conocimientos, tiempo, experiencias y estados de ánimo con comunidades profesionales, educativas, regionales y de todo tipo."
+            agenda: "Eventos Comunitarios"
     popups:
         course:
             registration:
