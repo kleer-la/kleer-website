@@ -1,14 +1,15 @@
 # encoding: utf-8
-require File.join(File.dirname(__FILE__),'../lib/dt_helper')
-require File.join(File.dirname(__FILE__),'../lib/keventer_event')
-require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
 require 'date'
 require 'i18n'
 require 'spec_helper'
+require File.join(File.dirname(__FILE__),'../lib/dt_helper')
+require File.join(File.dirname(__FILE__),'../lib/keventer_event')
+require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
 
 describe DTHelper do
   
   before(:each) do
+    I18n.enforce_available_locales = true  
     I18n.load_path += Dir[File.join(File.dirname(__FILE__), '../locales', '*.yml').to_s]
   end
   
@@ -51,5 +52,4 @@ describe DTHelper do
     expect(DTHelper::to_dt_event_array_json(some_events)).not_to include("Completo")
     expect(DTHelper::to_dt_event_array_json(some_events, false)).not_to include("Completo")  
   end
-  
 end

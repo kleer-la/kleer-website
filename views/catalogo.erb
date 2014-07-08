@@ -20,7 +20,7 @@
 							    <h3 class="list-group-item-heading"><%=event_type.name%></h3>
 							    <p class="list-group-item-text">
 							    	<%=event_type.duration%> horas.
-							    	<% if event_type.has_rate %>
+							    	<% if feature_on?("show_rates_on_catalog") && event_type.has_rate %>
 				                      &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
 				                        <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
 				                      </div>
