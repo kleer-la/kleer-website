@@ -33,7 +33,7 @@
 						    	<h4 class="panel-title">
 							        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= event_type.id %>">
 							          <i class="icon-plus"></i>&nbsp;<%= event_type.name %></a>
-							          <% if event_type.surveyed_count > 20 && !event_type.average_rating.nil? %>
+							          <% if event_type.has_rate %>
 				                        &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
 				                          <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
 				                        </div>

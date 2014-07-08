@@ -7,7 +7,7 @@
           <h3><%= @event_type.duration%> hora(s)</h3>
           <p><%= @event_type.elevator_pitch %></p>
 
-          <% if @event_type.surveyed_count > 20 && !@event_type.average_rating.nil? %>
+          <% if @event_type.has_rate %>
             <p>
             <div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event_type.average_rating%>/5 basado en <%=@event_type.surveyed_count%> opiniones de asistentes a este tipo de evento">
               <div style="width:<%=@event_type.average_rating.to_f*16%>px;"/></div>
@@ -24,7 +24,7 @@
       </div>
       <div class="col-md-5 hidden-xs hidden-sm">
         &nbsp;<br/>
-        <% if @event_type.surveyed_count > 20 && !@event_type.net_promoter_score.nil? %>
+        <% if @event_type.has_rate %>
           <div class="col-md-12">
             <img src="/img/personajes/nps-eventos.png" height="400">
           </div>
@@ -174,7 +174,7 @@ end
               <h3 class="list-group-item-heading"><%=event_type.name%></h3>
               <p class="list-group-item-text">
                 <%=event_type.duration%> horas.
-                <% if event_type.surveyed_count > 20 && !event_type.average_rating.nil? %>
+                <% if event_type.has_rate %>
                           &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
                             <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
                           </div>
