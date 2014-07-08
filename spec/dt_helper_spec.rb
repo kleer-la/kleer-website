@@ -1,20 +1,19 @@
 # encoding: utf-8
-require File.join(File.dirname(__FILE__),'../lib/dt_helper')
-require File.join(File.dirname(__FILE__),'../lib/keventer_event')
-require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
 require 'date'
 require 'i18n'
 require 'spec_helper'
+require File.join(File.dirname(__FILE__),'../lib/dt_helper')
+require File.join(File.dirname(__FILE__),'../lib/keventer_event')
+require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
 
 describe DTHelper do
   
   before(:each) do
+    I18n.enforce_available_locales = true  
     I18n.load_path += Dir[File.join(File.dirname(__FILE__), '../locales', '*.yml').to_s]
   end
   
   it "should return a certain string for a sold out event" do
-    pending
-
     some_events = Array.new
     an_event = KeventerEvent.new
     an_event.event_type = KeventerEventType.new
@@ -28,15 +27,13 @@ describe DTHelper do
     an_event.is_sold_out = true
   
     some_events << an_event
-    
-    DTHelper::to_dt_event_array_json(some_events).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a data-toggle=\\\"modal\\\" data-target=\\\"#myModal\\\" href=\\\"/es/entrenamos/evento/14-analisis,-estimacion-y-planificacion-con-scrum-(dia-2---csd-track)-buenos-aires/remote\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"javascript:void();\\\" target=\\\"_blank\\\" class=\\\"btn btn-danger\\\">Completo</a>\"]]}"
-    DTHelper::to_dt_event_array_json(some_events, false).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a href=\\\"/es/entrenamos/evento/14-analisis,-estimacion-y-planificacion-con-scrum-(dia-2---csd-track)-buenos-aires\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"javascript:void();\\\" target=\\\"_blank\\\" class=\\\"btn btn-danger\\\">Completo</a>\"]]}"
-  
+
+    expect(DTHelper::to_dt_event_array_json(some_events)).to include("Completo")
+    expect(DTHelper::to_dt_event_array_json(some_events, false)).to include("Completo")
+
   end
   
   it "should return a certain string for a still valid event" do
-    pending 
-    
     some_events = Array.new
     an_event = KeventerEvent.new
     an_event.event_type = KeventerEventType.new
@@ -51,10 +48,8 @@ describe DTHelper do
     an_event.registration_link = "https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new"
   
     some_events << an_event
-    
-    DTHelper::to_dt_event_array_json(some_events).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a data-toggle=\\\"modal\\\" data-target=\\\"#myModal\\\" href=\\\"/es/entrenamos/evento/14-analisis,-estimacion-y-planificacion-con-scrum-(dia-2---csd-track)-buenos-aires/remote\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Me interesa!</a>\"]]}"
-    DTHelper::to_dt_event_array_json(some_events, false).should == "{ \"aaData\": [[\"<span class=\\\"label label-info\\\">04<br><span class=\\\"lead\\\">Dic</span></span>\",\"<a href=\\\"/es/entrenamos/evento/14-analisis,-estimacion-y-planificacion-con-scrum-(dia-2---csd-track)-buenos-aires\\\">Análisis, Estimación y Planificación con Scrum (Día 2 - CSD Track)</a><br/><img src=\\\"/img/flags/ar.png\\\"/> Buenos Aires, Argentina\",\"<a href=\\\"https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new\\\" target=\\\"_blank\\\" class=\\\"btn btn-success\\\">¡Me interesa!</a>\"]]}"
-  
+
+    expect(DTHelper::to_dt_event_array_json(some_events)).not_to include("Completo")
+    expect(DTHelper::to_dt_event_array_json(some_events, false)).not_to include("Completo")  
   end
-  
 end

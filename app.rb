@@ -14,11 +14,20 @@ require File.join(File.dirname(__FILE__),'/lib/twitter_card')
 require File.join(File.dirname(__FILE__),'/lib/twitter_reader')
 require File.join(File.dirname(__FILE__),'/lib/pdf_catalog')
 require File.join(File.dirname(__FILE__),'/lib/crm_connector')
+require File.join(File.dirname(__FILE__),'/lib/toggle')
 
 helpers do
 
   MONTHS_ES = { "Jan" => "Ene", "Feb" => "Feb", "Mar" => "Mar", "Apr" => "Abr", "May" => "May", "Jun" => "Jun",
                 "Jul" => "Jul", "Aug" => "Ago", "Sep" => "Sep", "Oct" => "Oct", "Nov" => "Nov", "Dec" => "Dic"}
+
+  def month_es(month_en)
+    MONTHS_ES[month_en]
+  end
+
+  def feature_on?(feature)
+    Toggle.on?(feature)
+  end
 
   def t(key, ops = Hash.new)
     ops.merge!(:locale => session[:locale])
@@ -39,10 +48,6 @@ helpers do
     sanitized = sanitized.gsub('Ú', 'U')
   end
 
-  def month_es(month_en)
-    MONTHS_ES[month_en]
-  end
-
   def currency_symbol_for( iso_code )
     currency = Money::Currency.table[iso_code.downcase.to_sym] unless iso_code.nil?
     if currency.nil?
@@ -56,7 +61,7 @@ end
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
-  
+
   I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'locales', '*.yml').to_s]
   
   enable :sessions

@@ -29,4 +29,7 @@ class KeventerEventType
     @id.to_s + "-" + @name.downcase.gsub(/ /, "-")
   end
   
+  def has_rate
+    surveyed_count > 20 && !average_rating.nil?
+  end
 end

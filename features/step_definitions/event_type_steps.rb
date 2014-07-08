@@ -48,3 +48,11 @@ end
 Given(/^I visit an event type detail page$/) do
   visit '/categoria/productos-robustos/cursos/4-xxx'
 end
+
+Then(/^I should see a rating$/) do
+  expect(last_response.body).to have_selector('.stars')
+end
+
+Then(/^I should not see a rating$/) do
+  expect(last_response.body).not_to have_selector('.stars')
+end

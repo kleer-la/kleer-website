@@ -27,26 +27,30 @@ describe KeventerEventType do
     @keventype.elevator_pitch.should == "Argentina"
   end
 
-  it "should have an average_rating" do
-    @keventype.average_rating = 1.2
-    @keventype.average_rating.should == 1.2
-  end
-
-  it "should have an net_promoter_score" do
-    @keventype.net_promoter_score = 10
-    @keventype.net_promoter_score.should == 10
-  end
-
-  it "should have an participant_count" do
-    @keventype.surveyed_count = 1.2
-    @keventype.surveyed_count.should == 1.2
-  end
-
-  it "should have an promoter_count" do
-    @keventype.promoter_count = 10
-    @keventype.promoter_count.should == 10
+  it "should have rating instance variable" do
+    @keventype.average_rating.should == 0.0
+    @keventype.net_promoter_score.should == 0
+    @keventype.surveyed_count.should == 0.0
+    @keventype.promoter_count.should == 0
   end
   
+  it "new event_type doesn't have rate" do
+    @keventype.has_rate.should be_false
+  end
+
+  it "should have rate" do
+    @keventype.average_rating = 3
+    @keventype.surveyed_count= 100
+    @keventype.has_rate.should be_true
+  end
+
+  it "empty event_type doesn't have rate" do
+    @keventype.average_rating = nil
+    @keventype.surveyed_count= 100
+    @keventype.has_rate.should be_false
+  end
+
+
   it "should have a learnings" do
     @keventype.learnings = "Argentina"
     @keventype.learnings.should == "Argentina"

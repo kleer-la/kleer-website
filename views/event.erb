@@ -15,7 +15,7 @@
 					, <%= @event.event_type.duration%> horas</h3>
 					<p><%= @event.event_type.elevator_pitch %></p>
 
-					<% if @event.event_type.surveyed_count > 20 && !@event.event_type.average_rating.nil? %>
+					<% if @event.event_type.has_rate %>
 						<p>
 						<div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event.event_type.average_rating%>/5 basado en <%=@event.event_type.surveyed_count%> opiniones de asistentes a este tipo de evento">
 							<div style="width:<%=@event.event_type.average_rating.to_f*16%>px;"/></div>
@@ -59,7 +59,7 @@
 				<% if @event.is_community_event %>
 					<img src="/img/personajes/actividades-comunitarias.png" height="400">
 				<% else %>
-					<% if @event.event_type.surveyed_count > 20 && !@event.event_type.net_promoter_score.nil? %>
+					<% if @event.event_type.has_rate %>
 						<div class="col-md-12">
 							<img src="/img/personajes/nps-eventos.png" height="400">
 						</div>
