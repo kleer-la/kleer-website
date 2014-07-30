@@ -62,7 +62,7 @@ $('body').on('hidden', '#myModalSepymeInside', function () {
 		<%if @event.is_sold_out%>
 			<a href="javascript:void();" target="_blank"  class="btn btn-danger">Completo</a>
 		<%elsif @event.registration_link != "" %>
-			<a href="<%=@event.registration_link%>" target="_blank" class="btn btn-success">Registrarme!</a>
+			<a href="<%=@event.registration_link%>?lang=<%=session[:locale]%>" target="_blank" class="btn btn-success">Registrarme!</a>
 		<%else %>
 			<a data-toggle="modal" data-target="#myModalRegistrationInside" href="/entrenamos/evento/<%=@event.id%>/registration" class="btn btn-success">Registrarme!</a>
 		<%end%>

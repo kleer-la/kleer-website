@@ -43,7 +43,7 @@
 						if @event.registration_link != "" 
 							registration_link = @event.registration_link
 						else
-							registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new"
+							registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
 						end
 
 						%>
@@ -404,7 +404,7 @@ end
 				if @event.registration_link != "" 
 					registration_link = @event.registration_link
 				else
-					registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new"
+					registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
 				end
 
 				%>
