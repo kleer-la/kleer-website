@@ -17,18 +17,21 @@ def to_boolean(string)
   raise ArgumentError.new("invalid value for Boolean: \"#{string}\"")
 end
 
-def get_from_xml(xml, field)
-  xml.find_first(field).content
+def validated_Date_parse(date_xml)
+    begin
+      Date.parse( date_xml.content)
+    rescue
+      nil
+    end
 end
+
 
 def event_from_parsed_xml(xml_keventer_event)
     event = KeventerEvent.new
     
     event.id = xml_keventer_event.find_first('id').content.to_i
     event.date = Date.parse( xml_keventer_event.find_first('date').content )
-    if !xml_keventer_event.find_first('finish-date').content.nil?
-      event.finish_date = Date.parse( xml_keventer_event.find_first('finish-date').content )
-    end
+    event.finish_date = validated_Date_parse(xml_keventer_event.find_first('finish-date'))
     # event.human_date = xml_keventer_event.find_first('human-date').content
     event.start_time = DateTime.parse( xml_keventer_event.find_first('start-time').content )
     event.end_time = DateTime.parse( xml_keventer_event.find_first('end-time').content )
@@ -44,12 +47,7 @@ def event_from_parsed_xml(xml_keventer_event)
     event.list_price = xml_keventer_event.find_first('list-price').content.nil? ? 0.0 : xml_keventer_event.find_first('list-price').content.to_f
     event.eb_price = xml_keventer_event.find_first('eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('eb-price').content.to_f
     if event.eb_price > 0.0  
-      begin
-        ebed = get_from_xml(xml_keventer_event, 'eb-end-date')
-        event.eb_end_date = ebed.nil? ? nil : Date.parse( ebed )
-      rescue
-        event.eb_end_date = nil
-      end
+        event.eb_end_date = validated_Date_parse(xml_keventer_event.find_first('eb-end-date'))
     end
     event.couples_eb_price = xml_keventer_event.find_first('couples-eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('couples-eb-price').content.to_f
     event.business_eb_price = xml_keventer_event.find_first('business-eb-price').content.nil? ? 0.0 : xml_keventer_event.find_first('business-eb-price').content.to_f
