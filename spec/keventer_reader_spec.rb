@@ -52,19 +52,29 @@ describe KeventerReader do
     @kevr = KeventerReader.new( @connector )
     @kevr.events.count.should >= 0
   end
-  
-  it "hola" do
+
+  it "Should handle a empty eb-end-date as nil" do
+    parser =  LibXML::XML::Parser.file( File.join(File.dirname(__FILE__),'../spec/event_wo_eb_end_date.xml'))
+    ev = event_from_parsed_xml(parser.parse)
+    ev.eb_end_date.should be_nil
+  end  
+
+#     <finish-date type="date">2013-01-10</finish-date>
+
+  it "--hay que refactorear los datos --" do
     parser =  LibXML::XML::Parser.string( %Q{<?xml version="1.0" encoding="UTF-8"?>
   <event>
   <start-time type="datetime">2000-01-01T09:00:00Z</start-time>
-  <end-time type="datetime">2000-01-01T18:00:00Z</end-time>
+    <end-time type="datetime">2000-01-01T18:00:00Z</end-time>
+
     <cancelled type="boolean">false</cancelled>
     <capacity type="integer">16</capacity>
     <city>Buenos Aires</city>
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-11-28T22:48:51Z</created-at>
     <date type="date">2013-01-09</date>
-    <finish-date type="date">2013-01-10</finish-date>
+  <finish-date type="date" nil="true"/>
+
     <draft type="boolean">false</draft>
     <eb-end-date type="date" nil="true"/>
     <eb-price type="decimal">750.0</eb-price>
