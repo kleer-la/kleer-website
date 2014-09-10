@@ -35,7 +35,11 @@ es:
             organization: "Coaching Organizacional y de Equipos"
             clients: "Coaching Comercial y Clientes"
         community: "Comunidad"
-        publishing: "Publicaciones"
+        publishing: 
+            root: "Publicaciones"
+            blog: "Blog"
+            book: "Libros"
+            video: "Videos"
         tv: "Veas"
         we_are: "Nosotros"
         blog: "Blog"
