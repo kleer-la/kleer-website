@@ -36,6 +36,10 @@ Given /^theres only one event$/ do
   stub_connector
 end
 
+Given /^theres only one experimental event$/ do
+  stub_connector "just_one_experimental_event.xml"
+end
+
 Given /^theres only one event for the following two months$/ do
   stub_connector( "just_two_events.xml")
 end
@@ -142,6 +146,10 @@ end
 
 When /^I visit the event page$/ do
   visit '/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires'
+end
+
+When /^I visit the experimental event page$/ do
+  visit '/entrenamos/evento/2-tipo-de-evento-de-prueba-bogota'
 end
 
 When /^I visit the community event page$/ do

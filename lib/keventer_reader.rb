@@ -64,6 +64,7 @@ def event_from_parsed_xml(xml_keventer_event)
       event.sepyme_enabled = to_boolean( xml_keventer_event.find_first('sepyme-enabled').content )
     end
     event.is_community_event = xml_keventer_event.find_first('visibility-type').content == 'co'
+    event.is_experimental_event = xml_keventer_event.find_first('visibility-type').content == 'ex'
     event.country = xml_keventer_event.find_first('country/name').content
     event.country_code = xml_keventer_event.find_first('country/iso-code').content
     event.currency_iso_code = xml_keventer_event.find_first('currency-iso-code').content

@@ -2,7 +2,7 @@ class KeventerEvent
     attr_accessor :capacity, :city, :country, :country_code, :event_type, :date, :finish_date, :registration_link, 
                   :is_sold_out, :id, :uri_path, :trainer, :keventer_connector, :place, :sepyme_enabled,
                   :human_date, :start_time, :end_time, :address, :list_price, :eb_price, :eb_end_date, 
-                  :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event, 
+                  :currency_iso_code, :is_webinar, :specific_conditions, :is_community_event, :is_experimental_event,
                   :time_zone_name, :time_zone, :show_pricing,
                   :couples_eb_price, :business_eb_price, :business_price, 
                   :enterprise_6plus_price, :enterprise_11plus_price, :mode
@@ -45,6 +45,7 @@ class KeventerEvent
 
     @specific_conditions = ""
     @is_community_event = false
+    @is_experimental_event = false
     @mode = ""
   end
 

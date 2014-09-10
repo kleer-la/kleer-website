@@ -133,8 +133,9 @@ end
 					<% end %>
 				</div>
 			</div>
-
-			<div class="col-md-3 col-sm-3 no-hpadding">
+			
+			<% if !@event.is_experimental_event %>
+			<div class="col-md-3 col-sm-3 no-hpadding"  id="Horario">
 				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-time big-glyphicon"></span>
 				</div>
@@ -146,6 +147,7 @@ end
 					<% end %>
 				</div>
 			</div>
+			<% end %>
 
 			<div class="col-md-3 col-sm-6 no-hpadding">
 				<div class="col-md-3 col-sm-2 no-hpadding logistic-indicator">

@@ -28,6 +28,13 @@ Feature: Event Details
 		And I should see "09"
 		And I should see "Ene"
 		
+	Scenario: Detalle de Evento experimental
+		Given theres only one experimental event
+		When I visit the experimental event page
+		Then I should see "Tipo de Evento de Prueba"
+		And I should not see "Horario"
+		
+
 	Scenario: Detalle de Evento Comunitario
 		Given there are community events
 		When I visit the community event page
