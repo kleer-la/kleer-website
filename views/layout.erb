@@ -145,7 +145,28 @@
           		<li class="<%=@active_tab_coaching%>"><a href="/<%=session[:locale]%>/coaching">
           			<%=t("menu.coaching")%></a></li>
 				<li class="<%=@active_tab_comunidad%>"><a href="/<%=session[:locale]%>/comunidad"><%=t("menu.community")%></a></li>
-				<li class="<%=@active_tab_publicamos%>"><a href="/<%=session[:locale]%>/publicamos"><%=t("menu.publishing")%></a></li>
+			    <li class="dropdown <%=@active_tab_entrenamos%>">
+			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			    		<%=t("menu.publishing.root")%> <b class="caret"></b>
+			    	</a>
+          			<ul class="dropdown-menu">
+	                	<li>
+	                		<a href="/<%=session[:locale]%>/blog">
+	                			<%=t("menu.publishing.blog")%>
+	                		</a>
+	                	</li>
+						<li>
+							<a href="/<%=session[:locale]%>/publicamos">
+								<%=t("menu.publishing.book")%>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.youtube.com/channel/UCAIGRA-4HRyx0fUUM9cjvQw" target="_blank">
+								<%=t("menu.publishing.video")%>
+							</a>
+						</li>
+					</ul>
+			    </li>
 				<li class="<%=@active_tab_somos%>"><a href="/<%=session[:locale]%>/somos"><%=t("menu.we_are")%></a></li>
 			  </ul>
 			</div><!--/.navbar-collapse -->
