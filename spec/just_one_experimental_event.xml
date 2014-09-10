@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events type="array">
+  <event>
+    <address>Calle 40 # 20-38</address>
+    <average-rating type="decimal" nil="true"/>
+    <business-eb-price type="decimal">0.0</business-eb-price>
+    <business-price type="decimal">0.0</business-price>
+    <cancelled type="boolean">false</cancelled>
+    <capacity type="integer">24</capacity>
+    <city>Bogota</city>
+    <country-id type="integer">47</country-id>
+    <couples-eb-price type="decimal">0.0</couples-eb-price>
+    <created-at type="datetime">2014-09-10T18:00:02Z</created-at>
+    <currency-iso-code>AED</currency-iso-code>
+    <custom-prices-email-text></custom-prices-email-text>
+    <date type="date">2014-09-10</date>
+    <draft type="boolean">false</draft>
+    <duration type="integer">1</duration>
+    <eb-end-date type="date">2014-08-31</eb-end-date>
+    <eb-price type="decimal">0.0</eb-price>
+    <embedded-player nil="true"/>
+    <end-time type="datetime">2000-01-01T18:00:00Z</end-time>
+    <enterprise-11plus-price type="decimal">0.0</enterprise-11plus-price>
+    <enterprise-6plus-price type="decimal">0.0</enterprise-6plus-price>
+    <event-type-id type="integer">1</event-type-id>
+    <finish-date type="date">2014-09-11</finish-date>
+    <id type="integer">2</id>
+    <is-sold-out type="boolean">false</is-sold-out>
+    <list-price type="decimal">1.0</list-price>
+    <mode>cl</mode>
+    <monitor-email></monitor-email>
+    <net-promoter-score type="integer" nil="true"/>
+    <notify-webinar-start type="boolean">false</notify-webinar-start>
+    <place>Casa contacto</place>
+    <registration-link></registration-link>
+    <sepyme-enabled type="boolean">false</sepyme-enabled>
+    <should-ask-for-referer-code type="boolean">false</should-ask-for-referer-code>
+    <should-welcome-email type="boolean">true</should-welcome-email>
+    <show-pricing type="boolean">false</show-pricing>
+    <specific-conditions></specific-conditions>
+    <start-time type="datetime">2000-01-01T09:00:00Z</start-time>
+    <time-zone-name></time-zone-name>
+    <trainer-id type="integer">2</trainer-id>
+    <twitter-embedded-search nil="true"/>
+    <updated-at type="datetime">2014-09-10T18:01:31Z</updated-at>
+    <visibility-type>ex</visibility-type>
+    <webinar-started type="boolean">false</webinar-started>
+    <human-date>10-11 Sep</human-date>
+    <is-webinar type="boolean">false</is-webinar>
+    <country>
+      <created-at type="datetime">2014-07-09T16:41:02Z</created-at>
+      <id type="integer">47</id>
+      <iso-code>CO</iso-code>
+      <name>Colombia</name>
+      <updated-at type="datetime">2014-07-09T16:41:02Z</updated-at>
+    </country>
+    <event-type>
+      <average-rating type="decimal" nil="true"/>
+      <created-at type="datetime">2014-07-09T16:41:56Z</created-at>
+      <csd-eligible type="boolean" nil="true"/>
+      <description>Una descripción</description>
+      <duration type="integer">8</duration>
+      <elevator-pitch>Este es el mejor tipo de evento</elevator-pitch>
+      <faq nil="true"/>
+      <goal>Un objetivo</goal>
+      <id type="integer">1</id>
+      <include-in-catalog type="boolean" nil="true"/>
+      <learnings nil="true"/>
+      <materials nil="true"/>
+      <name>Tipo de Evento de Prueba</name>
+      <net-promoter-score type="integer" nil="true"/>
+      <program>El programa</program>
+      <promoter-count type="integer" nil="true"/>
+      <recipients>Un destinatario</recipients>
+      <surveyed-count type="integer" nil="true"/>
+      <tag-name nil="true"/>
+      <takeaways nil="true"/>
+      <updated-at type="datetime">2014-07-09T16:41:56Z</updated-at>
+    </event-type>
+    <trainer>
+      <average-rating type="decimal" nil="true"/>
+      <bio nil="true"/>
+      <country-id type="integer" nil="true"/>
+      <created-at type="datetime">2014-07-09T16:41:55Z</created-at>
+      <gravatar-email nil="true"/>
+      <id type="integer">2</id>
+      <is-kleerer type="boolean" nil="true"/>
+      <linkedin-url nil="true"/>
+      <name>Jeff Baurer</name>
+      <net-promoter-score type="integer" nil="true"/>
+      <promoter-count type="integer" nil="true"/>
+      <signature-credentials nil="true"/>
+      <signature-image nil="true"/>
+      <surveyed-count type="integer" nil="true"/>
+      <tag-name nil="true"/>
+      <twitter-username nil="true"/>
+      <updated-at type="datetime">2014-07-09T16:41:55Z</updated-at>
+      <gravatar-picture-url>http://www.gravatar.com/avatar/asljasld</gravatar-picture-url>
+    </trainer>
+    <categories type="array"/>
+  </event>
+</events>
