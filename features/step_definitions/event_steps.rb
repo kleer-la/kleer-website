@@ -14,3 +14,9 @@ Then(/^I should not see "(.*?)"$/) do |elementId|
   response_body.should_not have_selector("div[id='"+elementId+"']")
 end
 
+Then(/^I should see element "(.*?)"$/) do |elementId|
+  response_body.should have_selector("div[id='"+elementId+"']")
+end
+
+
+

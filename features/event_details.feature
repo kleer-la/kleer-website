@@ -33,6 +33,11 @@ Feature: Event Details
 		When I visit the experimental event page
 		Then I should see "Tipo de Evento de Prueba"
 		And I should not see "Horario"
+        And I should see element "informacion"
+        And I should see "¿Inversión?"
+        And I should see "¿Formas de pago?"
+        And I should see "¿Lugar?"
+        And I should see "¿Horario?"
 		
 
 	Scenario: Detalle de Evento Comunitario
