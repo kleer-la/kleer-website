@@ -1,4 +1,6 @@
 require File.join(File.dirname(__FILE__),'../lib/keventer_event')
+require File.join(File.dirname(__FILE__),'../lib/keventer_event_type')
+require File.join(File.dirname(__FILE__),'../lib/keventer_connector')
 require File.join(File.dirname(__FILE__),'../lib/professional')
 require 'spec_helper'
 

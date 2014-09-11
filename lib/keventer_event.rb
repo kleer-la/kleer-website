@@ -52,6 +52,7 @@ class KeventerEvent
   def get_registration_link
     if @registration_link == ""
       @registration_link = "http://eventos.kleer.la/events/"+@id.to_s+"/participants/new?lang="
+      #@registration_link = "http://localhost:3000/events/"+@id.to_s+"/participants/new?lang="
     end
     @registration_link
   end
