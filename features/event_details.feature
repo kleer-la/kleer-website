@@ -36,9 +36,10 @@ Feature: Event Details
         And I should see element "informacion"
         And I should see "¿Inversión?"
         And I should see "¿Formas de pago?"
-        And I should see "¿Lugar?"
+        And I should see "¿Sitio?"
         And I should see "¿Horario?"
-		
+      And I should see a link to "http://eventos.kleer.la/events/2/participants/new?lang=es" with text "¿Inversión? ¿Formas de pago? ¿Sitio? ¿Horario?"
+
 
 	Scenario: Detalle de Evento Comunitario
 		Given there are community events

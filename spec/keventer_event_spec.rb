@@ -217,4 +217,20 @@ describe KeventerEvent do
     @kevent.friendly_title.should == "Workshop de Retrospectivas - Buenos Aires"
   end
 
+  it "should use the registration link defined in the event" do
+    @kevent.registration_link = "http://myLink.com"
+    registration_link = @kevent.get_registration_link
+    registration_link.should =="http://myLink.com"
+
+  end
+
+  it "should use a registration link generate in keventer" do
+    @kevent.id = 2
+    @kevent.registration_link = ""
+    registration_link = @kevent.get_registration_link
+    registration_link.should == "http://eventos.kleer.la/events/2/participants/new?lang="
+
+
+  end
+
 end

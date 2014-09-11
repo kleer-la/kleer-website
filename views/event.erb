@@ -152,12 +152,10 @@
         <% if @event.is_online %>
             Online<br/>
         <% else %>
-            <% if !@event.is_experimental_event%>
                 <%= @event.place %>
                 <br/>
                 <%= @event.address %>
                 <br/>
-            <% end %>
             <%= @event.city %>, <%= @event.country %>
         <% end %>
       </div>
@@ -184,14 +182,17 @@
             <span class="glyphicon glyphicon-hand-right big-glyphicon"></span>
           </div>
           <div class="col-md-9 col-sm-8 no-hpadding">
-            <%= t("event.fee") %>
-            <br>
-            <%= t("event.payment") %>
-            <br>
-            <%= t("event.place") %>
-            <br>
-            <%= t("event.schedule") %>
-            <br>
+
+            <a href="<%= @event.get_registration_link + session[:locale] %>" target="_black" class="">
+                <%= t("event.fee") %>
+                <br>
+                <%= t("event.payment") %>
+                <br>
+                <%= t("event.place") %>
+                <br>
+                <%= t("event.schedule") %>
+                <br>
+            </a>
           </div>
         </div>
     <% end %>
@@ -444,14 +445,8 @@
                button_text = t("general.buttons.i_am_interested")
              end
 
-             if @event.registration_link != ""
-               registration_link = @event.registration_link
-             else
-               registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
-             end
-
           %>
-          <a href="<%= registration_link %>" target="_blank" class="btn btn-success btn-kleer btn-caps">
+          <a href="<%= @event.get_registration_link + session[:locale] %>" target="_blank" class="btn btn-success btn-kleer btn-caps">
             <%= button_text %>
           </a>
       <% end %>
