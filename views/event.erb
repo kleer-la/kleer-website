@@ -152,10 +152,12 @@
         <% if @event.is_online %>
             Online<br/>
         <% else %>
+            <% if !@event.is_experimental_event%>
                 <%= @event.place %>
                 <br/>
                 <%= @event.address %>
                 <br/>
+            <% end %>
             <%= @event.city %>, <%= @event.country %>
         <% end %>
       </div>
