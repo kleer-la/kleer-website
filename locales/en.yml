@@ -224,3 +224,17 @@ en:
                 title: "Other?"
                 contact_us: "Contact us at"
                 contact_email: "hello@kleer.la"
+    kleexperience:
+        title: "This is the Kleer Experience"
+        professionals:
+            title: "With the most recognized professionals in Latin America"
+            description: "<p>Encontrarás los mejores entrenadores, reconocidos como tal por sus pares de las Comunidades Latinoamericanas de Metodologías Ágiles.</p><p>Contarás con diversidad de perfiles con amplia experiencia en la industria y la academia, así como en técnicas de facilitación y en la obtención de resultados en procesos de transformación organizacional.</p>"
+        experiential:
+            title: "100% experiential"
+            description: "<p>El protagonista eres tú. Los facilitadores son guías que te acompañarán en el camino de aprendizaje.</p><p>La experiencia es altamente interactiva. Desde el inicio desarrollarás habilidades como el enfoque, la auto-organización, la confianza y la apertura.</p>"
+        lasting_learning:
+            title: "Lasting Learning"
+            description: "<p>La riqueza sensorial, la repetición, el dibujo, y el manejo de las emociones y los tiempos en un espacio seguro y confortable hacen que aprendas de manera natural.</p><p>Vivirás éstas, las técnicas de aprendizaje colectivo y participativo, donde serás parte de un equipo auto organizado y el facilitador te guiará 'desde el fondo del aula'.</p>"
+        inspiring:
+            title: "Inspiring"
+            description: "<p>¡Al final del curso te sentirás energizado! La alta colaboración e interactividad durante el proceso te dejará motivado y con ganas de implementar todo lo aprendido en tu entorno cotidiano.</p>"
