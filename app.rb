@@ -100,7 +100,7 @@ end
 
 get '/' do
 	@active_tab_index = "active"
-	@categories = @@keventer_reader.categories
+	@categories = @@keventer_reader.categories session[:locale]
   @kleerers = @@keventer_reader.kleerers
 	erb :index
 end
@@ -124,7 +124,7 @@ end
 get '/coaching' do
   @active_tab_coaching = "active"
 	@page_title += " | Coaching"
-  @categories = @@keventer_reader.categories
+  @categories = @@keventer_reader.categories session[:locale]
 	erb :coaching
 end
 
@@ -231,7 +231,6 @@ get '/catalogo' do
   #pdf_catalog 
   @page_title += " | Catálogo"
   @categories = @@keventer_reader.categories
-
   erb :catalogo
 end
 

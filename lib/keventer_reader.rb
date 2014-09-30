@@ -157,7 +157,7 @@ class KeventerReader
     all.select { |category| category.codename == code_name }.first
   end
   
-  def categories
+  def categories(lang="es")
     begin
       parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
       doc = parser.parse
@@ -183,6 +183,13 @@ class KeventerReader
     rescue => err 
       puts "Error al cargar las categorías: #{err}"
       categories = Array.new
+    end
+
+    # temporal! -- falta cambiar Keventer
+    if lang == "en"
+       categories[0].name = "Amazing Organization"     
+       categories[1].name = "Delighted customers"
+       categories[2].name = "High quality technological products"
     end
     
     categories
