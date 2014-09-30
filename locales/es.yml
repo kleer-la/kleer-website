@@ -202,9 +202,10 @@ es:
         missing_elevator_pitch: "Por favor, completar el elevator pitch del tipo de evento."
     contact:
         title: "Contacto"
-        contact_us: "Contactanos"
+        contact_us: "Contáctanos"
         training_email: "entrenamos@kleer.la"
         newsletter_subscription: "Suscríbete a nuestra newsletter"
+        helped_by: "Te contactarás con"
         locations:
             argentina:
                 name: "Argentina"
@@ -231,7 +232,9 @@ es:
                 address1: "Av. Juan De Aliaga 107"
                 address2: "Lima"
                 phone: "entrenamos.pe@kleer.la"
+            mexico:
+                partners: "Te contactarás con nosotros <br/>y con nuestros partners de"
             other:
-                title: "¿Otro país?"
+                title: "¿Otro?"
                 contact_us: "Escribenos a"
                 contact_email: "hola@kleer.la"

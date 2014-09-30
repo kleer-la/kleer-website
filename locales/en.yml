@@ -191,6 +191,7 @@ en:
         contact_us: "Contact us"
         training_email: "training@kleer.us"
         newsletter_subscription: "Subscribe to our newsletter"
+        helped_by: "You will be helped by"
         locations:
             argentina:
                 name: "Argentina"
@@ -217,7 +218,9 @@ en:
                 address1: "Av. Juan De Aliaga 107"
                 address2: "Lima"
                 phone: "entrenamos.pe@kleer.la"
+            mexico:
+                partners: "You will be helped by us <br/>and our partners "
             other:
-                title: "Other countries?"
+                title: "Other?"
                 contact_us: "Contact us at"
                 contact_email: "hello@kleer.la"
