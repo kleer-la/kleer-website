@@ -124,14 +124,18 @@ class KeventerReader
   def unique_countries_for_community_events
     unique_countries( @connector.community_events_xml_url )
   end
+
+  def parse file, node
+      parser =  LibXML::XML::Parser.file( file )
+      doc = parser.parse
+      doc.find(node)
+  end
   
   def kleerers
     kleerers = Array.new
 
     begin
-      parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
-      doc = parser.parse
-      loaded_kleerers = doc.find('/trainers/trainer')
+      loaded_kleerers = parse @connector.kleerers_xml_url, '/trainers/trainer'
       
       loaded_kleerers.each do |loaded_kleerer|
         kleerer = Professional.new
@@ -166,14 +170,8 @@ class KeventerReader
       categories = Array.new
       
       loaded_categories.each do |loaded_category|
-        category = Category.new
-        
-        category.name = loaded_category.find_first('name').content
-        category.codename = loaded_category.find_first('codename').content
-        category.tagline = loaded_category.find_first('tagline').content
-        category.description = loaded_category.find_first('description').content
-        category.order = loaded_category.find_first('order').content.to_i
-        
+        category = Category.new loaded_category, lang
+                
         category.event_types = load_event_types loaded_category
 
         categories << category
@@ -183,13 +181,6 @@ class KeventerReader
     rescue => err 
       puts "Error al cargar las categorías: #{err}"
       categories = Array.new
-    end
-
-    # temporal! -- falta cambiar Keventer
-    if lang == "en"
-       categories[0].name = "Amazing Organization"     
-       categories[1].name = "Delighted customers"
-       categories[2].name = "High quality technological products"
     end
     
     categories

@@ -10,6 +10,9 @@
     <tagline>Personas, Equipos y Organizaciones Eficientes</tagline>
     <updated-at type="datetime">2013-07-10T20:51:35Z</updated-at>
     <visible type="boolean">true</visible>
+    <description-en>description EN</description-en>
+    <name-en>name EN</name-en>
+    <tagline-en>tagline EN</tagline-en>
     <event-types type="array">
       <event-type>
       <average-rating type="decimal">4.45</average-rating>
