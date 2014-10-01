@@ -262,9 +262,7 @@ class KeventerReader
       return @events_hash_dont_use_directly[event_type_xml_url]
     end
     
-    parser =  LibXML::XML::Parser.file( event_type_xml_url )
-    doc = parser.parse
-    loaded_events = doc.find('/events/event')
+    loaded_events = parse event_type_xml_url, '/events/event'
     
     events = Array.new
     loaded_events.each do |loaded_event|
