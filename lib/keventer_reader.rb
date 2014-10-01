@@ -163,9 +163,7 @@ class KeventerReader
   
   def categories(lang="es")
     begin
-      parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
-      doc = parser.parse
-      loaded_categories = doc.find('/categories/category')
+      loaded_categories = parse @connector.categories_xml_url, '/categories/category'
       
       categories = Array.new
       
