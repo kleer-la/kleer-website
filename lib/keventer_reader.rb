@@ -156,8 +156,8 @@ class KeventerReader
     kleerers
   end
   
-  def category(code_name)
-    all = categories
+  def category(code_name, lang="es")
+    all = categories lang
     all.select { |category| category.codename == code_name }.first
   end
   

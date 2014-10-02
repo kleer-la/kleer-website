@@ -230,7 +230,7 @@ get '/catalogo' do
   @active_tab_entrenamos = "active"
   #pdf_catalog 
   @page_title += " | Catálogo"
-  @categories = @@keventer_reader.categories
+  @categories = @@keventer_reader.categories session[:locale]
   erb :catalogo
 end
 
@@ -240,7 +240,7 @@ get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
 
-  @category = @@keventer_reader.category(params[:category_codename])
+  @category = @@keventer_reader.category params[:category_codename], session[:locale]
   
   if is_valid_id(event_type_id)
     @event_type = @@keventer_reader.event_type(event_type_id, true)
