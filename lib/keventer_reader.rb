@@ -124,14 +124,18 @@ class KeventerReader
   def unique_countries_for_community_events
     unique_countries( @connector.community_events_xml_url )
   end
+
+  def parse file, node
+      parser =  LibXML::XML::Parser.file( file )
+      doc = parser.parse
+      doc.find(node)
+  end
   
   def kleerers
     kleerers = Array.new
 
     begin
-      parser =  LibXML::XML::Parser.file( @connector.kleerers_xml_url )
-      doc = parser.parse
-      loaded_kleerers = doc.find('/trainers/trainer')
+      loaded_kleerers = parse @connector.kleerers_xml_url, '/trainers/trainer'
       
       loaded_kleerers.each do |loaded_kleerer|
         kleerer = Professional.new
@@ -152,28 +156,20 @@ class KeventerReader
     kleerers
   end
   
-  def category(code_name)
-    all = categories
+  def category(code_name, lang="es")
+    all = categories lang
     all.select { |category| category.codename == code_name }.first
   end
   
-  def categories
+  def categories(lang="es")
     begin
-      parser =  LibXML::XML::Parser.file( @connector.categories_xml_url )
-      doc = parser.parse
-      loaded_categories = doc.find('/categories/category')
+      loaded_categories = parse @connector.categories_xml_url, '/categories/category'
       
       categories = Array.new
       
       loaded_categories.each do |loaded_category|
-        category = Category.new
-        
-        category.name = loaded_category.find_first('name').content
-        category.codename = loaded_category.find_first('codename').content
-        category.tagline = loaded_category.find_first('tagline').content
-        category.description = loaded_category.find_first('description').content
-        category.order = loaded_category.find_first('order').content.to_i
-        
+        category = Category.new loaded_category, lang
+                
         category.event_types = load_event_types loaded_category
 
         categories << category
@@ -266,9 +262,7 @@ class KeventerReader
       return @events_hash_dont_use_directly[event_type_xml_url]
     end
     
-    parser =  LibXML::XML::Parser.file( event_type_xml_url )
-    doc = parser.parse
-    loaded_events = doc.find('/events/event')
+    loaded_events = parse event_type_xml_url, '/events/event'
     
     events = Array.new
     loaded_events.each do |loaded_event|

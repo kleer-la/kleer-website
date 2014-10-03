@@ -28,6 +28,14 @@ end
 
 describe KeventerReader do
   
+  it "Should Be Able to Load an Xml File" do
+    file= File.join(File.dirname(__FILE__),'../spec/event_type_4.xml')
+    kevr = KeventerReader.new
+    doc= kevr.parse file, '/event-type/id'
+
+    doc[0].content.should == '4'
+  end
+
   it "Should Be Able to Load an Xml File for Events" do
     @connector = double("KeventerConnector")
     @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
