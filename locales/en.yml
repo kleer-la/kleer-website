@@ -224,6 +224,11 @@ en:
                 title: "Other?"
                 contact_us: "Contact us at"
                 contact_email: "hello@kleer.la"
+        subscription:
+            text1: "       Be the first to know"
+            text2: "         the agile news!"
+            mail_hint: "your@email.com"
+            send: "SUSCRIBE NOW!"
     kleexperience:
         title: "This is the Kleer Experience"
         professionals:

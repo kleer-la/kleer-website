@@ -238,6 +238,11 @@ es:
                 title: "¿Otro?"
                 contact_us: "Escribenos a"
                 contact_email: "hola@kleer.la"
+        subscription:
+            text1: "Sé el primero en enterarte"
+            text2: "de todas las novedades del mundo ágil"
+            mail_hint: "tu@email.com"
+            send: "SUSCRÍBETE"
     kleexperience:
         title: "Ésta es la Experiencia Kleer"
         professionals:

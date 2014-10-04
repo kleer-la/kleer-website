@@ -244,15 +244,15 @@
 </div>
 
 <div class="container-fluid fondo-pano pano-3"></div>
-
+<a id="contact">
 <div class="container-fluid fondo-celeste-mosaico slide-home-newsletter hidden-xs">
 	<div class="container-fluid">
 		<div class="container">
 			<div class="container suscripcion">
 				<div class="col-md-7 suscripcion-inner">
-					Se el primero en enterarte<br/>de todas las novedades del mundo ágil
-						<input type="text" class="suscription-textbox" placeholder="tu@email.com"/><br/>
-						<input type="button" class="btn btn-warning btn-kleer btn-suscription" value="SUSCRÍBETE" data-toggle="modal" data-target=".suscription-modal"/>
+					<%=t('contact.subscription.text1')+'<br/>'+t('contact.subscription.text2')%>
+						<input type="text" class="suscription-textbox" placeholder="<%=t('contact.subscription.mail_hint')%>"/><br/>
+						<input type="button" class="btn btn-warning btn-kleer btn-suscription" value="<%=t('contact.subscription.send')%>" data-toggle="modal" data-target=".suscription-modal"/>
 				</div>
 			</div>
 		</div>
