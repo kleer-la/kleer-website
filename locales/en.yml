@@ -227,8 +227,40 @@ en:
         subscription:
             text1: "       Be the first to know"
             text2: "         the agile news!"
-            mail_hint: "your@email.com"
-            send: "SUSCRIBE NOW!"
+            interested: "SUBSCRIBE"
+            form:
+                title: "SUBSCRIPTION"
+                mail_hint: "your@email.com"
+                fname_hint: "First name"
+                lname_hint: "Last name"
+                where_are_you:  "You are near ..."
+                cancel: "Cancel"
+                send: "SUBSCRIBE NOW!"
+                countries: '<option value="ZI-AMS-AR-BUE (Buenos Aires)">Argentina</option>
+                    <option value="ZI-AUS (Australia)">Australia</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia </option>
+                    <option value="ZI-AMS-BR (Brasil)">Brazil</option>
+                    <option value="ZI-AMN-CA (Canada)">Canada</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia </option>
+                    <option value="ZI-AMC (America Central y Caribe)">Costa Rica</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Cuba</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Dominican Republic</option>
+                    <option value="ZI-AMS-EC (Ecuador)">Ecuador</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Guatemala</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Honduras</option>
+                    <option value="ZI-EUR-IT (Italia)">Italy</option>
+                    <option value="ZI-AMN-MX (Mexico)">México</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Nicaragua</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Panamá</option>
+                    <option value="ZI-AMS-PY (Paraguay)">Paraguay</option>
+                    <option value="ZI-AMS-PE (Peru)">Perú</option>
+                    <option value="ZI-EUR-ES (España)">Spain</option>
+                    <option value="ZI-AMC (America Central y Caribe)">El Salvador</option>
+                    <option value="ZI-AMN-US (EEUU)">USA</option>
+                    <option value="ZI-AMS-UY (Uruguay)">Uruguay</option>
+                    <option value="ZI-AMS-VE (Venezuela)">Venezuela</option>
+'
     kleexperience:
         title: "This is the Kleer Experience"
         professionals:
