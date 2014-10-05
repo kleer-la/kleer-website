@@ -25,6 +25,14 @@ def validated_Date_parse(date_xml)
     end
 end
 
+def first_content xml, element_name
+  element= xml.find_first(element_name)
+  if element.nil?
+    ""
+  else
+    element.content
+  end
+end
 
 def event_from_parsed_xml(xml_keventer_event)
     event = KeventerEvent.new
@@ -131,21 +139,14 @@ class KeventerReader
       doc.find(node)
   end
   
-  def kleerers
+  def kleerers(lang="es")
     kleerers = Array.new
 
     begin
       loaded_kleerers = parse @connector.kleerers_xml_url, '/trainers/trainer'
       
-      loaded_kleerers.each do |loaded_kleerer|
-        kleerer = Professional.new
-        
-        kleerer.name = loaded_kleerer.find_first('name').content
-        kleerer.bio = loaded_kleerer.find_first('bio').content
-        kleerer.linkedin_url = loaded_kleerer.find_first('linkedin-url').content
-        kleerer.gravatar_picture_url = loaded_kleerer.find_first('gravatar-picture-url').content
-        kleerer.twitter_username = loaded_kleerer.find_first('twitter-username').content
-        
+      loaded_kleerers.each do |one_kleerer|
+        kleerer = Professional.new one_kleerer, lang        
         kleerers << kleerer
       end
     rescue => err
@@ -162,10 +163,10 @@ class KeventerReader
   end
   
   def categories(lang="es")
+    categories = Array.new
+
     begin
       loaded_categories = parse @connector.categories_xml_url, '/categories/category'
-      
-      categories = Array.new
       
       loaded_categories.each do |loaded_category|
         category = Category.new loaded_category, lang

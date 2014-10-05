@@ -250,6 +250,11 @@ describe KeventerReader do
       @kevr.kleerers.count.should == 9
     end
 
+    it "should have a English bio" do
+
+      @kevr.kleerers("en")[0].bio.should == "English Bio Alaimica"
+    end
+
   end  
   
   context "Extracting Categories" do
@@ -291,5 +296,21 @@ describe KeventerReader do
     end
 
   end
-  
+
+  context "Manage unknown elements" do
+    it "should return the content if element is present" do
+        xml = double()
+        element = double()
+        xml.stub(:find_first).and_return(element)
+        element.stub(:content).and_return("hi")
+        expect(first_content(xml, "pepe")).to eq("hi")
+    end
+    it "should return nil if element is not present" do
+        xml = double()
+        element = double()
+        xml.stub(:find_first).and_return(nil)
+        expect(first_content(xml, "pepe")).to eq("")
+    end
+  end
+ 
 end
