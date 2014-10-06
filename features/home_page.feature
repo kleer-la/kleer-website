@@ -21,3 +21,9 @@ Feature: Home Page
 	Scenario: Subscripcion a newsletter
 		Given I visit the home page
 		Then I should see the Subscribe to newsletter option
+
+	@wip
+	Scenario: Ajax request
+		Given I visit the home page
+		When I get 5 community events
+		Then I should see "\"data\":"

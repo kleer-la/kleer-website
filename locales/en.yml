@@ -225,8 +225,8 @@ en:
                 contact_us: "Contact us at"
                 contact_email: "hello@kleer.la"
         subscription:
-            text1: "       Be the first to know"
-            text2: "         the agile news!"
+            text1: "       Be the first to get"
+            text2: "       all the agile news!"
             interested: "SUBSCRIBE"
             form:
                 title: "SUBSCRIPTION"

@@ -328,7 +328,7 @@ class KeventerReader
 
     event = event_from_parsed_xml(xml_keventer_event)
     
-    trainer = Professional.new
+    trainer = Professional.new  #xml_keventer_event.find_first('trainer'), "es"
     
     trainer.name = xml_keventer_event.find_first('trainer/name').content
     trainer.bio = xml_keventer_event.find_first('trainer/bio').content
