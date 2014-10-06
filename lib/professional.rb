@@ -3,7 +3,7 @@ class Professional
   attr_accessor :name, :bio, :linkedin_url, :gravatar_picture_url, :twitter_username, :id,
   				:average_rating, :net_promoter_score, :surveyed_count, :promoter_count
   
-  def initialize  xml=nil, lang="es"
+  def initialize( xml=nil, lang="es")
     bio_tag = lang=="en" ? "bio_en" : "bio" 
 
     if xml.nil?
