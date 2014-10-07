@@ -238,6 +238,172 @@ es:
                 title: "¿Otro?"
                 contact_us: "Escribenos a"
                 contact_email: "hola@kleer.la"
+        subscription:
+            text1: "Sé el primero en enterarte"
+            text2: "de todas las novedades del mundo ágil"
+            interested: "SUSCRÍBETE"
+            form:
+                title: "SUSCRIPCIÓN"
+                mail_hint: "tu@email.com"
+                fname_hint: "Nombre"
+                lname_hint: "Apellido"
+                where_are_you:  "Tu lugar más próximo ..."
+                cancel: "Cancelar"
+                send: "SUSCRÍBETE AHORA!"
+                countries: '<option value="ZI-AMS-AR-BUE (Buenos Aires)">Argentina - Buenos Aires</option>
+                    <option value="ZI-AMS-AR-BUE (Buenos Aires)">Argentina - Capital Federal</option>
+                    <option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Catamarca</option>
+                    <option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Chaco</option>
+                    <option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Chubut</option>
+                    <option value="ZI-AMS-AR-CTR (Centro)">Argentina - Córdoba</option>
+                    <option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Corrientes</option>
+                    <option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Entre Rios</option>
+                    <option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Formosa</option>
+                    <option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Jujuy</option>
+                    <option value="ZI-AMS-AR-CTR (Centro)">Argentina - La Pampa</option>
+                    <option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - La Rioja</option>
+                    <option value="ZI-AMS-AR-CUY (Cuyo)">Argentina - Mendoza</option>
+                    <option value="ZI-AMS-AR-LIT (Litoral)">Argentina - Misiones</option>
+                    <option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Neuquen</option>
+                    <option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Río Negro</option>
+                    <option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Salta</option>
+                    <option value="ZI-AMS-AR-CUY (Cuyo)">Argentina - San Juan</option>
+                    <option value="ZI-AMS-AR-CUY (Cuyo)">Argentina - San Luis</option>
+                    <option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Santa Cruz</option>
+                    <option value="ZI-AMS-AR-CTR (Centro)">Argentina - Santa Fé</option>
+                    <option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Santiago del Estero</option>
+                    <option value="ZI-AMS-AR-PAT (Patagonia)">Argentina - Tierra del Fuego</option>
+                    <option value="ZI-AMS-AR-NOA (Noroeste)">Argentina - Tucumán</option>
+                    <option value="ZI-AUS (Australia)">Australia</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Beni</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Chuquisaca</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Cochabamba</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - La Paz</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Oruro</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Pando</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Potosí</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Santa Cruz</option>
+                    <option value="ZI-AMS-BO (Bolivia)">Bolivia - Tarija</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Acre</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Alagoas</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Amapá</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Amazonas</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Bahia</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Ceará</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Espírito Santo</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Goiás</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Mato Grosso</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Mato Grosso do Sul</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Minas Gerais</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Pará</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Paraíba</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Paraná</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Pernambuco</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Piauí</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Rio de Janeiro</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Rio Grande do Norte</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Rio Grande do Sul</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Rondônia</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Roraima</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Santa Catarina</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - São Paulo</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Sergipe</option>
+                    <option value="ZI-AMS-BR (Brasil)">Brasil - Tocantins</option>
+                    <option value="ZI-AMN-CA (Canada)">Canada</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Antofagasta</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Arica y Parinacota</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Atacama</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Aysen del General Carlos Ibanez del Campo</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Bio Bio</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Coquimbo</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - La Araucania</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Libertador General Bernardo O Higgins</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Los Lagos</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Los Rios</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Magallanes y la Antartica Chilena</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Maule</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Santiago Metropolitana</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Tarapaca</option>
+                    <option value="ZI-AMS-CL (Chile)">Chile - Valparaiso</option>
+                    <option value="ZI-AMS-CO-EJE (Eje cafetero)">Colombia - Armenia</option>
+                    <option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Barranquilla</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Bogota</option>
+                    <option value="ZI-AMS-CO-SAN (Santander)">Colombia - Bucaramanga</option>
+                    <option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Cali</option>
+                    <option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Cartagena</option>
+                    <option value="ZI-AMS-CO-SAN (Santander)">Colombia - Cúcuta</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Ibagué</option>
+                    <option value="ZI-AMS-CO-EJE (Eje cafetero)">Colombia - Manizales</option>
+                    <option value="ZI-AMS-CO-MDE (Medellín)">Colombia - Medellin</option>
+                    <option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Monteria</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia - N/A</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Neiva</option>
+                    <option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Pasto</option>
+                    <option value="ZI-AMS-CO-EJE (Eje cafetero)">Colombia - Pereira</option>
+                    <option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Popayan</option>
+                    <option value="ZI-AMS-CO-PAC (Pacífico)">Colombia - Quibdó</option>
+                    <option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Santa Marta</option>
+                    <option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Sincelejo</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Tunja</option>
+                    <option value="ZI-AMS-CO-CAR (Caribe)">Colombia - Valledupar</option>
+                    <option value="ZI-AMS-CO-BOG (Bogota)">Colombia - Villavicencio</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Cuba</option>
+                    <option value="ZI-AMC (America Central y Caribe)">República Dominicana</option>
+                    <option value="ZI-AMS-EC (Ecuador)">Ecuador</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Guatemala</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Honduras</option>
+                    <option value="ZI-AMN-MX (Mexico)">Mexico</option>
+                    <option value="ZI-AMC (America Central y Caribe)">Panama</option>
+                    <option value="ZI-AMS-PY (Paraguay)">Paraguay</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Amazonas</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Áncash</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Apurímac</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Arequipa</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Ayacucho</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Cajamarca</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Callao</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Cusco</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Huancavelica</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Huánuco</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Ica</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Junín</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - La Libertad</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Lambayeque</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Lima</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Loreto</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Madre de Dios</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Moquegua</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Pasco</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Piura</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Puno</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - San Martín</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Tacna</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Tumbes</option>
+                    <option value="ZI-AMS-PE (Peru)">Peru - Ucayali</option>
+                    <option value="ZI-ASI (Asia)">España</option>
+                    <option value="ZI-EUR-ES (España)">España - Andalucía</option>
+                    <option value="ZI-EUR-ES (España)">España - Aragón</option>
+                    <option value="ZI-EUR-ES (España)">España - Canarias</option>
+                    <option value="ZI-EUR-ES (España)">España - Cantabria</option>
+                    <option value="ZI-EUR-ES (España)">España - Castila-La Mancha</option>
+                    <option value="ZI-EUR-ES (España)">España - Castilla y León</option>
+                    <option value="ZI-EUR-ES (España)">España - Cataluña</option>
+                    <option value="ZI-EUR-ES (España)">España - Ceuta</option>
+                    <option value="ZI-EUR-ES (España)">España - Comunidad de Madrid</option>
+                    <option value="ZI-EUR-ES (España)">España - Comunidad Foral de Navarra</option>
+                    <option value="ZI-EUR-ES (España)">España - Comunidad Valenciana</option>
+                    <option value="ZI-EUR-ES (España)">España - Extremadura</option>
+                    <option value="ZI-EUR-ES (España)">España - Galicia</option>
+                    <option value="ZI-EUR-ES (España)">España - Islas Baleares</option>
+                    <option value="ZI-EUR-ES (España)">España - La Rioja</option>
+                    <option value="ZI-EUR-ES (España)">España - Melilla</option>
+                    <option value="ZI-EUR-ES (España)">España - País Vasco</option>
+                    <option value="ZI-EUR-ES (España)">España - Principado de Asturias</option>
+                    <option value="ZI-EUR-ES (España)">España - Región de Murcia</option>
+                    <option value="ZI-AMN-US (EEUU)">Estados Unidos</option>
+                    <option value="ZI-AMS-UY (Uruguay)">Uruguay</option>
+                    <option value="ZI-AMS-VE (Venezuela)">Venezuela</option>
+'
     kleexperience:
         title: "Ésta es la Experiencia Kleer"
         professionals:

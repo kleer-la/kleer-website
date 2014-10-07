@@ -379,3 +379,7 @@ end
 Then(/^I should see the Argentinian fiscal data link$/) do
   response_body.should have_selector("a[href='http://qr.afip.gob.ar/?qr=5DjfcAnZHIhtGI65mHIRlA,,']")
 end
+
+When(/^I get (\d+) community events$/) do |qty|
+  visit "/es/comunidad/eventos/proximos/#{qty}"
+end

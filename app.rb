@@ -101,7 +101,7 @@ end
 get '/' do
 	@active_tab_index = "active"
 	@categories = @@keventer_reader.categories session[:locale]
-  @kleerers = @@keventer_reader.kleerers
+  @kleerers = @@keventer_reader.kleerers session[:locale]
 	erb :index
 end
 
