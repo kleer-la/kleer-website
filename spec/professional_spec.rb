@@ -14,7 +14,7 @@ describe Professional do
     <surveyed-count type="integer">94</surveyed-count>
     <promoter-count type="integer">92</promoter-count>
     <bio>Mi compromiso es asistir</bio>
-    <bio_en>English Bio Alaimica</bio_en>
+    <bio-en>English Bio Alaimica</bio-en>
     <country-id type="integer">9</country-id>
     <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
     <gravatar-email>malaimo@gmail.com</gravatar-email>
