@@ -4,7 +4,7 @@ class Professional
   				:average_rating, :net_promoter_score, :surveyed_count, :promoter_count
   
   def initialize( xml=nil, lang="es")
-    bio_tag = lang=="en" ? "bio_en" : "bio" 
+    bio_tag = lang=="en" ? "bio-en" : "bio" 
 
     if xml.nil?
       @id = ""
