@@ -146,7 +146,8 @@ class KeventerReader
       loaded_kleerers = parse @connector.kleerers_xml_url, '/trainers/trainer'
       
       loaded_kleerers.each do |one_kleerer|
-        kleerer = Professional.new one_kleerer, lang        
+        kleerer = Professional.new one_kleerer, lang
+        puts lang, kleerer.bio
         kleerers << kleerer
       end
     rescue => err

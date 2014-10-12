@@ -288,3 +288,22 @@ en:
             description: "<p>You will end up the course full of energy! The high interactive way of working and 
                           collaboration spirit that accompanied you during the process will make you be motivated and 
                           willing to implement on your daily environment all you have learned.</p>"
+
+    scrumalliance:
+        title: "A different Experience"
+        description: "We are the first Spanish-speaking company to become a Registered Education Provider (REP) of the Scrum Alliance."
+        why: "Why would you take a course of the
+                    <h2>Scrum Alliance</h1>
+                    
+                    <ul>
+                        <li>
+                            It was created by the creator of Scrum.
+                        </li>
+                        <li>
+                            It is the Scrum certifier entity with the greatest international prestige.
+                        </li>
+                        <li>
+                            The most-renowned trainers deliver courses endorsed by the this institution.
+                        </li>
+                    </ul>"
+        top: "Top Trainings"

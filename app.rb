@@ -328,7 +328,7 @@ end
 get '/somos' do
  	@active_tab_somos = "active"
 	@page_title += " | Somos"
-	@kleerers = @@keventer_reader.kleerers
+	@kleerers = @@keventer_reader.kleerers session[:locale]
 	erb :somos
 end
 

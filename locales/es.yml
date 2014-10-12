@@ -420,3 +420,22 @@ es:
         inspiring:
             title: "Motivantes"
             description: "<p>¡Al final del curso te sentirás energizado! La alta colaboración e interactividad durante el proceso te dejará motivado y con ganas de implementar todo lo aprendido en tu entorno cotidiano.</p>"
+
+    scrumalliance:
+        title: "Una Experiencia Diferente"
+        description: "Somos la primer empresa de habla hispana en certificar como Representante Educativo de la Scrum Alliance."
+        why: "Por qué tomar cursos respaldados por
+                    <h2>Scrum Alliance</h1>
+                    
+                    <ul>
+                        <li>
+                            Fue creada por los creadores de Scrum
+                        </li>
+                        <li>
+                            Es la entidad certificadora en Scrum con mayor trayectoria y prestigio internacional
+                        </li>
+                        <li>
+                            Los entrenadores más preparados del mundo Scrum dictan cursos avalados por esta institución
+                        </li>
+                    </ul>" 
+        top: "Principales cursos"
