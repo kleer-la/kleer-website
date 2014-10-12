@@ -186,6 +186,8 @@ en:
         title: "Private Trainings"
         description: "WE CAN TEACH ALL OUR COURSES IN YOUR ORGANIZATION.<br/>OUR CERTIFICATIONS ARE ENDORSED BY THE SCRUM ALLIANCE."
         missing_elevator_pitch: "Please, fill the elevator pitch field for this event type."       
+    category:
+        training: "Trainings"
     contact:
         title: "Contact"
         contact_us: "Contact us"
@@ -265,13 +267,24 @@ en:
         title: "This is the Kleer Experience"
         professionals:
             title: "With the most recognized professionals in Latin America"
-            description: "<p>Encontrarás los mejores entrenadores, reconocidos como tal por sus pares de las Comunidades Latinoamericanas de Metodologías Ágiles.</p><p>Contarás con diversidad de perfiles con amplia experiencia en la industria y la academia, así como en técnicas de facilitación y en la obtención de resultados en procesos de transformación organizacional.</p>"
+            description: "<p>In Kleer you will meet with the best trainers, recognized by their peers from the Latin
+                          American and European Agile Methodologies Communities.</p>
+                          <p>And you will find diverse profiles with vast experience in the industry and in academia. 
+                          Our trainers have been implementing facilitation techniques as well as transformational
+                          processes for many years in many different organizations.</p>"
         experiential:
             title: "100% experiential"
-            description: "<p>El protagonista eres tú. Los facilitadores son guías que te acompañarán en el camino de aprendizaje.</p><p>La experiencia es altamente interactiva. Desde el inicio desarrollarás habilidades como el enfoque, la auto-organización, la confianza y la apertura.</p>"
+            description: "<p>You are the protagonist. The facilitators are guides that go along with you the learning process.</p> 
+                          <p>The experience is highly interactive. From the beginning you will develop capabilities such 
+                          as focus, self-organization, confidence and openness</p>"
         lasting_learning:
             title: "Lasting Learning"
-            description: "<p>La riqueza sensorial, la repetición, el dibujo, y el manejo de las emociones y los tiempos en un espacio seguro y confortable hacen que aprendas de manera natural.</p><p>Vivirás éstas, las técnicas de aprendizaje colectivo y participativo, donde serás parte de un equipo auto organizado y el facilitador te guiará 'desde el fondo del aula'.</p>"
+            description: "<p>Sensorial richness, repetition, drawing, handling emotions and time in a safe and 
+                          comfortable environment will make you learn in a natural way.</p>
+                          You will feel as part of a self-organized team thanks to these collective and participative 
+                          learning techniques, always with the support of the facilitator guiding you from the <i>back of the room</i>.</p>"
         inspiring:
             title: "Inspiring"
-            description: "<p>¡Al final del curso te sentirás energizado! La alta colaboración e interactividad durante el proceso te dejará motivado y con ganas de implementar todo lo aprendido en tu entorno cotidiano.</p>"
+            description: "<p>You will end up the course full of energy! The high interactive way of working and 
+                          collaboration spirit that accompanied you during the process will make you be motivated and 
+                          willing to implement on your daily environment all you have learned.</p>"

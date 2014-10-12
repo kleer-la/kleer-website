@@ -200,6 +200,8 @@ es:
         title: "Entrenamientos Privados"
         description: "PODEMOS REALIZAR LOS CURSOS EN TU ORGANIZACIÓN.<br/>NUESTRAS CERTIFICACIONES ESTÁN AVALADAS POR LA SCRUM ALLIANCE."
         missing_elevator_pitch: "Por favor, completar el elevator pitch del tipo de evento."
+    category:
+        training: "Cursos"
     contact:
         title: "Contacto"
         contact_us: "Contáctanos"
