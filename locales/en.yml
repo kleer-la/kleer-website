@@ -135,12 +135,11 @@ en:
                    pdf: "PDF/Kindle/ePub: 50% OFF!"
            lenguajes_web:
                title: "Introducción a los lenguajes de la Web"
-               text: "Este libro está pensado como parte del material de soporte para 
-               un curso más amplio sobre desarrollo ágil de software. Queremos que los 
-               lectores logren un conocimiento general, aunque breve, de lo que implica 
-               el desarrollo de una aplicación web. Los temas principales del libro son 
-               el protocolo HTTP, lo básico de HTML, cómo darle formato con CSS, y 
-               algunos detalles adicionales."
+               text: "In web development teams, every member must be able to 
+               understand the web terminology and concepts. This book gives you the minimun 
+               knowdgement needed. It gives you a quick introduction to HTTP (the communication protocol of the web),
+               to HTML (the language of the pages contents), to CSS (the lenguaje of the page styles), and to some additional topics.
+               This knowledge helps the team have better conversations and archive better results."
            agil_ilustrado:
                title: "Libro Ágil Ilustrado"
                text: "El objetivo de este libro es difundir -de forma gráfica- métodos y 
