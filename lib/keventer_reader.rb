@@ -147,7 +147,6 @@ class KeventerReader
       
       loaded_kleerers.each do |one_kleerer|
         kleerer = Professional.new one_kleerer, lang
-        puts lang, kleerer.bio
         kleerers << kleerer
       end
     rescue => err
@@ -263,7 +262,6 @@ class KeventerReader
     if remote_events_still_valid(event_type_xml_url, force_read)
       return @events_hash_dont_use_directly[event_type_xml_url]
     end
-    
     loaded_events = parse event_type_xml_url, '/events/event'
     
     events = Array.new
@@ -302,12 +300,14 @@ class KeventerReader
     event_type_id = event_type_id.to_i
 
     begin
-      parser =  LibXML::XML::Parser.file( @connector.event_type_url(event_type_id))
+      url = @connector.event_type_url(event_type_id)
+      parser =  LibXML::XML::Parser.file(url )
       doc = parser.parse
       create_event_type(doc)
-    rescue Exception
-      nil
-    end
+      rescue Exception => e  
+        puts e.message  
+        puts e.backtrace.inspect     
+      end
   end
   
   def load_remote_event_type_editions(event_type_id, force_read)

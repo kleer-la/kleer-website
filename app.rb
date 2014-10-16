@@ -297,8 +297,6 @@ get '/entrenamos/evento/:event_id_with_name/registration' do
     @event = @@keventer_reader.event(event_id, false)
   end
 
-  puts @event.nil?
-
   if @event.nil?
     @error = get_course_not_found_error()
     erb :error404_remote_to_calendar, :layout => :layout_empty

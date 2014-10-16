@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <event-type>
-      <average-rating type="decimal">4.45</average-rating>
-    <net-promoter-score type="integer">97</net-promoter-score>
-    <surveyed-count type="integer">94</surveyed-count>
-    <promoter-count type="integer">92</promoter-count>
+  <average-rating type="decimal">4.84</average-rating>
   <created-at type="datetime">2012-09-06T10:59:01Z</created-at>
+  <csd-eligible type="boolean">true</csd-eligible>
   <description>####Descripción del Curso
 &lt;img src="http://media.kleer.la/sa-csd/me-m1.jpg" alt="" align="right" /&gt;
 La tendencia de la industria de IT y desarrollo de sistemas a nivel mundial con respecto a la utilización de metodologías ágiles es claramente incremental; estas nuevas formas de administrar un proyecto son consideradas como la "Nueva Gestión de Proyectos" no solo para el desarrollo de software sino también para las áreas de diseño gráfico y de identidad, debido a su manejo de requerimientos cambiantes, poco definidos y complejos, en entornos de negocios altamente volátiles.
@@ -12,16 +10,26 @@ La tendencia de la industria de IT y desarrollo de sistemas a nivel mundial con 
 
 Al finalizar exitosamente el taller, tendrás el acreditado el curso Introductorio a Scrum requerido para la certificación Certified Scrum Developer (CSD) de la Scrum Alliance.
 
+####Certified Scrum Developer
+Luego de realizar los 3 workshops (Introducción a Scrum, Análisis, Estimación y Planificación con Scrum y Desarrollo Ágil de Software) y completar el examen, tendrás el acreditado el curso Técnico requerido para la certificación [Certified Scrum Developer (CSD) de la Scrum Alliance](http://www.scrumalliance.org/certifications/practitioners/csd-certification).
+
+![Certified Scrum Developer - Scrum Alliance](http://www.scrumalliance.org/getmedia/190ad588-3406-45d9-8be1-8a67469485a9/Scrum_Developer_Seal.aspx?width=60&amp;height=51)
+
 ####Professional Development Units (PDUs) y PMI-ACP
 Este curso brinda 8 PDUs a quien ya es PMP. Este curso también acredita 8 de las 21 horas de entrenamiento en Agile Project Management necesarios de para la certificación PMI-ACP.</description>
   <duration type="integer">8</duration>
   <elevator-pitch>Este taller práctico de un día provee a los asistentes un entendimiento claro sobre los principios fundamentales de las metodologías ágiles y de Scrum por medio de ejercicios reales.
-Los participantes obtendrán experiencia práctica trabajando con las herramientas de Scrum y sus actividades, como el backlog, sprint planning, demos y retrospectivas..</elevator-pitch>
+Los participantes obtendrán experiencia práctica trabajando con las herramientas de Scrum y sus actividades, como el backlog, sprint planning, reviews y retrospectivas.</elevator-pitch>
   <faq>####¿Cómo se obtiene la certificación como Scrum Developer?
 La certificación CSD de Scrum Alliance se obtiene:
-Tomando los 3 módulos de este entrenamiento. Si eres CSM sólo debes tomar el módulo 3, pero te recomendamos también el módulo 2.
-Aprobando el examen de aptitud, que se presenta al completar el módulo 3.
-Cancelando la suma de USD $150, directamente a Scrum Alliance, para garantizar la membresía y certificación por 2 años.
+Tomando los 3 módulos de este entrenamiento. 
+- Módulo 1: Introducción a Scrum
+- Módulo 2: Análisis, estimación y planificación con Scrum
+- Módulo 3: Desarrollo Ágil de Software
+- * Si eres CSM sólo debes tomar el módulo 3, pero te recomendamos también el módulo 2.
+Aprobando el examen, que se presenta al completar el módulo 3.
+A partir del 2014, el costo de la certificación y la membresía de 2 años está incluido en cada módulo, y lo paga Kleer a la ScrumAlliance (USD 25 por cada día de curso).
+El estudianta debe solicitar la certificación a la ScrumAlliance.
 
 ####¿Cómo puedo comparar ésta con las demás certificaciones de Scrum Alliance?
 En este sitio puedes acceder a la lista de programas que ofrece Scrum Alliance y hacerte una idea global del proceso de aprendizaje de Scrum.
@@ -41,37 +49,62 @@ Se requiere un 75% de las respuestas correctas.
 ####¿Que pasa si no apruebo el examen al final del entrenamiento?
 Tienes una oportunidad más que podrás coordinar con tu instructor después del entrenamiento.</faq>
   <goal>
-ss
+
 </goal>
   <id type="integer">4</id>
   <include-in-catalog type="boolean">false</include-in-catalog>
   <learnings>Al participar del taller aprenderás:
 
-- Nuevas tendencias en el desarrollo de software
-- Principios fundamentales y valores de Scrum
-- Experiencia práctica trabajando con los elementos y prácticas de Scrum</learnings>
+- Nuevas tendencias en la gestión de proyectos complejos
+- Principios fundamentales y valores de las Metodologías Ágiles y Scrum 
+- Diferencias entre los roles de Scrum y las responsabilidades de cada uno
+- Experiencia trabajando con los elementos y prácticas de Scrum (Historias de Usuario, Release Plan, Product y Sprint Backlog)
+- Ceremonias y Simulación de Scrum (Sprint, Planning, Daily Standup, Review,  Retrospectiva)</learnings>
   <materials></materials>
   <name>Introducción a Scrum (Módulo 1 - CSD Track)</name>
+  <net-promoter-score type="integer">82</net-promoter-score>
   <program>- Introducción a Agile
 - Introducción a Scrum
 - Roles de Scrum
 - Elementos de Scrum
 - Ceremonias de Scrum
 - Simulación de Scrum</program>
-  <recipients>- Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario
-- Gerentes de proyectos
+  <promoter-count type="integer">46</promoter-count>
+  <recipients>- Gerentes y líderes de proyectos
 - Líderes Técnicos
-- Gerentes de desarrollo.</recipients>
+- Gerentes de desarrollo.
+- Equipos de desarrollo de software o diseño web/gráfico/de experiencia de usuario
+- Profesionales que quieran ingresar en el mundo de las metodologías ágiles</recipients>
+  <surveyed-count type="integer">55</surveyed-count>
+  <tag-name>C-CSD1 (CSD Módulo 1) </tag-name>
   <takeaways>Al participar del taller obtendrás:
 
 - Experiencia de primera mano en el framework Scrum
 - Material impreso de referencia para utilizar durante y luego del curso
-- Coffee breaks y almuerzo (opcional, dependiendo de la sede)</takeaways>
-  <updated-at type="datetime">2013-08-09T13:37:40Z</updated-at>
-<average-rating type="float">4.38</average-rating>
-<net-promoter-score type="float">0.96</net-promoter-score>
-<participant-count type="integer">125</participant-count>
-<promoter-count type="integer">47</promoter-count>
-<nps-opinions-count type="integer">2</nps-opinions-count>
-<rating-opinions-count type="integer">2</rating-opinions-count>
+- Coffee breaks y almuerzo (opcional, dependiendo de la sede)
+- Si cursas este entrenamiento junto con Análisis, Estimación y Planificación con Scrum y Desarrollo Ágil de Software y realizas el exámen asociado cubres los requisitos para obtener el certificado [Certified Scrum Developer de la Scrum Alliance](http://www.scrumalliance.org/certifications/practitioners/csd-certification)</takeaways>
+  <updated-at type="datetime">2014-10-09T14:37:31Z</updated-at>
+  <categories type="array">
+    <category>
+      <codename>organizaciones</codename>
+      <created-at type="datetime">2013-04-19T17:36:06Z</created-at>
+      <description>Proponemos un nuevo enfoque de gestión de organizaciones, áreas, departamentos y equipos de trabajo que se enfoca en las personas y sus interacciones por sobre los procesos y las herramientas utilizadas.
+
+Las organizaciones y los equipos de trabajo están compuestos por personas y las personas tienen comportamientos, deseos, emociones; no son "recursos". La creación de productos y/o servicios innovadores es, principalmente, una actividad social que tiene lugar dentro de un equipo de personas, en contextos más participativos, colaborativos y humanos. Por consiguiente, la manera más efectiva de mejorar los resultados es mejorando las relaciones que existen entre los miembros y no solamente atendiendo los procesos y las tareas que ellos realizan.
+
+**Te podemos asistir para lograr que tu organización, área, departamento o equipo de trabajo, logre un nivel de rendimiento superior al actual.**
+
+Contactate con nosotros en coaching@kleer.la</description>
+      <description-en>We propose a new approach to management of organizations, departments and teams that focuses on people and their interactions over processes and tools used.
+</description-en>
+      <id type="integer">2</id>
+      <name>Organizaciones asombrosas</name>
+      <name-en>Amazing organizations</name-en>
+      <order type="integer">1</order>
+      <tagline>A partir del aprendizaje, la confianza, el compromiso, la visibilidad y la flexibilidad tu organización, departamento o equipo de trabajo logrará resultados nunca antes vistos.</tagline>
+      <tagline-en>Thru learning, trust, commitment, visibility and flexibility your organization, department or team achieve results never seen before.</tagline-en>
+      <updated-at type="datetime">2014-10-03T11:24:04Z</updated-at>
+      <visible type="boolean">true</visible>
+    </category>
+  </categories>
 </event-type>
