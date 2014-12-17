@@ -45,7 +45,7 @@ es:
         blog: "Blog"
     home:
         calendar:
-            current_year_calendar: "Ver Calendario 2014"
+            current_year_calendar: "Ver Calendario Completo"
             title: "Cursos"
             characteristics: "<ul>
                                 <li>Con los profesionales más reconocidos de latinoamérica</li>
