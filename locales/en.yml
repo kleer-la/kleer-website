@@ -43,6 +43,12 @@ en:
         we_are: "We are"
         tv: "Watch"
         blog: "Blog"
+    kleeros:
+        vision: "karl-creemos-en.png"
+        live: "vive-las-met-en.png"
+        community: "actividades-comunitarias-en.png"
+        team: "equipo-kleer-en.png"
+        nps: "nps-eventos.png"
     home:
         calendar:
             current_year_calendar: "Full calendar"
