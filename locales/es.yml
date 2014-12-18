@@ -185,10 +185,15 @@ es:
         wanna_join: "¿Más información?"
         location: "Lugar"
         time: "%{starts} a %{ends}"
+        duration: "horas"
         date: "Fecha"
+        important: "Importante"
         hour: "Horario"
         pricing: "Inversión"
-        important: "Importante"
+        rating:
+          based: "basado en"
+          opinion: "opiniones de asistentes a este tipo de evento"
+          outof: "de"
         tabs:
             description: "Descripción"
             target: "Destinado A"

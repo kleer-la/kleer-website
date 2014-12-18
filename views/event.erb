@@ -6,18 +6,18 @@
 					<h2><%= @event.event_type.name %></h2>
 					<h3>
 					<% if @event.is_online %>
-						Online
+						Online,
 					<% elsif @event.is_classroom %>
-						Presencial
+						Presencial,
 					<% elsif @event.is_classrooom %>
-						Blended Learning
+						Blended Learning,
 					<% end %>
-					, <%= @event.event_type.duration%> horas</h3>
+					<%= @event.event_type.duration%> <%=t("event.duration")%></h3>
 					<p><%= @event.event_type.elevator_pitch %></p>
 
 					<% if @event.event_type.has_rate %>
 						<p>
-						<div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event.event_type.average_rating%>/5 basado en <%=@event.event_type.surveyed_count%> opiniones de asistentes a este tipo de evento">
+						<div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event.event_type.average_rating%>/5 <%=t("event.rating.based")%> <%=@event.event_type.surveyed_count%> <%=t("event.rating.opinion")%>">
 							<div style="width:<%=@event.event_type.average_rating.to_f*16%>px;"/></div>
 						</div>
 						<script type="text/javascript">
@@ -57,11 +57,11 @@
 			<div class="col-md-5 hidden-xs hidden-sm">
 				&nbsp;<br/>
 				<% if @event.is_community_event %>
-					<img src="/img/personajes/actividades-comunitarias.png" height="400">
+					<img src="/img/personajes/<%=t('kleeros.community')%>" height="400">
 				<% else %>
 					<% if @event.event_type.has_rate %>
 						<div class="col-md-12">
-							<img src="/img/personajes/nps-eventos.png" height="400">
+							<img src="/img/personajes/n<%=t('kleeros.nps')%>" height="400">
 						</div>
 						<div class="col-md-5 evento-nps">
 							<h2><%=@event.event_type.promoter_count%> de <%=@event.event_type.surveyed_count%></h2>
@@ -70,7 +70,7 @@
 							<a href="http://www.netpromoter.com/why-net-promoter/know/" target="_blank">Net Promoter Score</a>: <strong><%=@event.event_type.net_promoter_score%></strong></h2>
 						</div>
 					<% else %>
-						<img src="/img/personajes/vive-las-met.png" height="500">
+						<img src="/img/personajes/<%=t('kleeros.live')%>" height="500">
 					<% end %>
 				<% end %>
 			</div>

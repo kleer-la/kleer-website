@@ -4,12 +4,12 @@
       <div class="col-md-7">
         <div class="evento-title-container">
           <h2><%= @event_type.name %></h2>
-          <h3><%= @event_type.duration%> hora(s)</h3>
+          <h3><%= @event_type.duration%> <%=t("event.duration")%></h3>
           <p><%= @event_type.elevator_pitch %></p>
 
           <% if @event_type.has_rate %>
             <p>
-            <div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event_type.average_rating%>/5 basado en <%=@event_type.surveyed_count%> opiniones de asistentes a este tipo de evento">
+            <div class="stars" id="rating" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event_type.average_rating%>/5 <%=t("event.rating.based")%> <%=@event_type.surveyed_count%> <%=t("event.rating.opinion")%>">
               <div style="width:<%=@event_type.average_rating.to_f*16%>px;"/></div>
             </div>
             <script type="text/javascript">
@@ -26,16 +26,16 @@
         &nbsp;<br/>
         <% if @event_type.has_rate %>
           <div class="col-md-12">
-            <img src="/img/personajes/nps-eventos.png" height="400">
+            <img src="/img/personajes/<%=t('kleeros.nps')%>" height="400">
           </div>
           <div class="col-md-5 evento-nps">
-            <h2><%=@event_type.promoter_count%> de <%=@event_type.surveyed_count%></h2>
+            <h2><%=@event_type.promoter_count%> <%=t("event.rating.outof")%> <%=@event_type.surveyed_count%></h2>
           </div>
           <div class="col-md-6 evento-nps-explanation">
             <a href="http://www.netpromoter.com/why-net-promoter/know/" target="_blank">Net Promoter Score</a>: <strong><%=@event_type.net_promoter_score%></strong></h2>
           </div>
         <% else %>
-          <img src="/img/personajes/vive-las-met.png" height="500">
+          <img src="/img/personajes/<%=t('kleeros.live')%>" height="500">
         <% end %>
       </div>
     </div>
