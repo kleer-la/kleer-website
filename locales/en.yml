@@ -48,7 +48,7 @@ en:
         live: "vive-las-met-en.png"
         community: "actividades-comunitarias-en.png"
         team: "equipo-kleer-en.png"
-        nps: "nps-eventos.png"
+        nps: "nps-eventos-en.png"
     home:
         calendar:
             current_year_calendar: "Full calendar"
@@ -170,10 +170,15 @@ en:
        wanna_join: "More information?"
        location: "Venue"
        time: "%{starts} to %{ends}"
+       duration: "hours"
        date: "Date"
        important: "Important"
        hour: "Time"
        pricing: "Pricing"
+       rating:
+          based: "based on"
+          opinion: "surveys to attendees to this workshop"
+          outof: "out of"
        tabs:
            description: "Description"
            target: "Who should attend?"
