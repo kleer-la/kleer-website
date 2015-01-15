@@ -43,9 +43,15 @@ es:
         tv: "Veas"
         we_are: "Nosotros"
         blog: "Blog"
+    kleeros:
+        vision: "karl-creemos.png"
+        live: "vive-las-met.png"
+        community: "actividades-comunitarias.png"
+        team: "equipo-kleer.png"
+        nps: "nps-eventos.png"
     home:
         calendar:
-            current_year_calendar: "Ver Calendario 2014"
+            current_year_calendar: "Ver Calendario Completo"
             title: "Cursos"
             characteristics: "<ul>
                                 <li>Con los profesionales más reconocidos de latinoamérica</li>
@@ -179,10 +185,15 @@ es:
         wanna_join: "¿Más información?"
         location: "Lugar"
         time: "%{starts} a %{ends}"
+        duration: "horas"
         date: "Fecha"
+        important: "Importante"
         hour: "Horario"
         pricing: "Inversión"
-        important: "Importante"
+        rating:
+          based: "basado en"
+          opinion: "opiniones de asistentes a este tipo de evento"
+          outof: "de"
         tabs:
             description: "Descripción"
             target: "Destinado A"
