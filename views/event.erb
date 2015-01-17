@@ -382,7 +382,9 @@ end
 
 <div class="container-fluid fondo-pano pano-6"></div>
 
-<%= erb :_slide_experiencia_kleer, :layout => false %>
+<%= if not @event.is_community_event
+	erb :_slide_experiencia_kleer, :layout => false 
+	end%>
 
 <div class="container-fluid fondo-amarillo">
 	<div class="container">
