@@ -21,7 +21,11 @@ When /^I click on "(.*)"$/ do |text|
 end
 
 Then /^I should see "(.*)"$/ do |text|
-	last_response.body.should =~ /#{text}/m
+  last_response.body.should =~ /#{text}/m
+end
+
+Then /^I should not see "(.*?)"$/ do |text|
+  expect(last_response.body).to_not include text
 end
 
 When /^I fill "(.*)" with "(.*)"$/ do |field, value|

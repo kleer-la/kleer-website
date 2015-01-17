@@ -27,7 +27,12 @@ Feature: Event Details
 		And I should see "Raul Gorgonzola"
 		And I should see "09"
 		And I should see "Ene"
-		
+
+	Scenario: Los Evento normal tienen sección de Experiencia Kleer
+		Given theres only one event
+		When I visit the event page
+		Then I should see "Experiencia Kleer"
+
 	Scenario: Detalle de Evento Comunitario
 		Given there are community events
 		When I visit the community event page
@@ -36,11 +41,15 @@ Feature: Event Details
 		And I should see "Kleer, Tucumán 373 1er Piso"
 		And I should see "Buenos Aires"
 		And I should see "Argentina"
-#		And I should see an image pointing to "/img/flags/ar.png"
 		And I should see "Ruperto Comunitario"
 		And I should see "06"
 		And I should see "Feb"
-		
+
+	Scenario: Los Evento Comunitario no tienen sección de Experiencia Kleer
+		Given there are community events
+		When I visit the community event page
+		Then I should not see "Experiencia Kleer"
+			
 	Scenario: Detalle de Evento Inexistente
 		Given theres only one event
 		When I visit a non existing event page
