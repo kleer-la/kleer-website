@@ -25,15 +25,6 @@ class DTHelper
   
   def self.event_result_json(event, remote = true, event_details_path = "entrenamos", i18n, locale, registration_btn)
     result = Array.new
-    
-    #initial_date_line = "<div class=\"klabel-date\">" + event.date.strftime("%d") + "<br>" + MONTHS_ES[event.date.strftime("%b")] + "</div>"
-    #if event.date != event.finish_date && !event.finish_date.nil?
-    #  result << initial_date_line
-    #  result << "<div class=\"klabel-date\">" + event.finish_date.strftime("%d") + "<br>" + MONTHS_ES[event.finish_date.strftime("%b")] + "</div>"
-    #else
-    #  result << " "
-    #  result << initial_date_line
-    #end
 
     date_line = "<table border=\"0\" align=\"center\" cellpadding=\"2\"><tr>"
     if event.date != event.finish_date && !event.finish_date.nil?
