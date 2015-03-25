@@ -54,7 +54,7 @@ es:
             current_year_calendar: "Ver Calendario Completo"
             title: "Cursos"
             characteristics: "<ul>
-                                <li>Con los profesionales más reconocidos de latinoamérica</li>
+                                <li>Con profesionales altamente reconocidos en Latinoamérica</li>
                                 <li>100% vivenciales</li>
                                 <li>Dinámicos, divertidos y útiles</li>
                                 <li>Certificaciones avaladas por la Scrum Alliance</li>
@@ -237,9 +237,9 @@ es:
                 phone: "+59 1.4.4321690"     
             colombia:
                 name: "Colombia"
-                address1: "Calle 77 #16-38 of 302"
+                address1: "Calle 40 # 20-42"
                 address2: "Bogotá"
-                phone: "+57 304.681.60.47"
+                phone: "+57 304.681.60.47 - 7954511"
             peru:
                 name: "Perú"
                 address1: "Av. Juan De Aliaga 107"
