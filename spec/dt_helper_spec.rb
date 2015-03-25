@@ -52,4 +52,10 @@ describe DTHelper do
     expect(DTHelper::to_dt_event_array_json(some_events)).not_to include("Completo")
     expect(DTHelper::to_dt_event_array_json(some_events, false)).not_to include("Completo")  
   end
+
+  it "should return an empty json array when no event exist" do
+      rsl = DTHelper::to_dt_event_array_json(Array.new, false, "comunidad", I18n)
+      expect(rsl).to eq '{ "data": []}'
+  end
+
 end
