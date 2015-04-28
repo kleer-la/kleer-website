@@ -1,7 +1,7 @@
 es:
     general:
         kleer:
-            vision: 
+            vision:
                 text: "Creemos que hay otras formas de relacionarnos para conseguir resultados fantásticos que nos hagan sentir orgullosos."
                 reference: "Nuestra Visión"
         buttons:
@@ -28,14 +28,15 @@ es:
             calendar: "Agenda"
             catalog: "Catálogo"
         coaching: "Coaching"
+        facilitation: "Facilitación"
         certifications: "Certificaciones"
-        achieve: 
+        achieve:
             root: "Logres"
             products: "Coaching Técnico"
             organization: "Coaching Organizacional y de Equipos"
             clients: "Coaching Comercial y Clientes"
         community: "Comunidad"
-        publishing: 
+        publishing:
             root: "Publicaciones"
             blog: "Blog"
             book: "Libros"
@@ -96,7 +97,7 @@ es:
             contact:
                 title: "Solicitar Cotización"
                 text: "<p>Puedes contactarnos a <a href='mailto:hola@kleer.la'>hola@kleer.la</a> para solicitarnos una  cotización.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
-    publishing: 
+    publishing:
         title: "Publicamos"
         description: "COMPARTIMOS CONOCIMIENTOS Y EXPERIENCIAS. ¡AYUDANOS A CORRER LA VOZ!"
         others:
@@ -115,7 +116,7 @@ es:
                 title2: "#Scrum"
                 subtitle1: "Flexibilidad, aprendizaje, innovación"
                 subtitle2: "y colaboración en contextos complejos"
-                text: "Scrum es un marco de trabajo que nos permite encontrar prácticas 
+                text: "Scrum es un marco de trabajo que nos permite encontrar prácticas
                 emergentes en dominios complejos, como la gestión de proyectos de innovación."
                 next: "Obtener libro >>"
                 subtitle: "Flexibilidad, aprendizaje, innovación y colaboración en contextos complejos"
@@ -129,26 +130,26 @@ es:
                 title: "Equipos más productivos"
                 title1: "Equipos"
                 title2: "#MásProductivos"
-                text: "El modelo de gestión tradicional está siendo reemplazado por formas 
+                text: "El modelo de gestión tradicional está siendo reemplazado por formas
                 más participativas, más colaborativas y más humanas de hacer empresa.</br></br>"
-                long_text: "El modelo de gestión tradicional está siendo reemplazado por 
-                formas más participativas, más colaborativas y más humanas de hacer empresa. 
-                Las organizaciones y los equipos de trabajo están integrados por personas, 
-                y las personas tienen comportamientos, emociones, deseos, y su propia historia. 
-                Si en lugar de minimizar estos factores, los abrazamos y los incluimos en 
+                long_text: "El modelo de gestión tradicional está siendo reemplazado por
+                formas más participativas, más colaborativas y más humanas de hacer empresa.
+                Las organizaciones y los equipos de trabajo están integrados por personas,
+                y las personas tienen comportamientos, emociones, deseos, y su propia historia.
+                Si en lugar de minimizar estos factores, los abrazamos y los incluimos en
                 la gestión, pronto comenzaremos a presenciar increíbles mejoras.<br/><br/>
-                La productividad no solo se refiere a cuánto se produce, sino a qué tan 
-                efectivas son las propias relaciones personales en el contexto profesional. 
-                La fórmula es muy sencilla: <strong>R=R (Resultados = Relaciones)</strong>. 
-                Esto quiere decir que  la manera más efectiva de mejorar los resultados es 
-                mejorando las relaciones que existen entre los miembros y no solamente 
+                La productividad no solo se refiere a cuánto se produce, sino a qué tan
+                efectivas son las propias relaciones personales en el contexto profesional.
+                La fórmula es muy sencilla: <strong>R=R (Resultados = Relaciones)</strong>.
+                Esto quiere decir que  la manera más efectiva de mejorar los resultados es
+                mejorando las relaciones que existen entre los miembros y no solamente
                 atendiendo los procesos y las tareas que ellos realizan.<br/><br/>
-                Pero en este camino no faltan los desafíos. Para facilitarlo, me propuse 
-                tomar lo mejor de dos mundos, el Coaching y Scrum, y combinarlos en una 
-                novedosa forma de ver los equipos de trabajo para exponer su alma. 
-                Quien se sumerja en esta lectura, encontrará experiencias, propuestas novedosas, 
-                recomendaciones útiles y la descripción de un completo marco de trabajo 
-                relacional.<br/><br/>Este es un momento clave en la historia del mundo 
+                Pero en este camino no faltan los desafíos. Para facilitarlo, me propuse
+                tomar lo mejor de dos mundos, el Coaching y Scrum, y combinarlos en una
+                novedosa forma de ver los equipos de trabajo para exponer su alma.
+                Quien se sumerja en esta lectura, encontrará experiencias, propuestas novedosas,
+                recomendaciones útiles y la descripción de un completo marco de trabajo
+                relacional.<br/><br/>Este es un momento clave en la historia del mundo
                 del trabajo. Y muchas empresas ya están dando el gran salto.<br/><br/><strong>
                 ¿Estás dispuesto a conocer esta nueva forma de trabajar y relacionarnos?</strong>"
                 subtitle: "Personas e interacciones por sobre procesos y herramientas"
@@ -159,17 +160,17 @@ es:
                     pdf: "PDF/Kindle/ePub: 50% OFF!"
             retrospectives:
                 title: "Técnicas de retrospectivas"
-                text: "Este libro aporta varias técnicas para que los equipos varíen el 
+                text: "Este libro aporta varias técnicas para que los equipos varíen el
                 formato de sus retrospectivas, evitando el aburimiento y manteniéndolos motivados."
             lenguajes_web:
                 title: "Introducción a los lenguajes de la Web"
-                text: "Este libro cubre lo básico a conocer sobre desarrollo web. 
-                Los temas principales del libro son el protocolo HTTP, crear contenido HTML, 
+                text: "Este libro cubre lo básico a conocer sobre desarrollo web.
+                Los temas principales del libro son el protocolo HTTP, crear contenido HTML,
                 y darle formato con CSS."
             agil_ilustrado:
                 title: "Libro Ágil Ilustrado"
-                text: "El objetivo de este libro es difundir -de forma gráfica- métodos y 
-                prácticas ágiles, con foco en las relaciones interpersonales, como forma de 
+                text: "El objetivo de este libro es difundir -de forma gráfica- métodos y
+                prácticas ágiles, con foco en las relaciones interpersonales, como forma de
                 organización del trabajo y -arriesgando más- como filosofía de vida."
     we_are:
         title: "Somos"
@@ -229,12 +230,12 @@ es:
                 name: "Brasil"
                 address1: "Alameda Jaú, 310 113-A"
                 address2: "São Paulo"
-                phone: "+55 11.3284.5878"   
+                phone: "+55 11.3284.5878"
             bolivia:
                 name: "Bolivia"
                 address1: "1ro de Mayo No. 542"
                 address2: "Qllo., Cochabamba"
-                phone: "+59 1.4.4321690"     
+                phone: "+59 1.4.4321690"
             colombia:
                 name: "Colombia"
                 address1: "Calle 40 # 20-42"
@@ -437,7 +438,7 @@ es:
         description: "Somos la primer empresa de habla hispana en certificar como Representante Educativo de la Scrum Alliance."
         why: "Por qué tomar cursos respaldados por
                     <h2>Scrum Alliance</h1>
-                    
+
                     <ul>
                         <li>
                             Fue creada por los creadores de Scrum
@@ -448,5 +449,5 @@ es:
                         <li>
                             Los entrenadores más preparados del mundo Scrum dictan cursos avalados por esta institución
                         </li>
-                    </ul>" 
+                    </ul>"
         top: "Principales cursos"

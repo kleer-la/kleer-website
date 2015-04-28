@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	
+
 	<!-- Begin Inspectlet Embed Code -->
 	<script type="text/javascript" id="inspectletjs">
 		window.__insp = window.__insp || [];
@@ -47,10 +47,10 @@
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
-			background-size: cover;  
+			background-size: cover;
 		}
 		h1, h2, h3, h4, h5, h6 {font-family: 'Roboto';}
-		
+
 		/* ---------------- FOOTER --------------------- */
 		/* Set the fixed height of the footer here */
 		      #push,
@@ -70,12 +70,12 @@
 		          padding-right: 20px;
 		        }
 		      }
-		
-		
-		
-		
+
+
+
+
 	</style>
-	
+
 	<script src="/js/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 
@@ -144,6 +144,8 @@
 			    </li>
           		<li class="<%=@active_tab_coaching%>"><a href="/<%=session[:locale]%>/coaching">
           			<%=t("menu.coaching")%></a></li>
+								<li class="<%=@active_tab_facilitacion%>"><a href="/facilitacion">
+	          			<%=t("menu.facilitation")%></a></li>
 				<li class="<%=@active_tab_comunidad%>"><a href="/<%=session[:locale]%>/comunidad"><%=t("menu.community")%></a></li>
 			    <li class="dropdown <%=@active_tab_blog%><%=@active_tab_publicamos%>">
 			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -201,7 +203,7 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="/js/parallax-init.js"></script>
 	<!-- SnapEngage
-	================================================== -->	
+	================================================== -->
 	<script type="text/javascript">
 		document.write(unescape("%3Cscript src='//www.snapengage.com/snapabug.js' type='text/javascript'%3E%3C/script%3E"));
 	</script>

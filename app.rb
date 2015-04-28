@@ -33,7 +33,7 @@ helpers do
     ops.merge!(:locale => session[:locale])
     I18n.t key, ops
   end
-  
+
   def url_sanitize(data)
     sanitized = data;
     sanitized = sanitized.gsub('á', 'a')
@@ -56,14 +56,14 @@ helpers do
       currency[:symbol]
     end
   end
-  
+
 end
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
 
   I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'locales', '*.yml').to_s]
-  
+
   enable :sessions
   @@keventer_reader = KeventerReader.new
 end
@@ -75,27 +75,27 @@ before do
   else
     session[:locale] = 'es'
   end
- 
+
   if request.host == "kleer.la" || request.host == "kleer.us" || request.host == "kleer.es" || request.host == "kleer.com.ar"
     redirect "http://www." + request.host + request.path
   else
     @page_title = "Kleer - Agile Coaching & Training"
-    flash.sweep 
+    flash.sweep
     @markdown_renderer = Redcarpet::Markdown.new(
-                              Redcarpet::Render::HTML.new(:hard_wrap => true), 
+                              Redcarpet::Render::HTML.new(:hard_wrap => true),
                               :autolink => true)
   end
 end
 
 before '/:locale/*' do
   locale = params[:locale]
-    
+
   if locale == "es" || locale == "en"
     session[:locale] = locale
     request.path_info = '/' + params[:splat ][0]
   else
     session[:locale] = 'es'
-  end  
+  end
 end
 
 get '/' do
@@ -137,6 +137,11 @@ end
 
 get '/e-books' do
   redirect "/publicamos", 301 # permanent redirect
+end
+
+get '/facilitacion' do
+  @active_tab_facilitacion = "active"
+  redirect "http://facilitacion.kleer.la", 301 # permanent redirect
 end
 
 get '/publicamos' do
@@ -186,12 +191,12 @@ get '/posters/:poster_code' do
     @video_url_code = "V5LaKpjcgKQ"
     @poster_name = "Principios Ágiles"
   end
-  
+
   @pdf_download_url = "http://media.kleer.la/posters/#{@poster_code}.pdf"
   @image_url = "/img/posters/#{@poster_code}.jpg"
-  
+
   erb :poster
-  
+
 end
 
 get '/categoria/:category_codename' do
@@ -214,13 +219,13 @@ get '/entrenamos/evento/:event_id_with_name' do
   if is_valid_id(event_id)
     @event = @@keventer_reader.event(event_id, true)
   end
-  
+
   if @event.nil?
     flash.now[:error] = get_course_not_found_error()
     erb :error404_to_calendar
   else
     @active_tab_entrenamos = "active"
-    @twitter_card = create_twitter_card( @event )    
+    @twitter_card = create_twitter_card( @event )
     @page_title = "Kleer - " + @event.friendly_title
     erb :event
   end
@@ -228,7 +233,7 @@ end
 
 get '/catalogo' do
   @active_tab_entrenamos = "active"
-  #pdf_catalog 
+  #pdf_catalog
   @page_title += " | Catálogo"
   @categories = @@keventer_reader.categories session[:locale]
   erb :catalogo
@@ -236,22 +241,22 @@ end
 
 get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
   @active_tab_entrenamos = "active"
-  
+
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
 
   @category = @@keventer_reader.category params[:category_codename], session[:locale]
-  
+
   if is_valid_id(event_type_id)
     @event_type = @@keventer_reader.event_type(event_type_id, true)
   end
-  
+
   if @event_type.nil?
     flash.now[:error] = get_course_not_found_error()
     erb :error404_to_calendar
   else
    # @active_tab_entrenamos = "active"
-   # @twitter_card = create_twitter_card( @event )    
+   # @twitter_card = create_twitter_card( @event )
     @page_title = "Kleer - " + @event_type.name
     erb :event_type
   end
@@ -335,7 +340,7 @@ get '/last-tweet/:screen_name' do
   return reader.last_tweet(params[:screen_name]).text
 end
 
-# JSON ==================== 
+# JSON ====================
 
 get '/entrenamos/eventos/proximos' do
   content_type :json
@@ -378,7 +383,7 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad", I18n, session[:locale])
 end
 
-# STATIC FILES ============== 
+# STATIC FILES ==============
 
 get '/preguntas-frecuentes/facturacion-pagos-internacionales' do
   erb :facturacion_pagos_internacionales
@@ -408,11 +413,11 @@ get '/sepyme/remote' do
   erb :sepyme_remote, :layout => :layout_empty
 end
 
-# LEGACY ==================== 
+# LEGACY ====================
 
 not_found do
   @page_title = "404 - No encontrado"
-  
+
   if !request.path.index("/entrenamos/introduccion-a-scrum").nil?
     flash.now[:error] = get_404_error_text_for_course("Introducción a Scrum")
     erb :error404_to_calendar
@@ -442,11 +447,11 @@ def create_twitter_card( event )
   card
 end
 
-def get_404_error_text_for_course(course_name) 
+def get_404_error_text_for_course(course_name)
   "Hemos movido la información sobre el curso '<strong>#{course_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho curso"
 end
 
-def get_404_error_text_for_community_event(event_name) 
+def get_404_error_text_for_community_event(event_name)
   "Hemos movido la información sobre el evento comunitario '<strong>#{event_name}</strong>'. Por favor, verifica nuestro calendario para ver los detalles de dicho evento"
 end
 

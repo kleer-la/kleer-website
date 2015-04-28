@@ -1,7 +1,7 @@
 en:
     general:
         kleer:
-            vision: 
+            vision:
                 text: "We believe there are other ways of human interaction to achieve fantastic results that make us proud"
                 reference: "Our Vision"
         buttons:
@@ -23,11 +23,12 @@ en:
     menu:
         home: "Home"
         we_do_it_for: "We do it for you to:"
-        training: 
+        training:
           root: "Courses"
           calendar: "Calendar"
           catalog: "Catalog"
         coaching: "Coaching"
+        facilitation: "Facilitation"
         certifications: "Certifications"
         achieve:
             root: "Achieve"
@@ -35,7 +36,7 @@ en:
             organization: "Organizational & Teams Coaching"
             clients: "Commercial & Clients Coaching"
         community: "Community"
-        publishing: 
+        publishing:
             root: "Publishing"
             blog: "Blog"
             book: "Books"
@@ -141,20 +142,20 @@ en:
                    pdf: "PDF/Kindle/ePub: 50% OFF!"
            lenguajes_web:
                title: "Introducción a los lenguajes de la Web"
-               text: "In web development teams, every member must be able to 
-               understand the web terminology and concepts. This book gives you the minimun 
+               text: "In web development teams, every member must be able to
+               understand the web terminology and concepts. This book gives you the minimun
                knowdgement needed. It gives you a quick introduction to HTTP (the communication protocol of the web),
                to HTML (the language of the pages contents), to CSS (the lenguaje of the page styles), and to some additional topics.
                This knowledge helps the team have better conversations and archive better results."
            agil_ilustrado:
                title: "Libro Ágil Ilustrado"
-               text: "El objetivo de este libro es difundir -de forma gráfica- métodos y 
-               prácticas ágiles. En cuanto al contenido, considero que el paradigma ágil 
-               -con foco en las relaciones interpersonales-, como forma de organización 
-               del trabajo y -arriesgando más- como filosofía de vida, puede generar 
-               ambientes profesionales y personales más interesantes, sanos, productivos 
-               y alegres, en comparación a otros paradigmas tradicionales. En cuanto a la 
-               forma, elijo comunicar a través de ilustraciones porque 'una imagen vale 
+               text: "El objetivo de este libro es difundir -de forma gráfica- métodos y
+               prácticas ágiles. En cuanto al contenido, considero que el paradigma ágil
+               -con foco en las relaciones interpersonales-, como forma de organización
+               del trabajo y -arriesgando más- como filosofía de vida, puede generar
+               ambientes profesionales y personales más interesantes, sanos, productivos
+               y alegres, en comparación a otros paradigmas tradicionales. En cuanto a la
+               forma, elijo comunicar a través de ilustraciones porque 'una imagen vale
                más que mil palabras' y porque -sencillamente- me gusta dibujar, lo disfruto."
     we_are:
        title: "We are"
@@ -163,7 +164,7 @@ en:
     event:
        course: "Course"
        public_editions: "Public editions"
-       other_trainings: "Other trainings from this category"       
+       other_trainings: "Other trainings from this category"
        facilitator: "Facilitator"
        save90percent: "Up to 90% savings!"
        free: "Free event"
@@ -195,7 +196,7 @@ en:
     catalog:
         title: "Private Trainings"
         description: "WE CAN TEACH ALL OUR COURSES IN YOUR ORGANIZATION.<br/>OUR CERTIFICATIONS ARE ENDORSED BY THE SCRUM ALLIANCE."
-        missing_elevator_pitch: "Please, fill the elevator pitch field for this event type."       
+        missing_elevator_pitch: "Please, fill the elevator pitch field for this event type."
     category:
         training: "Trainings"
     contact:
@@ -214,12 +215,12 @@ en:
                 name: "Brazil"
                 address1: "Alameda Jaú, 310 113-A"
                 address2: "São Paulo"
-                phone: "+55 11.3284.5878"   
+                phone: "+55 11.3284.5878"
             bolivia:
                 name: "Bolivia"
                 address1: "1ro de Mayo No. 542"
                 address2: "Qllo., Cochabamba"
-                phone: "+59 1.4.4321690"     
+                phone: "+59 1.4.4321690"
             colombia:
                 name: "Colombia"
                 address1: "Calle 40 # 20-42"
@@ -279,24 +280,24 @@ en:
             title: "With highly recognized professionals"
             description: "<p>In Kleer you will meet with great trainers, recognized by their peers from the Latin
                           American and European Agile Methodologies Communities.</p>
-                          <p>And you will find diverse profiles with vast experience in the industry and in academia. 
+                          <p>And you will find diverse profiles with vast experience in the industry and in academia.
                           Our trainers have been implementing facilitation techniques as well as transformational
                           processes for many years in many different organizations.</p>"
         experiential:
             title: "100% experiential"
-            description: "<p>You are the protagonist. The facilitators are guides that go along with you the learning process.</p> 
-                          <p>The experience is highly interactive. From the beginning you will develop capabilities such 
+            description: "<p>You are the protagonist. The facilitators are guides that go along with you the learning process.</p>
+                          <p>The experience is highly interactive. From the beginning you will develop capabilities such
                           as focus, self-organization, confidence and openness</p>"
         lasting_learning:
             title: "Lasting Learning"
-            description: "<p>Sensorial richness, repetition, drawing, handling emotions and time in a safe and 
+            description: "<p>Sensorial richness, repetition, drawing, handling emotions and time in a safe and
                           comfortable environment will make you learn in a natural way.</p>
-                          You will feel as part of a self-organized team thanks to these collective and participative 
+                          You will feel as part of a self-organized team thanks to these collective and participative
                           learning techniques, always with the support of the facilitator guiding you from the <i>back of the room</i>.</p>"
         inspiring:
             title: "Inspiring"
-            description: "<p>You will end up the course full of energy! The high interactive way of working and 
-                          collaboration spirit that accompanied you during the process will make you be motivated and 
+            description: "<p>You will end up the course full of energy! The high interactive way of working and
+                          collaboration spirit that accompanied you during the process will make you be motivated and
                           willing to implement on your daily environment all you have learned.</p>"
 
     scrumalliance:
@@ -304,7 +305,7 @@ en:
         description: "We are the first Spanish-speaking company to become a Registered Education Provider (REP) of the Scrum Alliance."
         why: "Why would you take a course of the
                     <h2>Scrum Alliance</h1>
-                    
+
                     <ul>
                         <li>
                             It was created by the creator of Scrum.
