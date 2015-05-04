@@ -246,6 +246,10 @@ es:
                 address1: "Av. Juan De Aliaga 107"
                 address2: "Lima"
                 phone: "entrenamos.pe@kleer.la"
+            europa:
+                address1: Hektoroviceva Ulica 2/V
+                address2: 10000 Zagreb, Croatia
+                phone: +385 1 644 1527 (9 to 17 hrs Central European Time)
             mexico:
                 partners: "Te contactarás con nosotros <br/>y con nuestros partners de"
             other:
