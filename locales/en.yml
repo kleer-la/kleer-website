@@ -208,8 +208,8 @@ en:
         locations:
             argentina:
                 name: "Argentina"
-                address1: "Tucumán 373 1er Piso"
-                address2: "1049 Buenos Aires"
+                address1: "Lavalle 362 4to Piso"
+                address2: "1049 CABA"
                 phone: "+54 11.5236.0314"
             brasil:
                 name: "Brazil"
@@ -231,6 +231,10 @@ en:
                 address1: "Av. Juan De Aliaga 107"
                 address2: "Lima"
                 phone: "entrenamos.pe@kleer.la"
+            europa:
+                address1: Hektoroviceva Ulica 2/V
+                address2: 10000 Zagreb, Croatia
+                phone: +385 1 644 1527 (9 to 17 hrs Central European Time)
             mexico:
                 partners: "You will be helped by us <br/>and our partners "
             other:
