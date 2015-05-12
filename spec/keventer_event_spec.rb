@@ -344,6 +344,7 @@ describe KeventerEvent do
       parser =  LibXML::XML::Parser.string( @xml )
       doc = parser.parse
       doc.find('/event')
+      @kevent.is_webinar = true
       @kevent.load doc
     end
 
@@ -370,6 +371,7 @@ describe KeventerEvent do
       expect(@kevent.specific_conditions).to eq("Very specific")
       expect(@kevent.sepyme_enabled).to eq(false)
       expect(@kevent.mode).to eq("cl")
+      expect(@kevent.is_webinar).to eq(false)
     end
 
     it "should load status" do

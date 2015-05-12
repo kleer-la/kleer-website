@@ -124,6 +124,7 @@ class KeventerEvent
     @specific_conditions = event_doc.find_first('specific-conditions').content
     @is_community_event = event_doc.find_first('visibility-type').content == 'co'
     @mode = event_doc.find_first('mode').content
+    @is_webinar = to_boolean( event_doc.find_first('is-webinar').content )
   end
 
   def load_status(event_doc)
