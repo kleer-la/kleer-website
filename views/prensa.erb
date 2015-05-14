@@ -1,8 +1,9 @@
+
 <div class="container-fluid fondo-verde slide-header-generico">
 	<div class="container">
 		<div class="container-fluid container-header-generico">
 			<div class="col-md-7">
-				<h1><%=t("we_are.title")%></h1>
+				<h1><%=t("press.title")%></h1>
 			</div>
 			<div class="col-md-5 hidden-xs hidden-sm">
 				&nbsp;<br/>
@@ -15,48 +16,8 @@
 <div class="container-fluid fondo-celeste slide-contenedor-generico">
 	<div class="container fondo-blanco contenedor-generico">
 		<div class="col-md-9 no-hpadding contenedor-main-izq">
-			<p class="lead"><%=t("we_are.subtitle")%></p>
-			<p><%=t("we_are.description")%></p><br/>
-			<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
-			
-				<div class="carousel-inner">
-					<% @kleerers.each do |kleerer| %>
-					<div class="item">
-						<div class="container">
-							<div class="col-md-1"> 
-								<img src="<%=kleerer.gravatar_picture_url%>" class="img-circle">
-							</div>
-							<div class="col-md-7">
-								<div class="container">
-									<div class="col-md-3">
-										<h2><%=kleerer.name%>&nbsp;
-											<% if kleerer.linkedin_url != "" %>
-											<a href="<%=kleerer.linkedin_url%>" target="_blank"><img src="/img/icons/linkedin.png" height="24" width="24"></a>
-											<% end %>
-										</h2>
-									</div>
-									<div class="col-md-4">
-										<% if kleerer.twitter_username != "" %>
-										<%= erb :_twitter_box, :layout => false, :locals => {:screen_name => kleerer.twitter_username.gsub("@",""), :pop_over => 'right'} %>
-										<% end %>
-									</div>
-								</div>
-								<div class="container">
-									<div class="col-md-6">
-										<p><%=@markdown_renderer.render( kleerer.bio )%></p>
-									</div>
-								</div>
-							</div>				
-						</div>
-					</div>
-					<% end %>
-			  	</div><!-- /.carousel-inner -->
-			  	<!--  Next and Previous controls below
-			        href values must reference the id for this carousel -->
-			    <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-			    <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
-			</div><!-- /.carousel -->
-
+			<p class="lead"><%=t("press.subtitle")%></p>
+			<p><%=t("press.description")%></p><br/>
 		</div>
 
 		<div class="col-md-3">
@@ -64,9 +25,3 @@
 		</div>
 	</div>	
 </div>
-<script>
-  $(document).ready(function(){
-  	$('.item').eq(Math.floor((Math.random() * $('.item').length))).addClass("active");
-    $('.carousel').carousel();
-  });
-</script>

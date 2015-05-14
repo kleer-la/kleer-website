@@ -162,6 +162,10 @@ en:
        title: "We are"
        subtitle: "We help organizations, teams and practitioners"
        description: 'We believe in other ways to relate to each other to achieve fantastic results that will make us proud.<br/>We help people to create <a href="/en/categoria/organizaciones">amazing organizations</a>, to make <a href="/en/categoria/clientes">clients happy</a> and to craft <a href="/en/categoria/productos">high quality technology products</a>.<br/>¿How do we help? Thru training, working side-by-side, creating videos and books, taking part in communities of practice.'
+    press:
+        title: "Press"
+        subtitle: "Kleer in the media!"
+        description: "We believe in the power of shared knowledge in action. That's why we share this entries in the press about our job."
     event:
        course: "Course"
        public_editions: "Public editions"
