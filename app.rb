@@ -335,6 +335,13 @@ get '/somos' do
 	erb :somos
 end
 
+get '/prensa' do
+  @active_tab_prensa = "active"
+  @page_title += " | Prensa"
+  @kleerers = @@keventer_reader.kleerers session[:locale]
+  erb :prensa
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
