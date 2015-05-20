@@ -176,7 +176,7 @@ es:
     we_are:
         title: "Somos"
         subtitle: "Asistimos a organizaciones, equipos y profesionales"
-        description: "En Kleer creemos que hay otras formas de relacionarnos para conseguir resultados fantásticos que nos hagan sentir orgullosos. <br/>Colaboramos con personas para lograr <a href="/es/categoria/organizaciones">Organizaciones asombrosas</a>, <a href="/es/categoria/clientes">Clientes felices</a> y <a href="/es/categoria/productos">Productos tecnológicos de calidad</a>.<br/>¿Cómo lo hacemos? Entrenando, acompañando la ejecución, generando videos y libros, participando de las comunidades de práctica."
+        description: 'En Kleer creemos que hay otras formas de relacionarnos para conseguir resultados fantásticos que nos hagan sentir orgullosos. <br/>Colaboramos con personas para lograr <a href="/es/categoria/organizaciones">Organizaciones asombrosas</a>, <a href="/es/categoria/clientes">Clientes felices</a> y <a href="/es/categoria/productos">Productos tecnológicos de calidad</a>.<br/>¿Cómo lo hacemos? Entrenando, acompañando la ejecución, generando videos y libros, participando de las comunidades de práctica.'
     press:
         title: "Prensa"
         subtitle: "¡Kleer en los medios!"
