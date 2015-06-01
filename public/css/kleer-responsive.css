@@ -122,6 +122,10 @@
 	.slide-header-evento {
 		height: auto;
 	}
+
+	.slide-contenedor-generico {
+		margin-bottom: 0 !important;
+	}
 }
 
 @media (max-width: 768px) {
@@ -154,6 +158,10 @@
 
 	.container-header-generico > div > h1 {
 		font-size: 24pt;
+	}
+
+	.slide-contenedor-generico {
+		margin-bottom: 0 !important;
 	}
 
 	.slide-evento-logistics {
