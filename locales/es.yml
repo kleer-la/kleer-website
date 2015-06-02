@@ -42,7 +42,8 @@ es:
             book: "Libros"
             video: "Videos"
         tv: "Veas"
-        we_are: "Nosotros"
+        we: "Nosotros"
+        we_are: "Somos"
         press: "Prensa"
         blog: "Blog"
     kleeros:
