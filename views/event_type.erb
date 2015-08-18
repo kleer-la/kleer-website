@@ -44,7 +44,7 @@
 
 <div class="container-fluid fondo-verde slide-event-type-category-name">
   <div class="container">
-    <%= @event_type.name %> te ayuda a lograr
+    <%= @event_type.name %><%=t("event.tabs.linking_with_category")%>
     <h2><%=@category.name%></h2>
   </div>
 </div>
@@ -196,5 +196,3 @@ end
 <% end %>
 
 <div class="container-fluid fondo-pano pano-5"></div>
-
-
