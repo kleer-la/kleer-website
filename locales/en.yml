@@ -199,6 +199,7 @@ en:
            target: "Who should attend?"
            program: "Program"
            faqs: "FAQs"
+           linking_with_category: " helps you achieve"
        details:
            sections:
                learnings: "What will I learn?"
