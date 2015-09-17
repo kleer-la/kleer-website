@@ -161,9 +161,7 @@ en:
                más que mil palabras' y porque -sencillamente- me gusta dibujar, lo disfruto."
            little_book:
                title: "Agile 2015 - Little Book of Sketchnotes"
-               text: "This book compiles the graphical memories from ​five different​ ​​facilitators​ ​drawn during sessions and activities at the Agile 2015 conference at Washington DC​, ​​USA.
-               
-               The purpose of this ​initiative is to share with you ​their visual memory of ​the event and inspire you to take visual notes anytime."
+               text: "This book compiles the graphical memories from five different facilitators drawn during sessions and activities at the Agile 2015 conference at Washington DC, USA. The purpose of this initiative is to share with you their visual memory of the event and inspire you to take visual notes anytime."
     we_are:
        title: "We are"
        subtitle: "We help organizations, teams and practitioners"
@@ -180,6 +178,16 @@ en:
         release03_text: "Scrum es una estrategia para la creación de productos, una técnica usada en empresas de la talla de Amazon, Spotify, Ericsson y Adobe y que de poco, fue incluso migrando de empresas tecnológicas a ganar terreno en otros rubros e industrias."
         release04_title: "Una tribu de coaches que hace escuela en la región"
         release04_text: "Seis socios se propusieron mejorar el mundo del trabajo al gestionar proyectos de software y ofrecen coaching & mentoring para varias empresas. Con 20 personas y sedes en Argentina, Colombia, Perú y Bolivia, operan en Latinoamérica y Europa."
+        release05_title: "Kleer participará en Agile Open Spain 2015"
+        release05_text: "La organización comprometida con la creación de ambientes humanos más conscientes, participará del Agile Open Spain 2015(AOS2015). Se trata de la VII edición de este evento tipo Open Space, una conferencia auto-organizada sobre metodologías ágiles. El encuentro se realizará los próximos 19 y 20 de junio en Gijón, España."
+        release06_title: "Cómo el tipo de contrato puede condicionar un proyecto complejo"
+        release06_text: "Para tener éxito en la realización de proyectos complejos necesitamos al menos tres elementos: Equipos con conocimientos y habilidades técnicas apropiadas, objetivos y alcances claros, y una comunicación frecuente y efectiva."
+        release07_title: "7 claves del Coaching de Equipos"
+        release07_text: "Martín Alaimo, coach organizacional y autor de libros sobre agilismo, Scrum y coaching, explica las diferencias entre el coaching ejecutivo y del coaching de equipos."
+        release08_title: "5 beneficios de las agencias más ágiles"
+        release08_text: "Los métodos ágiles llegaron a las agencias digitales para quedarse. Llevan más de dos décadas dando resultados en otras industrias, más que nada en el desarrollo de software, y hace más de dos años desembarcaron en la publicidad."
+        release09_title: "Kleer será anfitrión de la 1° Jornada de Metacreatividad en Argentina"
+        release09_text: "Kleer se complace en anunciar que será el anfitrión de la Primera Jornada del Movimiento de Metacreatividad en la Argentina. El encuentro, de entrada libre y gratuita, se realizará el próximo lunes 31 de agosto en sus oficinas."
     event:
        course: "Course"
        public_editions: "Public editions"
