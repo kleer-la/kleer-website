@@ -705,6 +705,7 @@ h2 {
 	position: relative;
 	top: -25px;
 	left: -25px;
+	height: 90px;
 	z-index: 50;
 }
 
