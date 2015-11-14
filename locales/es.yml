@@ -174,6 +174,9 @@ es:
                 text: "El objetivo de este libro es difundir -de forma gráfica- métodos y
                 prácticas ágiles, con foco en las relaciones interpersonales, como forma de
                 organización del trabajo y -arriesgando más- como filosofía de vida."
+            little_book:
+               title: "Agile 2015 - Little Book of Sketchnotes"
+               text: "Este libro recopila las memorias gráficas de cinco facilitadores durante las sesiones y actividades de la conferencia Agile 2015 en Washington DC, EE.UU. ​El propósito de esta iniciativa es compartir sus memorias visuales e inspirarte a tomar apuntes gráficos en cualquier momento"
     we_are:
         title: "Somos"
         subtitle: "Asistimos a organizaciones, equipos y profesionales"
@@ -190,6 +193,20 @@ es:
         release03_text: "Scrum es una estrategia para la creación de productos, una técnica usada en empresas de la talla de Amazon, Spotify, Ericsson y Adobe y que de poco, fue incluso migrando de empresas tecnológicas a ganar terreno en otros rubros e industrias."
         release04_title: "Una tribu de coaches que hace escuela en la región"
         release04_text: "Seis socios se propusieron mejorar el mundo del trabajo al gestionar proyectos de software y ofrecen coaching & mentoring para varias empresas. Con 20 personas y sedes en Argentina, Colombia, Perú y Bolivia, operan en Latinoamérica y Europa."
+        release05_title: "Kleer participará en Agile Open Spain 2015"
+        release05_text: "La organización comprometida con la creación de ambientes humanos más conscientes, participará del Agile Open Spain 2015(AOS2015). Se trata de la VII edición de este evento tipo Open Space, una conferencia auto-organizada sobre metodologías ágiles. El encuentro se realizará los próximos 19 y 20 de junio en Gijón, España."
+        release06_title: "Entrevista a Carlos Peix en el programa La Burbuja, conducido por Sebastián Campanario y Bruno Massare."
+        release06_text: "Una repaso sobre las metodologías ágiles y su situación en diferentes tipos de organizaciones."
+        release07_title: "Cómo el tipo de contrato puede condicionar un proyecto complejo"
+        release07_text: "Para tener éxito en la realización de proyectos complejos necesitamos al menos tres elementos: Equipos con conocimientos y habilidades técnicas apropiadas, objetivos y alcances claros, y una comunicación frecuente y efectiva."
+        release08_title: "Entrevista a Pablo Tortorella en CustomerIn"
+        release08_text: "En esta charla Pablo nos cuenta sobre facilitación gráfica, agilidad y otros métodos para mejorar la comunicación y el trabajo de equipo."
+        release09_title: "7 claves del Coaching de Equipos"
+        release09_text: "Martín Alaimo, coach organizacional y autor de libros sobre agilismo, Scrum y coaching, explica las diferencias entre el coaching ejecutivo y del coaching de equipos."
+        release10_title: "5 beneficios de las agencias más ágiles"
+        release10_text: "Los métodos ágiles llegaron a las agencias digitales para quedarse. Llevan más de dos décadas dando resultados en otras industrias, más que nada en el desarrollo de software, y hace más de dos años desembarcaron en la publicidad."
+        release11_title: "Kleer será anfitrión de la 1° Jornada de Metacreatividad en Argentina"
+        release11_text: "Kleer se complace en anunciar que será el anfitrión de la Primera Jornada del Movimiento de Metacreatividad en la Argentina. El encuentro, de entrada libre y gratuita, se realizará el próximo lunes 31 de agosto en sus oficinas."
     event:
         course: "Curso"
         public_editions: "Ediciones públicas"

@@ -1,6 +1,6 @@
 <style>
 	.rssBody ul {
-		list-style:none; 
+		list-style:none;
 	}
 	.rssBody ul h4 {
 		font-size: 25px;
@@ -45,14 +45,15 @@
 		<div class="col-md-3">
 			<%= erb :_twitter_widget, :layout => false %>
 		</div>
-	</div>	
+	</div>
 </div>
 
 <script type="text/javascript" src="/js/jquery.js"/></script>
 <script type="text/javascript" src="/js/jquery.zrssfeed.min.js"/></script>
 <script type="text/javascript"/>
 $(document).ready(function () {
-$('#blog-container').rssfeed('http://pipes.yahoo.com/pipes/pipe.run?_id=be07b7a8cafb939241a709ec0d2c69ca&_render=rss', {header:false, dateformat:'date',limit:10, snippet:false, linktarget:'_blank'});
+$('#blog-container').rssfeed('http://www.rssmix.com/u/8162858/rss.xml',
+ {header:false, dateformat:'date', limit:10, snippet:false, linktarget:'_blank'});
 });
 
 </script>

@@ -348,6 +348,14 @@ get '/prensa' do
   erb :prensa
 end
 
+get '/prensa/casos/equipos-scrum-en-technisys-2015' do
+  @page_title += " | Equipos de desarrollo Scrum en Technisys"
+  @meta_description = "Kleer - Coaching & Training - Equipos de desarrollo Scrum en Technisys apoyados por Kleer"
+  @meta_keywords = "Kleer, Technisys, CyberBank, scrum, equipos, desarrollo ágil"
+
+  erb :prensa_casos_technisys_2015
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
