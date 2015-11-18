@@ -135,6 +135,12 @@ get '/comunidad' do
   erb :comunidad
 end
 
+get '/live' do
+  @active_tab_comunidad = "active"
+  redirect "http://live.kleer.la", 301 # permanent redirect
+end
+
+
 get '/e-books' do
   redirect "/publicamos", 301 # permanent redirect
 end
