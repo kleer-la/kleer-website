@@ -5,7 +5,7 @@ require 'spec_helper'
 require File.join(File.dirname(__FILE__),'../lib/professional')
 
 describe Professional do
-  
+
   before(:each) do
     xml = '<?xml version="1.0" encoding="UTF-8"?>
   <trainer>
@@ -42,7 +42,7 @@ describe Professional do
 
   end
 
-  it "should initialize with defauts" do
+  it "should initialize with defaults" do
     professional = Professional.new
     expect(professional.id).to eq("")
     expect(professional.name).to eq("")
@@ -52,27 +52,27 @@ describe Professional do
   it "should have an id" do
     @trainer_es.id.should == 4
   end
-  
+
   it "should have a name" do
     @trainer_es.name.should == "Martín Alaimo"
   end
-  
+
   it "should have a linkein url" do
     @trainer_es.linkedin_url.should == "http://www.linkedin.com/in/malaimo"
   end
-  
+
   it "should have a gravatar picture" do
     @trainer_es.gravatar_picture_url.should == "http://www.gravatar.com/avatar/e92b3ae0ce91e1baf19a7bc62ac03297"
   end
-  
+
   it "should have a twitter username" do
     @trainer_es.twitter_username.should == "@martinalaimo"
   end
-  
+
   it "should load bio from XML (en)" do
     @trainer_en.bio.should == "English Bio Alaimica"
   end
-  
+
   it "should load bio from XML (sp)" do
     @trainer_es.bio.should == "Mi compromiso es asistir"
   end

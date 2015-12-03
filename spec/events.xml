@@ -29,7 +29,8 @@
     <place>Kleer, Tucumán 373 1er Piso</place>
 	<address>Tucuman 373 Piso 1</address>
     <registration-link>https://eventioz.com.ar/retrospectivas-9-ene-2012/registrations/new</registration-link>
-    <trainer-id type="integer">4</trainer-id><trainer2-id type="integer">10</trainer2-id>
+    <trainer-id type="integer">4</trainer-id>
+    <trainer2-id type="integer">10</trainer2-id>
     <updated-at type="datetime">2012-11-28T22:56:20Z</updated-at>
     <visibility-type>pu</visibility-type>
     <business-eb-price type="decimal">2399000.0</business-eb-price>
