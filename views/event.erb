@@ -40,7 +40,7 @@
 							button_text = t("general.buttons.i_am_interested")
 						end
 
-						if @event.registration_link != "" 
+						if @event.registration_link != ""
 							registration_link = @event.registration_link
 						else
 							registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
@@ -78,7 +78,7 @@
 	</div>
 </div>
 
-<% 
+<%
 if @event.is_community_event
 	fondo_logistics = "fondo-rosa"
 else
@@ -383,13 +383,13 @@ end
 <div class="container-fluid fondo-pano pano-6"></div>
 
 <%= if not @event.is_community_event
-	erb :_slide_experiencia_kleer, :layout => false 
+	erb :_slide_experiencia_kleer, :layout => false
 	end%>
 
 <div class="container-fluid fondo-amarillo">
 	<div class="container">
 		<div class="container-fluid col-md-10 col-md-offset-1 slide-evento-aprovecha">
-			APROVECHA ESTA OPORTUNIDAD PARA APRENDER EN UN ENTORNO DONDE EL PROTAGONISTA ERES TU<br/>
+			APROVECHA ESTA OPORTUNIDAD PARA APRENDER EN UN ENTORNO DONDE EL PROTAGONISTA ERES TÚ<br/>
 			<br/>
 			<%if @event.is_sold_out %>
 				<a href="#" class="btn btn-danger btn-kleer btn-caps">
@@ -403,7 +403,7 @@ end
 					button_text = t("general.buttons.i_am_interested")
 				end
 
-				if @event.registration_link != "" 
+				if @event.registration_link != ""
 					registration_link = @event.registration_link
 				else
 					registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
