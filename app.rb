@@ -356,6 +356,14 @@ get '/prensa/casos/equipos-scrum-en-technisys-2015' do
   erb :prensa_casos_technisys_2015
 end
 
+get '/prensa/casos/equipos-scrum-en-plataforma-10-2015' do
+  @page_title += " | Equipos de desarrollo Scrum y Automatización en Plataforma 10"
+  @meta_description = "Kleer - Coaching & Training - Equipos de desarrollo Scrum y orientación al valor para el negocio en Plataforma 10, apoyados por Kleer"
+  @meta_keywords = "Kleer, Plataforma 10, scrum, equipos, desarrollo ágil, devops, automatización, integración continua, valor negocio"
+
+  erb :prensa_casos_plataforma_10_2015
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
