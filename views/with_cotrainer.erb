@@ -1,46 +1,18 @@
-<div class="col-md-6 col-sm-4">
+<div class="col-md-4 col-sm-4">
   <div class="event-facilitator-face">
     <img src="<%=@event.trainer.gravatar_picture_url%>?size=125" class="img-circle">
   </div>
 </div>
-<div class="col-md-6 col-sm-8 event-facilitator-text">
-  <strong><%=t("event.facilitators")%>:</strong><br/>
 
-  <%=@event.trainer.name%>
-
-  <% if @event.trainer.surveyed_count > 20 && !@event.trainer.average_rating.nil? %>
-    <p>
-    <div class="stars" id="rating-tr<%=@event.trainer.id%>" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event.trainer.average_rating%>/5 basado en <%=@event.trainer.surveyed_count%> opiniones de asistentes a sus eventos">
-      <div style="width:<%=@event.trainer.average_rating.to_f*16%>px;"/></div>
-    </div>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#rating-tr<%=@event.trainer.id%>').tooltip();
-      });
-    </script>
-    </p>
-  <% end %>
-</div>
-
-<div class="col-md-6 col-sm-4">
+<div class="col-md-4 col-sm-4">
   <div class="event-facilitator-face">
     <img src="<%=@event.trainer2.gravatar_picture_url%>?size=125" class="img-circle">
   </div>
 </div>
-<div class="col-md-6 col-sm-8 event-facilitator-text">
 
+<div class="col-md-4 col-sm-4 event-facilitator-text">
+  <strong><%=t("event.facilitators")%>:</strong><br/>
+
+  <%=@event.trainer.name%> <br/>
   <%=@event.trainer2.name%>
-
-  <% if @event.trainer2.surveyed_count > 20 && !@event.trainer2.average_rating.nil? %>
-    <p>
-    <div class="stars" id="rating-tr<%=@event.trainer2.id%>" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event.trainer.average_rating%>/5 basado en <%=@event.trainer.surveyed_count%> opiniones de asistentes a sus eventos">
-      <div style="width:<%=@event.trainer2.average_rating.to_f*16%>px;"/></div>
-    </div>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('#rating-tr<%=@event.trainer2.id%>').tooltip();
-      });
-    </script>
-    </p>
-  <% end %>
 </div>

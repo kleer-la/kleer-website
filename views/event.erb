@@ -91,13 +91,7 @@ end
 		<!-- small (sm), medium (md) y large (lg) logistics -->
 		<div class="container-fluid hidden-xs">
 
-			<% if @event.trainer2.nil? %>
-				NIL - solo <%= @event.trainer.name %>
-			<% else %>
-				Donde esta el co-trainer?
-			<% end %>
-
-			<!-- <div class="col-md-3 col-sm-6">
+			<div class="col-md-5 col-sm-6">
 				<div class="container-fluid">
 					<% if @event.trainer2.nil? %>
 						<%= erb :single_trainer %>
@@ -105,13 +99,13 @@ end
 						<%= erb :with_cotrainer %>
 					<% end %>
 				</div>
-			</div> -->
+			</div>
 
-			<div class="col-md-3 col-sm-3 no-hpadding">
-				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">
+			<div class="col-md-2 col-sm-3 no-hpadding">
+				<div class="col-md-4 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-calendar big-glyphicon"></span>
 				</div>
-				<div class="col-md-9 col-sm-8 no-hpadding">
+				<div class="col-md-8 col-sm-8 no-hpadding">
 					<strong><%=t("event.date")%>:</strong><br/>
 					<% if @event.finish_date.nil? || @event.date == @event.finish_date %>
 					<%=@event.date.strftime("%d")%>-<%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%>
@@ -122,11 +116,11 @@ end
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-3 no-hpadding">
-				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">
+			<div class="col-md-2 col-sm-3 no-hpadding">
+				<div class="col-md-4 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-time big-glyphicon"></span>
 				</div>
-				<div class="col-md-9 col-sm-8 no-hpadding">
+				<div class="col-md-8 col-sm-8 no-hpadding">
 					<strong><%=t("event.hour")%>:</strong><br/>
 					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%>
 					<% if @event.is_online %>
@@ -136,10 +130,10 @@ end
 			</div>
 
 			<div class="col-md-3 col-sm-6 no-hpadding">
-				<div class="col-md-3 col-sm-2 no-hpadding logistic-indicator">
+				<div class="col-md-4 col-sm-2 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
 				</div>
-				<div class="col-md-9 col-sm-10 no-hpadding">
+				<div class="col-md-8 col-sm-10 no-hpadding">
 					<strong><%=t("event.location")%>:</strong><br/>
 					<% if @event.is_online %>
 						Online<br/>
