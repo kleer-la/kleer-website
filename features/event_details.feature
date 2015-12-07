@@ -14,8 +14,8 @@ Feature: Event Details
 		And I should see "Raul Gorgonzola"
 		And I should see "09"
 		And I should see "Ene"
-	
-	Scenario: Detalle de Evento
+
+	Scenario: Detalle de Evento sin cotrainer
 		Given theres only one event
 		When I visit the event page
 		Then I should see "Workshop de Retrospectivas"
@@ -23,12 +23,20 @@ Feature: Event Details
 		And I should see "Kleer, Tucumán 373 1er Piso"
 		And I should see "Buenos Aires"
 		And I should see "Argentina"
-#		And I should see an image pointing to "/img/flags/ar.png"
+		And I should see "Facilitador:"
 		And I should see "Raul Gorgonzola"
 		And I should see "09"
 		And I should see "Ene"
 
-	Scenario: Los Evento normal tienen sección de Experiencia Kleer
+	Scenario: Detalle de Evento con cotrainer
+		Given theres only one event for the following two months
+		When I visit the event page
+		Then I should see "Workshop de Retrospectivas"
+		And I should see "Facilitadores:"
+		And I should see "Martín Alaimo"
+		And I should see "Pablitux"
+
+	Scenario: Los Eventos normales tienen sección de Experiencia Kleer
 		Given theres only one event
 		When I visit the event page
 		Then I should see "Experiencia Kleer"
@@ -45,11 +53,11 @@ Feature: Event Details
 		And I should see "06"
 		And I should see "Feb"
 
-	Scenario: Los Evento Comunitario no tienen sección de Experiencia Kleer
+	Scenario: Los Eventos Comunitarios no tienen sección de Experiencia Kleer
 		Given there are community events
 		When I visit the community event page
 		Then I should not see "Experiencia Kleer"
-			
+
 	Scenario: Detalle de Evento Inexistente
 		Given theres only one event
 		When I visit a non existing event page
@@ -71,19 +79,17 @@ Feature: Event Details
 		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
 		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"
 
-
 	Scenario: Condiciones especiales del evento
 		Given theres only one event
 		When I visit the event page
 		Then I should see "Unas condiciones propias del evento"
-
 
 	Scenario: Registración en español
 		Given theres only one event
 		When I visit the plain event page
 		Then the registration link has "lang=es"
 
-	Scenario: Registración en español
+	Scenario: Registración en ingles
 		Given theres only one event
 		When I visit the "en" plain event page
 		Then the registration link has "lang=en"

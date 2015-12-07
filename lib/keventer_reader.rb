@@ -347,6 +347,21 @@ class KeventerReader
 
     event.trainer = trainer
 
+    if xml_keventer_event.find_first('trainer2')
+      trainer2 = Professional.new  #xml_keventer_event.find_first('trainer2'), "es"
+
+      trainer2.name = xml_keventer_event.find_first('trainer2/name').content
+      trainer2.bio = xml_keventer_event.find_first('trainer2/bio').content
+      trainer2.id = xml_keventer_event.find_first('trainer2/id').content
+      trainer2.linkedin_url = xml_keventer_event.find_first('trainer2/linkedin-url').content
+      trainer2.gravatar_picture_url = xml_keventer_event.find_first('trainer2/gravatar-picture-url').content
+      trainer2.twitter_username = xml_keventer_event.find_first('trainer2/twitter-username').content
+    else
+      trainer2 = nil
+    end
+
+    event.trainer2 = trainer2
+
     event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
 
     event.keventer_connector = @connector

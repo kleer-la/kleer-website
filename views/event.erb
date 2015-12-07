@@ -40,7 +40,7 @@
 							button_text = t("general.buttons.i_am_interested")
 						end
 
-						if @event.registration_link != "" 
+						if @event.registration_link != ""
 							registration_link = @event.registration_link
 						else
 							registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
@@ -78,7 +78,7 @@
 	</div>
 </div>
 
-<% 
+<%
 if @event.is_community_event
 	fondo_logistics = "fondo-rosa"
 else
@@ -91,39 +91,21 @@ end
 		<!-- small (sm), medium (md) y large (lg) logistics -->
 		<div class="container-fluid hidden-xs">
 
-			<div class="col-md-3 col-sm-6">
+			<div class="col-md-5 col-sm-6">
 				<div class="container-fluid">
-					<div class="col-md-6 col-sm-4">
-						<div class="event-facilitator-face">
-							<img src="<%=@event.trainer.gravatar_picture_url%>?size=125" class="img-circle">
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-8 event-facilitator-text">
-						<strong><%=t("event.facilitator")%>:</strong><br/>
-						<%=@event.trainer.name%>
-
-						<% if @event.trainer.surveyed_count > 20 && !@event.trainer.average_rating.nil? %>
-							<p>
-							<div class="stars" id="rating-tr<%=@event.trainer.id%>" data-toggle="tooltip" data-placement="top" title="Rating: <%=@event.trainer.average_rating%>/5 basado en <%=@event.trainer.surveyed_count%> opiniones de asistentes a sus eventos">
-								<div style="width:<%=@event.trainer.average_rating.to_f*16%>px;"/></div>
-							</div>
-							<script type="text/javascript">
-							$(document).ready(function(){
-	    						$('#rating-tr<%=@event.trainer.id%>').tooltip();
-	  						});
-							</script>
-							</p>
-						<% end %>
-
-					</div>
+					<% if @event.trainer2.nil? %>
+						<%= erb :single_trainer %>
+					<% else %>
+						<%= erb :with_cotrainer %>
+					<% end %>
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-3 no-hpadding">
-				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">
+			<div class="col-md-2 col-sm-3 no-hpadding">
+				<div class="col-md-4 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-calendar big-glyphicon"></span>
 				</div>
-				<div class="col-md-9 col-sm-8 no-hpadding">
+				<div class="col-md-8 col-sm-8 no-hpadding">
 					<strong><%=t("event.date")%>:</strong><br/>
 					<% if @event.finish_date.nil? || @event.date == @event.finish_date %>
 					<%=@event.date.strftime("%d")%>-<%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%>
@@ -134,11 +116,11 @@ end
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-3 no-hpadding">
-				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">
+			<div class="col-md-2 col-sm-3 no-hpadding">
+				<div class="col-md-4 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-time big-glyphicon"></span>
 				</div>
-				<div class="col-md-9 col-sm-8 no-hpadding">
+				<div class="col-md-8 col-sm-8 no-hpadding">
 					<strong><%=t("event.hour")%>:</strong><br/>
 					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%>
 					<% if @event.is_online %>
@@ -148,10 +130,10 @@ end
 			</div>
 
 			<div class="col-md-3 col-sm-6 no-hpadding">
-				<div class="col-md-3 col-sm-2 no-hpadding logistic-indicator">
+				<div class="col-md-4 col-sm-2 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
 				</div>
-				<div class="col-md-9 col-sm-10 no-hpadding">
+				<div class="col-md-8 col-sm-10 no-hpadding">
 					<strong><%=t("event.location")%>:</strong><br/>
 					<% if @event.is_online %>
 						Online<br/>
@@ -383,13 +365,13 @@ end
 <div class="container-fluid fondo-pano pano-6"></div>
 
 <%= if not @event.is_community_event
-	erb :_slide_experiencia_kleer, :layout => false 
+	erb :_slide_experiencia_kleer, :layout => false
 	end%>
 
 <div class="container-fluid fondo-amarillo">
 	<div class="container">
 		<div class="container-fluid col-md-10 col-md-offset-1 slide-evento-aprovecha">
-			APROVECHA ESTA OPORTUNIDAD PARA APRENDER EN UN ENTORNO DONDE EL PROTAGONISTA ERES TU<br/>
+			APROVECHA ESTA OPORTUNIDAD PARA APRENDER EN UN ENTORNO DONDE EL PROTAGONISTA ERES TÚ<br/>
 			<br/>
 			<%if @event.is_sold_out %>
 				<a href="#" class="btn btn-danger btn-kleer btn-caps">
@@ -403,7 +385,7 @@ end
 					button_text = t("general.buttons.i_am_interested")
 				end
 
-				if @event.registration_link != "" 
+				if @event.registration_link != ""
 					registration_link = @event.registration_link
 				else
 					registration_link = "http://eventos.kleer.la/events/#{@event.id}/participants/new?lang=" + session[:locale]
