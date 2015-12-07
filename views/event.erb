@@ -91,7 +91,13 @@ end
 		<!-- small (sm), medium (md) y large (lg) logistics -->
 		<div class="container-fluid hidden-xs">
 
-			<div class="col-md-3 col-sm-6">
+			<% if @event.trainer2.nil? %>
+				NIL - solo <%= @event.trainer.name %>
+			<% else %>
+				Donde esta el co-trainer?
+			<% end %>
+
+			<!-- <div class="col-md-3 col-sm-6">
 				<div class="container-fluid">
 					<% if @event.trainer2.nil? %>
 						<%= erb :single_trainer %>
@@ -99,7 +105,7 @@ end
 						<%= erb :with_cotrainer %>
 					<% end %>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="col-md-3 col-sm-3 no-hpadding">
 				<div class="col-md-3 col-sm-4 no-hpadding logistic-indicator">

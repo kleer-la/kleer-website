@@ -53,7 +53,7 @@ Feature: Event Details
 		And I should see "06"
 		And I should see "Feb"
 
-	Scenario: Los Evento Comunitario no tienen sección de Experiencia Kleer
+	Scenario: Los Eventos Comunitarios no tienen sección de Experiencia Kleer
 		Given there are community events
 		When I visit the community event page
 		Then I should not see "Experiencia Kleer"
@@ -89,7 +89,7 @@ Feature: Event Details
 		When I visit the plain event page
 		Then the registration link has "lang=es"
 
-	Scenario: Registración en español
+	Scenario: Registración en ingles
 		Given theres only one event
 		When I visit the "en" plain event page
 		Then the registration link has "lang=en"
