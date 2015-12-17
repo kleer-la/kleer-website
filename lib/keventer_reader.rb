@@ -370,27 +370,8 @@ class KeventerReader
   end
 
   def create_event_type(xml_keventer_event)
-
     event_type = KeventerEventType.new
-    event_type.id  = xml_keventer_event.find_first('id').content.to_i
-    event_type.name  = xml_keventer_event.find_first('name').content
-    event_type.duration = xml_keventer_event.find_first('duration').content.to_i
-    event_type.elevator_pitch  = xml_keventer_event.find_first('elevator-pitch').content
-    event_type.learnings  = xml_keventer_event.find_first('learnings').content
-    event_type.takeaways  = xml_keventer_event.find_first('takeaways').content
-    event_type.description  = xml_keventer_event.find_first('description').content
-    event_type.goal  = xml_keventer_event.find_first('goal').content
-    event_type.recipients  = xml_keventer_event.find_first('recipients').content
-    event_type.program  = xml_keventer_event.find_first('program').content
-    event_type.faqs  = xml_keventer_event.find_first('faq').content
-    event_type.elevator_pitch = xml_keventer_event.find_first('elevator-pitch').content
-    event_type.include_in_catalog = to_boolean( xml_keventer_event.find_first('include-in-catalog').content )
-
-    event_type.average_rating = xml_keventer_event.find_first('average-rating').content.nil? ? nil : xml_keventer_event.find_first('average-rating').content.to_f.round(2)
-    event_type.net_promoter_score = xml_keventer_event.find_first('net-promoter-score').content.nil? ? nil : xml_keventer_event.find_first('net-promoter-score').content.to_i
-    event_type.surveyed_count = xml_keventer_event.find_first('surveyed-count').content.to_i
-    event_type.promoter_count = xml_keventer_event.find_first('promoter-count').content.to_i
-
+    event_type.load xml_keventer_event
     event_type
   end
 
