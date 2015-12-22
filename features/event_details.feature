@@ -93,3 +93,8 @@ Feature: Event Details
 		Given theres only one event
 		When I visit the "en" plain event page
 		Then the registration link has "lang=en"
+
+	Scenario: Eventos con subtitulo
+		Given theres one event with subtitle
+		When I visit the event page
+		Then I should see "Subtitle"

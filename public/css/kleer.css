@@ -2,13 +2,13 @@
 	border: solid 1px red;
 }
 
-body { 
-	padding-top: 70px; 
+body {
+	padding-top: 70px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;
 }
 
-h1 { 
+h1 {
 	font-family: 'Roboto', sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -16,7 +16,7 @@ h1 {
 	color: #000;
 }
 
-h2 { 
+h2 {
 	font-family: 'Roboto', sans-serif;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -254,7 +254,7 @@ h2 {
 }
 
 .btn-kleer {
-	box-shadow:5px 5px #a4a4a4;	
+	box-shadow:5px 5px #a4a4a4;
 	transform:rotate(-2deg);
 	-ms-transform:rotate(-2deg);
 	-webkit-transform:rotate(-2deg);
@@ -358,7 +358,7 @@ h2 {
 }
 
 .img-equipo-kleer {
-	height: 750px;	
+	height: 750px;
 }
 
 .carousel-somos {
@@ -387,9 +387,9 @@ h2 {
 .carousel-control {
 	color: #1c1c1c;
 	top: 50%;
-	box-shadow:5px 5px #a4a4a4;	
+	box-shadow:5px 5px #a4a4a4;
 	/* transform:rotate(-2deg);
-	-ms-transform:rotate(-2deg); 
+	-ms-transform:rotate(-2deg);
 	-webkit-transform:rotate(-2deg); */
 	border-radius: 0px;
 	color: #000;
@@ -405,7 +405,7 @@ h2 {
 
 .carousel-control.left {
 	background-image: none;
-	margin-left: 10px; 
+	margin-left: 10px;
 }
 
 .carousel-control.right {
@@ -518,7 +518,7 @@ h2 {
 	top: -100px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	box-shadow:5px 5px #a4a4a4;	
+	box-shadow:5px 5px #a4a4a4;
 }
 
 .contenedor-main-izq {
@@ -567,7 +567,7 @@ h2 {
 .slide-event-type-category-name {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	text-align: center;	
+	text-align: center;
 }
 
 .container-header-evento > div {
@@ -805,3 +805,7 @@ h2 {
 	height:100%;
 }
 
+.subtitle {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}

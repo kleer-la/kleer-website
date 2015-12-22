@@ -4,7 +4,10 @@
 			<div class="col-md-7">
 				<div class="evento-title-container">
 					<h2><%= @event.event_type.name %></h2>
-					<h3>
+					<%if !@event.event_type.subtitle.nil? && !@event.event_type.subtitle.empty?%>
+						<h3 class="subtitle"><%=@event.event_type.subtitle%></h3>
+					<%end%>
+					<h3 class="subtitle">
 					<% if @event.is_online %>
 						Online,
 					<% elsif @event.is_classroom %>

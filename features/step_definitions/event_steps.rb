@@ -9,3 +9,7 @@ end
 When(/^I visit the "(.*?)" plain event page$/) do |loc|
   visit "/#{loc}/entrenamos/evento/44/remote"
 end
+
+Given(/^theres one event with subtitle$/) do
+  stub_connector( "one_event_w_subtitle.xml")
+end
