@@ -21,7 +21,6 @@ Feature: Event Type Details
 #		And I should see "Te invitamos a visitar nuestro calendario para ver los cursos vigentes y probables nuevas fechas para el curso que estás buscando."
 #		And I should see a link to "/entrenamos" with text "Ver Calendario de Cursos >>"
 
-	@wip
 	Scenario: Detalle muestra subtitulo
 		Given there is a event type with subtitle
 		When I visit this event type page

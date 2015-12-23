@@ -68,6 +68,7 @@
         <include-in-catalog type="boolean">true</include-in-catalog>
         <materials></materials>
         <name>Taller de TDD</name>
+        <subtitle>Some Subtitle</subtitle>
         <program>este el programa</program>
         <recipients>esto es a quien está destinado</recipients>
         <updated-at type="datetime">2013-07-10T20:53:56Z</updated-at>

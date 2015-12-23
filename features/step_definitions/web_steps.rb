@@ -165,9 +165,10 @@ Then /^the page title should be "(.*?)"$/ do |title_text|
   end
 end
 
-Given /^I visit the "(.*?)" page$/ do |page|
+  Given /^I visit the "(.*?)" page$/ do |page_url|
   stub_connector
-  visit "/" + page
+  visit "/" + page_url
+#  expect(page).to have_css('locator_present_only_at_second_page')
 end
 
 Given /^I visit the "(.*?)" categoria page$/ do |codename|
