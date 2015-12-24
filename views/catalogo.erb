@@ -22,10 +22,11 @@
 										<%if event_type.subtitle.to_s!=""%>
 											<%=event_type.subtitle%> <br/>
 										<% end %>
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-										<%= event_type.duration%> horas.
+										<div class="row">
+											<div class="col-md-8 col-md-offset-4">
+												<%= event_type.duration%> horas
+											</div>
+										</div>
 							    	<% if feature_on?("show_rates_on_catalog") && event_type.has_rate %>
 				                      &nbsp;<div class="stars" id="rating<%= event_type.id %>" data-toggle="tooltip" data-placement="top" title="Rating: <%=event_type.average_rating%>/5 en base a <%=event_type.surveyed_count%> opiniones">
 				                        <div style="width:<%=event_type.average_rating.to_f*16%>px;"/></div>
