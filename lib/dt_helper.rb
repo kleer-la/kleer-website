@@ -46,8 +46,9 @@ class DTHelper
     result << "<div class=\"klabel-date\" style=\"width:#{post_it_width}\">#{date_line}</div>"
 
     line = "<a "
-    line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path)
-    line += "\">" + event.event_type.name + "</a><br/>"
+    line += "href=\"/"+locale+"/"+event_details_path+"/evento/" + url_sanitize(event.uri_path) +'"'
+    line += ' title="'+event.event_type.subtitle+'"'
+    line += ">" + event.event_type.name + "</a><br/>"
     if event.is_online
       line += "<img src=\"/img/flags/ol.png\"/> Online"
     else

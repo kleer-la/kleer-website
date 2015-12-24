@@ -51,4 +51,8 @@ describe DTHelper do
     expect(DTHelper::url_sanitize("áéíóúÁÉÍÓÚ")).to eq "aeiouAEIOU"
   end
 
+  it "should add a title (from event type subtitle) to the event link" do
+    @some_events[0].event_type.subtitle = "Some subtitle"
+    expect(DTHelper::to_dt_event_array_json(@some_events)).to include('title=\"Some subtitle\"')
+  end
 end
