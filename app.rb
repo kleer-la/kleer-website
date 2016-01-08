@@ -364,6 +364,14 @@ get '/prensa/casos/equipos-scrum-en-plataforma-10-2015' do
   erb :prensa_casos_plataforma_10_2015
 end
 
+get '/prensa/casos/equipos-scrum-en-suramericana-2015' do
+  @page_title += " | Paradigma ágil en tecnología y en negocio en Suramericana"
+  @meta_description = "Kleer - Coaching & Training - Paradigma ágiles en tecnología y en negocio en Suramericana, apoyados por Kleer"
+  @meta_keywords = "Kleer, Suramericana, Sura, scrum, equipos, desarrollo ágil, valor negocio, corporaciones ágiles, paradigma ágil en las empresas"
+
+  erb :prensa_casos_suramericana_2015
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
