@@ -264,6 +264,11 @@ en:
                 address1: "Av. Juan De Aliaga 107"
                 address2: "Lima"
                 phone: "entrenamos.pe@kleer.la"
+            uruguay:
+                name: "Uruguay"
+                address1: "1408 Dr. Mario Cassinoni"
+                address2: "11200 Montevideo"
+                phone: "+598-94681588"
             europa:
                 address1: Hektoroviceva Ulica 2/V
                 address2: 10000 Zagreb, Croatia
