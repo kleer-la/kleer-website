@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.8"
+ruby "1.9.3"
 if RUBY_VERSION =~ /1.9/
   Encoding.default_external = Encoding::UTF_8
   Encoding.default_internal = Encoding::UTF_8
@@ -19,7 +19,6 @@ gem 'curb'
 gem 'tzinfo'
 gem 'tzinfo-data'
 gem 'money'
-
 
 group :development do
   gem 'foreman'
