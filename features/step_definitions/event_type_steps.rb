@@ -16,8 +16,7 @@ def get_event_type(event_type_id)
   connector.stub(:event_type_url).and_return( File.join(File.dirname(__FILE__),"../../spec/event_type_#{event_type_id}.xml") )
   connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/events.xml") )
   connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/categories.xml") )
-  @@keventer_reader.connector = connector
-
+  KeventerReader.build_with( connector )
 end
 
 Given(/^theres an event type$/) do
@@ -41,7 +40,7 @@ When(/^I visit a non existing event type page$/) do
   connector.should_receive(:event_type_url)
   connector.stub(:event_type_url).and_return( nil)
   connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/categories.xml") )
-  @@keventer_reader.connector = connector
+  KeventerReader.build_with( connector )
 
   visit '/categoria/productos-robustos/cursos/1-xxx'
 end

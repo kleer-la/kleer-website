@@ -30,8 +30,8 @@ describe KeventerReader do
 
   it "Should Be Able to Load an Xml File" do
     file= File.join(File.dirname(__FILE__),'../spec/event_type_4.xml')
-    kevr = KeventerReader.new
-    doc= kevr.parse file, '/event-type/id'
+    KeventerReader.build
+    doc= KeventerReader.instance.parse file, '/event-type/id'
 
     doc[0].content.should == '4'
   end
@@ -40,8 +40,8 @@ describe KeventerReader do
     @connector = double("KeventerConnector")
     @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
 
-    @kevr = KeventerReader.new( @connector )
-    @kevr.events.count.should == 16
+    KeventerReader.build_with(@connector)
+    KeventerReader.instance.events.count.should == 16
   end
 
   it "Should Be Able to Load an Xml File for an Event Type" do
@@ -49,16 +49,16 @@ describe KeventerReader do
     @connector.stub(:event_type_url).and_return( File.join(File.dirname(__FILE__),'../spec/event_type_4.xml') )
     @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
 
-    @kevr = KeventerReader.new( @connector )
-    @kevr.event_type(4).id.should == 4
+    KeventerReader.build_with( @connector )
+    KeventerReader.instance.event_type(4).id.should == 4
   end
 
   it "Should Be Able to Load an Xml URI for Events" do
     @connector = double("KeventerConnector")
     @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
 
-    @kevr = KeventerReader.new( @connector )
-    @kevr.events.count.should >= 0
+    KeventerReader.build_with( @connector )
+    KeventerReader.instance.events.count.should >= 0
   end
 
   it "Should handle an empty eb-end-date as nil" do
@@ -80,7 +80,8 @@ describe KeventerReader do
       @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
       @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/community_events.xml') )
 
-      @kevr = KeventerReader.new( @connector )
+      KeventerReader.build_with( @connector )
+      @kevr = KeventerReader.instance
     end
 
     it "Should allow access to an events array with all events" do
@@ -197,7 +198,8 @@ describe KeventerReader do
       @connector = double("KeventerConnector")
       @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
 
-      @kevr = KeventerReader.new( @connector )
+      KeventerReader.build_with( @connector )
+      @kevr = KeventerReader.instance
     end
 
     it "Filtering for all countries should return 16 events" do
@@ -236,7 +238,8 @@ describe KeventerReader do
       @connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/events.xml') )
       @connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/community_events.xml') )
 
-      @kevr = KeventerReader.new( @connector )
+      KeventerReader.build_with( @connector )
+      @kevr = KeventerReader.instance
     end
 
     it "Should return 5 countries for commercial events" do
@@ -265,7 +268,8 @@ describe KeventerReader do
       @connector = double("KeventerConnector")
       @connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/kleerers.xml') )
 
-      @kevr = KeventerReader.new( @connector )
+      KeventerReader.build_with( @connector )
+      @kevr = KeventerReader.instance
     end
 
     it "should return 9 kleerers" do
@@ -284,7 +288,8 @@ describe KeventerReader do
       @connector = double("KeventerConnector")
       @connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),'../spec/categories.xml') )
 
-      @kevr = KeventerReader.new( @connector )
+      KeventerReader.build_with( @connector )
+      @kevr = KeventerReader.instance
       @high_performance = @kevr.category("high-performance")
     end
 

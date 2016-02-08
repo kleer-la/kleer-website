@@ -5,7 +5,7 @@ require "prawn/measurement_extensions"
 
 def trainers
 
-  @trainers = @@keventer_reader.kleerers
+  @trainers = KeventerReader.instance.kleerers
 
   @pdf.font "res/Dosis-Regular.ttf"
 
