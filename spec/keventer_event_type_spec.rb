@@ -37,19 +37,19 @@ describe KeventerEventType do
   end
 
   it "new event_type doesn't have rate" do
-    @keventtype.has_rate.should be_false
+    @keventtype.has_rate.should be false
   end
 
   it "should have rate" do
     @keventtype.average_rating = 3
     @keventtype.surveyed_count= 100
-    @keventtype.has_rate.should be_true
+    @keventtype.has_rate.should be true
   end
 
   it "empty event_type doesn't have rate" do
     @keventtype.average_rating = nil
     @keventtype.surveyed_count= 100
-    @keventtype.has_rate.should be_false
+    @keventtype.has_rate.should be false
   end
 
 
