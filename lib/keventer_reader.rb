@@ -87,11 +87,7 @@ class KeventerReader
   attr_accessor :connector
 
   def initialize( connector = nil )
-    if connector.nil?
-      @connector = KeventerConnector.new
-    else
-      @connector = connector
-    end
+    @connector = connector || KeventerConnector.new
     @events_hash_dont_use_directly = Hash.new
   end
 
@@ -308,7 +304,7 @@ class KeventerReader
       create_event_type(doc)
       rescue Exception => e
         puts e.message
-        puts e.backtrace.inspect
+        eval(e.backtrace.inspect).each {|m| puts m}
       end
   end
 
