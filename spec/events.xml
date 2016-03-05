@@ -94,6 +94,29 @@
         <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
       </country>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+        <bio>Agile Coach</bio>
+        <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+        <id type="integer">4</id>
+        <name>Raul Gorgonzola</name>
+        <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+        <linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+      <twitter-username>@gorgonzo</twitter-username>
+      <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+      <country>
+          <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+          <id type="integer">9</id>
+          <iso-code>AR</iso-code>
+          <name>Argentina</name>
+          <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+        </country>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -239,6 +262,57 @@ CSM y Especialista en Innovación
       </country>
     </trainer2>
 
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Contamos con nuevas formas de trabajo que nos permiten ser mucho más efectivos e innovadores.
+  Mi trabajo es ayudar a personas y organizaciones a cumplir estos objetivos con altos niveles de satisfacción.
+
+  Agile Coach &amp; Trainer
+  M.B.A Intl Business, Lic. en Sistemas
+  CSM y Especialista en Innovación
+  </bio>
+        <created-at type="datetime">2012-08-23T20:43:00Z</created-at>
+        <id type="integer">10</id>
+        <name>Ricardo Colusso</name>
+        <updated-at type="datetime">2012-08-23T20:43:00Z</updated-at>
+      </trainer>
+
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+        <bio>Agile Coach</bio>
+        <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+        <id type="integer">4</id>
+        <name>Raul Gorgonzola</name>
+        <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+        <linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  	  <twitter-username>@gorgonzo</twitter-username>
+  	  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  	  <country>
+          <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+          <id type="integer">9</id>
+          <iso-code>AR</iso-code>
+          <name>Argentina</name>
+          <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+        </country>
+      </trainer>
+    </trainers>
 
   </event>
   <event>
