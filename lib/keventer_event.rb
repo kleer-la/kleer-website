@@ -88,11 +88,6 @@ class KeventerEvent
     @id
   end
 
-  def trainer_bio
-    warn "[DEPRECATION] 'trainer_bio' is deprecated.  Please use 'trainer.bio' instead."
-    @trainer.bio
-  end
-
   def trainers
     t= []
     if !@trainer.nil?
