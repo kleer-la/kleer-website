@@ -188,8 +188,7 @@ describe KeventerEvent do
     end
 
     it "should have a deprecated trainer name backward compatible" do
-        @kevent.should_receive(:warn).with("[DEPRECATION] 'trainer_name' is deprecated.  Please use 'trainer.name' instead.")
-        @kevent.trainer_name.should == @trainer.name
+        @kevent.trainers[0].name.should == @trainer.name
     end
 
     it "should have a trainer bio backward compatible" do

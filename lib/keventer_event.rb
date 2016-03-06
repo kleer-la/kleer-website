@@ -88,11 +88,6 @@ class KeventerEvent
     @id
   end
 
-  def trainer_name
-    warn "[DEPRECATION] 'trainer_name' is deprecated.  Please use 'trainer.name' instead."
-    @trainer.name
-  end
-
   def trainer_bio
     warn "[DEPRECATION] 'trainer_bio' is deprecated.  Please use 'trainer.bio' instead."
     @trainer.bio
