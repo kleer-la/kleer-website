@@ -313,7 +313,6 @@ CSM y Especialista en Innovación
         </country>
       </trainer>
     </trainers>
-
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -423,6 +422,34 @@ Agile Coach &amp; Trainer
       <name>Martín Salías</name>
       <updated-at type="datetime">2012-08-23T20:43:31Z</updated-at>
     </trainer>
+
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
+  Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
+
+  Agile Coach &amp; Trainer
+  </bio>
+        <created-at type="datetime">2012-08-23T20:43:31Z</created-at>
+        <id type="integer">11</id>
+        <name>Martín Salías</name>
+        <updated-at type="datetime">2012-08-23T20:43:31Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -568,6 +595,32 @@ CSC, PMP, PMI-ACP</bio>
       <name>Martín Alaimo</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+  Agile Coach &amp; Trainer
+  CSC, PMP, PMI-ACP</bio>
+        <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+        <id type="integer">4</id>
+        <name>Martín Alaimo</name>
+        <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -686,6 +739,32 @@ CSC, PMP, PMI-ACP</bio>
       <name>Martín Alaimo</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
+  <trainers>
+    <trainer>
+      <average-rating type="decimal">4.45</average-rating>
+    <net-promoter-score type="integer">97</net-promoter-score>
+    <surveyed-count type="integer">94</surveyed-count>
+    <promoter-count type="integer">92</promoter-count>
+		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+		  <twitter-username>@gorgonzo</twitter-username>
+		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+		  <country>
+	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+	        <id type="integer">9</id>
+	        <iso-code>AR</iso-code>
+	        <name>Argentina</name>
+	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+	      </country>
+      <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+Agile Coach &amp; Trainer
+CSC, PMP, PMI-ACP</bio>
+      <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+      <id type="integer">4</id>
+      <name>Martín Alaimo</name>
+      <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+    </trainer>
+  </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -826,6 +905,32 @@ CSC, PMP, PMI-ACP</bio>
       <name>Martín Alaimo</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+  Agile Coach &amp; Trainer
+  CSC, PMP, PMI-ACP</bio>
+        <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+        <id type="integer">4</id>
+        <name>Martín Alaimo</name>
+        <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -928,6 +1033,29 @@ Este tipo de aplicaciones se ajustan mejor a la separación de conceptos que pla
       <name>Ignacio Raguet</name>
       <updated-at type="datetime">2012-12-11T19:14:18Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio></bio>
+        <created-at type="datetime">2012-12-11T19:14:18Z</created-at>
+        <id type="integer">16</id>
+        <name>Ignacio Raguet</name>
+        <updated-at type="datetime">2012-12-11T19:14:18Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1039,6 +1167,33 @@ Agile Coach &amp; Trainer
       <name>Martín Salías</name>
       <updated-at type="datetime">2012-08-23T20:43:31Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Creo que la calidad a largo plazo en trabajos que requieren creatividad e innovación se basa en el disfrutar las tareas.
+  Mi compromiso es ayudar a las organizaciones a brindar un marco donde los profesionales compartan una atmósfera de orgullo y entusiasmo.
+
+  Agile Coach &amp; Trainer
+  </bio>
+        <created-at type="datetime">2012-08-23T20:43:31Z</created-at>
+        <id type="integer">11</id>
+        <name>Martín Salías</name>
+        <updated-at type="datetime">2012-08-23T20:43:31Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1157,6 +1312,32 @@ CSC, PMP, PMI-ACP</bio>
       <name>Martín Alaimo</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+  Agile Coach &amp; Trainer
+  CSC, PMP, PMI-ACP</bio>
+        <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+        <id type="integer">4</id>
+        <name>Martín Alaimo</name>
+        <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1275,6 +1456,32 @@ CSC, PMP, PMI-ACP</bio>
       <name>Martín Alaimo</name>
       <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Mi compromiso es asistir a las empresas y equipos de trabajo a producir resultados sorprendentes con personas felices.
+
+  Agile Coach &amp; Trainer
+  CSC, PMP, PMI-ACP</bio>
+        <created-at type="datetime">2012-08-23T20:40:28Z</created-at>
+        <id type="integer">4</id>
+        <name>Martín Alaimo</name>
+        <updated-at type="datetime">2012-08-23T20:40:28Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1379,6 +1586,33 @@ Ing. en Informática, CSM, CSD
       <name>Pablo Tortorella</name>
       <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+  Agile Coach &amp; Trainer
+  Ing. en Informática, CSM, CSD
+  </bio>
+        <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+        <id type="integer">5</id>
+        <name>Pablo Tortorella</name>
+        <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1500,6 +1734,33 @@ Ing. en Informática, CSM, CSD
       <name>Pablo Tortorella</name>
       <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+  Agile Coach &amp; Trainer
+  Ing. en Informática, CSM, CSD
+  </bio>
+        <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+        <id type="integer">5</id>
+        <name>Pablo Tortorella</name>
+        <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1606,6 +1867,33 @@ Ing. en Informática, CSM, CSD
       <name>Pablo Tortorella</name>
       <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+  Agile Coach &amp; Trainer
+  Ing. en Informática, CSM, CSD
+  </bio>
+        <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+        <id type="integer">5</id>
+        <name>Pablo Tortorella</name>
+        <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1714,6 +2002,33 @@ Ing. en Informática, CSM, CSD
       <name>Pablo Tortorella</name>
       <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Me apasionan las actividades comunitarias y disfruto compartiendo conocimientos y experiencias, así como también colaborando con la mejora continua de equipos de trabajo!
+
+  Agile Coach &amp; Trainer
+  Ing. en Informática, CSM, CSD
+  </bio>
+        <created-at type="datetime">2012-08-23T20:40:59Z</created-at>
+        <id type="integer">5</id>
+        <name>Pablo Tortorella</name>
+        <updated-at type="datetime">2012-08-23T20:40:59Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1836,6 +2151,34 @@ Ing. Electrónica, CSM, CSD
       <name>Carlos Peix</name>
       <updated-at type="datetime">2012-08-23T20:41:23Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua.
+  Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
+
+  Agile Coach &amp; Trainer
+  Ing. Electrónica, CSM, CSD
+  </bio>
+        <created-at type="datetime">2012-08-23T20:41:23Z</created-at>
+        <id type="integer">6</id>
+        <name>Carlos Peix</name>
+        <updated-at type="datetime">2012-08-23T20:41:23Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
   <event>
 	<start-time type="datetime">2000-01-01T09:00:00Z</start-time>
@@ -1956,5 +2299,33 @@ Ing. Electrónica, CSM, CSD
       <name>Carlos Peix</name>
       <updated-at type="datetime">2012-08-23T20:41:23Z</updated-at>
     </trainer>
+    <trainers>
+      <trainer>
+        <average-rating type="decimal">4.45</average-rating>
+      <net-promoter-score type="integer">97</net-promoter-score>
+      <surveyed-count type="integer">94</surveyed-count>
+      <promoter-count type="integer">92</promoter-count>
+  		<linkedin-url>http://www.linkedin.com/in/gorgonzo</linkedin-url>
+  		  <twitter-username>@gorgonzo</twitter-username>
+  		  <gravatar-picture-url>http://www.gravatar.com/avatar/74734f9ceda241e1b2f5c3174e47158c</gravatar-picture-url>
+  		  <country>
+  	        <created-at type="datetime">2012-04-26T11:14:40Z</created-at>
+  	        <id type="integer">9</id>
+  	        <iso-code>AR</iso-code>
+  	        <name>Argentina</name>
+  	        <updated-at type="datetime">2012-04-26T11:14:40Z</updated-at>
+  	      </country>
+        <bio>Creo que los desarrolladores de software  podemos trabajar en un marco de profesionalismo  y mejora continua.
+  Mi compromiso es ayudar a los Individuos y las empresas a lograrlo.
+
+  Agile Coach &amp; Trainer
+  Ing. Electrónica, CSM, CSD
+  </bio>
+        <created-at type="datetime">2012-08-23T20:41:23Z</created-at>
+        <id type="integer">6</id>
+        <name>Carlos Peix</name>
+        <updated-at type="datetime">2012-08-23T20:41:23Z</updated-at>
+      </trainer>
+    </trainers>
   </event>
 </events>

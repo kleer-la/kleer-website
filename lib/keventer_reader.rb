@@ -261,7 +261,6 @@ class KeventerReader
       return @events_hash_dont_use_directly[event_type_xml_url]
     end
     loaded_events = parse event_type_xml_url, '/events/event'
-
     events = Array.new
     loaded_events.each do |loaded_event|
       events << create_event(loaded_event)
@@ -302,9 +301,8 @@ class KeventerReader
       parser =  LibXML::XML::Parser.file(url )
       doc = parser.parse
       create_event_type(doc)
-      rescue Exception => e
-        puts e.message
-        eval(e.backtrace.inspect).each {|m| puts m}
+      rescue LibXML::XML::Error => e
+        nil
       end
   end
 
@@ -323,40 +321,34 @@ class KeventerReader
 
   end
 
+  def create_one_trainer(xml)
+    trainer = Professional.new
+    trainer.name = xml.find_first('name').content
+    trainer.bio = xml.find_first('bio').content
+    trainer.id = xml.find_first('id').content
+    trainer.linkedin_url = xml.find_first('linkedin-url').content
+    trainer.gravatar_picture_url = xml.find_first('gravatar-picture-url').content
+    trainer.twitter_username = xml.find_first('twitter-username').content
+
+    trainer.average_rating = xml.find_first('average-rating').content.nil? ? nil : xml.find_first('average-rating').content.to_f.round(2)
+    trainer.net_promoter_score = xml.find_first('net-promoter-score').content.nil? ? nil : xml.find_first('net-promoter-score').content.to_i
+    trainer.surveyed_count = xml.find_first('surveyed-count').content.to_i
+    trainer.promoter_count = xml.find_first('promoter-count').content.to_i
+    trainer
+  end
+
   def create_event(xml_keventer_event)
 
     event = event_from_parsed_xml(xml_keventer_event)
 
-    trainer = Professional.new  #xml_keventer_event.find_first('trainer'), "es"
+    xml_trainers= xml_keventer_event.find('./trainers/trainer')
 
-    trainer.name = xml_keventer_event.find_first('trainer/name').content
-    trainer.bio = xml_keventer_event.find_first('trainer/bio').content
-    trainer.id = xml_keventer_event.find_first('trainer/id').content
-    trainer.linkedin_url = xml_keventer_event.find_first('trainer/linkedin-url').content
-    trainer.gravatar_picture_url = xml_keventer_event.find_first('trainer/gravatar-picture-url').content
-    trainer.twitter_username = xml_keventer_event.find_first('trainer/twitter-username').content
-
-    trainer.average_rating = xml_keventer_event.find_first('trainer/average-rating').content.nil? ? nil : xml_keventer_event.find_first('trainer/average-rating').content.to_f.round(2)
-    trainer.net_promoter_score = xml_keventer_event.find_first('trainer/net-promoter-score').content.nil? ? nil : xml_keventer_event.find_first('trainer/net-promoter-score').content.to_i
-    trainer.surveyed_count = xml_keventer_event.find_first('trainer/surveyed-count').content.to_i
-    trainer.promoter_count = xml_keventer_event.find_first('trainer/promoter-count').content.to_i
-
-    event.trainer = trainer
-
-    if xml_keventer_event.find_first('trainer2')
-      trainer2 = Professional.new  #xml_keventer_event.find_first('trainer2'), "es"
-
-      trainer2.name = xml_keventer_event.find_first('trainer2/name').content
-      trainer2.bio = xml_keventer_event.find_first('trainer2/bio').content
-      trainer2.id = xml_keventer_event.find_first('trainer2/id').content
-      trainer2.linkedin_url = xml_keventer_event.find_first('trainer2/linkedin-url').content
-      trainer2.gravatar_picture_url = xml_keventer_event.find_first('trainer2/gravatar-picture-url').content
-      trainer2.twitter_username = xml_keventer_event.find_first('trainer2/twitter-username').content
-    else
-      trainer2 = nil
+    if xml_trainers.count>=1
+      event.trainer = create_one_trainer(xml_trainers[0])
     end
-
-    event.trainer2 = trainer2
+    if xml_trainers.count==2
+      event.trainer2 = create_one_trainer(xml_trainers[1])
+    end
 
     event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
 
