@@ -86,6 +86,20 @@ class KeventerReader
 
   attr_accessor :connector
 
+  def self.build()
+    @@instance = KeventerReader.new(KeventerConnector.new)
+  end
+
+  def self.build_with(connector)
+    @@instance = KeventerReader.new(connector)
+  end
+
+  #private_class_method :new
+
+  def self.instance
+    return @@instance
+  end
+
   def initialize( connector = nil )
     @connector = connector || KeventerConnector.new
     @events_hash_dont_use_directly = Hash.new

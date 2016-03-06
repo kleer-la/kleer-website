@@ -4,14 +4,16 @@ Feature: Home Page
 	Scenario: Currícula accesible desde la home page
 		Given I visit the home page
 		Then I should see a link to "http://media.kleer.la/kleer-entrenamos-2014.pdf" with text "Más Información"
-		
+
 	Scenario: Datos de contacto
 		Given I visit the home page
-		Then I should see "ARG"
+		Then I should see "AR"
 		And I should see "Lavalle 362"
-		And I should see "BRA"
-		And I should see "BOL"
-		And I should see "COL"
+		And I should see "BR"
+		And I should see "BO"
+		And I should see "CO"
+		And I should see "PE"
+		And I should see "UY"
 		And I should see "¿Otro?"
 
 	Scenario: Integracion con SnapEngage

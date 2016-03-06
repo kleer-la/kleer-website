@@ -5,7 +5,7 @@ require "prawn/measurement_extensions"
 
 def content( category )
 
-  @category = @@keventer_reader.category( category )
+  @category = KeventerReader.instance.category( category )
   @event_types = @category.event_types
 
   @pdf.font "res/Dosis-Regular.ttf"

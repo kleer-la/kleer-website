@@ -65,7 +65,7 @@ configure do
   I18n.load_path += Dir[File.join(File.dirname(__FILE__), 'locales', '*.yml').to_s]
 
   enable :sessions
-  @@keventer_reader = KeventerReader.new
+  KeventerReader.build
 end
 
 before do
@@ -100,8 +100,8 @@ end
 
 get '/' do
 	@active_tab_index = "active"
-	@categories = @@keventer_reader.categories session[:locale]
-  @kleerers = @@keventer_reader.kleerers session[:locale]
+	@categories = KeventerReader.instance.categories session[:locale]
+	@kleerers = KeventerReader.instance.kleerers session[:locale]
 	erb :index
 end
 
@@ -111,9 +111,9 @@ get '/blog' do
 end
 
 get '/entrenamos' do
- 	@active_tab_entrenamos = "active"
+	@active_tab_entrenamos = "active"
 	@page_title += " | Entrenamos"
-  @unique_countries = @@keventer_reader.unique_countries_for_commercial_events()
+	@unique_countries = KeventerReader.instance.unique_countries_for_commercial_events()
 	erb :entrenamos
 end
 
@@ -122,16 +122,16 @@ get '/acompanamos' do
 end
 
 get '/coaching' do
-  @active_tab_coaching = "active"
+	@active_tab_coaching = "active"
 	@page_title += " | Coaching"
-  @categories = @@keventer_reader.categories session[:locale]
+	@categories = KeventerReader.instance.categories session[:locale]
 	erb :coaching
 end
 
 get '/comunidad' do
   @active_tab_comunidad = "active"
   @page_title += " | Comunidad"
-  @unique_countries = @@keventer_reader.unique_countries_for_community_events()
+  @unique_countries = KeventerReader.instance.unique_countries_for_community_events()
   erb :comunidad
 end
 
@@ -206,7 +206,7 @@ get '/posters/:poster_code' do
 end
 
 get '/categoria/:category_codename' do
-  @category = @@keventer_reader.category(params[:category_codename])
+  @category = KeventerReader.instance.category(params[:category_codename])
   @active_tab_acompanamos = "active"
 
   if @category.nil?
@@ -223,7 +223,7 @@ get '/entrenamos/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
   if is_valid_id(event_id)
-    @event = @@keventer_reader.event(event_id, true)
+    @event = KeventerReader.instance.event(event_id, true)
   end
 
   if @event.nil?
@@ -241,7 +241,7 @@ get '/catalogo' do
   @active_tab_entrenamos = "active"
   #pdf_catalog
   @page_title += " | Catálogo"
-  @categories = @@keventer_reader.categories session[:locale]
+  @categories = KeventerReader.instance.categories session[:locale]
   erb :catalogo
 end
 
@@ -251,10 +251,10 @@ get '/categoria/:category_codename/cursos/:event_type_id_with_name' do
   event_type_id_with_name = params[:event_type_id_with_name]
   event_type_id = event_type_id_with_name.split('-')[0]
 
-  @category = @@keventer_reader.category params[:category_codename], session[:locale]
+  @category = KeventerReader.instance.category params[:category_codename], session[:locale]
 
   if is_valid_id(event_type_id)
-    @event_type = @@keventer_reader.event_type(event_type_id, true)
+    @event_type = KeventerReader.instance.event_type(event_type_id, true)
   end
 
   if @event_type.nil?
@@ -273,7 +273,7 @@ get '/entrenamos/evento/:event_id_with_name/entrenador/remote' do
 
   event_id = event_id_with_name.split('-')[0]
   if is_valid_id(event_id)
-    @event = @@keventer_reader.event(event_id, false)
+    @event = KeventerReader.instance.event(event_id, false)
   end
 
   if @event.nil?
@@ -289,7 +289,7 @@ get '/entrenamos/evento/:event_id_with_name/remote' do
 
   event_id = event_id_with_name.split('-')[0]
   if is_valid_id(event_id)
-    @event = @@keventer_reader.event(event_id, false)
+    @event = KeventerReader.instance.event(event_id, false)
   end
 
   if @event.nil?
@@ -305,7 +305,7 @@ get '/entrenamos/evento/:event_id_with_name/registration' do
 
   event_id = event_id_with_name.split('-')[0]
   if is_valid_id(event_id)
-    @event = @@keventer_reader.event(event_id, false)
+    @event = KeventerReader.instance.event(event_id, false)
   end
 
   if @event.nil?
@@ -320,7 +320,7 @@ get '/comunidad/evento/:event_id_with_name' do
   event_id_with_name = params[:event_id_with_name]
   event_id = event_id_with_name.split('-')[0]
   if is_valid_id(event_id)
-    @event = @@keventer_reader.event(event_id, true)
+    @event = KeventerReader.instance.event(event_id, true)
   end
 
   if @event.nil?
@@ -337,14 +337,14 @@ end
 get '/somos' do
  	@active_tab_somos = "active"
 	@page_title += " | Somos"
-	@kleerers = @@keventer_reader.kleerers session[:locale]
+	@kleerers = KeventerReader.instance.kleerers session[:locale]
 	erb :somos
 end
 
 get '/prensa' do
   @active_tab_prensa = "active"
   @page_title += " | Prensa"
-  @kleerers = @@keventer_reader.kleerers session[:locale]
+  @kleerers = KeventerReader.instance.kleerers session[:locale]
   erb :prensa
 end
 
@@ -356,6 +356,22 @@ get '/prensa/casos/equipos-scrum-en-technisys-2015' do
   erb :prensa_casos_technisys_2015
 end
 
+get '/prensa/casos/equipos-scrum-en-plataforma-10-2015' do
+  @page_title += " | Equipos de desarrollo Scrum y Automatización en Plataforma 10"
+  @meta_description = "Kleer - Coaching & Training - Equipos de desarrollo Scrum y orientación al valor para el negocio en Plataforma 10, apoyados por Kleer"
+  @meta_keywords = "Kleer, Plataforma 10, scrum, equipos, desarrollo ágil, devops, automatización, integración continua, valor negocio"
+
+  erb :prensa_casos_plataforma_10_2015
+end
+
+get '/prensa/casos/equipos-scrum-en-suramericana-2015' do
+  @page_title += " | Paradigma ágil en tecnología y en negocio en Suramericana"
+  @meta_description = "Kleer - Coaching & Training - Paradigma ágiles en tecnología y en negocio en Suramericana, apoyados por Kleer"
+  @meta_keywords = "Kleer, Suramericana, Sura, scrum, equipos, desarrollo ágil, valor negocio, corporaciones ágiles, paradigma ágil en las empresas"
+
+  erb :prensa_casos_suramericana_2015
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
@@ -365,7 +381,7 @@ end
 
 get '/entrenamos/eventos/proximos' do
   content_type :json
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos")
+  DTHelper::to_dt_event_array_json(KeventerReader.instance.coming_commercial_events(), true, "entrenamos")
 end
 
 get '/entrenamos/eventos/proximos/:amount' do
@@ -374,7 +390,7 @@ get '/entrenamos/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount, false)
+  DTHelper::to_dt_event_array_json(KeventerReader.instance.coming_commercial_events(), true, "entrenamos", I18n, session[:locale], amount, false)
 end
 
 get '/entrenamos/eventos/pais/:country_iso_code' do
@@ -383,7 +399,7 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
+  DTHelper::to_dt_event_array_json(KeventerReader.instance.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
 end
 
 get '/comunidad/eventos/proximos/:amount' do
@@ -392,7 +408,7 @@ get '/comunidad/eventos/proximos/:amount' do
   if !amount.nil?
     amount = amount.to_i
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.coming_community_events(), true, "comunidad", I18n, session[:locale], amount, false)
+  DTHelper::to_dt_event_array_json(KeventerReader.instance.coming_community_events(), true, "comunidad", I18n, session[:locale], amount, false)
 end
 
 get '/comunidad/eventos/pais/:country_iso_code' do
@@ -401,7 +417,7 @@ get '/comunidad/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "comunidad"))
     country_iso_code = "todos"
   end
-  DTHelper::to_dt_event_array_json(@@keventer_reader.community_events_by_country(country_iso_code), false, "comunidad", I18n, session[:locale])
+  DTHelper::to_dt_event_array_json(KeventerReader.instance.community_events_by_country(country_iso_code), false, "comunidad", I18n, session[:locale])
 end
 
 # STATIC FILES ==============
@@ -492,9 +508,9 @@ def is_valid_country_iso_code(country_iso_code_to_test, event_type)
   return true if (country_iso_code_to_test == "otro" or country_iso_code_to_test == "todos")
 
   if event_type == "entrenamos"
-    unique_countries = @@keventer_reader.unique_countries_for_commercial_events()
+    unique_countries = KeventerReader.instance.unique_countries_for_commercial_events()
   else
-    unique_countries = @@keventer_reader.unique_countries_for_community_events()
+    unique_countries = KeventerReader.instance.unique_countries_for_community_events()
   end
   unique_countries.each { |country|
     if (country.iso_code == country_iso_code_to_test)

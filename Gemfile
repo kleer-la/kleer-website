@@ -20,7 +20,6 @@ gem 'tzinfo'
 gem 'tzinfo-data'
 gem 'money'
 
-
 group :development do
   gem 'foreman'
   gem 'heroku'

@@ -9,7 +9,7 @@ def stub_connector( test_file = "just_one_event.xml")
   connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/kleerers.xml") )
   connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/categories.xml") )
 
-  @@keventer_reader.connector = connector
+  KeventerReader.build_with( connector )
 end
 
 Given /^I open the web app$/ do

@@ -20,8 +20,7 @@ def get_event_type(event_type_id, find_it=true)
   end
   connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/events.xml") )
   connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/categories.xml") )
-  @@keventer_reader.connector = connector
-
+  KeventerReader.build_with( connector )
 end
 
 Given(/^theres an event type$/) do
