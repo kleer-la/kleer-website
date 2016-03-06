@@ -198,36 +198,46 @@ describe KeventerEvent do
     end
   end
 
-  context "If co-trainer is Natty Dread" do
-
-    before(:each) do
-      @cotrainer = Professional.new
-      @cotrainer.name = "Natty Dread"
-      @cotrainer.bio  = "Artifice del Mate Loco"
-
-      @kevent.trainer2 = @cotrainer
-    end
-
-    it "should have a co-trainer" do
-        @kevent.trainer2.should == @cotrainer
-    end
-  end
-
-  context "If trainer is Rogna Castro and there is NO co-trainer" do
+  context "Trainers and cotrainers" do
 
     before(:each) do
       @trainer = Professional.new
       @trainer.name = "Rogna Castro"
       @trainer.bio  = "Da clases de guitarra por fax"
 
-      @kevent.trainer = @trainer
-      @kevent.trainer2 = nil
+      @cotrainer = Professional.new
+      @cotrainer.name = "Natty Dread"
+      @cotrainer.bio  = "Artifice del Mate Loco"
     end
 
+    it "should have a co-trainer" do
+        @kevent.trainer2 = @cotrainer
+        @kevent.trainer2.should == @cotrainer
+    end
     it "should have a trainer and NO co-trainer" do
+      @kevent.trainer = @trainer
+      @kevent.trainer2 = nil
       @kevent.trainer.should == @trainer
       @kevent.trainer2.should == nil
     end
+
+    it "NG should have a co-trainer" do
+        @kevent.trainer2 = @cotrainer
+        @kevent.trainers.should == [@cotrainer]
+    end
+    it "NG should have a trainer and NO co-trainer" do
+      @kevent.trainer = @trainer
+      @kevent.trainer2 = nil
+      @kevent.trainer.should == @trainer
+      @kevent.trainer2.should == nil
+      @kevent.trainers.should == [@trainer]
+    end
+    it "NG should have a trainer and co-trainer" do
+      @kevent.trainer = @trainer
+      @kevent.trainer2 = @cotrainer
+      @kevent.trainers.should == [@trainer,@cotrainer]
+    end
+
   end
 
 
