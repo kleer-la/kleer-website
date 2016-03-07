@@ -1,7 +1,7 @@
 class KeventerEvent
     attr_accessor :capacity, :city, :country, :country_code, :event_type, :date,
                   :finish_date, :registration_link, :is_sold_out, :id, :uri_path,
-                  :trainer, :trainer2, :trainers, :keventer_connector, :place, :sepyme_enabled,
+                  :trainers, :keventer_connector, :place, :sepyme_enabled,
                   :human_date, :start_time, :end_time, :address, :list_price,
                   :eb_price, :eb_end_date, :currency_iso_code, :is_webinar,
                   :specific_conditions, :is_community_event, :time_zone_name,
@@ -91,6 +91,10 @@ class KeventerEvent
   def add_trainer(trainer)
     @trainer = trainer
   end
+  def add_trainer2(trainer)
+    @trainer2 = trainer
+  end
+
 
   def trainers
     t= []

@@ -96,7 +96,7 @@ end
 
 			<div class="col-md-5 col-sm-6">
 				<div class="container-fluid">
-					<% if @event.trainer2.nil? %>
+					<% if @event.trainers[1].nil? %>
 						<%= erb :single_trainer %>
 					<% else %>
 						<%= erb :with_cotrainer %>

@@ -4,8 +4,7 @@
   </div>
 </div>
 <div class="col-md-8 col-sm-8 event-facilitator-text">
-  <strong><%=t("event.facilitator")%>: <%= @event.trainer2 %></strong><br/>
-
+  <strong><%=t("event.facilitator")%>: </strong><br/>
   <%=@event.trainers[0].name%>
 
   <% if @event.trainers[0].surveyed_count > 20 && !@event.trainers[0].average_rating.nil? %>

@@ -168,7 +168,7 @@ describe KeventerReader do
       end
 
       it "Should have an empty co-trainer" do
-        @first_event.trainer2.should == nil
+        @first_event.trainers[1].should == nil
       end
 
     end
@@ -184,11 +184,11 @@ describe KeventerReader do
       end
 
       it "Should have a non-empty co-trainer" do
-        @second_event.trainer2.should_not == nil
+        @second_event.trainers[1].should_not == nil
       end
 
       it "Co-trainer should be Gorgonzola" do
-        @second_event.trainer2.name.should  == "Raul Gorgonzola"
+        @second_event.trainers[1].name.should  == "Raul Gorgonzola"
       end
     end
   end

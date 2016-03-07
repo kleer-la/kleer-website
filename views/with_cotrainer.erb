@@ -6,13 +6,12 @@
 
 <div class="col-md-4 col-sm-4">
   <div class="event-facilitator-face">
-    <img src="<%=@event.trainer2.gravatar_picture_url%>?size=125" class="img-circle">
+    <img src="<%=@event.trainers[1].gravatar_picture_url%>?size=125" class="img-circle">
   </div>
 </div>
 
 <div class="col-md-4 col-sm-4 event-facilitator-text">
-
   <strong><%=t("event.facilitators")%>:</strong><br/>
   <%=@event.trainers[0].name%> <br/>
-  <%=@event.trainer2.name%>
+  <%=@event.trainers[1].name%>
 </div>
