@@ -24,8 +24,7 @@ class KeventerEvent
     @sepyme_enabled = false
     @registration_link = ""
     @id = 0
-    @trainer = nil
-    @trainer2 = nil
+    @trainers = []
     @uri_path
     @keventer_connector = nil
     @human_date
@@ -89,22 +88,13 @@ class KeventerEvent
   end
 
   def add_trainer(trainer)
-    @trainer = trainer
+    if !trainer.nil?
+      @trainers <<= trainer
+    end
   end
-  def add_trainer2(trainer)
-    @trainer2 = trainer
-  end
-
 
   def trainers
-    t= []
-    if !@trainer.nil?
-      t <<= @trainer
-    end
-    if !@trainer2.nil?
-      t <<= @trainer2
-    end
-    t
+    @trainers
   end
 
   def load(event_doc)

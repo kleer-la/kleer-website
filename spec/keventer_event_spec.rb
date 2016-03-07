@@ -209,33 +209,23 @@ describe KeventerEvent do
     end
 
     it "should have a co-trainer" do
-        @kevent.add_trainer2 @cotrainer
+        @kevent.add_trainer @cotrainer
         @kevent.trainers[0].should == @cotrainer
+        @kevent.trainers.should == [@cotrainer]
     end
     it "should have a trainer and NO co-trainer" do
       @kevent.add_trainer @trainer
-      @kevent.add_trainer2 nil
-      @kevent.trainers[0].should == @trainer
-      @kevent.trainers[1].should == nil
-    end
-
-    it "NG should have a co-trainer" do
-        @kevent.add_trainer2 @cotrainer
-        @kevent.trainers.should == [@cotrainer]
-    end
-    it "NG should have a trainer and NO co-trainer" do
-      @kevent.add_trainer @trainer
-      @kevent.add_trainer2 nil
+      @kevent.add_trainer nil
       @kevent.trainers[0].should == @trainer
       @kevent.trainers[1].should == nil
       @kevent.trainers.should == [@trainer]
     end
+
     it "NG should have a trainer and co-trainer" do
       @kevent.add_trainer @trainer
-      @kevent.add_trainer2 @cotrainer
+      @kevent.add_trainer @cotrainer
       @kevent.trainers.should == [@trainer,@cotrainer]
     end
-
   end
 
 
