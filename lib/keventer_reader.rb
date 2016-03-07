@@ -357,12 +357,9 @@ class KeventerReader
 
     xml_trainers= xml_keventer_event.find('./trainers/trainer')
 
-    if xml_trainers.count>=1
-      event.add_trainer create_one_trainer(xml_trainers[0])
-    end
-    if xml_trainers.count==2
-      event.add_trainer create_one_trainer(xml_trainers[1])
-    end
+    xml_trainers.each {|t|
+      event.add_trainer create_one_trainer(t)
+    }
 
     event.event_type = create_event_type(xml_keventer_event.find_first('event-type'))
 
