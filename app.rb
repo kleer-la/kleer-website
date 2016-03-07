@@ -480,7 +480,7 @@ def create_twitter_card( event )
   card.description = event.event_type.elevator_pitch
   card.image_url = "http://media.kleer.la/logos/K_social.jpg"
   card.site = "@kleer_la"
-  card.creator = event.trainer.twitter_username
+  card.creator = event.trainers[0].twitter_username
   card
 end
 

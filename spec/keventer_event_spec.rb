@@ -184,7 +184,7 @@ describe KeventerEvent do
     end
 
     it "should have a trainer" do
-        @kevent.trainer.should == @trainer
+        @kevent.trainers[0].should == @trainer
     end
 
     it "should have a deprecated trainer name backward compatible" do
@@ -213,9 +213,9 @@ describe KeventerEvent do
         @kevent.trainer2.should == @cotrainer
     end
     it "should have a trainer and NO co-trainer" do
-      @kevent.trainer = @trainer
+      @kevent.add_trainer @trainer
       @kevent.trainer2 = nil
-      @kevent.trainer.should == @trainer
+      @kevent.trainers[0].should == @trainer
       @kevent.trainer2.should == nil
     end
 
@@ -224,14 +224,14 @@ describe KeventerEvent do
         @kevent.trainers.should == [@cotrainer]
     end
     it "NG should have a trainer and NO co-trainer" do
-      @kevent.trainer = @trainer
+      @kevent.add_trainer @trainer
       @kevent.trainer2 = nil
-      @kevent.trainer.should == @trainer
+      @kevent.trainers[0].should == @trainer
       @kevent.trainer2.should == nil
       @kevent.trainers.should == [@trainer]
     end
     it "NG should have a trainer and co-trainer" do
-      @kevent.trainer = @trainer
+      @kevent.add_trainer @trainer
       @kevent.trainer2 = @cotrainer
       @kevent.trainers.should == [@trainer,@cotrainer]
     end

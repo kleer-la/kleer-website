@@ -88,6 +88,10 @@ class KeventerEvent
     @id
   end
 
+  def add_trainer(trainer)
+    @trainer = trainer
+  end
+
   def trainers
     t= []
     if !@trainer.nil?
