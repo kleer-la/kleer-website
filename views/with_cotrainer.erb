@@ -13,5 +13,6 @@
 <div class="col-md-4 col-sm-4 event-facilitator-text">
   <strong><%=t("event.facilitators")%>:</strong><br/>
   <%=@event.trainers[0].name%> <br/>
-  <%=@event.trainers[1].name%>
+  <%=@event.trainers[1].name%> <br/>
+  <%=@event.trainers[2].name if !@event.trainers[2].nil?%> 
 </div>

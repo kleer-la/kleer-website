@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<events type="array">
+<event>
+  <address>Online</address>
+  <average-rating type="decimal" nil="true"/>
+  <business-eb-price type="decimal" nil="true"/>
+  <business-price type="decimal" nil="true"/>
+  <cancelled type="boolean">false</cancelled>
+  <capacity type="integer">100</capacity>
+  <city>Online</city>
+  <country-id type="integer">245</country-id>
+  <couples-eb-price type="decimal" nil="true"/>
+  <created-at type="datetime">2016-02-26T12:29:49Z</created-at>
+  <currency-iso-code>AED</currency-iso-code>
+  <custom-prices-email-text></custom-prices-email-text>
+  <date type="date">2016-03-09</date>
+  <draft type="boolean">false</draft>
+  <duration type="integer">1</duration>
+  <eb-end-date type="date">2016-02-28</eb-end-date>
+  <eb-price type="decimal" nil="true"/>
+  <embedded-player nil="true"/>
+  <end-time type="datetime">2000-01-01T21:00:00Z</end-time>
+  <enterprise-11plus-price type="decimal" nil="true"/>
+  <enterprise-6plus-price type="decimal" nil="true"/>
+  <event-type-id type="integer">201</event-type-id>
+  <extra-script></extra-script>
+  <finish-date type="date">2016-03-09</finish-date>
+  <id type="integer">60</id>
+  <is-sold-out type="boolean">false</is-sold-out>
+  <list-price type="decimal">0.0</list-price>
+  <mode>ol</mode>
+  <monitor-email></monitor-email>
+  <net-promoter-score type="integer" nil="true"/>
+  <notify-webinar-start type="boolean">false</notify-webinar-start>
+  <place>(GMT-03:00) Buenos Aires</place>
+  <registration-link></registration-link>
+  <sepyme-enabled type="boolean">false</sepyme-enabled>
+  <should-ask-for-referer-code type="boolean">false</should-ask-for-referer-code>
+  <should-welcome-email type="boolean">true</should-welcome-email>
+  <show-pricing type="boolean">false</show-pricing>
+  <specific-conditions></specific-conditions>
+  <start-time type="datetime">2000-01-01T20:00:00Z</start-time>
+  <time-zone-name>Buenos Aires</time-zone-name>
+  <trainer2-id type="integer">46</trainer2-id>
+  <trainer3-id type="integer">17</trainer3-id>
+  <trainer-id type="integer">7</trainer-id>
+  <twitter-embedded-search nil="true"/>
+  <updated-at type="datetime">2016-03-03T19:54:40Z</updated-at>
+  <visibility-type>co</visibility-type>
+  <webinar-started type="boolean">false</webinar-started>
+  <human-date>9 Mar</human-date>
+  <is-webinar type="boolean">true</is-webinar>
+  <country>
+    <created-at type="datetime">2012-11-28T19:53:51Z</created-at>
+    <id type="integer">245</id>
+    <iso-code>OL</iso-code>
+    <name>-- OnLine --</name>
+    <updated-at type="datetime">2012-11-28T19:53:51Z</updated-at>
+  </country>
+  <event-type>
+    <average-rating type="decimal" nil="true"/>
+    <created-at type="datetime">2016-02-26T12:27:43Z</created-at>
+    <csd-eligible type="boolean">false</csd-eligible>
+    <description>La retrospectiva es un momento especial en el cual un equipo decide hacer una pausa para reflexionar sobre la forma en que ha realizado el trabajo, explorar oportunidades de mejora y decidir cómo experimentar con lo aprendido. 
+
+Consideramos a la retrospectiva como un mecanismo potente para la mejora en equipo, porque, al ser realizada de forma efectiva, impulsa la mejora constante de sus procesos e interacciones. Además, fomenta cambios concretos a corto plazo y transformaciones asombrosas duraderas.
+
+En este webinar te presentaremos una guía simple de cómo preparar y facilitar tu primera retrospectiva. Al final del mismo habrás aprendido más sobre estas reuniones, el valor que generan y estarás preparado para facilitar una ¡mañana mismo!
+
+Los puntos a tratar en el webinar son:
+¿Qué son las retrospectivas?
+¿Cómo preparar tu primera retrospectiva?
+Pasos para facilitar tu primera retrospectiva
+Tips de facilitación
+
+Así que si estás interesado en las retrospectivas, pero aún no sabes bien cómo llevar una adelante, este webinar es para ti.</description>
+    <duration type="integer">1</duration>
+    <elevator-pitch>La retrospectiva es un momento especial en el cual un equipo decide hacer una pausa para reflexionar sobre la forma en que ha realizado el trabajo, explorar oportunidades de mejora y decidir cómo experimentar con lo aprendido. </elevator-pitch>
+    <faq></faq>
+    <goal></goal>
+    <id type="integer">201</id>
+    <include-in-catalog type="boolean">false</include-in-catalog>
+    <learnings></learnings>
+    <materials></materials>
+    <name>Mañana tengo una retrospectiva, ¿Qué hago? - Webinar</name>
+    <net-promoter-score type="integer" nil="true"/>
+    <program>- ¿Qué son las retrospectivas?
+- ¿Cómo preparar tu primera retrospectiva?
+- Pasos para facilitar tu primera retrospectiva
+- Tips de facilitación
+</program>
+    <promoter-count type="integer" nil="true"/>
+    <recipients>* Líderes de Equipo
+* Project Managers
+* Scrum Masters
+* Consultores
+* Coaches de equipos
+* Agentes de cambio
+* Integrantes de equipos de trabajo interesados en mejorar</recipients>
+    <subtitle></subtitle>
+    <surveyed-count type="integer" nil="true"/>
+    <tag-name>W-PTR (Webinar PTR)</tag-name>
+    <takeaways></takeaways>
+    <updated-at type="datetime">2016-02-26T12:27:43Z</updated-at>
+  </event-type>
+  <trainer>
+    <average-rating type="decimal">4.64</average-rating>
+    <bio>&gt; Me apasiona el aprendizaje y la mejora, la calidad y los resultados. 
+&gt; Busco compartirlo con personas, equipos, organizaciones y comunidades. 
+&gt; Mis focos son el desarrollo de software y el testing.
+
+**Juan Gabardini**
+Agile Coach &amp; Trainer
+</bio>
+    <bio-en>
+**Juan Gabardini**
+Agile Coach &amp; Trainer</bio-en>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2012-08-23T20:41:48Z</created-at>
+    <gravatar-email>jgabardini@computer.org</gravatar-email>
+    <id type="integer">7</id>
+    <is-kleerer type="boolean">true</is-kleerer>
+    <linkedin-url>http://www.linkedin.com/in/jgabardini</linkedin-url>
+    <name>Juan Gabardini</name>
+    <net-promoter-score type="integer">57</net-promoter-score>
+    <promoter-count type="integer">108</promoter-count>
+    <signature-credentials>Agile Coach &amp; Trainer</signature-credentials>
+    <signature-image>JG.png</signature-image>
+    <surveyed-count type="integer">171</surveyed-count>
+    <tag-name>TR-JG (Juan Gabardini) </tag-name>
+    <twitter-username>@jgabardini</twitter-username>
+    <updated-at type="datetime">2016-01-23T17:49:34Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/72c191f31437b3250822b38d5f57705b</gravatar-picture-url>
+  </trainer>
+  <trainer2>
+    <average-rating type="decimal" nil="true"/>
+    <bio>Ayudo a la gente que trabaja a limpiar su ecosistema, afinando y mejorando sus actividades esenciales, eliminando la acumulación de desperdicio y reconstruyendo equipos significativos.</bio>
+    <bio-en>I help workers to clean their ecosystem by straightening and tuning up their essential activities, eliminating accumulated work waste and rebuilding meaningful teams.</bio-en>
+    <country-id type="integer">9</country-id>
+    <created-at type="datetime">2015-09-15T20:02:47Z</created-at>
+    <gravatar-email>twallet@gmail.com</gravatar-email>
+    <id type="integer">46</id>
+    <is-kleerer type="boolean">false</is-kleerer>
+    <linkedin-url>https://www.linkedin.com/in/thomaswallet</linkedin-url>
+    <name>Thomas Wallet</name>
+    <net-promoter-score type="integer" nil="true"/>
+    <promoter-count type="integer" nil="true"/>
+    <signature-credentials></signature-credentials>
+    <signature-image></signature-image>
+    <surveyed-count type="integer" nil="true"/>
+    <tag-name>TR-TW (Thomas Wallet) </tag-name>
+    <twitter-username>WalletThomas</twitter-username>
+    <updated-at type="datetime">2015-09-15T20:02:47Z</updated-at>
+    <gravatar-picture-url>http://www.gravatar.com/avatar/6308e2add9f17e6a6a45cbc8891758f5</gravatar-picture-url>
+  </trainer2>
+  <trainers type="array">
+    <trainer>
+      <average-rating type="decimal">4.64</average-rating>
+      <bio>&gt; Me apasiona el aprendizaje y la mejora, la calidad y los resultados. 
+&gt; Busco compartirlo con personas, equipos, organizaciones y comunidades. 
+&gt; Mis focos son el desarrollo de software y el testing.
+
+**Juan Gabardini**
+Agile Coach &amp; Trainer
+</bio>
+      <bio-en>
+**Juan Gabardini**
+Agile Coach &amp; Trainer</bio-en>
+      <country-id type="integer">9</country-id>
+      <created-at type="datetime">2012-08-23T20:41:48Z</created-at>
+      <gravatar-email>jgabardini@computer.org</gravatar-email>
+      <id type="integer">7</id>
+      <is-kleerer type="boolean">true</is-kleerer>
+      <linkedin-url>http://www.linkedin.com/in/jgabardini</linkedin-url>
+      <name>Juan Gabardini</name>
+      <net-promoter-score type="integer">57</net-promoter-score>
+      <promoter-count type="integer">108</promoter-count>
+      <signature-credentials>Agile Coach &amp; Trainer</signature-credentials>
+      <signature-image>JG.png</signature-image>
+      <surveyed-count type="integer">171</surveyed-count>
+      <tag-name>TR-JG (Juan Gabardini) </tag-name>
+      <twitter-username>@jgabardini</twitter-username>
+      <updated-at type="datetime">2016-01-23T17:49:34Z</updated-at>
+      <gravatar-picture-url>http://www.gravatar.com/avatar/72c191f31437b3250822b38d5f57705b</gravatar-picture-url>
+    </trainer>
+    <trainer>
+      <average-rating type="decimal" nil="true"/>
+      <bio>Ayudo a la gente que trabaja a limpiar su ecosistema, afinando y mejorando sus actividades esenciales, eliminando la acumulación de desperdicio y reconstruyendo equipos significativos.</bio>
+      <bio-en>I help workers to clean their ecosystem by straightening and tuning up their essential activities, eliminating accumulated work waste and rebuilding meaningful teams.</bio-en>
+      <country-id type="integer">9</country-id>
+      <created-at type="datetime">2015-09-15T20:02:47Z</created-at>
+      <gravatar-email>twallet@gmail.com</gravatar-email>
+      <id type="integer">46</id>
+      <is-kleerer type="boolean">false</is-kleerer>
+      <linkedin-url>https://www.linkedin.com/in/thomaswallet</linkedin-url>
+      <name>Thomas Wallet</name>
+      <net-promoter-score type="integer" nil="true"/>
+      <promoter-count type="integer" nil="true"/>
+      <signature-credentials></signature-credentials>
+      <signature-image></signature-image>
+      <surveyed-count type="integer" nil="true"/>
+      <tag-name>TR-TW (Thomas Wallet) </tag-name>
+      <twitter-username>WalletThomas</twitter-username>
+      <updated-at type="datetime">2015-09-15T20:02:47Z</updated-at>
+      <gravatar-picture-url>http://www.gravatar.com/avatar/6308e2add9f17e6a6a45cbc8891758f5</gravatar-picture-url>
+    </trainer>
+    <trainer>
+      <average-rating type="decimal">4.66</average-rating>
+      <bio>&gt;Creo firmemente que la mejora continua es la llave para tener equipos productivos y felices, y que ésta se lleva a cabo mediante la introspección y acciones concretas.
+
+&gt;Mi compromiso es ayudar a las personas y organizaciones a llevarla a cabo.
+
+**Hiroshi Hiromoto**
+Agile Coach &amp; Trainer
+CSP, CSM, CSPO, CSD, PMI-ACP
+http://about.me/hhiroshi</bio>
+      <bio-en>&gt;I believe that continuous improvement is the key to have productive and happy teams, and that it is achieved by introspection and concrete actions.
+
+&gt;Mi commitment is to help people and companies to drive thru their challenges.
+
+**Hiroshi Hiromoto**
+Agile Coach &amp; Trainer
+CSP, CSM, CSPO, CSD, PMI-ACP
+http://about.me/hhiroshi</bio-en>
+      <country-id type="integer">171</country-id>
+      <created-at type="datetime">2013-01-03T18:19:15Z</created-at>
+      <gravatar-email>hiromoto.hiroshi@gmail.com</gravatar-email>
+      <id type="integer">17</id>
+      <is-kleerer type="boolean">true</is-kleerer>
+      <linkedin-url>http://www.linkedin.com/in/hhiroshi</linkedin-url>
+      <name>Hiroshi Hiromoto</name>
+      <net-promoter-score type="integer">72</net-promoter-score>
+      <promoter-count type="integer">110</promoter-count>
+      <signature-credentials></signature-credentials>
+      <signature-image></signature-image>
+      <surveyed-count type="integer">149</surveyed-count>
+      <tag-name>TR-HH (Hiroshi Hiromoto) </tag-name>
+      <twitter-username>@hhiroshi</twitter-username>
+      <updated-at type="datetime">2016-01-23T17:49:35Z</updated-at>
+      <gravatar-picture-url>http://www.gravatar.com/avatar/3a39c4fe86b368b3d7499ab28997541d</gravatar-picture-url>
+    </trainer>
+  </trainers>
+  <categories type="array">
+    <category>
+      <codename>invisible</codename>
+      <created-at type="datetime">2013-04-20T14:53:37Z</created-at>
+      <description>¿Qué es un tasa nominal?</description>
+      <description-en>desc</description-en>
+      <id type="integer">5</id>
+      <name>Categoría Invisible</name>
+      <name-en>name</name-en>
+      <order type="integer">0</order>
+      <tagline>Usar para todo aquellos que no queremos que se lite bajo una categoiría</tagline>
+      <tagline-en>tag</tagline-en>
+      <updated-at type="datetime">2014-10-02T12:15:10Z</updated-at>
+      <visible type="boolean">false</visible>
+    </category>
+  </categories>
+</event>
+</events>

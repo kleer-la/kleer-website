@@ -2,16 +2,6 @@
 
 require File.join(File.dirname(__FILE__),'../../lib/keventer_reader')
 
-def stub_connector( test_file = "just_one_event.xml")
-  connector = double("KeventerConnector")
-  connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/#{test_file}") )
-  connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/community_events.xml") )
-  connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/kleerers.xml") )
-  connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/categories.xml") )
-
-  KeventerReader.build_with( connector )
-end
-
 Given /^I open the web app$/ do
 	visit '/'
 end
@@ -142,14 +132,6 @@ end
 
 Then /^I should see an image pointing to "(.*?)"$/ do |url|
   response_body.should have_selector("img[src='#{ url }']")
-end
-
-When /^I visit the event page$/ do
-  visit '/entrenamos/evento/44-workshop-de-retrospectivas-buenos-aires'
-end
-
-When /^I visit the community event page$/ do
-  visit '/comunidad/evento/60-yoseki-coding-dojo-buenos-aires'
 end
 
 Then /^I should see the SnapEngage plugin$/ do
