@@ -160,15 +160,15 @@ describe KeventerReader do
       end
 
       it "Should have 'Raul Gorgonzola' as trainer" do
-        @first_event.trainer.name.should == "Raul Gorgonzola"
+        @first_event.trainers[0].name.should == "Raul Gorgonzola"
       end
 
       it "Should have 'Agile Coach' as the trainer bio" do
-        @first_event.trainer.bio.should == "Agile Coach"
+        @first_event.trainers[0].bio.should == "Agile Coach"
       end
 
       it "Should have an empty co-trainer" do
-        @first_event.trainer2.should == nil
+        @first_event.trainers[1].should == nil
       end
 
     end
@@ -180,15 +180,15 @@ describe KeventerReader do
       end
 
       it "Should have 'Ricardo Colusso' as trainer" do
-        @second_event.trainer.name.should == "Ricardo Colusso"
+        @second_event.trainers[0].name.should == "Ricardo Colusso"
       end
 
       it "Should have a non-empty co-trainer" do
-        @second_event.trainer2.should_not == nil
+        @second_event.trainers[1].should_not == nil
       end
 
       it "Co-trainer should be Gorgonzola" do
-        @second_event.trainer2.name.should  == "Raul Gorgonzola"
+        @second_event.trainers[1].name.should  == "Raul Gorgonzola"
       end
     end
   end

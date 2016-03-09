@@ -2,14 +2,6 @@
 
 require File.join(File.dirname(__FILE__),'../../lib/keventer_reader')
 
-def stub_connector( test_file = "just_one_event.xml")
-  connector.stub(:events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/#{test_file}") )
-  connector.stub(:community_events_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/community_events.xml") )
-  connector.stub(:kleerers_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/kleerers.xml") )
-  connector.stub(:categories_xml_url).and_return( File.join(File.dirname(__FILE__),"../../spec/categories.xml") )
-
-end
-
 def get_event_type(event_type_id, find_it=true)
   connector = double("KeventerConnector")
   connector.should_receive(:event_type_url).with(event_type_id)

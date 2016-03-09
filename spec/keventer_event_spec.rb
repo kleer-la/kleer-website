@@ -180,53 +180,51 @@ describe KeventerEvent do
       @trainer.name = "Raul Gorgonzola"
       @trainer.bio = "hg jgjhagsdjhagsdkjahgsfkjahgsj ja sfkjahs fkjahsfg"
 
-      @kevent.trainer = @trainer
+      @kevent.add_trainer @trainer
     end
 
     it "should have a trainer" do
-        @kevent.trainer.should == @trainer
+        @kevent.trainers[0].should == @trainer
     end
 
     it "should have a deprecated trainer name backward compatible" do
-        @kevent.should_receive(:warn).with("[DEPRECATION] 'trainer_name' is deprecated.  Please use 'trainer.name' instead.")
-        @kevent.trainer_name.should == @trainer.name
+        @kevent.trainers[0].name.should == @trainer.name
     end
 
     it "should have a trainer bio backward compatible" do
-        @kevent.should_receive(:warn).with("[DEPRECATION] 'trainer_bio' is deprecated.  Please use 'trainer.bio' instead.")
-        @kevent.trainer_bio.should ==@trainer.bio
+        @kevent.trainers[0].bio.should ==@trainer.bio
     end
   end
 
-  context "If co-trainer is Natty Dread" do
-
-    before(:each) do
-      @cotrainer = Professional.new
-      @cotrainer.name = "Natty Dread"
-      @cotrainer.bio  = "Artifice del Mate Loco"
-
-      @kevent.trainer2 = @cotrainer
-    end
-
-    it "should have a co-trainer" do
-        @kevent.trainer2.should == @cotrainer
-    end
-  end
-
-  context "If trainer is Rogna Castro and there is NO co-trainer" do
+  context "Trainers and cotrainers" do
 
     before(:each) do
       @trainer = Professional.new
       @trainer.name = "Rogna Castro"
       @trainer.bio  = "Da clases de guitarra por fax"
 
-      @kevent.trainer = @trainer
-      @kevent.trainer2 = nil
+      @cotrainer = Professional.new
+      @cotrainer.name = "Natty Dread"
+      @cotrainer.bio  = "Artifice del Mate Loco"
     end
 
+    it "should have a co-trainer" do
+        @kevent.add_trainer @cotrainer
+        @kevent.trainers[0].should == @cotrainer
+        @kevent.trainers.should == [@cotrainer]
+    end
     it "should have a trainer and NO co-trainer" do
-      @kevent.trainer.should == @trainer
-      @kevent.trainer2.should == nil
+      @kevent.add_trainer @trainer
+      @kevent.add_trainer nil
+      @kevent.trainers[0].should == @trainer
+      @kevent.trainers[1].should == nil
+      @kevent.trainers.should == [@trainer]
+    end
+
+    it "NG should have a trainer and co-trainer" do
+      @kevent.add_trainer @trainer
+      @kevent.add_trainer @cotrainer
+      @kevent.trainers.should == [@trainer,@cotrainer]
     end
   end
 

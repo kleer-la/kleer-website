@@ -22,19 +22,19 @@ def trainers
     @trainers.each_with_index do |trainer, index|
 
       y_position = @pdf.cursor
-      @pdf.text trainer.name, :size => 12
+      @pdf.text trainers[0].name, :size => 12
 
-      @pdf.image "public/img/icons/linkedin.png", 
+      @pdf.image "public/img/icons/linkedin.png",
         :at => [50.mm,y_position], :width => 5.mm
-      @pdf.draw_text trainer.linkedin_url, 
+      @pdf.draw_text trainers[0].linkedin_url,
         :size => 10, :at => [60.mm,y_position]
 
-      @pdf.image "public/img/icons/twitter.png", 
+      @pdf.image "public/img/icons/twitter.png",
         :at => [100.mm,y_position], :width => 5.mm
-      @pdf.draw_text trainer.twitter_username, 
+      @pdf.draw_text trainers[0].twitter_username,
         :size => 10, :at => [110.mm, y_position]
 
-      @pdf.text trainer.bio, :size => 10
+      @pdf.text trainers[0].bio, :size => 10
 
       # .gravatar_picture_url
 

@@ -1,7 +1,7 @@
 class KeventerEvent
     attr_accessor :capacity, :city, :country, :country_code, :event_type, :date,
                   :finish_date, :registration_link, :is_sold_out, :id, :uri_path,
-                  :trainer, :trainer2, :keventer_connector, :place, :sepyme_enabled,
+                  :trainers, :keventer_connector, :place, :sepyme_enabled,
                   :human_date, :start_time, :end_time, :address, :list_price,
                   :eb_price, :eb_end_date, :currency_iso_code, :is_webinar,
                   :specific_conditions, :is_community_event, :time_zone_name,
@@ -24,8 +24,7 @@ class KeventerEvent
     @sepyme_enabled = false
     @registration_link = ""
     @id = 0
-    @trainer = nil
-    @trainer2 = nil
+    @trainers = []
     @uri_path
     @keventer_connector = nil
     @human_date
@@ -88,15 +87,16 @@ class KeventerEvent
     @id
   end
 
-  def trainer_name
-    warn "[DEPRECATION] 'trainer_name' is deprecated.  Please use 'trainer.name' instead."
-    @trainer.name
+  def add_trainer(trainer)
+    if !trainer.nil?
+      @trainers <<= trainer
+    end
   end
 
-  def trainer_bio
-    warn "[DEPRECATION] 'trainer_bio' is deprecated.  Please use 'trainer.bio' instead."
-    @trainer.bio
+  def trainers
+    @trainers
   end
+
   def load(event_doc)
     load_descripcion(event_doc)
     load_date(event_doc)
