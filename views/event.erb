@@ -94,17 +94,17 @@ end
 		<!-- small (sm), medium (md) y large (lg) logistics -->
 		<div class="container-fluid hidden-xs">
 
-			<div class="col-md-5 col-sm-6">
+			<div class="col-md-3 col-sm-6 no-hpadding">
 				<div class="container-fluid">
-					<% if @event.trainers[1].nil? %>
-						<%= erb :single_trainer %>
+					<% if @event.trainers.count==1 %>
+						<%= erb :_single_trainer %>
 					<% else %>
-						<%= erb :with_cotrainer %>
+						<%= erb :_with_cotrainer %>
 					<% end %>
 				</div>
 			</div>
 
-			<div class="col-md-2 col-sm-3 no-hpadding">
+			<div class="col-md-3 col-sm-2 no-hpadding">
 				<div class="col-md-4 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-calendar big-glyphicon"></span>
 				</div>
@@ -119,7 +119,7 @@ end
 				</div>
 			</div>
 
-			<div class="col-md-2 col-sm-3 no-hpadding">
+			<div class="col-md-3 col-sm-2 no-hpadding">
 				<div class="col-md-4 col-sm-4 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-time big-glyphicon"></span>
 				</div>
@@ -132,7 +132,7 @@ end
 				</div>
 			</div>
 
-			<div class="col-md-3 col-sm-6 no-hpadding">
+			<div class="col-md-3 col-sm-2 no-hpadding">
 				<div class="col-md-4 col-sm-2 no-hpadding logistic-indicator">
 					<span class="glyphicon glyphicon-map-marker big-glyphicon"></span>
 				</div>
