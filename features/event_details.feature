@@ -32,7 +32,6 @@ Feature: Event Details
 		Given theres only one event for the following two months
 		When I visit the event page
 		Then I should see "Workshop de Retrospectivas"
-		And I should see "Facilitadores:"
 		And I should see "Martín Alaimo"
 		And I should see "Pablitux"
 
@@ -40,7 +39,6 @@ Feature: Event Details
 		Given theres only one community event w/cotrainer
 		When I visit the community event page
 		Then I should see "Mañana tengo una retrospectiva"
-		And I should see "Facilitadores:"
 		And I should see "Juan Gabardini"
 		And I should see "Thomas Wallet"
 		And I should see "Hiroshi Hiromoto"

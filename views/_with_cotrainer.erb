@@ -1,0 +1,13 @@
+
+<div class="col-xs-12 no-hpadding">
+  <%@event.trainers.each {|t|%>
+    <div class="row">
+      <div class="col-sm-1 no-hpadding">
+        <img src="<%=t.gravatar_picture_url%>?size=125" class="img-circle img-responsive">
+      </div>
+      <div class="col-sm-11">
+        <%=t.name%>
+      </div>
+    </div>
+    <%}%>
+</div>
