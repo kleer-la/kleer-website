@@ -14,6 +14,12 @@ Then /^I should see "(.*)"$/ do |text|
   last_response.body.should =~ /#{text}/m
 end
 
+Then /^I should see "(.*)" in a phone$/ do |text|
+  last_response.body.should have_selector('.visible-xs'){ |div|
+		div.should contain text
+	}
+end
+
 Then /^I should not see "(.*?)"$/ do |text|
   expect(last_response.body).to_not include text
 end

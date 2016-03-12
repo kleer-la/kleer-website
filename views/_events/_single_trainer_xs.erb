@@ -1,0 +1,23 @@
+<div class="col-xs-12">
+  <div class="col-xs-2 no-hpadding logistic-indicator">
+    <span class="glyphicon glyphicon-user big-glyphicon"></span>
+  </div>
+  <div class="col-xs-10 no-hpadding event-facilitator-text">
+    <strong><%=t("event.facilitator")%>:</strong><br/>
+    <%=@event.trainers[0].name%>
+
+    <% if @event.trainers[0].surveyed_count > 20 && !@event.trainers[0].average_rating.nil? %>
+      <p>
+      <div class="stars" id="rating-tr<%=@event.trainers[0].id%>-xs" data-toggle="tooltip" data-placement="top"
+        title="Rating: <%=@event.trainers[0].average_rating%>/5 basado en <%=@event.trainers[0].surveyed_count%> opiniones de asistentes a sus eventos">
+        <div style="width:<%=@event.trainers[0].average_rating.to_f*16%>px;"/></div>
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function(){
+          $('#rating-tr<%=@event.trainers[0].id%>-xs').tooltip();
+        });
+      </script>
+      </p>
+    <% end %>
+  </div>
+</div>
