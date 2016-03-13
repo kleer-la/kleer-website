@@ -1,0 +1,6 @@
+<div class="col-xs-10 no-hpadding event-facilitator-text">
+  <strong><%=t("event.facilitator")%>:</strong><br/>
+  <%@event.trainers.each {|t|%>
+    <%=t.name%></br>
+  <%}%>
+</div>

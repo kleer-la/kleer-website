@@ -43,6 +43,14 @@ Feature: Event Details
 		And I should see "Thomas Wallet"
 		And I should see "Hiroshi Hiromoto"
 
+	Scenario: Community event w/3 facilitators in a phone
+		Given theres only one community event w/cotrainer
+		When I visit the community event page
+		Then I should see "Mañana tengo una retrospectiva"
+		And I should see "Juan Gabardini" in a phone
+		And I should see "Thomas Wallet" in a phone
+		And I should see "Hiroshi Hiromoto" in a phone
+
 	Scenario: Los Eventos normales tienen sección de Experiencia Kleer
 		Given theres only one event
 		When I visit the event page
