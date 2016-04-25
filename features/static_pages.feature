@@ -33,6 +33,6 @@ Feature: Static pages - Frequently asked questions
 
 	Scenario: Colombian payments page
 		Given I visit the colombian payment page
-		Then I should see "Agile Spin "
+		Then I should see "Sparkta "
 		And I should see "Persona Natural"
 		And I should see "NIT"
