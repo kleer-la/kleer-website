@@ -273,7 +273,7 @@ es:
                 name: "Colombia"
                 address1: "Calle 40 # 20-42"
                 address2: "Bogotá"
-                phone: "+57 300.327.0604 - Management 3.0 -> +57 300.782.3996"
+                phone: "+57 300.327.0604"
             peru:
                 name: "Perú"
                 address1: "Av. Juan De Aliaga 107"
