@@ -1,6 +1,10 @@
+<div class="col-xs-2 no-hpadding logistic-indicator">
+  <span class="glyphicon glyphicon-user big-glyphicon"></span>
+</div>
 <div class="col-xs-10 no-hpadding event-facilitator-text">
   <strong><%=t("event.facilitator")%>:</strong><br/>
   <%@event.trainers.each {|t|%>
     <%=t.name%></br>
   <%}%>
+  &nbsp;
 </div>
