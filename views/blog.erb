@@ -1,22 +1,10 @@
 <style>
-	.rssBody ul {
-		list-style:none;
+	.feed-item-title {
+	  font-size: 30pt;
 	}
-	.rssBody ul h4 {
-		font-size: 25px;
-		margin-top:30px;
-		border-bottom:solid #000;
-		border-bottom-width:1px
-	}
-	.rssRow img {
-		max-width: 100%;
-		height: auto;
-	}
-	.rssRow h1 {
-		font-size: 20pt;
-	}
-	.rssRow a {
-		font-family: 'Roboto';
+	.feed-item-desc{
+		padding-top: 0px;
+		padding-bottom: 30px;
 	}
 </style>
 <div class="container-fluid fondo-amarillo slide-header-generico">
@@ -37,8 +25,7 @@
 	<div class="container fondo-blanco contenedor-generico">
 		<div class="col-md-9 contenedor-main-izq">
 
-        <div id="blog-container"></div>
-
+			<script id="feed-1471989298363662" type="text/javascript" src="http://rss.bloople.net/?url=http%3A%2F%2Fwww.rssmix.com%2Fu%2F8194345%2Frss.xml&detail=100&limit=20&showtitle=false&type=js&id=1471989298363662"></script>
 
 	</div>
 
@@ -51,9 +38,5 @@
 <script type="text/javascript" src="/js/jquery.js"/></script>
 <script type="text/javascript" src="/js/jquery.zrssfeed.min.js"/></script>
 <script type="text/javascript"/>
-$(document).ready(function () {
-$('#blog-container').rssfeed('http://www.rssmix.com/u/8194345/rss.xml',
- {header:false, dateformat:'date', limit:10, snippet:false, linktarget:'_blank'});
-});
 
 </script>
