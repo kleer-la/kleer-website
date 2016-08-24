@@ -16,13 +16,11 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", privileged: false,  inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y git
+    sudo apt-get install -y git libcurl3-dev libxml2-dev libpq-dev
     gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
     curl -sSL https://get.rvm.io | bash -s stable
     source ~/.rvm/scripts/rvm
     rvm install 1.9.3
     gem install bundler
-    sudo apt-get install libcurl4-gnutls-dev
-    sudo apt-get install libxml2-dev
   SHELL
 end
