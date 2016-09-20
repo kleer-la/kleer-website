@@ -89,10 +89,10 @@ es:
         text:
             top: "<p>Ofrecemos un servicio de <b>acompañamiento integral</b> en la implementación de Metodologías Ágiles y técnicas ágiles de desarrollo con resultados valiosos.</p>
             <p>Conocé algunos casos de éxito de nuestros clientes:</p>
-           	<p><img src="https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png" alt="Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura" align="left" width="300"/>
            	<a href='prensa/casos/equipos-scrum-en-suramericana-2015'>Paradigma Ágil en <b>Sura</b></a>
            	<br/><i>Medellín, Colombia</i>. Testimonios de Carlos Hurtado, Valentina Sierra y Jubel Correa.</p>
-           	<img src="https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png" alt="Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles" width="300"/>
+           	<p><img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png' alt='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' align='left' width='300'/>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' width='300'/>
            	<p><a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>Equipos Scrum en <b>Plataforma 10</b></a> - <i>Buenos Aires, Argentina</i>. Testimonios de Gustavo Markier y Gastón Waisman.</p>
            	<p><a href='prensa/casos/equipos-scrum-en-technisys-2015'>Equipos Scrum en <b>Technisys</b></a> - <i>Argentina y Uruguay</i>. Testimonios de Alejandro Raiczyk y Nico Paez.</p>
 			<hr/>
