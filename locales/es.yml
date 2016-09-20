@@ -85,16 +85,35 @@ es:
         title: "Eventos Comunitarios"
     coaching:
         title: "Coaching"
-        subtitle: "Acompañamiento de organizaciones, equipos y profesionales hacia la mejora continua"
+        subtitle: "Acompañamiento de organizaciones, equipos y profesionales para obtener mejores resultados"
         text:
             top: "<p>Ofrecemos un servicio de <b>acompañamiento integral</b> en la implementación de Metodologías Ágiles y técnicas ágiles de desarrollo con resultados valiosos.</p>
             <p>Conocé algunos casos de éxito de nuestros clientes:</p>
-           	<a href='prensa/casos/equipos-scrum-en-suramericana-2015'>Paradigma Ágil en <b>Sura</b></a>
+           	<p><a href='prensa/casos/equipos-scrum-en-suramericana-2015'>Paradigma Ágil en <b>Sura</b></a>
            	<br/><i>Medellín, Colombia</i>. Testimonios de Carlos Hurtado, Valentina Sierra y Jubel Correa.</p>
-           	<p><img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png' alt='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' align='left' width='300'/>
-           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' width='300'/>
-           	<p><a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>Equipos Scrum en <b>Plataforma 10</b></a> - <i>Buenos Aires, Argentina</i>. Testimonios de Gustavo Markier y Gastón Waisman.</p>
-           	<p><a href='prensa/casos/equipos-scrum-en-technisys-2015'>Equipos Scrum en <b>Technisys</b></a> - <i>Argentina y Uruguay</i>. Testimonios de Alejandro Raiczyk y Nico Paez.</p>
+           	<p>
+           	<a href='prensa/casos/equipos-scrum-en-suramericana-2015'>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png' alt='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' align='left' height='150'/>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' height='150'/>
+           	</a></p>
+           	<br/>
+           	
+           	<p><a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>Equipos Scrum en <b>Plataforma 10</b></a>
+           	<br/><i>Buenos Aires, Argentina</i>. Testimonios de Gustavo Markier y Gastón Waisman.</p>
+			<p>
+           	<a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-p10-1.png' alt='Gustavo Markier nos cuenta acerca del impacto del trabajo de Kleer en el negocio de Plataforma 10' align='left' height='150'/>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-p10-2.png' alt='Gastón Waisman describe la implementación de Scrum en los equipos de Desarrollo de Plataforma 10' height='150'/>
+           	</a></p>
+           	
+           	<p><a href='prensa/casos/equipos-scrum-en-technisys-2015'>Equipos Scrum en <b>Technisys</b></a>
+           	<br/><i>Argentina y Uruguay</i>. Testimonios de Alejandro Raiczyk y Nico Paez.</p>
+			<p>
+           	<a href='prensa/casos/equipos-scrum-en-technisys-2015'>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-technisys1.png' alt='Alejandro Raiczyk describe el impacto del trabajo de Kleer en el área de Producto de Technisys' align='left' height='150'/>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-technisys2.png' alt='Nicolás Paez describe lo que realizó en el proyecto de implementación de Technisys' height='150'/>
+           	</a></p>
+           	
 			<hr/>
             <p>Se trata de un proceso llevado a cabo in situ y con la asistencia de un experto en Metodologías Ágiles, quien tiene la misión de transmitir de forma activa las <b>prácticas y herramientas ágiles</b> necesarias para <b>impactar positivamente</b> al equipo u organización. La implementación ocurre mientras las personas involucradas se encuentran realizando sus tareas habituales.</p>
             <p>Una de las ventajas de contratar nuestro Agile Coaching es que la implementación exitosa de Metodologías Ágiles se logra en menor tiempo del que tomaría hacerlo sin el <b>acompañamiento de un Agile Coach experimentado</b>. Adicionalmente, no se descuida el negocio ya que se  trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p>
