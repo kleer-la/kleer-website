@@ -87,14 +87,7 @@ es:
         title: "Coaching"
         subtitle: "Acompañamiento de organizaciones, equipos y profesionales para obtener mejores resultados"
         text:
-            top: "<p>Ofrecemos un servicio de <b>acompañamiento integral</b> en la implementación de Metodologías Ágiles y técnicas ágiles de desarrollo con resultados valiosos.</p>
-            
-            <p>
-            <a href='#TransformacionAgil'><img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono1-Transformacion.jpg' alt='Transformación Ágil' align='left' /></a>
-           	<a href='#AgileJumpStart'><img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono2-AgileJumpStart.jpg' alt='Agile Jump Start' /></a>
-           	<a href='#ExcelenciaTecnica'><img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono3-Excelencia.jpg' alt='Excelencia Técnica' /></a>
-           	<a href='#InnovacionDeNegocio'><img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono4-Innovacion.jpg' alt='Innovación de Negocio' /></a>
-			</p>
+            top: "<p>Ofrecemos servicios de <b>acompañamiento integral</b> en la implementación de metodologías y técnicas ágiles que potencian tanto a las personas como a sus negocios.</p>
             
             <hr/><p>Conocé algunos casos de éxito de nuestros clientes:</p>
             
@@ -102,8 +95,8 @@ es:
            	<br/><i>Medellín, Colombia</i>. Testimonios de Carlos Hurtado, Valentina Sierra y Jubel Correa.</p>
            	<p>
            	<a href='prensa/casos/equipos-scrum-en-suramericana-2015'>
-           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png' alt='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' align='left' height='160'/>
-           	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' height='160'/>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png' alt='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' title='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' align='left' height='160'/>
+           	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' title='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' height='160'/>
            	</a></p>
            	<br/>
            	
@@ -127,6 +120,7 @@ es:
 			
 			<a name='TransformacionAgil'></a>
 			<p class='lead'>Transformación Ágil</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono1-Transformacion.jpg' alt='Transformación Ágil' title='Transformación Ágil' width='100' align='left' />
 			<p>Acompañamos <b>mejoras integrales</b> a nivel internacional teniendo en cuenta los <b>desafíos y necesidades de cada negocio</b>, involucrando a líderes, managers y equipos.</p>
 			<p>Una cultura organizacional con capacidades de aprendizaje e innovación tiene una serie de desafíos. Enumerados hace tiempo por Steve Denning, autor de 'The Leader’s Guide to Radical Management':
 
@@ -144,12 +138,14 @@ Kleer ayuda en este camino a empresas de América Latina y otras partes del mund
 			
 			<a name='AgileJumpStart'></a>
 			<p class='lead'>Agile Jump Start</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono2-AgileJumpStart.jpg' alt='Agile Jump Start' title='Agile Jump Start' width='100' align='left' />
 			<p>El Agile Jump Start de Kleer es un <b>programa integral de coaching y acompañamiento</b> a organizaciones que buscan mayor ROI en sus proyectos a través de la adopción de Métodos Ágiles.
 A diferencia de otros programas similares, <b>la implementación exitosa de las Metodologías Ágiles se logra en menor tiempo</b> del que tomaría hacerlo sin el acompañamiento de un experto. 
 Adicionalmente, no se descuida el negocio ya que se trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p>
 
 			<a name='ExcelenciaTecnica'></a>
 			<p class='lead'>Excelencia Técnica</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono3-Excelencia.jpg' alt='Excelencia Técnica' title='Excelencia Técnica' width='100' align='left' />
 			<p>Promovemos el <b>aprendizaje y flexibilidad</b> en la gestión de proyectos y <b>desarrollo de productos</b> a través de equipos auto-organizados.</p>
 			<p>La adopción de métodos y técnicas ágiles implica:
 		<ul>
@@ -167,6 +163,7 @@ Adicionalmente, no se descuida el negocio ya que se trabaja directamente sobre l
 			
 			<a name='InnovacionDeNegocio'></a>
 			<p class='lead'>Innovación de Negocio</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono4-Innovacion.jpg' alt='Innovación de Negocio' title='Innovación de Negocio' width='100' align='left' />
 			<p>Desde hace más de 25 años, <b>la agilidad revolucionó la industria del software</b>: la <b>entrega de valor</b> comenzó a ser más <b>temprana y frecuente</b>, el <b>retorno de las inversiones</b> mejoró, y el <b>compromiso de los equipos</b> creció a la par de su <b>motivación</b>.
 
 Cada vez con mayor fuerza, compañías de distintos rubros mejoran sus resultados incorporando principios y herramientas de la agilidad a su modo habitual de hacer las cosas. Lo hacen empresas que fabrican aviones o tractores, lo hacen empresas que brindan servicios de marketing y también las que se dedican a cuidar la salud de sus asociados. Y lo aplican dónde más valor les aporta: sea el management, los proyectos claves o en la operación del día a día.
