@@ -372,6 +372,14 @@ get '/prensa/casos/equipos-scrum-en-suramericana-2015' do
   erb :prensa_casos_suramericana_2015
 end
 
+get '/prensa/casos/innovacion-en-marketing-digital-loreal-2016' do
+  @page_title += " | Innovación en Marketing Digital en L'Oréal"
+  @meta_description = "Kleer - Coaching & Training - Creación incremental y colaborativa de estrategias digitales facilitada por Kleer"
+  @meta_keywords = "Kleer, L'Oréal, Loreal, Innovación, Design Thinking, facilitación, coloaboración, facilitación gráfica, marketing, digital"
+
+  erb :prensa_casos_loreal_2016
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
