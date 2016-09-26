@@ -172,24 +172,18 @@ Cada vez con mayor fuerza, compañías de distintos rubros mejoran sus resultado
 Cuando los proyectos no se concretan, tardan mucho en hacerlo, o lo hacen sin los resultados esperados, incorporar la agilidad ayuda a obtener valor de negocio en corto plazo, reduce el riesgo de la inversión, e implementa un enfoque científico para maximizar el rendimiento del producto o el servicio en construcción.
 
 Acompañamos al proyecto desde su inicio para lograr resultados rápidos y valiosos.
-</p>
-			
-			<hr/>
-			
-			<p><b>Acerca del servicio de Agile Coaching de Kleer...</b></p>
-			<br/>
-            <p>Se trata de un proceso llevado a cabo in situ y con la asistencia de un experto en Metodologías Ágiles, quien tiene la misión de transmitir de forma activa las <b>prácticas y herramientas ágiles</b> necesarias para <b>impactar positivamente</b> al equipo u organización. La implementación ocurre mientras las personas involucradas se encuentran realizando sus tareas habituales.</p>
-            <p>Una de las ventajas de contratar nuestro Agile Coaching es que la implementación exitosa de Metodologías Ágiles se logra en menor tiempo del que tomaría hacerlo sin el <b>acompañamiento de un Agile Coach experimentado</b>. Adicionalmente, no se descuida el negocio ya que se  trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p>
-            <p>Existen dos tipos de situaciones: aquellas en las que nunca antes se había trabajo en un entorno ágil y otras en que ya existe la experiencia y se desea alcanzar un mayor nivel de profundidad. El servicio de acompañamiento de Kleer responde efectivamente a ambas, con la particularidad adicional de que modela el proceso de implementación según las necesidades específicas del equipo u organización.</p>
-            <p>En el caso en que fuera necesario, el acompañamiento es <b>complementado con capacitaciones diseñadas a medida</b> de cada equipo, asegurando un nivel de conocimientos que habilita una mayor efectividad durante  la implementación.</p>"
+</p>"
             bottom: "<p>Nuestro servicio de coaching en transformación organizacional está orientado a que logres uno o varios de los siguientes resultados, según tus necesidades actuales:</p>"
         tabs:
             benefits:
-                title: "Beneficios del Coaching"
-                text: "<ul><li>Eleva el nivel de flexibilidad del equipo para responder a nuevas situaciones</li><li>Mejora la calidad del producto como resultado de la implementación de técnicas ágiles</li><li>Disminuye los costos del desarrollo: ahorra tiempo y evita el re-trabajo</li><li>Disminuye fuertemente la ocurrencia de errores evitables</li></ul>"
+                title: ""
+                text: ""
             characteristics:
-                title: "Características del Servicio"
-                text: "<ul><li>No  se descuida el negocio. El equipo de trabajo no es desafectado  de  sus  tareas ya que se trata de una transmisión de conocimientos que   sucede  mientras el equipo se encuentra trabajando.</li><li>Sin hipótesis. Los problemas, impedimentos o dificultades son detectados y resueltos con casos concretos</li><li>Es una inversión. El ahorro de tiempo y costos que genera el aumento de calidad evita ciclos de re-trabajo</li></ul>"
+                title: "Acerca de nuestros servicios de coaching"
+                text: "<p>Se trata de un proceso llevado a cabo in situ y con la asistencia de al menos un experto en Metodologías Ágiles, quien tiene la misión de transmitir de forma activa las <b>prácticas y herramientas ágiles</b> necesarias para <b>impactar positivamente</b> al equipo u organización. La implementación ocurre mientras las personas involucradas se encuentran realizando sus tareas habituales.</p>
+            <p>Una de las ventajas de contratar nuestro Agile Coaching es que la implementación exitosa de Metodologías Ágiles se logra en menor tiempo del que tomaría hacerlo sin el <b>acompañamiento de un Agile Coach experimentado</b>. Adicionalmente, no se descuida el negocio ya que se  trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p>
+            <p>En general, existen dos tipos de situaciones: aquellas en las que nunca antes se había trabajo en un entorno ágil y otras en que ya existe la experiencia y se desea alcanzar un mayor nivel de profundidad. El servicio de acompañamiento de Kleer responde efectivamente a ambas, con la particularidad adicional de que modela el proceso de implementación según las necesidades específicas del equipo u organización.</p>
+            <p>En el caso en que fuera necesario, el acompañamiento es <b>complementado con capacitaciones diseñadas a medida</b> de cada equipo, asegurando un nivel de conocimientos que habilita una mayor efectividad durante  la implementación.</p>"
             contact:
                 title: "Solicitar Cotización"
                 text: "<p>Puedes contactarnos a <a href='mailto:hola@kleer.la'>hola@kleer.la</a> para solicitarnos una  cotización.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
