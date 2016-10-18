@@ -380,6 +380,14 @@ get '/prensa/casos/innovacion-en-marketing-digital-loreal-2016' do
   erb :prensa_casos_loreal_2016
 end
 
+get '/clientes' do
+  @page_title += " | Nuestros clientes"
+  @meta_description = "Kleer - Coaching & Training - Estas organizaciones confían en nosotros"
+  @meta_keywords = "Kleer, Clientes, Casos, Casos de Éxito, confianza"
+
+  erb :clientes
+end
+
 get '/last-tweet/:screen_name' do
   reader = TwitterReader.new
   return reader.last_tweet(params[:screen_name]).text
