@@ -12,7 +12,7 @@
 						Online,
 					<% elsif @event.is_classroom %>
 						Presencial,
-					<% elsif @event.is_classrooom %>
+					<% elsif @event.is_classroom %>
 						Blended Learning,
 					<% end %>
 					<%= @event.event_type.duration%> <%=t("event.duration")%></h3>
