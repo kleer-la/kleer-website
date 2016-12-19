@@ -12,8 +12,8 @@
 						Online,
 					<% elsif @event.is_classroom %>
 						Presencial,
-					<% elsif @event.is_classrooom %>
-						Blended Learning,
+					<% elsif @event.is_blended_learning %>
+						Presencial + Online,
 					<% end %>
 					<%= @event.event_type.duration%> <%=t("event.duration")%></h3>
 					<p><%= @event.event_type.elevator_pitch %></p>
@@ -124,7 +124,7 @@ end
 				<div class="col-md-8 col-sm-8 no-hpadding">
 					<strong><%=t("event.hour")%>:</strong><br/>
 					<%=t("event.time", :starts => @event.start_time.strftime("%k:%M"), :ends => @event.end_time.strftime("%k:%M") )%>
-					<% if @event.is_online %>
+					<% if @event.is_online || @event.is_blended_learning %>
 						<br/><%=@event.place%>
 					<% end %>
 				</div>
@@ -138,6 +138,8 @@ end
 					<strong><%=t("event.location")%>:</strong><br/>
 					<% if @event.is_online %>
 						Online<br/>
+					<% elsif @event.is_blended_learning %>
+						Presencial + Online<br/>
 					<% else %>
 						<%=@event.place%><br/>
 						<%=@event.address%><br/>
