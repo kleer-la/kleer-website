@@ -110,12 +110,25 @@ get '/blog' do
   erb :blog
 end
 
-get '/entrenamos' do
-	@active_tab_entrenamos = "active"
-	@page_title += " | Entrenamos"
-	@unique_countries = KeventerReader.instance.unique_countries_for_commercial_events()
-	erb :entrenamos
+get '/entrenamos/:country?' do |country|
+	entrenamos_view(country)
 end
+get '/entrenamos' do
+	entrenamos_view
+end
+
+def entrenamos_view(country=nil)
+	if !country.nil? && country.length>2
+	    status 404
+	else
+		@active_tab_entrenamos = "active"
+		@page_title += " | Entrenamos"
+		@unique_countries = KeventerReader.instance.unique_countries_for_commercial_events()
+		@country= country
+		erb :entrenamos
+	end
+end
+
 
 get '/acompanamos' do
   redirect "/coaching", 301 # permanent redirect
@@ -471,16 +484,7 @@ end
 not_found do
   @page_title = "404 - No encontrado"
 
-  if !request.path.index("/entrenamos/introduccion-a-scrum").nil?
-    flash.now[:error] = get_404_error_text_for_course("Introducción a Scrum")
-    erb :error404_to_calendar
-  elsif !request.path.index("/entrenamos/desarrollo-agil-de-software").nil?
-      flash.now[:error] = get_404_error_text_for_course("Desarrollo Ágil de Software")
-      erb :error404_to_calendar
-  elsif !request.path.index("/entrenamos/estimacion-y-planificacion-con-scrum").nil?
-      flash.now[:error] = get_404_error_text_for_course("Análisis, Estimación y Planificación con Scrum")
-      erb :error404_to_calendar
-  elsif !request.path.index("/comunidad/yoseki").nil?
+  if !request.path.index("/comunidad/yoseki").nil?
       flash.now[:error] = get_404_error_text_for_community_event("Yoseki Coding Dojo")
       erb :error404_to_community
   else
