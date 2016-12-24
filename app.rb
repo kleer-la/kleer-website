@@ -124,7 +124,7 @@ def entrenamos_view(country=nil)
 		@active_tab_entrenamos = "active"
 		@page_title += " | Entrenamos"
 		@unique_countries = KeventerReader.instance.unique_countries_for_commercial_events()
-		@country= country
+		@country= country || 'todos'
 		erb :entrenamos
 	end
 end
