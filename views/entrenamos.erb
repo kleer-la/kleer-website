@@ -131,8 +131,10 @@
 
 			var clickedLi = $(this).parent();
 			clickedLi.addClass("active");
+			history.replaceState({},"",newSource.replace("eventos/pais/",""));
 		});
 
+		history.replaceState({},"","/entrenamos/<%= @country%>");
 	});
 
 	function reloadTableAjax( newSource ) {
