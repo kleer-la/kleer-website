@@ -118,7 +118,7 @@ get '/entrenamos' do
 end
 
 def entrenamos_view(country=nil)
-	if !country.nil? && country.length>2
+	if !country.nil? && country!='todos' && country.length>2
 	    status 404
 	else
 		@active_tab_entrenamos = "active"
