@@ -118,14 +118,15 @@ get '/entrenamos' do
 end
 
 def entrenamos_view(country=nil)
-	if !country.nil? && country.length>2
+	if !country.nil? && country!='todos' && country.length>2
 	    status 404
 	else
 		@active_tab_entrenamos = "active"
 		@page_title += " | Entrenamos"
 		@unique_countries = KeventerReader.instance.unique_countries_for_commercial_events()
-		@country= country
-		erb :entrenamos
+		@country= country || session[:filter_country] || 'todos'
+    session[:filter_country]= @country
+    erb :entrenamos
 	end
 end
 
@@ -428,6 +429,7 @@ get '/entrenamos/eventos/pais/:country_iso_code' do
   if (!is_valid_country_iso_code(country_iso_code, "entrenamos"))
     country_iso_code = "todos"
   end
+  session[:filter_country]= country_iso_code
   DTHelper::to_dt_event_array_json(KeventerReader.instance.commercial_events_by_country(country_iso_code), false, "entrenamos", I18n, session[:locale])
 end
 

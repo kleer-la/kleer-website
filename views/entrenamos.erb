@@ -22,9 +22,10 @@
 					<div class="paper-agenda-body">
 					<h2>Agenda</h2>
 					<ul id="country-filter" class="nav nav-pills">
-						<li class="active"><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos"><%=t("dt_grid.select_all")%></a></li>
+						<li <%='class="active"' if @country == 'todos'%>><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/todos"><%=t("dt_grid.select_all")%></a></li>
 					    <% @unique_countries.each do |country| %>
-							<li><a href="/<%=session[:locale]%>/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
+							<li <%='class="active"' if @country == country.iso_code%>>
+							<a href="/<%=session[:locale]%>/entrenamos/eventos/pais/<%= country.iso_code %>"><%= country.name %> <img src="/img/flags/<%= country.iso_code %>.png" title="<%= country.name %>"></a></li>
 					    <% end %>
 					</ul>
 						<table cellpadding="0" cellspacing="0" border="0" class="table table-condensed" id="cursos" width="100%">
@@ -51,11 +52,6 @@
 					<%=t("scrumalliance.description")%>
 					<br/>&nbsp;
 				</div>
-				<div class="col-md-12 fondo-celeste sombra-amarilla">
-					&nbsp;<br/><%=t("scrumalliance.why")%>
-					&nbsp;<br/>
-				</div>
-				&nbsp;
 				<div class="col-md-12 fondo-verde sombra-amarilla">
 					<h2><%=t("scrumalliance.top")%></h1>
 
@@ -63,7 +59,10 @@
 					&nbsp;<br/>
 					<a href="/<%=session[:locale]%>/categoria/productos/cursos/3-certified-scrum-developer-(csd-track-completo)">Certified Scrum Developer (CSD)</a><br/>
 					&nbsp;<br/>
-					<a href="/<%=session[:locale]%>/categoria/organizaciones/cursos/93-habilidades-esenciales-para-team-leaders">Habilidades Esenciales para Team Leaders</a><br/>
+				</div>
+				&nbsp;
+				<div class="col-md-12 fondo-celeste sombra-amarilla">
+					&nbsp;<br/><%=t("scrumalliance.why")%>
 					&nbsp;<br/>
 				</div>
 				&nbsp;
@@ -95,7 +94,7 @@
 	$(document).ready(function() {
 
 		oTable = $('#cursos').dataTable( {
-			"ajax": '/<%=session[:locale]%>/entrenamos/eventos/pais/todos',
+			"ajax": '/<%=session[:locale]%>/entrenamos/eventos/pais/<%=@country%>',
 			"searching": false,
 			"ordering": false,
 			"paging": false,
@@ -130,11 +129,10 @@
 
 			var clickedLi = $(this).parent();
 			clickedLi.addClass("active");
+			history.replaceState({},"",newSource.replace("eventos/pais/",""));
 		});
 
-		$("[href='/es/entrenamos/eventos/pais/<%=@country%>']").click();
-
-
+		history.replaceState({},"","/entrenamos/<%= @country%>");
 	});
 
 	function reloadTableAjax( newSource ) {
