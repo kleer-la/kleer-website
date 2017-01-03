@@ -87,16 +87,51 @@ es:
         title: "Coaching"
         subtitle: "Acompañamiento de organizaciones, equipos y profesionales hacia la mejora continua"
         text:
-            top: "<p>Ofrecemos un servicio de acompañamiento integral en la implementación de Metodologías Ágiles y técnicas ágiles de desarrollo con resultados valiosos.</p>
-            <p>Conocé algunos casos de éxito de nuestros clientes:</p>
-            <ul>
-            	<li><a href='prensa/casos/equipos-scrum-en-suramericana-2015'>Paradigma Ágil en <b>Sura</b></a> - <i>Medellín, Colombia</i>. Testimonios de Carlos Hurtado, Valentina Sierra y Jubel Correa.</li>
-            	<li><a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>Equipos Scrum en <b>Plataforma 10</b></a> - <i>Buenos Aires, Argentina</i>. Testimonios de Gustavo Markier y Gastón Waisman.</li>
-            	<li><a href='prensa/casos/equipos-scrum-en-technisys-2015'>Equipos Scrum en <b>Technisys</b></a> - <i>Argentina y Uruguay</i>. Testimonios de Alejandro Raiczyk y Nico Paez.</li>
-        	</ul>
+		<li>Transparentar la toma de decisiones</li>
+		<li>Impulsar la formación y consultoría</li>
+	</ul>
 
-            <p>Se trata de un proceso llevado a cabo in situ y con la asistencia de un experto en Metodologías Ágiles, quien tiene la misión de transmitir de forma activa las prácticas y herramientas necesarias para transformar en Agile al equipo u organización. La implementación ocurre mientras las personas involucradas se encuentran realizando sus tareas habituales.</p><p>Una de las ventajas de realizar nuestro Agile Coaching es que la implementación exitosa de las Metodologías Ágiles se logra en menor tiempo del que tomaría hacerlo sin el acompañamiento de un experto. Adicionalmente, no se descuida el negocio ya que se  trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p><p>Existen dos tipos de situaciones: aquellas en las que nunca antes se había trabajo en un entorno ágil y otras en que ya existe la experiencia y se desea alcanzar un mayor nivel de profundidad. El servicio de acompañamiento de Kleer responde efectivamente a ambas, con la particularidad adicional de que modela el proceso de implementación según las necesidades específicas del equipo u organización.</p><p>En el caso en que fuera necesario, el acompañamiento es precedido por capacitaciones diseñadas a medida de cada equipo, asegurando un nivel de conocimientos que habilita una mayor efectividad durante  la implementación.</p>"
-            bottom: "<p>Nuestro servicio de coaching en transformación organizacional está orientado a que logres uno o varios de los siguientes resultados, según tus necesidades actuales:</p>"
+Kleer ayuda en este camino a empresas de América Latina y otras partes del mundo desde hace años, potenciando esta experiencia internacional en favor de sus clientes.
+</p>
+
+			<a name='AgileJumpStart'></a>
+			<p class='lead'>Agile Jump Start</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono2-AgileJumpStart.jpg' alt='Agile Jump Start' title='Agile Jump Start' width='100' align='left' />
+			<p>El Agile Jump Start de Kleer es un <b>programa integral de coaching y acompañamiento</b> a organizaciones que buscan mayor ROI en sus proyectos a través de la adopción de Métodos Ágiles.
+A diferencia de otros programas similares, <b>la implementación exitosa de las Metodologías Ágiles se logra en menor tiempo</b> del que tomaría hacerlo sin el acompañamiento de un experto.
+Adicionalmente, no se descuida el negocio ya que se trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p>
+
+			<a name='ExcelenciaTecnica'></a>
+			<p class='lead'>Excelencia Técnica</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono3-Excelencia.jpg' alt='Excelencia Técnica' title='Excelencia Técnica' width='100' align='left' />
+			<p>Promovemos el <b>aprendizaje y flexibilidad</b> en la gestión de proyectos y <b>desarrollo de productos</b> a través de equipos auto-organizados.</p>
+			<p>La adopción de métodos y técnicas ágiles implica:
+		<ul>
+			<li>Mejorar la <b>comunicación y colaboración</b> entre todas las personas involucradas en el desarrollo
+			<li>Disminuir los tiempos entre la idea y el inicio del uso del producto. En particular disminuyendo:
+				<ul>
+					<li>Los tiempos de ideación del producto mínimo que satisface las necesidades del usuario y cliente.
+					<li>Los tiempos de desarrollo, mejorando la calidad
+					<li>Los tiempos desde que el producto es liberado por el equipo de desarrollo hasta que empieza a usarse.
+				</ul>
+			<li><b>Automatizar</b> en todos los niveles.
+			<li>Crear ámbitos de <b>aprendizaje y mejora continua</b>.
+		</ul>
+</p>
+
+			<a name='InnovacionDeNegocio'></a>
+			<p class='lead'>Innovación de Negocio</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono4-Innovacion.jpg' alt='Innovación de Negocio' title='Innovación de Negocio' width='100' align='left' />
+			<p>Desde hace más de 25 años, <b>la agilidad revolucionó la industria del software</b>: la <b>entrega de valor</b> comenzó a ser más <b>temprana y frecuente</b>, el <b>retorno de las inversiones</b> mejoró, y el <b>compromiso de los equipos</b> creció a la par de su <b>motivación</b>.
+
+Cada vez con mayor fuerza, compañías de distintos rubros mejoran sus resultados incorporando principios y herramientas de la agilidad a su modo habitual de hacer las cosas. Lo hacen empresas que fabrican aviones o tractores, lo hacen empresas que brindan servicios de marketing y también las que se dedican a cuidar la salud de sus asociados. Y lo aplican dónde más valor les aporta: sea el management, los proyectos claves o en la operación del día a día.
+</p>
+			<p><b>Agilidad aplicada a proyectos de negocio</b><br/>
+Cuando los proyectos no se concretan, tardan mucho en hacerlo, o lo hacen sin los resultados esperados, incorporar la agilidad ayuda a obtener valor de negocio en corto plazo, reduce el riesgo de la inversión, e implementa un enfoque científico para maximizar el rendimiento del producto o el servicio en construcción.
+
+Acompañamos al proyecto desde su inicio para lograr resultados rápidos y valiosos.
+</p>"
+            bottom: "<hr/><p>¡<a href='maito:coaching@kleer.la'>Contactanos</a> para conocer más acerca de los servicios de coaching de Kleer! Queremos acompañar equipos que quieran formar parte del listado de <b>casos de éxito</b> :)</p>"
         tabs:
             benefits:
                 title: "Beneficios del Coaching"
