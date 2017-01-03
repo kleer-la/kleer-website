@@ -95,35 +95,33 @@
 		<!-- small (sm), medium (md) y large (lg) logistics -->
 		<div class="container-fluid hidden-xs">
 
-			<div class="col-md-3 col-sm-4">
-				&nbsp;
-			</div>
-
 			<div class="col-md-9 col-sm-8 no-hpadding">
-				<div class="col-md-1 col-sm-2 no-hpadding logistic-indicator">
-					<span class="glyphicon glyphicon-usd big-glyphicon"></span>
-				</div>
-				<div class="col-md-11 col-sm-10 no-hpadding">
-					<strong><%=t("event.pricing")%>:</strong><br/>
-					<% if @event.eb_price > 0 %>
-						Pronto pago:
-						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= money_format(@event.eb_price) %>
-                    	hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
-					<% end %>
-					<% if @event.couples_eb_price > 0 %>
-						Parejas:
-						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= money_format(@event.couples_eb_price) %>
-                    	c/u hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
-					<% end %>
-					Full price:
-                    <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    <%= money_format(@event.list_price) %>
-                    <% if @event.business_eb_price > 0 %>
-                    	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
-                    <% end %>
-				</div>
+				<h2>
+					<%=t("event.pricing")%>:
+          <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
+          <%= money_format(@event.list_price) %>
+				</h2>
+
+				<% if @event.eb_price > 0 %>
+					Pronto pago (hasta el <strong>
+						<%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>
+					</strong>):
+					<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
+        	<%= money_format(@event.eb_price) %>
+        	<br/>
+				<% end %>
+
+				<% if @event.couples_eb_price > 0 %>
+					Parejas (por persona; hasta el <strong>
+					<%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>
+				</strong>):
+					<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
+        	<%= money_format(@event.couples_eb_price) %><br/>
+				<% end %>
+
+        <% if @event.business_eb_price > 0 %>
+        	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
+        <% end %>
 			</div>
 		</div>
 		<!-- / small (sm), medium (md) y large (lg) logistics -->
@@ -132,31 +130,32 @@
 		<div class="container-fluid no-hpadding visible-xs">
 
 			<div class="col-xs-12">
-				<div class="col-xs-2 no-hpadding logistic-indicator">
-					<span class="glyphicon glyphicon-usd big-glyphicon"></span>
-				</div>
-				<div class="col-xs-10 no-hpadding">
-					<strong><%=t("event.pricing")%>:</strong><br/>
-					<% if @event.eb_price > 0 %>
-						Pronto pago:
-						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= money_format(@event.eb_price) %>
-                    	hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
-					<% end %>
-					<% if @event.couples_eb_price > 0 %>
-						Parejas:
-						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= money_format(@event.couples_eb_price) %>
-                    	c/u hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
-					<% end %>
-					Full price:
-                    <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    <%= money_format(@event.list_price) %>
-                    <% if @event.business_eb_price > 0 %>
-                    	<br/>&nbsp;
-                    	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
-                    <% end %>
-				</div>
+				<h2><%=t("event.pricing")%>:
+					<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
+					<%= money_format(@event.list_price) %>
+				</h2>
+
+				<% if @event.eb_price > 0 %>
+					Pronto pago (hasta el <strong>
+						<%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>
+					</strong>):
+					<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
+        	<%= money_format(@event.eb_price) %>
+        	<br/>
+				<% end %>
+
+				<% if @event.couples_eb_price > 0 %>
+					Parejas (por persona; hasta el <strong>
+					<%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>
+				</strong>):
+					<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
+        	<%= money_format(@event.couples_eb_price) %><br/>
+				<% end %>
+
+        <% if @event.business_eb_price > 0 %>
+        	<br/>&nbsp;
+        	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
+        <% end %>
 			</div>
 
 		</div>
