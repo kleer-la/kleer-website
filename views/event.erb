@@ -108,18 +108,18 @@
 					<% if @event.eb_price > 0 %>
 						Pronto pago:
 						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= sprintf("%03.0f", @event.eb_price) %>
+                    	<%= money_format(@event.eb_price) %>
                     	hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					<% if @event.couples_eb_price > 0 %>
 						Parejas:
 						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= sprintf("%03.0f", @event.couples_eb_price) %>
+                    	<%= money_format(@event.couples_eb_price) %>
                     	c/u hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					Full price:
                     <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    <%= sprintf("%03.0f", @event.list_price) %>
+                    <%= money_format(@event.list_price) %>
                     <% if @event.business_eb_price > 0 %>
                     	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
                     <% end %>
@@ -140,18 +140,18 @@
 					<% if @event.eb_price > 0 %>
 						Pronto pago:
 						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= sprintf("%03.0f", @event.eb_price) %>
+                    	<%= money_format(@event.eb_price) %>
                     	hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					<% if @event.couples_eb_price > 0 %>
 						Parejas:
 						<%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    	<%= sprintf("%03.0f", @event.couples_eb_price) %>
+                    	<%= money_format(@event.couples_eb_price) %>
                     	c/u hasta el <%=@event.eb_end_date.strftime("%d")%>-<%=month_es(@event.eb_end_date.strftime("%b"))%>.<br/>
 					<% end %>
 					Full price:
                     <%= "#{@event.currency_iso_code}#{currency_symbol_for( @event.currency_iso_code )}" %>
-                    <%= sprintf("%03.0f", @event.list_price) %>
+                    <%= money_format(@event.list_price) %>
                     <% if @event.business_eb_price > 0 %>
                     	<br/>&nbsp;
                     	<br/>¡Pregunta por nuestras tarifas Business (Grupos)!
