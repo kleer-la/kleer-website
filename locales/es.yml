@@ -85,8 +85,50 @@ es:
         title: "Eventos Comunitarios"
     coaching:
         title: "Coaching"
-        subtitle: "Acompañamiento de organizaciones, equipos y profesionales hacia la mejora continua"
+        subtitle: "Acompañamiento de organizaciones, equipos y profesionales para obtener mejores resultados"
         text:
+            top: "<p>Ofrecemos servicios de <b>acompañamiento integral</b> en la implementación de metodologías y técnicas ágiles que potencian tanto a las personas como a sus negocios.</p>
+
+            <hr/><p>Conocé algunos casos de éxito de nuestros clientes:</p>
+
+           	<p><a href='prensa/casos/equipos-scrum-en-suramericana-2015'>Paradigma Ágil en <b>Sura</b></a>
+           	<br/><i>Medellín, Colombia</i>. Testimonios de Carlos Hurtado, Valentina Sierra y Jubel Correa.</p>
+           	<p>
+           	<a href='prensa/casos/equipos-scrum-en-suramericana-2015'>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura1.png' alt='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' title='Carlos Hurtado nos cuenta su experiencia de trabajo con Kleer en Sura' align='left' height='160'/>
+           	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' title='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' height='160'/>
+           	</a></p>
+           	<br/>
+
+           	<p><a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>Equipos Scrum en <b>Plataforma 10</b></a>
+           	<br/><i>Buenos Aires, Argentina</i>. Testimonios de Gustavo Markier y Gastón Waisman.</p>
+			<p>
+           	<a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-p10-1.png' alt='Gustavo Markier nos cuenta acerca del impacto del trabajo de Kleer en el negocio de Plataforma 10' title='Gustavo Markier nos cuenta acerca del impacto del trabajo de Kleer en el negocio de Plataforma 10' align='left' height='150'/>
+           	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-p10-2.png' alt='Gastón Waisman describe la implementación de Scrum en los equipos de Desarrollo de Plataforma 10' title='Gastón Waisman describe la implementación de Scrum en los equipos de Desarrollo de Plataforma 10' height='150'/>
+           	</a></p>
+
+           	<p><a href='prensa/casos/equipos-scrum-en-technisys-2015'>Equipos Scrum en <b>Technisys</b></a>
+           	<br/><i>Argentina y Uruguay</i>. Testimonios de Alejandro Raiczyk y Nico Paez.</p>
+			<p>
+           	<a href='prensa/casos/equipos-scrum-en-technisys-2015'>
+           	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-technisys1.png' alt='Alejandro Raiczyk describe el impacto del trabajo de Kleer en el área de Producto de Technisys' title='Alejandro Raiczyk describe el impacto del trabajo de Kleer en el área de Producto de Technisys' align='left' height='150'/>
+           	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-technisys2.png' alt='Nicolás Paez describe lo que realizó en el proyecto de implementación de Technisys' title='Nicolás Paez describe lo que realizó en el proyecto de implementación de Technisys' height='150'/>
+           	</a></p>
+
+			<hr/>
+
+			<a name='TransformacionAgil'></a>
+			<p class='lead'>Transformación Ágil</p>
+			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono1-Transformacion.jpg' alt='Transformación Ágil' title='Transformación Ágil' width='100' align='left' />
+			<p>Acompañamos <b>mejoras integrales</b> a nivel internacional teniendo en cuenta los <b>desafíos y necesidades de cada negocio</b>, involucrando a líderes, managers y equipos.</p>
+			<p>Una cultura organizacional con capacidades de aprendizaje e innovación tiene una serie de desafíos. Enumerados hace tiempo por Steve Denning, autor de 'The Leader’s Guide to Radical Management':
+
+	<ul>
+		<li>Introducir el cambio más allá de los procesos</li>
+		<li>Involucrar a la Alta Dirección</li>
+		<li>Adaptar las metodologías a la propia organización</li>
+		<li>Fomentar la mejora emergente</li>
 		<li>Transparentar la toma de decisiones</li>
 		<li>Impulsar la formación y consultoría</li>
 	</ul>
@@ -134,11 +176,14 @@ Acompañamos al proyecto desde su inicio para lograr resultados rápidos y valio
             bottom: "<hr/><p>¡<a href='maito:coaching@kleer.la'>Contactanos</a> para conocer más acerca de los servicios de coaching de Kleer! Queremos acompañar equipos que quieran formar parte del listado de <b>casos de éxito</b> :)</p>"
         tabs:
             benefits:
-                title: "Beneficios del Coaching"
-                text: "<ul><li>Eleva el nivel de flexibilidad del equipo para responder a nuevas situaciones</li><li>Mejora la calidad del producto como resultado de la implementación de técnicas ágiles</li><li>Disminuye los costos del desarrollo: ahorra tiempo y evita el re-trabajo</li><li>Disminuye fuertemente la ocurrencia de errores evitables</li></ul>"
+                title: ""
+                text: ""
             characteristics:
-                title: "Características del Servicio"
-                text: "<ul><li>No  se descuida el negocio. El equipo de trabajo no es desafectado  de  sus  tareas ya que se trata de una transmisión de conocimientos que   sucede  mientras el equipo se encuentra trabajando.</li><li>Sin hipótesis. Los problemas, impedimentos o dificultades son detectados y resueltos con casos concretos</li><li>Es una inversión. El ahorro de tiempo y costos que genera el aumento de calidad evita ciclos de re-trabajo</li></ul>"
+                title: "Acerca de nuestros servicios de coaching"
+                text: "<p>Se trata de un proceso llevado a cabo in situ y con la asistencia de al menos un experto en Metodologías Ágiles, quien tiene la misión de transmitir de forma activa las <b>prácticas y herramientas ágiles</b> necesarias para <b>impactar positivamente</b> al equipo u organización. La implementación ocurre mientras las personas involucradas se encuentran realizando sus tareas habituales.</p>
+            <p>Una de las ventajas de contratar nuestro Agile Coaching es que la implementación exitosa de Metodologías Ágiles se logra en menor tiempo del que tomaría hacerlo sin el <b>acompañamiento de un Agile Coach experimentado</b>. Adicionalmente, no se descuida el negocio ya que se  trabaja directamente sobre los proyectos, roles y objetivos de los equipos y demás interesados en la implementación (gerentes, directores de desarrollo, etc.). Esto incluye la identificación de problemas, la comprensión de sus causas y el desarrollo de las habilidades necesarias para que el equipo sea capaz de resolverlos.</p>
+            <p>En general, existen dos tipos de situaciones: aquellas en las que nunca antes se había trabajo en un entorno ágil y otras en que ya existe la experiencia y se desea alcanzar un mayor nivel de profundidad. El servicio de acompañamiento de Kleer responde efectivamente a ambas, con la particularidad adicional de que modela el proceso de implementación según las necesidades específicas del equipo u organización.</p>
+            <p>En el caso en que fuera necesario, el acompañamiento es <b>complementado con capacitaciones diseñadas a medida</b> de cada equipo, asegurando un nivel de conocimientos que habilita una mayor efectividad durante  la implementación.</p>"
             contact:
                 title: "Solicitar Cotización"
                 text: "<p>Puedes contactarnos a <a href='mailto:hola@kleer.la'>hola@kleer.la</a> para solicitarnos una  cotización.<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;</p>"
@@ -314,7 +359,7 @@ Acompañamos al proyecto desde su inicio para lograr resultados rápidos y valio
                 phone: "+59 1.4.4321690"
             colombia:
                 name: "Colombia"
-                address1: "Carrera 15 # 87-56"
+                address1: "Carrera 13 # 78-47"
                 address2: "Bogotá"
                 phone: "+57 300.327.0604"
             peru:
