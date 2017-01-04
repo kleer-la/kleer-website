@@ -26,17 +26,6 @@
 
 			<%=t("coaching.text.bottom")%>
 
-			<% indice_categoria = 1 %>
-			<% @categories.each do |category| %>
-				<div class="well categoria-<%= category.codename %>">
-					<h2><%= "#{indice_categoria}. #{category.name}" %></h2>
-					<p class="lead"><i><%= category.tagline %></i></p>
-				</div>
-				<p><%= @markdown_renderer.render( category.description )%></p>
-				<hr/>
-				<% indice_categoria += 1 %>
-			<% end %>
-
 		</div>
 
 		<div class="col-md-3">

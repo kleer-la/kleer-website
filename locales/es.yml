@@ -88,9 +88,7 @@ es:
         subtitle: "Acompañamiento de organizaciones, equipos y profesionales para obtener mejores resultados"
         text:
             top: "<p>Ofrecemos servicios de <b>acompañamiento integral</b> en la implementación de metodologías y técnicas ágiles que potencian tanto a las personas como a sus negocios.</p>
-
             <hr/><p>Conocé algunos casos de éxito de nuestros clientes:</p>
-
            	<p><a href='prensa/casos/equipos-scrum-en-suramericana-2015'>Paradigma Ágil en <b>Sura</b></a>
            	<br/><i>Medellín, Colombia</i>. Testimonios de Carlos Hurtado, Valentina Sierra y Jubel Correa.</p>
            	<p>
@@ -99,7 +97,6 @@ es:
            	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-sura2.png' alt='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' title='Valentina Sierra cuenta el impacto que tuvo el equipo de tesorería de Sura al aplicar métodos y prácticas Ágiles' height='160'/>
            	</a></p>
            	<br/>
-
            	<p><a href='prensa/casos/equipos-scrum-en-plataforma-10-2015'>Equipos Scrum en <b>Plataforma 10</b></a>
            	<br/><i>Buenos Aires, Argentina</i>. Testimonios de Gustavo Markier y Gastón Waisman.</p>
 			<p>
@@ -107,7 +104,6 @@ es:
            	<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-p10-1.png' alt='Gustavo Markier nos cuenta acerca del impacto del trabajo de Kleer en el negocio de Plataforma 10' title='Gustavo Markier nos cuenta acerca del impacto del trabajo de Kleer en el negocio de Plataforma 10' align='left' height='150'/>
            	&nbsp;<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/Kleer-casos-p10-2.png' alt='Gastón Waisman describe la implementación de Scrum en los equipos de Desarrollo de Plataforma 10' title='Gastón Waisman describe la implementación de Scrum en los equipos de Desarrollo de Plataforma 10' height='150'/>
            	</a></p>
-
            	<p><a href='prensa/casos/equipos-scrum-en-technisys-2015'>Equipos Scrum en <b>Technisys</b></a>
            	<br/><i>Argentina y Uruguay</i>. Testimonios de Alejandro Raiczyk y Nico Paez.</p>
 			<p>
@@ -117,7 +113,6 @@ es:
            	</a></p>
 
 			<hr/>
-
 			<a name='TransformacionAgil'></a>
 			<p class='lead'>Transformación Ágil</p>
 			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono1-Transformacion.jpg' alt='Transformación Ágil' title='Transformación Ágil' width='100' align='left' />
@@ -135,7 +130,6 @@ es:
 
 Kleer ayuda en este camino a empresas de América Latina y otras partes del mundo desde hace años, potenciando esta experiencia internacional en favor de sus clientes.
 </p>
-
 			<a name='AgileJumpStart'></a>
 			<p class='lead'>Agile Jump Start</p>
 			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono2-AgileJumpStart.jpg' alt='Agile Jump Start' title='Agile Jump Start' width='100' align='left' />
@@ -160,7 +154,6 @@ Adicionalmente, no se descuida el negocio ya que se trabaja directamente sobre l
 			<li>Crear ámbitos de <b>aprendizaje y mejora continua</b>.
 		</ul>
 </p>
-
 			<a name='InnovacionDeNegocio'></a>
 			<p class='lead'>Innovación de Negocio</p>
 			<img src='https://s3-sa-east-1.amazonaws.com/kleer-images/CoachingIcono4-Innovacion.jpg' alt='Innovación de Negocio' title='Innovación de Negocio' width='100' align='left' />
