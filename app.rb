@@ -57,6 +57,11 @@ helpers do
     end
   end
 
+  def money_format( amount )
+      parts = amount.round(0).to_s.split('.')
+      parts[0].gsub!(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1.")
+      parts.join "."
+  end
 end
 
 configure do
