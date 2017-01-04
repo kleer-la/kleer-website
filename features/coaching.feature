@@ -2,5 +2,9 @@ Feature: Coaching
 
 	Scenario: Coaching Text
 		Given I visit the "coaching" page
-		Then I should see "Acompañamiento de organizaciones, equipos y profesionales hacia la mejora continua"
-		And I should see "Nuestro servicio de coaching en transformación organizacional está orientado a que logres uno o varios de los siguientes resultados, según tus necesidades actuales"
+		Then I should see "Acompañamiento de organizaciones, equipos y profesionales"
+		And I should see "casos de éxito"
+		And I should see "Transformación Ágil"
+		And I should see "Agile Jump Start"
+		And I should see "Excelencia Técnica"
+		And I should see "Innovación de Negocio"
