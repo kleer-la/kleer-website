@@ -21,6 +21,7 @@ GEM
     daemons (1.1.9)
     diff-lcs (1.2.5)
     dotenv (0.9.0)
+    escape_utils (1.2.1)
     eventmachine (1.0.3)
     excon (0.25.3)
     foreman (0.63.0)
@@ -120,6 +121,7 @@ DEPENDENCIES
   coveralls
   cucumber
   curb
+  escape_utils
   foreman
   heroku
   i18n
@@ -138,3 +140,6 @@ DEPENDENCIES
   tzinfo
   tzinfo-data
   webrat
+
+BUNDLED WITH
+   1.10.6

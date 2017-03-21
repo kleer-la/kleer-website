@@ -19,6 +19,7 @@ gem 'curb'
 gem 'tzinfo'
 gem 'tzinfo-data'
 gem 'money'
+gem 'escape_utils'
 
 group :development do
   gem 'foreman'
