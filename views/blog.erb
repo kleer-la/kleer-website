@@ -28,8 +28,18 @@
 	<div class="container fondo-blanco contenedor-generico">
 		<div class="col-md-9 contenedor-main-izq">
 
-			<script id="feed-14840567559051000" type="text/javascript"
-			  src="http://rss.bloople.net/?url=http%3A%2F%2Frssmix.com%2Fu%2F8220287%2Frss.xml&detail=100&limit=20&showtitle=false&type=js&id=14840567559051000"></script>
+			<!-- // <script id="feed-14840567559051000" type="text/javascript"
+			//   src="http://rss.bloople.net/?url=http%3A%2F%2Frssmix.com%2Fu%2F8220287%2Frss.xml&detail=100&limit=20&showtitle=false&type=js&id=14840567559051000"></script> -->
+
+			<% @rss.items.first(20).each do |item| %>
+				<div class="container-fluid">
+					<h3><a href="<%= item.link %>"><%= item.title %></a></h3>
+					<p><%= item.pubDate.strftime("%d/%m/%Y") %>, por <%= item.author %>
+				</div>
+				<div class="container-fluid">
+					<%= EscapeUtils.unescape_html item.description %>
+				</div>
+			<% end %>
 
 		</div>
 		<div class="col-md-3">
