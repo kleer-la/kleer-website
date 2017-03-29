@@ -3,7 +3,7 @@ Feature: Home Page
 
 	Scenario: Currícula accesible desde la home page
 		Given I visit the home page
-		Then I should see a link to "http://media.kleer.la/kleer-entrenamos-2014.pdf" with text "Más Información"
+		Then I should see a link to "/catalogo" with text "Más Información"
 
 	Scenario: Datos de contacto
 		Given I visit the home page
