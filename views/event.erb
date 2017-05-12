@@ -200,10 +200,18 @@ end
 				<div class="col-md-8 col-sm-8 no-hpadding">
 					<strong><%=t("event.date")%>:</strong><br/>
 					<% if @event.finish_date.nil? || @event.date == @event.finish_date %>
-					<%=@event.date.strftime("%d")%>-<%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%>
+						<%=@event.date.strftime("%d")%>-<%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%>
 					<% else %>
-					Inicia: <%=@event.date.strftime("%d")%>-<%=DTHelper::MONTHS_ES[@event.date.strftime("%b")]%><br/>
-					Finaliza: <%=@event.finish_date.strftime("%d")%>-<%=DTHelper::MONTHS_ES[@event.finish_date.strftime("%b")]%>
+						<%
+						str_date = "#{@event.date.strftime("%d")}-#{DTHelper::MONTHS_ES[@event.date.strftime("%b")]}"
+						end_date = "#{@event.finish_date.strftime("%d")}-#{DTHelper::MONTHS_ES[@event.finish_date.strftime("%b")]}"
+						if @event.date.strftime("%Y") != @event.finish_date.strftime("%Y")
+							str_date += "-#{@event.date.strftime("%Y")}"
+							end_date += "-#{@event.finish_date.strftime("%Y")}"
+						end
+						%>
+						Inicia: <%=str_date%><br/>
+						Finaliza: <%=end_date%>
 					<% end %>
 				</div>
 			</div>
