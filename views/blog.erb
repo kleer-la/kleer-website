@@ -35,12 +35,11 @@
 				<!-- Resuelvo potenciales diferencias de serialización (por ahora, Blogger) -->
 				<% content = item.description unless item.description.nil? %>
 				<% content = item.content_encoded unless item.content_encoded.nil? %>
-				<% author = item.author unless item.author.nil? %>
-				<% author = item.dc_creator unless item.dc_creator.nil? %>
 
 				<div class="container-fluid">
 					<h3><a href="<%= item.link %>"><%= item.title %></a></h3>
-					<p><%= item.pubDate.strftime("%d/%m/%Y") %>, por <%= author %>
+					<p><%= item.pubDate.strftime("%d/%m/%Y") %> -
+						<a href="<%= item.source.url %>"><%= item.source %></a>
 				</div>
 				<div class="container-fluid">
 					<%= EscapeUtils.unescape_html content %>
