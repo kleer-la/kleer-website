@@ -114,8 +114,8 @@ end
 
 get '/blog' do
   @active_tab_blog = "active"
-  @rss = RSS::Parser.parse('http://rssmix.com/u/8220287/rss.xml', false)
-  
+  @rss = RSS::Parser.parse('http://feed.informer.com/digests/EGSKOZF5FA/feeder.rss', false)
+
   erb :blog
 end
 

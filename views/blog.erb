@@ -32,12 +32,17 @@
 			//   src="http://rss.bloople.net/?url=http%3A%2F%2Frssmix.com%2Fu%2F8220287%2Frss.xml&detail=100&limit=20&showtitle=false&type=js&id=14840567559051000"></script> -->
 
 			<% @rss.items.first(20).each do |item| %>
+				<!-- Resuelvo potenciales diferencias de serialización (por ahora, Blogger) -->
+				<% content = item.description unless item.description.nil? %>
+				<% content = item.content_encoded unless item.content_encoded.nil? %>
+
 				<div class="container-fluid">
 					<h3><a href="<%= item.link %>"><%= item.title %></a></h3>
-					<p><%= item.pubDate.strftime("%d/%m/%Y") %>, por <%= item.author %>
+					<p><%= item.pubDate.strftime("%d/%m/%Y") %> -
+						<a href="<%= item.source.url %>"><%= item.source %></a>
 				</div>
 				<div class="container-fluid">
-					<%= EscapeUtils.unescape_html item.description %>
+					<%= EscapeUtils.unescape_html content %>
 				</div>
 			<% end %>
 
