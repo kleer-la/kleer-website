@@ -474,6 +474,10 @@ get '/preguntas-frecuentes/facturacion-pagos-colombia' do
   erb :facturacion_pagos_colombia
 end
 
+get '/preguntas-frecuentes/facturacion-pagos-peru' do
+  erb :facturacion_pagos_peru
+end
+
 get '/preguntas-frecuentes/certified-scrum-master' do
   erb :certified_scrum_master
 end
