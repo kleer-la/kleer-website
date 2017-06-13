@@ -112,6 +112,14 @@ get '/' do
 	erb :index
 end
 
+get '/en' do
+  redirect "/en/", 301 # permanent redirect
+end
+
+get '/es' do
+  redirect "/es/", 301 # permanent redirect
+end
+
 get '/blog' do
   @active_tab_blog = "active"
   @rss = RSS::Parser.parse('http://feed.informer.com/digests/EGSKOZF5FA/feeder.rss', false)
