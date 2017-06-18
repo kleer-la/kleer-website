@@ -290,6 +290,12 @@ Acompañamos al proyecto desde su inicio para lograr resultados rápidos y valio
         release11_text: "Kleer se complace en anunciar que será el anfitrión de la Primera Jornada del Movimiento de Metacreatividad en la Argentina. El encuentro, de entrada libre y gratuita, se realizará el próximo lunes 31 de agosto en sus oficinas."
     event:
         course: "Curso"
+        time_zone: "Zona Horaria:"
+        starts: "Inicia"
+        finishes: "Finaliza"
+        ask_for_business_prices: "¡Pregunta por nuestras tarifas Business (Grupos)!"
+        early_bird_until: "Pronto pago hasta el"
+        early_bird_couples_until: "Parejas (por persona) hasta el "
         public_editions: "Ediciones públicas"
         other_trainings: "Otros entrenamientos de la categoría"
         facilitator: "Facilitador"
