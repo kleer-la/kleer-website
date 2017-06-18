@@ -299,6 +299,8 @@ describe KeventerEvent do
       <webinar-started type="boolean">false</webinar-started>
       <human-date>18-1 May</human-date>
       <is-webinar type="boolean">false</is-webinar>
+<banner-text>un texto a resaltar</banner-text>
+<banner-type>success</banner-type>
       <country>
         <created-at type="datetime">2012-04-25T20:31:03Z</created-at>
         <id type="integer">2</id>

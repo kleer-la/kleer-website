@@ -18,6 +18,8 @@
     <is-sold-out type="boolean">false</is-sold-out>
     <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
+<banner-text>un texto a resaltar</banner-text>
+<banner-type>success</banner-type>
   <mode>cl</mode>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>
@@ -148,6 +150,8 @@ Ing. en Informática, CSM, CSD
     <is-sold-out type="boolean">false</is-sold-out>
     <specific-conditions>Unas condiciones propias del evento</specific-conditions>
 	<is-webinar type="boolean">false</is-webinar>
+<banner-text>un texto a resaltar</banner-text>
+<banner-type>success</banner-type>
   <mode>cl</mode>
 	<sepyme-enabled type="boolean" nil="true"/>
     <list-price type="decimal">0.0</list-price>

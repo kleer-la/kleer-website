@@ -318,6 +318,12 @@ end
 <div class="container-fluid fondo-blanco">
 	<div class="container">
 		<div class="col-md-8 event-program-column evento-description-container">
+			<% if @event.banner_text != "" %>
+				&nbsp;
+				<div class="alert alert-<%=@event.banner_type%>">
+				  <%=@markdown_renderer.render( @event.banner_text )%>
+				</div>
+			<% end %>
 			<h2><%=t("event.tabs.description")%></h2>
 			<%=@markdown_renderer.render( @event.event_type.description )%>
 		</div>

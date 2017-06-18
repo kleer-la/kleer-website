@@ -50,6 +50,8 @@
   <webinar-started type="boolean">false</webinar-started>
   <human-date>9 Mar</human-date>
   <is-webinar type="boolean">true</is-webinar>
+<banner-text>un texto a resaltar</banner-text>
+<banner-type>success</banner-type>
   <country>
     <created-at type="datetime">2012-11-28T19:53:51Z</created-at>
     <id type="integer">245</id>
