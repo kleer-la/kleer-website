@@ -7,7 +7,7 @@ class KeventerEvent
                   :specific_conditions, :is_community_event, :time_zone_name,
                   :time_zone, :show_pricing, :couples_eb_price, :business_eb_price,
                   :business_price, :enterprise_6plus_price, :enterprise_11plus_price,
-                  :mode
+                  :mode, :banner_text, :banner_type
 
   def initialize
     @capacity = 0
@@ -46,6 +46,8 @@ class KeventerEvent
     @time_zone = nil
 
     @specific_conditions = ""
+    @banner_text = ""
+    @banner_type = ""
     @is_community_event = false
     @mode = ""
   end
@@ -128,6 +130,8 @@ class KeventerEvent
     @is_community_event = event_doc.find_first('visibility-type').content == 'co'
     @mode = event_doc.find_first('mode').content
     @is_webinar = to_boolean( event_doc.find_first('is-webinar').content )
+    @banner_text = event_doc.find_first('banner-text').content
+    @banner_type = event_doc.find_first('banner-type').content
   end
 
   def load_status(event_doc)
