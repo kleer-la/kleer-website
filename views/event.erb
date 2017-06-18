@@ -320,7 +320,7 @@ end
 		<div class="col-md-8 event-program-column evento-description-container">
 			<% if @event.banner_text != "" %>
 				&nbsp;
-				<div class="alert alert-<%=@event.banner_type%>">
+				<div class="alert alert-<%= (@event.banner_type != "") ? @event.banner_type : "danger" %>">
 				  <%=@markdown_renderer.render( @event.banner_text )%>
 				</div>
 			<% end %>
