@@ -5,7 +5,7 @@
 Website
 =======
 
-Kleer website (update 2017)
+Kleer website (DISCONTNUADO)
 
 - <url>/es para español
 - <url>/en para inglés
